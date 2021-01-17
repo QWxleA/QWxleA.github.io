@@ -89,10 +89,10 @@ I always just use mpv "mpv av://v4l2:/dev/video0 "
 
    - [[http://www.draketo.de/light/english/emacs/babcore][Emacs Customizations everyone should have]]
    - [[https://www.reddit.com/r/emacs/comments/898xgg/what_minor_modes_do_you_always_use][What minor modes do you always use?]]
-   - [[(https://www.reddit.com/r/i3wm/commencementts/8a5psj/excluding_web_browsers_what_are_your_most_used][Excluding web browsers, what are your most used non-terminal programs in i3?]]
-   - [[(https://www.reddit.com/r/emacs/comments/8ajdbq/so_many_packages_cant_stop_myself][So many packages, can't stop myself!]]
+   - [[https://www.reddit.com/r/i3wm/commencementts/8a5psj/excluding_web_browsers_what_are_your_most_used][Excluding web browsers, what are your most used non-terminal programs in i3?]]
+   - [[https://www.reddit.com/r/emacs/comments/8ajdbq/so_many_packages_cant_stop_myself][So many packages, can't stop myself!]]
    - [[http://irreal.org/blog/?p=7011][Ten Tools for Academics]]
-   - [[(http://www.mostlymaths.net/2016/09/more-emacs-configuration-tweaks.html][Rubén Berenguel: More emacs configuration tweaks (multiple-cursor on click, minimap, code folding, ensime eval overlays)]]
+   - [[http://www.mostlymaths.net/2016/09/more-emacs-configuration-tweaks.html][Rubén Berenguel: More emacs configuration tweaks (multiple-cursor on click, minimap, code folding, ensime eval overlays]]
 ** TODO Bling-bling (js)                                              :js:retro:
 
  :PROPERTIES:
@@ -318,6 +318,10 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
    :EXPORT_HUGO_AUTO_SET_LASTMOD: nil
    :END:
+
+   #+CAPTION: Tunnel ([[https://commons.wikimedia.org/wiki/File:Williamson_Tunnels_-_The_Banqueting_Hall.jpg][wikipedia]])
+    #+NAME:   fig:tunnnel-ngrok
+    [[/images/640px-Williamson_Tunnels_-_The_Banqueting_Hall.png]]
 
    [[https://gohugo.io/documentation/][Hugo]] is able to quickly update a site, and makes improving and bug-fixing very simple. Showing your work-in-progress online is not as simple, and probably not what you want, anyway. Comes in [[https://ngrok.com/][ngrok]].
 

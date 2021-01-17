@@ -14,9 +14,10 @@
       <pubDate>Sun, 17 Jan 2021 13:25:00 +0200</pubDate>
       
       <guid>https://qwxlea.tk/posts/hugo-and-ngrok-for-fun-and-profit/</guid>
-      <description>Hugo is able to quickly update a site, and makes improving and bug-fixing very simple. Showing your work-in-progress online is not as simple, and probably not what you want, anyway. Comes in ngrok.
+      <description>Tunnel (wikipedia)
+  Hugo is able to quickly update a site, and makes improving and bug-fixing very simple. Showing your work-in-progress online is not as simple, and probably not what you want, anyway. Comes in ngrok.
  ngrok allows you to expose a web server running on your local machine to the internet. Just tell ngrok what port your web server is listening on.
- Installation is simple, just download from here, and put in your path.</description>
+ Installation is simple, just download from here, and put it in your path.</description>
     </item>
     
   </channel>
