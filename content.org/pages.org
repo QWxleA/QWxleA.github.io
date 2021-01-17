@@ -1,0 +1,31 @@
+#+hugo_base_dir: /home/plovs/Projects/qweb
+#+hugo_section: /
+
+* DONE About
+  CLOSED: [2020-12-21 Mon 13:06]
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: about
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type page
+   :END:
+
+   This is an awesome static page where I write about myself.
+
+** Tools
+
+    - [[https://www.gnu.org/software/emacs/][Emacs]]
+      - [[https://ox-hugo.scripter.co/][OX-Hugo]] -- ox-hugo is an [[https://orgmode.org/][Org]] exporter backend that exports Org to Hugo-compatible Markdown (Blackfriday) and also generates the front-matter (in TOML or YAML format).
+    - [[https://gohugo.io/][Hugo]]
+      - [[https://github.com/monkeyWzr/hugo-theme-cactus][Cactus theme]]
+    - [[https://realfavicongenerator.net/][favicongenerator]]
+
+
+** Logo
+
+    #+CAPTION: Coloringbuddymike, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
+    #+NAME:   fig:Coloringbuddymike
+ [[https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg/256px-Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg.png]]
+
+* COMMENT Local Variables                          :ARCHIVE:
+# Local Variables:
+# eval: (org-hugo-auto-export-mode)
+# End:

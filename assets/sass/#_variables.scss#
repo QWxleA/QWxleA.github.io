@@ -1,0 +1,75 @@
+//------------------------------- Variables
+// Fonts
+$font-family-body: "JetBrains Mono", monospace;
+$font-family-mono: "JetBrains Mono", monospace;
+$font-family-tt: "Inconsolata", monospace;
+$font-size: 20px;
+$line-height: 1.725;
+$page-width: 48rem;
+// Logo
+$logo-width: 50px;
+$logo-height: 50px;
+$logo-grayout: true;
+
+$colors : "dark"; // white dark light classic
+
+$f-weight-medium: 400;
+$f-weight-semibold: 600;
+$f-weight-bold: 700;
+
+$images-path: '../images';
+$icons-path: $images-path+'/icons';
+
+//Light-Color
+// by @GabiThume (https://github.com/gabithume)
+$color-background : #e2e0de;
+$color-footer-mobile-1 : darken($color-background, 2%);
+$color-footer-mobile-2 : darken($color-background, 10%);
+$color-background-code : darken($color-background, 2%);
+$color-border : #666;
+$color-meta : #666;
+$color-meta-code : lighten($color-meta, 10%);
+$color-link : rgba(43, 188, 138, 1);
+$color-text : #363533;
+$color-accent-3 : #666666;
+$color-accent-2 : #111111;
+$color-accent-1 : #d44375;
+$color-quote : #ab2251;
+
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$linkedin: #0077b5;
+$youtube: #cd201f;
+
+// ------------------------ Responsive Quries
+
+$sm-em: "only screen and (min-width: 36em)"; // ≥ 576px
+$md-em: "only screen and (min-width: 48em)"; // ≥ 768px
+$lg-em: "only screen and (min-width: 62em) "; // ≥ 992px
+$xl-em: "only screen and (min-width: 75em)"; // ≥ 1200px
+
+$xs-only: "(max-width: 575.98px)";
+$sm-only: "(min-width: 576px) and (max-width: 767.98px)";
+$md-only: "(min-width: 768px) and (max-width: 991.98px)";
+$lg-only: "(min-width: 992px) and (max-width: 1199.98px)";
+$xl-only: "(min-width: 1200px)";
+
+$sm-down: "only screen and (max-width: 767.98px)";
+$md-down: "only screen and (max-width: 991.98px)";
+$lg-down: "only screen and (max-width: 1199.98px)";
+
+//------------------------------- Colors
+//Dark-Color
+// $color-background : #1d1f21;
+// $color-footer-mobile-1 : lighten($color-background, 2%);
+// $color-footer-mobile-2 : lighten($color-background, 10%);
+// $color-background-code : lighten($color-background, 2%);
+// $color-border : #666;
+// $color-meta : #666;
+// $color-meta-code : #666;
+// $color-link : rgba(212, 128, 170, 1);
+// $color-text : #c9cacc;
+// $color-accent-3 : #cccccc;
+// $color-accent-2 : #eeeeee;
+// $color-accent-1 : #2bbc8a;
+// $color-quote : #ccffb6;
