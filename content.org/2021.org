@@ -1,6 +1,315 @@
 #+hugo_base_dir: /home/plovs/Projects/QWxleA.github.io
 #+category: blog
 
+* Ideas
+** TODO Tags -- organizing your files multi-dimensional           :productivity:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: tags-organizing-your-files-multi-dimensional
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - [[https://www.tagspaces.org/products/community/][TagSpaces Community Edition]]
+** TODO Linux productivity                                        :productivity:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: linux-productivity
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   https://blog.hubstaff.com/11-linux-productivity-tools/
+https://www.linux.com/tutorials/top-5-linux-distributions-productivity/
+https://r/
+
+https://www.ubuntupit.com/best-linux-software-our-editorial-list-of-essential-linux-apps/
+
+I always just use mpv "mpv av://v4l2:/dev/video0 "
+** TODO Movies & TV                                                     :movies:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: movies-and-tv
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   Movies and TV Series
+
+   - 5th element
+   - face/off
+   - young frankenstein
+
+   - https://letterboxd.com/nikitavoloboev/
+   - https://trakt.tv/users/nikitavoloboev/history
+   - https://trakt.tv/users/nikitavoloboev/watchlist?sort=rank,asc
+** TODO Android Apps -- 2021                                           :android:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: android-apps-2021
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   | Category                      | Applications                                |
+   |-------------------------------+---------------------------------------------|
+   | Ad Blocker                    | Blokada                                     |
+   | App Store                     | F-Droid                                     |
+   | Audio conferencing            | Plumble                                     |
+   | Contacts and AddressBook sync | DAVDroid                                    |
+   | Exercise                      | Feeel                                       |
+   | File Synchronization          | Syncthing                                   |
+   | Habit forming                 | Habits                                      |
+   | Keyboard                      | AnySoftKeyboard with Colemak  layout        |
+   | Messaging                     | Riot                                        |
+   | Maps                          | OsmAnd~                                     |
+   | Online Radio                  | RadioDroid                                  |
+   | Password Manager              | KeePassDroid                                |
+   | Podcasts                      | AntennaPod                                  |
+   | Proprietary app store         | Yalp Store                                  |
+   | Reminders                     | Tasks                                       |
+   | RSS                           | Tiny Tiny RSS                               |
+   | Social Media                  | Tusky and Dandelion                         |
+   | Web Browsers                  | Firefox Klar and DuckDuckGo Privacy Browser |
+   | YouTube Music and SoundCloud  | NewPipe Beta                                |
+
+
+*** links
+
+  - https://njoseph.me/mediawiki/Privacy_Stack
+
+*** TODO on tech
+
+    Install *mosh* on phone / tablet and tp220
+
+    - [Mosh : Keith Winstein](https://launchpad.net/~keithw/+archive/ubuntu/mosh)
+    - [Mosh Tool - An Alternative Option for SSH and How to Use It](http://linoxide.com/how-tos/mosh-alternative-ssh/)
+** TODO Emacs -- tools for fun and glory                                 :emacs:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: emacs-tools-for-fun-and-glory
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - [[http://www.draketo.de/light/english/emacs/babcore][Emacs Customizations everyone should have]]
+   - [[https://www.reddit.com/r/emacs/comments/898xgg/what_minor_modes_do_you_always_use][What minor modes do you always use?]]
+   - [[(https://www.reddit.com/r/i3wm/commencementts/8a5psj/excluding_web_browsers_what_are_your_most_used][Excluding web browsers, what are your most used non-terminal programs in i3?]]
+   - [[(https://www.reddit.com/r/emacs/comments/8ajdbq/so_many_packages_cant_stop_myself][So many packages, can't stop myself!]]
+   - [[http://irreal.org/blog/?p=7011][Ten Tools for Academics]]
+   - [[(http://www.mostlymaths.net/2016/09/more-emacs-configuration-tweaks.html][Rubén Berenguel: More emacs configuration tweaks (multiple-cursor on click, minimap, code folding, ensime eval overlays)]]
+** TODO Bling-bling (js)                                              :js:retro:
+
+ :PROPERTIES:
+
+ :EXPORT_FILE_NAME: bling-bling--js
+
+ :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+ :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+ :END:
+
+  Here is some code to emulate the beloved <blink> tag. You can even load jQuery off of Google.
+
+  #+begin_src js
+    <span id="blink-me">the only blinking moment is now</span>
+    <script>
+      window.setInterval(function() {
+        $('#blink-me').css('visibility',
+            $('#blink-me').css('visibility') == 'hidden' ? 'visible' : 'hidden')
+      }, 400);
+    </script>
+  #+end_src
+
+  Don't you know that the only blinking moment is now, grasshopper?
+
+  https://developers.google.com/speed/libraries/devguide#jquery
+
+** TODO Zines -- retro-new                                               :retro:
+
+ :PROPERTIES:
+
+ :EXPORT_FILE_NAME: zines-retro-new
+
+ :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+ :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+ :END:
+
+ Why zines?
+
+Remember first time I saw a zine, or maybe more precise, this is the first time I remember.
+
+Link
+
+Beginning of the nineties, magazines all over, unlike today. I really don't know anybody who still reads magazines. Which is sad in a way, because a magazine does have some posts over blogposts, curation, and cooperation.
+
+Zines share the pluses of magazines.
+
+Used to read many magazines, don't remember virtually any of them. Zine, yes.
+
+Rop Kongrijp, xs4all.
+
+Sorry lol I'm history of zones, shoes history of specific sub-cyltures.
+
+Dead cow book
+
+## Cyberpunk
+
+Zines are very cyberpunk. Not capitalistic, nobody gets paid, underground, freedom to write, show what we want.
+
+Why is this good? Polar opposite of a zone is Facebook. Lowest common denominator. With excesses fat beyond what is good for society at large.
+
+No limits at all? No limits are good, limits in art,
+Limits in words, shoes values of group, eg no hate-speech (which is a lot more complicated, then what you would think).
+
+Examples of art.
+
+Examples of writing
+SF, poetry
+
+Examples of culture0
+
+Greetings from the underground
+
+Dostoyevsky
+
+Russian underground art.
+
+Modern underground art
+
+Push boundaries, not many boundaries left, Reverting old boundaries.
+
+Technical boundaries
+
+Copyright AI created
+
+Write about css art. Ask for an image
+
+Zines are good for you. They're the vegetables of writing. Read, write and create. Tilde gives us a playground and a canvas, Irc gives a community.
+
+Dostoyevsky / dictionary quote
+
+** TODO What makes a good app?                                         :opinion:
+
+ :PROPERTIES:
+
+ :EXPORT_FILE_NAME: what-makes-a-good-app
+
+ :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+ :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+ :END:
+
+ What makes a good app
+
+    no ads
+    open source / free software
+    usability
+    does what I need
+    stability
+    does what I want
+
+** TODO How to read
+
+ :PROPERTIES:
+
+ :EXPORT_FILE_NAME: how-to-read
+
+ :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+ :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+ :END:
+
+ How to read
+
+Rain on roof, reading the hobbit. In one go.
+
+Completely absorbed. Would be talking about my latest favorite book.
+
+Now easier to watch something, spend time on the net.
+
+Back to basics, how to read.
+
+    how to read fiction
+
+    how to read non-fiction
+
+    how to take notes
+
+    How do you analyze a novel?
+
+    How to Read Closely: Making Sense Out of Novels - Cornell College
+
+    Note-Taking for Reading | SkillsYouNeed
+
+Analyzing fiction
+
+Cliffs note
+Analyzing non-fiction
+
+https://www.cornellcollege.edu/academic-support-and-advising/academic-support/study-tips/reading-textbooks.shtml
+Taking notes
+
+Outlines & mind maps
+Got it!
+Our websites and dashboards use cookies. By continuing, you agree to their use. Learn more, including how to control cookies.
+
+** TODO Dresden - reading order
+
+ :PROPERTIES:
+
+ :EXPORT_FILE_NAME: dresden-reading-order
+
+ :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+ :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+ :END:
+
+ This is for those who might be new to the series and were wondering the order in which to read them. While the main plot in each book is begun and wrapped up in each novel, there is also a continuing plot from one book to the next. New books tend to refer to past events so in order to avoid confusion it might be best to read them in the the order published.
+
+Source: Dresden Files | Jim Butcher
+
+    Prequel - Welcome to the Jungle (Graphic Novel)
+
+    x Book 1 - Storm Front
+
+    x Book 2 - Fool Moon
+
+    x Book 3 - Grave Peril
+
+    x Book 4 - Summer Knight
+
+    x Book 5 - Death Masks
+
+    Book 6 - Blood Rites 8/3
+
+    Book 7 - Dead Beat 13/3
+
+    "Something Borrowed" - Short story in My Big Fat Supernatural Wedding
+
+    x Book 8 - Proven Guilty
+
+    x Book 9 - White Night
+
+    "It's My Birthday Too" - Short story in Many Bloody Returns
+
+    "Heorot" - short story in My Big Fat Supernatural Honeymoon
+
+    x Book 10 - Small Favor 10/04 Novella - Backup (not sure where this falls as I haven't read it but it was published between 10 and 11 & is a story from Thomas's POV)
+
+    x Book 11 - Turn Coat 13/04
+
+    x Book 12 - Changes
+
+    Book 12a - Side Jobs - a collection of short stories - see Message 34 of this post for more detail
+
+    x Book 13 - Ghost Story - in stores 26 July 2011
+
+    Book 14 - Cold Days - released TBD, most likely some time in 2012
+
+    Book 15 Skin Game 03/05/18
+
+    Book 16 Peace Talks
+
+    Big foot on campus 23-04-2018
+
+    Curses 23-04-2018
+
+- Even hand 23-04-2018 John Marcone story
+Got it!
+Our websites and dashboards use cookies. By continuing, you agree to their use. Learn more, including how to control cookies.
+
 * Posts
 ** DONE hugo and ngrok, for fun and profit                          :hugo:ngrok:
    CLOSED: [2021-01-17 Sun 13:25]
@@ -62,6 +371,17 @@
    #+begin_src html
      <a class="navbar-brand" href="{{ "/" | relLangURL }}"><img class="logo" src="{{ "img/logo.jpeg" | relURL }}" alt="{{ .Site.Title }}"></a>
    #+end_src
+
+** TODO The eigthies -- secretly great                                   :music:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: the-eigthies-secretly-great
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - [100 Best Songs Of The 1980s - NME](http://www.nme.com/list/100-best-songs-of-the-1980s-1161)
+   - [Sounds of the Eighties (BBC - Discs 1 and 2) (download torrent) Ted Cruzing](https://cruzing.xyz/torrent/6762065/Sounds_of_the_Eighties___(BBC_-_Discs_1_and_2))
+   - [Best Songs Of The 80s - YouTube](https://m.youtube.com/watch?v=FKd2G9CYKmE)
 
 ** INPROGRESS XMonad from scratch -- day 1 -- Starting small            :xmonad:
    :PROPERTIES:
@@ -936,7 +1256,6 @@
             , workspaces = myWorkspaces
             }
   #+end_src
-
 
 ** TODO XMonad from scratch -- day 6 -- Colors, applications and variables :xmonad:
    :PROPERTIES:
@@ -3450,7 +3769,8 @@
    :END:
 
    What else can we add? See first image
-* COMMENT Local Variables                          :ARCHIVE:
-# Local Variables:
-# eval: (org-hugo-auto-export-mode)
-# End:
+
+** COMMENT Local Variables                          :ARCHIVE:
+   # Local Variables:
+   # eval: (org-hugo-auto-export-mode)
+   # End:
