@@ -311,7 +311,7 @@ Got it!
 Our websites and dashboards use cookies. By continuing, you agree to their use. Learn more, including how to control cookies.
 
 * Posts
-** DONE hugo and ngrok, for fun and profit                          :hugo:ngrok:
+** DONE hugo and ngrok, for fun and profit                   :hugo:ngrok:webdev:
    CLOSED: [2021-01-17 Sun 13:25]
    :PROPERTIES:
    :EXPORT_FILE_NAME: hugo-and-ngrok-for-fun-and-profit
