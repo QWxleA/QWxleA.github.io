@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on QWxlea</title>
+    <link>https://qwxlea.tk/posts/</link>
+    <description>Recent content in Posts on QWxlea</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>QWxleA</copyright>
+    <lastBuildDate>Sun, 17 Jan 2021 13:25:00 +0200</lastBuildDate><atom:link href="https://qwxlea.tk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo and ngrok, for fun and profit</title>
+      <link>https://qwxlea.tk/posts/hugo-and-ngrok-for-fun-and-profit/</link>
+      <pubDate>Sun, 17 Jan 2021 13:25:00 +0200</pubDate>
+      
+      <guid>https://qwxlea.tk/posts/hugo-and-ngrok-for-fun-and-profit/</guid>
+      <description>Hugo is able to quickly update a site, and makes improving and bug-fixing very simple. Showing your work-in-progress online is not as simple, and probably not what you want, anyway. Comes in ngrok.
+ ngrok allows you to expose a web server running on your local machine to the internet. Just tell ngrok what port your web server is listening on.
+ Forwarding a local hugo session is as simple as:</description>
+    </item>
+    
+    <item>
+      <title>Git notes</title>
+      <link>https://qwxlea.tk/posts/git-notes/</link>
+      <pubDate>Thu, 24 Dec 2020 23:58:00 +0200</pubDate>
+      
+      <guid>https://qwxlea.tk/posts/git-notes/</guid>
+      <description>Notes to keep track of things I don&amp;rsquo;t do all that often.
+Working with git submodule Adding a submodule is very simple, here I add a theme to this site:
+1  git submodule add https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus   Updating as well:
+1  git submodule update --remote --merge   Removing, not so much, the long version (google-fu):
+ Delete the relevant section from the .gitmodules file. Stage the .</description>
+    </item>
+    
+    <item>
+      <title>Quickly accessing WhatsApp on Xmonad</title>
+      <link>https://qwxlea.tk/posts/quickly-accessing-whatsapp-on-xmonad/</link>
+      <pubDate>Tue, 22 Dec 2020 23:58:00 +0200</pubDate>
+      
+      <guid>https://qwxlea.tk/posts/quickly-accessing-whatsapp-on-xmonad/</guid>
+      <description>The whole point of using a tiling window manager is distractionless working. Unfortunetely the rest of the world does not always agree. Enter WhatsApp. WhatsApp is easy to use, and (in my part of the world) very popular. For a long time I used it from my phone, but that is not really convenient. Copying and pasting obviously is problematic, but the whole taking up your phone completely ruins any semblamce of workflow.</description>
+    </item>
+    
+    <item>
+      <title>The Vorkosigan Saga Reading Order</title>
+      <link>https://qwxlea.tk/posts/vorkosigan-saga-reading-order/</link>
+      <pubDate>Wed, 28 Oct 2020 12:52:00 +0200</pubDate>
+      
+      <guid>https://qwxlea.tk/posts/vorkosigan-saga-reading-order/</guid>
+      <description>Light-hearted science fiction, Lois McMaster Bujold&amp;rsquo;s Vorkosigan Saga, can be read in different ways / order:
+Links: wikipedia, Initially these lists come from here
+  Cover of Shards of Honor, the first book in the series (source, wikipedia)
+  Chronological Order The chronological order is fairly straightforward, though not necessarily the best reading order (that would be omnibus order, posted below).
+ &amp;lsquo;Dreamweaver&amp;rsquo;s Dilemma&amp;rsquo; (short story, set many centuries Before Miles&amp;rsquo;s birth) Falling Free (200 BM) Shards of Honor (2-1 BM) &amp;lsquo;Aftermaths&amp;rsquo; (2-1 BM) Barrayar (1-0 BM) The Warrior&amp;rsquo;s Apprentice (17th year of Miles Vorkosigan&amp;rsquo;s life) &amp;lsquo;Mountains of Mourning&amp;rsquo; (20 MV) The Vor Game (20 MV) Cetaganda (22 MV) Ethan of Athos (22 MV) &amp;lsquo;Labyrinth&amp;rsquo; (23 MV) &amp;lsquo;Borders of Infinity&amp;rsquo; (novella version) (24 MV) Brothers in Arms (24 MV) Borders of Infinity (framing story) (25 MV) Mirror Dance (28 MV) Memory (29-30 MV) Komarr (30 MV) A Civil Campaign (30 MV) &amp;lsquo;Winterfair Gifts&amp;rsquo; (31 MV) Diplomatic Immunity (32 MV) Captain Vorpatril&amp;rsquo;s Alliance (35 MV) Cryoburn (39 MV) Gentleman Jole and the Red Queen (42 MV)  BM: Before Miles, MV: Miles Vorkosigan</description>
+    </item>
+    
+    <item>
+      <title>Fanfic: Harry Potter and the Methods of Rationality</title>
+      <link>https://qwxlea.tk/posts/fanfic-harry-potter-rationality/</link>
+      <pubDate>Fri, 18 Sep 2020 11:04:00 +0300</pubDate>
+      
+      <guid>https://qwxlea.tk/posts/fanfic-harry-potter-rationality/</guid>
+      <description>The Harry Potter books, despite being &amp;lsquo;young adult&amp;rsquo; books, are a great read. Maybe not perfect, but definitely enjoyable.
+As with all great series, when it&amp;rsquo;s over, then what?
+For Harry Potter, it&amp;rsquo;s fanfiction, most of it is terrible, but some is actually great:
+ Fanfic: Harry Potter and the Methods of Rationality  Surprisingly, it even has a wikipedia page. It was published as a serial from 28 February 2010 through to 14 March 2015.</description>
+    </item>
+    
+    <item>
+      <title>Cyber Punk</title>
+      <link>https://qwxlea.tk/posts/cyber-punk/</link>
+      <pubDate>Tue, 09 Jun 2020 12:40:00 +0300</pubDate>
+      
+      <guid>https://qwxlea.tk/posts/cyber-punk/</guid>
+      <description>Cyber Punk, probably my favourite genre, surprisingly close to reality today&amp;hellip;
+ The Stars My Destination (Alfred Bester) Tea From An Empty Cup - Author: Pat Cadigan The Girl Who Was Plugged In, by James Tiptree, Jr. Software, by Rudy Rucker Akira, by Katsuhiro Otomo Neuromancer, by William Gibson (openculture audio version) &amp;ndash; my first cyberpunk book Frontera, by Lewis Shiner Eclipse, by John Shirley Hammer, by K. W. Jeter Schismatrix, by Bruce Sterling Mirrorshades: The Cyberpunk Anthology, edited by Bruce Sterling Metrophage, by Richard Kadrey The Ghost in the Shell, by Masamune Shirow Synners, by Pat Cadigan Snow Crash, by Neal Stephenson &amp;ndash; favourite Trouble and Her Friends, by Melissa Scott Diaspora, by Greg Egan    Writing</description>
+    </item>
+    
+    <item>
+      <title>Dune - it started so great</title>
+      <link>https://qwxlea.tk/posts/dune-it-started-so-great/</link>
+      <pubDate>Sat, 18 Apr 2020 12:34:00 +0300</pubDate>
+      
+      <guid>https://qwxlea.tk/posts/dune-it-started-so-great/</guid>
+      <description>The first Dune book is my favourite book. I have read it at least six times. The rest &amp;hellip; not so much.
+Reading order Frank Herbert:
+ Dune (1965) Dune Messiah (1969) Children of Dune (1976) God Emperor of Dune (1981) Heretics of Dune (1984) Chapterhouse: Dune (1985)  Brian Herbert/Kevin J. Anderson: Prelude to Dune series:
+ House Atreides (1999) House Harkonnen (2000) House Corrino (2001)  Legends of Dune series:</description>
+    </item>
+    
+    <item>
+      <title>Podcasts I&#39;m currently listening to</title>
+      <link>https://qwxlea.tk/posts/podcasts-infosec/</link>
+      <pubDate>Sat, 14 Mar 2020 09:24:00 +0200</pubDate>
+      
+      <guid>https://qwxlea.tk/posts/podcasts-infosec/</guid>
+      <description>Podcasts: Best #infosec #podcasts (In no particular order):
+ Cyberwire (Daily news headlines) Risky Business (Weekly news with more in depth analysis) Smashing Security (Lighthearted take on the week&amp;rsquo;s news) Hacking Humans (Social engineering news and discussion) Cybercrime Investigations (Seems inactive) Darknet Diaries (Storytelling and history) (favourite episode) Malicious Life (Storytelling and history)  </description>
+    </item>
+    
+    <item>
+      <title>The Lost Fleet</title>
+      <link>https://qwxlea.tk/posts/lost-fleet/</link>
+      <pubDate>Mon, 17 Feb 2020 12:01:00 +0200</pubDate>
+      
+      <guid>https://qwxlea.tk/posts/lost-fleet/</guid>
+      <description>Read most of the series in 2018, at least, what had been available then. Genesis fleet I haven&amp;rsquo;t read yet.
+The Lost Fleet is a military science fiction series written by John G. Hemry under the pen name Jack Campbell. The whole series feels very &amp;lsquo;greek&amp;rsquo;, which is no surprise: Hemry acknowledged in an interview that The Lost Fleet was inspired by Xenophon&amp;rsquo;s Anabasis, detailing the return march of the Ten Thousand, and myths about kings returning to save their nation.</description>
+    </item>
+    
+  </channel>
+</rss>
