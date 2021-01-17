@@ -10,6 +10,8 @@ draft = false
 
 > ngrok allows you to expose a web server running on your local machine to the internet. Just tell ngrok what port your web server is listening on.
 
+Installatuin is simple, just download from [here](https://ngrok.com/download), and put in your path.
+
 Forwarding a local hugo session is as simple as:
 
 ```shell
