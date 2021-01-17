@@ -33,3 +33,29 @@ tmux new-window -t "$SN:2" 'ngrok http 1313'
 tmux select-window -t "$SN:2"
 tmux -2 attach-session -t "$SN"
 ```
+
+And ... that did not work well at all. On my machine it worked perfectly, but outside, where localhost did not work, my test-project missed all js-, css- and img-files. The solution is not hard:
+
+```html
+<a class="navbar-brand" href="{{ "/" | relLangURL }}"><img class="logo" src="{{ "img/logo.jpeg" | absURL }}" alt="{{ .Site.Title }}"></a>
+```
+
+If you use `absURL`, you end up with ****localhost**** in the complete url, but if you use `relURL`, you get a relative link:
+
+```html
+{{ "mystyle.css" | absURL }} → "https://example.com/hugo/mystyle.css"
+{{ "mystyle.css" | relURL }} → "/hugo/mystyle.css"
+```
+
+<div class="src-block-caption">
+  <span class="src-block-number">Code Snippet 1</span>:
+  <a href="https://gohugo.io/functions/absurl/">Hugo documentation</a>
+</div>
+
+Source: [Hugo documentation](https://gohugo.io/functions/absurl/)
+
+So, the problem was solved doing a find-replace: `s/absURL/relURL/g`
+
+```html
+<a class="navbar-brand" href="{{ "/" | relLangURL }}"><img class="logo" src="{{ "img/logo.jpeg" | relURL }}" alt="{{ .Site.Title }}"></a>
+```

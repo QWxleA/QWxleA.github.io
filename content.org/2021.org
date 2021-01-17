@@ -1,7 +1,65 @@
-#+hugo_base_dir: /home/plovs/Projects/qweb
+#+hugo_base_dir: /home/plovs/Projects/QWxleA.github.io
+#+category: blog
 
 * Posts
+** DONE hugo and ngrok, for fun and profit                          :hugo:ngrok:
+   CLOSED: [2021-01-17 Sun 13:25]
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: hugo-and-ngrok-for-fun-and-profit
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: nil
+   :END:
 
+   [[https://gohugo.io/documentation/][Hugo]] is able to quickly update a site, and makes improving and bug-fixing very simple. Showing your work-in-progress online is not as simple, and probably not what you want, anyway. Comes in [[https://ngrok.com/][ngrok]].
+
+   > ngrok allows you to expose a web server running on your local machine to the internet. Just tell ngrok what port your web server is listening on.
+
+   Forwarding a local hugo session is as simple as:
+
+   #+begin_src shell
+     ngrok http 1313
+   #+end_src
+
+   To automate it:
+
+    #+begin_src shell
+      #!/usr/bin/env bash
+      # var for session name (to avoid repeated occurences)
+      SN="hugostuff"
+      PROJ="$(pwd)"
+
+      tmux new-session -s "$SN" -n "$PROJ" -d
+
+      tmux new-window -t "$SN:1" 'hugo -D -w server --disableFastRender'
+      tmux new-window -t "$SN:2" 'ngrok http 1313'
+
+      # Select window #1 and attach to the session
+      tmux select-window -t "$SN:2"
+      tmux -2 attach-session -t "$SN"
+   #+end_src
+
+
+   And ... that did not work well at all. On my machine it worked perfectly, but outside, where localhost did not work, my test-project missed all js-, css- and img-files. The solution is not hard:
+
+   #+begin_src html
+     <a class="navbar-brand" href="{{ "/" | relLangURL }}"><img class="logo" src="{{ "img/logo.jpeg" | absURL }}" alt="{{ .Site.Title }}"></a>
+   #+end_src
+
+   If you use =absURL=, you end up with **localhost** in the complete url, but if you use =relURL=, you get a relative link:
+
+   #+caption: [[https://gohugo.io/functions/absurl/][Hugo documentation]]
+   #+begin_src html
+     {{ "mystyle.css" | absURL }} → "https://example.com/hugo/mystyle.css"
+     {{ "mystyle.css" | relURL }} → "/hugo/mystyle.css"
+   #+end_src
+
+   Source: [[https://gohugo.io/functions/absurl/][Hugo documentation]]
+
+   So, the problem was solved doing a find-replace: =s/absURL/relURL/g=
+
+   #+begin_src html
+     <a class="navbar-brand" href="{{ "/" | relLangURL }}"><img class="logo" src="{{ "img/logo.jpeg" | relURL }}" alt="{{ .Site.Title }}"></a>
+   #+end_src
 
 ** INPROGRESS XMonad from scratch -- day 1 -- Starting small            :xmonad:
    :PROPERTIES:
@@ -578,7 +636,7 @@
 
       - [[https://hackage.haskell.org/package/xmonad-0.15/docs/XMonad-Core.html#v:XConfig][XConfig]] what =can= be changed in main
 
-** TODO XMonad from scratch -- day 3 -- Xmobar                          :xmonad:
+** NEXT XMonad from scratch -- day 3 -- Xmobar                          :xmonad:
    :PROPERTIES:
    :EXPORT_FILE_NAME: xmonad-from-scratch-day-3
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
@@ -647,7 +705,6 @@
            , template = "%StdinReader% }{  %cpu% | %memory% * %swap%    <fc=#ee9a00>%date%</fc> | %EGPF%"
            }
   #+end_src
-
 
 ** TODO XMonad from scratch -- day 4 -- Workspaces                      :xmonad:
    :PROPERTIES:
@@ -3391,44 +3448,6 @@
    :END:
 
    What else can we add? See first image
-** DONE hugo and ngrok, for fun and profit                          :hugo:ngrok:
-   CLOSED: [2021-01-17 Sun 13:25]
-   :PROPERTIES:
-   :EXPORT_FILE_NAME: hugo-and-ngrok-for-fun-and-profit
-   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
-   :EXPORT_HUGO_AUTO_SET_LASTMOD: nil
-   :END:
-
-   [[https://gohugo.io/documentation/][Hugo]] is able to quickly update a site, and makes improving and bug-fixing very simple. Showing your work-in-progress online is not as simple, and probably not what you want, anyway. Comes in [[https://ngrok.com/][ngrok]].
-
-   > ngrok allows you to expose a web server running on your local machine to the internet. Just tell ngrok what port your web server is listening on.
-
-   Forwarding a local hugo session is as simple as:
-
-   #+begin_src shell
-     ngrok http 1313
-   #+end_src
-
-   To automate it:
-
-    #+begin_src shell
-      #!/usr/bin/env bash
-      # var for session name (to avoid repeated occurences)
-      SN="hugostuff"
-      PROJ="$(pwd)"
-
-      tmux new-session -s "$SN" -n "$PROJ" -d
-
-      tmux new-window -t "$SN:1" 'hugo -D -w server --disableFastRender'
-      tmux new-window -t "$SN:2" 'ngrok http 1313'
-
-      # Select window #1 and attach to the session
-      tmux select-window -t "$SN:2"
-      tmux -2 attach-session -t "$SN"
-   #+end_src
-
-
-
 * COMMENT Local Variables                          :ARCHIVE:
 # Local Variables:
 # eval: (org-hugo-auto-export-mode)

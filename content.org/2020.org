@@ -1,4 +1,4 @@
-#+hugo_base_dir: /home/plovs/Projects/qweb
+#+hugo_base_dir: /home/plovs/Projects/QWxleA.github.io
 #+category: blog
 
 * Posts
