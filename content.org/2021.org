@@ -323,7 +323,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    > ngrok allows you to expose a web server running on your local machine to the internet. Just tell ngrok what port your web server is listening on.
 
-   Installation is simple, just download from [[https://ngrok.com/download][here]], and put in your path.
+   Installation is simple, just download from [[https://ngrok.com/download][here]], and put it in your path.
 
    Forwarding a local hugo session is as simple as:
 
@@ -350,7 +350,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
    #+end_src
 
 
-   And ... that did not work well at all. On my machine it worked perfectly, but outside, where localhost did not work, my test-project missed all js-, css- and img-files. The solution is not hard:
+   And ... that did not work well at all. On my machine it worked perfectly, but outside, where localhost did not work, my test-project missed all js-, css- and img-files. The solution is not hard, this is what I found in the theme:
 
    #+begin_src html
      <a class="navbar-brand" href="{{ "/" | relLangURL }}"><img class="logo" src="{{ "img/logo.jpeg" | absURL }}" alt="{{ .Site.Title }}"></a>
@@ -366,11 +366,13 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    Source: [[https://gohugo.io/functions/absurl/][Hugo documentation]]
 
-   So, the problem was solved doing a find-replace: =s/absURL/relURL/g=
+   So, the problem was solved doing a quick find-replace: =s/absURL/relURL/g=
 
    #+begin_src html
      <a class="navbar-brand" href="{{ "/" | relLangURL }}"><img class="logo" src="{{ "img/logo.jpeg" | relURL }}" alt="{{ .Site.Title }}"></a>
    #+end_src
+
+   Finally! Profit!
 
 ** TODO The eigthies -- secretly great                                   :music:
    :PROPERTIES:
