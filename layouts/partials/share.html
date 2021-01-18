@@ -1,0 +1,44 @@
+<ul>
+  {{ $icon_class_name := .Scratch.Get "icon_class_name"}}
+  {{ if .Description }}
+    {{ .Scratch.Set "description" .Description }}
+  {{ else }}
+    {{ .Scratch.Set "description" .Summary }}
+  {{ end }}
+  {{ $description := .Scratch.Get "description" }}
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u={{ .Permalink }}">
+      {{- partial "svg" (dict "img" "facebook" "aria" "true") -}}
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url={{ .Permalink }}&text={{ .Title }}">
+      {{- partial "svg" (dict "img" "twitter" "aria" "true") -}}
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject={{ .Title }}&body=Check out this article: {{ .Permalink }}">
+      {{- partial "svg" (dict "img" "mail" "aria" "true") -}}
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url={{ .Permalink }}&title={{ .Title }}">
+      {{- partial "svg" (dict "img" "pocket" "aria" "true") -}}
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url={{ .Permalink }}&title={{ .Title }}">
+      {{- partial "svg" (dict "img" "reddit" "aria" "true") -}}
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url={{ .Permalink }}&name={{ .Title }}&description={{ $description }}">
+      {{- partial "svg" (dict "img" "tumblr" "aria" "true") -}}
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u={{ .Permalink }}&t={{ .Title }}">
+      {{- partial "svg" (dict "img" "ycombinator" "aria" "true") -}}
+    </a>
+  </li>
+</ul>

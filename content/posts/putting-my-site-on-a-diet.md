@@ -1,7 +1,7 @@
 +++
 title = "Putting my site on a diet"
 author = ["Alex Qwxlea"]
-lastmod = 2021-01-18T14:10:18+02:00
+lastmod = 2021-01-18T17:49:01+02:00
 draft = true
 +++
 

@@ -453,6 +453,8 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
    5. Next, replace all Font awesome icons.
 
       Find svg-icons from [[https://iconify.design/icon-sets/][iconify.design]]. Fix your template ... profit!
+
+
 *** Resources
 
     - [[http://oostens.me/posts/hugo-resources-inline-svg-icons/][Hugo + resources = inline svg icons]]

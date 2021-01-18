@@ -1,0 +1,2 @@
+{{ $svg := resources.Get (print "svg/" .img ".svg") }}
+<i class="inline-svg" aria="{{ .aria }}">{{ $svg.Content | safeHTML }}</i>
