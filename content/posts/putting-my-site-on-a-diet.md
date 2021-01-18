@@ -1,8 +1,9 @@
 +++
 title = "Putting my site on a diet"
 author = ["Alex Qwxlea"]
-lastmod = 2021-01-18T17:49:01+02:00
-draft = true
+date = 2021-01-18T18:05:00+02:00
+lastmod = 2021-01-18T18:05:22+02:00
+draft = false
 +++
 
 Surfing I ran into [512kb.club](https://512kb.club/), which lamented:
@@ -80,8 +81,3 @@ And if everything is correct, this prints a mastodon icon: {{< inline-svg "masto
 ## Resources {#resources}
 
 -   [Hugo + resources = inline svg icons](http://oostens.me/posts/hugo-resources-inline-svg-icons/)
-
-
-## <span class="org-todo todo TODO">TODO</span> quote {#quote}
-
-XXX quote not part of the club

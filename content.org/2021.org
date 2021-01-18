@@ -390,7 +390,8 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    Finally! Profit!
 
-** TODO Putting my site on a diet
+** DONE Putting my site on a diet
+   CLOSED: [2021-01-18 Mon 18:05]
    :PROPERTIES:
    :EXPORT_FILE_NAME: putting-my-site-on-a-diet
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
@@ -459,9 +460,6 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     - [[http://oostens.me/posts/hugo-resources-inline-svg-icons/][Hugo + resources = inline svg icons]]
 
-
-*** TODO quote
-    XXX quote not part of the club
 
 ** INPROGRESS XMonad from scratch -- day 1 -- Starting small            :xmonad:
    :PROPERTIES:
