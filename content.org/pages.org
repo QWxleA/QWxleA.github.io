@@ -3,34 +3,43 @@
 #+hugo_section: /
 
 * DONE About
-  CLOSED: [2020-12-21 Mon 13:06]
-   :PROPERTIES:
-   :EXPORT_FILE_NAME: about
-   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type page
-   :END:
+CLOSED: [2020-12-21 Mon 13:06]
+:PROPERTIES:
+:EXPORT_FILE_NAME: about
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type page
+:END:
 
-   This is an awesome static page where I write about myself.
+This is an awesome static page where I write about myself and my website.
+
+** Me
+
+   My name is Alex, and if it's alright with you, I'll skip the last name. Anonimity is hard to do online, but we can always try.
+
+   I am a nerd. I like technology, computers, languages, fiddling with hard- and software. Not that I'm all that good at it, but it **does** give me great joy.
 
 ** Tools
 
-    - [[https://www.gnu.org/software/emacs/][Emacs]]
-      - [[https://ox-hugo.scripter.co/][OX-Hugo]] -- ox-hugo is an [[https://orgmode.org/][Org]] exporter backend that exports Org to Hugo-compatible Markdown (Blackfriday) and also generates the front-matter (in TOML or YAML format).
-    - [[https://gohugo.io/][Hugo]]
-      - [[https://github.com/monkeyWzr/hugo-theme-cactus][Cactus theme]]
-    - [[https://realfavicongenerator.net/][favicongenerator]]
+- [[https://www.gnu.org/software/emacs/][Emacs]]
+  - [[https://ox-hugo.scripter.co/][OX-Hugo]] -- ox-hugo is an [[https://orgmode.org/][Org]] exporter backend that exports Org to Hugo-compatible Markdown (Blackfriday) and also generates the front-matter (in TOML or YAML format).
+- [[https://gohugo.io/][Hugo]]
+  - [[https://github.com/monkeyWzr/hugo-theme-cactus][Cactus theme]]
+- [[https://realfavicongenerator.net/][favicongenerator]]
 
 ** Logo
 
-   - Source: [[https://commons.wikimedia.org/wiki/File:Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg][wikimedia.org]]
-   - Description: English: Alphabets and Numbers Coloring Pages in Cool Skateboard Style For Children
-   - Author: [[https://commons.wikimedia.org/wiki/User:Coloringbuddymike][Coloringbuddymike]]
-   - License: CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
+   Source: [[https://commons.wikimedia.org/wiki/File:Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg][wikimedia.org]]
 
-    #+CAPTION: Alphabet-q
-    #+NAME:   fig:Alphabet-q
-   [[/images/Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg.png]]
+   #+caption: Coloringbuddymike, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
+   #+name: fig:Coloringbuddymike
+[[https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg/256px-Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg.png]]
 
-* COMMENT Local Variables                          :ARCHIVE:
+   Favicon created with *imagemagick*:
+
+   #+begin_src shell
+     magick -density 256x256 -background transparent static/images/logo-color.svg -define icon:auto-resize -colors 256 static/images/favicon.ico
+   #+end_src
+
+* COMMENT Local Variables                                              :ARCHIVE:
 # Local Variables:
 # eval: (org-hugo-auto-export-mode)
 # End:

@@ -59,8 +59,9 @@ Working with git submodule Adding a submodule is very simple, here I add a theme
       <pubDate>Mon, 21 Dec 2020 13:06:00 +0200</pubDate>
       
       <guid>https://qwxlea.tk/about/</guid>
-      <description>This is an awesome static page where I write about myself.
-Tools  Emacs  OX-Hugo &amp;ndash; ox-hugo is an Org exporter backend that exports Org to Hugo-compatible Markdown (Blackfriday) and also generates the front-matter (in TOML or YAML format).   Hugo  Cactus theme   favicongenerator  Logo  Source: wikimedia.org Description: English: Alphabets and Numbers Coloring Pages in Cool Skateboard Style For Children Author: Coloringbuddymike License: CC BY-SA 3.</description>
+      <description>This is an awesome static page where I write about myself and my website.
+Me My name is Alex, and if it&amp;rsquo;s alright with you, I&amp;rsquo;ll skip the last name. Anonimity is hard to do online, but we can always try.
+I am a nerd. I like technology, computers, languages, fiddling with hard- and software. Not that I&amp;rsquo;m all that good at it, but it does give me great joy.</description>
     </item>
     
     <item>

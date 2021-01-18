@@ -1,7 +1,7 @@
 baseURL = "https://qwxlea.tk/"
 languageCode = "en-us"
 title = "QWxlea"
-theme = "cactus"
+theme = "mycactus"
 publishDir = "docs"
 
 enableEmoji = true
