@@ -310,6 +310,18 @@ Source: Dresden Files | Jim Butcher
 Got it!
 Our websites and dashboards use cookies. By continuing, you agree to their use. Learn more, including how to control cookies.
 
+** TODO The eigthies -- secretly great                                   :music:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: the-eigthies-secretly-great
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - [100 Best Songs Of The 1980s - NME](http://www.nme.com/list/100-best-songs-of-the-1980s-1161)
+   - [Sounds of the Eighties (BBC - Discs 1 and 2) (download torrent) Ted Cruzing](https://cruzing.xyz/torrent/6762065/Sounds_of_the_Eighties___(BBC_-_Discs_1_and_2))
+   - [Best Songs Of The 80s - YouTube](https://m.youtube.com/watch?v=FKd2G9CYKmE)
+
+
 * Posts
 ** DONE hugo and ngrok, for fun and profit                   :hugo:ngrok:webdev:
    CLOSED: [2021-01-17 Sun 13:25]
@@ -378,16 +390,76 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    Finally! Profit!
 
-** TODO The eigthies -- secretly great                                   :music:
+** TODO Putting my site on a diet
    :PROPERTIES:
-   :EXPORT_FILE_NAME: the-eigthies-secretly-great
+   :EXPORT_FILE_NAME: putting-my-site-on-a-diet
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
    :EXPORT_HUGO_AUTO_SET_LASTMOD: t
    :END:
 
-   - [100 Best Songs Of The 1980s - NME](http://www.nme.com/list/100-best-songs-of-the-1980s-1161)
-   - [Sounds of the Eighties (BBC - Discs 1 and 2) (download torrent) Ted Cruzing](https://cruzing.xyz/torrent/6762065/Sounds_of_the_Eighties___(BBC_-_Discs_1_and_2))
-   - [Best Songs Of The 80s - YouTube](https://m.youtube.com/watch?v=FKd2G9CYKmE)
+   Surfing I ran into [[https://512kb.club/][512kb.club]], which lamented:
+
+   > The internet has become a bloated mess. Massive javascript libraries, countless client-side queries and overly complex frontend frameworks are par for the course these days.
+
+   And I agree, the web is becoming unusable, or at least annoying, and we should all do our part. As the name implies, to become part of the club XXX, the "... total UNCOMPRESSED web resources must not exceed 512KB." Mine did, so, time to put my slim down my site.
+
+   Initial size, 349.9Kb, uncompressed, 558.1Kb:
+
+   [[/images/diet-size.png]]
+
+   The biggest assets my site uses are the *Font Awesome* icons, so that's the obvious place to start. But how to get rid of those files (without loosing my icons)? Looking over my site I noticed that I don't really use all that many icons, just for **mastodon**, **github** and **email**. Why not replace those icons with (inline) svg icons instead? That thought lead me to [[http://oostens.me/posts/hugo-resources-inline-svg-icons/][this excellent page]].
+
+   The short of it is:
+
+   1. Create =<workdir>/assets/svg=, and dump the svgs in here.
+   2. Add partial in =<workdir>/layouts/partials/inline-svg.html=.
+   3. Add the shortcode in =<workdir>/layouts/shortcodes/inline-svg.html=.
+   4. Add scss in =<workdir>/assets/sass/2-components/_svg.scss=
+
+   #+caption: partial inline-svg.html
+   #+begin_src html
+     {{ $svg := resources.Get (print "svg/" . ".svg") }}
+     <i class="inline-svg" >{{ $svg.Content | safeHTML }}</i>
+   #+end_src
+
+   #+caption: shortcode inline-svg.html
+   #+begin_src html
+     {{- partial "inline-svg" (.Get 0) -}}
+   #+end_src
+
+   #+caption: _svg.scss
+   #+begin_src css
+     .inline-svg {
+       display: inline-block;
+       vertical-align: middle;
+
+       svg {
+         width: 1em;
+         height: 1em;
+         fill: currentColor;
+         display: inline-block;
+       }
+     }
+   #+end_src
+
+   All this should result in the following shortcode:
+
+   #+begin_src html
+     {{</* inline-svg "mastodon" */>}}
+   #+end_src
+
+   And if everything is correct, this prints a mastodon icon: {{< inline-svg "mastodon" >}}, yes!
+
+   5. Next, replace all Font awesome icons.
+
+      Find svg-icons from [[https://iconify.design/icon-sets/][iconify.design]]. Fix your template ... profit!
+*** Resources
+
+    - [[http://oostens.me/posts/hugo-resources-inline-svg-icons/][Hugo + resources = inline svg icons]]
+
+
+*** TODO quote
+    XXX quote not part of the club
 
 ** INPROGRESS XMonad from scratch -- day 1 -- Starting small            :xmonad:
    :PROPERTIES:

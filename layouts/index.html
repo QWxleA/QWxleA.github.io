@@ -9,19 +9,19 @@
       {{ range $index, $elem := .Site.Params.social}}
       {{ if eq $elem.name "email" }}
         <a class="icon" target="_blank" rel="noopener" href="mailto:{{ $elem.link }}">
-          <i class="fas fa-envelope"></i>
+          <i class="inline-svg" >{{- partial "inline-svg" "mail" -}}</i>
         </a>
         {{ else if eq $elem.name "rss" }}
         <a class="icon" target="_blank" rel="me" href="{{ $elem.link }}">
-          <i class="fas fa-rss"></i>
+          <i class="inline-svg" >{{- partial "inline-svg" "rss" -}}</i>
         </a>
         {{ else if eq $elem.name "scholar" }}
         <a class="icon" target="_blank" rel="me" href="{{ $elem.link }}">
-          <i class="fas fa-graduation-cap"></i>
+          <i class="inline-svg" >{{- partial "inline-svg" "graduationcap" -}}</i>
         </a>
         {{ else }}
         <a class="icon" target="_blank" rel="me" href="{{ $elem.link }}">
-          <i class="fab fa-{{ lower $elem.name }}"></i>
+          <i class="inline-svg" >{{- partial "inline-svg" $elem.name -}}</i>
         </a>
         {{ end }}
         {{ if (lt (add $index 2) $length) }}
