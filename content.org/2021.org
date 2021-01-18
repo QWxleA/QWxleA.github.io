@@ -398,11 +398,11 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
    :EXPORT_HUGO_AUTO_SET_LASTMOD: t
    :END:
 
-   Surfing I ran into [[https://512kb.club/][512kb.club]], which lamented:
+   Surfing, I ran into [[https://512kb.club/][512kb.club]], on which the writer lamented:
 
    > The internet has become a bloated mess. Massive javascript libraries, countless client-side queries and overly complex frontend frameworks are par for the course these days.
 
-   And I agree, the web is becoming unusable, or at least annoying, and we should all do our part. As the name implies, to become part of the club XXX, the "... total UNCOMPRESSED web resources must not exceed 512KB." Mine did, so, time to put my slim down my site.
+   And I agree, the web is becoming unusable, or at least annoying, and we should all do our part. As the name implies, to become part of the club, the "... total UNCOMPRESSED web resources must not exceed 512KB." Mine did, so, time to put my slim down my site.
 
    Initial size, 349.9Kb, uncompressed, 558.1Kb:
 
@@ -452,7 +452,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    And if everything is correct, this prints a mastodon icon: {{< inline-svg "mastodon" >}}, yes!
 
-   5. Next, replace all Font awesome icons.
+   5. Next, replace all the 'Font awesome' icons.
 
       Find svg-icons from [[https://iconify.design/icon-sets/][iconify.design]]. Fix your template ... profit!
 
@@ -462,6 +462,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 *** Resources
 
     - [[http://oostens.me/posts/hugo-resources-inline-svg-icons/][Hugo + resources = inline svg icons]]
+    - [Icon Sets • Iconify](https://iconify.design/icon-sets/)
 
 
 ** INPROGRESS XMonad from scratch -- day 1 -- Starting small            :xmonad:

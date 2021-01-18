@@ -1,4 +1,5 @@
-#+hugo_base_dir: /home/plovs/Projects/qweb
+#+hugo_base_dir: /home/plovs/Projects/QWxleA.github.io
+#+category: blog
 #+hugo_section: /
 
 * DONE About
@@ -18,12 +19,16 @@
       - [[https://github.com/monkeyWzr/hugo-theme-cactus][Cactus theme]]
     - [[https://realfavicongenerator.net/][favicongenerator]]
 
-
 ** Logo
 
-    #+CAPTION: Coloringbuddymike, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
-    #+NAME:   fig:Coloringbuddymike
- [[https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg/256px-Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg.png]]
+   - Source: [[https://commons.wikimedia.org/wiki/File:Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg][wikimedia.org]]
+   - Description: English: Alphabets and Numbers Coloring Pages in Cool Skateboard Style For Children
+   - Author: [[https://commons.wikimedia.org/wiki/User:Coloringbuddymike][Coloringbuddymike]]
+   - License: CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
+
+    #+CAPTION: Alphabet-q
+    #+NAME:   fig:Alphabet-q
+   [[/images/Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg.png]]
 
 * COMMENT Local Variables                          :ARCHIVE:
 # Local Variables:

@@ -2,15 +2,15 @@
 title = "Putting my site on a diet"
 author = ["Alex Qwxlea"]
 date = 2021-01-18T18:05:00+02:00
-lastmod = 2021-01-18T18:18:00+02:00
+lastmod = 2021-01-18T19:19:03+02:00
 draft = false
 +++
 
-Surfing I ran into [512kb.club](https://512kb.club/), which lamented:
+Surfing, I ran into [512kb.club](https://512kb.club/), on which the writer lamented:
 
 > The internet has become a bloated mess. Massive javascript libraries, countless client-side queries and overly complex frontend frameworks are par for the course these days.
 
-And I agree, the web is becoming unusable, or at least annoying, and we should all do our part. As the name implies, to become part of the club XXX, the "... total UNCOMPRESSED web resources must not exceed 512KB." Mine did, so, time to put my slim down my site.
+And I agree, the web is becoming unusable, or at least annoying, and we should all do our part. As the name implies, to become part of the club, the "... total UNCOMPRESSED web resources must not exceed 512KB." Mine did, so, time to put my slim down my site.
 
 Initial size, 349.9Kb, uncompressed, 558.1Kb:
 
@@ -73,7 +73,7 @@ All this should result in the following shortcode:
 
 And if everything is correct, this prints a mastodon icon: {{< inline-svg "mastodon" >}}, yes!
 
-1.  Next, replace all Font awesome icons.
+1.  Next, replace all the 'Font awesome' icons.
 
     Find svg-icons from [iconify.design](https://iconify.design/icon-sets/). Fix your template ... profit!
 
@@ -83,3 +83,4 @@ And if everything is correct, this prints a mastodon icon: {{< inline-svg "masto
 ## Resources {#resources}
 
 -   [Hugo + resources = inline svg icons](http://oostens.me/posts/hugo-resources-inline-svg-icons/)
+-   [Icon Sets • Iconify](<https://iconify.design/icon-sets/>)

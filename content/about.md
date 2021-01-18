@@ -20,6 +20,9 @@ This is an awesome static page where I write about myself.
 
 ## Logo {#logo}
 
-<a id="org5928884"></a>
+-   Source: [wikimedia.org](https://commons.wikimedia.org/wiki/File:Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg)
+-   Description: English: Alphabets and Numbers Coloring Pages in Cool Skateboard Style For Children
+-   Author: [Coloringbuddymike](https://commons.wikimedia.org/wiki/User:Coloringbuddymike)
+-   License: CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg/256px-Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg.png" caption="Figure 1: Coloringbuddymike, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons" >}}
+{{< figure src="/images/Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg.png" >}}
