@@ -29,12 +29,12 @@ I am a nerd. I like technology, computers, languages, fiddling with hard- and so
 
 Source: [wikimedia.org](https://commons.wikimedia.org/wiki/File:Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg)
 
-<a id="org61e0a0a"></a>
+<a id="org221d5bd"></a>
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg/256px-Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg.png" caption="Figure 1: Coloringbuddymike, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons" >}}
+{{< figure src="/images/Alphabet-q-at-coloringpagesforkidsboys-dotcom.svg.png" caption="Figure 1: Coloringbuddymike, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons" >}}
 
 Favicon created with **imagemagick**:
 
 ```shell
-magick -density 256x256 -background transparent static/images/logo-color.svg -define icon:auto-resize -colors 256 static/images/favicon.ico
+magick convert -resize 32x32 -background transparent static/images/logo-color.svg  static/images/favicon.ico
 ```

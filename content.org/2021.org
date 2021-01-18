@@ -459,6 +459,8 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
    #+caption: Much better! 348.3 Kb
    [[/images/diet-size-2.png]]
 
+   Further steps, replace the logo with an svg, and use the same svg for the favicon. Minimize the svgs with [[https://jakearchibald.github.io/svgomg/][svgomg]].
+
 *** Resources
 
     - [[http://oostens.me/posts/hugo-resources-inline-svg-icons/][Hugo + resources = inline svg icons]]

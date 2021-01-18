@@ -2,7 +2,7 @@
 title = "Putting my site on a diet"
 author = ["Alex Qwxlea"]
 date = 2021-01-18T18:05:00+02:00
-lastmod = 2021-01-18T19:19:03+02:00
+lastmod = 2021-01-18T21:19:18+02:00
 draft = false
 +++
 
@@ -78,6 +78,8 @@ And if everything is correct, this prints a mastodon icon: {{< inline-svg "masto
     Find svg-icons from [iconify.design](https://iconify.design/icon-sets/). Fix your template ... profit!
 
 {{< figure src="/images/diet-size-2.png" caption="Figure 2: Much better! 348.3 Kb" >}}
+
+Further steps, replace the logo with an svg, and use the same svg for the favicon. Minimize the svgs with [svgomg](https://jakearchibald.github.io/svgomg/).
 
 
 ## Resources {#resources}
