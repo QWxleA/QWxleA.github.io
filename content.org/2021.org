@@ -406,6 +406,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    Initial size, 349.9Kb, uncompressed, 558.1Kb:
 
+   #+caption: 558.1 Kb -- not good enough
    [[/images/diet-size.png]]
 
    The biggest assets my site uses are the *Font Awesome* icons, so that's the obvious place to start. But how to get rid of those files (without loosing my icons)? Looking over my site I noticed that I don't really use all that many icons, just for **mastodon**, **github** and **email**. Why not replace those icons with (inline) svg icons instead? That thought lead me to [[http://oostens.me/posts/hugo-resources-inline-svg-icons/][this excellent page]].
@@ -455,6 +456,8 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
       Find svg-icons from [[https://iconify.design/icon-sets/][iconify.design]]. Fix your template ... profit!
 
+   #+caption: Much better! 348.3 Kb
+   [[/images/diet-size-2.png]]
 
 *** Resources
 

@@ -2,7 +2,7 @@
 title = "Putting my site on a diet"
 author = ["Alex Qwxlea"]
 date = 2021-01-18T18:05:00+02:00
-lastmod = 2021-01-18T18:05:22+02:00
+lastmod = 2021-01-18T18:18:00+02:00
 draft = false
 +++
 
@@ -14,7 +14,7 @@ And I agree, the web is becoming unusable, or at least annoying, and we should a
 
 Initial size, 349.9Kb, uncompressed, 558.1Kb:
 
-{{< figure src="/images/diet-size.png" >}}
+{{< figure src="/images/diet-size.png" caption="Figure 1: 558.1 Kb -- not good enough" >}}
 
 The biggest assets my site uses are the **Font Awesome** icons, so that's the obvious place to start. But how to get rid of those files (without loosing my icons)? Looking over my site I noticed that I don't really use all that many icons, just for ****mastodon****, ****github**** and ****email****. Why not replace those icons with (inline) svg icons instead? That thought lead me to [this excellent page](http://oostens.me/posts/hugo-resources-inline-svg-icons/).
 
@@ -76,6 +76,8 @@ And if everything is correct, this prints a mastodon icon: {{< inline-svg "masto
 1.  Next, replace all Font awesome icons.
 
     Find svg-icons from [iconify.design](https://iconify.design/icon-sets/). Fix your template ... profit!
+
+{{< figure src="/images/diet-size-2.png" caption="Figure 2: Much better! 348.3 Kb" >}}
 
 
 ## Resources {#resources}
