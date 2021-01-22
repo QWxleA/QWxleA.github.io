@@ -40,46 +40,6 @@ I always just use mpv "mpv av://v4l2:/dev/video0 "
    - https://letterboxd.com/nikitavoloboev/
    - https://trakt.tv/users/nikitavoloboev/history
    - https://trakt.tv/users/nikitavoloboev/watchlist?sort=rank,asc
-** TODO Android Apps -- 2021                                           :android:
-   :PROPERTIES:
-   :EXPORT_FILE_NAME: android-apps-2021
-   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
-   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
-   :END:
-
-   | Category                      | Applications                                |
-   |-------------------------------+---------------------------------------------|
-   | Ad Blocker                    | Blokada                                     |
-   | App Store                     | F-Droid                                     |
-   | Audio conferencing            | Plumble                                     |
-   | Contacts and AddressBook sync | DAVDroid                                    |
-   | Exercise                      | Feeel                                       |
-   | File Synchronization          | Syncthing                                   |
-   | Habit forming                 | Habits                                      |
-   | Keyboard                      | AnySoftKeyboard with Colemak  layout        |
-   | Messaging                     | Riot                                        |
-   | Maps                          | OsmAnd~                                     |
-   | Online Radio                  | RadioDroid                                  |
-   | Password Manager              | KeePassDroid                                |
-   | Podcasts                      | AntennaPod                                  |
-   | Proprietary app store         | Yalp Store                                  |
-   | Reminders                     | Tasks                                       |
-   | RSS                           | Tiny Tiny RSS                               |
-   | Social Media                  | Tusky and Dandelion                         |
-   | Web Browsers                  | Firefox Klar and DuckDuckGo Privacy Browser |
-   | YouTube Music and SoundCloud  | NewPipe Beta                                |
-
-
-*** links
-
-  - https://njoseph.me/mediawiki/Privacy_Stack
-
-*** TODO on tech
-
-    Install *mosh* on phone / tablet and tp220
-
-    - [Mosh : Keith Winstein](https://launchpad.net/~keithw/+archive/ubuntu/mosh)
-    - [Mosh Tool - An Alternative Option for SSH and How to Use It](http://linoxide.com/how-tos/mosh-alternative-ssh/)
 ** TODO Emacs -- tools for fun and glory                                 :emacs:
    :PROPERTIES:
    :EXPORT_FILE_NAME: emacs-tools-for-fun-and-glory
@@ -321,21 +281,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
    - [Sounds of the Eighties (BBC - Discs 1 and 2) (download torrent) Ted Cruzing](https://cruzing.xyz/torrent/6762065/Sounds_of_the_Eighties___(BBC_-_Discs_1_and_2))
    - [Best Songs Of The 80s - YouTube](https://m.youtube.com/watch?v=FKd2G9CYKmE)
 
-** DONE Cleanliness is next to ... BleachBit                             :tools:
-   CLOSED: [2021-01-19 Tue 20:18]
-   :PROPERTIES:
-   :EXPORT_FILE_NAME: cleanliness-is-next-to-dot-dot-dot-bleachbit
-   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
-   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
-   :END:
-
-   BleachBit is one of those apps that you don't really think about, but are great to have. As far as I can tell it is possible to do everything the app does in shell-scripts, bur honestly, do *you* have time to figure out wh is cluttering up your harddisk all the time? I rather spend time on my [[https://github.com/QWxleA/qwZsh][zsh config]].
-
-   The latest version came out in [[https://www.bleachbit.org/news/bleachbit-420][Januari 2021]], and it has a cleaner for zoom now. Nice!
-
-   Cleaned up 4.34Gb today. Wished that cleaning at home was just as fast.
-
-** TODO futurespeak
+** TODO futurespeak                                                   :language:
    :PROPERTIES:
    :EXPORT_FILE_NAME: futurespeak
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
@@ -344,6 +290,55 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    https://scifi.stackexchange.com/questions/51625/short-story-about-english-language-transformation
 
+** TODO Sway -- a 21st century I3
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: sway-21st-century-i3
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   *Actions*
+
+    #+begin_example
+    Mod + Enter New terminal
+    Mod + F Make current window fullscreen
+    Mod + Shift + Q Quit program
+    Mod + Shift + E Exit Sway
+    Mod + Shift + C Reload Sway configuration
+    Mod + Shift + - Move window to scratchpad
+    Mod + - Show scratchpad
+    #+end_example
+
+    *Workspaces keys*
+
+    #+begin_example
+    Mod + 0..9 Change current workspace
+    Mod + Shift + 0..9 Move current window to designated workspace
+    Mod + B Horizontal layout
+    Mod + V Vertical layout
+    Mod + S Stacking layout
+    Mod + E Toggle split layout
+    Mod + W Tabbed layout
+    Mod + A Focus on parent container
+    Mod + Space Swap focus between tiling and floating
+    Mod + Shift + Space Toggle floating mode
+    Mod + Tab Next workspace
+    Mod + Shift + Tab Previous workspace
+    Mod + Left/Right/Up/Down Move focus of the window
+    Mod + Shift + Left/Right/Up/Down Move the focused window in the workspace
+    #+end_example
+
+    *Resize mode*
+
+    To resize windows, you must enter resize mode, with the Mod + R keybinding. After you enter resize mode you can resize windows with Left/Right/Up/Down keys, and press enter or escape to return to default mode.
+
+
+** TODO on tech
+
+   Install *mosh* on phone / tablet and tp220
+
+   - [Mosh : Keith Winstein](https://launchpad.net/~keithw/+archive/ubuntu/mosh)
+   - [Mosh Tool - An Alternative Option for SSH and How to Use It](http://linoxide.com/how-tos/mosh-alternative-ssh/)
 * Posts
 ** DONE hugo and ngrok, for fun and profit                   :hugo:ngrok:webdev:
    CLOSED: [2021-01-17 Sun 13:25]
@@ -492,6 +487,140 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     - [[http://oostens.me/posts/hugo-resources-inline-svg-icons/][Hugo + resources = inline svg icons]]
     - [Icon Sets • Iconify](https://iconify.design/icon-sets/)
     - [[https://medium.com/swlh/are-you-using-svg-favicons-yet-a-guide-for-modern-browsers-836a6aace3df][Are you using SVG favicons yet? A guide for modern browsers.]] (maybe for later)
+
+** DONE Cleanliness is next to ... BleachBit                             :tools:
+   CLOSED: [2021-01-19 Tue 20:18]
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: cleanliness-is-next-to-dot-dot-dot-bleachbit
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   BleachBit is one of those apps that you don't really think about, but are great to have. As far as I can tell it is possible to do everything the app does in shell-scripts, bur honestly, do *you* have time to figure out wh is cluttering up your harddisk all the time? I rather spend time on my [[https://github.com/QWxleA/qwZsh][zsh config]].
+
+   The latest version came out in [[https://www.bleachbit.org/news/bleachbit-420][Januari 2021]], and it has a cleaner for zoom now. Nice!
+
+   Cleaned up 4.34Gb today. Wished that cleaning at home was just as fast.
+
+** DONE Android Apps -- 2021                                           :android:
+   CLOSED: [2021-01-22 Fri 23:48]
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: android-apps-2021
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   Now that we're at home a lot, it's time to clean up my phone. Over time I've fallen into some bad habits, and it's time to clean up my act.
+
+
+   | Category                      | Currently using                        | Better alternative                          |
+   |-------------------------------+----------------------------------------+---------------------------------------------|
+   | [[*Ad blocker][Ad Blocker]]                    | [[https://blokada.org/][blokada.org]]                            | -                                           |
+   | [[App store][App Store]]                     | Google App store                       | [[https://f-droid.org/][F-Droid]]                                     |
+   | [[*Audio / Video conferencing][Audio / Video conferencing]]    | Zoom                                   | -                                           |
+   | [[Contacts, AddressBook and Reminders][Contacts and AddressBook sync]] | Google addressbook                     | [[https://f-droid.org/en/packages/at.bitfire.davdroid/][DAVx⁵ - F-Droid]]                             |
+   | [[*Ebooks][Ebooks]]                        | [[http://moondownload.com/][Moon+ Reader for Android]]               | ?                                           |
+   | [[*Exercise][Exercise]]                      |                                        | [[https://gitlab.com/enjoyingfoss/feeel/-/wikis/home][Feeel - GitLab]]  [[https://f-droid.org/en/packages/de.dennisguse.opentracks/][OpenTracks]]                  |
+   | [[*File synchronisation][File Synchronization]]          |                                        | [[https://syncthing.net/][Syncthing]]                                   |
+   | [[*Habit forming][Habit forming]]                 |                                        | [[https://f-droid.org/en/packages/org.isoron.uhabits/][Loop Habit Tracker]]                          |
+   | [[*Keyboard][Keyboard]]                      |                                        | [[https://anysoftkeyboard.github.io/][AnySoftKeyboard]]                             |
+   | [[Messaging][Messaging]]                     | WhatsApp                               | [[https://github.com/vector-im/element-android][vector-im/element-android]]                   |
+   | [[*Maps][Maps]]                          | Google Maps                            | [[https://osmand.net/][OsmAnd - Offline Mobile Maps and Navigation]] |
+   | [[*Music][Music]]                         | [[https://neutroncode.com/apps/player][Neutron Music Player]]                   |                                             |
+   | [[*Online Radio][Online Radio]]                  | [[https://f-droid.org/en/packages/net.programmierecke.radiodroid2/][RadioDroid]]                             |                                             |
+   | [[*Password manager][Password Manager]]              | [[https://bitwarden.com/][Bitwarden Open Source Password Manager]] | [[http://www.keepassdroid.com/][KeePassDroid]]                                |
+   | [[*Podcasts][Podcasts]]                      | [[https://www.pocketcasts.com/][Pocket Casts]]                           | [[https://antennapod.org/][AntennaPod]]                                  |
+   | [[ App store][Proprietary app store]]         |                                        | [[https://f-droid.org/en/packages/com.github.yeriomin.yalpstore/][Yalp Store]]                                  |
+   | [[Contacts, AddressBook and Reminders][Reminders]]                     |                                        | [[https://f-droid.org/en/packages/org.tasks/][Tasks.org]]                                   |
+   | [[*RSS][RSS]]                           |                                        | [[https://f-droid.org/en/packages/com.nononsenseapps.feeder/][Feeder]] [[https://www.f-droid.org/en/packages/org.fox.tttrss/][Tiny Tiny RSS]]                        |
+   | [[*Social Media][Social Media]]                  | Twitter, [[https://tusky.app/][Tusky]], [[https://github.com/fwgs/husky][Husky]]                  |                                             |
+   | [[*Web Browsers][Web Browsers]]                  | Firefox Beta, Chrome, [[https://www.torproject.org/download/][tor browser]]      | [[https://f-droid.org/en/packages/org.mozilla.klar/][Firefox Klar]]                                |
+   | [[Wine - the liquid version, not the Windows not-emulator][Wine]]                          | [[https://www.vivino.com/][Vivino]]                                 |                                             |
+   | [[*YouTube Music and SoundCloud][YouTube Music and SoundCloud]]  | [[https://newpipe.net/][NewPipe]]                                |                                             |
+*** Ad blocker
+
+    It is impossible to use the web nowadays without a half decent ad-blocker. The first line of defense should be your DNS, so blocking some 40k sites at the DNS level clears up a lot of trash. Blokada is really good, I only notice how good using somebody elses Internet connction.
+
+    Afaik this is a good and secure app: [[https://blokada.org/][blokada.org]] (doesn't need root)
+*** App store
+    This one is tricky. Some apps that I need cannot be downloaded from F-Droid. Sideloading sounds shady, how can I trust this third party site?
+
+    I have both installed, but do my best to download more from [[https://f-droid.org/][F-Droid - Free and Open Source Android App Repository]].
+
+    This seems interesting, and I plan to test it on my rooted old phone: [[https://f-droid.org/en/packages/com.github.yeriomin.yalpstore/][Yalp Store | F-Droid - Free and Open Source Android App Repository]]
+
+    *Description:* Yalp Store lets you download apps '''directly''' from Google Play Store '''as
+    apk files'''. It can search for '''updates''' of installed apps and lets you
+    '''search''' for other apps. Yalp saves downloaded apks to your default download
+    folder. Other features include browsing categories, viewing and leaving reviews,
+    black/whitelisting apps for updates, filtering apps by being free/paid and
+    containing/not containing ads.
+
+*** Audio / Video conferencing
+
+    Zoom is terrible. It is also what everybody in my surroundings use. For now no possible alternatives.
+*** Contacts, AddressBook and Reminders
+
+    Android phones have a linked google account, which has a linked address book. It is probably one of the worst things to give to Google, but ... it's very convenient. [[https://f-droid.org/en/packages/at.bitfire.davdroid/][DAVx⁵ - F-Droid]] looks like a nice(r) alternative, but I would have to setup a way to sync my data.
+
+    Tasks can be used entirely offline, or synchronized with Google Tasks, CalDAV, or EteSync. It might be a good combo with DAVx5.
+*** Ebooks
+    [[http://moondownload.com/][Moon+ Reader for Android]], I really like this app, I bought it a long time ago, and use it regularly. Don't really know any alternatives, but haven't really looked.
+*** Exercise
+    Looked into this, and a lot of apps on the play store look really shady. [[https://gitlab.com/enjoyingfoss/feeel/-/wikis/home][Feeel - GitLab]] looks really nice, but so far I have been to lazy to really use it. I thought it interesting that the author asked for photos as a way to contribute.
+
+    Also: [[https://f-droid.org/en/packages/de.dennisguse.opentracks/][OpenTracks]]
+*** File synchronisation
+    [[https://syncthing.net/][Syncthing]] is a famous app, I have tried it several times, but I have never been able to get it to work right. There was always something. Maybe because I only use mobile internet, so everything is connected to my phone, and that messes up the syncing? No idea, but I should really get this working, one day.
+*** Habit forming
+    [[https://f-droid.org/en/packages/org.isoron.uhabits/][Loop Habit Tracker]] is a simple app that helps you create and maintain good habits, allowing
+    you to achieve your long-term goals. Detailed graphs and statistics show you how
+    your habits improved over time. I mostly use Emacs, but this app looks really nice.
+*** Keyboard
+
+     [[https://anysoftkeyboard.github.io/][AnySoftKeyboard]] -- gestures, dark-mode and multiple languages, and doesn't spy on you. This is just a good app. Installed it not long ago, but have no complaints, so far.
+*** Maps
+    [[https://osmand.net/][OsmAnd]] is a great app, the offline support is perfect (as in really nice), but Google Maps is better. I should not be using it, but so far it is hard to break the habit. Installed OsmanA (again), and will do my best.
+*** Messaging
+    Not really a fan of messaging in general, and everybody I know uses WhatsApp, which doesn't help. Element, a Matrix client seems to be a much better alternative:Android, [[https://github.com/vector-im/element-android][vector-im/element-android]] and desktop, [[https://github.com/vector-im/element-web][vector-im/element-web]]
+*** Music
+     [[https://neutroncode.com/apps/player][Neutron Music Player]] is imho the best music player on Android. I bought it quite a while ago and don't intend to exchange it for something else. I didn't study it as far as security is concerned, but the developer is a hardcore audio nerd and it's hard to imagine him adding spyware to his pride and joy.
+*** Online Radio
+     [[https://f-droid.org/en/packages/net.programmierecke.radiodroid2/][RadioDroid]] is a new app for me, the app also supports the [[https://wiki.archlinux.org/index.php/Music_Player_Daemon][Music Player Daemon - ArchWiki]]. So far I really don't listen to the radio all that much. The app is ok.
+*** Password manager
+    Probaly the most important part of your personal digital security. I'm satisfied with [[https://bitwarden.com/][Bitwarden]], although I use their server, which is not the optimal solution. A better / more secure solution would be [[http://www.keepassdroid.com/][KeePassDroid]], combined with something from [[https://wiki.archlinux.org/index.php/KeePass][KeePass - ArchWiki]], but Bitwarden is very easy / convenient.
+*** Podcasts
+
+    This is another hard one. I have been using [[https://www.pocketcasts.com/][Pocket Casts]] for years, bought it actually, and it is a very nice and convenient app. [[https://antennapod.org/][AntennaPod]] is the best free and open app, it is quite good, just not as streamlined as Pocket Casts. I'll keep what I have for now, but it's good to know a good enough second option exists.
+*** RSS
+    I don't really use RSS on my phone, I use [[https://newsboat.org/][Newsboat]] on my desktop, and if you can't sync then it's just annoying. [[https://f-droid.org/en/packages/com.nononsenseapps.feeder/][Feeder]] looks like a good app, but as I mostly work from home it is not that relevant at the moment. [[https://www.f-droid.org/en/packages/org.fox.tttrss/][Tiny Tiny RSS]] would be a good idea if I ever get TTR installed on a publicly accessible server.
+*** Social Media
+    This one (should be) easy. Twitter bad, Mastodon good. I use  [[https://tusky.app/][Tusky]] often, but am playing with [[https://github.com/fwgs/husky][Husky]]. Let the best win! I like that it is possible to use both.
+*** Web Browsers
+    This is a big one. Firefox has been very good for a while, so there really is no reason not to use it. Unfortunetely on the desktop, Chromium is better/easier for web-devel, and I slowly started using that. But Google has been helpful, [[https://www.zdnet.com/article/google-cuts-off-other-chromium-based-browsers-from-its-sync-service/][promising to cut off Chromium]], so that's a good reminder not to put our trust in our multi-alphabetical overlords.
+
+    Firefox (beta) with sync is very convenient, it is possible to host a sync server as well:
+
+    - [[https://wiki.archlinux.org/index.php/Firefox_Sync_Server][Firefox Sync Server - ArchWiki]]
+    - [[https://github.com/mozilla-services/syncserver][mozilla-services/syncserver: Run-Your-Own Firefox Sync Server]]
+
+    The [[https://www.torproject.org/download/][tor browser]] is a good browser as well, I just don't have a good use-case for it. I use it more for fun then anything.
+
+    [[https://f-droid.org/en/packages/org.mozilla.klar/][Firefox Klar]], installed it (again), and put it on my front-page. Let's see if I can use it more. It *is* that you can lock the app with a fingerprint. Absolutely no extra work, and one extra step insecurity.
+
+*** Wine - the liquid version, not the Windows not-emulator
+
+    Closed source, and they send annoying email, but the app is very good, and the recommendations tasty: [[https://www.vivino.com/][Vivino.com - Buy the Right Wine]]. No alternatives afaik.
+
+*** YouTube Music and SoundCloud
+
+    This one is easy, nothing beats [[https://newpipe.net/][NewPipe - a free YouTube client]]. The UI is a little bit clunckier then the YouTube app, but it lacks adds, and even more important, you can listen to music with your screen locked, eg, with your phone in your pocket, which is kind of the point of a mobile phone.
+
+    This app is the best app for Youtube, bar none. The only downside is that sometimes Google does something shady, and the app stops working. Then it's time to update. Not a big deal, but still, annoying.
+*** links
+
+  - https://njoseph.me/mediawiki/Privacy_Stack
+  - [[https://garykim.dev/blog/2020/04/14/personal-f-droid-repository/][Personal F-Droid Repository • Gary Kim: Website]]
 
 ** WAITING XMonad from scratch -- day 1 -- Starting small               :xmonad:
    :PROPERTIES:
