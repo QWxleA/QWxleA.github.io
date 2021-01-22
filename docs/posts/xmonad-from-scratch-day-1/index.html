@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> XMonad from scratch – day 1 – Starting small | QWxlea</title>
+  <meta name="description" content="Everybody needs a place called home, even on the Internet. Just a place to store notes and snippets of things you find interesting. It doesn&#39;t have to be good, or smart, it just has to be yours. For me, that is this place, here.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="XMonad from scratch – day 1 – Starting small" />
+<meta property="og:description" content="Intro &ndash; taste and time There are plenty of Window Managers for Linux and *BSD, some of the more famous ones are I3, Awesome WM, OpenBox, but there are many more.
+It is impossible to say which one is the best, the word best is a terrible qualifier, what does it mean best? The smallest, fastest, the one with the most things you can edit?
+Despite all that, XMonad is one of the best window managers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://qwxlea.ml/posts/xmonad-from-scratch-day-1/" />
+<meta property="article:published_time" content="2021-01-19T18:32:00+02:00" />
+<meta property="article:modified_time" content="2021-01-19T18:32:00+02:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="XMonad from scratch – day 1 – Starting small"/>
+<meta name="twitter:description" content="Intro &ndash; taste and time There are plenty of Window Managers for Linux and *BSD, some of the more famous ones are I3, Awesome WM, OpenBox, but there are many more.
+It is impossible to say which one is the best, the word best is a terrible qualifier, what does it mean best? The smallest, fastest, the one with the most things you can edit?
+Despite all that, XMonad is one of the best window managers."/>
+
+  
+  
+    
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://qwxlea.ml/sass/main.min.f96c659f4a1b1dbc06d9c29154eb9712854cf9f0691933be6f2cc69c10928552.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" href="/images/logo.svg" />
+
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#">
+<i class="inline-svg" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1536" height="1280" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1280" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M1536 1088v128q0 26-19 45t-45 19H64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 704V576q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 192V64q0-26 19-45T64 0h1408q26 0 45 19t19 45z" fill="#626262"/><rect x="0" y="0" width="1536" height="1280" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  <a id="menu-icon-tablet" href="#">
+<i class="inline-svg" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1536" height="1280" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1280" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M1536 1088v128q0 26-19 45t-45 19H64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 704V576q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 192V64q0-26 19-45T64 0h1408q26 0 45 19t19 45z" fill="#626262"/><rect x="0" y="0" width="1536" height="1280" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;">
+<i class="inline-svg" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><g fill="none" stroke="#626262" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M30 20L16 8L2 20"/></g><rect x="0" y="0" width="32" height="32" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/posts">Writings</a></li>
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://qwxlea.ml/posts/putting-my-site-on-a-diet/">
+            <i class="" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();">
+<i class="inline-svg" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><g fill="#626262"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></g><rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://qwxlea.ml/posts/cleanliness-is-next-to-dot-dot-dot-bleachbit/">
+            <i class="" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();">
+<i class="inline-svg" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8L4.646 2.354a.5.5 0 0 1 0-.708z"/></g><rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();">
+<i class="inline-svg" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><g fill="none" stroke="#626262" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M30 20L16 8L2 20"/></g><rect x="0" y="0" width="32" height="32" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;">
+<i class="inline-svg" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><g fill="#626262"><path fill-rule="evenodd" d="M12.024 3.797L4.499 7.56l-.448-.895l7.525-3.762l.448.894zm-.448 9.3L4.051 9.335L4.5 8.44l7.525 3.763l-.448.894z"/><path fill-rule="evenodd" d="M13.5 5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5zm0 11a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5zm-11-5.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5z"/></g><rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999c0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891c1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z" fill="#626262"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&text=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm215.3 337.7c.3 4.7.3 9.6.3 14.4c0 146.8-111.8 315.9-316.1 315.9c-63 0-121.4-18.3-170.6-49.8c9 1 17.6 1.4 26.8 1.4c52 0 99.8-17.6 137.9-47.4c-48.8-1-89.8-33-103.8-77c17.1 2.5 32.5 2.5 50.1-2a111 111 0 0 1-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 0 1-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 0 0 229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35c25.1-4.7 49.1-14.1 70.5-26.7c-8.3 25.7-25.7 47.4-48.8 61.1c22.4-2.4 44-8.6 64-17.3c-15.1 22.2-34 41.9-55.7 57.6z" fill="#626262"/><rect x="0" y="0" width="1024" height="1024" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small&body=Check out this article: https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61c-1.99 0-3.61-1.62-3.61-3.61c0-1.99 1.62-3.61 3.61-3.61c1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024l-1.617-1.879l-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54c0-5.26 4.28-9.54 9.54-9.54c5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568c-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93A6.076 6.076 0 0 0 5.93 12A6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792a3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821c.719-.547 1.256-1.336 1.553-2.285c.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457c0-6.617-5.383-12-12-12" fill="black"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&title=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="432" height="384" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 384" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M427 52v112q0 39-10 69q-18 60-68 102q-53 44-121 48q-70 5-129-32q-54-35-80-93q-15-33-18-66q-1-18-1-75V42q0-14 7.5-25T28 2q8-2 16-2h169q25 0 75.5.5T364 1q27 0 35 2q14 4 22 17q6 9 6 32zm-85 97q5-15-6-27q-10-13-27-10q-5 0-9.5 3t-7 5t-8 7.5L278 134q-56 55-64 62q-2-1-56-53q-7-7-15-14q-11-11-14-13q-13-9-27-2q-15 6-17.5 21.5T93 162q1 0 58 56l28 26q1 2 5.5 6.5t7 6.5t7 5t8.5 4q15 3 27-8q4-4 9-8.5t11-10.5l9-9q52-50 58-55l5.5-5.5l6.5-6.5l5-6l4-8z" fill="#626262"/><rect x="0" y="0" width="432" height="384" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&title=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><circle cx="9.67" cy="13" r="1.001" fill="#626262"/><path d="M14.09 15.391A3.28 3.28 0 0 1 12 16a3.271 3.271 0 0 1-2.081-.63a.27.27 0 0 0-.379.38c.71.535 1.582.809 2.471.77a3.811 3.811 0 0 0 2.469-.77v.04a.284.284 0 0 0 .006-.396a.28.28 0 0 0-.396-.003zm.209-3.351a1 1 0 0 0 0 2l-.008.039c.016.002.033 0 .051 0a1 1 0 0 0 .958-1.038a1 1 0 0 0-1.001-1.001z" fill="#626262"/><path d="M12 2C6.479 2 2 6.477 2 12c0 5.521 4.479 10 10 10s10-4.479 10-10c0-5.523-4.479-10-10-10zm5.859 11.33c.012.146.012.293 0 .439c0 2.24-2.609 4.062-5.83 4.062s-5.83-1.82-5.83-4.062a2.681 2.681 0 0 1 0-.439a1.46 1.46 0 0 1-.455-2.327a1.458 1.458 0 0 1 2.063-.063a7.145 7.145 0 0 1 3.899-1.23l.743-3.47v-.004A.313.313 0 0 1 12.82 6l2.449.49a1.001 1.001 0 1 1-.131.61L13 6.65l-.649 3.12a7.123 7.123 0 0 1 3.85 1.23a1.46 1.46 0 0 1 2.469 1c.01.563-.307 1.08-.811 1.33z" fill="#626262"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&name=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small&description=Intro%20%26ndash%3b%20taste%20and%20time%20There%20are%20plenty%20of%20Window%20Managers%20for%20Linux%20and%20%2aBSD%2c%20some%20of%20the%20more%20famous%20ones%20are%20I3%2c%20Awesome%20WM%2c%20OpenBox%2c%20but%20there%20are%20many%20more.%0aIt%20is%20impossible%20to%20say%20which%20one%20is%20the%20best%2c%20the%20word%20best%20is%20a%20terrible%20qualifier%2c%20what%20does%20it%20mean%20best%3f%20The%20smallest%2c%20fastest%2c%20the%20one%20with%20the%20most%20things%20you%20can%20edit%3f%0aDespite%20all%20that%2c%20XMonad%20is%20one%20of%20the%20best%20window%20managers.">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.577 13.741a5.508 5.508 0 0 1-1.066.395a4.543 4.543 0 0 1-1.031.113c-.42 0-.791-.055-1.114-.162a2.373 2.373 0 0 1-.826-.459a1.651 1.651 0 0 1-.474-.633c-.088-.225-.132-.549-.132-.973V9.16H6.918V7.846c.359-.119.67-.289.927-.512c.257-.221.464-.486.619-.797c.156-.31.263-.707.322-1.185h1.307v2.35h2.18V9.16h-2.18v2.385c0 .539.028.885.085 1.037a.7.7 0 0 0 .315.367c.204.123.437.185.697.185c.466 0 .928-.154 1.388-.461v1.468z" fill="#626262"/><rect x="0" y="0" width="20" height="20" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&t=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z" fill="#626262"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro-taste-and-time">Intro &ndash; taste and time</a></li>
+    <li><a href="#dev-environment">Dev-environment</a></li>
+    <li><a href="#mimimal-lets-start-small">Mimimal - lets start small</a></li>
+    <li><a href="#ps-the-default-configuration">PS &ndash; the default configuration</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        XMonad from scratch – day 1 – Starting small
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-01-19 18:32:00 &#43;0200 EET" itemprop="datePublished">2021-01-19</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+<i class="inline-svg" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M938 458.8l-29.6-312.6c-1.5-16.2-14.4-29-30.6-30.6L565.2 86h-.4c-3.2 0-5.7 1-7.6 2.9L88.9 557.2a9.96 9.96 0 0 0 0 14.1l363.8 363.8c1.9 1.9 4.4 2.9 7.1 2.9s5.2-1 7.1-2.9l468.3-468.3c2-2.1 3-5 2.8-8zM699 387c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z" fill="#626262"/><rect x="0" y="0" width="1024" height="1024" fill="rgba(0, 0, 0, 0)" /></svg></i>
+
+            
+            <a class="tag-link" href="/tags/xmonad" rel="tag">xmonad</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <h2 id="intro-taste-and-time">Intro &ndash; taste and time</h2>
+<p>There are plenty of <a href="https://en.wikipedia.org/wiki/Comparison%5Fof%5FX%5Fwindow%5Fmanagers">Window Managers</a> for Linux and *BSD, some of the more famous ones are <a href="https://i3wm.org/">I3</a>, <a href="https://awesomewm.org">Awesome WM</a>, <a href="https://openbox.org/wiki/Openbox">OpenBox</a>, but there are many more.</p>
+<p>It is impossible to say which one is the best, the word <strong>best</strong> is a terrible qualifier, what does it mean <strong>best</strong>? The smallest, fastest, the one with the most things you can edit?</p>
+<p>Despite all that, XMonad is <strong><strong>one</strong></strong> of the <strong><strong>best</strong></strong> window managers. Why? Because it is really, really good at managing windows. With a little bit of elbow grease you can make it do whatever you want. And it can even look really good doing it:</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+
+<figure>
+    <img src="/images/xmonad-day1-1.png"
+         alt="This is what your desktop could look like &amp;hellip; if you have taste, and lots of time"/> <figcaption>
+            <p>This is what your desktop could look like &hellip; if you have taste, and lots of time</p>
+        </figcaption>
+</figure>
+
+<p>In this series we will help you configure XMonad to do what you want, or at least, give you the tools to do so. BTW, although this desktop looks really good, it is by no means the most advanced configuration around.</p>
+<p><strong><strong>Links:</strong></strong></p>
+<ul>
+<li><a href="https://github.com/Axarva/dotfiles-2.0">Axarva/dotfiles-2.0</a> - Bling! A really good looking XMonad install</li>
+</ul>
+<h2 id="dev-environment">Dev-environment</h2>
+<p>Experimenting is fun, but loosing all your work not so much, so we will set up a simple dev-environment that we can use to play around.</p>
+<p><strong><strong>Needed:</strong></strong></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pacman install xorg-server-xephyr xterm
+</code></pre></td></tr></table>
+</div>
+</div><p>For your convenience, here is a little shell-script that can help you run XMonad in xephyr, which is, in a window o your desktop. Doing it like this will make it easy to experiment, while keeping your daily driver intact. Then, when you&rsquo;re happy with it, you can move the XMonad configuration to either <code>$HOME/.xmonad</code> or, what I do, <code>$HOME/.config/xmonad</code>. XMonad will read either one.</p>
+<p>The script will (in the directory you run it from, for example <code>$HOME/Desktop</code>, or wherever you do your experiments), create a folder called <code>state</code>. In state it will create 3 directories <code>config</code>, <code>cache</code>, and <code>data</code>.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ tree state
+state
+├── cache
+├── config
+└── data
+
+<span style="color:#ae81ff">3</span> directories, <span style="color:#ae81ff">0</span> files
+</code></pre></td></tr></table>
+</div>
+</div><p>Script:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/sh -eu
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">################################################################################</span>
+usage <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  cat <span style="color:#e6db74">&lt;&lt;EOF
+</span><span style="color:#e6db74">Usage: run-in-xephyr.sh [options]
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">  -d NxN  Set the screen size to NxN
+</span><span style="color:#e6db74">  -h      This message
+</span><span style="color:#e6db74">  -n NUM  Set the internal DISPLAY to NUM
+</span><span style="color:#e6db74">  -s NUM  Set the number of screens to NUM
+</span><span style="color:#e6db74">EOF</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">################################################################################</span>
+SCREENS<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+SCREEN_SIZE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1024x768&#34;</span>
+DISPLAY_NUMBER<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+
+<span style="color:#75715e">################################################################################</span>
+<span style="color:#66d9ef">while</span> getopts <span style="color:#e6db74">&#34;d:hn:s:&#34;</span> o; <span style="color:#66d9ef">do</span>
+  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>o<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> in
+    d<span style="color:#f92672">)</span> SCREEN_SIZE<span style="color:#f92672">=</span>$OPTARG
+       ;;
+
+    h<span style="color:#f92672">)</span> usage
+       exit
+       ;;
+
+    n<span style="color:#f92672">)</span> DISPLAY_NUMBER<span style="color:#f92672">=</span>$OPTARG
+       ;;
+
+    s<span style="color:#f92672">)</span> SCREENS<span style="color:#f92672">=</span>$OPTARG
+       ;;
+
+    *<span style="color:#f92672">)</span> echo; usage
+       exit <span style="color:#ae81ff">1</span>
+       ;;
+  <span style="color:#66d9ef">esac</span>
+<span style="color:#66d9ef">done</span>
+
+shift <span style="color:#66d9ef">$((</span>OPTIND-1<span style="color:#66d9ef">))</span>
+
+<span style="color:#75715e">################################################################################</span>
+XMONAD_CONFIG_DIR<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>/state/config
+XMONAD_CACHE_DIR<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>/state/cache
+XMONAD_DATA_DIR<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>/state/data
+export XMONAD_CONFIG_DIR XMONAD_CACHE_DIR XMONAD_DATA_DIR
+
+mkdir -p <span style="color:#e6db74">&#34;</span>$XMONAD_CONFIG_DIR<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$XMONAD_CACHE_DIR<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$XMONAD_DATA_DIR<span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;xmonad will store state files in </span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span><span style="color:#e6db74">/state&#34;</span>
+
+<span style="color:#75715e">################################################################################</span>
+SCREEN_COUNTER<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+SCREEN_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+X_OFFSET_CURRENT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+X_OFFSET_ADD<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$SCREEN_SIZE<span style="color:#e6db74">&#34;</span> | cut -dx -f1<span style="color:#66d9ef">)</span>
+
+<span style="color:#66d9ef">while</span> expr <span style="color:#e6db74">&#34;</span>$SCREEN_COUNTER<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;&lt;&#34;</span> <span style="color:#e6db74">&#34;</span>$SCREENS<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">do</span>
+  SCREEN_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$SCREEN_OPTS<span style="color:#e6db74"> -origin </span><span style="color:#e6db74">${</span>X_OFFSET_CURRENT<span style="color:#e6db74">}</span><span style="color:#e6db74">,0 -screen </span><span style="color:#e6db74">${</span>SCREEN_SIZE<span style="color:#e6db74">}</span><span style="color:#e6db74">+</span><span style="color:#e6db74">${</span>X_OFFSET_CURRENT<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  SCREEN_COUNTER<span style="color:#f92672">=</span><span style="color:#66d9ef">$((</span><span style="color:#e6db74">&#34;</span>$SCREEN_COUNTER<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">))</span>
+  X_OFFSET_CURRENT<span style="color:#f92672">=</span><span style="color:#66d9ef">$((</span><span style="color:#e6db74">&#34;</span>$X_OFFSET_CURRENT<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span>$X_OFFSET_ADD<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">))</span>
+<span style="color:#66d9ef">done</span>
+
+<span style="color:#f92672">(</span>
+  <span style="color:#75715e"># shellcheck disable=SC2086</span>
+  Xephyr $SCREEN_OPTS +xinerama +extension RANDR <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>         -ac -br -reset -terminate -verbosity <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>         -softCursor <span style="color:#e6db74">&#34;:</span>$DISPLAY_NUMBER<span style="color:#e6db74">&#34;</span> &amp;
+
+  export DISPLAY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;:</span>$DISPLAY_NUMBER<span style="color:#e6db74">&#34;</span>
+  echo <span style="color:#e6db74">&#34;Waiting for windows to appear...&#34;</span> <span style="color:#f92672">&amp;&amp;</span> sleep <span style="color:#ae81ff">2</span>
+
+  xterm -fg green -bg black -fn <span style="color:#e6db74">&#34;monospace:pixelsize=14&#34;</span> -hold xrandr &amp;
+  xterm -fg green -bg black -fn <span style="color:#e6db74">&#34;monospace:pixelsize=14&#34;</span> &amp;
+  exec /usr/bin/xmonad
+<span style="color:#f92672">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><!-- raw HTML omitted -->
+<p>You obviously don&rsquo;t <strong>have</strong> to use the script, you can run XMonad in a VM, or even as your desktop, if you please.</p>
+<p><strong><strong>For reference:</strong></strong></p>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Xephyr">Arch wiki - Xephyr</a></li>
+</ul>
+<h2 id="mimimal-lets-start-small">Mimimal - lets start small</h2>
+<p>XMonad is written in <a href="https://www.haskell.org/">haskell</a>, which is a really weird language. But, as XMonad proves, it is very powerfull, and you don&rsquo;t have too understand all (any?) haskell to be able to use XMonad for yourself. We will start small, and slowly add more functionality to our setup, explaining what we did.</p>
+<p><strong><strong>Installation:</strong></strong></p>
+<p>A minimal install needs the following, as you might have noticed, I am using Arch, but you can do the same on Ubuntu, Debian or whatever else you want to run, just use your flavor of package-manager. Arch is just a good base-line, as the packages it installs are as close to upstream as it gets:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pacman -S xmonad xmonad-contrib xmobar dmenu xterm
+</code></pre></td></tr></table>
+</div>
+</div><p><strong><strong>XMonad</strong></strong> is XMonad itself, <strong><strong>xmonad-contrib</strong></strong> is a library of extra functionality (this is what makes XMonad so outstanding), <strong><strong>dmenu</strong></strong> is minimal a program launcher, and <strong><strong>xterm</strong></strong> is the default terminal. It looks a bit spartan, but it is enough to get a lot done, actually.</p>
+<p>To start up XMonad, to quote <a href="https://wiki.archlinux.org/index.php/Xmonad#Starting">the Arch Wiki</a>:</p>
+<blockquote>
+<p>Run xmonad with xinit (1).</p>
+<p>Alternatively, select Xmonad from the session menu in a display manager of choice (2).</p>
+</blockquote>
+<ol>
+<li>Which, translated for mortals means you add / create a file called <code>$HOME/.xinitrc</code>, and run <code>startx</code>:</li>
+</ol>
+<!-- raw HTML omitted -->
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">exec xmonad
+</code></pre></td></tr></table>
+</div>
+</div><!-- raw HTML omitted -->
+<p><strong><strong>Note:</strong></strong> On arch you need to install <strong><strong>xorg-xinit</strong></strong>, which contains <code>/usr/bin/startx</code></p>
+<ol>
+<li>If you use a <a href="https://wiki.archlinux.org/index.php/Display%5Fmanager">display manager</a>, like GDM or SSDM, you can just choose <strong>xmonad</strong> when you login.</li>
+</ol>
+<p><strong><strong>For reference:</strong></strong></p>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Xmonad">xmonad - ArchWiki</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Xmobar">xmobar - ArchWiki</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Dmenu">dmenu - ArchWiki</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Xterm#Installation">xterm - ArchWiki</a></li>
+</ul>
+<p>Right, now we have the base of our setup. In our case, we will use <code>run-in-xephyr.sh</code>, which will put our environment in order, and run XMonad in a window on our desktop. But first, let&rsquo;s configure XMonad.</p>
+<p>Our first configuration is about as bare as it gets, the only changes from the default are:</p>
+<ul>
+<li>favourite terminal</li>
+<li>favourite keybinding</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#66d9ef">import</span> XMonad
+
+<span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> xmonad def
+        { modMask <span style="color:#f92672">=</span> mod4Mask <span style="color:#75715e">-- Use Super instead of Alt</span>
+        , terminal <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;alacritty&#34;</span>
+        <span style="color:#75715e">-- more changes</span>
+}</code></pre></td></tr></table>
+</div>
+</div>
+<!-- raw HTML omitted -->
+<p><strong><strong>Explanation:</strong></strong></p>
+<ul>
+<li>line 1: XMonad does not come with all bells and whistles, you have to import libararies for functionality, starting with XMonad itself</li>
+<li>line 3: <strong><strong>main:</strong></strong> this is a real haskell program, and haskell starts with <strong>main</strong>, next we call xmonad with the default config <strong>def</strong> (see <a href="#code-snippet--xmonad1-default">here</a>)
+The changes we make in lines 4 and 5 override the defaults.</li>
+<li>line 4: <strong><strong>modMask</strong></strong> is a variable xmonad has defined, we give it the value <strong>mod4Mask</strong> (Super).</li>
+<li>line 5: <strong><strong>terminal</strong></strong>, default is xterm, we prefer <strong>alacritty</strong>.</li>
+</ul>
+<p>And that&rsquo;s it, your first haskell program!</p>
+<p><strong><strong>Sidenote:</strong></strong> This really <strong>is</strong> a haskell program, if you want to, you can start up <code>ghci</code>, the haskell interpreter, and load your <code>xmonad.hs</code>. When your config gets more eleborate you can even interact with it in the interpreter!</p>
+<p><strong><strong>Alternative</strong></strong></p>
+<p>If you are using Super (or the Windows key, but we&rsquo;ll call it Super from now on) in your current WM (like I do), then use:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#66d9ef">import</span> XMonad
+
+<span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> xmonad def
+        { modMask <span style="color:#f92672">=</span> mod4Mask <span style="color:#75715e">-- Use Super instead of Alt</span>
+        , terminal <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;alacritty&#34;</span>
+        <span style="color:#75715e">-- more changes</span>
+}
+</code></pre></td></tr></table>
+</div>
+</div><!-- raw HTML omitted -->
+<p>Note that xmonad&gt;=0.11 has by default a list of the default keybindings bound to <code>M-S-/</code> or <code>M-?</code> (Depending on your settings, either <code>Alt+Shift+/</code>, or <code>Super+Shift+/</code>.</p>
+<p><strong><strong>For reference:</strong></strong></p>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Alacritty">Alacritty - ArchWiki</a></li>
+<li><a href="https://wiki.haskell.org/Xmonad/Config%5Farchive/John%5FGoerzen%27s%5FConfiguration">John Coerzen</a></li>
+</ul>
+<h2 id="ps-the-default-configuration">PS &ndash; the default configuration</h2>
+<ul>
+<li><a href="https://wiki.haskell.org/Xmonad/Config%5Farchive/Template%5Fxmonad.hs%5F(darcs)">Template_xmonad.hs_(darcs)</a></li>
+<li><a href="https://wiki.haskell.org/Xmonad/Config%5Farchive/yiannist%27s%5Fxmonad.hs">yiannist&rsquo;s xmonad.hs</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">132
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">133
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">134
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">135
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">136
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">137
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">138
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">139
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">140
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">141
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">142
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">143
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">144
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">145
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">146
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">147
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">148
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">149
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">150
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">151
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">152
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">153
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">154
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">155
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">156
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">157
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">158
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">159
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">160
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">161
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">162
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">163
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">164
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">165
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">166
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">167
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">168
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">169
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">170
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">171
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">172
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">173
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">174
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">175
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">176
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">177
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">178
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">179
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">180
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">181
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">182
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">183
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">184
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">185
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">186
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">187
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">188
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">189
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">190
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">191
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">192
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">193
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">194
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">195
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">196
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">197
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">198
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">200
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">201
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">202
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">203
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">204
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">205
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">206
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">207
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">208
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">209
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">210
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">211
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">212
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">213
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">214
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">215
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">216
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">217
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">218
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">219
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">220
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">221
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">222
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">223
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">224
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">225
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">226
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">227
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">228
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">229
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">230
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">231
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">232
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">233
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">234
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">235
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">236
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">237
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">238
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">239
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">240
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">241
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">242
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">243
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">244
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">245
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">246
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">247
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">248
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">249
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">250
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">251
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">252
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">253
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">254
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">255
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">256
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">257
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">258
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">259
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">260
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">261
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">262
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">263
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">264
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">265
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">266
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">267
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">268
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">269
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">270
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">271
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">272
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">273
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">274
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">275
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">276
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">277
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">278
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">279
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">280
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">281
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">282
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">283
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">284
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">285
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">286
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">287
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">288
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">289
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">290
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">291
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">292
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">293
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">294
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">295
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">296
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">297
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">298
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">299
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">300
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">301
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">302
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">303
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">304
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">305
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">306
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">307
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">308
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">309
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">310
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">311
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">312
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">313
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">314
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">315
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">316
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">317
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">318
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">319
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">320
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">321
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">322
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">323
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">324
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">325
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">326
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">327
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">328
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">329
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">330
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">331
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">332
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">333
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">--</span>
+<span style="color:#75715e">-- xmonad example config file.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- A template showing all available configuration hooks,</span>
+<span style="color:#75715e">-- and how to override the defaults in your own xmonad.hs conf file.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- Normally, you&#39;d only override those defaults you care about.</span>
+<span style="color:#75715e">--</span>
+
+<span style="color:#66d9ef">import</span> XMonad
+<span style="color:#66d9ef">import</span> Data.Monoid
+<span style="color:#66d9ef">import</span> System.Exit
+
+<span style="color:#66d9ef">import</span> <span style="color:#66d9ef">qualified</span> XMonad.StackSet <span style="color:#66d9ef">as</span> W
+<span style="color:#66d9ef">import</span> <span style="color:#66d9ef">qualified</span> Data.Map        <span style="color:#66d9ef">as</span> M
+
+<span style="color:#75715e">-- The preferred terminal program, which is used in a binding below and by</span>
+<span style="color:#75715e">-- certain contrib modules.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myTerminal</span>      <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xterm&#34;</span>
+
+<span style="color:#75715e">-- Whether focus follows the mouse pointer.</span>
+<span style="color:#a6e22e">myFocusFollowsMouse</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Bool</span>
+<span style="color:#a6e22e">myFocusFollowsMouse</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+
+<span style="color:#75715e">-- Whether clicking on a window to focus also passes the click to the window</span>
+<span style="color:#a6e22e">myClickJustFocuses</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Bool</span>
+<span style="color:#a6e22e">myClickJustFocuses</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+
+<span style="color:#75715e">-- Width of the window border in pixels.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myBorderWidth</span>   <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+
+<span style="color:#75715e">-- modMask lets you specify which modkey you want to use. The default</span>
+<span style="color:#75715e">-- is mod1Mask (&#34;left alt&#34;).  You may also consider using mod3Mask</span>
+<span style="color:#75715e">-- (&#34;right alt&#34;), which does not conflict with emacs keybindings. The</span>
+<span style="color:#75715e">-- &#34;windows key&#34; is usually mod4Mask.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myModMask</span>       <span style="color:#f92672">=</span> mod1Mask
+
+<span style="color:#75715e">-- The default number of workspaces (virtual screens) and their names.</span>
+<span style="color:#75715e">-- By default we use numeric strings, but any string may be used as a</span>
+<span style="color:#75715e">-- workspace name. The number of workspaces is determined by the length</span>
+<span style="color:#75715e">-- of this list.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- A tagging example:</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- &gt; workspaces = [&#34;web&#34;, &#34;irc&#34;, &#34;code&#34; ] ++ map show [4..9]</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myWorkspaces</span>    <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;1&#34;</span>,<span style="color:#e6db74">&#34;2&#34;</span>,<span style="color:#e6db74">&#34;3&#34;</span>,<span style="color:#e6db74">&#34;4&#34;</span>,<span style="color:#e6db74">&#34;5&#34;</span>,<span style="color:#e6db74">&#34;6&#34;</span>,<span style="color:#e6db74">&#34;7&#34;</span>,<span style="color:#e6db74">&#34;8&#34;</span>,<span style="color:#e6db74">&#34;9&#34;</span>]
+
+<span style="color:#75715e">-- Border colors for unfocused and focused windows, respectively.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myNormalBorderColor</span>  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#dddddd&#34;</span>
+<span style="color:#a6e22e">myFocusedBorderColor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#ff0000&#34;</span>
+
+<span style="color:#75715e">------------------------------------------------------------------------</span>
+<span style="color:#75715e">-- Key bindings. Add, modify or remove key bindings here.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myKeys</span> conf<span style="color:#f92672">@</span>(<span style="color:#66d9ef">XConfig</span> {<span style="color:#66d9ef">XMonad</span><span style="color:#f92672">.</span>modMask <span style="color:#f92672">=</span> modm}) <span style="color:#f92672">=</span> <span style="color:#66d9ef">M</span><span style="color:#f92672">.</span>fromList <span style="color:#f92672">$</span>
+
+    <span style="color:#75715e">-- launch a terminal</span>
+    [ ((modm <span style="color:#f92672">.|.</span> shiftMask, xK_Return), spawn <span style="color:#f92672">$</span> <span style="color:#66d9ef">XMonad</span><span style="color:#f92672">.</span>terminal conf)
+
+    <span style="color:#75715e">-- launch dmenu</span>
+    , ((modm,               xK_p     ), spawn <span style="color:#e6db74">&#34;dmenu_run&#34;</span>)
+
+    <span style="color:#75715e">-- launch gmrun</span>
+    , ((modm <span style="color:#f92672">.|.</span> shiftMask, xK_p     ), spawn <span style="color:#e6db74">&#34;gmrun&#34;</span>)
+
+    <span style="color:#75715e">-- close focused window</span>
+    , ((modm <span style="color:#f92672">.|.</span> shiftMask, xK_c     ), kill)
+
+     <span style="color:#75715e">-- Rotate through the available layout algorithms</span>
+    , ((modm,               xK_space ), sendMessage <span style="color:#66d9ef">NextLayout</span>)
+
+    <span style="color:#75715e">--  Reset the layouts on the current workspace to default</span>
+    , ((modm <span style="color:#f92672">.|.</span> shiftMask, xK_space ), setLayout <span style="color:#f92672">$</span> <span style="color:#66d9ef">XMonad</span><span style="color:#f92672">.</span>layoutHook conf)
+
+    <span style="color:#75715e">-- Resize viewed windows to the correct size</span>
+    , ((modm,               xK_n     ), refresh)
+
+    <span style="color:#75715e">-- Move focus to the next window</span>
+    , ((modm,               xK_Tab   ), windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>focusDown)
+
+    <span style="color:#75715e">-- Move focus to the next window</span>
+    , ((modm,               xK_j     ), windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>focusDown)
+
+    <span style="color:#75715e">-- Move focus to the previous window</span>
+    , ((modm,               xK_k     ), windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>focusUp  )
+
+    <span style="color:#75715e">-- Move focus to the master window</span>
+    , ((modm,               xK_m     ), windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>focusMaster  )
+
+    <span style="color:#75715e">-- Swap the focused window and the master window</span>
+    , ((modm,               xK_Return), windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>swapMaster)
+
+    <span style="color:#75715e">-- Swap the focused window with the next window</span>
+    , ((modm <span style="color:#f92672">.|.</span> shiftMask, xK_j     ), windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>swapDown  )
+
+    <span style="color:#75715e">-- Swap the focused window with the previous window</span>
+    , ((modm <span style="color:#f92672">.|.</span> shiftMask, xK_k     ), windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>swapUp    )
+
+    <span style="color:#75715e">-- Shrink the master area</span>
+    , ((modm,               xK_h     ), sendMessage <span style="color:#66d9ef">Shrink</span>)
+
+    <span style="color:#75715e">-- Expand the master area</span>
+    , ((modm,               xK_l     ), sendMessage <span style="color:#66d9ef">Expand</span>)
+
+    <span style="color:#75715e">-- Push window back into tiling</span>
+    , ((modm,               xK_t     ), withFocused <span style="color:#f92672">$</span> windows <span style="color:#f92672">.</span> <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>sink)
+
+    <span style="color:#75715e">-- Increment the number of windows in the master area</span>
+    , ((modm              , xK_comma ), sendMessage (<span style="color:#66d9ef">IncMasterN</span> <span style="color:#ae81ff">1</span>))
+
+    <span style="color:#75715e">-- Deincrement the number of windows in the master area</span>
+    , ((modm              , xK_period), sendMessage (<span style="color:#66d9ef">IncMasterN</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)))
+
+    <span style="color:#75715e">-- Toggle the status bar gap</span>
+    <span style="color:#75715e">-- Use this binding with avoidStruts from Hooks.ManageDocks.</span>
+    <span style="color:#75715e">-- See also the statusBar function from Hooks.DynamicLog.</span>
+    <span style="color:#75715e">--</span>
+    <span style="color:#75715e">-- , ((modm              , xK_b     ), sendMessage ToggleStruts)</span>
+
+    <span style="color:#75715e">-- Quit xmonad</span>
+    , ((modm <span style="color:#f92672">.|.</span> shiftMask, xK_q     ), io (exitWith <span style="color:#66d9ef">ExitSuccess</span>))
+
+    <span style="color:#75715e">-- Restart xmonad</span>
+    , ((modm              , xK_q     ), spawn <span style="color:#e6db74">&#34;xmonad --recompile; xmonad --restart&#34;</span>)
+
+    <span style="color:#75715e">-- Run xmessage with a summary of the default keybindings (useful for beginners)</span>
+    , ((modm <span style="color:#f92672">.|.</span> shiftMask, xK_slash ), spawn (<span style="color:#e6db74">&#34;echo </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">++</span> help <span style="color:#f92672">++</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> | xmessage -file -&#34;</span>))
+    ]
+    <span style="color:#f92672">++</span>
+
+    <span style="color:#75715e">--</span>
+    <span style="color:#75715e">-- mod-[1..9], Switch to workspace N</span>
+    <span style="color:#75715e">-- mod-shift-[1..9], Move client to workspace N</span>
+    <span style="color:#75715e">--</span>
+    [((m <span style="color:#f92672">.|.</span> modm, k), windows <span style="color:#f92672">$</span> f i)
+        <span style="color:#f92672">|</span> (i, k) <span style="color:#f92672">&lt;-</span> zip (<span style="color:#66d9ef">XMonad</span><span style="color:#f92672">.</span>workspaces conf) [xK_1 <span style="color:#f92672">..</span> xK_9]
+        , (f, m) <span style="color:#f92672">&lt;-</span> [(<span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>greedyView, <span style="color:#ae81ff">0</span>), (<span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>shift, shiftMask)]]
+    <span style="color:#f92672">++</span>
+
+    <span style="color:#75715e">--</span>
+    <span style="color:#75715e">-- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3</span>
+    <span style="color:#75715e">-- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3</span>
+    <span style="color:#75715e">--</span>
+    [((m <span style="color:#f92672">.|.</span> modm, key), screenWorkspace sc <span style="color:#f92672">&gt;&gt;=</span> flip whenJust (windows <span style="color:#f92672">.</span> f))
+        <span style="color:#f92672">|</span> (key, sc) <span style="color:#f92672">&lt;-</span> zip [xK_w, xK_e, xK_r] [<span style="color:#ae81ff">0</span><span style="color:#f92672">..</span>]
+        , (f, m) <span style="color:#f92672">&lt;-</span> [(<span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>view, <span style="color:#ae81ff">0</span>), (<span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>shift, shiftMask)]]
+
+
+<span style="color:#75715e">------------------------------------------------------------------------</span>
+<span style="color:#75715e">-- Mouse bindings: default actions bound to mouse events</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myMouseBindings</span> (<span style="color:#66d9ef">XConfig</span> {<span style="color:#66d9ef">XMonad</span><span style="color:#f92672">.</span>modMask <span style="color:#f92672">=</span> modm}) <span style="color:#f92672">=</span> <span style="color:#66d9ef">M</span><span style="color:#f92672">.</span>fromList <span style="color:#f92672">$</span>
+
+    <span style="color:#75715e">-- mod-button1, Set the window to floating mode and move by dragging</span>
+    [ ((modm, button1), (<span style="color:#a6e22e">\</span>w <span style="color:#f92672">-&gt;</span> focus w <span style="color:#f92672">&gt;&gt;</span> mouseMoveWindow w
+                                       <span style="color:#f92672">&gt;&gt;</span> windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>shiftMaster))
+
+    <span style="color:#75715e">-- mod-button2, Raise the window to the top of the stack</span>
+    , ((modm, button2), (<span style="color:#a6e22e">\</span>w <span style="color:#f92672">-&gt;</span> focus w <span style="color:#f92672">&gt;&gt;</span> windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>shiftMaster))
+
+    <span style="color:#75715e">-- mod-button3, Set the window to floating mode and resize by dragging</span>
+    , ((modm, button3), (<span style="color:#a6e22e">\</span>w <span style="color:#f92672">-&gt;</span> focus w <span style="color:#f92672">&gt;&gt;</span> mouseResizeWindow w
+                                       <span style="color:#f92672">&gt;&gt;</span> windows <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span>shiftMaster))
+
+    <span style="color:#75715e">-- you may also bind events to the mouse scroll wheel (button4 and button5)</span>
+    ]
+
+<span style="color:#75715e">------------------------------------------------------------------------</span>
+<span style="color:#75715e">-- Layouts:</span>
+
+<span style="color:#75715e">-- You can specify and transform your layouts by modifying these values.</span>
+<span style="color:#75715e">-- If you change layout bindings be sure to use &#39;mod-shift-space&#39; after</span>
+<span style="color:#75715e">-- restarting (with &#39;mod-q&#39;) to reset your layout state to the new</span>
+<span style="color:#75715e">-- defaults, as xmonad preserves your old layout settings by default.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- The available layouts.  Note that each layout is separated by |||,</span>
+<span style="color:#75715e">-- which denotes layout choice.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myLayout</span> <span style="color:#f92672">=</span> tiled <span style="color:#f92672">|||</span> <span style="color:#66d9ef">Mirror</span> tiled <span style="color:#f92672">|||</span> <span style="color:#66d9ef">Full</span>
+  <span style="color:#66d9ef">where</span>
+     <span style="color:#75715e">-- default tiling algorithm partitions the screen into two panes</span>
+     tiled   <span style="color:#f92672">=</span> <span style="color:#66d9ef">Tall</span> nmaster delta ratio
+
+     <span style="color:#75715e">-- The default number of windows in the master pane</span>
+     nmaster <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+
+     <span style="color:#75715e">-- Default proportion of screen occupied by master pane</span>
+     ratio   <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+
+     <span style="color:#75715e">-- Percent of screen to increment by when resizing panes</span>
+     delta   <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">100</span>
+
+<span style="color:#75715e">------------------------------------------------------------------------</span>
+<span style="color:#75715e">-- Window rules:</span>
+
+<span style="color:#75715e">-- Execute arbitrary actions and WindowSet manipulations when managing</span>
+<span style="color:#75715e">-- a new window. You can use this to, for example, always float a</span>
+<span style="color:#75715e">-- particular program, or have a client always appear on a particular</span>
+<span style="color:#75715e">-- workspace.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- To find the property name associated with a program, use</span>
+<span style="color:#75715e">-- &gt; xprop | grep WM_CLASS</span>
+<span style="color:#75715e">-- and click on the client you&#39;re interested in.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- To match on the WM_NAME, you can use &#39;title&#39; in the same way that</span>
+<span style="color:#75715e">-- &#39;className&#39; and &#39;resource&#39; are used below.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myManageHook</span> <span style="color:#f92672">=</span> composeAll
+    [ className <span style="color:#f92672">=?</span> <span style="color:#e6db74">&#34;MPlayer&#34;</span>        <span style="color:#f92672">--&gt;</span> doFloat
+    , className <span style="color:#f92672">=?</span> <span style="color:#e6db74">&#34;Gimp&#34;</span>           <span style="color:#f92672">--&gt;</span> doFloat
+    , resource  <span style="color:#f92672">=?</span> <span style="color:#e6db74">&#34;desktop_window&#34;</span> <span style="color:#f92672">--&gt;</span> doIgnore
+    , resource  <span style="color:#f92672">=?</span> <span style="color:#e6db74">&#34;kdesktop&#34;</span>       <span style="color:#f92672">--&gt;</span> doIgnore ]
+
+<span style="color:#75715e">------------------------------------------------------------------------</span>
+<span style="color:#75715e">-- Event handling</span>
+
+<span style="color:#75715e">-- * EwmhDesktops users should change this to ewmhDesktopsEventHook</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- Defines a custom handler function for X Events. The function should</span>
+<span style="color:#75715e">-- return (All True) if the default handler is to be run afterwards. To</span>
+<span style="color:#75715e">-- combine event hooks use mappend or mconcat from Data.Monoid.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myEventHook</span> <span style="color:#f92672">=</span> mempty
+
+<span style="color:#75715e">------------------------------------------------------------------------</span>
+<span style="color:#75715e">-- Status bars and logging</span>
+
+<span style="color:#75715e">-- Perform an arbitrary action on each internal state change or X event.</span>
+<span style="color:#75715e">-- See the &#39;XMonad.Hooks.DynamicLog&#39; extension for examples.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">myLogHook</span> <span style="color:#f92672">=</span> return ()
+
+<span style="color:#75715e">------------------------------------------------------------------------</span>
+<span style="color:#75715e">-- Startup hook</span>
+
+<span style="color:#75715e">-- Perform an arbitrary action each time xmonad starts or is restarted</span>
+<span style="color:#75715e">-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize</span>
+<span style="color:#75715e">-- per-workspace layout choices.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- By default, do nothing.</span>
+<span style="color:#a6e22e">myStartupHook</span> <span style="color:#f92672">=</span> return ()
+
+<span style="color:#75715e">------------------------------------------------------------------------</span>
+<span style="color:#75715e">-- Now run xmonad with all the defaults we set up.</span>
+
+<span style="color:#75715e">-- Run xmonad with the settings you specify. No need to modify this.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> xmonad defaults
+
+<span style="color:#75715e">-- A structure containing your configuration settings, overriding</span>
+<span style="color:#75715e">-- fields in the default config. Any you don&#39;t override, will</span>
+<span style="color:#75715e">-- use the defaults defined in xmonad/XMonad/Config.hs</span>
+<span style="color:#75715e">--</span>
+<span style="color:#75715e">-- No need to modify this.</span>
+<span style="color:#75715e">--</span>
+<span style="color:#a6e22e">defaults</span> <span style="color:#f92672">=</span> def {
+      <span style="color:#75715e">-- simple stuff</span>
+        terminal           <span style="color:#f92672">=</span> myTerminal,
+        focusFollowsMouse  <span style="color:#f92672">=</span> myFocusFollowsMouse,
+        clickJustFocuses   <span style="color:#f92672">=</span> myClickJustFocuses,
+        borderWidth        <span style="color:#f92672">=</span> myBorderWidth,
+        modMask            <span style="color:#f92672">=</span> myModMask,
+        workspaces         <span style="color:#f92672">=</span> myWorkspaces,
+        normalBorderColor  <span style="color:#f92672">=</span> myNormalBorderColor,
+        focusedBorderColor <span style="color:#f92672">=</span> myFocusedBorderColor,
+
+      <span style="color:#75715e">-- key bindings</span>
+        keys               <span style="color:#f92672">=</span> myKeys,
+        mouseBindings      <span style="color:#f92672">=</span> myMouseBindings,
+
+      <span style="color:#75715e">-- hooks, layouts</span>
+        layoutHook         <span style="color:#f92672">=</span> myLayout,
+        manageHook         <span style="color:#f92672">=</span> myManageHook,
+        handleEventHook    <span style="color:#f92672">=</span> myEventHook,
+        logHook            <span style="color:#f92672">=</span> myLogHook,
+        startupHook        <span style="color:#f92672">=</span> myStartupHook
+    }
+
+<span style="color:#75715e">-- | Finally, a copy of the default bindings in simple textual tabular format.</span>
+<span style="color:#a6e22e">help</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span>
+<span style="color:#a6e22e">help</span> <span style="color:#f92672">=</span> unlines [<span style="color:#e6db74">&#34;The default modifier key is &#39;alt&#39;. Default keybindings:&#34;</span>,
+    <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;-- launching and killing programs&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-Enter  Launch xterminal&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-p            Launch dmenu&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-p      Launch gmrun&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-c      Close/kill the focused window&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Space        Rotate through the available layout algorithms&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-Space  Reset the layouts on the current workSpace to default&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-n            Resize/refresh viewed windows to the correct size&#34;</span>,
+    <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;-- move focus up or down the window stack&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Tab        Move focus to the next window&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-Tab  Move focus to the previous window&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-j          Move focus to the next window&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-k          Move focus to the previous window&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-m          Move focus to the master window&#34;</span>,
+    <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;-- modifying the window order&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Return   Swap the focused window and the master window&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-j  Swap the focused window with the next window&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-k  Swap the focused window with the previous window&#34;</span>,
+    <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;-- resizing the master/slave ratio&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-h  Shrink the master area&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-l  Expand the master area&#34;</span>,
+    <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;-- floating layer support&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-t  Push window back into tiling; unfloat and re-tile it&#34;</span>,
+    <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;-- increase or decrease number of windows in the master area&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-comma  (mod-,)   Increment the number of windows in the master area&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-period (mod-.)   Deincrement the number of windows in the master area&#34;</span>,
+    <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;-- quit, or restart&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-q  Quit xmonad&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-q        Restart xmonad&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-[1..9]   Switch to workSpace N&#34;</span>,
+    <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;-- Workspaces &amp; screens&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-[1..9]   Move client to workspace N&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-{w,e,r}        Switch to physical/Xinerama screens 1, 2, or 3&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-Shift-{w,e,r}  Move client to screen 1, 2, or 3&#34;</span>,
+    <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;-- Mouse bindings: default actions bound to mouse events&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-button1  Set the window to floating mode and move by dragging&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-button2  Raise the window to the top of the stack&#34;</span>,
+    <span style="color:#e6db74">&#34;mod-button3  Set the window to floating mode and resize by dragging&#34;</span>]
+</code></pre></td></tr></table>
+</div>
+</div><!-- raw HTML omitted -->
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/posts">Writings</a></li>
+        
+          <li><a href="/tags">Tags</a></li>
+        
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro-taste-and-time">Intro &ndash; taste and time</a></li>
+    <li><a href="#dev-environment">Dev-environment</a></li>
+    <li><a href="#mimimal-lets-start-small">Mimimal - lets start small</a></li>
+    <li><a href="#ps-the-default-configuration">PS &ndash; the default configuration</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999c0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891c1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z" fill="#626262"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&text=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm215.3 337.7c.3 4.7.3 9.6.3 14.4c0 146.8-111.8 315.9-316.1 315.9c-63 0-121.4-18.3-170.6-49.8c9 1 17.6 1.4 26.8 1.4c52 0 99.8-17.6 137.9-47.4c-48.8-1-89.8-33-103.8-77c17.1 2.5 32.5 2.5 50.1-2a111 111 0 0 1-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 0 1-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 0 0 229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35c25.1-4.7 49.1-14.1 70.5-26.7c-8.3 25.7-25.7 47.4-48.8 61.1c22.4-2.4 44-8.6 64-17.3c-15.1 22.2-34 41.9-55.7 57.6z" fill="#626262"/><rect x="0" y="0" width="1024" height="1024" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small&body=Check out this article: https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61c-1.99 0-3.61-1.62-3.61-3.61c0-1.99 1.62-3.61 3.61-3.61c1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024l-1.617-1.879l-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54c0-5.26 4.28-9.54 9.54-9.54c5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568c-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93A6.076 6.076 0 0 0 5.93 12A6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792a3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821c.719-.547 1.256-1.336 1.553-2.285c.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457c0-6.617-5.383-12-12-12" fill="black"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&title=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="432" height="384" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 384" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M427 52v112q0 39-10 69q-18 60-68 102q-53 44-121 48q-70 5-129-32q-54-35-80-93q-15-33-18-66q-1-18-1-75V42q0-14 7.5-25T28 2q8-2 16-2h169q25 0 75.5.5T364 1q27 0 35 2q14 4 22 17q6 9 6 32zm-85 97q5-15-6-27q-10-13-27-10q-5 0-9.5 3t-7 5t-8 7.5L278 134q-56 55-64 62q-2-1-56-53q-7-7-15-14q-11-11-14-13q-13-9-27-2q-15 6-17.5 21.5T93 162q1 0 58 56l28 26q1 2 5.5 6.5t7 6.5t7 5t8.5 4q15 3 27-8q4-4 9-8.5t11-10.5l9-9q52-50 58-55l5.5-5.5l6.5-6.5l5-6l4-8z" fill="#626262"/><rect x="0" y="0" width="432" height="384" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&title=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><circle cx="9.67" cy="13" r="1.001" fill="#626262"/><path d="M14.09 15.391A3.28 3.28 0 0 1 12 16a3.271 3.271 0 0 1-2.081-.63a.27.27 0 0 0-.379.38c.71.535 1.582.809 2.471.77a3.811 3.811 0 0 0 2.469-.77v.04a.284.284 0 0 0 .006-.396a.28.28 0 0 0-.396-.003zm.209-3.351a1 1 0 0 0 0 2l-.008.039c.016.002.033 0 .051 0a1 1 0 0 0 .958-1.038a1 1 0 0 0-1.001-1.001z" fill="#626262"/><path d="M12 2C6.479 2 2 6.477 2 12c0 5.521 4.479 10 10 10s10-4.479 10-10c0-5.523-4.479-10-10-10zm5.859 11.33c.012.146.012.293 0 .439c0 2.24-2.609 4.062-5.83 4.062s-5.83-1.82-5.83-4.062a2.681 2.681 0 0 1 0-.439a1.46 1.46 0 0 1-.455-2.327a1.458 1.458 0 0 1 2.063-.063a7.145 7.145 0 0 1 3.899-1.23l.743-3.47v-.004A.313.313 0 0 1 12.82 6l2.449.49a1.001 1.001 0 1 1-.131.61L13 6.65l-.649 3.12a7.123 7.123 0 0 1 3.85 1.23a1.46 1.46 0 0 1 2.469 1c.01.563-.307 1.08-.811 1.33z" fill="#626262"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&name=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small&description=Intro%20%26ndash%3b%20taste%20and%20time%20There%20are%20plenty%20of%20Window%20Managers%20for%20Linux%20and%20%2aBSD%2c%20some%20of%20the%20more%20famous%20ones%20are%20I3%2c%20Awesome%20WM%2c%20OpenBox%2c%20but%20there%20are%20many%20more.%0aIt%20is%20impossible%20to%20say%20which%20one%20is%20the%20best%2c%20the%20word%20best%20is%20a%20terrible%20qualifier%2c%20what%20does%20it%20mean%20best%3f%20The%20smallest%2c%20fastest%2c%20the%20one%20with%20the%20most%20things%20you%20can%20edit%3f%0aDespite%20all%20that%2c%20XMonad%20is%20one%20of%20the%20best%20window%20managers.">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.577 13.741a5.508 5.508 0 0 1-1.066.395a4.543 4.543 0 0 1-1.031.113c-.42 0-.791-.055-1.114-.162a2.373 2.373 0 0 1-.826-.459a1.651 1.651 0 0 1-.474-.633c-.088-.225-.132-.549-.132-.973V9.16H6.918V7.846c.359-.119.67-.289.927-.512c.257-.221.464-.486.619-.797c.156-.31.263-.707.322-1.185h1.307v2.35h2.18V9.16h-2.18v2.385c0 .539.028.885.085 1.037a.7.7 0 0 0 .315.367c.204.123.437.185.697.185c.466 0 .928-.154 1.388-.461v1.468z" fill="#626262"/><rect x="0" y="0" width="20" height="20" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fqwxlea.ml%2fposts%2fxmonad-from-scratch-day-1%2f&t=XMonad%20from%20scratch%20%e2%80%93%20day%201%20%e2%80%93%20Starting%20small">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z" fill="#626262"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg></i>
+</a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+      <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1536" height="1280" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1280" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M1536 1088v128q0 26-19 45t-45 19H64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 704V576q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 192V64q0-26 19-45T64 0h1408q26 0 45 19t19 45z" fill="#626262"/><rect x="0" y="0" width="1536" height="1280" fill="rgba(0, 0, 0, 0)" /></svg></i>
+Menu</a>
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><g fill="#626262"><path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2z"/></g><rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)" /></svg></i>
+TOC</a>
+          <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><g fill="#626262"><path fill-rule="evenodd" d="M12.024 3.797L4.499 7.56l-.448-.895l7.525-3.762l.448.894zm-.448 9.3L4.051 9.335L4.5 8.44l7.525 3.763l-.448.894z"/><path fill-rule="evenodd" d="M13.5 5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5zm0 11a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5zm-11-5.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5z"/></g><rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)" /></svg></i>
+share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+<i class="inline-svg" aria="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><g fill="none" stroke="#626262" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M30 20L16 8L2 20"/></g><rect x="0" y="0" width="32" height="32" fill="rgba(0, 0, 0, 0)" /></svg></i>
+Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  QWxleA 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>

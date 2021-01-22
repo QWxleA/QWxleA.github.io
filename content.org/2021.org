@@ -321,6 +321,28 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
    - [Sounds of the Eighties (BBC - Discs 1 and 2) (download torrent) Ted Cruzing](https://cruzing.xyz/torrent/6762065/Sounds_of_the_Eighties___(BBC_-_Discs_1_and_2))
    - [Best Songs Of The 80s - YouTube](https://m.youtube.com/watch?v=FKd2G9CYKmE)
 
+** DONE Cleanliness is next to ... BleachBit                             :tools:
+   CLOSED: [2021-01-19 Tue 20:18]
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: cleanliness-is-next-to-dot-dot-dot-bleachbit
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   BleachBit is one of those apps that you don't really think about, but are great to have. As far as I can tell it is possible to do everything the app does in shell-scripts, bur honestly, do *you* have time to figure out wh is cluttering up your harddisk all the time? I rather spend time on my [[https://github.com/QWxleA/qwZsh][zsh config]].
+
+   The latest version came out in [[https://www.bleachbit.org/news/bleachbit-420][Januari 2021]], and it has a cleaner for zoom now. Nice!
+
+   Cleaned up 4.34Gb today. Wished that cleaning at home was just as fast.
+
+** TODO futurespeak
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: futurespeak
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   https://scifi.stackexchange.com/questions/51625/short-story-about-english-language-transformation
 
 * Posts
 ** DONE hugo and ngrok, for fun and profit                   :hugo:ngrok:webdev:
@@ -469,16 +491,16 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     - [[http://oostens.me/posts/hugo-resources-inline-svg-icons/][Hugo + resources = inline svg icons]]
     - [Icon Sets • Iconify](https://iconify.design/icon-sets/)
+    - [[https://medium.com/swlh/are-you-using-svg-favicons-yet-a-guide-for-modern-browsers-836a6aace3df][Are you using SVG favicons yet? A guide for modern browsers.]] (maybe for later)
 
-
-** INPROGRESS XMonad from scratch -- day 1 -- Starting small            :xmonad:
+** WAITING XMonad from scratch -- day 1 -- Starting small               :xmonad:
    :PROPERTIES:
    :EXPORT_FILE_NAME: xmonad-from-scratch-day-1
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
    :END:
 
 *** Intro -- taste and time
-    There are plenty of [[https://en.wikipedia.org/wiki/Comparison_of_X_window_managers][Window Managers]] for Linux and *BSD, some of the more famous ones are [[https://i3wm.org/][I3]],
+    There are plenty of [[https://en.wikipedia.org/wiki/Comparison_of_X_window_managers][Window Managers]] for Linux and *BSD, some of the more famous ones are [[https://i3wm.org/][I3]], [[https://awesomewm.org][Awesome WM]], [[https://openbox.org/wiki/Openbox][OpenBox]], but there are many more.
 
     It is impossible to say which one is the best, the word *best* is a terrible qualifier, what does it mean *best*? The smallest, fastest, the one with the most things you can edit?
 
@@ -488,35 +510,137 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     #+NAME:   fig:xmonad-1
     [[/images/xmonad-day1-1.png]]
 
-    In this series we will help you configure XMonad to do what you want, or at least, give you the tools to do so. BTW, allthough this desktop looks really good, it is by no means the most advanced configuration around.
+    In this series we will help you configure XMonad to do what you want, or at least, give you the tools to do so. BTW, although this desktop looks really good, it is by no means the most advanced configuration around.
 
-    Links:
+    **Links:**
 
-    - [[https://github.com/Axarva/dotfiles-2.0][Axarva/dotfiles-2.0]] - really good looking XMonad install
+    - [[https://github.com/Axarva/dotfiles-2.0][Axarva/dotfiles-2.0]] - Bling! A really good looking XMonad install
 
-*** TODO Dev-environment
+*** Dev-environment
 
-    Experimenting is fun, but loosing all your work not so much, we will set up a simple dev-environment that we can use to play around.
+    Experimenting is fun, but loosing all your work not so much, so we will set up a simple dev-environment that we can use to play around.
+
+    **Needed:**
+
+    #+begin_src shell
+      sudo pacman install xorg-server-xephyr xterm
+    #+end_src
+
+    For your convenience, here is a little shell-script that can help you run XMonad in xephyr, which is, in a window o your desktop. Doing it like this will make it easy to experiment, while keeping your daily driver intact. Then, when you're happy with it, you can move the XMonad configuration to either =$HOME/.xmonad= or, what I do, =$HOME/.config/xmonad=. XMonad will read either one.
+
+    The script will (in the directory you run it from, for example =$HOME/Desktop=, or wherever you do your experiments), create a folder called =state=. In state it will create 3 directories =config=, =cache=, and =data=.
+
+    #+begin_src shell
+      $ tree state
+      state
+      ├── cache
+      ├── config
+      └── data
+
+      3 directories, 0 files
+    #+end_src
 
     Script:
 
+    #+CAPTION: run-in-xephyr v.0.1
+    #+begin_src shell :tangle-mode (identity #o555) :tangle "~/bin/run-in-xephyr.sh"
+            #!/bin/sh -eu
 
-    For reference:
+            ################################################################################
+            usage () {
+              cat <<EOF
+            Usage: run-in-xephyr.sh [options]
+
+              -d NxN  Set the screen size to NxN
+              -h      This message
+              -n NUM  Set the internal DISPLAY to NUM
+              -s NUM  Set the number of screens to NUM
+            EOF
+            }
+
+            ################################################################################
+            SCREENS=1
+            SCREEN_SIZE="1024x768"
+            DISPLAY_NUMBER=5
+
+            ################################################################################
+            while getopts "d:hn:s:" o; do
+              case "${o}" in
+                d) SCREEN_SIZE=$OPTARG
+                   ;;
+
+                h) usage
+                   exit
+                   ;;
+
+                n) DISPLAY_NUMBER=$OPTARG
+                   ;;
+
+                s) SCREENS=$OPTARG
+                   ;;
+
+                ,*) echo; usage
+                   exit 1
+                   ;;
+              esac
+            done
+
+            shift $((OPTIND-1))
+
+            ################################################################################
+            XMONAD_CONFIG_DIR=$(pwd)/state/config
+            XMONAD_CACHE_DIR=$(pwd)/state/cache
+            XMONAD_DATA_DIR=$(pwd)/state/data
+            export XMONAD_CONFIG_DIR XMONAD_CACHE_DIR XMONAD_DATA_DIR
+
+            mkdir -p "$XMONAD_CONFIG_DIR" "$XMONAD_CACHE_DIR" "$XMONAD_DATA_DIR"
+            echo "xmonad will store state files in $(pwd)/state"
+
+            ################################################################################
+            SCREEN_COUNTER=0
+            SCREEN_OPTS=""
+            X_OFFSET_CURRENT="0"
+            X_OFFSET_ADD=$(echo "$SCREEN_SIZE" | cut -dx -f1)
+
+            while expr "$SCREEN_COUNTER" "<" "$SCREENS"; do
+              SCREEN_OPTS="$SCREEN_OPTS -origin ${X_OFFSET_CURRENT},0 -screen ${SCREEN_SIZE}+${X_OFFSET_CURRENT}"
+              SCREEN_COUNTER=$(("$SCREEN_COUNTER" + 1))
+              X_OFFSET_CURRENT=$(("$X_OFFSET_CURRENT" + "$X_OFFSET_ADD"))
+            done
+
+            (
+              # shellcheck disable=SC2086
+              Xephyr $SCREEN_OPTS +xinerama +extension RANDR \
+                     -ac -br -reset -terminate -verbosity 10 \
+                     -softCursor ":$DISPLAY_NUMBER" &
+
+              export DISPLAY=":$DISPLAY_NUMBER"
+              echo "Waiting for windows to appear..." && sleep 2
+
+              xterm -fg green -bg black -fn "monospace:pixelsize=14" -hold xrandr &
+              xterm -fg green -bg black -fn "monospace:pixelsize=14" &
+              exec /usr/bin/xmonad
+            )
+    #+end_src
+
+    You obviously don't *have* to use the script, you can run XMonad in a VM, or even as your desktop, if you please.
+
+    **For reference:**
 
     - [[https://wiki.archlinux.org/index.php/Xephyr][Arch wiki - Xephyr]]
 *** Mimimal - lets start small
 
-    XMonad is written in [[https://www.haskell.org/][haskell]], which is a really weird language. But, as XMonad proves, it is very powerfull, and you don't have too understand all (any?) of it to be able to use XMonad for yourself. We will start small, and slowly add more functionality to our setup, explaining what we actually added.
+    XMonad is written in [[https://www.haskell.org/][haskell]], which is a really weird language. But, as XMonad proves, it is very powerfull, and you don't have too understand all (any?) haskell to be able to use XMonad for yourself. We will start small, and slowly add more functionality to our setup, explaining what we did.
 
     **Installation:**
 
-    A minimal install needs the following, I am using Arch, but you can do the same on Ubuntu Slackware or whatever else you want to run, just use your flavor of package-manager. Arch is just a good base-line, as the packages it installs are as close to upstream as possible:
+    A minimal install needs the following, as you might have noticed, I am using Arch, but you can do the same on Ubuntu, Debian or whatever else you want to run, just use your flavor of package-manager. Arch is just a good base-line, as the packages it installs are as close to upstream as it gets:
 
     #+begin_src shell
       sudo pacman -S xmonad xmonad-contrib xmobar dmenu xterm
     #+end_src
 
-    **XMonad** is XMonad itself, **xmonad-contrib** is a library of extra functionality, this is what makes XMonad so outstanding, **dmenu** is minimal a program launcher, and **xterm** is the default terminal. It looks a bit spartan, but it is enough to get a lot done, actually.
+    **XMonad** is XMonad itself, **xmonad-contrib** is a library of extra functionality (this is what makes XMonad so outstanding), **dmenu** is minimal a program launcher, and **xterm** is the default terminal. It looks a bit spartan, but it is enough to get a lot done, actually.
 
     To start up XMonad, to quote [[https://wiki.archlinux.org/index.php/Xmonad#Starting][the Arch Wiki]]:
 
@@ -526,52 +650,75 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     Alternatively, select Xmonad from the session menu in a display manager of choice (2).
     #+end_quote
 
-    1. Which, translated for mortals means you add / create a file called =$HOME/.xinitrc=, which contains the line:
+    1. Which, translated for mortals means you add / create a file called =$HOME/.xinitrc=, and run =startx=:
 
     #+CAPTION: bare xinitrc
     #+begin_src sh
       exec xmonad
     #+end_src
 
-    You can now start XMonad using **startx**
-
-    Note: On arch you need to install **xorg-xinit**, which contains =/usr/bin/startx=
+    **Note:** On arch you need to install **xorg-xinit**, which contains =/usr/bin/startx=
 
     2. If you use a [[https://wiki.archlinux.org/index.php/Display_manager][display manager]], like GDM or SSDM, you can just choose *xmonad* when you login.
 
-    For reference:
+    **For reference:**
 
     - [[https://wiki.archlinux.org/index.php/Xmonad][xmonad - ArchWiki]]
     - [[https://wiki.archlinux.org/index.php/Xmobar][xmobar - ArchWiki]]
     - [[https://wiki.archlinux.org/index.php/Dmenu][dmenu - ArchWiki]]
     - [[https://wiki.archlinux.org/index.php/Xterm#Installation][xterm - ArchWiki]]
 
-    Right, now we have the base of our setup.
-    We will be following: [[https://wiki.haskell.org/Xmonad/Config_archive/John_Goerzen%27s_Configuration][John Coerzen]]
+    Right, now we have the base of our setup. In our case, we will use =run-in-xephyr.sh=, which will put our environment in order, and run XMonad in a window on our desktop. But first, let's configure XMonad.
 
-
-
-
-  About as bare as it gets, the only changes from the default are:
+    Our first configuration is about as bare as it gets, the only changes from the default are:
 
   - favourite terminal
   - favourite keybinding
 
-  #+begin_src haskell :tangle  ~/.xmonad/xmonad.hs
+  #+caption: A minimal XMonad configuration
+  #+begin_src haskell -n
   import XMonad
 
-  main = xmonad defaultConfig
+  main = xmonad def
           { modMask = mod4Mask -- Use Super instead of Alt
           , terminal = "alacritty"
           -- more changes
   }
   #+end_src
 
-    Note that xmonad>=0.11 has by default a list of the default keybindings bound to M-S-/ or M-?.
+  **Explanation:**
 
-  For reference:
+  - line 1: XMonad does not come with all bells and whistles, you have to import libararies for functionality, starting with XMonad itself
+  - line 3: **main:** this is a real haskell program, and haskell starts with *main*, next we call xmonad with the default config *def* (see [[xmonad1-default][here]])
+    The changes we make in lines 4 and 5 override the defaults.
+  - line 4: **modMask** is a variable xmonad has defined, we give it the value *mod4Mask* (Super).
+  - line 5: **terminal**, default is xterm, we prefer *alacritty*.
+
+  And that's it, your first haskell program!
+
+  **Sidenote:** This really *is* a haskell program, if you want to, you can start up =ghci=, the haskell interpreter, and load your =xmonad.hs=. When your config gets more eleborate you can even interact with it in the interpreter!
+
+  **Alternative**
+
+  If you are using Super (or the Windows key, but we'll call it Super from now on) in your current WM (like I do), then use:
+
+  #+caption: Even less of a XMonad configuration
+  #+begin_src haskell
+  import XMonad
+
+  main = xmonad def
+          { modMask = mod4Mask -- Use Super instead of Alt
+          , terminal = "alacritty"
+          -- more changes
+  }
+  #+end_src
+
+  Note that xmonad>=0.11 has by default a list of the default keybindings bound to =M-S-/= or =M-?= (Depending on your settings, either =Alt+Shift+/=, or =Super+Shift+/=.
+
+  **For reference:**
 
   - [[https://wiki.archlinux.org/index.php/Alacritty][Alacritty - ArchWiki]]
+  - [[https://wiki.haskell.org/Xmonad/Config_archive/John_Goerzen%27s_Configuration][John Coerzen]]
 
 *** PS -- the default configuration
 
@@ -579,6 +726,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     - [[https://wiki.haskell.org/Xmonad/Config_archive/yiannist%27s_xmonad.hs][yiannist's xmonad.hs]]
 
     #+caption: Default XMonad confiuration
+    #+name: xmonad1-default
     #+begin_src haskell :tangle no
       --
       -- xmonad example config file.
@@ -1497,7 +1645,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
   Three kind of fonts used, regular, bold for the time, and font-awesome for icons.
   Colors the same as in our =xmonad.hs=.
 
-  #+begin_src haskell :tangle ~/.xmonad/xmobar.hs
+  #+begin_src haskell
     Config { font = "xft:Noto Sans:size=10:style=Regular"
            , additionalFonts   = [ "xft:FontAwesome:pixelsize=16:antialias=true:hinting=true",
                                    "xft:Noto Sans:size=10:style=Bold"]
@@ -2192,7 +2340,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 *** Imports
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       import XMonad
       import System.IO
       import System.Exit -- exitWith
@@ -2222,7 +2370,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 *** General
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- General                                                              ---
       ---------------------------------------------------------------------------
@@ -2247,7 +2395,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     #+end_src
 
 *** Projects
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Projects                                                              --
       ---------------------------------------------------------------------------
@@ -2269,7 +2417,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     #+end_src
 
 *** Theme
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Theme                                                                ---
       ---------------------------------------------------------------------------
@@ -2350,7 +2498,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 *** TODO Keys -  instead of libnotify use flashtext
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Keys                                                                 ---
       ---------------------------------------------------------------------------
@@ -2401,7 +2549,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 *** Hooks and main
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Hooks & main                                                         ---
       ---------------------------------------------------------------------------
@@ -2459,7 +2607,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Source: ???
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       quitXmonad :: X ()
       quitXmonad = io (exitWith ExitSuccess)
 
@@ -2524,7 +2672,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 *** Imports
 
-    #+begin_src haskell +n :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell +n
       import XMonad
       import System.IO
       import System.Exit -- exitWith
@@ -2556,7 +2704,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 *** General
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- General                                                              ---
       ---------------------------------------------------------------------------
@@ -2586,7 +2734,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     #+end_src
 
 *** Projects
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Projects                                                              --
       ---------------------------------------------------------------------------
@@ -2614,7 +2762,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     #+end_src
 
 *** Theme
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Theme                                                                ---
       ---------------------------------------------------------------------------
@@ -2697,7 +2845,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     General Xmonad key-bindings:
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Keys                                                                 ---
       ---------------------------------------------------------------------------
@@ -2716,7 +2864,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Multi-media key-bindings:
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
 
       subKeys "Multi Media"
       [ ("<XF86PowerOff>"         , addName "Power off"                 $ confirmPrompt hotPromptTheme "Shutdown Linux" $ spawn "shutdown -h now")
@@ -2738,7 +2886,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Applications key-bindings:
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
 
       subKeys "My Applications"
       [ ("M-<Return>"             , addName "Terminal"          $ spawn myTerminal)
@@ -2760,7 +2908,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Actions key-bindings:
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs" :tangle no
+    #+begin_src haskell
 
       -- subKeys "Actions"
       -- [ ("M-a"                       , addName "Notify w current X selection"    $ unsafeWithSelection "notify-send")
@@ -2776,7 +2924,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Project key-bindings:
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
 
       subKeys "Projects"
       [ ("M-w", addName "switch Project Prompt" $ switchProjectPrompt warmPromptTheme)
@@ -2786,7 +2934,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Workspace key-bindings:
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
 
       subKeys "Workspaces"
       [ ("M-<Left>", addName "next workspace" $ prevWS)
@@ -2805,7 +2953,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Notice possible unite several rules into one [[(manage)][here]]
 
-    #+begin_src haskell -n  :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell -n
       ---------------------------------------------------------------------------
       -- Hooks & main                                                         ---
       ---------------------------------------------------------------------------
@@ -2886,7 +3034,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Source: [[https://github.com/altercation/dotfiles-tilingwm/blob/master/.xmonad/xmonad.hs][Ethan Schoonover's xmonad.hs]]
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       quitXmonad :: X ()
       quitXmonad = io (exitWith ExitSuccess)
 
@@ -2906,7 +3054,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Custom hook helpers
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Custom hook helpers
       ---------------------------------------------------------------------------
@@ -3009,7 +3157,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 *** Imports
 
-    #+begin_src haskell +n :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell +n
       import XMonad
       import System.IO
       import System.Exit -- exitWith
@@ -3061,7 +3209,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 *** General
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- General                                                              ---
       ---------------------------------------------------------------------------
@@ -3097,7 +3245,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     #+end_src
 
 *** Projects
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Projects                                                              --
       ---------------------------------------------------------------------------
@@ -3133,7 +3281,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     #+end_src
 
 *** Theme
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Theme                                                                ---
       ---------------------------------------------------------------------------
@@ -3210,7 +3358,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 *** Prompts
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       myPromptTheme :: XPConfig
       myPromptTheme = def
           { font                  = myFont
@@ -3253,7 +3401,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Search engines:
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       archwiki, news, reddit, urban :: S.SearchEngine
 
       archwiki = S.searchEngine "archwiki" "https://wiki.archlinux.org/index.php?search="
@@ -3280,7 +3428,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
      Notice possible unite several rules into one
 
-     #+begin_src haskell -n  :tangle "~/.xmonad/xmonad.hs"
+     #+begin_src haskell -n
        ---------------------------------------------------------------------------
        -- ManageHook                                                           ---
        ---------------------------------------------------------------------------
@@ -3328,7 +3476,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
       Testing, works with browsers - (fsmain) (fs)
 
-    #+begin_src haskell -n  :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell -n
       ---------------------------------------------------------------------------
       -- LayoutHook                                                           ---
       ---------------------------------------------------------------------------
@@ -3375,7 +3523,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 **** Startup
 
-     #+begin_src haskell -n  :tangle "~/.xmonad/xmonad.hs"
+     #+begin_src haskell -n
        ---------------------------------------------------------------------------
        -- StartupHook                                                           ---
        ---------------------------------------------------------------------------
@@ -3390,7 +3538,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
 **** Main
 
-     #+begin_src haskell -n  :tangle "~/.xmonad/xmonad.hs"
+     #+begin_src haskell -n
        ---------------------------------------------------------------------------
        -- Main                                                                 ---
        ---------------------------------------------------------------------------
@@ -3435,7 +3583,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     - [[https://hackage.haskell.org/package/xmonad-contrib-0.16/docs/XMonad-Actions-ShowText.html][XMonad.Actions.ShowText]] -- ShowText displays text for sometime on the screen.
 
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       -- | Merge the supplied keys with 'defaultKeysDescr', also adding a keybinding
       -- to run an action for showing the keybindings.
       addDescrKeys2 :: (HasName b1, HasName b) =>
@@ -3449,7 +3597,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     New Xmonad key-bindings:
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Keys                                                                 ---
       ---------------------------------------------------------------------------
@@ -3547,7 +3695,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Original layout:
 
-    #+begin_src  haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src  haskell
       defaultKeysDescr2 :: XConfig Layout -> [((KeyMask, KeySym), NamedAction)]
       defaultKeysDescr2 conf@(XConfig {XMonad.modMask = modm}) =
           [ subtitle "launching and killing programs"
@@ -3612,7 +3760,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Source: [[https://github.com/altercation/dotfiles-tilingwm/blob/master/.xmonad/xmonad.hs][Ethan Schoonover's xmonad.hs]]
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       quitXmonad :: X ()
       quitXmonad = io (exitWith ExitSuccess)
 
@@ -3632,7 +3780,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     Custom hook helpers
 
-    #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+    #+begin_src haskell
       ---------------------------------------------------------------------------
       -- Custom hook helpers
       ---------------------------------------------------------------------------
@@ -3777,7 +3925,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
   Source: [[https://github.com/altercation/dotfiles-tilingwm/blob/master/.xmonad/xmonad.hs][Ethan Schoonover's xmonad.hs]]
 
-  #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+  #+begin_src haskell
     quitXmonad :: X ()
     quitXmonad = io (exitWith ExitSuccess)
 
@@ -3797,7 +3945,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
   Custom hook helpers
 
-  #+begin_src haskell :tangle "~/.xmonad/xmonad.hs"
+  #+begin_src haskell
     ---------------------------------------------------------------------------
     -- Custom hook helpers
     ---------------------------------------------------------------------------

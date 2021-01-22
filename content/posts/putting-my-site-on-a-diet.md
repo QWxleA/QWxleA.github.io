@@ -2,7 +2,7 @@
 title = "Putting my site on a diet"
 author = ["Alex Qwxlea"]
 date = 2021-01-18T18:05:00+02:00
-lastmod = 2021-01-18T21:30:51+02:00
+lastmod = 2021-01-18T21:35:05+02:00
 draft = false
 +++
 
@@ -88,3 +88,4 @@ Further steps, replace the logo with an svg, and use the same svg for the favico
 
 -   [Hugo + resources = inline svg icons](http://oostens.me/posts/hugo-resources-inline-svg-icons/)
 -   [Icon Sets • Iconify](<https://iconify.design/icon-sets/>)
+-   [Are you using SVG favicons yet? A guide for modern browsers.](https://medium.com/swlh/are-you-using-svg-favicons-yet-a-guide-for-modern-browsers-836a6aace3df) (maybe for later)

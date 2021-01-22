@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on QWxlea</title>
-    <link>https://qwxlea.tk/tags/git/</link>
+    <link>https://qwxlea.ml/tags/git/</link>
     <description>Recent content in git on QWxlea</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>QWxleA</copyright>
-    <lastBuildDate>Thu, 24 Dec 2020 23:58:00 +0200</lastBuildDate><atom:link href="https://qwxlea.tk/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Dec 2020 23:58:00 +0200</lastBuildDate><atom:link href="https://qwxlea.ml/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git notes</title>
-      <link>https://qwxlea.tk/posts/git-notes/</link>
+      <link>https://qwxlea.ml/posts/git-notes/</link>
       <pubDate>Thu, 24 Dec 2020 23:58:00 +0200</pubDate>
       
-      <guid>https://qwxlea.tk/posts/git-notes/</guid>
+      <guid>https://qwxlea.ml/posts/git-notes/</guid>
       <description>Notes to keep track of things I don&amp;rsquo;t do all that often.
 Working with git submodule Adding a submodule is very simple, here I add a theme to this site:
 1  git submodule add https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus   Updating as well:

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ngrok on QWxlea</title>
-    <link>https://qwxlea.tk/tags/ngrok/</link>
+    <link>https://qwxlea.ml/tags/ngrok/</link>
     <description>Recent content in ngrok on QWxlea</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>QWxleA</copyright>
-    <lastBuildDate>Sun, 17 Jan 2021 13:25:00 +0200</lastBuildDate><atom:link href="https://qwxlea.tk/tags/ngrok/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 13:25:00 +0200</lastBuildDate><atom:link href="https://qwxlea.ml/tags/ngrok/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo and ngrok, for fun and profit</title>
-      <link>https://qwxlea.tk/posts/hugo-and-ngrok-for-fun-and-profit/</link>
+      <link>https://qwxlea.ml/posts/hugo-and-ngrok-for-fun-and-profit/</link>
       <pubDate>Sun, 17 Jan 2021 13:25:00 +0200</pubDate>
       
-      <guid>https://qwxlea.tk/posts/hugo-and-ngrok-for-fun-and-profit/</guid>
+      <guid>https://qwxlea.ml/posts/hugo-and-ngrok-for-fun-and-profit/</guid>
       <description>Tunnel (wikipedia)
   Hugo is able to quickly update a site, and makes improving and bug-fixing very simple. Showing your work-in-progress online is not as simple, and probably not what you want, anyway. Comes in ngrok.
  ngrok allows you to expose a web server running on your local machine to the internet. Just tell ngrok what port your web server is listening on.
