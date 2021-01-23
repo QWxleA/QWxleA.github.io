@@ -2,7 +2,7 @@
 title = "Spaced repetition – Learning with Emacs and Anki"
 author = ["Alex Qwxlea"]
 date = 2021-01-23T12:19:00+02:00
-lastmod = 2021-01-23T13:23:28+02:00
+lastmod = 2021-01-23T14:59:39+02:00
 tags = ["emacs"]
 draft = false
 +++
@@ -15,7 +15,7 @@ The idea is to memorize 'hungul', the Korean alphabet. A popular tool seems to b
 
 After setting it up, I remembered [reading about org and anki](https://irreal.org/blog/?p=8720). So, with a bit of googling I now have a simple setup to create my own cards. For Emacs, the second link under **Further reading** is excellent, for Anki, the 3rd.
 
-But first: let's memorize some more Korean characters, here's a small comic: ㅎㅂ ㄹㅆ ㄱㅎ ㄲㅎ (a man with a Hat, carrying a Bucket, sees a Ratelsnake, which hiSSes. the man with the Hat takes his Gun, and then the man with the Hat pulls the trigger to Kill the snake)
+But first: let's memorize some more Korean characters, here's a small comic: ㅎㅂ ㄹㅆ ㄱㅎ ㄲㅎ (a man with a Hat, carrying a Bucket, sees a rateLsnake, which hiSSes. the man with the Hat takes his Gun, and then the man with the Hat pulls the trigger to Kill the snake)
 
 
 ## Further reading {#further-reading}

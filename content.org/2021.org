@@ -669,7 +669,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    After setting it up, I remembered [[https://irreal.org/blog/?p=8720][reading about org and anki]]. So, with a bit of googling I now have a simple setup to create my own cards. For Emacs, the second link under *Further reading* is excellent, for Anki, the 3rd.
 
-   But first: let's memorize some more Korean characters, here's a small comic: ㅎㅂ ㄹㅆ ㄱㅎ ㄲㅎ (a man with a Hat, carrying a Bucket, sees a Ratelsnake, which hiSSes. the man with the Hat takes his Gun, and then the man with the Hat pulls the trigger to Kill the snake)
+   But first: let's memorize some more Korean characters, here's a small comic: ㅎㅂ ㄹㅆ ㄱㅎ ㄲㅎ (a man with a Hat, carrying a Bucket, sees a rateLsnake, which hiSSes. the man with the Hat takes his Gun, and then the man with the Hat pulls the trigger to Kill the snake)
 
 *** Further reading
     1. [[https://irreal.org/blog/?p=8720][Org and Anki | Irreal]]
