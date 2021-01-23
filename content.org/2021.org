@@ -408,7 +408,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    Finally! Profit!
 
-** DONE Putting my site on a diet                                       :webdev:
+** DONE Putting my site on a diet
    CLOSED: [2021-01-18 Mon 18:05]
    :PROPERTIES:
    :EXPORT_FILE_NAME: putting-my-site-on-a-diet

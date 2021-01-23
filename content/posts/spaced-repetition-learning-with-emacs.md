@@ -1,8 +1,9 @@
 +++
-title = "Spaced repetition Learning with Emacs"
+title = "Spaced repetition – Learning with Emacs and Anki"
 author = ["Alex Qwxlea"]
 date = 2021-01-23T12:19:00+02:00
-lastmod = 2021-01-23T12:19:19+02:00
+lastmod = 2021-01-23T13:23:28+02:00
+tags = ["emacs"]
 draft = false
 +++
 
