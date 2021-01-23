@@ -332,13 +332,14 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     To resize windows, you must enter resize mode, with the Mod + R keybinding. After you enter resize mode you can resize windows with Left/Right/Up/Down keys, and press enter or escape to return to default mode.
 
-
 ** TODO on tech
 
    Install *mosh* on phone / tablet and tp220
 
    - [Mosh : Keith Winstein](https://launchpad.net/~keithw/+archive/ubuntu/mosh)
    - [Mosh Tool - An Alternative Option for SSH and How to Use It](http://linoxide.com/how-tos/mosh-alternative-ssh/)
+
+
 * Posts
 ** DONE hugo and ngrok, for fun and profit                   :hugo:ngrok:webdev:
    CLOSED: [2021-01-17 Sun 13:25]
@@ -512,7 +513,6 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    Now that we're at home a lot, it's time to clean up my phone. Over time I've fallen into some bad habits, and it's time to clean up my act.
 
-
    | Category                      | Currently using                        | Better alternative                          |
    |-------------------------------+----------------------------------------+---------------------------------------------|
    | [[*Ad blocker][Ad Blocker]]                    | [[https://blokada.org/][blokada.org]]                            | -                                           |
@@ -534,6 +534,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
    | [[Contacts, AddressBook and Reminders][Reminders]]                     |                                        | [[https://f-droid.org/en/packages/org.tasks/][Tasks.org]]                                   |
    | [[*RSS][RSS]]                           |                                        | [[https://f-droid.org/en/packages/com.nononsenseapps.feeder/][Feeder]] [[https://www.f-droid.org/en/packages/org.fox.tttrss/][Tiny Tiny RSS]]                        |
    | [[*Social Media][Social Media]]                  | Twitter, [[https://tusky.app/][Tusky]], [[https://github.com/fwgs/husky][Husky]]                  |                                             |
+   | [[*Spaced repetition][Spaced repetition]]             | [[https://f-droid.org/en/packages/com.ichi2.anki/][AnkiDroid]]                              |                                             |
    | [[*Web Browsers][Web Browsers]]                  | Firefox Beta, Chrome, [[https://www.torproject.org/download/][tor browser]]      | [[https://f-droid.org/en/packages/org.mozilla.klar/][Firefox Klar]]                                |
    | [[Wine - the liquid version, not the Windows not-emulator][Wine]]                          | [[https://www.vivino.com/][Vivino]]                                 |                                             |
    | [[*YouTube Music and SoundCloud][YouTube Music and SoundCloud]]  | [[https://newpipe.net/][NewPipe]]                                |                                             |
@@ -596,6 +597,8 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     I don't really use RSS on my phone, I use [[https://newsboat.org/][Newsboat]] on my desktop, and if you can't sync then it's just annoying. [[https://f-droid.org/en/packages/com.nononsenseapps.feeder/][Feeder]] looks like a good app, but as I mostly work from home it is not that relevant at the moment. [[https://www.f-droid.org/en/packages/org.fox.tttrss/][Tiny Tiny RSS]] would be a good idea if I ever get TTR installed on a publicly accessible server.
 *** Social Media
     This one (should be) easy. Twitter bad, Mastodon good. I use  [[https://tusky.app/][Tusky]] often, but am playing with [[https://github.com/fwgs/husky][Husky]]. Let the best win! I like that it is possible to use both.
+*** Spaced repetition
+    Anki exists both on the desktop ([[https://apps.ankiweb.net/][Anki - powerful, intelligent flashcards]]), and on Android, [[https://f-droid.org/en/packages/com.ichi2.anki/][AnkiDroid]]. The server is closed source, but it's possible to run your own server with [[https://github.com/ankicommunity/anki-sync-server][anki-sync-server: A personal Anki sync server]]. See also: [[*Spaced repetition Learning with Emacs][Spaced repetition Learning with Emacs]].
 *** Web Browsers
     This is a big one. Firefox has been very good for a while, so there really is no reason not to use it. Unfortunetely on the desktop, Chromium is better/easier for web-devel, and I slowly started using that. But Google has been helpful, [[https://www.zdnet.com/article/google-cuts-off-other-chromium-based-browsers-from-its-sync-service/][promising to cut off Chromium]], so that's a good reminder not to put our trust in our multi-alphabetical overlords.
 
@@ -622,6 +625,63 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
   - https://njoseph.me/mediawiki/Privacy_Stack
   - [[https://garykim.dev/blog/2020/04/14/personal-f-droid-repository/][Personal F-Droid Repository • Gary Kim: Website]]
 
+** DONE Hangul
+   CLOSED: [2021-01-22 Fri 12:19]
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: hangul
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   After an interesting [[https://rage.love/@ljwrites/105592890222523701][conversation]] on Mastodon, I thought it would be interesting to look into  [[https://en.wikipedia.org/wiki/Hangul#Letters][Hangul]] or Korean, for the non-initiated. Languages are always fascinating, and non-latin languages double so. I can only read Latin, Cyrillic, and (Ancient) Greek, so anything to the west of Europe is new and interesting. On to hangul.
+
+   The first article I read was [[https://www.mondly.com/blog/2020/05/25/hangul-korean-alphabet-pronunciation/][A Quick Guide to Hangul, the Korean Alphabet - Pronunciation and Rules]] on 'mondly', an app I use on my phone to improve my French. It's not really helping, but the app is not to blame. An interesting quote from the article was:
+
+   > For hundreds of years before Hangul was created, Koreans wrote using Classical Chinese characters (which they called Hanja) alongside other native phonetic writing systems. However, many lower-class people didn’t know how to read or write because of the fundamental differences between Korean and Chinese and, of course, because of the large number of Chinese characters. After all, even today, many people find Chinese and Japanese very difficult to learn because of their complex writing systems. My scientific research ([[https://en.wikipedia.org/wiki/My_Sassy_Girl_(TV_series)][Wikipedia]]) noticed the same thing:
+
+   #+caption: Chinese writing in the Joseon era
+   [[/images/hangul-chinese.png]]
+
+   Both Chinese and Japanese have, or use an enormous amount of characters, which makes it definitely nin-trivial for the non-native speaker to even get a glimpse of the language. The Korean alphabet, on the other hand, has only 24 basic latters, and they use not more then 5 strokes, so they don't look too complicated. Having studied several eastern european languages in the past, it was interesting to see several sounds we don't really have in the west, have equivalents in Korean and cyrillic, for example ㅈ (romanized 'ch', but not really see [[*Further reading][Further reading #3]] ) is somewhere between ч 'chai' or 'checkmate' and ц 'tsar'. Also, it always amazes me that, listening to the videos, it is obvious that for the native speaker, the diferences between sounds are very clear, and obvious, but to me it often sounds as if they just repeat the same sound. It was the same studying Russian, and I remember when I gradually started to notice the difference between sounds, it's fascinating how the brain works!
+
+*** Further reading
+
+    - 1. [[https://www.mondly.com/blog/2020/05/25/hangul-korean-alphabet-pronunciation/][A Quick Guide to Hangul, the Korean Alphabet - Pronunciation and Rules]]
+    - 2. [[https://en.wikipedia.org/wiki/Hangul#Letters][Hangul - Wikipedia]]
+    - 3. [[https://www.youtube.com/watch?v=J_flBycq5rg][How to REALLY Pronounce ㅈ/ㅊ/ㅉ | Korean Pronunciation Explained]]
+    - 4. [[https://www.youtube.com/watch?v=h4AzYKfAe00][[Korean Pronunciation] How to pronounce 'ㅈ ㅉ ㅊ']]
+    - 4. [[https://www.youtube.com/watch?v=85qJXvyFrIc][Learn Hangul 한글 (Korean Alphabet) in 30 minutes - YouTube]]
+
+** DONE Spaced repetition Learning with Emacs
+   CLOSED: [2021-01-23 Sat 12:19]
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: spaced-repetition-learning-with-emacs
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   Remembering is hard. Well, not for everybody, but for the average person, yes, it's hard. But, since leaving our caves, we have been busy creating tools. To remember things the best tools seems to be [[https://en.wikipedia.org/wiki/Spaced_repetition][Spaced repetition (Wikipedia)]]:
+
+   > Spaced repetition is an evidence-based learning technique that is usually performed with flashcards. Newly introduced and more difficult flashcards are shown more frequently, while older and less difficult flashcards are shown less frequently in order to exploit the psychological spacing effect. The use of spaced repetition has been proven to increase rate of learning.
+
+   The idea is to memorize 'hungul', the Korean alphabet. A popular tool seems to be [[https://ankiweb.net][anki]], open-source software that makes it easy to create and use 'decks' of cards. There are a whole bunch of decks for Korean, but I started out with [[https://ankiweb.net/shared/info/1831087318][this one]]. What I especially like is the possibility to use anki both on my phone ([[https://f-droid.org/en/packages/com.ichi2.anki/][AnkiDroid]]) and one my computer.
+
+   After setting it up, I remembered [[https://irreal.org/blog/?p=8720][reading about org and anki]]. So, with a bit of googling I now have a simple setup to create my own cards. For Emacs, the second link under *Further reading* is excellent, for Anki, the 3rd.
+
+   But first: let's memorize some more Korean characters, here's a small comic: ㅎㅂ ㄹㅆ ㄱㅎ ㄲㅎ (a man with a Hat, carrying a Bucket, sees a Ratelsnake, which hiSSes. the man with the Hat takes his Gun, and then the man with the Hat pulls the trigger to Kill the snake)
+
+*** Further reading
+    1. [[https://irreal.org/blog/?p=8720][Org and Anki | Irreal]]
+    2. (!) [[https://yiufung.net/post/anki-org/][Power up Anki with Emacs, Org mode, anki-editor...]]
+    3. (!) [[http://augmentingcognition.com/ltm.html][Augmenting Long-term Memory]]
+    4. [[https://news.ycombinator.com/item?id=25226621][How to Memorize Faster with the Spaced Repetition Learning Technique | Hacker News]]
+    5. [[https://github.com/abo-abo/pamparam][abo-abo/pamparam: Simple and fast flashcards for Emacs]]
+    6. [[https://www.reddit.com/r/emacs/comments/gzz0a4/should_i_move_from_notion_to_orgmode/][Should I move from Notion to org-mode? : emacs]]
+    7. [[https://jherrlin.github.io/posts/learn-awk/][Learn AWK with Emacs | jherrlin]]
+    8. [[https://blog.jethro.dev/][Jethro Kuan]] (everything :-)
+    9. [[https://github.com/louietan/org-drill][louietan/org-drill]]
+    10. [[https://irreal.org/blog/?p=8318][Emacs Workout | Irreal]]
+    11. [[https://github.com/l3kn/org-fc][l3kn/org-fc: Spaced Repetition System for Emacs org-mode]]
 ** WAITING XMonad from scratch -- day 1 -- Starting small               :xmonad:
    :PROPERTIES:
    :EXPORT_FILE_NAME: xmonad-from-scratch-day-1

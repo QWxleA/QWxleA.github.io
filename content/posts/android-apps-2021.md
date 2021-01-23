@@ -2,7 +2,7 @@
 title = "Android Apps – 2021"
 author = ["Alex Qwxlea"]
 date = 2021-01-22T23:48:00+02:00
-lastmod = 2021-01-22T23:48:29+02:00
+lastmod = 2021-01-23T11:19:40+02:00
 tags = ["android"]
 draft = false
 +++
@@ -30,6 +30,7 @@ Now that we're at home a lot, it's time to clean up my phone. Over time I've fal
 | [Reminders](#contacts-addressbook-and-reminders)                     |                                                                                | [Tasks.org](https://f-droid.org/en/packages/org.tasks/)                                                                                       |
 | [RSS](#rss)                                                          |                                                                                | [Feeder](https://f-droid.org/en/packages/com.nononsenseapps.feeder/) [Tiny Tiny RSS](https://www.f-droid.org/en/packages/org.fox.tttrss/)     |
 | [Social Media](#social-media)                                        | Twitter, [Tusky](https://tusky.app/), [Husky](https://github.com/fwgs/husky)   |                                                                                                                                               |
+| [Spaced repetition](#spaced-repetition)                              | [AnkiDroid](https://f-droid.org/en/packages/com.ichi2.anki/)                   |                                                                                                                                               |
 | [Web Browsers](#web-browsers)                                        | Firefox Beta, Chrome, [tor browser](https://www.torproject.org/download/)      | [Firefox Klar](https://f-droid.org/en/packages/org.mozilla.klar/)                                                                             |
 | [Wine](#wine-the-liquid-version-not-the-windows-not-emulator)        | [Vivino](https://www.vivino.com/)                                              |                                                                                                                                               |
 | [YouTube Music and SoundCloud](#youtube-music-and-soundcloud)        | [NewPipe](https://newpipe.net/)                                                |                                                                                                                                               |
@@ -137,6 +138,11 @@ I don't really use RSS on my phone, I use [Newsboat](https://newsboat.org/) on m
 ## Social Media {#social-media}
 
 This one (should be) easy. Twitter bad, Mastodon good. I use  [Tusky](https://tusky.app/) often, but am playing with [Husky](https://github.com/fwgs/husky). Let the best win! I like that it is possible to use both.
+
+
+## Spaced repetition {#spaced-repetition}
+
+Anki exists both on the desktop ([Anki - powerful, intelligent flashcards](https://apps.ankiweb.net/)), and on Android, [AnkiDroid](https://f-droid.org/en/packages/com.ichi2.anki/). The server is closed source, but it's possible to run your own server with [anki-sync-server: A personal Anki sync server](https://github.com/ankicommunity/anki-sync-server). See also: [Spaced repetition Learning with Emacs]({{< relref "spaced-repetition-learning-with-emacs" >}}).
 
 
 ## Web Browsers {#web-browsers}
