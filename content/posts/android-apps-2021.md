@@ -2,7 +2,7 @@
 title = "Android Apps – 2021"
 author = ["Alex Qwxlea"]
 date = 2021-01-22T23:48:00+02:00
-lastmod = 2021-01-23T11:19:40+02:00
+lastmod = 2021-01-23T12:24:54+02:00
 tags = ["android"]
 draft = false
 +++

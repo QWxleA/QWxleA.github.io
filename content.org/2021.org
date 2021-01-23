@@ -598,7 +598,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 *** Social Media
     This one (should be) easy. Twitter bad, Mastodon good. I use  [[https://tusky.app/][Tusky]] often, but am playing with [[https://github.com/fwgs/husky][Husky]]. Let the best win! I like that it is possible to use both.
 *** Spaced repetition
-    Anki exists both on the desktop ([[https://apps.ankiweb.net/][Anki - powerful, intelligent flashcards]]), and on Android, [[https://f-droid.org/en/packages/com.ichi2.anki/][AnkiDroid]]. The server is closed source, but it's possible to run your own server with [[https://github.com/ankicommunity/anki-sync-server][anki-sync-server: A personal Anki sync server]]. See also: [[*Spaced repetition Learning with Emacs][Spaced repetition Learning with Emacs]].
+    Anki exists both on the desktop ([[https://apps.ankiweb.net/][Anki - powerful, intelligent flashcards]]), and on Android, [[https://f-droid.org/en/packages/com.ichi2.anki/][AnkiDroid]]. The server is closed source, but it's possible to run your own server with [[https://github.com/ankicommunity/anki-sync-server][anki-sync-server: A personal Anki sync server]]. See also: [[*Spaced repetition -- Learning with Emacs and Anki][Spaced repetition Learning with Emacs]].
 *** Web Browsers
     This is a big one. Firefox has been very good for a while, so there really is no reason not to use it. Unfortunetely on the desktop, Chromium is better/easier for web-devel, and I slowly started using that. But Google has been helpful, [[https://www.zdnet.com/article/google-cuts-off-other-chromium-based-browsers-from-its-sync-service/][promising to cut off Chromium]], so that's a good reminder not to put our trust in our multi-alphabetical overlords.
 
@@ -652,7 +652,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     - 4. [[https://www.youtube.com/watch?v=h4AzYKfAe00][[Korean Pronunciation] How to pronounce 'ㅈ ㅉ ㅊ']]
     - 4. [[https://www.youtube.com/watch?v=85qJXvyFrIc][Learn Hangul 한글 (Korean Alphabet) in 30 minutes - YouTube]]
 
-** DONE Spaced repetition Learning with Emacs
+** DONE Spaced repetition -- Learning with Emacs and Anki
    CLOSED: [2021-01-23 Sat 12:19]
    :PROPERTIES:
    :EXPORT_FILE_NAME: spaced-repetition-learning-with-emacs
