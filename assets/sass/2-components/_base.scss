@@ -106,8 +106,10 @@ body{
         overflow: auto;
         display: block;
         th {
-            padding: 8px;
             border-bottom: 1px dashed $color-meta-code;
+        }
+        tr {
+            padding: 8px;
             color: $color-accent-2;
             font-weight: bold;
             font-size: 13px;
@@ -213,7 +215,7 @@ html {
     }
 }
 .max-width {
-    max-width: 48rem;
+    max-width: 50rem;
 }
 @media (max-width: 480px) {
     .px3 {
@@ -259,7 +261,8 @@ code {
     padding: 10px 15px;
     border-radius: 4px;
     //background: #212326;
-    background: $color-accent-3;
+    //background: $color-background-code;
+    background: #fafafa;
     font-family: $font-family-mono;
     -webkit-border-radius: 4px;
     figcaption {

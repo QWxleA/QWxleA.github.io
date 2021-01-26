@@ -1,7 +1,47 @@
 #+hugo_base_dir: /home/plovs/Projects/QWxleA.github.io
 #+category: blog
 
+* Theme
+  - https://css-tricks.com/styling-code-in-and-out-of-blocks/
+  - https://css-tricks.com/careful-when-changing-the-display-of-summary/
+  - https://css-tricks.com/create-a-tag-cloud-with-some-simple-css-and-even-simpler-javascript/
+  - https://css-tricks.com/exploring-what-the-details-and-summary-elements-can-do/
+  - https://css-tricks.com/unconventional-stock-image-sources/
+  - https://css-tricks.com/very-extremely-practical-css-art/
+  - https://css-tricks.com/how-to-add-text-in-borders-using-basic-html-elements/
+  - Webring: https://css-tricks.com/how-you-might-build-a-modern-day-webring/
+  - https://css-tricks.com/aria-in-css/ nice
+  - https://css-tricks.com/little-things-on-my-personal-site/
+  - scroll https://css-tricks.com/how-to-make-an-unobtrusive-scroll-to-top-button/
+
 * Ideas
+** TODO Ox-hugo for lazy blogging                                        :emacs:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ox-hugo-for-lazy-blogging
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :END:
+   Just testing out stuff. Also auto-export (after a lot of fiddling)!
+
+   Nice!
+** TODO MPV - scripts                                                      :mpv:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: mpv-scripts
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :END:
+
+   [[https://mpv.io/manual/stable/#files][mpv documentation]]
+
+   - get this one [[https://rina-kawakita.tistory.com/entry/configmpvscriptsdelogolua?category=771215][delogo]] - don't use link!
+   - [[https://github.com/ekisu/mpv-webm][webm maker]]
+   - [[https://github.com/jgreco/mpv-youtube-quality][mpv-youtube-quality]] 0 quteplayer shortcut
+** TODO Building userinterfaces with dmenu and fzf                       :shell:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: building-userinterfaces-with-dmenu-and-fzf
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :END:
+
+   ok
+
 ** TODO Tags -- organizing your files multi-dimensional           :productivity:
    :PROPERTIES:
    :EXPORT_FILE_NAME: tags-organizing-your-files-multi-dimensional
@@ -17,11 +57,9 @@
    :EXPORT_HUGO_AUTO_SET_LASTMOD: t
    :END:
 
-   https://blog.hubstaff.com/11-linux-productivity-tools/
-https://www.linux.com/tutorials/top-5-linux-distributions-productivity/
-https://r/
-
-https://www.ubuntupit.com/best-linux-software-our-editorial-list-of-essential-linux-apps/
+   - https://blog.hubstaff.com/11-linux-productivity-tools/
+   - https://www.linux.com/tutorials/top-5-linux-distributions-productivity/
+   - https://www.ubuntupit.com/best-linux-software-our-editorial-list-of-essential-linux-apps/
 
 I always just use mpv "mpv av://v4l2:/dev/video0 "
 ** TODO Movies & TV                                                     :movies:
@@ -162,7 +200,7 @@ Dostoyevsky / dictionary quote
     stability
     does what I want
 
-** TODO How to read
+** TODO How to read                                                      :books:
 
  :PROPERTIES:
 
@@ -206,7 +244,7 @@ Outlines & mind maps
 Got it!
 Our websites and dashboards use cookies. By continuing, you agree to their use. Learn more, including how to control cookies.
 
-** TODO Dresden - reading order
+** TODO Dresden - reading order                                          :books:
 
  :PROPERTIES:
 
@@ -290,7 +328,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    https://scifi.stackexchange.com/questions/51625/short-story-about-english-language-transformation
 
-** TODO Sway -- a 21st century I3
+** TODO Sway -- a 21st century I3                                   :linux:sway:
    :PROPERTIES:
    :EXPORT_FILE_NAME: sway-21st-century-i3
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
@@ -332,12 +370,131 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
     To resize windows, you must enter resize mode, with the Mod + R keybinding. After you enter resize mode you can resize windows with Left/Right/Up/Down keys, and press enter or escape to return to default mode.
 
-** TODO on tech
+** TODO on tech                                               :security:android:
 
    Install *mosh* on phone / tablet and tp220
 
    - [Mosh : Keith Winstein](https://launchpad.net/~keithw/+archive/ubuntu/mosh)
    - [Mosh Tool - An Alternative Option for SSH and How to Use It](http://linoxide.com/how-tos/mosh-alternative-ssh/)
+
+** TODO Awesome commandline apps                                     :cli:tools:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: awesome-commandline-apps
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://dystroy.org/broot/launch/
+   - https://dev.yorhel.nl/ncdu
+   - https://asciinema.org/
+
+** TODO Awesome online tools                                             :tools:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: awesome-online-tools
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://www.remove.bg/?ref=producthunt
+
+** TODO This months treasure trove - Januari                         :bookmarks:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: this-months-treasure-trove
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://keepachangelog.com/en/1.0.0/
+   - https://tidbits.com/2019/05/31/the-dark-side-of-dark-mode/
+   - [[http://augmentingcognition.com/ltm.html][Augmenting Long-term Memory]]
+   - [[https://k3no.medium.com/organizing-your-python-code-ca5445843368][Organizing your Python Code. In spite of yourself | by Keno Leon | Medium]]
+   - [[https://www.sastibe.de/2021/01/setting-up-emacs-as-mail-client/][Setting up Emacs as Mail Client]]
+
+** TODO Dark mode all the things
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: dark-mode-all-the-things
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+   - https://css-tricks.com/using-css-custom-properties-to-adjust-variable-font-weights-in-dark-mode/
+
+** TODO Hugo templates and social sharing
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: hugo-templates-and-social-sharing
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://www.ryanfiller.com/blog/automatic-social-share-images/
+
+** TODO Optimizing images
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: optimizing-images
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://css-tricks.com/converting-and-optimizing-images-from-the-command-line/
+
+** TODO Webfonts
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: webfonts
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://learnui.design/blog/7-rules-for-creating-gorgeous-ui-part-2.html#rule-6-use-only-good-fonts
+   - https://learnui.design/blog/guide-pairing-fonts.html
+
+** TODO SVG all the things
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: svg-all-the-things
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://svgporn.com/
+   - https://github.com/edent/SuperTinyIcons/blob/master/README.md !!
+   - https://css-tricks.com/accessible-svgs/
+
+   In hugo?
+   - https://css-tricks.com/creating-ui-components-in-svg/
+
+** TODO Brutalist webdesign
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: brutalist-webdesign
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://www.viget.com/articles/web-brutalism-seamfulness-and-notion/
+   - https://css-tricks.com/this-page-is-a-truly-naked-brutalist-html-quine/
+
+** TODO Sigil
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: sigil
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://github.com/dougmassay/pkg-sigil
+   - https://github.com/Sigil-Ebook/Sigil/wiki/Linux-Notes
+   - https://sigil-ebook.com/
+
+** TODO Arch kernels -- does it make a difference?
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: arch-kernels-does-it-make-a-difference
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   - https://www.youtube.com/watch?v=mzCPGM7mvu0
+
+   - basemark web
+
+   - geekbench5
 
 
 * Posts
@@ -408,7 +565,7 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
 
    Finally! Profit!
 
-** DONE Putting my site on a diet
+** DONE Putting my site on a diet                                       :webdev:
    CLOSED: [2021-01-18 Mon 18:05]
    :PROPERTIES:
    :EXPORT_FILE_NAME: putting-my-site-on-a-diet
@@ -683,6 +840,113 @@ Our websites and dashboards use cookies. By continuing, you agree to their use. 
     9. [[https://github.com/louietan/org-drill][louietan/org-drill]]
     10. [[https://irreal.org/blog/?p=8318][Emacs Workout | Irreal]]
     11. [[https://github.com/l3kn/org-fc][l3kn/org-fc: Spaced Repetition System for Emacs org-mode]]
+** DONE KDE - a great tiling manager
+   CLOSED: [2021-01-26 Tue 21:58]
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: kde-a-great-tiling-manager
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description
+   :EXPORT_HUGO_AUTO_SET_LASTMOD: t
+   :END:
+
+   Tiling window managers are very popular on Linux. The most popular one is probably I3, but there is plenty of choice. The reason that these window managers are so popular is tat they improve productivity, it is faster to move around with the keyboard, then with the mouse.
+
+   KDE is a great desktop, but it is mostly mouse-centric. But, there is hope: *Kröhnkite*
+
+   From the [[https://github.com/esjeon/krohnkite][website]]:
+
+   #+begin_quote
+   A dynamic tiling extension for KWin.
+
+   Kröhnkite is mainly inspired by dwm from suckless folks, and aims to provide rock solid stability while fully integrating into KWin.
+
+   The name of the script is from mineral Kröhnkite; it starts with K and looks cool.
+   #+end_quote
+
+   Install:
+
+   1. =Window management=
+   2. =Kwin scripts=
+   3. =Get new scripts=
+   4. Find =krohnkite=
+
+   [[/images/krohnkite-install.png]]
+
+   Alternative: download and install:
+
+   #+begin_src shell
+       wget https://github.com/esjeon/krohnkite/releases/download/v0.7/krohnkite-0.7.kwinscript
+       plasmapkg2 -t kwinscript -i krohnkite-0.7.kwinscript
+   #+end_src
+
+   For some versions of krohnkite you need to do the following:
+
+   #+begin_src shell
+       mkdir -p ~/.local/share/kservices5/
+       ln -s ~/.local/share/kwin/scripts/krohnkite/metadata.desktop ~/.local/share/kservices5/krohnkite.desktop
+   #+end_src
+
+*** Further configuration
+
+    **Removing Title Bars**
+
+    Breeze window decoration can be configured to completely remove title bars from all windows:
+
+    1. =System Setting= > =Application Style= > =Window Decorations=
+    2. Click =Configure Breeze inside= the decoration preview.
+    3. =Window-Specific Overrides= tab > =Add= button
+    4. Enter the followings, and press =Ok=:
+       - Regular expression to match: =.*=
+       - Tick =Hide window title bar=
+
+    [[/images/krohnkite-titlebars.png]]
+
+    **Note:** you can use the icons in the panel if you need to send an app to another workspace or activity (or use a shortcut)
+
+    **Changing Border Colors**
+
+    #+begin_src shell
+      kwriteconfig5 --file ~/.config/kdeglobals --group WM --key frame 61,174,233
+      kwriteconfig5 --file ~/.config/kdeglobals --group WM --key inactiveFrame  239,240,241
+    #+end_src
+
+    **Note:** You must restart your session to see changes. (i.e. re-login, reboot)
+
+    **Other settings**
+
+    - Setting Minimum Geometry Size
+    - Setting Up for Multi-Screen
+
+    See: [[https://github.com/esjeon/krohnkite][the repo's README]].
+
+*** Default keybindings
+
+    | Key              | Action             |
+    |------------------+--------------------|
+    | Meta + J         | Focus Down/Next    |
+    | Meta + K         | Focus Up/Previous  |
+    | Meta + H         | Left               |
+    | Meta + L         | Right              |
+    | Meta + Shift + J | Move Down/Next     |
+    | Meta + Shift + K | Move Up/Previous   |
+    | Meta + Shift + H | Move Left          |
+    | Meta + Shift + L | Move Right         |
+    | Meta + I         | Increase           |
+    | Meta + D         | Decrease           |
+    | Meta + F         | Toggle Floating    |
+    | Meta + \         | Cycle Layout       |
+    | Meta + Return    | Set as Master      |
+    | Meta + T         | Use Tile Layout    |
+    | Meta + M         | Use Monocle Layout |
+    | unbound          | Use Spread Layout  |
+    | unbound          | Use Stair Layout   |
+
+
+*** References
+
+   - https://www.youtube.com/watch?v=sa7gzTRA-BA
+   - https://github.com/esjeon/krohnkite
+   - https://github.com/wsdfhjxc/kwin-scripts
+
 ** WAITING XMonad from scratch -- day 1 -- Starting small               :xmonad:
    :PROPERTIES:
    :EXPORT_FILE_NAME: xmonad-from-scratch-day-1

@@ -27,7 +27,7 @@
   
   
   
-  <link rel="stylesheet" href="https://qwxlea.ml/sass/main.min.f39db268aaac6e3f20063cb65baca2c23bf4afb9d2484f0a1d9d2e42ff893867.css">
+  <link rel="stylesheet" href="https://qwxlea.ml/sass/main.min.53efcf4e2009f51812cd41f8f29a7f4f0bb15856e02f87a4599dd542b85f875f.css">
   
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -199,22 +199,22 @@
       <p>The whole point of using a tiling window manager is distractionless working. Unfortunetely the rest of the world does not always agree. Enter <strong>WhatsApp</strong>. WhatsApp is easy to use, and (in my part of the world) very popular. For a long time I used it from my phone, but that is not really convenient. Copying and pasting obviously is problematic, but the whole taking up your phone completely ruins any semblamce of workflow. <code>Web.whatsapp.com</code> is a good first step, but (for me) it was slow. Switch to browser, find the tab (one of 843&hellip;), send a smiley, back to work, euh, what was it I was doing?</p>
 <p>But Xmonad has <a href="https://hackage.haskell.org/package/xmonad-contrib-0.16/docs/XMonad-Util-NamedScratchpad.html">scratchpads</a>, a straight-forward module that gives arbitary popup-applications. HOw to use this with WhatsApp? From the documentation:</p>
 <p>Create <code>named scratchpads</code> configuration in your <code>xmonad.hs</code> like this:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#66d9ef">import</span> XMonad.StackSet <span style="color:#66d9ef">as</span> W
-<span style="color:#66d9ef">import</span> XMonad.ManageHook
-<span style="color:#66d9ef">import</span> XMonad.Util.NamedScratchpad
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#00a8c8">import</span> <span style="color:#111">XMonad.StackSet</span> <span style="color:#00a8c8">as</span> <span style="color:#111">W</span>
+<span style="color:#00a8c8">import</span> <span style="color:#111">XMonad.ManageHook</span>
+<span style="color:#00a8c8">import</span> <span style="color:#111">XMonad.Util.NamedScratchpad</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Create a scratchpad, containing WhatsApp:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -227,43 +227,43 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">scratchpads</span> <span style="color:#f92672">=</span> [
-<span style="color:#66d9ef">NS</span> <span style="color:#e6db74">&#34;myWhatsApp&#34;</span> spawnWhatsApp findWhatsApp manageWhatsApp
-] <span style="color:#66d9ef">where</span>
-   spawnWhatsApp  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;chromium --app=https://web.whatsapp.com/&#34;</span>
-   findWhatsApp   <span style="color:#f92672">=</span> appName <span style="color:#f92672">=?</span> <span style="color:#e6db74">&#34;web.whatsapp.com&#34;</span>
-   manageWhatsApp <span style="color:#f92672">=</span> customFloating <span style="color:#f92672">$</span> <span style="color:#66d9ef">W</span><span style="color:#f92672">.</span><span style="color:#66d9ef">RationalRect</span> l t w h
-              <span style="color:#66d9ef">where</span>
-                h <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9</span>
-                w <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9</span>
-                t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.95</span> <span style="color:#f92672">-</span>h
-                l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.95</span> <span style="color:#f92672">-</span>w
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">scratchpads</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
+<span style="color:#00a8c8">NS</span> <span style="color:#d88200">&#34;myWhatsApp&#34;</span> <span style="color:#111">spawnWhatsApp</span> <span style="color:#111">findWhatsApp</span> <span style="color:#111">manageWhatsApp</span>
+<span style="color:#111">]</span> <span style="color:#00a8c8">where</span>
+   <span style="color:#111">spawnWhatsApp</span>  <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;chromium --app=https://web.whatsapp.com/&#34;</span>
+   <span style="color:#111">findWhatsApp</span>   <span style="color:#f92672">=</span> <span style="color:#111">appName</span> <span style="color:#f92672">=?</span> <span style="color:#d88200">&#34;web.whatsapp.com&#34;</span>
+   <span style="color:#111">manageWhatsApp</span> <span style="color:#f92672">=</span> <span style="color:#111">customFloating</span> <span style="color:#f92672">$</span> <span style="color:#00a8c8">W</span><span style="color:#f92672">.</span><span style="color:#00a8c8">RationalRect</span> <span style="color:#111">l</span> <span style="color:#111">t</span> <span style="color:#111">w</span> <span style="color:#111">h</span>
+              <span style="color:#00a8c8">where</span>
+                <span style="color:#111">h</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9</span>
+                <span style="color:#111">w</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9</span>
+                <span style="color:#111">t</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.95</span> <span style="color:#f92672">-</span><span style="color:#111">h</span>
+                <span style="color:#111">l</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.95</span> <span style="color:#f92672">-</span><span style="color:#111">w</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Add keybindings:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">, ((modm <span style="color:#f92672">.|.</span> controlMask <span style="color:#f92672">.|.</span> shiftMask, xK_w), namedScratchpadAction scratchpads <span style="color:#e6db74">&#34;scWhatsapp&#34;</span>)
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#111">,</span> <span style="color:#111">((</span><span style="color:#111">modm</span> <span style="color:#f92672">.|.</span> <span style="color:#111">controlMask</span> <span style="color:#f92672">.|.</span> <span style="color:#111">shiftMask</span><span style="color:#111">,</span> <span style="color:#111">xK_w</span><span style="color:#111">),</span> <span style="color:#111">namedScratchpadAction</span> <span style="color:#111">scratchpads</span> <span style="color:#d88200">&#34;scWhatsapp&#34;</span><span style="color:#111">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>And finally, a manage hook:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">, manageHook <span style="color:#f92672">=</span> namedScratchpadManageHook scratchpads
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#111">,</span> <span style="color:#111">manageHook</span> <span style="color:#f92672">=</span> <span style="color:#111">namedScratchpadManageHook</span> <span style="color:#111">scratchpads</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="bonus">Bonus:</h2>
 <p>This little script uses xprop to print window information (if available) in formats usable within your <code>xmonad.hs</code>.</p>
 <p><strong>Source:</strong> <a href="https://wiki.haskell.org/Xmonad/Frequently%5Fasked%5Fquestions">Haskell wiki</a></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -272,13 +272,13 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#! /bin/sh
-</span><span style="color:#75715e"></span>exec xprop -notype <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  -f WM_NAME        8s <span style="color:#e6db74">&#39;:\n  title =\? $0\n&#39;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  -f WM_CLASS       8s <span style="color:#e6db74">&#39;:\n  appName =\? $0\n  className =\? $1\n&#39;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  -f WM_WINDOW_ROLE 8s <span style="color:#e6db74">&#39;:\n  stringProperty &#34;WM_WINDOW_ROLE&#34; =\? $0\n&#39;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  WM_NAME WM_CLASS WM_WINDOW_ROLE <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">${</span>1+<span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">}</span>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#! /bin/sh
+</span><span style="color:#75715e"></span><span style="color:#111">exec</span> xprop -notype <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>  -f WM_NAME        8s <span style="color:#d88200">&#39;:\n  title =\? $0\n&#39;</span> <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>  -f WM_CLASS       8s <span style="color:#d88200">&#39;:\n  appName =\? $0\n  className =\? $1\n&#39;</span> <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>  -f WM_WINDOW_ROLE 8s <span style="color:#d88200">&#39;:\n  stringProperty &#34;WM_WINDOW_ROLE&#34; =\? $0\n&#39;</span> <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>  WM_NAME WM_CLASS WM_WINDOW_ROLE <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>  <span style="color:#d88200">${</span><span style="color:#111">1</span><span style="color:#111">+</span><span style="color:#d88200">&#34;</span><span style="color:#111">$@</span><span style="color:#d88200">&#34;</span><span style="color:#d88200">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>

@@ -33,7 +33,7 @@
   
   
   
-  <link rel="stylesheet" href="https://qwxlea.ml/sass/main.min.f39db268aaac6e3f20063cb65baca2c23bf4afb9d2484f0a1d9d2e42ff893867.css">
+  <link rel="stylesheet" href="https://qwxlea.ml/sass/main.min.53efcf4e2009f51812cd41f8f29a7f4f0bb15856e02f87a4599dd542b85f875f.css">
   
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -220,18 +220,18 @@
 </blockquote>
 <p>Installation is simple, just download from <a href="https://ngrok.com/download">here</a>, and put it in your path.</p>
 <p>Forwarding a local hugo session is as simple as:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ngrok http <span style="color:#ae81ff">1313</span>
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ngrok http <span style="color:#ae81ff">1313</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>To automate it:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -246,50 +246,50 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/usr/bin/env bash
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/usr/bin/env bash
 </span><span style="color:#75715e"></span><span style="color:#75715e"># var for session name (to avoid repeated occurences)</span>
-SN<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hugostuff&#34;</span>
-PROJ<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#111">SN</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;hugostuff&#34;</span>
+<span style="color:#111">PROJ</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;</span><span style="color:#00a8c8">$(</span><span style="color:#111">pwd</span><span style="color:#00a8c8">)</span><span style="color:#d88200">&#34;</span>
 
-tmux new-session -s <span style="color:#e6db74">&#34;</span>$SN<span style="color:#e6db74">&#34;</span> -n <span style="color:#e6db74">&#34;</span>$PROJ<span style="color:#e6db74">&#34;</span> -d
+tmux new-session -s <span style="color:#d88200">&#34;</span><span style="color:#111">$SN</span><span style="color:#d88200">&#34;</span> -n <span style="color:#d88200">&#34;</span><span style="color:#111">$PROJ</span><span style="color:#d88200">&#34;</span> -d
 
-tmux new-window -t <span style="color:#e6db74">&#34;</span>$SN<span style="color:#e6db74">:1&#34;</span> <span style="color:#e6db74">&#39;hugo -D -w server --disableFastRender&#39;</span>
-tmux new-window -t <span style="color:#e6db74">&#34;</span>$SN<span style="color:#e6db74">:2&#34;</span> <span style="color:#e6db74">&#39;ngrok http 1313&#39;</span>
+tmux new-window -t <span style="color:#d88200">&#34;</span><span style="color:#111">$SN</span><span style="color:#d88200">:1&#34;</span> <span style="color:#d88200">&#39;hugo -D -w server --disableFastRender&#39;</span>
+tmux new-window -t <span style="color:#d88200">&#34;</span><span style="color:#111">$SN</span><span style="color:#d88200">:2&#34;</span> <span style="color:#d88200">&#39;ngrok http 1313&#39;</span>
 
 <span style="color:#75715e"># Select window #1 and attach to the session</span>
-tmux <span style="color:#66d9ef">select</span>-window -t <span style="color:#e6db74">&#34;</span>$SN<span style="color:#e6db74">:2&#34;</span>
-tmux -2 attach-session -t <span style="color:#e6db74">&#34;</span>$SN<span style="color:#e6db74">&#34;</span>
+tmux <span style="color:#00a8c8">select</span>-window -t <span style="color:#d88200">&#34;</span><span style="color:#111">$SN</span><span style="color:#d88200">:2&#34;</span>
+tmux -2 attach-session -t <span style="color:#d88200">&#34;</span><span style="color:#111">$SN</span><span style="color:#d88200">&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>And &hellip; that did not work well at all. On my machine it worked perfectly, but outside, where localhost did not work, my test-project missed all js-, css- and img-files. The solution is not hard, this is what I found in the theme:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-brand&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#960050;background-color:#1e0010">/&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">relLangURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;logo&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">img</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">logo</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">jpeg</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Title }}&#34;</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;navbar-brand&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ &#34;</span><span style="color:#960050;background-color:#1e0010">/&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#75af00">relLangURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span><span style="color:#111">&gt;&lt;</span><span style="color:#f92672">img</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;logo&#34;</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ &#34;</span><span style="color:#75af00">img</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#75af00">logo</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#75af00">jpeg</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#75af00">absURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#75af00">alt</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ .Site.Title }}&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>If you use <code>absURL</code>, you end up with <strong><strong>localhost</strong></strong> in the complete url, but if you use <code>relURL</code>, you get a relative link:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ &#34;mystyle.css&#34; | absURL }} → &#34;https://example.com/hugo/mystyle.css&#34;
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ &#34;mystyle.css&#34; | absURL }} → &#34;https://example.com/hugo/mystyle.css&#34;
 {{ &#34;mystyle.css&#34; | relURL }} → &#34;/hugo/mystyle.css&#34;
 </code></pre></td></tr></table>
 </div>
 </div><!-- raw HTML omitted -->
 <p>Source: <a href="https://gohugo.io/functions/absurl/">Hugo documentation</a></p>
 <p>So, the problem was solved doing a quick find-replace: <code>s/absURL/relURL/g</code></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-brand&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#960050;background-color:#1e0010">/&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">relLangURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;logo&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">img</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">logo</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">jpeg</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">relURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Title }}&#34;</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+<pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;navbar-brand&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ &#34;</span><span style="color:#960050;background-color:#1e0010">/&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#75af00">relLangURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span><span style="color:#111">&gt;&lt;</span><span style="color:#f92672">img</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;logo&#34;</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ &#34;</span><span style="color:#75af00">img</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#75af00">logo</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#75af00">jpeg</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#75af00">relURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#75af00">alt</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ .Site.Title }}&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Finally! Profit!</p>

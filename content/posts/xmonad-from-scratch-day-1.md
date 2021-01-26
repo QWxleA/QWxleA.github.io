@@ -1,9 +1,8 @@
 +++
 title = "XMonad from scratch – day 1 – Starting small"
 author = ["Alex Qwxlea"]
-date = 2021-01-19T18:32:00+02:00
 tags = ["xmonad"]
-draft = false
+draft = true
 +++
 
 ## Intro -- taste and time {#intro-taste-and-time}
@@ -14,7 +13,7 @@ It is impossible to say which one is the best, the word **best** is a terrible q
 
 Despite all that, XMonad is ****one**** of the ****best**** window managers. Why? Because it is really, really good at managing windows. With a little bit of elbow grease you can make it do whatever you want. And it can even look really good doing it:
 
-<a id="org1497b66"></a>
+<a id="orgcb24d96"></a>
 
 {{< figure src="/images/xmonad-day1-1.png" caption="Figure 1: This is what your desktop could look like ... if you have taste, and lots of time" >}}
 

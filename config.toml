@@ -80,7 +80,7 @@ weight = 4
     lineNos = true
     lineNumbersInTable = true
     noClasses = true
-    style = "monokai"
+    style = "monokailight"
     tabWidth = 4
 
   [markup.tableOfContents]

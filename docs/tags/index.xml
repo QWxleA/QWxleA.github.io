@@ -36,15 +36,6 @@
     </item>
     
     <item>
-      <title>xmonad</title>
-      <link>https://qwxlea.ml/tags/xmonad/</link>
-      <pubDate>Tue, 19 Jan 2021 18:32:00 +0200</pubDate>
-      
-      <guid>https://qwxlea.ml/tags/xmonad/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>hugo</title>
       <link>https://qwxlea.ml/tags/hugo/</link>
       <pubDate>Sun, 17 Jan 2021 13:25:00 +0200</pubDate>
@@ -77,6 +68,15 @@
       <pubDate>Thu, 24 Dec 2020 23:58:00 +0200</pubDate>
       
       <guid>https://qwxlea.ml/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xmonad</title>
+      <link>https://qwxlea.ml/tags/xmonad/</link>
+      <pubDate>Tue, 22 Dec 2020 23:58:00 +0200</pubDate>
+      
+      <guid>https://qwxlea.ml/tags/xmonad/</guid>
       <description></description>
     </item>
     
