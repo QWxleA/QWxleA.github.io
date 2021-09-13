@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Q&#39;s 🌱</title>
+    <link>https://QWxleA.github.io/tags/</link>
+    <description>Recent content in Tags on Q&#39;s 🌱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>logseq</title>
+      <link>https://QWxleA.github.io/tags/logseq/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/tags/logseq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wm</title>
+      <link>https://QWxleA.github.io/tags/wm/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/tags/wm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xmonad</title>
+      <link>https://QWxleA.github.io/tags/xmonad/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/tags/xmonad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>btrfs</title>
+      <link>https://QWxleA.github.io/tags/btrfs/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/tags/btrfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elementaryos</title>
+      <link>https://QWxleA.github.io/tags/elementaryos/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/tags/elementaryos/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

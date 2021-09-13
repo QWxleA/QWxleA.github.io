@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Q&#39;s 🌱</title>
+    <link>https://QWxleA.github.io/notes/</link>
+    <description>Recent content in Notes on Q&#39;s 🌱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>logseq 24 hr pages tutorial</title>
+      <link>https://QWxleA.github.io/notes/logseq-24-hr-pages-tutorial/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/notes/logseq-24-hr-pages-tutorial/</guid>
+      <description>A small query that lists all the changes, made during the last 24 hours.
+With some pointers from @lauren#0001 and @Miro#1174 and a bit of help from google, I found: logseq/query_react.cljs , which pointed to three additional helpers:
+ :right-now-ms which is this moment in milliseconds from 1970 :start-of-today-ms which points to this morning 0:00 :end-of-today-ms which points to tonight 24:00  They can be used like this:
+#+BEGIN_QUERY {:title [:h2 &amp;#34;My 24h changes&amp;#34;] :query [:find (pull ?</description>
+    </item>
+    
+    <item>
+      <title>logseq advanced queries tutorial</title>
+      <link>https://QWxleA.github.io/notes/logseq-advanced-queries-tutorial/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/notes/logseq-advanced-queries-tutorial/</guid>
+      <description>Playing around with queries can be detrimental to the health of your graph as you may create blocks and pages just for testing purposes. Use a dedicated playground graph for this!  Second point, if you copy/paste queries, go over the code again, Logseq sometimes adds extra line-breaks / characters in strange places. Personally, I write my (longer) queries in vscode, and then, remove all tab-characters, and then copy the query to Logseq</description>
+    </item>
+    
+    <item>
+      <title>xmonad</title>
+      <link>https://QWxleA.github.io/notes/xmonad/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/notes/xmonad/</guid>
+      <description>A thoroughly weird window-manager for Linux, written in haskell. The configuration is (completely functional) haskell script.
+   Links    home | xmonad - the tiling window manager that rocks
+  xmonad - Wikipedia
+  </description>
+    </item>
+    
+    <item>
+      <title>resonance lists howto</title>
+      <link>https://QWxleA.github.io/notes/resonance-lists-howto/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/notes/resonance-lists-howto/</guid>
+      <description>From a question on the Logseq forum: Creating a Resonance Calendar from queries
+A resonance calendar is taken from a video created by Ali Abdaal How I use Notion as a Resonance Calendar - YouTube. It&amp;rsquo;s a list of interesting (resonating) resources, added to your notes. Resources can be one of:
+ Movies Podcasts Articles  How to implement this in logseq?
+   Step 1 — gather a list of items  1 2 3 4 5 6 7 8 9 10  #+BEGIN_QUERY {:title [:h2 &amp;#34;Resonance list 1&amp;#34;] :query [ :find (pull ?</description>
+    </item>
+    
+    <item>
+      <title>Using Btrfs for Home on ElementaryOS</title>
+      <link>https://QWxleA.github.io/notes/using-btrfs-for-home-on-elementaryos/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/notes/using-btrfs-for-home-on-elementaryos/</guid>
+      <description>ElementaryOS is a gorgeous Linux distribution, and ever since they released Odin, I&amp;rsquo;ve been dying to try it. After installing it in a VM, and seeing the last bugs get ironed out, I finally caved, and installed it. It&amp;rsquo;s fabulous!
+If you&amp;rsquo;ve been listening to rumors, there have been some complaints about the lack of software, and some of the defaults, but imho, with elementary OS 6 Updates for August, 2021 those complaints should be layed to rest.</description>
+    </item>
+    
+  </channel>
+</rss>

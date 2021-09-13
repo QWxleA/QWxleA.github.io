@@ -1,0 +1,1004 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>🏡 Start here on Q&#39;s 🌱</title>
+    <link>https://QWxleA.github.io/</link>
+    <description>Recent content in 🏡 Start here on Q&#39;s 🌱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>logseq 24 hr pages tutorial</title>
+    <link>https://QWxleA.github.io/notes/logseq-24-hr-pages-tutorial/</link>
+    <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/notes/logseq-24-hr-pages-tutorial/</guid>
+    <description>
+        &lt;p&gt;A small query that &lt;strong&gt;lists all the changes, made during the last 24 hours&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;With some pointers from @lauren#0001 and @Miro#1174 and a bit of help from google, I found: &lt;a href=&#34;https://github.com/logseq/logseq/blob/fef5bbf0688f8fe28ec21255fb135951395e0ec7/src/main/frontend/db/query_react.cljs&#34;&gt;logseq/query_react.cljs &lt;/a&gt;, which pointed to three additional helpers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;:right-now-ms&lt;/strong&gt; which is this moment in milliseconds from 1970&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;:start-of-today-ms&lt;/strong&gt; which points to this morning 0:00&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;:end-of-today-ms&lt;/strong&gt; which points to tonight 24:00&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;They can be used like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h2&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;My 24h changes&amp;#34;&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:in&lt;/span&gt; $ ?end
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/updated-at&lt;/span&gt; ?v]
+[(- ?end &lt;span style=&#34;color:#ae81ff&#34;&gt;86400000&lt;/span&gt; ) ?period]
+[(&amp;gt;= ?v ?period)]
+[(&amp;lt; ?v ?end)]
+]
+&lt;span style=&#34;color:#75715e&#34;&gt;; :inputs [:start-of-today-ms]&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;; :inputs [:right-now-ms]&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;:inputs&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:end-of-today-ms&lt;/span&gt;]
+}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You have to choose one of the three inputs, 86400000 is 24 hours in milliseconds (60 x 60 x 24 x 1000), a week would be 604800000 milliseconds.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;:right-now-ms&lt;/strong&gt; will give you a 24 hours period from this moment, not very useful, imho&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;:start-of-today-ms&lt;/strong&gt; which you can use for yesterday&amp;rsquo;s changes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;:end-of-today-ms&lt;/strong&gt;, which would be more useful for today&amp;rsquo;s changes&lt;/li&gt;
+&lt;/ul&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>logseq advanced queries tutorial</title>
+    <link>https://QWxleA.github.io/notes/logseq-advanced-queries-tutorial/</link>
+    <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/notes/logseq-advanced-queries-tutorial/</guid>
+    <description>
+        &lt;p&gt;&lt;blockquote class=&#34;hint important&#34;&gt;
+    Playing around with queries can be detrimental to the health of your graph as you may create blocks and pages just for testing purposes. Use a dedicated playground graph for this!
+&lt;/blockquote&gt;
+&lt;blockquote class=&#34;hint caution&#34;&gt;
+    Second point, if you copy/paste queries, go over the code again, Logseq sometimes adds extra line-breaks / characters in strange places. Personally, I write my (longer) queries in vscode, and then, remove all tab-characters, and &lt;em&gt;then&lt;/em&gt; copy the query to Logseq
+&lt;/blockquote&gt;&lt;/p&gt;
+&lt;p&gt;In the following 9 examples we will walk through variou queries for Logseq. The tutorials are intended for beginners getting started with advanced queries in Logseq.&lt;/p&gt;
+&lt;h2 id=&#34;example-1-find-a-tag&#34;&gt;
+    &lt;a href=&#34;#example-1-find-a-tag&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Example 1, find a tag
+&lt;/h2&gt;
+&lt;p&gt;OK, let&amp;rsquo;s start. The simplest query is probably: &lt;code&gt;{{query [[MyTag]]}}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To create this, shortcut &lt;code&gt;/q&lt;/code&gt;, and then add &lt;code&gt;[[MyTag]]&lt;/code&gt;. This will look for the tag &lt;code&gt;#MyTag&lt;/code&gt; (everywhere).&lt;/p&gt;
+&lt;p&gt;The same query, but now written as an advanced query, would be:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Find tag: MyTag&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/ref-pages&lt;/span&gt; ?p]
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;[?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MyTag&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;]
+&lt;/span&gt;}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;lets-go-over-this-line-by-line&#34;&gt;
+    &lt;a href=&#34;#lets-go-over-this-line-by-line&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Let&amp;#39;s go over this line by line
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lines &lt;strong&gt;2&lt;/strong&gt; and &lt;strong&gt;8&lt;/strong&gt;, these indicate the start and end of a code block.
+&lt;blockquote class=&#34;hint note&#34;&gt;
+    Add an advanced query with  &lt;code&gt;&amp;lt;q&lt;/code&gt;, and select &lt;em&gt;query&lt;/em&gt; (fun fact: this notation comes from Emacs org-mode)
+&lt;/blockquote&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lines &lt;strong&gt;2&lt;/strong&gt; and &lt;strong&gt;7&lt;/strong&gt;, a query starts and end with curly brackets&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;2&lt;/strong&gt; `:title &amp;ldquo;&lt;!-- raw HTML omitted --&gt;&amp;rdquo; &amp;lt;- a simple title field&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;3&lt;/strong&gt; This is where the &lt;em&gt;actual query&lt;/em&gt; starts, note the square bracket &lt;code&gt;[&lt;/code&gt;, opening here, and closing on line &lt;strong&gt;7&lt;/strong&gt;
+&lt;blockquote class=&#34;hint note&#34;&gt;
+    So we want to &lt;strong&gt;find&lt;/strong&gt; stuff, and the blocks we want to find we store in &lt;strong&gt;?b&lt;/strong&gt;. This &lt;strong&gt;?b&lt;/strong&gt; is just a variable, you could replace &lt;strong&gt;?b&lt;/strong&gt; with &lt;strong&gt;?block&lt;/strong&gt; if it would make your code more readable. Just use the same variable everywhere 😄
+&lt;/blockquote&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;4&lt;/strong&gt; &lt;code&gt;:where&lt;/code&gt; starts the search parameters&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;5&lt;/strong&gt; &lt;code&gt;block/ref-pages&lt;/code&gt; is the reference where tags are stored&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;6&lt;/strong&gt; &lt;code&gt;block/name&lt;/code&gt; is not the name of the &lt;em&gt;page&lt;/em&gt;, but off the reference from line &lt;strong&gt;5&lt;/strong&gt;. We store the name of the tags in &lt;code&gt;?p&lt;/code&gt; (again this could be anything, you can rename it to &lt;code&gt;?tagIamLookingFor&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Writing this shorter might be a bit simpler to understand:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/ref-pages&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MyTag&amp;#34;&lt;/span&gt;]]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is exactly the same thing, as lines &lt;strong&gt;5&lt;/strong&gt; and &lt;strong&gt;6&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s all, from now on we&amp;rsquo;ll iterate on this, adding complexity&lt;/p&gt;
+&lt;h2 id=&#34;example-2-find-a-tag-that-is-also-a-todo&#34;&gt;
+    &lt;a href=&#34;#example-2-find-a-tag-that-is-also-a-todo&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Example 2, find a tag that is also a TODO
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Find: MyTag&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TODO&amp;#34;&lt;/span&gt;]
+[?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MyTag&amp;#34;&lt;/span&gt;]
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/ref-pages&lt;/span&gt; ?p]]
+}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;New is line &lt;strong&gt;5&lt;/strong&gt;, &lt;code&gt;:block-marker&lt;/code&gt;is where &lt;em&gt;todo keywords&lt;/em&gt; are stored (for the curious: &lt;a href=&#34;https://github.com/logseq/logseq/blob/master/src/main/frontend/db_schema.cljs&#34;&gt;logseq/db_schema&lt;/a&gt;, line 57 or so)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Our search has to satisfy both line &lt;strong&gt;5&lt;/strong&gt;, a &lt;code&gt;marker&lt;/code&gt; containing &lt;code&gt;TODO&lt;/code&gt;, and &lt;strong&gt;6&lt;/strong&gt; and &lt;strong&gt;7&lt;/strong&gt;, which belong together&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;example-3-multiple-markers--todo-states&#34;&gt;
+    &lt;a href=&#34;#example-3-multiple-markers--todo-states&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Example 3, multiple markers / TODO states
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Find: TODO or DOING MyTag&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; ?marker]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TODO&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DOING&amp;#34;&lt;/span&gt;} ?marker)]
+
+[?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MyTag&amp;#34;&lt;/span&gt;]
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/ref-pages&lt;/span&gt; ?p]]
+}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Notice lines &lt;strong&gt;5&lt;/strong&gt; and &lt;strong&gt;6&lt;/strong&gt;, that replace the single line &lt;strong&gt;5&lt;/strong&gt; fom the previous example. We&amp;rsquo;re looking for a marker, called &lt;code&gt;?marker&lt;/code&gt;, and &lt;code&gt;?marker&lt;/code&gt; should &lt;em&gt;contain&lt;/em&gt; either &lt;code&gt;TODO&lt;/code&gt; or &lt;code&gt;DOING&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This same method you can use to look for multiple tags:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Find: MyTag and fghij&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; ?marker]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TODO&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DOING&amp;#34;&lt;/span&gt;} ?marker)]
+
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/ref-pages&lt;/span&gt; ?p]
+[?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; ?tag]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MyTag&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fghij&amp;#34;&lt;/span&gt;} ?tag)]]
+}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote class=&#34;hint important&#34;&gt;
+    Notice the closing &lt;code&gt;]&lt;/code&gt; on line &lt;strong&gt;11&lt;/strong&gt;, it&amp;rsquo;s easy to forget these, especially as you slowly add more complexity to your searches
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;example-4-search-for-parts-of--tag&#34;&gt;
+    &lt;a href=&#34;#example-4-search-for-parts-of--tag&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Example 4, search for parts of  tag
+&lt;/h2&gt;
+&lt;p&gt;Some people have complicated tag configurations, like: &lt;code&gt;Topic/boats, Topic/airplanes, Topic/automobiles&lt;/code&gt;, to look for &lt;em&gt;all&lt;/em&gt; those &lt;code&gt;Topic&lt;/code&gt;s at the same time, we can use (we, though, stick with our alphabet examples):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/ref-pages&lt;/span&gt; ?p]
+[?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; ?tag]
+[(&lt;span style=&#34;color:#a6e22e&#34;&gt;clojure.string/starts-with?&lt;/span&gt; ?tag &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ab&amp;#34;&lt;/span&gt;)]]
+}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The key is off course on line &lt;strong&gt;6&lt;/strong&gt;, where we use &lt;code&gt;clojure.string/starts-with?&lt;/code&gt;, the variable we work with is &lt;code&gt;?tag&lt;/code&gt;, and we filter on &lt;code&gt;Topic/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;For further study, these are the clojure builtins we can use in our queries: &lt;a href=&#34;https://github.com/logseq/datascript/blob/fork/src/datascript/query.cljc#L194&#34;&gt;datascript/query.cljc at fork · logseq/datascript&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Notice also that this query does &lt;em&gt;not&lt;/em&gt; have a title, it doesn&amp;rsquo;t &lt;em&gt;have to&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;example-5-searching-for-page-properties&#34;&gt;
+    &lt;a href=&#34;#example-5-searching-for-page-properties&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Example 5, searching for page properties
+&lt;/h2&gt;
+&lt;p&gt;Properties are key-value pairs that allow you to annotate a block or page:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;My examples&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/properties&lt;/span&gt; ?p]
+[(get ?p &lt;span style=&#34;color:#e6db74&#34;&gt;:type&lt;/span&gt;) ?t]
+[(= &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;example&amp;#34;&lt;/span&gt; ?t)]]}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;There can be multiple &lt;code&gt;block/properties&lt;/code&gt; to one block, so we have to &lt;code&gt;get&lt;/code&gt; the one we want, in this case &lt;code&gt;type&lt;/code&gt;. This can be any word added as a property to a page&lt;/p&gt;
+&lt;h2 id=&#34;example-6-project-tasks&#34;&gt;
+    &lt;a href=&#34;#example-6-project-tasks&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Example 6, project tasks
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;My examples TODOs&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; ?marker]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;NOW&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DOING&amp;#34;&lt;/span&gt;} ?marker)]
+
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt; ?p]
+[?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/properties&lt;/span&gt; ?a]
+[(get ?a &lt;span style=&#34;color:#e6db74&#34;&gt;:type&lt;/span&gt;) ?t]
+[(= &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;example&amp;#34;&lt;/span&gt; ?t)]
+]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:result-transform&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+(sort-by (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[h]
+(get h &lt;span style=&#34;color:#e6db74&#34;&gt;:block/priority&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Z&amp;#34;&lt;/span&gt;)) result))
+&lt;span style=&#34;color:#e6db74&#34;&gt;:collapsed?&lt;/span&gt; false}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This query combines the &lt;code&gt;TODO states&lt;/code&gt; from example 3, and &lt;code&gt;page properties&lt;/code&gt; from example 5&lt;/p&gt;
+&lt;p&gt;New are lines &lt;strong&gt;13-15&lt;/strong&gt;, this snippet will sort TODOs on priority&lt;/p&gt;
+&lt;h2 id=&#34;example-7-search-journal-pages-for-tagged-todos&#34;&gt;
+    &lt;a href=&#34;#example-7-search-journal-pages-for-tagged-todos&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Example 7, search Journal pages for tagged TODOs
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tagged journal pages&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; ?marker]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TODO&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DOING&amp;#34;&lt;/span&gt;} ?marker)]
+
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt; ?p]
+[?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/journal?&lt;/span&gt; true]
+
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/ref-pages&lt;/span&gt; ?r]
+[?r &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MyTag&amp;#34;&lt;/span&gt;]
+]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:result-transform&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+(sort-by (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[h]
+(get h &lt;span style=&#34;color:#e6db74&#34;&gt;:block/priority&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Z&amp;#34;&lt;/span&gt;)) result))
+}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;New are the lines &lt;strong&gt;8&lt;/strong&gt; and &lt;strong&gt;9&lt;/strong&gt;, where we ask if the page is a &lt;code&gt;journal&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;example-8-exclude-from-a-query&#34;&gt;
+    &lt;a href=&#34;#example-8-exclude-from-a-query&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Example 8, exclude from a query
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;📼 Watch list - videos&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/refs&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;video&amp;#34;&lt;/span&gt;]]
+(not [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; ?marker] [(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DONE&amp;#34;&lt;/span&gt;} ?marker)])
+]
+}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;5&lt;/strong&gt; searches for the &lt;code&gt;#video&lt;/code&gt; tag (it&amp;rsquo;s two lines in one, see QQ)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;6&lt;/strong&gt; and &lt;strong&gt;7&lt;/strong&gt; look for the &lt;code&gt;DONE&lt;/code&gt; marker, but now excludes it, by wrapping it in &lt;code&gt;(not &amp;lt;query&amp;gt;)&lt;/code&gt;. It &lt;strong&gt;has&lt;/strong&gt; to be all on one line!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;example-9-comparing-dates&#34;&gt;
+    &lt;a href=&#34;#example-9-comparing-dates&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Example 9, comparing dates
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;⚠️ OVERDUE&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?block [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:in&lt;/span&gt; $ ?start ?today
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?block &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; ?marker]
+
+(&lt;span style=&#34;color:#a6e22e&#34;&gt;or&lt;/span&gt;
+[?block &lt;span style=&#34;color:#e6db74&#34;&gt;:block/scheduled&lt;/span&gt; ?d]
+[?block &lt;span style=&#34;color:#e6db74&#34;&gt;:block/deadline&lt;/span&gt; ?d])
+
+[(&amp;gt;= ?d ?start)]
+[(&amp;lt;   ?d ?today)]
+
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;NOW&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;LATER&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TODO&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DOING&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;WAITING&amp;#34;&lt;/span&gt;} ?marker)]]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:inputs&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:180d&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:today&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:result-transform&lt;/span&gt;  (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+(sort-by  (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[d]
+(get d &lt;span style=&#34;color:#e6db74&#34;&gt;:block/deadline&lt;/span&gt;) ) result ))
+&lt;span style=&#34;color:#e6db74&#34;&gt;:collapsed?&lt;/span&gt; false}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This is a very useful one. Let&amp;rsquo;s see what it does:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;6&lt;/strong&gt; gets &lt;code&gt;?marker&lt;/code&gt;, it can (line &lt;strong&gt;15&lt;/strong&gt;) contain &lt;code&gt;NOW, LATER, TODO&lt;/code&gt;, etc&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;8&lt;/strong&gt; &lt;code&gt;or&lt;/code&gt;, means either of these shuold be true, it should &lt;em&gt;either&lt;/em&gt; be a &lt;code&gt;deadline&lt;/code&gt; or &lt;code&gt;scheduled&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Or&lt;/code&gt; is related to &lt;code&gt;not&lt;/code&gt; from example 8, there is still a cousin called &lt;code&gt;and&lt;/code&gt;, but that one is not used often. &lt;code&gt;And&lt;/code&gt; is usually implied, all rules should match by default.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lines &lt;strong&gt;12&lt;/strong&gt; and &lt;strong&gt;13&lt;/strong&gt; are new, you have to read them in the following order:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Line &lt;strong&gt;16&lt;/strong&gt; offers two values, &lt;code&gt;:180d&lt;/code&gt; and &lt;code&gt;:today&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Next is line &lt;strong&gt;4&lt;/strong&gt;, where those values are assigned to &lt;code&gt;?start&lt;/code&gt; and &lt;code&gt;?today&lt;/code&gt; (again, variables, starting with &lt;code&gt;?&lt;/code&gt; can be called anything, it could have been &lt;code&gt;?john&lt;/code&gt; and &lt;code&gt;?ringo&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Finally they are used on lines &lt;strong&gt;12&lt;/strong&gt; and &lt;strong&gt;13&lt;/strong&gt; where we compare the values of &lt;code&gt;block/scheduled&lt;/code&gt; (line &lt;strong&gt;9&lt;/strong&gt;) to &lt;code&gt;?start&lt;/code&gt; and &lt;code&gt;block/deadline&lt;/code&gt; (line &lt;strong&gt;10&lt;/strong&gt;) to &lt;code&gt;?today&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And as a bonus, lines &lt;strong&gt;17&lt;/strong&gt; to &lt;strong&gt;19&lt;/strong&gt;, we sort on deadlines&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;further-queries&#34;&gt;
+    &lt;a href=&#34;#further-queries&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Further queries
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://QWxleA.github.io/notes/resonance-lists-howto/&#34;&gt;resonance lists howto&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>xmonad</title>
+    <link>https://QWxleA.github.io/notes/xmonad/</link>
+    <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/notes/xmonad/</guid>
+    <description>
+        &lt;p&gt;A thoroughly weird window-manager for Linux, written in haskell. The configuration is (completely functional) haskell script.&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;
+    &lt;a href=&#34;#links&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Links
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://xmonad.org/&#34;&gt;home | xmonad - the tiling window manager that rocks&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Xmonad&#34;&gt;xmonad - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>resonance lists howto</title>
+    <link>https://QWxleA.github.io/notes/resonance-lists-howto/</link>
+    <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/notes/resonance-lists-howto/</guid>
+    <description>
+        &lt;p&gt;From a question on the Logseq forum: &lt;a href=&#34;https://discuss.logseq.com/t/advanced-queries-creating-a-resonance-calendar-from-queries/2351&#34;&gt;Creating a Resonance Calendar from queries&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A resonance calendar is taken from a video created by Ali Abdaal &lt;a href=&#34;https://www.youtube.com/watch?v=lKYBB-Uw1IM&#34;&gt;How I use Notion as a Resonance Calendar - YouTube&lt;/a&gt;. It&amp;rsquo;s a list of interesting (resonating) resources, added to your notes. Resources can be one of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Movies&lt;/li&gt;
+&lt;li&gt;Podcasts&lt;/li&gt;
+&lt;li&gt;Articles&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How to implement this in logseq?&lt;/p&gt;
+&lt;h2 id=&#34;step-1--gather-a-list-of-items&#34;&gt;
+    &lt;a href=&#34;#step-1--gather-a-list-of-items&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Step 1 — gather a list of items
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h2&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Resonance list 1&amp;#34;&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [
+&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?page [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;[?page &lt;span style=&#34;color:#e6db74&#34;&gt;:page/properties&lt;/span&gt; ?props]
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;[(get ?props &lt;span style=&#34;color:#e6db74&#34;&gt;:type&lt;/span&gt;) ?type]
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;movie&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;article&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;book&amp;#34;&lt;/span&gt;} ?type)]
+&lt;/span&gt;]}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This is a fairly straight forward query:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;line &lt;strong&gt;6&lt;/strong&gt;: take the page properties of &lt;code&gt;?page&lt;/code&gt; (set in line &lt;strong&gt;3&lt;/strong&gt;) and store them in &lt;code&gt;?props&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;line &lt;strong&gt;7&lt;/strong&gt;: of all the different properties, take &lt;code&gt;:type&lt;/code&gt; and store it in &lt;code&gt;?type&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;line &lt;strong&gt;8&lt;/strong&gt;: check if &lt;code&gt;?type&lt;/code&gt; is one of: movie, article or book&lt;/li&gt;
+&lt;li&gt;Done!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Important: book != &lt;code&gt;[[book]]&lt;/code&gt;. Don&amp;rsquo;t use &lt;code&gt;[[book]]&lt;/code&gt; in type.&lt;/p&gt;
+&lt;h2 id=&#34;step-2--remove-some-stuff-we-dont-want-to-see&#34;&gt;
+    &lt;a href=&#34;#step-2--remove-some-stuff-we-dont-want-to-see&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Step 2 — remove some stuff we don&amp;#39;t want to see
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h2&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Resonance list 2&amp;#34;&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [
+&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?page [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?page &lt;span style=&#34;color:#e6db74&#34;&gt;:page/properties&lt;/span&gt; ?props]
+[(get ?props &lt;span style=&#34;color:#e6db74&#34;&gt;:type&lt;/span&gt;) ?type]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;movie&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;article&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;book&amp;#34;&lt;/span&gt;} ?type)]
+&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;not&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;[(get ?props &lt;span style=&#34;color:#e6db74&#34;&gt;:rating&lt;/span&gt;) ?rating]
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;[(= &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[[1/10]]&amp;#34;&lt;/span&gt; ?rating)]
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;)
+&lt;/span&gt;]}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;New are the line &lt;strong&gt;9 to 12&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;line &lt;strong&gt;9&lt;/strong&gt;: a &lt;strong&gt;not&lt;/strong&gt; statement, everything that matches this query will be &lt;em&gt;excluded&lt;/em&gt; from the result&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;line &lt;strong&gt;10&lt;/strong&gt;: again, a page property&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;line &lt;strong&gt;11&lt;/strong&gt;: but this time we search for &lt;code&gt;:rating&lt;/code&gt; and we match it with &lt;code&gt;1/10&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;line &lt;strong&gt;12&lt;/strong&gt;: close the &lt;code&gt;not&lt;/code&gt; statement&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Result:&lt;/strong&gt; same list, but without the ones rated &lt;code&gt;1/10&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-2b--only-the-bad-stuff&#34;&gt;
+    &lt;a href=&#34;#step-2b--only-the-bad-stuff&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Step 2b — Only the bad stuff
+&lt;/h2&gt;
+&lt;p&gt;For fun you can invert the search, &lt;em&gt;only&lt;/em&gt; show the ones rated &lt;code&gt;1/10&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h2&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Resonance list 2b — all bad!&amp;#34;&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [
+&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?page [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?page &lt;span style=&#34;color:#e6db74&#34;&gt;:page/properties&lt;/span&gt; ?props]
+[(get ?props &lt;span style=&#34;color:#e6db74&#34;&gt;:type&lt;/span&gt;) ?type]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;movie&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;article&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;book&amp;#34;&lt;/span&gt;} ?type)]
+[(get ?props &lt;span style=&#34;color:#e6db74&#34;&gt;:rating&lt;/span&gt;) ?rating]
+&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;[(= &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[[1/10]]&amp;#34;&lt;/span&gt; ?rating)]
+&lt;/span&gt;]}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This query is simpler then the previous one, &lt;code&gt;and&lt;/code&gt; is implied, by default all lines should be &lt;em&gt;true&lt;/em&gt;. Logseq is a very positive program 😄.&lt;/p&gt;
+&lt;h2 id=&#34;step-3--remove-more-bad-ratings&#34;&gt;
+    &lt;a href=&#34;#step-3--remove-more-bad-ratings&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Step 3 — remove more bad ratings
+&lt;/h2&gt;
+&lt;p&gt;It&amp;rsquo;s not just &lt;code&gt;1/10&lt;/code&gt; that&amp;rsquo;s bad, so is &lt;code&gt;2/10&lt;/code&gt;, but adding that is not as simple as you would want:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h2&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Resonance list 3&amp;#34;&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [
+&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?page [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?page &lt;span style=&#34;color:#e6db74&#34;&gt;:page/properties&lt;/span&gt; ?props]
+[(get ?props &lt;span style=&#34;color:#e6db74&#34;&gt;:type&lt;/span&gt;) ?type]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;movie&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;article&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;book&amp;#34;&lt;/span&gt;} ?type)]
+(&lt;span style=&#34;color:#a6e22e&#34;&gt;not&lt;/span&gt;
+[?page &lt;span style=&#34;color:#e6db74&#34;&gt;:page/properties&lt;/span&gt; ?props]
+[(get ?props &lt;span style=&#34;color:#e6db74&#34;&gt;:rating&lt;/span&gt;) ?rating]
+&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{ &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1/10&amp;#34;&lt;/span&gt;} &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2/10&amp;#34;&lt;/span&gt;} } ?rating)]
+&lt;/span&gt;)
+]}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Notice line &lt;strong&gt;12&lt;/strong&gt; the &lt;code&gt;contains?&lt;/code&gt; statement is quite complicated. This is because &lt;code&gt;1/10&lt;/code&gt; and &lt;code&gt;2/10&lt;/code&gt; are really &lt;code&gt;[[1/10]] and &lt;/code&gt;[[2/10]]. They&amp;rsquo;re not just text, they are searchable items. This is different from &lt;code&gt;type&lt;/code&gt; in &lt;em&gt;Resonance List 1&lt;/em&gt;, line &lt;strong&gt;8&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;step-4--remove-by-tag&#34;&gt;
+    &lt;a href=&#34;#step-4--remove-by-tag&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Step 4 — remove by tag
+&lt;/h2&gt;
+&lt;p&gt;But what if you would like to have a tag that shows how terrible the book or movie was?&lt;/p&gt;
+&lt;p&gt;Simple, add &lt;code&gt;tags:: [[terrible]]&lt;/code&gt; (or just &lt;code&gt;terrible&lt;/code&gt;, if you never want to list them, just change it accordingly in the listing below)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;21
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h2&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Resonance list 4 - final version&amp;#34;&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [
+&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?page [*])
+&lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+[?page &lt;span style=&#34;color:#e6db74&#34;&gt;:page/properties&lt;/span&gt; ?props]
+
+[(get ?props &lt;span style=&#34;color:#e6db74&#34;&gt;:type&lt;/span&gt;) ?type]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;movie&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;article&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;book&amp;#34;&lt;/span&gt;} ?type)]
+
+[?page &lt;span style=&#34;color:#e6db74&#34;&gt;:page/name&lt;/span&gt; ?name]
+
+&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;(not [(&lt;span style=&#34;color:#a6e22e&#34;&gt;missing?&lt;/span&gt; $ ?page &lt;span style=&#34;color:#e6db74&#34;&gt;:page/name&lt;/span&gt;)])
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;(not [?page &lt;span style=&#34;color:#e6db74&#34;&gt;:block/tags&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;terrible&amp;#34;&lt;/span&gt;]])
+&lt;/span&gt;
+(&lt;span style=&#34;color:#a6e22e&#34;&gt;not&lt;/span&gt;
+[?page &lt;span style=&#34;color:#e6db74&#34;&gt;:page/properties&lt;/span&gt; ?props]
+[(get ?props &lt;span style=&#34;color:#e6db74&#34;&gt;:rating&lt;/span&gt;) ?rating]
+[(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{ &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1/10&amp;#34;&lt;/span&gt;} &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2/10&amp;#34;&lt;/span&gt;} } ?rating)]
+)
+]}
+&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;New are the lines &lt;strong&gt;13&lt;/strong&gt; and &lt;strong&gt;14&lt;/strong&gt;, we exclude &lt;code&gt;[[terrible]]&lt;/code&gt; from our list.&lt;/p&gt;
+&lt;p&gt;If you want to add more tags, then look at &lt;em&gt;Resonance List 3&lt;/em&gt; how to do that.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;
+    &lt;a href=&#34;#conclusion&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Conclusion
+&lt;/h2&gt;
+&lt;p&gt;Logseq&amp;rsquo;s search functionality is not as easy as one would wish for, but it is adaquate, and can be made to search for the data you&amp;rsquo;re interested in.&lt;/p&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>Using Btrfs for Home on ElementaryOS</title>
+    <link>https://QWxleA.github.io/notes/using-btrfs-for-home-on-elementaryos/</link>
+    <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/notes/using-btrfs-for-home-on-elementaryos/</guid>
+    <description>
+        &lt;p&gt;ElementaryOS is a gorgeous Linux distribution, and ever since they &lt;a href=&#34;https://blog.elementary.io/elementary-os-6-odin-released&#34;&gt;released Odin&lt;/a&gt;, I&amp;rsquo;ve been dying to try it. After installing it in a VM, and seeing the last bugs get ironed out, I finally caved, and installed it. It&amp;rsquo;s fabulous!&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve been listening to rumors, there have been some complaints about the lack of software, and some of the defaults, but imho, with &lt;a href=&#34;https://blog.elementary.io/elementary-os-6-odin-updates-august-2021/&#34;&gt;elementary OS 6 Updates for August, 2021&lt;/a&gt; those complaints should be layed to rest. It&amp;rsquo;s very easy to add &lt;a href=&#34;https://flathub.org/home&#34;&gt;Flathub&lt;/a&gt;, and that, combined with the underlying Ubuntu packages, almost anything you can think of can be installed.&lt;/p&gt;
+&lt;p&gt;But, it&amp;rsquo;s not all rainbows and unicorns. It&amp;rsquo;s impossible (as fas as I know), to install ElementaryOS &lt;strong&gt;on&lt;/strong&gt; Btrfs. And I wanted to use it at &lt;em&gt;least&lt;/em&gt; for my &lt;code&gt;/home&lt;/code&gt;. The following is how you can set that up (disclaimer, this can seriously mess up your install. If you don&amp;rsquo;t know what any of this means, don&amp;rsquo;t do it!):&lt;/p&gt;
+&lt;h2 id=&#34;what-were-aiming-for&#34;&gt;
+    &lt;a href=&#34;#what-were-aiming-for&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    What we&amp;#39;re aiming for
+&lt;/h2&gt;
+&lt;p&gt;The end-product is this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo lsblk -f /dev/sda
+
+NAME            FSTYPE      LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINT
+sda
+├─sda1          vfat              336E-86E5                               251.7M     4% /boot/efi
+├─sda2          ext4              0b3ad1d4-bbc5-42c5-a44b-4574a7c18fa4    316.5M    23% /boot
+└─sda3          crypto_LUKS       6264e4ed-d493-44b9-966b-a5eaf887a3ab
+&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;└─cryptdata   LVM2_member       Uhf4VJ-VO1z-a5FI-ppNz-zzVB-2RFZ-C6Rpm0
+&lt;/span&gt;├─data-root ext4              13c02579-526b-4652-a792-b41286ac3a81     14.6G    44% /
+├─data-swap swap              b9c6201c-2f90-4b49-a3d9-91232264568c                  &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;SWAP&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;└─data-home btrfs             15669fa8-d62d-4925-a826-6153e65aaa6a    236.8G    46% /home
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Figure 1.&lt;/p&gt;
+&lt;p&gt;If, on a regular Elementary install, you would run the &lt;code&gt;sudo lsblk -f /dev/sda&lt;/code&gt; command, you would see about the same thing, just with different UUIDs, and missing &lt;code&gt;data-home&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;adding-a-btrfs-home&#34;&gt;
+    &lt;a href=&#34;#adding-a-btrfs-home&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Adding a Btrfs /home
+&lt;/h2&gt;
+&lt;p&gt;If you look at Figure 1, line 8, you see Elementary uses LVM. LVM has several (preinstalled) tools that making changes to your drive layout simple:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Vgdisplay&lt;/code&gt; prints information about the complete Volume Group, among it&amp;rsquo;s output, the &lt;em&gt;name&lt;/em&gt; &lt;strong&gt;data&lt;/strong&gt; in my case.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Lvdisplay&lt;/code&gt; prints information about the logical volumes defined inside to VG, this one is usefull to see if resizing data-root and creating data-home worked.&lt;/p&gt;
+&lt;p&gt;Now the tools we will use (do all this from the Elementary installer, or some other live-image, most, if not all these commands need &lt;em&gt;sudo&lt;/em&gt;):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Unlock the encryped volume: &lt;code&gt;cryptsetup luksOpen /dev/sda3 encrypted_system&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Is it all there? &lt;code&gt;lvdisplay&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make sure you&amp;rsquo;re drive is clean: &lt;code&gt;e2fsck - f /dev/data/root&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Optional: &lt;code&gt;resize2fs /dev/data/root 30G&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The key command: &lt;code&gt;lvreduce - L 30G - r /dev/data/root&lt;/code&gt;. Not using &lt;code&gt;-r&lt;/code&gt; (or first doing 4) will make the system unbootable. Ext4 doesn&amp;rsquo;t like finding it&amp;rsquo;s space suddenly reduced!&lt;/li&gt;
+&lt;li&gt;Next, we can create a new logical volume in the free space: &lt;code&gt;lvcreate  - l 100%FREE -n home data&lt;/code&gt;. &lt;code&gt;-n&lt;/code&gt; indicates the name, data is the Volume Group&lt;/li&gt;
+&lt;li&gt;create filesystem: &lt;code&gt;mkfs.btrfs /dev/data/home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Copy the UUID (if you forget, you can use &lt;code&gt;lsblk&lt;/code&gt;, as in figure 1)&lt;/li&gt;
+&lt;li&gt;Mount data-root: &lt;code&gt;mount /dev/data/root /mnt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add your new drive to fstab: &lt;code&gt;vi /mnt/etc/fstab&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;lt;file system&amp;gt;  &amp;lt;mount point&amp;gt;  &amp;lt;type&amp;gt;  &amp;lt;options&amp;gt;  &amp;lt;dump&amp;gt;  &amp;lt;pass&amp;gt;&lt;/span&gt;
+PARTUUID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;842cba63-fc3f-49ba-b03e-a215549fc81e  /boot/efi  vfat  umask&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0077&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+UUID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0b3ad1d4-bbc5-42c5-a44b-4574a7c18fa4  /boot  ext4  noatime,errors&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;remount-ro  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+UUID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;13c02579-526b-4652-a792-b41286ac3a81  /  ext4  noatime,errors&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;remount-ro  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+/dev/mapper/data-swap  none  swap  defaults  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;UUID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;15669fa8-d62d-4925-a826-6153e65aaa6a /home btrfs noatime,ssd,space_cache,commit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;120,compress&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;zstd,discard&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;async,x-systemd-timeout&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Figure 2.
+&lt;blockquote class=&#34;hint tip&#34;&gt;
+    If you have used the system already, rename your old &lt;code&gt;/home&lt;/code&gt;, so you can copy the data to the new drive
+&lt;/blockquote&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s it, now your &lt;code&gt;/home&lt;/code&gt; can use snapshots, compression and all the other goodies from a modern FS.&lt;/p&gt;
+
+    </description>
+    </item>
+    
+  </channel>
+</rss>
