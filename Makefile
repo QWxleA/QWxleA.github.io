@@ -9,4 +9,4 @@ update:
 	git add .
 
 watch:
-	hugo --buildDrafts --watch --path-warnings  server --disableFastRender
+	hugo --buildDrafts --watch --path-warnings  server --disableFastRender --ignoreCache

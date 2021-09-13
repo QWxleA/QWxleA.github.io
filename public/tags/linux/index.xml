@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Q&#39;s 🌱</title>
+    <link>https://example.org/tags/linux/</link>
+    <description>Recent content in linux on Q&#39;s 🌱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Fri, 03 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accessing encryped lvm logical volumes</title>
+      <link>https://example.org/notes/accessing-encryped-lvm-logical-volumes/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/notes/accessing-encryped-lvm-logical-volumes/</guid>
+      <description>These notes I copied as reference
+   How to mount encrypted LVM logical volume – sleeplessbeastie&amp;amp;rsquo;s notes  Error, not matched: @&amp;gt; ## Excerpt@
+Error, not matched: @&amp;gt; Some time ago, I have recovered an old hard drive only to learn that it contained encrypted LVM logical volume.@
+   Some time ago, I have recovered an old hard drive only to learn that it contained encrypted LVM logical volume.</description>
+    </item>
+    
+  </channel>
+</rss>

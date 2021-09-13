@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+{{ $pages := .Pages }}
+{{ $pages = (.Paginate $pages).Pages }}
+
+<header>
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <ul class="terms-tags">
+            {{- $type := .Type }}
+            {{- range $key, $value := .Data.Terms.Alphabetical }}
+            {{- $name := .Name }}
+            {{- $count := .Count }}
+            {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+            </li>
+            {{- end }}
+            {{- end }}
+        </ul>
+    </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,21 @@
+.home {
+    padding-top: 2rem;
+    a {
+        border: none;
+        // margin-right: 1rem;
+        text-decoration: none;
+        color: var(--link-color);
+        &::before {
+            content: "[[";
+        }
+        &::after {
+            content: "]]";
+        }
+        &:hover {
+        color: var(--link-color-darker);
+        }
+        &:hover {
+            border: none;
+        }
+    }
+}

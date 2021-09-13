@@ -1,0 +1,6 @@
+{{ if and (gt .WordCount 20 ) (.Params.toc | default true) }}
+<aside>
+    <h3>On this page</h3>
+    {{.TableOfContents}}
+</aside>
+{{ end }}
