@@ -1,2 +1,3 @@
 # QWxleA.github.io
-Blog about Emacs, Linux and shell-scripting.
+Blog about Logseq and Javascript
+http://QWxleA.github.io
