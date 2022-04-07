@@ -159,33 +159,33 @@
     What we&#39;re aiming for
 </h2>
 <p>The end-product is this:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo lsblk -f /dev/sda
-
-NAME            FSTYPE      LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINT
-sda
-├─sda1          vfat              336E-86E5                               251.7M     4% /boot/efi
-├─sda2          ext4              0b3ad1d4-bbc5-42c5-a44b-4574a7c18fa4    316.5M    23% /boot
-└─sda3          crypto_LUKS       6264e4ed-d493-44b9-966b-a5eaf887a3ab
-<span style="display:block;width:100%;background-color:#3c3d38">└─cryptdata   LVM2_member       Uhf4VJ-VO1z-a5FI-ppNz-zzVB-2RFZ-C6Rpm0
-</span>├─data-root ext4              13c02579-526b-4652-a792-b41286ac3a81     14.6G    44% /
-├─data-swap swap              b9c6201c-2f90-4b49-a3d9-91232264568c                  <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
-<span style="display:block;width:100%;background-color:#3c3d38">└─data-home btrfs             15669fa8-d62d-4925-a826-6153e65aaa6a    236.8G    46% /home
-</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo lsblk -f /dev/sda
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NAME            FSTYPE      LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINT
+</span></span><span style="display:flex;"><span>sda
+</span></span><span style="display:flex;"><span>├─sda1          vfat              336E-86E5                               251.7M     4% /boot/efi
+</span></span><span style="display:flex;"><span>├─sda2          ext4              0b3ad1d4-bbc5-42c5-a44b-4574a7c18fa4    316.5M    23% /boot
+</span></span><span style="display:flex;"><span>└─sda3          crypto_LUKS       6264e4ed-d493-44b9-966b-a5eaf887a3ab
+</span></span><span style="display:flex; background-color:#3c3d38"><span>└─cryptdata   LVM2_member       Uhf4VJ-VO1z-a5FI-ppNz-zzVB-2RFZ-C6Rpm0
+</span></span><span style="display:flex;"><span>├─data-root ext4              13c02579-526b-4652-a792-b41286ac3a81     14.6G    44% /
+</span></span><span style="display:flex;"><span>├─data-swap swap              b9c6201c-2f90-4b49-a3d9-91232264568c                  <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>└─data-home btrfs             15669fa8-d62d-4925-a826-6153e65aaa6a    236.8G    46% /home
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Figure 1.</p>
 <p>If, on a regular Elementary install, you would run the <code>sudo lsblk -f /dev/sda</code> command, you would see about the same thing, just with different UUIDs, and missing <code>data-home</code>.</p>
@@ -215,23 +215,23 @@ sda
 <li>Mount data-root: <code>mount /dev/data/root /mnt</code></li>
 <li>Add your new drive to fstab: <code>vi /mnt/etc/fstab</code></li>
 </ol>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># &lt;file system&gt;  &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt;</span>
-PARTUUID<span style="color:#f92672">=</span>842cba63-fc3f-49ba-b03e-a215549fc81e  /boot/efi  vfat  umask<span style="color:#f92672">=</span><span style="color:#ae81ff">0077</span>  <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0</span>
-UUID<span style="color:#f92672">=</span>0b3ad1d4-bbc5-42c5-a44b-4574a7c18fa4  /boot  ext4  noatime,errors<span style="color:#f92672">=</span>remount-ro  <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0</span>
-UUID<span style="color:#f92672">=</span>13c02579-526b-4652-a792-b41286ac3a81  /  ext4  noatime,errors<span style="color:#f92672">=</span>remount-ro  <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0</span>
-/dev/mapper/data-swap  none  swap  defaults  <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0</span>
-<span style="display:block;width:100%;background-color:#3c3d38">UUID<span style="color:#f92672">=</span>15669fa8-d62d-4925-a826-6153e65aaa6a /home btrfs noatime,ssd,space_cache,commit<span style="color:#f92672">=</span>120,compress<span style="color:#f92672">=</span>zstd,discard<span style="color:#f92672">=</span>async,x-systemd-timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
-</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># &lt;file system&gt;  &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt;</span>
+</span></span><span style="display:flex;"><span>PARTUUID<span style="color:#f92672">=</span>842cba63-fc3f-49ba-b03e-a215549fc81e  /boot/efi  vfat  umask<span style="color:#f92672">=</span><span style="color:#ae81ff">0077</span>  <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>UUID<span style="color:#f92672">=</span>0b3ad1d4-bbc5-42c5-a44b-4574a7c18fa4  /boot  ext4  noatime,errors<span style="color:#f92672">=</span>remount-ro  <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>UUID<span style="color:#f92672">=</span>13c02579-526b-4652-a792-b41286ac3a81  /  ext4  noatime,errors<span style="color:#f92672">=</span>remount-ro  <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>/dev/mapper/data-swap  none  swap  defaults  <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>UUID<span style="color:#f92672">=</span>15669fa8-d62d-4925-a826-6153e65aaa6a /home btrfs noatime,ssd,space_cache,commit<span style="color:#f92672">=</span>120,compress<span style="color:#f92672">=</span>zstd,discard<span style="color:#f92672">=</span>async,x-systemd-timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Figure 2.
 <blockquote class="hint tip">
@@ -271,7 +271,7 @@ UUID<span style="color:#f92672">=</span>13c02579-526b-4652-a792-b41286ac3a81  / 
             
         </nav>
     </section>
-    <script defer src="/ts/features.39c567b3af1363f8abe74bfd650f3d58cb963716b7ad4b3b53f801d3ca585599.js" data-enable-footnotes="true"></script>
+    <script defer src="/ts/features.882b72337b0ef8cf09fe2162c5a3e8bc2381c17b65e1c654a4fbd770d38fe420.js" data-enable-footnotes="true"></script>
 </footer>
     </body>
 </html>

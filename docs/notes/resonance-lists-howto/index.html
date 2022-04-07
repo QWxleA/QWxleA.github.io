@@ -176,31 +176,31 @@
     </a>
     Step 1 — gather a list of items
 </h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 1&#34;</span>]
-<span style="color:#e6db74">:query</span> [
-<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
-<span style="color:#e6db74">:where</span>
-<span style="display:block;width:100%;background-color:#3c3d38">[?page <span style="color:#e6db74">:page/properties</span> ?props]
-</span><span style="display:block;width:100%;background-color:#3c3d38">[(get ?props <span style="color:#e6db74">:type</span>) ?type]
-</span><span style="display:block;width:100%;background-color:#3c3d38">[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
-</span>]}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 1&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[?page <span style="color:#e6db74">:page/properties</span> ?props]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[(get ?props <span style="color:#e6db74">:type</span>) ?type]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
+</span></span><span style="display:flex;"><span>]}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This is a fairly straight forward query:</p>
 <ul>
@@ -220,39 +220,39 @@
     </a>
     Step 2 — remove some stuff we don&#39;t want to see
 </h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 2&#34;</span>]
-<span style="color:#e6db74">:query</span> [
-<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
-<span style="color:#e6db74">:where</span>
-[?page <span style="color:#e6db74">:page/properties</span> ?props]
-[(get ?props <span style="color:#e6db74">:type</span>) ?type]
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
-<span style="display:block;width:100%;background-color:#3c3d38">(<span style="color:#a6e22e">not</span>
-</span><span style="display:block;width:100%;background-color:#3c3d38">[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
-</span><span style="display:block;width:100%;background-color:#3c3d38">[(= <span style="color:#e6db74">&#34;[[1/10]]&#34;</span> ?rating)]
-</span><span style="display:block;width:100%;background-color:#3c3d38">)
-</span>]}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?page <span style="color:#e6db74">:page/properties</span> ?props]
+</span></span><span style="display:flex;"><span>[(get ?props <span style="color:#e6db74">:type</span>) ?type]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>(<span style="color:#a6e22e">not</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[(= <span style="color:#e6db74">&#34;[[1/10]]&#34;</span> ?rating)]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>)
+</span></span><span style="display:flex;"><span>]}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>New are the line <strong>9 to 12</strong></p>
 <ul>
@@ -283,35 +283,35 @@
     Step 2b — Only the bad stuff
 </h2>
 <p>For fun you can invert the search, <em>only</em> show the ones rated <code>1/10</code>:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 2b — all bad!&#34;</span>]
-<span style="color:#e6db74">:query</span> [
-<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
-<span style="color:#e6db74">:where</span>
-[?page <span style="color:#e6db74">:page/properties</span> ?props]
-[(get ?props <span style="color:#e6db74">:type</span>) ?type]
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
-[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
-<span style="display:block;width:100%;background-color:#3c3d38">[(= <span style="color:#e6db74">&#34;[[1/10]]&#34;</span> ?rating)]
-</span>]}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 2b — all bad!&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?page <span style="color:#e6db74">:page/properties</span> ?props]
+</span></span><span style="display:flex;"><span>[(get ?props <span style="color:#e6db74">:type</span>) ?type]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
+</span></span><span style="display:flex;"><span>[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[(= <span style="color:#e6db74">&#34;[[1/10]]&#34;</span> ?rating)]
+</span></span><span style="display:flex;"><span>]}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This query is simpler then the previous one, <code>and</code> is implied, by default all lines should be <em>true</em>. Logseq is a very positive program 😄.</p>
 <h2 id="step-3--remove-more-bad-ratings">
@@ -325,41 +325,41 @@
     Step 3 — remove more bad ratings
 </h2>
 <p>It&rsquo;s not just <code>1/10</code> that&rsquo;s bad, so is <code>2/10</code>, but adding that is not as simple as you would want:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 3&#34;</span>]
-<span style="color:#e6db74">:query</span> [
-<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
-<span style="color:#e6db74">:where</span>
-[?page <span style="color:#e6db74">:page/properties</span> ?props]
-[(get ?props <span style="color:#e6db74">:type</span>) ?type]
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
-(<span style="color:#a6e22e">not</span>
-[?page <span style="color:#e6db74">:page/properties</span> ?props]
-[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
-<span style="display:block;width:100%;background-color:#3c3d38">[(contains? <span style="color:#f92672">#</span>{ <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;1/10&#34;</span>} <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;2/10&#34;</span>} } ?rating)]
-</span>)
-]}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 3&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?page <span style="color:#e6db74">:page/properties</span> ?props]
+</span></span><span style="display:flex;"><span>[(get ?props <span style="color:#e6db74">:type</span>) ?type]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
+</span></span><span style="display:flex;"><span>(<span style="color:#a6e22e">not</span>
+</span></span><span style="display:flex;"><span>[?page <span style="color:#e6db74">:page/properties</span> ?props]
+</span></span><span style="display:flex;"><span>[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[(contains? <span style="color:#f92672">#</span>{ <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;1/10&#34;</span>} <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;2/10&#34;</span>} } ?rating)]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>]}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Notice line <strong>12</strong> the <code>contains?</code> statement is quite complicated. This is because <code>1/10</code> and <code>2/10</code> are really <code>[[1/10]] and </code>[[2/10]]. They&rsquo;re not just text, they are searchable items. This is different from <code>type</code> in <em>Resonance List 1</em>, line <strong>8</strong>.</p>
 <h2 id="step-4--remove-by-tag">
@@ -374,55 +374,55 @@
 </h2>
 <p>But what if you would like to have a tag that shows how terrible the book or movie was?</p>
 <p>Simple, add <code>tags:: [[terrible]]</code> (or just <code>terrible</code>, if you never want to list them, just change it accordingly in the listing below)</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 4 - final version&#34;</span>]
-<span style="color:#e6db74">:query</span> [
-<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
-<span style="color:#e6db74">:where</span>
-[?page <span style="color:#e6db74">:page/properties</span> ?props]
-
-[(get ?props <span style="color:#e6db74">:type</span>) ?type]
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
-
-[?page <span style="color:#e6db74">:page/name</span> ?name]
-
-<span style="display:block;width:100%;background-color:#3c3d38">(not [(<span style="color:#a6e22e">missing?</span> $ ?page <span style="color:#e6db74">:page/name</span>)])
-</span><span style="display:block;width:100%;background-color:#3c3d38">(not [?page <span style="color:#e6db74">:block/tags</span> [<span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;terrible&#34;</span>]])
-</span>
-(<span style="color:#a6e22e">not</span>
-[?page <span style="color:#e6db74">:page/properties</span> ?props]
-[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
-[(contains? <span style="color:#f92672">#</span>{ <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;1/10&#34;</span>} <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;2/10&#34;</span>} } ?rating)]
-)
-]}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> [<span style="color:#e6db74">:h2</span> <span style="color:#e6db74">&#34;Resonance list 4 - final version&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?page [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?page <span style="color:#e6db74">:page/properties</span> ?props]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[(get ?props <span style="color:#e6db74">:type</span>) ?type]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[?page <span style="color:#e6db74">:page/name</span> ?name]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>(not [(<span style="color:#a6e22e">missing?</span> $ ?page <span style="color:#e6db74">:page/name</span>)])
+</span></span><span style="display:flex; background-color:#3c3d38"><span>(not [?page <span style="color:#e6db74">:block/tags</span> [<span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;terrible&#34;</span>]])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#a6e22e">not</span>
+</span></span><span style="display:flex;"><span>[?page <span style="color:#e6db74">:page/properties</span> ?props]
+</span></span><span style="display:flex;"><span>[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{ <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;1/10&#34;</span>} <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;2/10&#34;</span>} } ?rating)]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>]}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>New are the lines <strong>13</strong> and <strong>14</strong>, we exclude <code>[[terrible]]</code> from our list.</p>
 <p>If you want to add more tags, then look at <em>Resonance List 3</em> how to do that.</p>
@@ -475,7 +475,7 @@
             
         </nav>
     </section>
-    <script defer src="/ts/features.39c567b3af1363f8abe74bfd650f3d58cb963716b7ad4b3b53f801d3ca585599.js" data-enable-footnotes="true"></script>
+    <script defer src="/ts/features.882b72337b0ef8cf09fe2162c5a3e8bc2381c17b65e1c654a4fbd770d38fe420.js" data-enable-footnotes="true"></script>
 </footer>
     </body>
 </html>

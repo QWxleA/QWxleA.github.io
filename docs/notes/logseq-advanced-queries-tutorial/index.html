@@ -182,29 +182,29 @@
 <p>OK, let&rsquo;s start. The simplest query is probably: <code>{{query [[MyTag]]}}</code></p>
 <p>To create this, shortcut <code>/q</code>, and then add <code>[[MyTag]]</code>. This will look for the tag <code>#MyTag</code> (everywhere).</p>
 <p>The same query, but now written as an advanced query, would be:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Find tag: MyTag&#34;</span>
-<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
-</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#e6db74">:where</span>
-</span><span style="display:block;width:100%;background-color:#3c3d38">[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]
-</span><span style="display:block;width:100%;background-color:#3c3d38">[?p <span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]
-</span><span style="display:block;width:100%;background-color:#3c3d38">]
-</span>}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Find tag: MyTag&#34;</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
+</span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[?p <span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="lets-go-over-this-line-by-line">
     <a href="#lets-go-over-this-line-by-line" class="anchor">
@@ -246,8 +246,8 @@
 </li>
 </ul>
 <p>Writing this shorter might be a bit simpler to understand:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">[?b <span style="color:#e6db74">:block/ref-pages</span> [<span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]]
-</code></pre></div><p>This is exactly the same thing, as lines <strong>5</strong> and <strong>6</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/ref-pages</span> [<span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]]
+</span></span></code></pre></div><p>This is exactly the same thing, as lines <strong>5</strong> and <strong>6</strong></p>
 <p>That&rsquo;s all, from now on we&rsquo;ll iterate on this, adding complexity</p>
 <h2 id="example-2-find-a-tag-that-is-also-a-todo">
     <a href="#example-2-find-a-tag-that-is-also-a-todo" class="anchor">
@@ -259,29 +259,29 @@
     </a>
     Example 2, find a tag that is also a TODO
 </h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Find: MyTag&#34;</span>
-<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
-<span style="color:#e6db74">:where</span>
-[?b <span style="color:#e6db74">:block/marker</span> <span style="color:#e6db74">&#34;TODO&#34;</span>]
-[?p <span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]
-[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]]
-}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Find: MyTag&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/marker</span> <span style="color:#e6db74">&#34;TODO&#34;</span>]
+</span></span><span style="display:flex;"><span>[?p <span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -301,67 +301,67 @@
     </a>
     Example 3, multiple markers / TODO states
 </h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Find: TODO or DOING MyTag&#34;</span>
-<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
-<span style="color:#e6db74">:where</span>
-[?b <span style="color:#e6db74">:block/marker</span> ?marker]
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;TODO&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span>} ?marker)]
-
-[?p <span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]
-[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]]
-}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Find: TODO or DOING MyTag&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/marker</span> ?marker]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;TODO&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span>} ?marker)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[?p <span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Notice lines <strong>5</strong> and <strong>6</strong>, that replace the single line <strong>5</strong> fom the previous example. We&rsquo;re looking for a marker, called <code>?marker</code>, and <code>?marker</code> should <em>contain</em> either <code>TODO</code> or <code>DOING</code></p>
 <p>This same method you can use to look for multiple tags:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Find: MyTag and fghij&#34;</span>
-<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
-<span style="color:#e6db74">:where</span>
-
-[?b <span style="color:#e6db74">:block/marker</span> ?marker]
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;TODO&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span>} ?marker)]
-
-[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]
-[?p <span style="color:#e6db74">:block/name</span> ?tag]
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;MyTag&#34;</span> <span style="color:#e6db74">&#34;fghij&#34;</span>} ?tag)]]
-}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Find: MyTag and fghij&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/marker</span> ?marker]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;TODO&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span>} ?marker)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]
+</span></span><span style="display:flex;"><span>[?p <span style="color:#e6db74">:block/name</span> ?tag]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;MyTag&#34;</span> <span style="color:#e6db74">&#34;fghij&#34;</span>} ?tag)]]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote class="hint important">
     Notice the closing <code>]</code> on line <strong>11</strong>, it&rsquo;s easy to forget these, especially as you slowly add more complexity to your searches
@@ -377,27 +377,27 @@
     Example 4, search for parts of  tag
 </h2>
 <p>Some people have complicated tag configurations, like: <code>Topic/boats, Topic/airplanes, Topic/automobiles</code>, to look for <em>all</em> those <code>Topic</code>s at the same time, we can use (we, though, stick with our alphabet examples):</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
-<span style="color:#e6db74">:where</span>
-[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]
-[?p <span style="color:#e6db74">:block/name</span> ?tag]
-[(<span style="color:#a6e22e">clojure.string/starts-with?</span> ?tag <span style="color:#e6db74">&#34;ab&#34;</span>)]]
-}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/ref-pages</span> ?p]
+</span></span><span style="display:flex;"><span>[?p <span style="color:#e6db74">:block/name</span> ?tag]
+</span></span><span style="display:flex;"><span>[(<span style="color:#a6e22e">clojure.string/starts-with?</span> ?tag <span style="color:#e6db74">&#34;ab&#34;</span>)]]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>The key is off course on line <strong>6</strong>, where we use <code>clojure.string/starts-with?</code>, the variable we work with is <code>?tag</code>, and we filter on <code>Topic/</code></p>
 <p>For further study, these are the clojure builtins we can use in our queries: <a href="https://github.com/logseq/datascript/blob/fork/src/datascript/query.cljc#L194">datascript/query.cljc at fork · logseq/datascript</a></p>
@@ -413,27 +413,27 @@
     Example 5, searching for page properties
 </h2>
 <p>Properties are key-value pairs that allow you to annotate a block or page:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;My examples&#34;</span>
-<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
-<span style="color:#e6db74">:where</span>
-[?b <span style="color:#e6db74">:block/properties</span> ?p]
-[(get ?p <span style="color:#e6db74">:type</span>) ?t]
-[(= <span style="color:#e6db74">&#34;example&#34;</span> ?t)]]}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;My examples&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/properties</span> ?p]
+</span></span><span style="display:flex;"><span>[(get ?p <span style="color:#e6db74">:type</span>) ?t]
+</span></span><span style="display:flex;"><span>[(= <span style="color:#e6db74">&#34;example&#34;</span> ?t)]]}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>There can be multiple <code>block/properties</code> to one block, so we have to <code>get</code> the one we want, in this case <code>type</code>. This can be any word added as a property to a page</p>
 <h2 id="example-6-project-tasks">
@@ -446,45 +446,45 @@
     </a>
     Example 6, project tasks
 </h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;My examples TODOs&#34;</span>
-<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
-<span style="color:#e6db74">:where</span>
-[?b <span style="color:#e6db74">:block/marker</span> ?marker]
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;NOW&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span>} ?marker)]
-
-[?b <span style="color:#e6db74">:block/page</span> ?p]
-[?p <span style="color:#e6db74">:block/properties</span> ?a]
-[(get ?a <span style="color:#e6db74">:type</span>) ?t]
-[(= <span style="color:#e6db74">&#34;example&#34;</span> ?t)]
-]
-<span style="color:#e6db74">:result-transform</span> (<span style="color:#66d9ef">fn </span>[result]
-(sort-by (<span style="color:#66d9ef">fn </span>[h]
-(get h <span style="color:#e6db74">:block/priority</span> <span style="color:#e6db74">&#34;Z&#34;</span>)) result))
-<span style="color:#e6db74">:collapsed?</span> false}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;My examples TODOs&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/marker</span> ?marker]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;NOW&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span>} ?marker)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/page</span> ?p]
+</span></span><span style="display:flex;"><span>[?p <span style="color:#e6db74">:block/properties</span> ?a]
+</span></span><span style="display:flex;"><span>[(get ?a <span style="color:#e6db74">:type</span>) ?t]
+</span></span><span style="display:flex;"><span>[(= <span style="color:#e6db74">&#34;example&#34;</span> ?t)]
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:result-transform</span> (<span style="color:#66d9ef">fn </span>[result]
+</span></span><span style="display:flex;"><span>(sort-by (<span style="color:#66d9ef">fn </span>[h]
+</span></span><span style="display:flex;"><span>(get h <span style="color:#e6db74">:block/priority</span> <span style="color:#e6db74">&#34;Z&#34;</span>)) result))
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:collapsed?</span> false}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This query combines the <code>TODO states</code> from example 3, and <code>page properties</code> from example 5</p>
 <p>New are lines <strong>13-15</strong>, this snippet will sort TODOs on priority</p>
@@ -498,47 +498,47 @@
     </a>
     Example 7, search Journal pages for tagged TODOs
 </h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Tagged journal pages&#34;</span>
-<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
-<span style="color:#e6db74">:where</span>
-[?b <span style="color:#e6db74">:block/marker</span> ?marker]
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;TODO&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span>} ?marker)]
-
-[?b <span style="color:#e6db74">:block/page</span> ?p]
-[?p <span style="color:#e6db74">:block/journal?</span> true]
-
-[?b <span style="color:#e6db74">:block/ref-pages</span> ?r]
-[?r <span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]
-]
-<span style="color:#e6db74">:result-transform</span> (<span style="color:#66d9ef">fn </span>[result]
-(sort-by (<span style="color:#66d9ef">fn </span>[h]
-(get h <span style="color:#e6db74">:block/priority</span> <span style="color:#e6db74">&#34;Z&#34;</span>)) result))
-}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Tagged journal pages&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/marker</span> ?marker]
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;TODO&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span>} ?marker)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/page</span> ?p]
+</span></span><span style="display:flex;"><span>[?p <span style="color:#e6db74">:block/journal?</span> true]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/ref-pages</span> ?r]
+</span></span><span style="display:flex;"><span>[?r <span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;MyTag&#34;</span>]
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:result-transform</span> (<span style="color:#66d9ef">fn </span>[result]
+</span></span><span style="display:flex;"><span>(sort-by (<span style="color:#66d9ef">fn </span>[h]
+</span></span><span style="display:flex;"><span>(get h <span style="color:#e6db74">:block/priority</span> <span style="color:#e6db74">&#34;Z&#34;</span>)) result))
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>New are the lines <strong>8</strong> and <strong>9</strong>, where we ask if the page is a <code>journal</code></p>
 <h2 id="example-8-exclude-from-a-query">
@@ -551,29 +551,29 @@
     </a>
     Example 8, exclude from a query
 </h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;📼 Watch list - videos&#34;</span>
-<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
-<span style="color:#e6db74">:where</span>
-[?b <span style="color:#e6db74">:block/refs</span> [<span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;video&#34;</span>]]
-(not [?b <span style="color:#e6db74">:block/marker</span> ?marker] [(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;DONE&#34;</span>} ?marker)])
-]
-}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;📼 Watch list - videos&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?b [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?b <span style="color:#e6db74">:block/refs</span> [<span style="color:#e6db74">:block/name</span> <span style="color:#e6db74">&#34;video&#34;</span>]]
+</span></span><span style="display:flex;"><span>(not [?b <span style="color:#e6db74">:block/marker</span> ?marker] [(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;DONE&#34;</span>} ?marker)])
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -593,53 +593,53 @@
     </a>
     Example 9, comparing dates
 </h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#f92672">#</span>+BEGIN_QUERY
-{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;⚠️ OVERDUE&#34;</span>
-<span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?block [*])
-<span style="color:#e6db74">:in</span> $ ?start ?today
-<span style="color:#e6db74">:where</span>
-[?block <span style="color:#e6db74">:block/marker</span> ?marker]
-
-(<span style="color:#a6e22e">or</span>
-[?block <span style="color:#e6db74">:block/scheduled</span> ?d]
-[?block <span style="color:#e6db74">:block/deadline</span> ?d])
-
-[(&gt;= ?d ?start)]
-[(&lt;   ?d ?today)]
-
-[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;NOW&#34;</span> <span style="color:#e6db74">&#34;LATER&#34;</span> <span style="color:#e6db74">&#34;TODO&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span> <span style="color:#e6db74">&#34;WAITING&#34;</span>} ?marker)]]
-<span style="color:#e6db74">:inputs</span> [<span style="color:#e6db74">:180d</span> <span style="color:#e6db74">:today</span>]
-<span style="color:#e6db74">:result-transform</span>  (<span style="color:#66d9ef">fn </span>[result]
-(sort-by  (<span style="color:#66d9ef">fn </span>[d]
-(get d <span style="color:#e6db74">:block/deadline</span>) ) result ))
-<span style="color:#e6db74">:collapsed?</span> false}
-<span style="color:#f92672">#</span>+END_QUERY
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#f92672">#</span>+BEGIN_QUERY
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;⚠️ OVERDUE&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:query</span> [<span style="color:#e6db74">:find</span> (<span style="color:#a6e22e">pull</span> ?block [*])
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:in</span> $ ?start ?today
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:where</span>
+</span></span><span style="display:flex;"><span>[?block <span style="color:#e6db74">:block/marker</span> ?marker]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#a6e22e">or</span>
+</span></span><span style="display:flex;"><span>[?block <span style="color:#e6db74">:block/scheduled</span> ?d]
+</span></span><span style="display:flex;"><span>[?block <span style="color:#e6db74">:block/deadline</span> ?d])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[(&gt;= ?d ?start)]
+</span></span><span style="display:flex;"><span>[(&lt;   ?d ?today)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;NOW&#34;</span> <span style="color:#e6db74">&#34;LATER&#34;</span> <span style="color:#e6db74">&#34;TODO&#34;</span> <span style="color:#e6db74">&#34;DOING&#34;</span> <span style="color:#e6db74">&#34;WAITING&#34;</span>} ?marker)]]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:inputs</span> [<span style="color:#e6db74">:180d</span> <span style="color:#e6db74">:today</span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:result-transform</span>  (<span style="color:#66d9ef">fn </span>[result]
+</span></span><span style="display:flex;"><span>(sort-by  (<span style="color:#66d9ef">fn </span>[d]
+</span></span><span style="display:flex;"><span>(get d <span style="color:#e6db74">:block/deadline</span>) ) result ))
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:collapsed?</span> false}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This is a very useful one. Let&rsquo;s see what it does:</p>
 <ul>
@@ -719,7 +719,7 @@
             
         </nav>
     </section>
-    <script defer src="/ts/features.39c567b3af1363f8abe74bfd650f3d58cb963716b7ad4b3b53f801d3ca585599.js" data-enable-footnotes="true"></script>
+    <script defer src="/ts/features.882b72337b0ef8cf09fe2162c5a3e8bc2381c17b65e1c654a4fbd770d38fe420.js" data-enable-footnotes="true"></script>
 </footer>
     </body>
 </html>
