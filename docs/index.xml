@@ -13,8 +13,86 @@
     
     <guid>https://QWxleA.github.io/page/building-a-digital-garden-with-logseq-and-hugo/</guid>
     <description>
-        &lt;p&gt;We, as people, are social animals. We live together, we work together, we relax together, but what about &lt;em&gt;learning&lt;/em&gt; together? In these days of global pandemics and, be honest, living inside our digital tools we have slowly gone back to being not-very-social. [Digital gardens](&lt;a href=&#34;https://QWxleA.github.io/page/digital-garden/&#34;&gt;digital garden&lt;/a&gt;) are one way to overcome this &lt;em&gt;modern ill&lt;/em&gt;. Learning and building/creating in such a way that it is easy for others to see and/or comment on what you do and learn.&lt;/p&gt;
-&lt;p&gt;At the same time, being too busy with the technical part will detract from doing any learning, so it should be simple to go from your &lt;a href=&#34;pkm&#34;&gt;system&lt;/a&gt; where you keep your notes/keep track of what you learn, to a website. With the help a a plugin it is easy to export all your public pages, combined with a &lt;a href=&#34;https://QWxleA.github.io/page/hugo/&#34;&gt;hugo&lt;/a&gt; theme that &lt;em&gt;knows&lt;/em&gt; back-links and other &lt;a href=&#34;https://QWxleA.github.io/page/logseq/&#34;&gt;logseq&lt;/a&gt; specific tricks, you can now start building your own [garden](&lt;a href=&#34;https://QWxleA.github.io/page/digital-garden/&#34;&gt;digital garden&lt;/a&gt;).&lt;/p&gt;
+        &lt;p&gt;We, as people, are social animals. We live together, we work together, we relax together, but what about &lt;em&gt;learning&lt;/em&gt; together? In these days of global pandemics and, be honest, living inside our digital tools we have slowly gone back to being not-very-social. &lt;a href=&#34;https://QWxleA.github.io/page/digital-garden/&#34;&gt;Digital gardens&lt;/a&gt; are one way to overcome this &lt;em&gt;modern ill&lt;/em&gt;: Learning and building/creating in such a way that it is easy for others to see and/or comment on what you do and learn.&lt;/p&gt;
+&lt;p&gt;At the same time, being too busy with the &lt;em&gt;technical part&lt;/em&gt; will detract from doing any &lt;mark&gt;
+    learning
+&lt;/mark&gt;, so it should be simple to go &lt;em&gt;from&lt;/em&gt; your &lt;a href=&#34;https://QWxleA.github.io/page/pkm/&#34;&gt;system&lt;/a&gt; where you keep your notes/keep track of what you learn, &lt;em&gt;to&lt;/em&gt; a website. With the help of a plugin it is easy to export all your public pages. Combine this with a &lt;a href=&#34;https://QWxleA.github.io/page/hugo/&#34;&gt;hugo&lt;/a&gt; theme that &lt;em&gt;knows&lt;/em&gt; about back-links and other &lt;a href=&#34;https://QWxleA.github.io/page/logseq/&#34;&gt;logseq&lt;/a&gt; specific tricks, you can now start building your own .&lt;/p&gt;
+&lt;h2 id=&#34;preparing-your-pages&#34;&gt;
+    &lt;a href=&#34;#preparing-your-pages&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Preparing your pages
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Logseq has a special setting for pages that are ready for export, in the header of your page should be set: &lt;code&gt;public:: true&lt;/code&gt; (notice the double colon!). It can also be set from the dropdown menu.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Next, just export all the pages for &lt;a href=&#34;https://QWxleA.github.io/page/hugo/&#34;&gt;hugo&lt;/a&gt; with the plugin.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class=&#34;important &#34;&gt;
+    &lt;a href=&#34;https://QWxleA.github.io/page/hugo/&#34;&gt;hugo&lt;/a&gt; gets upset if pages are referenced that do not actually exist, so be careful that all the links referenced in a page are also exported.
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;preparing-hugo&#34;&gt;
+    &lt;a href=&#34;#preparing-hugo&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Preparing Hugo
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo is a general purpose blogging software, not specifically for[digital gardens]( &lt;a href=&#34;https://QWxleA.github.io/page/digital-garden/&#34;&gt;digital garden&lt;/a&gt;) or even &lt;a href=&#34;https://QWxleA.github.io/page/logseq/&#34;&gt;logseq&lt;/a&gt;. So for it to be usefula as a garden we need to add some functionality. For starters, backlinks:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ $re := $.File.BaseFileName }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ $backlinks := slice }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ range where .Site.RegularPages &amp;#34;Type&amp;#34; &amp;#34;page&amp;#34; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   {{ if and (findRE $re .RawContent) (not (eq $re .File.BaseFileName)) }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      {{ $backlinks = $backlinks | append . }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   {{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ if gt (len $backlinks) 0 }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;aside&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h3&lt;/span&gt;&amp;gt;Backlinks&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h3&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;backlinks&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;ul&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       {{ range $backlinks }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;li&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;capitalize&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{ .RelPermalink }}&amp;#34;&lt;/span&gt;&amp;gt;{{ .Title }}&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;li&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       {{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;ul&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;aside&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ else  }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;aside&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h4&lt;/span&gt;&amp;gt;No notes link to this note&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h4&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;aside&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;aside&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;related&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  {{ $related := .Site.RegularPages.Related . | complement $backlinks | first 3 -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  {{ with $related -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h3&lt;/span&gt;&amp;gt;slightly related&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h3&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;ul&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  {{ range . -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;li&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;capitalize&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{ .RelPermalink }}&amp;#34;&lt;/span&gt;&amp;gt;{{ .Title }}&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;li&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  {{ end -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;ul&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  {{ end -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;aside&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;This snippet will go over all pages, and find out if any of them link to this one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&amp;rsquo;s as far as I&amp;rsquo;ve gotten so far. Not sure what else is needed. More to come&amp;hellip;&lt;/p&gt;
 
     </description>
     </item>
@@ -73,6 +151,9 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Also: &lt;a href=&#34;https://github.com/MaggieAppleton/digital-gardeners/&#34;&gt;MaggieAppleton/digital-gardeners: Resources, links, projects, and ideas for gardeners tending their digital notes on the public interwebs&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And: &lt;a href=&#34;https://twitter.com/Mappletons/status/1250532315459194880&#34;&gt;(2) Maggie Appleton 🧭 on Twitter: &amp;ldquo;Nerding hard on digital gardens, personal wikis, and experimental knowledge systems with @_jonesian today. We have an epic collection going, check these out&amp;hellip; 1. @tomcritchlow&amp;rsquo;s Wikifolders: https://t.co/QnXw0vzbMG https://t.co/9ri6g9hD93&amp;rdquo; / Twitter&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -643,6 +724,322 @@ Configuration: &lt;strong&gt;Video&lt;/strong&gt; &amp;gt; &lt;strong&gt;H.265 (
     </item>
     
     <item>
+    <title>domain-specific language</title>
+    <link>https://QWxleA.github.io/page/domain-specific-language/</link>
+    <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/page/domain-specific-language/</guid>
+    <description>
+        &lt;p&gt;A domain-specific language (DSL) is a computer language specialized to a particular application domain — &lt;a href=&#34;https://en.wikipedia.org/wiki/Domain-specific_language&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>hiccup</title>
+    <link>https://QWxleA.github.io/page/hiccup/</link>
+    <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/page/hiccup/</guid>
+    <description>
+        &lt;p&gt;Hiccup is a &lt;a href=&#34;https://QWxleA.github.io/page/domain-specific-language/&#34;&gt;domain-specific language&lt;/a&gt; for generating HTML, used mostly in Clojure community.&lt;/p&gt;
+&lt;p&gt;For every day use you need very little knowledge of Hiccup, and fortunately (most of it) is surprisingly simple.&lt;/p&gt;
+&lt;h2 id=&#34;lets-hiccup&#34;&gt;
+    &lt;a href=&#34;#lets-hiccup&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Let&amp;amp;rsquo;s Hiccup
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The most obvious thing you can use Hiccup for is to style the titles of &lt;a href=&#34;https://QWxleA.github.io/page/advanced-queries/&#34;&gt;Advanced Queries&lt;/a&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h3&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This is hiccup!&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [task ?b &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;LATER&amp;#34;&lt;/span&gt;}]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;+ Line 2 is written in Hiccup: `[:h3 &amp;quot;This is hiccup!&amp;quot;]`, this will be converted to: `&amp;lt;h3&amp;gt;This is hiccup!&amp;lt;/h3&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;h3&lt;/code&gt;, as used in Hiccup, is the same has an &lt;code&gt;H3&lt;/code&gt; in HTML, and you can also use other HTML tags, for example: &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt;, which in Hiccup would be: &lt;code&gt;[:p &amp;quot;this is an HTML p tag&amp;quot;]&lt;/code&gt; or &lt;code&gt;[:b &amp;quot;This is an HTML b (bold) tag&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For simple titles, that&amp;rsquo;s (almost) all you need. If you would like to add some css divs or classes to the mix, read on:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;basic-hiccup-syntax&#34;&gt;
+    &lt;a href=&#34;#basic-hiccup-syntax&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Basic Hiccup Syntax
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;What is &lt;em&gt;actually&lt;/em&gt; happening when you write your title? Hiccup turns Clojure data structures like this:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;:h3&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This is hiccup!&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Into strings of HTML like this:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h3&lt;/span&gt;&amp;gt;This is hiccup!&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h3&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Technically speaking, the Clojure data structure is a vector (&lt;code&gt;[ .... ]&lt;/code&gt;, just like &lt;a href=&#34;https://QWxleA.github.io/page/advanced-queries/&#34;&gt;Advanced Queries&lt;/a&gt; uses for searches, that takes one of the following two forms:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; body]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[tag attributes &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; body]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The first item in the vector is the tag name. It is mandatory, and should be a keyword (&lt;code&gt;:h3&lt;/code&gt;), a string (&lt;code&gt;&amp;quot;This is hiccup!&amp;quot;&lt;/code&gt;) or a symbol (&lt;code&gt;?b&lt;/code&gt; from queries).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The second item may optionally be a map of attributes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All subsequent items in the vector are treated as the element body. This can include strings or nested tag vectors, for example:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;:p&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello &amp;#34;&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:em&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;World!&amp;#34;&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;This definition might sound a bit obvious, or unimportant, but later you&amp;rsquo;ll see how you can use the same syntax to create more complicated HTML structures, like lists (&lt;code&gt;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;...&lt;/code&gt;) or tables (&lt;code&gt;&amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;...&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;making-it-look-nice-with-css&#34;&gt;
+    &lt;a href=&#34;#making-it-look-nice-with-css&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Making it look nice with CSS
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;There are two ways to add &lt;strong&gt;ids&lt;/strong&gt; and &lt;strong&gt;classes&lt;/strong&gt; to your html elements. The first is the most straight forward, and easy to read, but a bit long:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;:h3&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:id&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mysearch&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:class&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;underlined superpink&amp;#34;&lt;/span&gt;} &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This is better looking Hiccup!&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Hiccup also provides a convenient shorter way of writing:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;:h3#mysearch.underlined.superpink&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This is better looking Hiccup!&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;As in CSS, the word after the &amp;ldquo;#&amp;rdquo; denotes the element&amp;rsquo;s ID, and the word after each &amp;ldquo;.&amp;rdquo; denotes the element&amp;rsquo;s classes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There may be multiple classes, but there can only be one ID. Additionally, the ID must always come first, so &lt;code&gt;div#foo.bar&lt;/code&gt; would work, but &lt;code&gt;div.foo#bar&lt;/code&gt; would not.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can add an ID on its own, or a class on its own:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;:div#post&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;:div.comment&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;The most amazing thing is, you can actually do this &lt;em&gt;straight inside Logseq&lt;/em&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;:h2&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:style&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:color&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;}} &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;h2 title&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;:p&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello &amp;#34;&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:em&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;World!&amp;#34;&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;+ [:h2 {:style {:color &amp;quot;red&amp;quot;}} &amp;quot;h2 title&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;[:p &amp;ldquo;Hello &amp;quot; [:em &amp;ldquo;World!&amp;rdquo;]]&lt;/p&gt;
+&lt;h2 id=&#34;using-hiccup-for-views&#34;&gt;
+    &lt;a href=&#34;#using-hiccup-for-views&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Using Hiccup for :views
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://QWxleA.github.io/page/advanced-queries/&#34;&gt;Advanced Queries&lt;/a&gt; support custom-build views for search results. These views are a combination of (a small sub-set of) Clojure and Hiccup. It&amp;rsquo;s not the easiest combination, but without a doubt you can build amazing things with it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:b&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;All pages with a &amp;#34;&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:em&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;programming&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; tag&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; ?name
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:in&lt;/span&gt; $ ?tag
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [?t &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; ?tag]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/tags&lt;/span&gt; ?t]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; ?name]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:inputs&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;programming&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	         [&lt;span style=&#34;color:#e6db74&#34;&gt;:div.flex.flex-col&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	          (for [page result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	            [&lt;span style=&#34;color:#e6db74&#34;&gt;:a&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:href&lt;/span&gt; (str &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#/page/&amp;#34;&lt;/span&gt; page)} (&lt;span style=&#34;color:#a6e22e&#34;&gt;clojure.string/capitalize&lt;/span&gt; page)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         )}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Let&amp;rsquo;s examine one of the &lt;a href=&#34;https://QWxleA.github.io/page/advanced-queries/&#34;&gt;Advanced Queries&lt;/a&gt;, we are only interested in lines &lt;strong&gt;11&lt;/strong&gt; to &lt;strong&gt;15&lt;/strong&gt;. It is an excellent example how search results, clojure and hiccup can represent search results:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;These lines will create the following:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;flex flex-col&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#/page/advanced queries&amp;#34;&lt;/span&gt;&amp;gt;Advanced queries&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#/page/hiccup&amp;#34;&lt;/span&gt;&amp;gt;Hiccup&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Line 11 (query):&lt;/strong&gt; creates the div with the two classes flex and flex-col, that div closes in &lt;strong&gt;line 15&lt;/strong&gt; (&lt;strong&gt;4&lt;/strong&gt; in the html)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Line12:&lt;/strong&gt; is interesting &lt;em&gt;clojure&lt;/em&gt;, it loops over &lt;em&gt;result&lt;/em&gt;, and every single value is stored in &lt;em&gt;page&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Line 13:&lt;/strong&gt; is the most complex Hiccup line so far:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[:a {:href (str &amp;quot;#/page/&amp;quot; page)} (clojure.string/capitalize page)]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;which translates to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;#/page/hiccup&amp;quot;&amp;gt;Hiccup&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And if you look carefully, they look very much alike:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The whole thing is wrapped in an &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; -&amp;gt; &lt;code&gt;[:a .... ]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then you have the address &lt;code&gt;href=&amp;quot;#/page/hiccup&amp;quot;&lt;/code&gt; -&amp;gt; &lt;code&gt;(str &amp;quot;#/page/&amp;quot; page)&lt;/code&gt;, which is Clojure for: &lt;strong&gt;str&lt;/strong&gt; returns a string, in our case it concatenates (glues together)  &lt;code&gt;&amp;quot;#/page/&amp;quot;&lt;/code&gt; and the value of &lt;code&gt;page&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Last you have the visible part of the link &lt;code&gt;Hiccup&lt;/code&gt; -&amp;gt; &lt;code&gt;(clojure.string/capitalize page)&lt;/code&gt;, which is not hard to guess, it capitalizes the value of &lt;code&gt;page&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; if you ever use this code, and &lt;code&gt;page&lt;/code&gt; is a journal-page (which is a bunch of numbers), the whole thing will fail, so don&amp;rsquo;t capitalize numbers, they don&amp;rsquo;t like that.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And this is what it looks like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;query-table:: false
+#+BEGIN_QUERY
+{:title [:b &amp;ldquo;All pages with a &amp;quot; [:em &amp;ldquo;programming&amp;rdquo;] &amp;quot; tag&amp;rdquo;]
+:query [:find ?name
+:in $ ?tag
+:where
+[?t :block/name ?tag]
+[?p :block/tags ?t]
+[?p :block/name ?name]]
+:inputs [&amp;ldquo;programming&amp;rdquo;]
+:view (fn [result]
+[:div.flex.flex-col
+(for [page result]
+[:a {:href (str &amp;ldquo;#/page/&amp;rdquo; page)} (clojure.string/capitalize page)]
+)
+]
+)}
+#+END_QUERY&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;table-views-hiccup-is-just-like-good-looking-html&#34;&gt;
+    &lt;a href=&#34;#table-views-hiccup-is-just-like-good-looking-html&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Table views, hiccup is just like good-looking html
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;query-table:: false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h3&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Programming languages used in Logseq&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?p [*])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      [page-tags ?p &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;programming&amp;#34;&lt;/span&gt;}]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[rows] [&lt;span style=&#34;color:#e6db74&#34;&gt;:table&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:thead&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Page&amp;#34;&lt;/span&gt;] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Language&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Difficulty&amp;#34;&lt;/span&gt;] ] ] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:tbody&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(for [r rows] [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:a&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:href&lt;/span&gt; (str &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#/page/&amp;#34;&lt;/span&gt; (get r &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt;))} (&lt;span style=&#34;color:#a6e22e&#34;&gt;clojure.string/capitalize&lt;/span&gt; (get r &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt;))]] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;get-in&lt;/span&gt; r [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/properties&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:language&lt;/span&gt;])]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;get-in&lt;/span&gt; r [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/properties&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:difficulty&lt;/span&gt;])] ])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   ]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:query-table&lt;/span&gt; false
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;+ The result:
+
+  + #+BEGIN_QUERY
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;{:title [:h3 &amp;ldquo;Programming languages used in Logseq&amp;rdquo;]
+:query [:find (pull ?p [*])
+:where
+[page-tags ?p #{&amp;ldquo;programming&amp;rdquo;}]
+]
+:view (fn [rows] [:table
+[:thead
+[:tr
+[:th &amp;ldquo;Page&amp;rdquo;]
+[:th &amp;ldquo;Language&amp;rdquo;]
+[:th &amp;ldquo;Difficulty&amp;rdquo;] ] ]
+[:tbody
+(for [r rows] [:tr
+[:td [:a {:href (str &amp;ldquo;#/page/&amp;rdquo; (get r :block/name))} (clojure.string/capitalize (get r :block/name))]]
+[:td (get-in r [:block/properties :language])]
+[:td (get-in r [:block/properties :difficulty])] ])
+]]
+)
+:query-table false
+}
+#+END_QUERY&lt;/p&gt;
+&lt;h3 id=&#34;additional-resources&#34;&gt;
+    &lt;a href=&#34;#additional-resources&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Additional resources
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://ericnormand.me/mini-guide/hiccup-tips&#34;&gt;Hiccup Tips&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/makimo-tech-blog/hiccup-lightning-tutorial-6494e477f3a5&#34;&gt;Tutorial on Medium&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://web.archive.org/web/20161212035126/http://www.rkn.io/2014/03/13/clojure-cookbook-hiccup/&#34;&gt;rkn.io - Clojure Cookbook: Templating with Hiccup&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+    </description>
+    </item>
+    
+    <item>
     <title>Hugo - testpage</title>
     <link>https://QWxleA.github.io/page/hugo-testpage/</link>
     <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
@@ -843,6 +1240,18 @@ Configuration: &lt;strong&gt;Video&lt;/strong&gt; &amp;gt; &lt;strong&gt;H.265 (
 &lt;div class=&#34;example &#34;&gt;
     This is an example
 &lt;/div&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>Advanced Queries</title>
+    <link>https://QWxleA.github.io/page/advanced-queries/</link>
+    <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/page/advanced-queries/</guid>
+    <description>
+        &lt;p&gt;Placeholder for an Advanced queries tutorial&lt;/p&gt;
 
     </description>
     </item>

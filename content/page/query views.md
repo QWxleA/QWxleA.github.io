@@ -2,13 +2,13 @@
 public: true
 date:
 - 2022-04-17
-lastmod: 
 icon: 📝
 category: development
 tags:
 - datalog
 - clojure
 - hiccup
+subtitle: collection
 title: query views
 categories: development
 lastMod: 2022-04-17

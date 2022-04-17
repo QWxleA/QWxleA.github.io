@@ -61,6 +61,23 @@ h3 {
     code {
         font-size: 1.4rem !important;
     }
+
+    .subtitle {
+        color: var(--heading-color-lighter);
+        font-size: 1.0rem;
+        // float: right;
+        // background-color: pink;
+        &:first-letter {
+            text-transform: uppercase;
+        }
+        &::before {
+            content: "—";
+            // content: "🔁";
+            width: 1em;
+            display: inline-block;
+            margin-right: 0.1em;
+        }
+    }
 }
 
 h4 {

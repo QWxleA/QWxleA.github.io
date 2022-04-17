@@ -28,7 +28,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     
-    <link rel="stylesheet" href="/sass/main.min.33a4641ad8ccdfe2413d47bb66bdb6f803a5f790cbbded483b91cb10e1594a6a.css">
+    <link rel="stylesheet" href="/sass/main.min.669694d5fac2d3c5640eba99f2a05f8a074ccbe710c3e620c270ba4416137608.css">
     
 </head>
     <script>
@@ -97,15 +97,26 @@
     <div class="article-post">
         <div class="side side-right">
             <p>Last edited: <time>April 17, 2022</time>
-            <br/>1 minute reading time</p>
+            <br/>2 minutes reading time</p>
             
 <aside>
     <h3>On this page</h3>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#preparing-your-pages">Preparing your pages</a></li>
+    <li><a href="#preparing-hugo">Preparing Hugo</a></li>
+  </ul>
+</nav>
 </aside>
 
             
 
+
+   
+
+   
+
+   
 
    
 
@@ -143,8 +154,86 @@
   </ul>
   </aside>
         </div>
-        <p>We, as people, are social animals. We live together, we work together, we relax together, but what about <em>learning</em> together? In these days of global pandemics and, be honest, living inside our digital tools we have slowly gone back to being not-very-social. [Digital gardens](<a href="https://QWxleA.github.io/page/digital-garden/">digital garden</a>) are one way to overcome this <em>modern ill</em>. Learning and building/creating in such a way that it is easy for others to see and/or comment on what you do and learn.</p>
-<p>At the same time, being too busy with the technical part will detract from doing any learning, so it should be simple to go from your <a href="pkm">system</a> where you keep your notes/keep track of what you learn, to a website. With the help a a plugin it is easy to export all your public pages, combined with a <a href="https://QWxleA.github.io/page/hugo/">hugo</a> theme that <em>knows</em> back-links and other <a href="https://QWxleA.github.io/page/logseq/">logseq</a> specific tricks, you can now start building your own [garden](<a href="https://QWxleA.github.io/page/digital-garden/">digital garden</a>).</p>
+        <p>We, as people, are social animals. We live together, we work together, we relax together, but what about <em>learning</em> together? In these days of global pandemics and, be honest, living inside our digital tools we have slowly gone back to being not-very-social. <a href="https://QWxleA.github.io/page/digital-garden/">Digital gardens</a> are one way to overcome this <em>modern ill</em>: Learning and building/creating in such a way that it is easy for others to see and/or comment on what you do and learn.</p>
+<p>At the same time, being too busy with the <em>technical part</em> will detract from doing any <mark>
+    learning
+</mark>, so it should be simple to go <em>from</em> your <a href="https://QWxleA.github.io/page/pkm/">system</a> where you keep your notes/keep track of what you learn, <em>to</em> a website. With the help of a plugin it is easy to export all your public pages. Combine this with a <a href="https://QWxleA.github.io/page/hugo/">hugo</a> theme that <em>knows</em> about back-links and other <a href="https://QWxleA.github.io/page/logseq/">logseq</a> specific tricks, you can now start building your own .</p>
+<h2 id="preparing-your-pages">
+    <a href="#preparing-your-pages" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Preparing your pages
+</h2>
+<ul>
+<li>
+<p>Logseq has a special setting for pages that are ready for export, in the header of your page should be set: <code>public:: true</code> (notice the double colon!). It can also be set from the dropdown menu.</p>
+</li>
+<li>
+<p>Next, just export all the pages for <a href="https://QWxleA.github.io/page/hugo/">hugo</a> with the plugin.</p>
+</li>
+<li>
+<div class="important ">
+    <a href="https://QWxleA.github.io/page/hugo/">hugo</a> gets upset if pages are referenced that do not actually exist, so be careful that all the links referenced in a page are also exported.
+</div>
+</li>
+</ul>
+<h2 id="preparing-hugo">
+    <a href="#preparing-hugo" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Preparing Hugo
+</h2>
+<ul>
+<li>Hugo is a general purpose blogging software, not specifically for[digital gardens]( <a href="https://QWxleA.github.io/page/digital-garden/">digital garden</a>) or even <a href="https://QWxleA.github.io/page/logseq/">logseq</a>. So for it to be usefula as a garden we need to add some functionality. For starters, backlinks:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $re := $.File.BaseFileName }}
+</span></span><span style="display:flex;"><span>{{ $backlinks := slice }}
+</span></span><span style="display:flex;"><span>{{ range where .Site.RegularPages &#34;Type&#34; &#34;page&#34; }}
+</span></span><span style="display:flex;"><span>   {{ if and (findRE $re .RawContent) (not (eq $re .File.BaseFileName)) }}
+</span></span><span style="display:flex;"><span>      {{ $backlinks = $backlinks | append . }}
+</span></span><span style="display:flex;"><span>   {{ end }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ if gt (len $backlinks) 0 }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">aside</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h3</span>&gt;Backlinks&lt;/<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;backlinks&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>       {{ range $backlinks }}
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;capitalize&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>       {{ end }}
+</span></span><span style="display:flex;"><span>     &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">aside</span>&gt;
+</span></span><span style="display:flex;"><span>{{ else  }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">aside</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h4</span>&gt;No notes link to this note&lt;/<span style="color:#f92672">h4</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">aside</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">aside</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;related&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ $related := .Site.RegularPages.Related . | complement $backlinks | first 3 -}}
+</span></span><span style="display:flex;"><span>  {{ with $related -}}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h3</span>&gt;slightly related&lt;/<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ range . -}}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;capitalize&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end -}}
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end -}}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">aside</span>&gt;
+</span></span></code></pre></div><ul>
+<li>This snippet will go over all pages, and find out if any of them link to this one.</li>
+</ul>
+<p>That&rsquo;s as far as I&rsquo;ve gotten so far. Not sure what else is needed. More to come&hellip;</p>
 
     </div>
 </div>

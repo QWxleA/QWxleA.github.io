@@ -9,7 +9,7 @@ help: ## Show this help
 push: ## Push pages to github / upstream
 	git push origin master
 
-update: ## Add new items / prepare to push upstream
+update: ## Add new items / prepare to push upstream (Don't forget to commit)
 	hugo
 	git add .
 

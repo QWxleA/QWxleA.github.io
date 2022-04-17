@@ -7,6 +7,7 @@ category: development
 tags:
 - webdev
 - logseq
+subtitle: placeholder
 title: javascript
 categories: development
 lastMod: 2022-04-17

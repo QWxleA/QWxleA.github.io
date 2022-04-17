@@ -13,7 +13,7 @@
       <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/page/building-a-digital-garden-with-logseq-and-hugo/</guid>
-      <description>We, as people, are social animals. We live together, we work together, we relax together, but what about learning together? In these days of global pandemics and, be honest, living inside our digital tools we have slowly gone back to being not-very-social. [Digital gardens](digital garden) are one way to overcome this modern ill. Learning and building/creating in such a way that it is easy for others to see and/or comment on what you do and learn.</description>
+      <description>We, as people, are social animals. We live together, we work together, we relax together, but what about learning together? In these days of global pandemics and, be honest, living inside our digital tools we have slowly gone back to being not-very-social. Digital gardens are one way to overcome this modern ill: Learning and building/creating in such a way that it is easy for others to see and/or comment on what you do and learn.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@
    References    Building a digital garden
   A Brief History &amp;amp; Ethos of the Digital Garden
   Also: MaggieAppleton/digital-gardeners: Resources, links, projects, and ideas for gardeners tending their digital notes on the public interwebs
-  </description>
+  And: (2) Maggie Appleton 🧭 on Twitter: &amp;ldquo;Nerding hard on digital gardens, personal wikis, and experimental knowledge systems with @_jonesian today.</description>
     </item>
     
     <item>
@@ -103,6 +103,26 @@ As it happens, streaming to a Chromecast is not hard, but sending subtitles to i
     </item>
     
     <item>
+      <title>domain-specific language</title>
+      <link>https://QWxleA.github.io/page/domain-specific-language/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/domain-specific-language/</guid>
+      <description>A domain-specific language (DSL) is a computer language specialized to a particular application domain — Wikipedia</description>
+    </item>
+    
+    <item>
+      <title>hiccup</title>
+      <link>https://QWxleA.github.io/page/hiccup/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/hiccup/</guid>
+      <description>Hiccup is a domain-specific language for generating HTML, used mostly in Clojure community.
+For every day use you need very little knowledge of Hiccup, and fortunately (most of it) is surprisingly simple.
+   Let&amp;amp;rsquo;s Hiccup   The most obvious thing you can use Hiccup for is to style the titles of Advanced Queries:  #+BEGIN_QUERY {:title [:h3 &amp;#34;This is hiccup!&amp;#34;]  :query [:find (pull ?b [*])  :where  [task ?</description>
+    </item>
+    
+    <item>
       <title>Hugo - testpage</title>
       <link>https://QWxleA.github.io/page/hugo-testpage/</link>
       <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
@@ -114,6 +134,15 @@ As it happens, streaming to a Chromecast is not hard, but sending subtitles to i
   And some more
      Headline 3    Lorem lipsum
   Lipsum lorum</description>
+    </item>
+    
+    <item>
+      <title>Advanced Queries</title>
+      <link>https://QWxleA.github.io/page/advanced-queries/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/advanced-queries/</guid>
+      <description>Placeholder for an Advanced queries tutorial</description>
     </item>
     
   </channel>

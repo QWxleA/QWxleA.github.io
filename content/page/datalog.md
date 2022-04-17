@@ -6,6 +6,7 @@ icon: 📝
 category: development
 tags:
 - logseq
+subtitle: placeholder
 title: datalog
 categories: development
 lastMod: 2022-04-17

@@ -3,6 +3,7 @@
     --h1-color: #343a40;
     --font-color: #495057;
     --heading-color: #343a40;
+    --heading-color-lighter: lighten(var(--heading-color),50%);
     --background: white;
     --dark-font-color: #1b1d25;
     --medium-font-color: #60656c;

@@ -20,5 +20,16 @@
      Properties   #+BEGIN_QUERY {  :query [:find (pull ?</description>
     </item>
     
+    <item>
+      <title>hiccup</title>
+      <link>https://QWxleA.github.io/page/hiccup/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/hiccup/</guid>
+      <description>Hiccup is a domain-specific language for generating HTML, used mostly in Clojure community.
+For every day use you need very little knowledge of Hiccup, and fortunately (most of it) is surprisingly simple.
+   Let&amp;amp;rsquo;s Hiccup   The most obvious thing you can use Hiccup for is to style the titles of Advanced Queries:  #+BEGIN_QUERY {:title [:h3 &amp;#34;This is hiccup!&amp;#34;]  :query [:find (pull ?b [*])  :where  [task ?</description>
+    </item>
+    
   </channel>
 </rss>
