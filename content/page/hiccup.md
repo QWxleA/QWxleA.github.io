@@ -7,7 +7,7 @@ difficulty: intermediate
 cate🛠gory: development
 public: true
 subtitle: For when html is too hard
-title: hiccup
+title: Hiccup
 categories:
 date: 2022-03-23
 lastMod: 2022-04-17

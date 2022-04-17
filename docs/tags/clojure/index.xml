@@ -14,10 +14,9 @@
       
       <guid>https://QWxleA.github.io/page/query-views/</guid>
       <description>Note: This place is currently a placeholder, hugo gets upset if links are missing.
+Queries are build in a language called datalog, the presentation is done using Hiccup. Mixed in is Clojure, of which I know none.
    Debugging    Usually I add one of these to view raw data from a query before I add custom hiccup view
-  :view (fn [result] (for [r result] [:pre (pr-str r)]))
-  :view (fn [result] (pr-str result))
-     Properties   #+BEGIN_QUERY {  :query [:find (pull ?</description>
+  :view (fn [result] (for [r result] [:pre (pr-str r)]))</description>
     </item>
     
   </channel>

@@ -16,6 +16,8 @@ lastMod: 2022-04-17
 **Note:** This place is currently a placeholder, [hugo]({{< ref "hugo" >}}) gets upset if links are missing.
 
 
+Queries are build in a language called [datalog]({{< ref "datalog" >}}), the presentation is done using [Hiccup]({{< ref "Hiccup" >}}). Mixed in is Clojure, of which I know none.
+
 ### Debugging 
 
 
