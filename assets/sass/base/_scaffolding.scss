@@ -101,6 +101,7 @@ img {
     height: auto;
 }
 
+// way too big QW
 p,
 ol,
 ul,
@@ -108,7 +109,8 @@ dl,
 table,
 blockquote {
     font-size: 1.05rem;
-    margin: 0 0 1.5rem 0;
+    // margin: 0 0 1.5rem 0;
+    margin: 0 0 0.5rem 0;
 }
 
 blockquote p {

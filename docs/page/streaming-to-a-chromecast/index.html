@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title>Streaming to a chromecast | Q&#39;s 🌱</title>
+
+    
+    
+    
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="Streaming to a chromecast | Q&#39;s 🌱"/>
+    <meta itemprop="name" content="Streaming to a chromecast | Q&#39;s 🌱" />
+    <meta name="twitter:title" content="Streaming to a chromecast | Q&#39;s 🌱" />
+    <meta name="application-name" content="Streaming to a chromecast | Q&#39;s 🌱" />
+
+
+    <meta name="description" content="" />
+    <meta name="twitter:description" content=""/>
+    <meta itemprop="description" content=""/>
+    <meta property="og:description" content="" />
+
+    
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/sass/main.min.33a4641ad8ccdfe2413d47bb66bdb6f803a5f790cbbded483b91cb10e1594a6a.css">
+    
+</head>
+    <script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    
+                    Q&#39;s 🌱
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <button id="dark-mode-button">
+                  <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                  <svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="#FFD983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                </button>
+            </div>
+            </div>
+    </div>
+</nav>
+        <main>
+            
+<div class="container ">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>Streaming to a chromecast</h1>
+                </div>
+            </div>
+            <div class="post-meta">                
+                <div class="tags">
+                     
+                    <a href="/categories/macos/">macos</a>
+                     | 
+                     
+                    <a href="/tags/video/">video</a>
+                    
+                </div>
+            </div>
+        </header>
+    </article>
+
+
+    <div class="article-post">
+        <div class="side side-right">
+            <p>Last edited: <time>April 08, 2022</time>
+            <br/>2 minutes reading time</p>
+            
+<aside>
+    <h3>On this page</h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-by-step">Step by step</a>
+      <ul>
+        <li><a href="#handbrake">Handbrake</a></li>
+        <li><a href="#playback--attempt-1">Playback — attempt 1</a></li>
+        <li><a href="#playback--attempt-2">Playback — attempt 2</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+
+            
+
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+
+
+  <aside>
+    <h4>No notes link to this note</h4>
+  </aside>
+
+
+<aside class="related">
+  </aside>
+        </div>
+        <p>My mom complained about an English only TV series on Disney+. What&rsquo;s a helpful son to do?</p>
+<p>As it happens, streaming to a Chromecast is not hard, but sending subtitles to it seems to be all but impossible. So, hardcoded subs it is (Just like the nineties, how retro!).</p>
+<h2 id="step-by-step">
+    <a href="#step-by-step" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Step by step
+</h2>
+<ul>
+<li>
+<p>This was the easiest way to get some subtitled videos on TV:</p>
+</li>
+<li>
+<p>Take an English only video file, from <em>somewhere</em> on the  internet (exercise left to the reader.)</p>
+</li>
+<li>
+<p>Find subtitles, cannot find anything in Dutch, find in English, easy to do.</p>
+</li>
+<li>
+<p>Translate with Google translate (surprisingly good, Ulysses this tv-series is not, but still, happily surprised).</p>
+</li>
+<li>
+<p>The timings are often wrong. <a href="https://subshifter.bitsnbites.eu/">SubShifter - Online SRT Subtitle Resync Tool</a> is a good tool. I just use VLC to find when people start to talk and sync with this. The couple of times I&rsquo;ve done this it was just to find a correct start.</p>
+</li>
+<li>
+<p>Next the key to the whole conundrum: <a href="https://handbrake.fr/">HandBrake: Open Source Video Transcoder</a>. This app has been around for years, but is still actively developed and relatively easy to use.</p>
+</li>
+<li>
+<p>A good alternative is <a href="https://subler.org/">Subler</a>, it is <em>way</em> faster, but cannot hardcode subs, so  for this Handbrake is the obvious choice.</p>
+<ul>
+<li>
+<h3 id="handbrake">
+    <a href="#handbrake" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Handbrake
+</h3>
+<ul>
+<li>To setup Handbrake for encoding on an M1, you need to use the correct settings (the app is universal):
+Configuration: <strong>Video</strong> &gt; <strong>H.265 (VideoToolbox)</strong> &amp; <strong>Chromecast 1080p</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><figure>
+    <img src="/assets/handbrake_1649418443446_0.png" alt="handbrake.png">
+    <figcaption></figcaption>
+  </figure></p>
+<pre><code>+ These settings cut the encoding time in half (still _not_ instantaneous). Next, add everything to the queue and get something to eat.
+</code></pre>
+<h3 id="playback--attempt-1">
+    <a href="#playback--attempt-1" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Playback — attempt 1
+</h3>
+<ul>
+<li>
+<p>The easiest way to send a video file to a Chromecast is using the Chrome Browser:</p>
+</li>
+<li>
+<p>Serve files: <code>python3 -m http.server 8080</code>+</p>
+</li>
+<li>
+<p>Open in Google Chrome+</p>
+</li>
+<li>
+<p><code>⫶</code> &gt; <strong>Cast</strong> &gt; <strong>TV (Chromecast)</strong>, done+</p>
+<ul>
+<li>Worked well, but no way I get my mom to run a local webserver.</li>
+</ul>
+</li>
+</ul>
+<h3 id="playback--attempt-2">
+    <a href="#playback--attempt-2" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Playback — attempt 2
+</h3>
+<ul>
+<li>VLC is a decent player, and it&rsquo;s <em>old</em>, so people are bound to have used it:</li>
+<li>Use VLC to stream, open file</li>
+<li>Then <strong>Playback</strong> &gt; <strong>Renderer</strong> &gt; <strong>TV (Chromecast)</strong></li>
+</ul>
+
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/page/hugo-testpage/" title="Previous post (older)">
+            <span>Previous</span>
+            Hugo - testpage
+            </a>
+        
+        
+        
+        <a rel="next" href="/page/pkm/" title="Next post (newer)">
+            <span>Next</span>
+            pkm
+            </a> 
+        
+    </nav>
+    
+</div>
+ 
+<div class="container">
+    
+</div>
+
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+    </section>
+    <script defer src="/ts/features.882b72337b0ef8cf09fe2162c5a3e8bc2381c17b65e1c654a4fbd770d38fe420.js" data-enable-footnotes="true"></script>
+</footer>
+    </body>
+</html>

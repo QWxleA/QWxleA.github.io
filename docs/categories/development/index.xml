@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>development on Q&#39;s 🌱</title>
+    <link>https://QWxleA.github.io/categories/development/</link>
+    <description>Recent content in development on Q&#39;s 🌱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>datalog</title>
+      <link>https://QWxleA.github.io/page/datalog/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/datalog/</guid>
+      <description>Note: This place is currently a placeholder, hugo gets upset if links are missing.
+   References   Go-to links for Datalog: Learn Datalog Today! Datomic Queries and Rules | Datomic  </description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://QWxleA.github.io/page/hugo/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/hugo/</guid>
+      <description>The plan is to collect useful snippets and code-examples to help creating and maintaining a pkm in Hugo (and posibly Logseq).
+   Automating import  To import pages from logseq:
+#!/usr/bin/env bash  BLOG=$HOME/Documents/QWxleA.github.io NOTES=$BLOG/content/notes ASSETS=&amp;#34;$BLOG/content/notes/assets&amp;#34; HUGOASSETS=$BLOG/static/assets  STARTPAGE=&amp;#34;$NOTES/Start here.md&amp;#34;  ZIP=$HOME/Downloads/publicExport.zip  explode() {  # rm $NOTES/*.md   unzip -o -d $NOTES $ZIP  if [ -d &amp;#34;$ASSETS&amp;#34; ]; then  for a in $ASSETS/*; do  mv &amp;#34;$a&amp;#34; $HUGOASSETS  done  rmdir &amp;#34;$ASSETS&amp;#34;  fi  # FIXME  if [ -f &amp;#34;$STARTPAGE&amp;#34; ]; then  mv &amp;#34;$STARTPAGE&amp;#34; &amp;#34;$BLOG/content/_index.</description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://QWxleA.github.io/page/javascript/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/javascript/</guid>
+      <description>Logseq plugins are developed in Javascript and that is the reason I have been reading more on how to use it well. Here you will find mostly notes related to plugin development.</description>
+    </item>
+    
+  </channel>
+</rss>

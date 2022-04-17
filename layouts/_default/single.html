@@ -7,13 +7,24 @@
                     <h1>{{ .Title }}</h1>
                 </div>
             </div>
+            <div class="post-meta">                
+                <div class="tags">
+                    {{ range (.GetTerms "categories") }} 
+                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                    {{ end }} | 
+                    {{ range (.GetTerms "tags") }} 
+                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                    {{ end }}
+                </div>
+            </div>
         </header>
     </article>
 
 
     <div class="article-post">
         <div class="side side-right">
-            <p>Last edited: <time>{{ .Date.Format "January 02, 2006" }}</time></p>
+            <p>Last edited: <time>{{ .Date.Format "January 02, 2006" }}</time>
+            <br/>{{ .ReadingTime }} {{ cond (eq .ReadingTime 1) "minute" "minutes" }} reading time</p>
             {{ partial "toc" . }}
             {{ partial "backlinks" . }}
         </div>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Page on Q&#39;s 🌱</title>
+    <link>https://QWxleA.github.io/page/</link>
+    <description>Recent content in Page on Q&#39;s 🌱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>datalog</title>
+      <link>https://QWxleA.github.io/page/datalog/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/datalog/</guid>
+      <description>Note: This place is currently a placeholder, hugo gets upset if links are missing.
+   References   Go-to links for Datalog: Learn Datalog Today! Datomic Queries and Rules | Datomic  </description>
+    </item>
+    
+    <item>
+      <title>digital garden</title>
+      <link>https://QWxleA.github.io/page/digital-garden/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/digital-garden/</guid>
+      <description>Note: This place is currently a placeholder, hugo gets upset if links are missing.
+   References    Building a digital garden
+  A Brief History &amp;amp; Ethos of the Digital Garden
+  Also: MaggieAppleton/digital-gardeners: Resources, links, projects, and ideas for gardeners tending their digital notes on the public interwebs
+  </description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://QWxleA.github.io/page/hugo/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/hugo/</guid>
+      <description>The plan is to collect useful snippets and code-examples to help creating and maintaining a pkm in Hugo (and posibly Logseq).
+   Automating import  To import pages from logseq:
+#!/usr/bin/env bash  BLOG=$HOME/Documents/QWxleA.github.io NOTES=$BLOG/content/notes ASSETS=&amp;#34;$BLOG/content/notes/assets&amp;#34; HUGOASSETS=$BLOG/static/assets  STARTPAGE=&amp;#34;$NOTES/Start here.md&amp;#34;  ZIP=$HOME/Downloads/publicExport.zip  explode() {  # rm $NOTES/*.md   unzip -o -d $NOTES $ZIP  if [ -d &amp;#34;$ASSETS&amp;#34; ]; then  for a in $ASSETS/*; do  mv &amp;#34;$a&amp;#34; $HUGOASSETS  done  rmdir &amp;#34;$ASSETS&amp;#34;  fi  # FIXME  if [ -f &amp;#34;$STARTPAGE&amp;#34; ]; then  mv &amp;#34;$STARTPAGE&amp;#34; &amp;#34;$BLOG/content/_index.</description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://QWxleA.github.io/page/javascript/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/javascript/</guid>
+      <description>Logseq plugins are developed in Javascript and that is the reason I have been reading more on how to use it well. Here you will find mostly notes related to plugin development.</description>
+    </item>
+    
+    <item>
+      <title>logseq</title>
+      <link>https://QWxleA.github.io/page/logseq/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/logseq/</guid>
+      <description>Note: This place is currently a placeholder, hugo gets upset if links are missing. In the future this page will be a collection of useful links to learn how to more effectively use Logseq.
+Related: javascript for plugins, datalog for queries.</description>
+    </item>
+    
+    <item>
+      <title>pkm</title>
+      <link>https://QWxleA.github.io/page/pkm/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/pkm/</guid>
+      <description>Personal knowledge management (PKM) is a process of collecting information that a person uses to gather, classify, store, search, retrieve and share knowledge in their  daily activities  (Grundspenkis 2007) and the way in which these processes support work activities (Wright 2005). It is a response to the idea that knowledge workers need to be responsible for their own  growth and learning  (Smedley 2009). It is a  bottom-up approach  to knowledge management (KM) (Pollard 2008).</description>
+    </item>
+    
+    <item>
+      <title>Streaming to a chromecast</title>
+      <link>https://QWxleA.github.io/page/streaming-to-a-chromecast/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/streaming-to-a-chromecast/</guid>
+      <description>My mom complained about an English only TV series on Disney+. What&amp;rsquo;s a helpful son to do?
+As it happens, streaming to a Chromecast is not hard, but sending subtitles to it seems to be all but impossible. So, hardcoded subs it is (Just like the nineties, how retro!).
+   Step by step    This was the easiest way to get some subtitled videos on TV:</description>
+    </item>
+    
+    <item>
+      <title>Hugo - testpage</title>
+      <link>https://QWxleA.github.io/page/hugo-testpage/</link>
+      <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/hugo-testpage/</guid>
+      <description>Hugo testpage    This is a testpage, this is the kind of page you would store in Logseq, to be exported to Hugo
+  This is just a second paragraph.
+     This should be another headline    With some text
+  And some more
+     Headline 3    Lorem lipsum
+  Lipsum lorum</description>
+    </item>
+    
+  </channel>
+</rss>

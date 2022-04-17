@@ -28,3 +28,67 @@
 
 @import "base/dark";
 @import "debug";
+
+//FIXME This should not be here
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+mark {
+    background: #fef3ac;
+    color: #262626;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+// Fixme - this is horribly ugly
+warning:before, caution:before, tip:before, note:before, important:before {
+	font-weight: bolder;
+	font-family: sans-serif;
+}
+
+.warning {
+	border-top: 1px solid #ff0000;
+	border-bottom: 1px solid #ff0000;
+	padding: .5em .5em;
+    margin: .2em
+}
+.caution {
+	border-top: 1px solid #ff0000;
+	border-bottom: 1px solid #ff0000;
+	padding: .5em .5em;
+    margin: .2em
+}
+.tip {
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	padding: .5em .5em;
+    margin: .2em
+}
+.note {
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	padding: .5em .5em;
+    margin: .2em
+}
+.important {
+	border-top: 1px solid #ff0000;
+	border-bottom: 1px solid #ff0000;
+	padding: .5em .5em;
+    margin: .2em
+}
+.example {
+	border-top: 1px solid #62ff00;
+	border-bottom: 1px solid #62ff00;
+	padding: .5em .5em;
+    margin: .2em
+}
+.pinned {
+	// border-top: 1px solid #62ff00;
+	// border-bottom: 1px solid #62ff00;
+    color: #ff0000;
+    background-color: #62ff00;
+	padding: .5em .5em;
+    margin: .2em
+}

@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
-    <title>resonance lists howto | Q&#39;s 🌱</title>
+    <title>undefined | Q&#39;s 🌱</title>
 
     
     
     
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="resonance lists howto | Q&#39;s 🌱"/>
-    <meta itemprop="name" content="resonance lists howto | Q&#39;s 🌱" />
-    <meta name="twitter:title" content="resonance lists howto | Q&#39;s 🌱" />
-    <meta name="application-name" content="resonance lists howto | Q&#39;s 🌱" />
+    <meta property="og:title" content="undefined | Q&#39;s 🌱"/>
+    <meta itemprop="name" content="undefined | Q&#39;s 🌱" />
+    <meta name="twitter:title" content="undefined | Q&#39;s 🌱" />
+    <meta name="application-name" content="undefined | Q&#39;s 🌱" />
 
 
     <meta name="description" content="" />
@@ -28,7 +28,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     
-    <link rel="stylesheet" href="/sass/main.min.ee2c91b1e8648432e440eaea480099ce341644817f2ceeefbe1a528ec7804f73.css">
+    <link rel="stylesheet" href="/sass/main.min.0f2e22ac2573edffd0ef519b83b8f1613dd993bc17bc96ebb2926dd6c5535128.css">
     
 </head>
     <script>
@@ -75,7 +75,19 @@
         <header class="article-header">
             <div class="thumb">
                 <div>
-                    <h1>resonance lists howto</h1>
+                    <h1>undefined</h1>
+                </div>
+            </div>
+            <div class="post-meta">                
+                <div class="tags">
+                     
+                    <a href="/categories/pkm/">pkm</a>
+                     | 
+                     
+                    <a href="/tags/logseq/">logseq</a>
+                     
+                    <a href="/tags/queries/">queries</a>
+                    
                 </div>
             </div>
         </header>
@@ -84,7 +96,8 @@
 
     <div class="article-post">
         <div class="side side-right">
-            <p>Last edited: <time>September 06, 2021</time></p>
+            <p>Last edited: <time>September 06, 2021</time>
+            <br/>4 minutes reading time</p>
             
 <aside>
     <h3>On this page</h3>
@@ -102,6 +115,24 @@
 
             
 
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
 
    
 
@@ -133,14 +164,6 @@
 
    
 
-   
-
-   
-
-   
-
-   
-
 
 
   <aside>
@@ -148,7 +171,7 @@
     <div class="backlinks">
       <ul>
        
-          <li><a href="/notes/logseq-advanced-queries-tutorial/">logseq advanced queries tutorial</a></li>
+          <li><a href="/notes/advanced-query-tutorial-v1/">undefined</a></li>
        
      </ul>
     </div>
@@ -160,11 +183,9 @@
         </div>
         <p>From a question on the Logseq forum: <a href="https://discuss.logseq.com/t/advanced-queries-creating-a-resonance-calendar-from-queries/2351">Creating a Resonance Calendar from queries</a></p>
 <p>A resonance calendar is taken from a video created by Ali Abdaal <a href="https://www.youtube.com/watch?v=lKYBB-Uw1IM">How I use Notion as a Resonance Calendar - YouTube</a>. It&rsquo;s a list of interesting (resonating) resources, added to your notes. Resources can be one of:</p>
-<ul>
-<li>Movies</li>
-<li>Podcasts</li>
-<li>Articles</li>
-</ul>
+<p>Movies</p>
+<p>Podcasts</p>
+<p>Articles</p>
 <p>How to implement this in logseq?</p>
 <h2 id="step-1--gather-a-list-of-items">
     <a href="#step-1--gather-a-list-of-items" class="anchor">
@@ -203,13 +224,11 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>This is a fairly straight forward query:</p>
-<ul>
-<li>line <strong>6</strong>: take the page properties of <code>?page</code> (set in line <strong>3</strong>) and store them in <code>?props</code></li>
-<li>line <strong>7</strong>: of all the different properties, take <code>:type</code> and store it in <code>?type</code></li>
-<li>line <strong>8</strong>: check if <code>?type</code> is one of: movie, article or book</li>
-<li>Done!</li>
-</ul>
-<p>Important: book != <code>[[book]]</code>. Don&rsquo;t use <code>[[book]]</code> in type.</p>
+<p>line <strong>6</strong>: take the page properties of <code>?page</code> (set in line <strong>3</strong>) and store them in <code>?props</code></p>
+<p>line <strong>7</strong>: of all the different properties, take <code>:type</code> and store it in <code>?type</code></p>
+<p>line <strong>8</strong>: check if <code>?type</code> is one of: movie, article or book</p>
+<p>Done!</p>
+<p>Important: book != <code>[object Promise]</code>. Don&rsquo;t use <code>[object Promise]</code> in type.</p>
 <h2 id="step-2--remove-some-stuff-we-dont-want-to-see">
     <a href="#step-2--remove-some-stuff-we-dont-want-to-see" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -248,30 +267,18 @@
 </span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
 </span></span><span style="display:flex; background-color:#3c3d38"><span>(<span style="color:#a6e22e">not</span>
 </span></span><span style="display:flex; background-color:#3c3d38"><span>[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
-</span></span><span style="display:flex; background-color:#3c3d38"><span>[(= <span style="color:#e6db74">&#34;[[1/10]]&#34;</span> ?rating)]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[(= <span style="color:#e6db74">&#34;[object Promise]&#34;</span> ?rating)]
 </span></span><span style="display:flex; background-color:#3c3d38"><span>)
 </span></span><span style="display:flex;"><span>]}
 </span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>New are the line <strong>9 to 12</strong></p>
-<ul>
-<li>
 <p>line <strong>9</strong>: a <strong>not</strong> statement, everything that matches this query will be <em>excluded</em> from the result</p>
-</li>
-<li>
 <p>line <strong>10</strong>: again, a page property</p>
-</li>
-<li>
 <p>line <strong>11</strong>: but this time we search for <code>:rating</code> and we match it with <code>1/10</code></p>
-</li>
-<li>
 <p>line <strong>12</strong>: close the <code>not</code> statement</p>
-</li>
-<li>
 <p><strong>Result:</strong> same list, but without the ones rated <code>1/10</code></p>
-</li>
-</ul>
 <h2 id="step-2b--only-the-bad-stuff">
     <a href="#step-2b--only-the-bad-stuff" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -308,7 +315,7 @@
 </span></span><span style="display:flex;"><span>[(get ?props <span style="color:#e6db74">:type</span>) ?type]
 </span></span><span style="display:flex;"><span>[(contains? <span style="color:#f92672">#</span>{<span style="color:#e6db74">&#34;movie&#34;</span> <span style="color:#e6db74">&#34;article&#34;</span> <span style="color:#e6db74">&#34;book&#34;</span>} ?type)]
 </span></span><span style="display:flex;"><span>[(get ?props <span style="color:#e6db74">:rating</span>) ?rating]
-</span></span><span style="display:flex; background-color:#3c3d38"><span>[(= <span style="color:#e6db74">&#34;[[1/10]]&#34;</span> ?rating)]
+</span></span><span style="display:flex; background-color:#3c3d38"><span>[(= <span style="color:#e6db74">&#34;[object Promise]&#34;</span> ?rating)]
 </span></span><span style="display:flex;"><span>]}
 </span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
 </span></span></code></pre></td></tr></table>
@@ -361,7 +368,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Notice line <strong>12</strong> the <code>contains?</code> statement is quite complicated. This is because <code>1/10</code> and <code>2/10</code> are really <code>[[1/10]] and </code>[[2/10]]. They&rsquo;re not just text, they are searchable items. This is different from <code>type</code> in <em>Resonance List 1</em>, line <strong>8</strong>.</p>
+</div><p>Notice line <strong>12</strong> the <code>contains?</code> statement is quite complicated. This is because <code>1/10</code> and <code>2/10</code> are really <code>[object Promise] and </code>[object Promise]. They&rsquo;re not just text, they are searchable items. This is different from <code>type</code> in <em>Resonance List 1</em>, line <strong>8</strong>.</p>
 <h2 id="step-4--remove-by-tag">
     <a href="#step-4--remove-by-tag" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -373,7 +380,7 @@
     Step 4 — remove by tag
 </h2>
 <p>But what if you would like to have a tag that shows how terrible the book or movie was?</p>
-<p>Simple, add <code>tags:: [[terrible]]</code> (or just <code>terrible</code>, if you never want to list them, just change it accordingly in the listing below)</p>
+<p>Simple, add <code>tags:: [object Promise]</code> (or just <code>terrible</code>, if you never want to list them, just change it accordingly in the listing below)</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -424,7 +431,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">#</span>+END_QUERY
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>New are the lines <strong>13</strong> and <strong>14</strong>, we exclude <code>[[terrible]]</code> from our list.</p>
+</div><p>New are the lines <strong>13</strong> and <strong>14</strong>, we exclude <code>[object Promise]</code> from our list.</p>
 <p>If you want to add more tags, then look at <em>Resonance List 3</em> how to do that.</p>
 <h2 id="conclusion">
     <a href="#conclusion" class="anchor">
@@ -436,7 +443,7 @@
     </a>
     Conclusion
 </h2>
-<p>Logseq&rsquo;s search functionality is not as easy as one would wish for, but it is adaquate, and can be made to search for the data you&rsquo;re interested in.</p>
+<p>Logseq&rsquo;s search functionality is not as easy as one would wish for, but it is adequate, and can be made to search for the data you&rsquo;re interested in.</p>
 
     </div>
 </div>
@@ -447,14 +454,14 @@
         
         <a rel="prev" href="/notes/using-btrfs-for-home-on-elementaryos/" title="Previous post (older)">
             <span>Previous</span>
-            Using Btrfs for Home on ElementaryOS
+            undefined
             </a>
         
         
         
         <a rel="next" href="/notes/xmonad/" title="Next post (newer)">
             <span>Next</span>
-            xmonad
+            undefined
             </a> 
         
     </nav>

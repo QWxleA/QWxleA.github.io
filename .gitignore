@@ -2,4 +2,3 @@ resources/_gen/
 themes/cactus
 #.*
 \#*\#
-.hugo_build.lock

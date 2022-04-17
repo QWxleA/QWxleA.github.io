@@ -6,38 +6,34 @@
     <description>Recent content in logseq on Q&#39;s 🌱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/logseq/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/logseq/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>logseq 24 hr pages tutorial</title>
-      <link>https://QWxleA.github.io/notes/logseq-24-hr-pages-tutorial/</link>
-      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      <title>datalog</title>
+      <link>https://QWxleA.github.io/page/datalog/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://QWxleA.github.io/notes/logseq-24-hr-pages-tutorial/</guid>
-      <description>A small query that lists all the changes, made during the last 24 hours.
-With some pointers from @lauren#0001 and @Miro#1174 and a bit of help from google, I found: logseq/query_react.cljs , which pointed to three additional helpers:
- :right-now-ms which is this moment in milliseconds from 1970 :start-of-today-ms which points to this morning 0:00 :end-of-today-ms which points to tonight 24:00  They can be used like this:
-#+BEGIN_QUERY {:title [:h2 &amp;#34;My 24h changes&amp;#34;] :query [:find (pull ?</description>
+      <guid>https://QWxleA.github.io/page/datalog/</guid>
+      <description>Note: This place is currently a placeholder, hugo gets upset if links are missing.
+   References   Go-to links for Datalog: Learn Datalog Today! Datomic Queries and Rules | Datomic  </description>
     </item>
     
     <item>
-      <title>logseq advanced queries tutorial</title>
-      <link>https://QWxleA.github.io/notes/logseq-advanced-queries-tutorial/</link>
-      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      <title>javascript</title>
+      <link>https://QWxleA.github.io/page/javascript/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://QWxleA.github.io/notes/logseq-advanced-queries-tutorial/</guid>
-      <description>Playing around with queries can be detrimental to the health of your graph as you may create blocks and pages just for testing purposes. Use a dedicated playground graph for this!  Second point, if you copy/paste queries, go over the code again, Logseq sometimes adds extra line-breaks / characters in strange places. Personally, I write my (longer) queries in vscode, and then, remove all tab-characters, and then copy the query to Logseq</description>
+      <guid>https://QWxleA.github.io/page/javascript/</guid>
+      <description>Logseq plugins are developed in Javascript and that is the reason I have been reading more on how to use it well. Here you will find mostly notes related to plugin development.</description>
     </item>
     
     <item>
-      <title>resonance lists howto</title>
-      <link>https://QWxleA.github.io/notes/resonance-lists-howto/</link>
-      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      <title>logseq</title>
+      <link>https://QWxleA.github.io/page/logseq/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://QWxleA.github.io/notes/resonance-lists-howto/</guid>
-      <description>From a question on the Logseq forum: Creating a Resonance Calendar from queries
-A resonance calendar is taken from a video created by Ali Abdaal How I use Notion as a Resonance Calendar - YouTube. It&amp;rsquo;s a list of interesting (resonating) resources, added to your notes. Resources can be one of:
- Movies Podcasts Articles  How to implement this in logseq?
-   Step 1 — gather a list of items  1 2 3 4 5 6 7 8 9 10  #+BEGIN_QUERY {:title [:h2 &amp;#34;Resonance list 1&amp;#34;] :query [ :find (pull ?</description>
+      <guid>https://QWxleA.github.io/page/logseq/</guid>
+      <description>Note: This place is currently a placeholder, hugo gets upset if links are missing. In the future this page will be a collection of useful links to learn how to more effectively use Logseq.
+Related: javascript for plugins, datalog for queries.</description>
     </item>
     
   </channel>

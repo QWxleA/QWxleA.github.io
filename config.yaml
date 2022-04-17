@@ -13,7 +13,7 @@ rssLimit: 20
 author:
   name: "Alex Qwxlea"
   url: "https://github.com/qwxlea"
-  avatar: "path/to/some-image.jpg"
+  avatar: "android-chrome-512x512.png"
 
 frontmatter:
   date:

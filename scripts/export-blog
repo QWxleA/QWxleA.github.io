@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+BLOG=$HOME/Documents/QWxleA.github.io
+CONTENT=$BLOG/content/
+ASSETS="$BLOG/content/assets"
+HUGOASSETS=$BLOG/static/assets
+
+STARTPAGE="$CONTENT/page/ Start here.md"
+INDEXPAGE="$CONTENT/_index.md"
+
+ZIP=$HOME/Downloads/publicExport.zip
+
+explode() {
+    #running with scissors
+    rm $CONTENT/*.md 
+    unzip -o -d $CONTENT $ZIP
+    if [ -d "$ASSETS"  ]; then
+        for a in $ASSETS/*; do 
+            mv "$a" $HUGOASSETS
+        done
+        rmdir "$ASSETS"
+    fi
+    # FIX startpage (FIXMEFIXME about page)
+    if [ -f "$STARTPAGE" ]; then
+        mv "$STARTPAGE" "$INDEXPAGE"
+        #FIXME relative path?
+        gsed -i "s@ref \"@ref \"\/page\/@g" "$INDEXPAGE"
+    fi
+}
+
+usage() { echo "Usage: $0 [-s <45|90>] [-p <string>]" 1>&2; exit 1; }
+
+while getopts "lx" o; do
+    case "${o}" in
+        l)
+            unzip -v $ZIP
+            exit
+            ;;
+        x)
+            explode
+            exit
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+usage

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on Q&#39;s 🌱</title>
+    <link>https://QWxleA.github.io/categories/hugo/</link>
+    <description>Recent content in hugo on Q&#39;s 🌱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Thu, 17 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo - testpage</title>
+      <link>https://QWxleA.github.io/page/hugo-testpage/</link>
+      <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/hugo-testpage/</guid>
+      <description>Hugo testpage    This is a testpage, this is the kind of page you would store in Logseq, to be exported to Hugo
+  This is just a second paragraph.
+     This should be another headline    With some text
+  And some more
+     Headline 3    Lorem lipsum
+  Lipsum lorum</description>
+    </item>
+    
+  </channel>
+</rss>

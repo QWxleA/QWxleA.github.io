@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
-    <title>Using Btrfs for Home on ElementaryOS | Q&#39;s 🌱</title>
+    <title>undefined | Q&#39;s 🌱</title>
 
     
     
     
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="Using Btrfs for Home on ElementaryOS | Q&#39;s 🌱"/>
-    <meta itemprop="name" content="Using Btrfs for Home on ElementaryOS | Q&#39;s 🌱" />
-    <meta name="twitter:title" content="Using Btrfs for Home on ElementaryOS | Q&#39;s 🌱" />
-    <meta name="application-name" content="Using Btrfs for Home on ElementaryOS | Q&#39;s 🌱" />
+    <meta property="og:title" content="undefined | Q&#39;s 🌱"/>
+    <meta itemprop="name" content="undefined | Q&#39;s 🌱" />
+    <meta name="twitter:title" content="undefined | Q&#39;s 🌱" />
+    <meta name="application-name" content="undefined | Q&#39;s 🌱" />
 
 
     <meta name="description" content="" />
@@ -28,7 +28,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     
-    <link rel="stylesheet" href="/sass/main.min.ee2c91b1e8648432e440eaea480099ce341644817f2ceeefbe1a528ec7804f73.css">
+    <link rel="stylesheet" href="/sass/main.min.0f2e22ac2573edffd0ef519b83b8f1613dd993bc17bc96ebb2926dd6c5535128.css">
     
 </head>
     <script>
@@ -75,7 +75,19 @@
         <header class="article-header">
             <div class="thumb">
                 <div>
-                    <h1>Using Btrfs for Home on ElementaryOS</h1>
+                    <h1>undefined</h1>
+                </div>
+            </div>
+            <div class="post-meta">                
+                <div class="tags">
+                     
+                    <a href="/categories/linux/">linux</a>
+                     | 
+                     
+                    <a href="/tags/elementaryos/">elementaryos</a>
+                     
+                    <a href="/tags/btrfs/">btrfs</a>
+                    
                 </div>
             </div>
         </header>
@@ -84,7 +96,8 @@
 
     <div class="article-post">
         <div class="side side-right">
-            <p>Last edited: <time>September 03, 2021</time></p>
+            <p>Last edited: <time>September 03, 2021</time>
+            <br/>3 minutes reading time</p>
             
 <aside>
     <h3>On this page</h3>
@@ -98,6 +111,16 @@
 
             
 
+
+   
+
+   
+
+   
+
+   
+
+   
 
    
 
@@ -177,14 +200,14 @@
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo lsblk -f /dev/sda
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>NAME            FSTYPE      LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINT
-</span></span><span style="display:flex;"><span>sda
+</span></span><span style="display:flex;"><span>sda                                                                                     
 </span></span><span style="display:flex;"><span>├─sda1          vfat              336E-86E5                               251.7M     4% /boot/efi
 </span></span><span style="display:flex;"><span>├─sda2          ext4              0b3ad1d4-bbc5-42c5-a44b-4574a7c18fa4    316.5M    23% /boot
-</span></span><span style="display:flex;"><span>└─sda3          crypto_LUKS       6264e4ed-d493-44b9-966b-a5eaf887a3ab
-</span></span><span style="display:flex; background-color:#3c3d38"><span>└─cryptdata   LVM2_member       Uhf4VJ-VO1z-a5FI-ppNz-zzVB-2RFZ-C6Rpm0
-</span></span><span style="display:flex;"><span>├─data-root ext4              13c02579-526b-4652-a792-b41286ac3a81     14.6G    44% /
-</span></span><span style="display:flex;"><span>├─data-swap swap              b9c6201c-2f90-4b49-a3d9-91232264568c                  <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>└─data-home btrfs             15669fa8-d62d-4925-a826-6153e65aaa6a    236.8G    46% /home
+</span></span><span style="display:flex;"><span>└─sda3          crypto_LUKS       6264e4ed-d493-44b9-966b-a5eaf887a3ab                  
+</span></span><span style="display:flex; background-color:#3c3d38"><span>└─cryptdata   LVM2_member       Uhf4VJ-VO1z-a5FI-ppNz-zzVB-2RFZ-C6Rpm0                
+</span></span><span style="display:flex;"><span>  ├─data-root ext4              13c02579-526b-4652-a792-b41286ac3a81     14.6G    44% /
+</span></span><span style="display:flex;"><span>  ├─data-swap swap              b9c6201c-2f90-4b49-a3d9-91232264568c                  <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>  └─data-home btrfs             15669fa8-d62d-4925-a826-6153e65aaa6a    236.8G    46% /home
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Figure 1.</p>
@@ -204,16 +227,36 @@
 <p><code>Lvdisplay</code> prints information about the logical volumes defined inside to VG, this one is usefull to see if resizing data-root and creating data-home worked.</p>
 <p>Now the tools we will use (do all this from the Elementary installer, or some other live-image, most, if not all these commands need <em>sudo</em>):</p>
 <ol>
-<li>Unlock the encryped volume: <code>cryptsetup luksOpen /dev/sda3 encrypted_system</code></li>
-<li>Is it all there? <code>lvdisplay</code></li>
-<li>Make sure you&rsquo;re drive is clean: <code>e2fsck - f /dev/data/root</code></li>
-<li>Optional: <code>resize2fs /dev/data/root 30G</code></li>
-<li>The key command: <code>lvreduce - L 30G - r /dev/data/root</code>. Not using <code>-r</code> (or first doing 4) will make the system unbootable. Ext4 doesn&rsquo;t like finding it&rsquo;s space suddenly reduced!</li>
-<li>Next, we can create a new logical volume in the free space: <code>lvcreate  - l 100%FREE -n home data</code>. <code>-n</code> indicates the name, data is the Volume Group</li>
-<li>create filesystem: <code>mkfs.btrfs /dev/data/home</code></li>
-<li>Copy the UUID (if you forget, you can use <code>lsblk</code>, as in figure 1)</li>
-<li>Mount data-root: <code>mount /dev/data/root /mnt</code></li>
-<li>Add your new drive to fstab: <code>vi /mnt/etc/fstab</code></li>
+<li>
+<p>Unlock the encryped volume: <code>cryptsetup luksOpen /dev/sda3 encrypted_system</code></p>
+</li>
+<li>
+<p>Is it all there? <code>lvdisplay</code></p>
+</li>
+<li>
+<p>Make sure you&rsquo;re drive is clean: <code>e2fsck - f /dev/data/root</code></p>
+</li>
+<li>
+<p>Optional: <code>resize2fs /dev/data/root 30G</code></p>
+</li>
+<li>
+<p>The key command: <code>lvreduce - L 30G - r /dev/data/root</code>. Not using <code>-r</code> (or first doing 4) will make the system unbootable. Ext4 doesn&rsquo;t like finding it&rsquo;s space suddenly reduced!</p>
+</li>
+<li>
+<p>Next, we can create a new logical volume in the free space: <code>lvcreate  - l 100%FREE -n home data</code>. <code>-n</code> indicates the name, data is the Volume Group</p>
+</li>
+<li>
+<p>create filesystem: <code>mkfs.btrfs /dev/data/home</code></p>
+</li>
+<li>
+<p>Copy the UUID (if you forget, you can use <code>lsblk</code>, as in figure 1)</p>
+</li>
+<li>
+<p>Mount data-root: <code>mount /dev/data/root /mnt</code></p>
+</li>
+<li>
+<p>Add your new drive to fstab: <code>vi /mnt/etc/fstab</code></p>
+</li>
 </ol>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -233,10 +276,10 @@
 </span></span><span style="display:flex; background-color:#3c3d38"><span>UUID<span style="color:#f92672">=</span>15669fa8-d62d-4925-a826-6153e65aaa6a /home btrfs noatime,ssd,space_cache,commit<span style="color:#f92672">=</span>120,compress<span style="color:#f92672">=</span>zstd,discard<span style="color:#f92672">=</span>async,x-systemd-timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Figure 2.
-<blockquote class="hint tip">
+</div><p>Figure 2.</p>
+<blockquote class="hint ">
     If you have used the system already, rename your old <code>/home</code>, so you can copy the data to the new drive
-</blockquote></p>
+</blockquote>
 <p>That&rsquo;s it, now your <code>/home</code> can use snapshots, compression and all the other goodies from a modern FS.</p>
 
     </div>
@@ -250,7 +293,7 @@
         
         <a rel="next" href="/notes/resonance-lists-howto/" title="Next post (newer)">
             <span>Next</span>
-            resonance lists howto
+            undefined
             </a> 
         
     </nav>
