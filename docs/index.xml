@@ -7,6 +7,19 @@
     <language>en-GB</language>
     <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+    <title>building a digital garden with Logseq and Hugo</title>
+    <link>https://QWxleA.github.io/page/building-a-digital-garden-with-logseq-and-hugo/</link>
+    <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/page/building-a-digital-garden-with-logseq-and-hugo/</guid>
+    <description>
+        &lt;p&gt;We, as people, are social animals. We live together, we work together, we relax together, but what about &lt;em&gt;learning&lt;/em&gt; together? In these days of global pandemics and, be honest, living inside our digital tools we have slowly gone back to being not-very-social. [Digital gardens](&lt;a href=&#34;https://QWxleA.github.io/page/digital-garden/&#34;&gt;digital garden&lt;/a&gt;) are one way to overcome this &lt;em&gt;modern ill&lt;/em&gt;. Learning and building/creating in such a way that it is easy for others to see and/or comment on what you do and learn.&lt;/p&gt;
+&lt;p&gt;At the same time, being too busy with the technical part will detract from doing any learning, so it should be simple to go from your &lt;a href=&#34;pkm&#34;&gt;system&lt;/a&gt; where you keep your notes/keep track of what you learn, to a website. With the help a a plugin it is easy to export all your public pages, combined with a &lt;a href=&#34;https://QWxleA.github.io/page/hugo/&#34;&gt;hugo&lt;/a&gt; theme that &lt;em&gt;knows&lt;/em&gt; back-links and other &lt;a href=&#34;https://QWxleA.github.io/page/logseq/&#34;&gt;logseq&lt;/a&gt; specific tricks, you can now start building your own [garden](&lt;a href=&#34;https://QWxleA.github.io/page/digital-garden/&#34;&gt;digital garden&lt;/a&gt;).&lt;/p&gt;
+
+    </description>
+    </item>
+    
+    <item>
     <title>datalog</title>
     <link>https://QWxleA.github.io/page/datalog/</link>
     <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
@@ -216,6 +229,304 @@ In the future this page will be a collection of useful links to learn how to mor
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This place is currently a placeholder, &lt;a href=&#34;https://QWxleA.github.io/page/hugo/&#34;&gt;hugo&lt;/a&gt; gets upset if links are missing.&lt;/p&gt;
 
+    </description>
+    </item>
+    
+    <item>
+    <title>query views</title>
+    <link>https://QWxleA.github.io/page/query-views/</link>
+    <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+    
+    <guid>https://QWxleA.github.io/page/query-views/</guid>
+    <description>
+        &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This place is currently a placeholder, &lt;a href=&#34;https://QWxleA.github.io/page/hugo/&#34;&gt;hugo&lt;/a&gt; gets upset if links are missing.&lt;/p&gt;
+&lt;h3 id=&#34;debugging&#34;&gt;
+    &lt;a href=&#34;#debugging&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Debugging
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Usually I add one of these to view raw data from a query before I add custom hiccup view&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:view (fn [result] (for [r result] [:pre (pr-str r)]))&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:view (fn [result] (pr-str result))&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;properties&#34;&gt;
+    &lt;a href=&#34;#properties&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Properties
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [{&lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/journal-day&lt;/span&gt;]} &lt;span style=&#34;color:#e6db74&#34;&gt;:block/properties&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/properties&lt;/span&gt; ?bprops]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      [(get ?bprops &lt;span style=&#34;color:#e6db74&#34;&gt;:distanse&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;nil&amp;#34;&lt;/span&gt;) ?bs]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      [(not= ?bs &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;nil&amp;#34;&lt;/span&gt;)]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:result-transform&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                     (sort-by (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[s]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        (&lt;span style=&#34;color:#a6e22e&#34;&gt;get-in&lt;/span&gt; s [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/journal-day&lt;/span&gt;])) (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[a b] (&lt;span style=&#34;color:#a6e22e&#34;&gt;compare&lt;/span&gt; b a)) result)) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[rows] [&lt;span style=&#34;color:#e6db74&#34;&gt;:table&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:thead&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Dato&amp;#34;&lt;/span&gt;] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Distanse&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Økt&amp;#34;&lt;/span&gt;] ] ] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:tbody&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(for [r rows] [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;get-in&lt;/span&gt; r [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt;])] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;get-in&lt;/span&gt; r [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/properties&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:distanse&lt;/span&gt;])]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;get-in&lt;/span&gt; r [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/properties&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:økt&lt;/span&gt;])] ])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   ]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;image-links&#34;&gt;
+    &lt;a href=&#34;#image-links&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Image links
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h4&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Image gallery&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;:in&lt;/span&gt; $ ?pattern ?current-page
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/content&lt;/span&gt; ?c]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [?p &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; ?current-page]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt; ?p]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [(re-pattern ?pattern) ?q]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [(re-find ?q ?c)]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:inputs&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;^!.*https://www.dropbox.com/s/&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:current-page&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:result-transform&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                     (sort-by (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[h]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                (get h &lt;span style=&#34;color:#e6db74&#34;&gt;:db/id&lt;/span&gt;)) result))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         (when (seq result)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           [&lt;span style=&#34;color:#e6db74&#34;&gt;:div&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:class&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;flex flex-row flex-wrap py-2&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (for [{&lt;span style=&#34;color:#e6db74&#34;&gt;:block/keys&lt;/span&gt; [uuid content]} result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              [&lt;span style=&#34;color:#e6db74&#34;&gt;:span&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:width&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;4rem&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:key&lt;/span&gt; uuid &lt;span style=&#34;color:#e6db74&#34;&gt;:class&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;flex flex-col items-center mr-2 mb-2&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               [&lt;span style=&#34;color:#e6db74&#34;&gt;:a&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:href&lt;/span&gt; (str &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#/page/&amp;#34;&lt;/span&gt; uuid)} [&lt;span style=&#34;color:#e6db74&#34;&gt;:img&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:style&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:width&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;4rem&amp;#34;&lt;/span&gt;} &lt;span style=&#34;color:#e6db74&#34;&gt;:src&lt;/span&gt; (re-find (re-pattern &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://.*?(?=(?:\\))|$)&amp;#34;&lt;/span&gt;) (str content))}]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              )]))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;find-all-unlinked-pages&#34;&gt;
+    &lt;a href=&#34;#find-all-unlinked-pages&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Find all unlinked pages
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;link:: &lt;a href=&#34;https://discord.com/channels/725182569297215569/743139225746145311/832512082289229824&#34;&gt;Discord&lt;/a&gt;
+date:: 2021-04-16&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  {&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Orphan pages&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	   &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; ?name
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	           &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	           [?p &lt;span style=&#34;color:#e6db74&#34;&gt;:page/name&lt;/span&gt; ?name]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	           (&lt;span style=&#34;color:#a6e22e&#34;&gt;not&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	            [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/ref-pages&lt;/span&gt; ?p1]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	            [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt; ?p2]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	            (or [?p1 &lt;span style=&#34;color:#e6db74&#34;&gt;:page/name&lt;/span&gt; ?name]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	                [?p2 &lt;span style=&#34;color:#e6db74&#34;&gt;:page/name&lt;/span&gt; ?name]))]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	   &lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	           [&lt;span style=&#34;color:#e6db74&#34;&gt;:div.flex.flex-col&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	            (for [page result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	              [&lt;span style=&#34;color:#e6db74&#34;&gt;:a&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:href&lt;/span&gt; (str &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#/page/&amp;#34;&lt;/span&gt; page)} (&lt;span style=&#34;color:#a6e22e&#34;&gt;clojure.string/capitalize&lt;/span&gt; page)])])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#e6db74&#34;&gt;:collapsed?&lt;/span&gt; true}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;query-to-show-a-random-page&#34;&gt;
+    &lt;a href=&#34;#query-to-show-a-random-page&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Query to show a random page
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;link:: &lt;a href=&#34;https://discord.com/channels/725182569297215569/743139225746145311/867375290396311633&#34;&gt;Discord&lt;/a&gt;
+date:: 2021-07-21&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	 &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  {&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Give me a random page!!!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	   &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; ?name
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	           &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	           [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt; ?name]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	   &lt;span style=&#34;color:#e6db74&#34;&gt;:result-transform&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	                       [(&lt;span style=&#34;color:#a6e22e&#34;&gt;rand-nth&lt;/span&gt; result)])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	         [&lt;span style=&#34;color:#e6db74&#34;&gt;:div.flex.flex-col&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	          (for [page result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	            [&lt;span style=&#34;color:#e6db74&#34;&gt;:a&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:href&lt;/span&gt; (str &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/#/page/&amp;#34;&lt;/span&gt; page)} (&lt;span style=&#34;color:#a6e22e&#34;&gt;clojure.string/capitalize&lt;/span&gt; page)])])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	   &lt;span style=&#34;color:#e6db74&#34;&gt;:collapsed?&lt;/span&gt; true}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;query-to-create-a-table-with-page-and-todo-count&#34;&gt;
+    &lt;a href=&#34;#query-to-create-a-table-with-page-and-todo-count&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Query to create a table with page and todo count
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;link:: &lt;a href=&#34;https://discord.com/channels/725182569297215569/743139225746145311/921337299164356658&#34;&gt;Discord&lt;/a&gt;
+date:: 2021-12-17&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  {&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TODO by page&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	    &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt;     [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/parent&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	       [&lt;span style=&#34;color:#e6db74&#34;&gt;:db/id&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt;]}])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	    &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	             [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; ?marker]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	             [(= &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TODO&amp;#34;&lt;/span&gt; ?marker)] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#e6db74&#34;&gt;:result-transform&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	                          (map (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;key value {&lt;span style=&#34;color:#e6db74&#34;&gt;:page&lt;/span&gt; (get key &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt;) &lt;span style=&#34;color:#e6db74&#34;&gt;:count&lt;/span&gt; (count value)}) (&lt;span style=&#34;color:#a6e22e&#34;&gt;group-by&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt; result))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	                  )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[rows] [&lt;span style=&#34;color:#e6db74&#34;&gt;:table&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	   [&lt;span style=&#34;color:#e6db74&#34;&gt;:thead&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	    [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	     [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Page&amp;#34;&lt;/span&gt;] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	     [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Count&amp;#34;&lt;/span&gt;] ] ] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	   [&lt;span style=&#34;color:#e6db74&#34;&gt;:tbody&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  (for [r rows] [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	     [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:a&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:href&lt;/span&gt; (str &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#/page/&amp;#34;&lt;/span&gt; (get r &lt;span style=&#34;color:#e6db74&#34;&gt;:page&lt;/span&gt;))} (get r &lt;span style=&#34;color:#e6db74&#34;&gt;:page&lt;/span&gt;)] ] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	     [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (get r &lt;span style=&#34;color:#e6db74&#34;&gt;:count&lt;/span&gt;)] ])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	     ]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;grouping&#34;&gt;
+    &lt;a href=&#34;#grouping&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Grouping
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TODO by page&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt;     [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [&lt;span style=&#34;color:#e6db74&#34;&gt;:block/scheduled&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/parent&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:block/page&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     [&lt;span style=&#34;color:#e6db74&#34;&gt;:db/id&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/name&lt;/span&gt;]}])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/scheduled&lt;/span&gt; _]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; ?marker]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           [(= &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TODO&amp;#34;&lt;/span&gt; ?marker)] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:result-transform&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        (map (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;key value {&lt;span style=&#34;color:#e6db74&#34;&gt;:page&lt;/span&gt; key &lt;span style=&#34;color:#e6db74&#34;&gt;:count&lt;/span&gt; (count value)}) (&lt;span style=&#34;color:#a6e22e&#34;&gt;group-by&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/scheduled&lt;/span&gt; result))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[rows] [&lt;span style=&#34;color:#e6db74&#34;&gt;:table&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:thead&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Page&amp;#34;&lt;/span&gt;] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Count&amp;#34;&lt;/span&gt;] ] ] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:tbody&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(for [r rows] [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (get r &lt;span style=&#34;color:#e6db74&#34;&gt;:page&lt;/span&gt;)] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (get r &lt;span style=&#34;color:#e6db74&#34;&gt;:count&lt;/span&gt;)] ])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   ]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;view&#34;&gt;
+    &lt;a href=&#34;#view&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    View
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:h2&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Programming languages list&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?b [*])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       [?b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/properties&lt;/span&gt; ?p]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       [(get ?p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;) ?t]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       [(= &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;programming_lang&amp;#34;&lt;/span&gt; ?t)]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (when (seq result)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         (&lt;span style=&#34;color:#66d9ef&#34;&gt;let &lt;/span&gt;[blocks (&lt;span style=&#34;color:#a6e22e&#34;&gt;flatten&lt;/span&gt; result)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           [&lt;span style=&#34;color:#e6db74&#34;&gt;:div.table-wrapper&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            [&lt;span style=&#34;color:#e6db74&#34;&gt;:table.table-auto&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             [&lt;span style=&#34;color:#e6db74&#34;&gt;:thead&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:width&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;20%&amp;#34;&lt;/span&gt;} &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Name&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:width&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;20%&amp;#34;&lt;/span&gt;} &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Creator&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               [&lt;span style=&#34;color:#e6db74&#34;&gt;:th&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;:width&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;60%&amp;#34;&lt;/span&gt;} &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Description&amp;#34;&lt;/span&gt;]]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             [&lt;span style=&#34;color:#e6db74&#34;&gt;:tbody&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              (for [{&lt;span style=&#34;color:#e6db74&#34;&gt;:block/keys&lt;/span&gt; [title properties]} blocks]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                [&lt;span style=&#34;color:#e6db74&#34;&gt;:tr&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                 [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (second (&lt;span style=&#34;color:#e6db74&#34;&gt;:url&lt;/span&gt; (second (first title))))]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                 [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (get properties &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;creator&amp;#34;&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                 [&lt;span style=&#34;color:#e6db74&#34;&gt;:td&lt;/span&gt; (get properties &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;)]])]]])))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;group-by&#34;&gt;
+    &lt;a href=&#34;#group-by&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Group by
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+BEGIN_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;:title&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Group by&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;:query&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;:find&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; ?h [*])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;:in&lt;/span&gt; $
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;:where&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            [?h &lt;span style=&#34;color:#e6db74&#34;&gt;:block/marker&lt;/span&gt; ?marker]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            [(contains? &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;NOW&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DOING&amp;#34;&lt;/span&gt;} ?marker)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:result-transform&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   (&lt;span style=&#34;color:#a6e22e&#34;&gt;group-by&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;:block/scheduled&lt;/span&gt; result))  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:view&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;fn &lt;/span&gt;[result] (for [r result] [&lt;span style=&#34;color:#e6db74&#34;&gt;:div&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      [&lt;span style=&#34;color:#e6db74&#34;&gt;:div.text-xl&lt;/span&gt; (str &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Scheduled: &amp;#34;&lt;/span&gt; (key r))]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      (for [b (val r)] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        [&lt;span style=&#34;color:#e6db74&#34;&gt;:div.ml-4&lt;/span&gt; (get b &lt;span style=&#34;color:#e6db74&#34;&gt;:block/content&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;+END_QUERY
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     </description>
     </item>
     

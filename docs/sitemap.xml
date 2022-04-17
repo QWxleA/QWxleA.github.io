@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://QWxleA.github.io/page/building-a-digital-garden-with-logseq-and-hugo/</loc>
+    <lastmod>2022-04-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://QWxleA.github.io/categories/</loc>
+    <lastmod>2022-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://QWxleA.github.io/tags/clojure/</loc>
+    <lastmod>2022-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://QWxleA.github.io/tags/datalog/</loc>
     <lastmod>2022-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://QWxleA.github.io/page/datalog/</loc>
@@ -12,6 +21,9 @@
     <lastmod>2022-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://QWxleA.github.io/page/digital-garden/</loc>
+    <lastmod>2022-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://QWxleA.github.io/tags/hiccup/</loc>
     <lastmod>2022-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://QWxleA.github.io/tags/hugo/</loc>
@@ -36,6 +48,9 @@
     <lastmod>2022-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://QWxleA.github.io/page/pkm/</loc>
+    <lastmod>2022-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://QWxleA.github.io/page/query-views/</loc>
     <lastmod>2022-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://QWxleA.github.io/tags/</loc>

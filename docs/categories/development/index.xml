@@ -8,6 +8,15 @@
     <language>en-GB</language>
     <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>building a digital garden with Logseq and Hugo</title>
+      <link>https://QWxleA.github.io/page/building-a-digital-garden-with-logseq-and-hugo/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/building-a-digital-garden-with-logseq-and-hugo/</guid>
+      <description>We, as people, are social animals. We live together, we work together, we relax together, but what about learning together? In these days of global pandemics and, be honest, living inside our digital tools we have slowly gone back to being not-very-social. [Digital gardens](digital garden) are one way to overcome this modern ill. Learning and building/creating in such a way that it is easy for others to see and/or comment on what you do and learn.</description>
+    </item>
+    
+    <item>
       <title>datalog</title>
       <link>https://QWxleA.github.io/page/datalog/</link>
       <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
@@ -35,6 +44,19 @@
       
       <guid>https://QWxleA.github.io/page/javascript/</guid>
       <description>Logseq plugins are developed in Javascript and that is the reason I have been reading more on how to use it well. Here you will find mostly notes related to plugin development.</description>
+    </item>
+    
+    <item>
+      <title>query views</title>
+      <link>https://QWxleA.github.io/page/query-views/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/query-views/</guid>
+      <description>Note: This place is currently a placeholder, hugo gets upset if links are missing.
+   Debugging    Usually I add one of these to view raw data from a query before I add custom hiccup view
+  :view (fn [result] (for [r result] [:pre (pr-str r)]))
+  :view (fn [result] (pr-str result))
+     Properties   #+BEGIN_QUERY {  :query [:find (pull ?</description>
     </item>
     
   </channel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hiccup on Q&#39;s 🌱</title>
+    <link>https://QWxleA.github.io/tags/hiccup/</link>
+    <description>Recent content in hiccup on Q&#39;s 🌱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/hiccup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>query views</title>
+      <link>https://QWxleA.github.io/page/query-views/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/query-views/</guid>
+      <description>Note: This place is currently a placeholder, hugo gets upset if links are missing.
+   Debugging    Usually I add one of these to view raw data from a query before I add custom hiccup view
+  :view (fn [result] (for [r result] [:pre (pr-str r)]))
+  :view (fn [result] (pr-str result))
+     Properties   #+BEGIN_QUERY {  :query [:find (pull ?</description>
+    </item>
+    
+  </channel>
+</rss>
