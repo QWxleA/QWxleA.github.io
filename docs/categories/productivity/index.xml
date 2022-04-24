@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>productivity on Q&#39;s 🌱</title>
+    <link>https://QWxleA.github.io/categories/productivity/</link>
+    <description>Recent content in productivity on Q&#39;s 🌱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Tue, 15 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/categories/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>time management</title>
+      <link>https://QWxleA.github.io/page/time-management/</link>
+      <pubDate>Tue, 15 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/time-management/</guid>
+      <description>Always been complicated. What seems to work is several pomodoros, but not more, why so few?
+Major problem is procrastination, what can be done?
+Different techniques:
+  Time blocking
+  pomodoro technique — gently kicking yourself into action
+  taking a break</description>
+    </item>
+    
+    <item>
+      <title>pomodoro</title>
+      <link>https://QWxleA.github.io/page/pomodoro/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/pomodoro/</guid>
+      <description>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It  uses a timer to break work into intervals , traditionally  25 minutes  in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for &amp;rsquo;tomato&amp;rsquo;, after the tomato-shaped kitchen timer Cirillo used as a university student. — Pomodoro Technique - Wikipedia
+Why does it work (for me)?</description>
+    </item>
+    
+  </channel>
+</rss>

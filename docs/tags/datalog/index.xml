@@ -6,17 +6,18 @@
     <description>Recent content in datalog on Q&#39;s 🌱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/datalog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/datalog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>query views</title>
       <link>https://QWxleA.github.io/page/query-views/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/page/query-views/</guid>
-      <description>Note: This place is currently a placeholder, hugo gets upset if links are missing.
-Queries are build in a language called datalog, the presentation is done using Hiccup. Mixed in is Clojure, of which I know none.
+      <description>Queries are build in a language called datalog, the presentation is done using Hiccup. Mixed in is Clojure, of which I know none.
    Debugging    Usually I add one of these to view raw data from a query before I add custom hiccup view
-  :view (fn [result] (for [r result] [:pre (pr-str r)]))</description>
+  :view (fn [result] (for [r result] [:pre (pr-str r)]))
+  :view (fn [result] (pr-str result))
+     Properties   #+BEGIN_QUERY {  :query [:find (pull ?</description>
     </item>
     
   </channel>

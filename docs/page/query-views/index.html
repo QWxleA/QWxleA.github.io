@@ -28,7 +28,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     
-    <link rel="stylesheet" href="/sass/main.min.669694d5fac2d3c5640eba99f2a05f8a074ccbe710c3e620c270ba4416137608.css">
+    <link rel="stylesheet" href="/sass/main.min.e4c42fb4fd228822755302b3d4e39bf7add0e5b1d435156b6d330aa55c593847.css">
     
 </head>
     <script>
@@ -98,7 +98,7 @@
 
     <div class="article-post">
         <div class="side side-right">
-            <p>Last edited: <time>April 17, 2022</time>
+            <p>Last edited: <time>April 23, 2022</time>
             <br/>3 minutes reading time</p>
             
 <aside>
@@ -151,6 +151,18 @@
 
    
 
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
 
 
   <aside>
@@ -165,8 +177,7 @@
   </ul>
   </aside>
         </div>
-        <p><strong>Note:</strong> This place is currently a placeholder, <a href="https://QWxleA.github.io/page/hugo/">hugo</a> gets upset if links are missing.</p>
-<p>Queries are build in a language called <a href="https://QWxleA.github.io/page/datalog/">datalog</a>, the presentation is done using <a href="https://QWxleA.github.io/page/hiccup/">Hiccup</a>. Mixed in is Clojure, of which I know none.</p>
+        <p>Queries are build in a language called <a href="https://QWxleA.github.io/page/datalog/">datalog</a>, the presentation is done using <a href="https://QWxleA.github.io/page/hiccup/">Hiccup</a>. Mixed in is Clojure, of which I know none.</p>
 <h3 id="debugging">
     <a href="#debugging" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -271,7 +282,7 @@
 </h3>
 <ul>
 <li>link:: <a href="https://discord.com/channels/725182569297215569/743139225746145311/832512082289229824">Discord</a>
-date:: 2021-04-16</li>
+date:: [[2021-04-16]]</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>    <span style="color:#f92672">#</span>+BEGIN_QUERY
 </span></span><span style="display:flex;"><span>	  {<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Orphan pages&#34;</span>
@@ -301,7 +312,7 @@ date:: 2021-04-16</li>
 </h3>
 <ul>
 <li>link:: <a href="https://discord.com/channels/725182569297215569/743139225746145311/867375290396311633">Discord</a>
-date:: 2021-07-21</li>
+date:: [[2021-07-21]]</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>	 <span style="color:#f92672">#</span>+BEGIN_QUERY
 </span></span><span style="display:flex;"><span>	  {<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;Give me a random page!!!&#34;</span>
@@ -328,7 +339,7 @@ date:: 2021-07-21</li>
 </h3>
 <ul>
 <li>link:: <a href="https://discord.com/channels/725182569297215569/743139225746145311/921337299164356658">Discord</a>
-date:: 2021-12-17</li>
+date:: [[2021-12-17]]</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>   <span style="color:#f92672">#</span>+BEGIN_QUERY 
 </span></span><span style="display:flex;"><span>	  {<span style="color:#e6db74">:title</span> <span style="color:#e6db74">&#34;TODO by page&#34;</span>
@@ -339,7 +350,7 @@ date:: 2021-12-17</li>
 </span></span><span style="display:flex;"><span>	             [(= <span style="color:#e6db74">&#34;TODO&#34;</span> ?marker)] 
 </span></span><span style="display:flex;"><span>	    ]
 </span></span><span style="display:flex;"><span>	  <span style="color:#e6db74">:result-transform</span> (<span style="color:#66d9ef">fn </span>[result]
-</span></span><span style="display:flex;"><span>	                          (map (<span style="color:#66d9ef">fn </span>key value {<span style="color:#e6db74">:page</span> (get key <span style="color:#e6db74">:block/name</span>) <span style="color:#e6db74">:count</span> (count value)}) (<span style="color:#a6e22e">group-by</span> <span style="color:#e6db74">:block/page</span> result))
+</span></span><span style="display:flex;"><span>	                          (map (<span style="color:#66d9ef">fn </span>[[key value]] {<span style="color:#e6db74">:page</span> (get key <span style="color:#e6db74">:block/name</span>) <span style="color:#e6db74">:count</span> (count value)}) (<span style="color:#a6e22e">group-by</span> <span style="color:#e6db74">:block/page</span> result))
 </span></span><span style="display:flex;"><span>	                  )
 </span></span><span style="display:flex;"><span>	  <span style="color:#e6db74">:view</span> (<span style="color:#66d9ef">fn </span>[rows] [<span style="color:#e6db74">:table</span> 
 </span></span><span style="display:flex;"><span>	   [<span style="color:#e6db74">:thead</span> 
@@ -374,7 +385,7 @@ date:: 2021-12-17</li>
 </span></span><span style="display:flex;"><span>           [(= <span style="color:#e6db74">&#34;TODO&#34;</span> ?marker)] 
 </span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">:result-transform</span> (<span style="color:#66d9ef">fn </span>[result]
-</span></span><span style="display:flex;"><span>                        (map (<span style="color:#66d9ef">fn </span>key value {<span style="color:#e6db74">:page</span> key <span style="color:#e6db74">:count</span> (count value)}) (<span style="color:#a6e22e">group-by</span> <span style="color:#e6db74">:block/scheduled</span> result))
+</span></span><span style="display:flex;"><span>                        (map (<span style="color:#66d9ef">fn </span>[[key value]] {<span style="color:#e6db74">:page</span> key <span style="color:#e6db74">:count</span> (count value)}) (<span style="color:#a6e22e">group-by</span> <span style="color:#e6db74">:block/scheduled</span> result))
 </span></span><span style="display:flex;"><span>                )
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">:view</span> (<span style="color:#66d9ef">fn </span>[rows] [<span style="color:#e6db74">:table</span> 
 </span></span><span style="display:flex;"><span> [<span style="color:#e6db74">:thead</span> 
@@ -461,16 +472,16 @@ date:: 2021-12-17</li>
     
     <nav class="flex container suggested">
         
-        <a rel="prev" href="/page/streaming-to-a-chromecast/" title="Previous post (older)">
+        <a rel="prev" href="/page/building-a-digital-garden-with-logseq-and-hugo/" title="Previous post (older)">
             <span>Previous</span>
-            Streaming to a chromecast
+            building a digital garden with Logseq and Hugo
             </a>
         
         
         
-        <a rel="next" href="/page/pkm/" title="Next post (newer)">
+        <a rel="next" href="/page/logseq/" title="Next post (newer)">
             <span>Next</span>
-            pkm
+            logseq
             </a> 
         
     </nav>

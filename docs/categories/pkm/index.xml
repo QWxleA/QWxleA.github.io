@@ -6,11 +6,11 @@
     <description>Recent content in pkm on Q&#39;s 🌱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/categories/pkm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/categories/pkm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>digital garden</title>
       <link>https://QWxleA.github.io/page/digital-garden/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/page/digital-garden/</guid>
       <description>Note: This place is currently a placeholder, hugo gets upset if links are missing.
@@ -21,9 +21,19 @@
     </item>
     
     <item>
+      <title>How and why to tag your Daily Notes</title>
+      <link>https://QWxleA.github.io/page/how-and-why-to-tag-your-daily-notes/</link>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/how-and-why-to-tag-your-daily-notes/</guid>
+      <description>About resurfacing information from your Daily Notes    During the day I run into many interesting topics, tweets, posts on Reddit, thoughts from books, too many to keep track of. I keep everything that I might want to use later, some people are picky, I&amp;rsquo;m not. Not being picky means I don&amp;rsquo;t have to make any decisions right now -&amp;gt; which reduces [[friction]].
+  If not tagged, the daily note becomes a black hole where information just disappears.</description>
+    </item>
+    
+    <item>
       <title>logseq</title>
       <link>https://QWxleA.github.io/page/logseq/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/page/logseq/</guid>
       <description>Note: This place is currently a placeholder, hugo gets upset if links are missing. In the future this page will be a collection of useful links to learn how to more effectively use Logseq.
@@ -37,6 +47,19 @@ Related: javascript for plugins, datalog for queries.</description>
       
       <guid>https://QWxleA.github.io/page/pkm/</guid>
       <description>Personal knowledge management (PKM) is a process of collecting information that a person uses to gather, classify, store, search, retrieve and share knowledge in their  daily activities  (Grundspenkis 2007) and the way in which these processes support work activities (Wright 2005). It is a response to the idea that knowledge workers need to be responsible for their own  growth and learning  (Smedley 2009). It is a  bottom-up approach  to knowledge management (KM) (Pollard 2008).</description>
+    </item>
+    
+    <item>
+      <title>daily note</title>
+      <link>https://QWxleA.github.io/page/daily-note/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/page/daily-note/</guid>
+      <description>Notes    The habit of starting all writing in the daily note reduces friction and stress
+  It is just easy, you don&amp;rsquo;t have to think where stuff goes. Journaling in itself reduces stress
+  If I like it I can put it in more permanent place
+  Play-space, solves high barrier. Prototype and just write.
+    Logging progress in the daily journal creates the possibility to see progress</description>
     </item>
     
   </channel>

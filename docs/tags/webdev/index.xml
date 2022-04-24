@@ -6,11 +6,11 @@
     <description>Recent content in webdev on Q&#39;s 🌱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo</title>
       <link>https://QWxleA.github.io/page/hugo/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/page/hugo/</guid>
       <description>The plan is to collect useful snippets and code-examples to help creating and maintaining a pkm in Hugo (and posibly Logseq).
@@ -21,10 +21,11 @@
     <item>
       <title>javascript</title>
       <link>https://QWxleA.github.io/page/javascript/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/page/javascript/</guid>
-      <description>Logseq plugins are developed in Javascript and that is the reason I have been reading more on how to use it well. Here you will find mostly notes related to plugin development.</description>
+      <description>Logseq plugins are developed in Javascript and that is the reason I have been reading more on how to use it well. Here you will find mostly notes related to plugin development.
+See also [[typescript]]</description>
     </item>
     
   </channel>

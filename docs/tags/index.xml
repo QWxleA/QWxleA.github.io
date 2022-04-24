@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Q&#39;s 🌱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://QWxleA.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>clojure</title>
       <link>https://QWxleA.github.io/tags/clojure/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/tags/clojure/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>datalog</title>
       <link>https://QWxleA.github.io/tags/datalog/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/tags/datalog/</guid>
       <description></description>
@@ -28,7 +28,7 @@
     <item>
       <title>hiccup</title>
       <link>https://QWxleA.github.io/tags/hiccup/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/tags/hiccup/</guid>
       <description></description>
@@ -37,7 +37,7 @@
     <item>
       <title>hugo</title>
       <link>https://QWxleA.github.io/tags/hugo/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/tags/hugo/</guid>
       <description></description>
@@ -46,16 +46,25 @@
     <item>
       <title>logseq</title>
       <link>https://QWxleA.github.io/tags/logseq/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/tags/logseq/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>resurfacing information</title>
+      <link>https://QWxleA.github.io/tags/resurfacing-information/</link>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/tags/resurfacing-information/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>webdev</title>
       <link>https://QWxleA.github.io/tags/webdev/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/tags/webdev/</guid>
       <description></description>
@@ -64,7 +73,7 @@
     <item>
       <title>workflow</title>
       <link>https://QWxleA.github.io/tags/workflow/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/tags/workflow/</guid>
       <description></description>
@@ -85,6 +94,15 @@
       <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://QWxleA.github.io/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>habits</title>
+      <link>https://QWxleA.github.io/tags/habits/</link>
+      <pubDate>Tue, 15 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://QWxleA.github.io/tags/habits/</guid>
       <description></description>
     </item>
     
