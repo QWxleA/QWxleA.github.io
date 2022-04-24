@@ -1,5 +1,4 @@
 ---
-public: true
 subtitle: placeholder
 title: Advanced Queries
 tags:

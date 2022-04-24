@@ -4,13 +4,12 @@ tags:
 icon: 🚧
 language: hiccup and clojure
 difficulty: intermediate
-cate🛠gory: development
-public: true
+category: development
 subtitle: For when html is too hard
 title: Hiccup
-categories:
+categories: development
 date: 2022-03-23
-lastMod: 2022-04-17
+lastMod: 2022-04-18
 ---
 Hiccup is a [domain-specific language]({{< ref "domain-specific language" >}}) for generating HTML, used mostly in Clojure community.
 
@@ -235,6 +234,10 @@ For every day use you need very little knowledge of Hiccup, and fortunately (mos
 :query-table false
 }
 #+END_QUERY
+
+## Fun things to do with hiccup
+
+`[:audio {:controls true :src "your audio file path here.mp3"}] ` Add an audio file to a page
 
 ### Additional resources
 

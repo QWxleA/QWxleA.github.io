@@ -1,9 +1,15 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -e
 
-BLOG=$HOME/Documents/QWxleA.github.io
-CONTENT=$BLOG/content/
+# -e bash: https://stackoverflow.com/questions/9952177/whats-the-meaning-of-the-parameter-e-for-bash-shell-command-line
+
+# BLOG=$HOME/Documents/QWxleA.github.io
+# Hacky, but run from where the Makefile is
+BLOG="$(cd "$(dirname "$0")" && cd .. && pwd )"
+CONTENT="$BLOG/content"
+#exporter puts everything into page/
+PAGES="$CONTENT/page"
 ASSETS="$BLOG/content/assets"
-HUGOASSETS=$BLOG/static/assets
+HUGOASSETS="$BLOG/static/assets"
 
 STARTPAGE="$CONTENT/page/ Start here.md"
 INDEXPAGE="$CONTENT/_index.md"
@@ -11,8 +17,6 @@ INDEXPAGE="$CONTENT/_index.md"
 ZIP=$HOME/Downloads/publicExport.zip
 
 explode() {
-    #running with scissors
-    rm $CONTENT/*.md 
     unzip -o -d $CONTENT $ZIP
     if [ -d "$ASSETS"  ]; then
         for a in $ASSETS/*; do 
@@ -28,10 +32,35 @@ explode() {
     fi
 }
 
+clean() {
+    #running with scissors
+    # find "$PAGES" -iname "*.md" -exec echo "File found: {}" \;
+    find "$PAGES" -iname "*.md" -exec rm "{}" \;
+    find "$HUGOASSETS" -iname "*" -exec rm "{}" \;
+}
+
+debug() {
+    echo "Blog: $BLOG"
+    echo "CONTENT: $CONTENT"
+    echo "PAGES: $PAGES"
+    echo "ASSETS: $ASSETS"
+    echo "HUGOASSETS: $HUGOASSETS"
+    echo "STARTPAGE: $STARTPAGE"
+    echo "INDEXPAGE: $INDEXPAGE"
+    echo "ZIP: $ZIP"
+    exit
+}
+
 usage() { echo "Usage: $0 [-s <45|90>] [-p <string>]" 1>&2; exit 1; }
 
-while getopts "lx" o; do
+while getopts "cdlx" o; do
     case "${o}" in
+        c)
+            clean
+            ;;
+        d)
+            debug
+            ;;
         l)
             unzip -v $ZIP
             exit
@@ -46,5 +75,3 @@ while getopts "lx" o; do
     esac
 done
 shift $((OPTIND-1))
-
-usage

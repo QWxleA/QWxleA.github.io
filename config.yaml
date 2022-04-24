@@ -7,8 +7,8 @@ publishDir: "docs"
 defaultContentLanguage: "en"
 pluralizelisttitles: false
 removePathAccents: true
-paginate: 20
-paginatePath: "notes"
+paginate: 5
+paginatePath: "page"
 rssLimit: 20
 author:
   name: "Alex Qwxlea"
@@ -50,7 +50,7 @@ params:
   dateformat: "2 January, 2006"
   favicon: "apple-touch-icon.png"
   feedlinks: true
-  footer: "Powered by [Hugo](https://gohugo.io/) and the [Zen theme](https://github.com/frjo/hugo-theme-zen)."
+  footer: "Powered by [Hugo](https://gohugo.io/) and the [Logseq](https://logseq.com/)."
   icon: "apple-touch-icon.png"
   image: "apple-touch-icon.png"
   imageMaxWidth: 400

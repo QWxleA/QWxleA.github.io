@@ -1,16 +1,16 @@
 ---
-public: true
 date:
 - 2022-04-16
 icon: 📝
 category: development
 tags:
 - webdev
+subtitle: placeholder
 title: hugo
 categories: development
-lastMod: 2022-04-17
+lastMod: 2022-04-23
 ---
-The plan is to collect useful snippets and code-examples to help creating and maintaining a [pkm]({{< ref "pkm" >}}) in Hugo (and posibly [Logseq]({{< ref "logseq" >}})).
+The plan is to collect useful snippets and code-examples to help creating and maintaining a [pkm]({{< ref "pkm" >}}) in Hugo (and posibly [Logseq]({{< ref "Logseq" >}})).
 
 ### Automating import
 

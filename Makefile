@@ -18,3 +18,6 @@ watch: ## Run the local development server
 
 import: ## Import latest Logseq pages
 	./scripts/export-blog -x
+
+clean: ## Reset blog to pristine state
+	./scripts/export-blog -c

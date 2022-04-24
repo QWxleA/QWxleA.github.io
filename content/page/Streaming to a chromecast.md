@@ -1,5 +1,4 @@
 ---
-public: true
 date: 2022-04-08
 icon: 🥸
 category: macos

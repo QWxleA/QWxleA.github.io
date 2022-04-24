@@ -1,5 +1,4 @@
 ---
-public: true
 date:
 - 2022-04-16
 icon: 📝
@@ -10,8 +9,8 @@ tags:
 subtitle: placeholder
 title: javascript
 categories: development
-lastMod: 2022-04-17
+lastMod: 2022-04-23
 ---
-[Logseq]({{< ref "logseq" >}}) plugins are developed in Javascript and that is the reason I have been reading more on how to use it well. Here you will find mostly notes related to plugin development.
+[Logseq]({{< ref "Logseq" >}}) plugins are developed in Javascript and that is the reason I have been reading more on how to use it well. Here you will find mostly notes related to plugin development.
 
-
+See also [[typescript]]

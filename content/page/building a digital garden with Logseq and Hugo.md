@@ -1,5 +1,4 @@
 ---
-public: true
 date:
 - 2022-04-17
 icon: 📝
@@ -13,7 +12,7 @@ lastMod: 2022-04-17
 ---
 We, as people, are social animals. We live together, we work together, we relax together, but what about *learning* together? In these days of global pandemics and, be honest, living inside our digital tools we have slowly gone back to being not-very-social. [Digital gardens]({{< ref "digital garden" >}}) are one way to overcome this *modern ill*: Learning and building/creating in such a way that it is easy for others to see and/or comment on what you do and learn.
 
-At the same time, being too busy with the *technical part* will detract from doing any {{< logseq/mark >}}learning{{< / logseq/mark >}}, so it should be simple to go *from* your [system]({{< ref "pkm" >}}) where you keep your notes/keep track of what you learn, *to* a website. With the help of a plugin it is easy to export all your public pages. Combine this with a [hugo]({{< ref "hugo" >}}) theme that *knows* about back-links and other [logseq]({{< ref "logseq" >}}) specific tricks, you can now start building your own .
+At the same time, being too busy with the *technical part* will detract from doing any {{< logseq/mark >}}learning{{< / logseq/mark >}}, so it should be simple to go *from* your [system]({{< ref "pkm" >}}) where you keep your notes/keep track of what you learn, *to* a website. With the help of a plugin it is easy to export all your public pages. Combine this with a [hugo]({{< ref "hugo" >}}) theme that *knows* about back-links and other [logseq]({{< ref "logseq" >}}) specific tricks, you can now start building your own [garden]({{< ref "digital garden" >}}).
 
 ## Preparing your pages
 

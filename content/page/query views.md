@@ -1,5 +1,4 @@
 ---
-public: true
 date:
 - 2022-04-17
 icon: 📝
@@ -11,11 +10,8 @@ tags:
 subtitle: collection
 title: query views
 categories: development
-lastMod: 2022-04-17
+lastMod: 2022-04-23
 ---
-**Note:** This place is currently a placeholder, [hugo]({{< ref "hugo" >}}) gets upset if links are missing.
-
-
 Queries are build in a language called [datalog]({{< ref "datalog" >}}), the presentation is done using [Hiccup]({{< ref "Hiccup" >}}). Mixed in is Clojure, of which I know none.
 
 ### Debugging 
@@ -95,7 +91,7 @@ Queries are build in a language called [datalog]({{< ref "datalog" >}}), the pre
 
 
   + link:: [Discord](https://discord.com/channels/725182569297215569/743139225746145311/832512082289229824)
-date:: 2021-04-16
+date:: [[2021-04-16]]
 
 ```clojure
     #+BEGIN_QUERY
@@ -119,7 +115,7 @@ date:: 2021-04-16
 ### Query to show a random page
 
   + link:: [Discord](https://discord.com/channels/725182569297215569/743139225746145311/867375290396311633)
-date:: 2021-07-21
+date:: [[2021-07-21]]
 
 ```clojure
 	 #+BEGIN_QUERY
@@ -141,7 +137,7 @@ date:: 2021-07-21
 
 
   + link:: [Discord](https://discord.com/channels/725182569297215569/743139225746145311/921337299164356658)
-date:: 2021-12-17
+date:: [[2021-12-17]]
 
 ```clojure
    #+BEGIN_QUERY 
@@ -153,7 +149,7 @@ date:: 2021-12-17
 	             [(= "TODO" ?marker)] 
 	    ]
 	  :result-transform (fn [result]
-	                          (map (fn key value {:page (get key :block/name) :count (count value)}) (group-by :block/page result))
+	                          (map (fn [[key value]] {:page (get key :block/name) :count (count value)}) (group-by :block/page result))
 	                  )
 	  :view (fn [rows] [:table 
 	   [:thead 
@@ -184,7 +180,7 @@ date:: 2021-12-17
            [(= "TODO" ?marker)] 
   ]
 :result-transform (fn [result]
-                        (map (fn key value {:page key :count (count value)}) (group-by :block/scheduled result))
+                        (map (fn [[key value]] {:page key :count (count value)}) (group-by :block/scheduled result))
                 )
 :view (fn [rows] [:table 
  [:thead 

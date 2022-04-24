@@ -1,14 +1,14 @@
 ---
-public: true
 date:
 - 2022-04-17
 icon: 📝
 category: pkm
 tags:
 - hugo
+subtitle: placeholder
 title: digital garden
 categories: pkm
-lastMod: 2022-04-17
+lastMod: 2022-04-23
 ---
 **Note:** This place is currently a placeholder, [hugo]({{< ref "hugo" >}}) gets upset if links are missing.
 

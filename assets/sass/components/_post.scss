@@ -1,7 +1,8 @@
 /* Post */
 
 header {
-    padding: 1.5rem 0;
+    // padding: 1.5rem 0; //AQ
+    padding: 0.5rem 0;
 
     h1 {
         font-size: 2rem;
@@ -19,7 +20,7 @@ header {
 
 .article-header {
     // padding-top: 2rem; //AQ
-    margin-bottom: 0.5rem;
+    // margin-bottom: 0.5rem; //AQ
 
     .container {
         padding-left: 0;
@@ -63,7 +64,7 @@ header {
     }
 
     .tags {
-        margin-top: 0.5rem;
+        // margin-top: 0.5rem; //AQ
 
         a {
             text-decoration: none;
@@ -94,10 +95,10 @@ header {
     a {
         text-decoration: none;
         color: var(--link-color);
-        &[href*="https://"]::before, &[href*="http://"]::before {
+        &[href^="https://"]::before, &[href^="http://"]::before {
             content: "🌎[[";
-        }
-        &[href*="http://localhost:1313/"]::before {
+        }        
+        &[href^="http://localhost:"]::before, &[href^="https://qwxlea.github.io"]::before {
             content: "🏡[[";
         }
         &::before {
@@ -110,6 +111,7 @@ header {
         color: var(--link-color-darker);
         }
     }
+
 
 
     code {

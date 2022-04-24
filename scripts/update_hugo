@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+
+set -e
+
+platform=$(uname)
+if [[ $platform == "Darwin" ]];then
+    open="open"
+else
+    open="xdg-open"
+fi
+
+usage() { echo "Usage: $0 [-s <45|90>] [-p <string>]" 1>&2; exit 1; }
+
+usage() { echo "Usage: $0 [-s <45|90>] [-p <string>]" 1>&2; exit 1; }
+
+cleanup() {
+    rv=$?
+    rm -rf "$tmpfile"
+    [ -f "$name" ] && rm "$name"
+    exit $rv
+}
+
+
+get_nightly() {
+    echo "Downloading nightly"
+    cd /tmp
+    grep "browser_download.*Logseq-linux.*nightly.*zip" "$tmpfile" \
+        | cut -d : -f 2,3 \
+        | tr -d \" \
+        | wget -qi -
+    
+    unzip -qq "$name"
+    mv Logseq-linux-x64 "$APPLOC/$name2"
+    ln -sf "$APPLOC/$name2/Logseq" "$LOGBIN"
+    ls -l "$LOGBIN"
+}
+
+get_gh_release() {
+    echo "Updating Logseq $platform from GH"
+    pkg="Logseq-darwin-arm64"
+
+    curl -s https://api.github.com/repos/gohugoio/hugo/releases > "$tmpfile"
+
+    name=$(grep "name.*Logseq-linux.*nightly.*zip" "$tmpfile" \
+       | cut -d : -f 2,3 \
+       | tr -d \" \
+       | tr -d ,\
+       | awk '{$1=$1;print}') 
+   name2=$(basename "$name" .zip)
+}
+
+
+trap "cleanup" EXIT
+tmpfile=$(mktemp)
+
+while getopts "lot" o; do
+    case "${o}" in
+        d)
+            #FIXME echo "Creating desktop file"
+            exit
+            ;;
+        l)
+            $open https://github.com/logseq/logseq/releases/nightly
+            exit
+            ;;
+        t)
+            echo "Testing script"
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+get_gh_release $platform
+if [ -d "$APPLOC/$name2" ]; then
+    echo "Logseq is up to date ($name2)"
+    exit 3
+fi
+get_nightly
+echo "Finished updating Logseq to the latest snapshot"

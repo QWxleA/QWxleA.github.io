@@ -1,5 +1,4 @@
 ---
-public: true
 title: pkm
 date:
 - 2022-04-16

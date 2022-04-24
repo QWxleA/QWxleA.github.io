@@ -2,7 +2,6 @@
 tags:
 - testing
 categories: hugo
-public: true
 title: Hugo - testpage
 date: 2022-03-17
 lastMod: 2022-04-17

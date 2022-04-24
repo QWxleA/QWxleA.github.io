@@ -26,9 +26,8 @@
     </section>
 </div>
 
-{{ $pages := where .Site.RegularPages "Type" "in" "page" }}
+{{ $pages := .Paginate ( where (where (where .Site.RegularPages "Type" "in" "page" ) ".Params.subtitle" "!=" "placeholder" ) ".Params.subtitle" "!=" "definition") }}
 {{ $projects := where .Site.RegularPages "Section" "projects" }}
-{{ $pages = .Paginate ($pages)  }}
 
 <div class="container">
     <section>
@@ -37,7 +36,7 @@
             <a class="section-button" href="/page">View all</a>
         </h2>
         <div class="posts">
-            {{ range $pages.Pages }}
+            {{ range  $pages.Pages  }}
             <div class="post">
                 <a href="{{ .RelPermalink }}">
                     <div class="post-row">
