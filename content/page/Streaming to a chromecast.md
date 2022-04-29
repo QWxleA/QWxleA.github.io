@@ -1,13 +1,12 @@
 ---
 date: 2022-04-08
-lastmod: 
 icon: 🥸
 category: macos
 tags:
 - video
 title: Streaming to a chromecast
 categories: macos
-lastMod: 2022-04-28
+lastMod: 2022-04-29
 ---
 My mom complained about an English only TV series on Disney+. What's a helpful son to do?
 

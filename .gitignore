@@ -2,3 +2,4 @@ resources/_gen/
 #.*
 \#*\#
 NOTINGIT
+.hugo_build.lock

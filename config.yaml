@@ -1,14 +1,19 @@
 title: "Q's 🌱"
 params: 
   logo: "🌱"
-
+  github: "https://github.com/qwxlea"
+  twitter: "https://twitter.com/QwxleaA"
 baseURL: "https://QWxleA.github.io/"
 languageCode: en-us
+publishDir: "docs"
 # googleAnalytics: G-XYFD95KB4J
 pygmentsUseClasses: true
 relativeURLs: false
 disablePathToLower: true
 ignoreFiles:
+  - /scripts
+  - /NOTINGIT
+  - /assets/hm
   - /content/templates/*
   - /content/private/*
 summaryLength: 20

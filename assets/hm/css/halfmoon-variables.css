@@ -182,8 +182,8 @@ CSS variables (CSS custom properties)
     --base-html-font-size: 62.5%; /* 62.5% is used for easier calculations, because the base is now set to 10px, so 1.4rem = 14px for example. */
     --base-html-font-size-1600: 75%; /* For screens with widths >= 1600px */
     --base-html-font-size-1920: 87.5%; /* For screens with widths >= 1920px */
-    --base-font-size: 1.4rem;
-    --base-line-height: 1.5;
+    --base-font-size: 1.8rem; /* QW */
+    --base-line-height: 1.9;
     --base-border-width: 1px;
     --base-border-radius: 0.4rem;
     --extra-letter-spacing-size: 0.03rem;
