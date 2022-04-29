@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-    {{ partial "head/head" . }}
-    {{ partial "head/colorScheme" . }}
+<html lang="{{ .Lang }}">
+  {{ partial "head.html" . }}
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
+  <!-- Modals go here -->
+  <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
 
-    <body class="dark">
-        {{ partial "header.html" . }}
-        <main>
+  <!-- Page wrapper start -->
+  <div class="page-wrapper with-navbar with-sidebar">
+
+    <!-- Sticky alerts (toasts), empty container -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+    <div class="sticky-alerts"></div>
+
+      {{partial "navbar.html" .}}
+      {{partial "sidebar.html" .}}
+
+    <!-- Content wrapper start -->
+    <div class="content-wrapper">
             {{ block "main" . }}{{ end }}
-        </main>
-        {{ partial "footer.html" . }}
-    </body>
+    </div>
+    <!-- Content wrapper end -->
+
+  </div>
+  <!-- Page wrapper end -->
+  {{partial "popover.html" .}}
+  <!-- Halfmoon JS -->
+  <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+</body>
 </html>

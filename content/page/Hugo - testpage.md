@@ -4,7 +4,7 @@ tags:
 categories: hugo
 title: Hugo - testpage
 date: 2022-03-17
-lastMod: 2022-04-25
+lastMod: 2022-04-28
 ---
 # Hugo testpage
 
@@ -40,9 +40,9 @@ lastMod: 2022-04-25
 
     + ### Links
 
-      + [Links and Cross References | Hug[[keyword[[keywords]]](https://gohugo.io/content-management/cross-references/)
+      + [Links and Cross References | Hugo](https://gohugo.io/content-management/cross-references/)
 
-      + External links [Front Matter | Hug[[keyword[[keywords]]](https://gohugo.io/content-management/front-matter/) should just carry over
+      + External links [Front Matter | Hugo](https://gohugo.io/content-management/front-matter/) should just carry over
 
       + But internal links to [[logseq] should be translated as `[logseq]({{< ref "logseq" >}})`
 
@@ -50,10 +50,10 @@ lastMod: 2022-04-25
 
       + Code blocks are the most complicated part:
 
-        + `[this is a simple code bloc[[keyword[[keywords]]]`
+        + `[this is a simple code block]`
 
 ```clojure
-[?b :block/name ?nam[[keyword[[keywords]]]
+[?b :block/name ?name]
 ```
 
 ## More testing
@@ -64,7 +64,7 @@ Let's look at an image:
 
     + But in a sub-block
 
-![test-imag[[keyword[[keywords]]](/assets/steal-1.png)
+![test-image](/assets/steal-1.png)
 
 {{< logseq/orgQUOTE >}}This is a quote{{< / logseq/orgQUOTE >}}
 

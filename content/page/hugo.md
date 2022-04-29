@@ -7,11 +7,11 @@ category: development
 tags:
 - webdev
 subtitle: placeholder
-title: Hugo
+title: hugo
 categories: development
 lastMod: 2022-04-23
 ---
-The plan is to collect useful snippets and code-examples to help creating and maintaining a [pkm](/page/pkm) in Hugo (and posibly [Logseq](/page/Logseq)).
+The plan is to collect useful snippets and code-examples to help creating and maintaining a [pkm](/page/pkm) in Hugo (and posibly [Logseq](/page/logseq)).
 
 ### Automating import
 

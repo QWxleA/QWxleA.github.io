@@ -20,7 +20,7 @@ As it happens, streaming to a Chromecast is not hard, but sending subtitles to i
 + Find subtitles, cannot find anything in Dutch, find in English, easy to do.
 + Translate with Google translate (surprisingly good, Ulysses this tv-series is not, but still, happily surprised).
 + The timings are often wrong. [SubShifter - Online SRT Subtitle Resync Tool](https://subshifter.bitsnbites.eu/) is a good tool. I just use VLC to find when people start to talk and sync with this. The couple of times I've done this it was just to find a correct start.
-+ Next the key to the whole conundrum: [HandBrake: Open Source Video Transcode [[keywords]] (https://handbrake.fr/). This app has been around for years, but is still actively developed and relatively easy to use.
++ Next the key to the whole conundrum: [HandBrake](https://handbrake.fr/). This app has been around for years, but is still actively developed and relatively easy to use.
 + A good alternative is [Subler](https://subler.org/), it is *way* faster, but cannot hardcode subs, so  for this Handbrake is the obvious choice.
 
   + ### Handbrake

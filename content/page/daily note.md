@@ -29,12 +29,12 @@ lastMod: 2022-04-28
     + If not tagged, the daily note becomes a black hole where information just disappears. There is just {{< logseq/mark >}}too much information to be useful.{{< / logseq/mark >}}
     + information disappears if it is not reused again, later
 
-  + Use [spaced repetition](/page/spaced repetition) for ideas noted in the daily note that have no current links?
+  + Use [spaced repetition](/page/spaced-repetition) for ideas noted in the daily note that have no current links?
 
 ## References and links
 
-  + [How and why to tag your Daily Notes](/page/How and why to tag your Daily Notes)
+  + [How and why to tag your Daily Notes](/page/how-and-why-to-tag-your-daily-notes)
 
-  + [How I Use Logseq to Take Notes and Organize My Life | by Shu Omi | Shu Omi’s Blog | Medium](https://medium.com/my-learning-journal/how-i-use-logseq-to-take-notes-and-organize-my-life-3669a75eb224) #[spaced repetition](/page/spaced repetition) #[[highlights-import]] [[@Shu Omi]]
+  + [How I Use Logseq to Take Notes and Organize My Life | by Shu Omi | Shu Omi’s Blog | Medium](https://medium.com/my-learning-journal/how-i-use-logseq-to-take-notes-and-organize-my-life-3669a75eb224) #[spaced repetition](/page/spaced-repetition) #[[highlights-import]] [[@Shu Omi]]
 
   + [Daily working log](https://notes.andymatuschak.org/z28QkpK3vRKQTacjFDfGYBhCXHqHuVWJzny9)

@@ -1,10 +1,9 @@
-{{ partial "head/head" . }}
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-<div class="container">
-<main>
-<h1>404 NOT FOUND</h1>
-</main>
-</div>
+    <div class="centered">
+        <h1>404.</h1>
+        <h3>Hey! You look a little lost. This page doesn't exist (or may be private).</h3>
+        <a href="{{ .Site.BaseURL }}">↳ Let's get you home.</a>
+    </div>
 
-{{ partial "footer.html" . }}
+{{ end }}

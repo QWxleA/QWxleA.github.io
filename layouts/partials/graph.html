@@ -1,6 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js" integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin="anonymous"></script>
-<h3>Interactive Graph</h3>
-<div id="graph-container"></div>
+
+
+<div class="card" id="graph-container"></div>
 <style>
     :root {
         --g-node: var(--secondary);
@@ -10,9 +11,10 @@
         --g-link-active: #5a7282;
     }
 </style>
-{{ $js := resources.Get "js/graph.js" | resources.Fingerprint "md5" }}
+<!-- {{ $js := resources.Get "js/graph.js" | resources.Fingerprint "md5" }} -->
 <script src="{{ $js.Permalink }}"></script>
 <script>
+  console.log("DB okok")
   drawGraph(
     {{strings.TrimRight "/" .Page.Permalink}},
     {{strings.TrimRight "/" .Site.BaseURL}},

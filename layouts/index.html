@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+
+<!-- Content -->
+<div class="content">
+    <article>
+                
+        {{if .Title}}<h2 class="content-title">{{ .Title }}</h2>{{end}}
+        {{partial "textprocessing.html" . }}
+    </article>
+  </div>
+
+{{ end }}
+

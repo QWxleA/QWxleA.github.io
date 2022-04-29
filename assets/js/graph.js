@@ -1,4 +1,5 @@
 async function drawGraph(url, baseUrl, pathColors, depth, enableDrag, enableLegend, enableZoom) {
+  console.log("DB drawGraph")
   const { index, links, content } = await fetchData
   const curPage = url.replace(baseUrl, "")
 

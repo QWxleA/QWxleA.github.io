@@ -4,12 +4,17 @@
       "/": [
         {
           "source": "/",
+          "target": "/page/digital-garden",
+          "text": "digital garden"
+        },
+        {
+          "source": "/",
           "target": "/page/pkm",
           "text": "pkm"
         },
         {
           "source": "/",
-          "target": "/page/Hugo",
+          "target": "/page/hugo",
           "text": "Hugo"
         },
         {
@@ -28,63 +33,6 @@
           "text": "pkm"
         }
       ],
-      "/page/Hiccup": [
-        {
-          "source": "/page/Hiccup",
-          "target": "/domain-specific-languagkeywordkeywords",
-          "text": "domain-specific languag[[keyword[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/Advanced-Queriekeywords",
-          "text": "Advanced Querie[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/Advanced-Queriekeywords",
-          "text": "Advanced Querie[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/Advanced-Queriekeywords",
-          "text": "Advanced Querie[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/Advanced-Queriekeywords",
-          "text": "Advanced Querie[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywords",
-          "text": "keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywords",
-          "text": "keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywords",
-          "text": "keywords"
-        }
-      ],
       "/page/How-and-why-to-tag-your-Daily-Notes": [
         {
           "source": "/page/How-and-why-to-tag-your-Daily-Notes",
@@ -97,47 +45,11 @@
           "text": "logseq"
         }
       ],
-      "/page/Hugo": [
-        {
-          "source": "/page/Hugo",
-          "target": "/page/pkm",
-          "text": "pkm"
-        },
-        {
-          "source": "/page/Hugo",
-          "target": "/page/Logseq",
-          "text": "Logseq"
-        },
-        {
-          "source": "/page/Hugo",
-          "target": "/page/logseq",
-          "text": "logseq"
-        }
-      ],
-      "/page/Hugo-testpage": [
-        {
-          "source": "/page/Hugo-testpage",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/Hugo-testpage",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        }
-      ],
-      "/page/Streaming-to-a-chromecast": [
-        {
-          "source": "/page/Streaming-to-a-chromecast",
-          "target": "/keywords",
-          "text": "keywords"
-        }
-      ],
       "/page/building-a-digital-garden-with-Logseq-and-Hugo": [
         {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-          "target": "/keywords",
-          "text": "keywords"
+          "target": "/page/digital-garden",
+          "text": "digital garden"
         },
         {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
@@ -146,8 +58,8 @@
         },
         {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-          "target": "/hugkeywordkeywords",
-          "text": "hug[[keyword[[keywords"
+          "target": "/page/hugo",
+          "text": "hugo"
         },
         {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
@@ -156,18 +68,28 @@
         },
         {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-          "target": "/hugkeywordkeywords",
-          "text": "hug[[keyword[[keywords"
+          "target": "/page/digital-garden",
+          "text": "garden"
         },
         {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-          "target": "/hugkeywordkeywords",
-          "text": "hug[[keyword[[keywords"
+          "target": "/page/hugo",
+          "text": "hugo"
+        },
+        {
+          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
+          "target": "/page/hugo",
+          "text": "hugo"
         },
         {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
           "target": "/keywords",
           "text": "keywords"
+        },
+        {
+          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
+          "target": "/page/digital-garden",
+          "text": "digital garden"
         },
         {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
@@ -183,6 +105,21 @@
         },
         {
           "source": "/page/daily-note",
+          "target": "/page/spaced-repetition",
+          "text": "spaced repetition"
+        },
+        {
+          "source": "/page/daily-note",
+          "target": "/page/how-and-why-to-tag-your-daily-notes",
+          "text": "How and why to tag your Daily Notes"
+        },
+        {
+          "source": "/page/daily-note",
+          "target": "/page/spaced-repetition",
+          "text": "spaced repetition"
+        },
+        {
+          "source": "/page/daily-note",
           "target": "/highlights-import",
           "text": "highlights-import"
         },
@@ -195,11 +132,6 @@
       "/page/datalog": [
         {
           "source": "/page/datalog",
-          "target": "/page/hugo",
-          "text": "hugo"
-        },
-        {
-          "source": "/page/datalog",
           "target": "/Intro-to-Datalog",
           "text": "Intro to Datalog"
         }
@@ -207,24 +139,58 @@
       "/page/digital-garden": [
         {
           "source": "/page/digital-garden",
-          "target": "/page/hugo",
-          "text": "hugo"
-        },
-        {
-          "source": "/page/digital-garden",
           "target": "/keywords",
           "text": "keywords"
+        }
+      ],
+      "/page/hiccup": [
+        {
+          "source": "/page/hiccup",
+          "target": "/page/domain-specific-language",
+          "text": "domain-specific language"
         },
         {
-          "source": "/page/digital-garden",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
+          "source": "/page/hiccup",
+          "target": "/page/advanced-queries",
+          "text": "Advanced Queries"
+        },
+        {
+          "source": "/page/hiccup",
+          "target": "/page/advanced-queries",
+          "text": "Advanced Queries"
+        },
+        {
+          "source": "/page/hiccup",
+          "target": "/page/advanced-queries",
+          "text": "Advanced Queries"
+        },
+        {
+          "source": "/page/hiccup",
+          "target": "/page/advanced-queries",
+          "text": "Advanced Queries"
+        }
+      ],
+      "/page/hugo": [
+        {
+          "source": "/page/hugo",
+          "target": "/page/pkm",
+          "text": "pkm"
+        },
+        {
+          "source": "/page/hugo",
+          "target": "/page/logseq",
+          "text": "Logseq"
+        },
+        {
+          "source": "/page/hugo",
+          "target": "/page/logseq",
+          "text": "logseq"
         }
       ],
       "/page/javascript": [
         {
           "source": "/page/javascript",
-          "target": "/page/Logseq",
+          "target": "/page/logseq",
           "text": "Logseq"
         },
         {
@@ -236,11 +202,6 @@
       "/page/logseq": [
         {
           "source": "/page/logseq",
-          "target": "/page/hugo",
-          "text": "hugo"
-        },
-        {
-          "source": "/page/logseq",
           "target": "/page/javascript",
           "text": "javascript"
         },
@@ -250,11 +211,11 @@
           "text": "datalog"
         }
       ],
-      "/page/pkm": [
+      "/page/pomodoro": [
         {
-          "source": "/page/pkm",
-          "target": "/page/hugo",
-          "text": "hugo"
+          "source": "/page/pomodoro",
+          "target": "/page/time-management",
+          "text": "time management"
         }
       ],
       "/page/procrastination": [
@@ -277,13 +238,8 @@
         },
         {
           "source": "/page/query-views",
-          "target": "/page/Hiccup",
+          "target": "/page/hiccup",
           "text": "Hiccup"
-        },
-        {
-          "source": "/page/query-views",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
         },
         {
           "source": "/page/query-views",
@@ -292,18 +248,8 @@
         },
         {
           "source": "/page/query-views",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/query-views",
           "target": "/2021-07-21",
           "text": "2021-07-21"
-        },
-        {
-          "source": "/page/query-views",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
         },
         {
           "source": "/page/query-views",
@@ -351,28 +297,6 @@
           "text": "2021-12-17"
         }
       ],
-      "/Advanced-Queriekeywords": [
-        {
-          "source": "/page/Hiccup",
-          "target": "/Advanced-Queriekeywords",
-          "text": "Advanced Querie[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/Advanced-Queriekeywords",
-          "text": "Advanced Querie[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/Advanced-Queriekeywords",
-          "text": "Advanced Querie[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/Advanced-Queriekeywords",
-          "text": "Advanced Querie[[keywords"
-        }
-      ],
       "/Intro-to-Datalog": [
         {
           "source": "/page/datalog",
@@ -394,13 +318,6 @@
           "text": "addiction"
         }
       ],
-      "/domain-specific-languagkeywordkeywords": [
-        {
-          "source": "/page/Hiccup",
-          "target": "/domain-specific-languagkeywordkeywords",
-          "text": "domain-specific languag[[keyword[[keywords"
-        }
-      ],
       "/friction": [
         {
           "source": "/page/How-and-why-to-tag-your-Daily-Notes",
@@ -415,96 +332,7 @@
           "text": "highlights-import"
         }
       ],
-      "/hugkeywordkeywords": [
-        {
-          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-          "target": "/hugkeywordkeywords",
-          "text": "hug[[keyword[[keywords"
-        },
-        {
-          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-          "target": "/hugkeywordkeywords",
-          "text": "hug[[keyword[[keywords"
-        },
-        {
-          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-          "target": "/hugkeywordkeywords",
-          "text": "hug[[keyword[[keywords"
-        }
-      ],
-      "/keywordkeywords": [
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/Hugo-testpage",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/Hugo-testpage",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/digital-garden",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/query-views",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/query-views",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        },
-        {
-          "source": "/page/query-views",
-          "target": "/keywordkeywords",
-          "text": "keyword[[keywords"
-        }
-      ],
       "/keywords": [
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywords",
-          "text": "keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywords",
-          "text": "keywords"
-        },
-        {
-          "source": "/page/Hiccup",
-          "target": "/keywords",
-          "text": "keywords"
-        },
-        {
-          "source": "/page/Streaming-to-a-chromecast",
-          "target": "/keywords",
-          "text": "keywords"
-        },
-        {
-          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-          "target": "/keywords",
-          "text": "keywords"
-        },
         {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
           "target": "/keywords",
@@ -530,30 +358,26 @@
           "text": "motivation"
         }
       ],
-      "/page/Hiccup": [
+      "/page/advanced-queries": [
         {
-          "source": "/page/query-views",
-          "target": "/page/Hiccup",
-          "text": "Hiccup"
-        }
-      ],
-      "/page/Hugo": [
-        {
-          "source": "/",
-          "target": "/page/Hugo",
-          "text": "Hugo"
-        }
-      ],
-      "/page/Logseq": [
-        {
-          "source": "/page/Hugo",
-          "target": "/page/Logseq",
-          "text": "Logseq"
+          "source": "/page/hiccup",
+          "target": "/page/advanced-queries",
+          "text": "Advanced Queries"
         },
         {
-          "source": "/page/javascript",
-          "target": "/page/Logseq",
-          "text": "Logseq"
+          "source": "/page/hiccup",
+          "target": "/page/advanced-queries",
+          "text": "Advanced Queries"
+        },
+        {
+          "source": "/page/hiccup",
+          "target": "/page/advanced-queries",
+          "text": "Advanced Queries"
+        },
+        {
+          "source": "/page/hiccup",
+          "target": "/page/advanced-queries",
+          "text": "Advanced Queries"
         }
       ],
       "/page/datalog": [
@@ -568,24 +392,67 @@
           "text": "datalog"
         }
       ],
+      "/page/digital-garden": [
+        {
+          "source": "/",
+          "target": "/page/digital-garden",
+          "text": "digital garden"
+        },
+        {
+          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
+          "target": "/page/digital-garden",
+          "text": "digital garden"
+        },
+        {
+          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
+          "target": "/page/digital-garden",
+          "text": "garden"
+        },
+        {
+          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
+          "target": "/page/digital-garden",
+          "text": "digital garden"
+        }
+      ],
+      "/page/domain-specific-language": [
+        {
+          "source": "/page/hiccup",
+          "target": "/page/domain-specific-language",
+          "text": "domain-specific language"
+        }
+      ],
+      "/page/hiccup": [
+        {
+          "source": "/page/query-views",
+          "target": "/page/hiccup",
+          "text": "Hiccup"
+        }
+      ],
+      "/page/how-and-why-to-tag-your-daily-notes": [
+        {
+          "source": "/page/daily-note",
+          "target": "/page/how-and-why-to-tag-your-daily-notes",
+          "text": "How and why to tag your Daily Notes"
+        }
+      ],
       "/page/hugo": [
         {
-          "source": "/page/datalog",
+          "source": "/",
+          "target": "/page/hugo",
+          "text": "Hugo"
+        },
+        {
+          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
           "target": "/page/hugo",
           "text": "hugo"
         },
         {
-          "source": "/page/digital-garden",
+          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
           "target": "/page/hugo",
           "text": "hugo"
         },
         {
-          "source": "/page/logseq",
-          "target": "/page/hugo",
-          "text": "hugo"
-        },
-        {
-          "source": "/page/pkm",
+          "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
           "target": "/page/hugo",
           "text": "hugo"
         }
@@ -614,11 +481,6 @@
           "text": "logseq"
         },
         {
-          "source": "/page/Hugo",
-          "target": "/page/logseq",
-          "text": "logseq"
-        },
-        {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
           "target": "/page/logseq",
           "text": "logseq"
@@ -627,6 +489,21 @@
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
           "target": "/page/logseq",
           "text": "logseq"
+        },
+        {
+          "source": "/page/hugo",
+          "target": "/page/logseq",
+          "text": "Logseq"
+        },
+        {
+          "source": "/page/hugo",
+          "target": "/page/logseq",
+          "text": "logseq"
+        },
+        {
+          "source": "/page/javascript",
+          "target": "/page/logseq",
+          "text": "Logseq"
         }
       ],
       "/page/pkm": [
@@ -641,14 +518,14 @@
           "text": "pkm"
         },
         {
-          "source": "/page/Hugo",
-          "target": "/page/pkm",
-          "text": "pkm"
-        },
-        {
           "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
           "target": "/page/pkm",
           "text": "system"
+        },
+        {
+          "source": "/page/hugo",
+          "target": "/page/pkm",
+          "text": "pkm"
         }
       ],
       "/page/pomodoro": [
@@ -670,6 +547,25 @@
           "text": "procrastination"
         }
       ],
+      "/page/spaced-repetition": [
+        {
+          "source": "/page/daily-note",
+          "target": "/page/spaced-repetition",
+          "text": "spaced repetition"
+        },
+        {
+          "source": "/page/daily-note",
+          "target": "/page/spaced-repetition",
+          "text": "spaced repetition"
+        }
+      ],
+      "/page/time-management": [
+        {
+          "source": "/page/pomodoro",
+          "target": "/page/time-management",
+          "text": "time management"
+        }
+      ],
       "/typescript": [
         {
           "source": "/page/javascript",
@@ -682,12 +578,17 @@
   "links": [
     {
       "source": "/",
+      "target": "/page/digital-garden",
+      "text": "digital garden"
+    },
+    {
+      "source": "/",
       "target": "/page/pkm",
       "text": "pkm"
     },
     {
       "source": "/",
-      "target": "/page/Hugo",
+      "target": "/page/hugo",
       "text": "Hugo"
     },
     {
@@ -706,61 +607,6 @@
       "text": "pkm"
     },
     {
-      "source": "/page/Hiccup",
-      "target": "/domain-specific-languagkeywordkeywords",
-      "text": "domain-specific languag[[keyword[[keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/Advanced-Queriekeywords",
-      "text": "Advanced Querie[[keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/Advanced-Queriekeywords",
-      "text": "Advanced Querie[[keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/Advanced-Queriekeywords",
-      "text": "Advanced Querie[[keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/Advanced-Queriekeywords",
-      "text": "Advanced Querie[[keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/keywordkeywords",
-      "text": "keyword[[keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/keywords",
-      "text": "keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/keywords",
-      "text": "keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/keywordkeywords",
-      "text": "keyword[[keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/keywordkeywords",
-      "text": "keyword[[keywords"
-    },
-    {
-      "source": "/page/Hiccup",
-      "target": "/keywords",
-      "text": "keywords"
-    },
-    {
       "source": "/page/How-and-why-to-tag-your-Daily-Notes",
       "target": "/friction",
       "text": "friction"
@@ -771,39 +617,9 @@
       "text": "logseq"
     },
     {
-      "source": "/page/Hugo-testpage",
-      "target": "/keywordkeywords",
-      "text": "keyword[[keywords"
-    },
-    {
-      "source": "/page/Hugo-testpage",
-      "target": "/keywordkeywords",
-      "text": "keyword[[keywords"
-    },
-    {
-      "source": "/page/Hugo",
-      "target": "/page/pkm",
-      "text": "pkm"
-    },
-    {
-      "source": "/page/Hugo",
-      "target": "/page/Logseq",
-      "text": "Logseq"
-    },
-    {
-      "source": "/page/Hugo",
-      "target": "/page/logseq",
-      "text": "logseq"
-    },
-    {
-      "source": "/page/Streaming-to-a-chromecast",
-      "target": "/keywords",
-      "text": "keywords"
-    },
-    {
       "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-      "target": "/keywords",
-      "text": "keywords"
+      "target": "/page/digital-garden",
+      "text": "digital garden"
     },
     {
       "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
@@ -812,8 +628,8 @@
     },
     {
       "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-      "target": "/hugkeywordkeywords",
-      "text": "hug[[keyword[[keywords"
+      "target": "/page/hugo",
+      "text": "hugo"
     },
     {
       "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
@@ -822,18 +638,28 @@
     },
     {
       "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-      "target": "/hugkeywordkeywords",
-      "text": "hug[[keyword[[keywords"
+      "target": "/page/digital-garden",
+      "text": "garden"
     },
     {
       "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
-      "target": "/hugkeywordkeywords",
-      "text": "hug[[keyword[[keywords"
+      "target": "/page/hugo",
+      "text": "hugo"
+    },
+    {
+      "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
+      "target": "/page/hugo",
+      "text": "hugo"
     },
     {
       "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
       "target": "/keywords",
       "text": "keywords"
+    },
+    {
+      "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
+      "target": "/page/digital-garden",
+      "text": "digital garden"
     },
     {
       "source": "/page/building-a-digital-garden-with-Logseq-and-Hugo",
@@ -847,6 +673,21 @@
     },
     {
       "source": "/page/daily-note",
+      "target": "/page/spaced-repetition",
+      "text": "spaced repetition"
+    },
+    {
+      "source": "/page/daily-note",
+      "target": "/page/how-and-why-to-tag-your-daily-notes",
+      "text": "How and why to tag your Daily Notes"
+    },
+    {
+      "source": "/page/daily-note",
+      "target": "/page/spaced-repetition",
+      "text": "spaced repetition"
+    },
+    {
+      "source": "/page/daily-note",
       "target": "/highlights-import",
       "text": "highlights-import"
     },
@@ -857,18 +698,8 @@
     },
     {
       "source": "/page/datalog",
-      "target": "/page/hugo",
-      "text": "hugo"
-    },
-    {
-      "source": "/page/datalog",
       "target": "/Intro-to-Datalog",
       "text": "Intro to Datalog"
-    },
-    {
-      "source": "/page/digital-garden",
-      "target": "/page/hugo",
-      "text": "hugo"
     },
     {
       "source": "/page/digital-garden",
@@ -876,24 +707,54 @@
       "text": "keywords"
     },
     {
-      "source": "/page/digital-garden",
-      "target": "/keywordkeywords",
-      "text": "keyword[[keywords"
+      "source": "/page/hiccup",
+      "target": "/page/domain-specific-language",
+      "text": "domain-specific language"
+    },
+    {
+      "source": "/page/hiccup",
+      "target": "/page/advanced-queries",
+      "text": "Advanced Queries"
+    },
+    {
+      "source": "/page/hiccup",
+      "target": "/page/advanced-queries",
+      "text": "Advanced Queries"
+    },
+    {
+      "source": "/page/hiccup",
+      "target": "/page/advanced-queries",
+      "text": "Advanced Queries"
+    },
+    {
+      "source": "/page/hiccup",
+      "target": "/page/advanced-queries",
+      "text": "Advanced Queries"
+    },
+    {
+      "source": "/page/hugo",
+      "target": "/page/pkm",
+      "text": "pkm"
+    },
+    {
+      "source": "/page/hugo",
+      "target": "/page/logseq",
+      "text": "Logseq"
+    },
+    {
+      "source": "/page/hugo",
+      "target": "/page/logseq",
+      "text": "logseq"
     },
     {
       "source": "/page/javascript",
-      "target": "/page/Logseq",
+      "target": "/page/logseq",
       "text": "Logseq"
     },
     {
       "source": "/page/javascript",
       "target": "/typescript",
       "text": "typescript"
-    },
-    {
-      "source": "/page/logseq",
-      "target": "/page/hugo",
-      "text": "hugo"
     },
     {
       "source": "/page/logseq",
@@ -906,9 +767,9 @@
       "text": "datalog"
     },
     {
-      "source": "/page/pkm",
-      "target": "/page/hugo",
-      "text": "hugo"
+      "source": "/page/pomodoro",
+      "target": "/page/time-management",
+      "text": "time management"
     },
     {
       "source": "/page/procrastination",
@@ -927,13 +788,8 @@
     },
     {
       "source": "/page/query-views",
-      "target": "/page/Hiccup",
+      "target": "/page/hiccup",
       "text": "Hiccup"
-    },
-    {
-      "source": "/page/query-views",
-      "target": "/keywordkeywords",
-      "text": "keyword[[keywords"
     },
     {
       "source": "/page/query-views",
@@ -942,18 +798,8 @@
     },
     {
       "source": "/page/query-views",
-      "target": "/keywordkeywords",
-      "text": "keyword[[keywords"
-    },
-    {
-      "source": "/page/query-views",
       "target": "/2021-07-21",
       "text": "2021-07-21"
-    },
-    {
-      "source": "/page/query-views",
-      "target": "/keywordkeywords",
-      "text": "keyword[[keywords"
     },
     {
       "source": "/page/query-views",

@@ -1,0 +1,16 @@
+@import "popover"
+
+#graph-container 
+    --g-link: var(--primary-color-very-light)
+    // margin-left: 1em
+    // border: var(--lm-card-border-color) 1px solid
+    // border-radius: 5px
+    > svg
+        // background-color: var(--lm-base-body-bg-color)
+        cursor: pointer
+    > svg:hover .search-path 
+	    stroke: var(--primary-color-very-dark)
+     > svg .search-path 
+        stroke: var(--gray-color)
+        stroke-width: 2px
+        transition: stroke 0.5s ease   

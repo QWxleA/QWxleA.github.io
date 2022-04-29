@@ -1,131 +1,32 @@
----
 title: "Q's 🌱"
+params: 
+  logo: "🌱"
+
 baseURL: "https://QWxleA.github.io/"
-theme: "tania"
-languageCode: "en-GB"
-publishDir: "docs"
-defaultContentLanguage: "en"
-pluralizelisttitles: false
-removePathAccents: true
-paginate: 5
-paginatePath: "page"
-rssLimit: 20
-author:
-  name: "Alex Qwxlea"
-  url: "https://github.com/qwxlea"
-  avatar: "android-chrome-512x512.png"
-
-frontmatter:
-  date:
-  - date
-  - publishDate
-  - lastmod
-  expiryDate:
-  - expiryDate
-  lastmod:
-  - :git
-  - lastmod
-  - date
-  - publishDate
-  publishDate:
-  - publishDate
-  - date
-
-outputFormats:
-  SearchIndex:
-    mediaType: "application/json"
-    baseName: "searchindex"
-    isPlainText: true
-    notAlternative: true
-
-outputs:
-  home: ["HTML","RSS", "JSON", "SearchIndex"]
-  section: ["HTML","RSS", "JSON"]
-
-params:
-  debug: true
-  contact: "qwxlea@gmail.com"
-  copyright: "<!--Creative Commons License-->This site is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).<!--/Creative Commons License-->"
-  description: "If all you have is a hammer, morse is your alphabet"
-  dateformat: "2 January, 2006"
-  favicon: "apple-touch-icon.png"
-  feedlinks: true
-  footer: "Powered by [Hugo](https://gohugo.io/) and the [Logseq](https://logseq.com/)."
-  icon: "apple-touch-icon.png"
-  image: "apple-touch-icon.png"
-  imageMaxWidth: 400
-  mobileMenu: true
-  poweredby: false
-  sidebar: true
-  submitted: true
-  logo: false
-  author: "Alex Qwxlea"
-
+languageCode: en-us
+# googleAnalytics: G-XYFD95KB4J
+pygmentsUseClasses: true
+relativeURLs: false
+disablePathToLower: true
+ignoreFiles:
+  - /content/templates/*
+  - /content/private/*
+summaryLength: 20
+paginate: 10
+enableGitInfo: true
 markup:
-asciidocExt:
-  attributes: {}
-  backend: html5
-  extensions: []
-  failureLevel: fatal
-  noHeaderOrFooter: true
-  preserveTOC: false
-  safeMode: unsafe
-  sectionNumbers: false
-  trace: false
-  verbose: false
-  workingFolderCurrent: false
-blackFriday:
-  angledQuotes: false
-  extensions: null
-  extensionsMask: null
-  footnoteAnchorPrefix: ""
-  footnoteReturnLinkContents: ""
-  fractions: true
-  hrefTargetBlank: false
-  latexDashes: true
-  nofollowLinks: false
-  noreferrerLinks: false
-  plainIDAnchors: true
-  skipHTML: false
-  smartDashes: true
-  smartypants: true
-  smartypantsQuotesNBSP: false
-  taskLists: true
-  # For now on blackfriday, ndashes dont work?!?
-# defaultMarkdownHandler: blackFriday
-defaultMarkdownHandler: goldmark
-goldmark:
-  extensions:
-    definitionList: true
-    footnote: true
-    linkify: true
-    strikethrough: true
-    table: true
-    taskList: true
-    typographer: true
-  parser:
-    attribute:
-      block: false
-      title: true
-    autoHeadingID: true
-    autoHeadingIDType: github
-  renderer:
-    hardWraps: false
-    unsafe: true
-    xhtml: false
-highlight:
-  anchorLineNos: true #
-  codeFences: true
-  guessSyntax: false
-  hl_Lines: ""
-  lineAnchors: ""
-  lineNoStart: 1
-  lineNos: true # false 
-  lineNumbersInTable: true
-  noClasses: true
-  style: monokai
-  tabWidth: 4
-tableOfContents:
-  endLevel: 3
-  ordered: false
-  startLevel: 2
+  tableOfContents:
+    endLevel: 3
+    ordered: true
+    startLevel: 2
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    hl_Lines: ''
+    lineAnchors: ''
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    style: dracula
+    tabWidth: 4

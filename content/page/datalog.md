@@ -11,8 +11,7 @@ title: datalog
 categories: development
 lastMod: 2022-04-26
 ---
-**Note:** This place is currently a placeholder, [hugo](/page/hugo) gets upset if links are missing.
-
+((a3bb1ec7-46bd-4b6b-8636-83e01be12ec9))
 
 For now, just read the references. WIP: [[Intro to Datalog]]
 

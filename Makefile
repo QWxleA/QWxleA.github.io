@@ -1,37 +1,24 @@
-SHELL := /bin/bash
-OPTIM := /Applications/ImageOptim.app/Contents/MacOS/ImageOptim 
 SCRPT := ./scripts/export-blog
-IMG   := ./static/assets
-IMGS  := $(wildcard $(IMG)/*.png $(IMG)/*.jpg) 
-.POSIX:
-.PHONY: push update watch
-all: help
 
-help: ## Show this help
-	@egrep -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+.DEFAULT_GOAL := serve
 
-push: ## Push pages to github / upstream
-	git push origin master
+help: ## Show all Makefile targets
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-update: ## Add new items / prepare to push upstream (Don't forget to commit)
-	hugo
-	git add .
+update: ## Update Quartz to the latest version on Github
+	@git remote show upstream || (echo "remote 'upstream' not present, setting 'upstream'" && git remote add upstream https://github.com/jackyzha0/quartz.git)
+	git fetch upstream
+	git log --oneline --decorate --graph ..upstream/hugo
+	git checkout -p upstream/hugo -- layouts .github Makefile assets/js assets/styles/base.scss assets/styles/darkmode.scss config.toml data
 
-watch: ## Run the local development server
-	hugo --buildDrafts --watch server --disableFastRender --ignoreCache
+update-force: ## Forcefully pull all changes and don't ask to patch 
+	@git remote show upstream || (echo "remote 'upstream' not present, setting 'upstream'" && git remote add upstream https://github.com/jackyzha0/quartz.git)
+	git fetch upstream
+	git checkout upstream/hugo -- layouts .github Makefile assets/js assets/styles/base.scss assets/styles/darkmode.scss config.toml data
+
+serve: ## Serve Quartz locally
+	hugo-obsidian -input=content -output=assets/indices -index -root=. && hugo server --enableGitInfo --disableFastRender
 
 import: ## Import latest Logseq pages
 	$(SCRPT) -x
 
-clean: ## Reset blog to pristine state 
-	$(SCRPT) -c
-
-cleanall: ## Reset blog to pristine state (Also Images!)
-	$(SCRPT) -z
-
-# https://imageoptim.com/command-line.html
-optim: ## reduce image sizes
-	$(OPTIM) $(IMGS)
-
-zonk: ## testing new stuff
-	hugo-obsidian -input=content -output=assets/indices -index -root=. && hugo --buildDrafts --watch server --disableFastRender --ignoreCache

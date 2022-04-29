@@ -1,0 +1,51 @@
+<head>
+<!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="{{if .IsHome}}{{$.Site.Data.config.description}}{{else}}{{.Summary}}{{end}}">
+    <title>{{ if .Title }}{{ .Title }}{{ else }}{{ $.Site.Data.config.page_title }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="{{$.Site.BaseURL}}/icon.png" />
+
+    {{ $main := resources.Get "sass/main.sass" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+    <link rel="stylesheet" href="{{ $main.Permalink }}">
+    
+    {{ $css := resources.Get "hm/css/halfmoon-variables.css" }}
+    <!-- {{ $style := $css | resources.Minify | fingerprint }} -->
+    {{ $style := $css | resources.Minify }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" /> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+
+    {{ $search := resources.Get "js/search.js" |  resources.Fingerprint "md5" | resources.Minify }}
+    <script src="{{$search.Permalink}}"></script>
+    {{ $popover := resources.Get "js/popover.js" |  resources.Fingerprint "md5" | resources.Minify }}
+    <script src="{{$popover.Permalink}}"></script>
+    {{ $graph := resources.Get "js/graph.js" |  resources.Fingerprint "md5" | resources.Minify }}
+    <script src="{{$graph.Permalink}}"></script>
+    
+    <!--  Preload page vars  -->
+    <!--  Preload page vars  -->
+    {{$linkIndex := resources.Get "indices/linkIndex.json" | resources.Fingerprint "md5" | resources.Minify |  }}
+    {{$contentIndex := resources.Get "indices/contentIndex.json" | resources.Fingerprint "md5" | resources.Minify }}
+    <script>
+      console.log("DB head.js")
+      const BASE_URL = {{.Site.BaseURL}}
+      const fetchData = Promise.all([
+            fetch("{{ $linkIndex.Permalink }}")
+              .then(data => data.json())
+              .then(data => ({
+                index: data.index,
+                links: data.links,
+              })),
+            fetch("{{ $contentIndex.Permalink }}")
+              .then(data => data.json()),
+          ])
+          .then(([{index, links}, content]) => ({
+            index,
+            links,
+            content,
+          }))
+    </script>
+</head>
+{{ template "_internal/google_analytics.html" . }}

@@ -43,11 +43,11 @@
       {{$href := strings.TrimRight "/" ($page.GetPage $title).RelPermalink}}
       {{$display := default $title (index $split 1)}}
       {{if not $href}}
-        {{$link := printf "<a class=\"internal-link broken\">%s</a>" $display}}
+        {{$link := printf "<a data-toggle=\"tooltip\" class=\"internal-link broken\">%s</a>" $display}}
         {{$content = replace $content . $link}}
       {{else}}
         {{$fullhref := printf "%s%s" $href $block }}
-        {{$link := printf "<a href=\"%s\" rel=\"noopener\" class=\"internal-link\" data-src=\"%s\">%s</a>" $fullhref $href $display}}
+        {{$link := printf "<a href=\"%s\" rel=\"noopener\" data-toggle=\"tooltip\" data-src=\"%s\">%s</a>" $fullhref $href $display}}
         {{$content = replace $content . $link}}
       {{end}}
     {{end}}

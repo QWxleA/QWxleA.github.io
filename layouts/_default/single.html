@@ -1,45 +1,21 @@
 {{ define "main" }}
-<div class="container{{if .Draft }} draft{{ end }} ">
-    <article>
-        <header class="article-header">
-            <div class="thumb">
-                <div>
-                    <h1>{{ .Title }}</h1>
-                </div>
-            </div>
-            <div class="post-meta">                
-                <div class="tags">
-                    {{ range (.GetTerms "categories") }} 
-                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                    {{ end }} | 
-                    {{ range (.GetTerms "tags") }} 
-                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                    {{ end }}
-                </div>
-            </div>
-        </header>
-    </article>
 
+<div class="container-fluid">
+    <div class="row">
 
-    <div class="article-post">
-        <div class="side side-right">
-            <p>Last edited: <time>{{ .Date.Format "January 02, 2006" }}</time>
-            <br/>{{ .ReadingTime }} {{ cond (eq .ReadingTime 1) "minute" "minutes" }} reading time</p>
-            {{ partial "toc" . }}
-            {{ partial "backlinks" . }}
-        </div>
-        {{partial "textprocessing.html" . }}
-        {{partial "popover.html" .}}
+      <div class="col-3">
+        {{partial "meta.html" .}}
+        {{partial "graph.html" .}}
+      </div>
+
+      <div class="col-9">
+        <article class="card">
+            {{if .Title}}<h2 class="card-title">{{ .Title }}</h2>{{end}}
+            {{partial "textprocessing.html" . }}
+        </article>
+      </div>
+
     </div>
 </div>
-
-{{ if or (not (isset .Params "comments")) (eq .Params.comments "true")}} 
-<div class="container">
-    {{ partial "comments/include" . }}
-</div>
-{{ end }}
-</main>
-
-<!-- FIXME correct location? -->
 
 {{ end }}
