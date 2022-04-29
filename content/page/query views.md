@@ -1,6 +1,7 @@
 ---
 date:
 - 2022-04-17
+lastmod: 
 icon: 📝
 category: development
 tags:
@@ -12,43 +13,40 @@ title: query views
 categories: development
 lastMod: 2022-04-23
 ---
-Queries are build in a language called [datalog]({{< ref "datalog" >}}), the presentation is done using [Hiccup]({{< ref "Hiccup" >}}). Mixed in is Clojure, of which I know none.
+Queries are build in a language called [datalog](/page/datalog), the presentation is done using [Hiccup](/page/Hiccup). Mixed in is Clojure, of which I know none.
 
-### Debugging 
-
+### Debugging
 
   + Usually I add one of these to view raw data from a query before I add custom hiccup view
 
   + `:view (fn [result] (for [r result] [:pre (pr-str r)]))`
 
-
   + `:view (fn [result] (pr-str result))`
 
 ### Properties
-
 
 ```clojure
  #+BEGIN_QUERY
 {
  :query [:find (pull ?b [{:block/page
-     [:block/name :block/journal-day]} :block/properties])
+     [:block/name :block/journal-da[[keyword[[keywords]]]} :block/propertie[[keywords]])
       :where
-      [?b :block/properties ?bprops]
-      [(get ?bprops :distanse "nil") ?bs]
+      [?b :block/properties ?bprop[[keywords]]
+      [(get ?bprops :distanse "nil") ?b[[keywords]]
       [(not= ?bs "nil")]]
 :result-transform (fn [result]
-                     (sort-by (fn [s]
-                        (get-in s [:block/page :block/journal-day])) (fn [a b] (compare b a)) result)) 
-:view (fn [rows] [:table 
+                     (sort-by (fn [[[keywords]]
+                        (get-in s [:block/page :block/journal-da[[keyword[[keywords]]])) (fn [a b] (compare b a)) result)) 
+:view (fn [row[[keywords]] [:table 
  [:thead 
   [:tr 
    [:th "Dato"] 
    [:th "Distanse"]
    [:th "Økt"] ] ] 
  [:tbody 
-(for [r rows] [:tr 
-   [:td (get-in r [:block/page :block/name])] 
-   [:td (get-in r [:block/properties :distanse])]
+(for [r row[[keywords]] [:tr 
+   [:td (get-in r [:block/page :block/nam[[keyword[[keywords]]])] 
+   [:td (get-in r [:block/properties :distans[[keyword[[keywords]]])]
    [:td (get-in r [:block/properties :økt])] ])
    ]]
 )
@@ -58,7 +56,6 @@ Queries are build in a language called [datalog]({{< ref "datalog" >}}), the pre
 
 ### Image links
 
-
 ```clojure
  #+BEGIN_QUERY
 {:title [:h4 "Image gallery"]
@@ -67,11 +64,11 @@ Queries are build in a language called [datalog]({{< ref "datalog" >}}), the pre
   :in $ ?pattern ?current-page
   :where
   [?b :block/content ?c]
-  [?p :block/name ?current-page]
+  [?p :block/name ?current-pag[[keyword[[keywords]]]
   [?b :block/page ?p]
   [(re-pattern ?pattern) ?q]
   [(re-find ?q ?c)]]
- :inputs ["^!.*https://www.dropbox.com/s/" :current-page]
+ :inputs ["^!.*https://www.dropbox.com/s/" :current-pag[[keyword[[keywords]]]
 :result-transform (fn [result]
                      (sort-by (fn [h]
                                 (get h :db/id)) result))
@@ -89,8 +86,7 @@ Queries are build in a language called [datalog]({{< ref "datalog" >}}), the pre
 
 ### Find all unlinked pages
 
-
-  + link:: [Discord](https://discord.com/channels/725182569297215569/743139225746145311/832512082289229824)
+  + link:: [Discor[[keyword[[keywords]]](https://discord.com/channels/725182569297215569/743139225746145311/832512082289229824)
 date:: [[2021-04-16]]
 
 ```clojure
@@ -98,12 +94,12 @@ date:: [[2021-04-16]]
 	  {:title "Orphan pages"
 	   :query [:find ?name
 	           :where
-	           [?p :page/name ?name]
+	           [?p :page/name ?nam[[keyword[[keywords]]]
 	           (not
 	            [?b :block/ref-pages ?p1]
 	            [?b :block/page ?p2]
-	            (or [?p1 :page/name ?name]
-	                [?p2 :page/name ?name]))]
+	            (or [?p1 :page/name ?nam[[keyword[[keywords]]]
+	                [?p2 :page/name ?nam[[keyword[[keywords]]]))]
 	   :view (fn [result]
 	           [:div.flex.flex-col
 	            (for [page result]
@@ -114,7 +110,7 @@ date:: [[2021-04-16]]
 
 ### Query to show a random page
 
-  + link:: [Discord](https://discord.com/channels/725182569297215569/743139225746145311/867375290396311633)
+  + link:: [Discor[[keyword[[keywords]]](https://discord.com/channels/725182569297215569/743139225746145311/867375290396311633)
 date:: [[2021-07-21]]
 
 ```clojure
@@ -122,7 +118,7 @@ date:: [[2021-07-21]]
 	  {:title "Give me a random page!!!"
 	   :query [:find ?name
 	           :where
-	           [?b :block/name ?name]]
+	           [?b :block/name ?nam[[keyword[[keywords]]]]
 	   :result-transform (fn [result]
 	                       [(rand-nth result)])
 	  :view (fn [result]
@@ -135,29 +131,28 @@ date:: [[2021-07-21]]
 
 ### Query to create a table with page and todo count
 
-
-  + link:: [Discord](https://discord.com/channels/725182569297215569/743139225746145311/921337299164356658)
+  + link:: [Discor[[keyword[[keywords]]](https://discord.com/channels/725182569297215569/743139225746145311/921337299164356658)
 date:: [[2021-12-17]]
 
 ```clojure
    #+BEGIN_QUERY 
 	  {:title "TODO by page"
 	    :query     [:find (pull ?b [:block/marker :block/parent {:block/page
-	       [:db/id :block/name]}])
+	       [:db/id :block/nam[[keyword[[keywords]]]}])
 	    :where
-	             [?b :block/marker ?marker]
+	             [?b :block/marker ?marke[[keyword[[keywords]]]
 	             [(= "TODO" ?marker)] 
 	    ]
 	  :result-transform (fn [result]
-	                          (map (fn [[key value]] {:page (get key :block/name) :count (count value)}) (group-by :block/page result))
+	                          (map (fn [[key valu[[keyword[[keywords]]]] {:page (get key :block/name) :count (count value)}) (group-by :block/page result))
 	                  )
-	  :view (fn [rows] [:table 
+	  :view (fn [row[[keywords]] [:table 
 	   [:thead 
 	    [:tr 
 	     [:th "Page"] 
 	     [:th "Count"] ] ] 
 	   [:tbody 
-	  (for [r rows] [:tr 
+	  (for [r row[[keywords]] [:tr 
 	     [:td [:a {:href (str "#/page/" (get r :page))} (get r :page)] ] 
 	     [:td (get r :count)] ])
 	     ]]
@@ -168,27 +163,26 @@ date:: [[2021-12-17]]
 
 ### Grouping
 
-
 ```clojure
  #+BEGIN_QUERY 
 {:title "TODO by page"
   :query     [:find (pull ?b [:block/scheduled :block/marker :block/parent {:block/page
-     [:db/id :block/name]}])
+     [:db/id :block/nam[[keyword[[keywords]]]}])
   :where
            [?b :block/scheduled _]
-           [?b :block/marker ?marker]
+           [?b :block/marker ?marke[[keyword[[keywords]]]
            [(= "TODO" ?marker)] 
   ]
 :result-transform (fn [result]
-                        (map (fn [[key value]] {:page key :count (count value)}) (group-by :block/scheduled result))
+                        (map (fn [[key valu[[keyword[[keywords]]]] {:page key :count (count value)}) (group-by :block/scheduled result))
                 )
-:view (fn [rows] [:table 
+:view (fn [row[[keywords]] [:table 
  [:thead 
   [:tr 
    [:th "Page"] 
    [:th "Count"] ] ] 
  [:tbody 
-(for [r rows] [:tr 
+(for [r row[[keywords]] [:tr 
    [:td (get r :page)] 
    [:td (get r :count)] ])
    ]]
@@ -198,7 +192,6 @@ date:: [[2021-12-17]]
  ```
 
 ### View
-
 
 ```clojure
 #+BEGIN_QUERY
@@ -219,7 +212,7 @@ date:: [[2021-12-17]]
                [:th {:width "20%"} "Creator"]
                [:th {:width "60%"} "Description"]]]
              [:tbody
-              (for [{:block/keys [title properties]} blocks]
+              (for [{:block/keys [title propertie[[keywords]]} block[[keywords]]
                 [:tr
                  [:td (second (:url (second (first title))))]
                  [:td (get properties "creator")]
@@ -230,14 +223,13 @@ date:: [[2021-12-17]]
 
 ### Group by
 
-
 ```clojure
  #+BEGIN_QUERY
 {:title "Group by"
     :query [:find (pull ?h [*])
             :in $
             :where
-            [?h :block/marker ?marker]
+            [?h :block/marker ?marke[[keyword[[keywords]]]
             [(contains? #{"NOW" "DOING"} ?marker)]
             ]
 :result-transform (fn [result]

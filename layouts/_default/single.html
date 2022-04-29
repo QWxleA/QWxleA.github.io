@@ -28,34 +28,18 @@
             {{ partial "toc" . }}
             {{ partial "backlinks" . }}
         </div>
-        {{ .Content }}
+        {{partial "textprocessing.html" . }}
+        {{partial "popover.html" .}}
     </div>
 </div>
 
-<div class="container">
-    {{ if .Section }}
-    <nav class="flex container suggested">
-        {{ with .PrevInSection }}
-        <a rel="prev" href="{{ .RelPermalink }}" title="Previous post (older)">
-            <span>Previous</span>
-            {{ .Title }}
-            </a>
-        {{ end }}
-        
-        {{ with .NextInSection }}
-        <a rel="next" href="{{ .RelPermalink }}" title="Next post (newer)">
-            <span>Next</span>
-            {{ .Title }}
-            </a> 
-        {{ end }}
-    </nav>
-    {{ end }}
-</div>
 {{ if or (not (isset .Params "comments")) (eq .Params.comments "true")}} 
 <div class="container">
     {{ partial "comments/include" . }}
 </div>
 {{ end }}
 </main>
+
+<!-- FIXME correct location? -->
 
 {{ end }}

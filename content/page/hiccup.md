@@ -11,13 +11,13 @@ categories: development
 date: 2022-03-23
 lastMod: 2022-04-18
 ---
-Hiccup is a [domain-specific language]({{< ref "domain-specific language" >}}) for generating HTML, used mostly in Clojure community.
+Hiccup is a [[domain-specific languag[[keyword[[keywords]]]] for generating HTML, used mostly in Clojure community.
 
 For every day use you need very little knowledge of Hiccup, and fortunately (most of it) is surprisingly simple.
 
 ## Let's Hiccup
 
-  + The most obvious thing you can use Hiccup for is to style the titles of [Advanced Queries]({{< ref "Advanced Queries" >}}):
+  + The most obvious thing you can use Hiccup for is to style the titles of [[Advanced Querie[[keywords]]]:
 
 ```clojure
 #+BEGIN_QUERY
@@ -50,11 +50,11 @@ For every day use you need very little knowledge of Hiccup, and fortunately (mos
 <h3>This is hiccup!</h3>
 ```
 
-  + Technically speaking, the Clojure data structure is a vector (`[ .... ]`, just like [Advanced Queries]({{< ref "Advanced Queries" >}}) uses for searches, that takes one of the following two forms:
+  + Technically speaking, the Clojure data structure is a vector (`[ .... ]`, just like [[Advanced Querie[[keywords]]] uses for searches, that takes one of the following two forms:
 
 ```clojure
-[tag & body]
-[tag attributes & body]
+[tag & bod[[keyword[[keywords]]]
+[tag attributes & bod[[keyword[[keywords]]]
 ```
 
   + The first item in the vector is the tag name. It is mandatory, and should be a keyword (`:h3`), a string (`"This is hiccup!"`) or a symbol (`?b` from queries).
@@ -106,7 +106,7 @@ For every day use you need very little knowledge of Hiccup, and fortunately (mos
 
 ## Using Hiccup for :views
 
-  + [Advanced Queries]({{< ref "Advanced Queries" >}}) support custom-build views for search results. These views are a combination of (a small sub-set of) Clojure and Hiccup. It's not the easiest combination, but without a doubt you can build amazing things with it.
+  + [[Advanced Querie[[keywords]]] support custom-build views for search results. These views are a combination of (a small sub-set of) Clojure and Hiccup. It's not the easiest combination, but without a doubt you can build amazing things with it.
 
 ``` clojure
 #+BEGIN_QUERY
@@ -116,7 +116,7 @@ For every day use you need very little knowledge of Hiccup, and fortunately (mos
  :where
   [?t :block/name ?tag]
   [?p :block/tags ?t]
-  [?p :block/name ?name]]
+  [?p :block/name ?nam[[keyword[[keywords]]]]
  :inputs ["programming"]
  :view (fn [result]
 	         [:div.flex.flex-col
@@ -128,7 +128,7 @@ For every day use you need very little knowledge of Hiccup, and fortunately (mos
 #+END_QUERY
 ```
 
-  + Let's examine one of the [Advanced Queries]({{< ref "Advanced Queries" >}}), we are only interested in lines **11** to **15**. It is an excellent example how search results, clojure and hiccup can represent search results:
+  + Let's examine one of the [[Advanced Querie[[keywords]]], we are only interested in lines **11** to **15**. It is an excellent example how search results, clojure and hiccup can represent search results:
 
   + These lines will create the following:
 
@@ -171,7 +171,7 @@ For every day use you need very little knowledge of Hiccup, and fortunately (mos
  :where
   [?t :block/name ?tag]
   [?p :block/tags ?t]
-  [?p :block/name ?name]]
+  [?p :block/name ?nam[[keyword[[keywords]]]]
  :inputs ["programming"]
  :view (fn [result]
 	         [:div.flex.flex-col
@@ -192,17 +192,17 @@ For every day use you need very little knowledge of Hiccup, and fortunately (mos
       :where
       [page-tags ?p #{"programming"}]
        ]
-:view (fn [rows] [:table 
+:view (fn [row[[keywords]] [:table 
  [:thead 
   [:tr 
    [:th "Page"] 
    [:th "Language"]
    [:th "Difficulty"] ] ] 
  [:tbody 
-(for [r rows] [:tr 
+(for [r row[[keywords]] [:tr 
    [:td [:a {:href (str "#/page/" (get r :block/name))} (clojure.string/capitalize (get r :block/name))]] 
-   [:td (get-in r [:block/properties :language])]
-   [:td (get-in r [:block/properties :difficulty])] ])
+   [:td (get-in r [:block/properties :languag[[keyword[[keywords]]])]
+   [:td (get-in r [:block/properties :difficult[[keyword[[keywords]]])] ])
    ]]
 )
 :query-table false
@@ -218,17 +218,17 @@ For every day use you need very little knowledge of Hiccup, and fortunately (mos
       :where
       [page-tags ?p #{"programming"}]
        ]
-:view (fn [rows] [:table 
+:view (fn [row[[keywords]] [:table 
  [:thead 
   [:tr 
    [:th "Page"] 
    [:th "Language"]
    [:th "Difficulty"] ] ] 
  [:tbody 
-(for [r rows] [:tr 
+(for [r row[[keywords]] [:tr 
    [:td [:a {:href (str "#/page/" (get r :block/name))} (clojure.string/capitalize (get r :block/name))]] 
-   [:td (get-in r [:block/properties :language])]
-   [:td (get-in r [:block/properties :difficulty])] ])
+   [:td (get-in r [:block/properties :languag[[keyword[[keywords]]])]
+   [:td (get-in r [:block/properties :difficult[[keyword[[keywords]]])] ])
    ]]
 )
 :query-table false
@@ -241,7 +241,7 @@ For every day use you need very little knowledge of Hiccup, and fortunately (mos
 
 ### Additional resources
 
-  + [Hiccup Tips](https://ericnormand.me/mini-guide/hiccup-tips)
+  + [Hiccup Tip[[keywords]](https://ericnormand.me/mini-guide/hiccup-tips)
 
   + [Tutorial on Medium](https://medium.com/makimo-tech-blog/hiccup-lightning-tutorial-6494e477f3a5)
 

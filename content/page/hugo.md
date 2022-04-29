@@ -1,20 +1,22 @@
 ---
 date:
 - 2022-04-16
+lastmod: 
 icon: 📝
 category: development
 tags:
 - webdev
 subtitle: placeholder
-title: hugo
+title: Hugo
 categories: development
 lastMod: 2022-04-23
 ---
-The plan is to collect useful snippets and code-examples to help creating and maintaining a [pkm]({{< ref "pkm" >}}) in Hugo (and posibly [Logseq]({{< ref "Logseq" >}})).
+The plan is to collect useful snippets and code-examples to help creating and maintaining a [pkm](/page/pkm) in Hugo (and posibly [Logseq](/page/Logseq)).
 
 ### Automating import
 
-To import pages from [logseq]({{< ref "logseq" >}}):
+To import pages from [logseq](/page/logseq):
+
 
 ```bash
 #!/usr/bin/env bash
@@ -70,6 +72,7 @@ usage
 ### Makefile to simplify working with Hugo
 
 Makefiles are simple, just type `make`
+
 
 ```makefile
 SHELL := /bin/bash

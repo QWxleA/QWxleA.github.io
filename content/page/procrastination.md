@@ -6,7 +6,7 @@ title: procrastination
 date: 2022-02-15
 lastMod: 2022-04-18
 ---
-    + **relevant notes**:
+**relevant notes**:
 
   + [[motivation]] [[addiction]]
 

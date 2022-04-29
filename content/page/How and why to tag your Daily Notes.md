@@ -5,7 +5,7 @@ tags:
 date: 2022-04-23
 title: How and why to tag your Daily Notes
 categories: pkm
-lastMod: 2022-04-23
+lastMod: 2022-04-28
 ---
 ### About resurfacing information from your Daily Notes
 
@@ -20,19 +20,19 @@ lastMod: 2022-04-23
 
   + Tags are effectively a filter. You can use simple queries to {{< logseq/mark >}}find information you need, when you need it{{< / logseq/mark >}}:
 
-  + A query like: `{{query (and [[tags and keywords]] [[@Andy Matuschak]] )}}`, produces:
+  + A query like: `{{query (and [[tags and keyword]] [[@Andy Matuschak]] )}}`, produces:
 
 ![image.png](/assets/image_1650711734627_0.png)
 
 ### Technical background
 
-  + In [logseq]({{< ref "logseq" >}}) tags and links are technically treated the same, but in practical use they are not the same:
+  + In [logseq](/page/logseq) tags and links are technically treated the same, but in practical use they are not the same:
 
     + **tags** are a system of classification
 
     + **links** are an API to a note -> easy linkable nodes
 
-      + [Evergreen note titles are like APIs](https://notes.andymatuschak.org/z3XP5GRmd9z1D2qCE7pxUvbeSVeQuMiqz9x1C)
+      + [Evergreen note titles are like API](https://notes.andymatuschak.org/z3XP5GRmd9z1D2qCE7pxUvbeSVeQuMiqz9x1C)
 
 ### Links and references
 

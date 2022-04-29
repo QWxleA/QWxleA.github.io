@@ -1,4 +1,8 @@
 SHELL := /bin/bash
+OPTIM := /Applications/ImageOptim.app/Contents/MacOS/ImageOptim 
+SCRPT := ./scripts/export-blog
+IMG   := ./static/assets
+IMGS  := $(wildcard $(IMG)/*.png $(IMG)/*.jpg) 
 .POSIX:
 .PHONY: push update watch
 all: help
@@ -17,7 +21,17 @@ watch: ## Run the local development server
 	hugo --buildDrafts --watch server --disableFastRender --ignoreCache
 
 import: ## Import latest Logseq pages
-	./scripts/export-blog -x
+	$(SCRPT) -x
 
-clean: ## Reset blog to pristine state
-	./scripts/export-blog -c
+clean: ## Reset blog to pristine state 
+	$(SCRPT) -c
+
+cleanall: ## Reset blog to pristine state (Also Images!)
+	$(SCRPT) -z
+
+# https://imageoptim.com/command-line.html
+optim: ## reduce image sizes
+	$(OPTIM) $(IMGS)
+
+zonk: ## testing new stuff
+	hugo-obsidian -input=content -output=assets/indices -index -root=. && hugo --buildDrafts --watch server --disableFastRender --ignoreCache

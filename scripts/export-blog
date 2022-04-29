@@ -1,6 +1,5 @@
-#!/usr/bin/env bash -e
-
-# -e bash: https://stackoverflow.com/questions/9952177/whats-the-meaning-of-the-parameter-e-for-bash-shell-command-line
+#!/usr/bin/env bash
+set -e
 
 # BLOG=$HOME/Documents/QWxleA.github.io
 # Hacky, but run from where the Makefile is
@@ -15,6 +14,9 @@ STARTPAGE="$CONTENT/page/ Start here.md"
 INDEXPAGE="$CONTENT/_index.md"
 
 ZIP=$HOME/Downloads/publicExport.zip
+
+#APPS
+FIND=/opt/homebrew/bin/gfind
 
 explode() {
     unzip -o -d $CONTENT $ZIP
@@ -34,9 +36,12 @@ explode() {
 
 clean() {
     #running with scissors
-    # find "$PAGES" -iname "*.md" -exec echo "File found: {}" \;
     find "$PAGES" -iname "*.md" -exec rm "{}" \;
-    find "$HUGOASSETS" -iname "*" -exec rm "{}" \;
+    if [[ $1 == "all" ]]; then
+        # only remove images when told
+        $FIND "$HUGOASSETS" -regextype posix-awk -regex "(.*.png|.*.jpg|.*.gif|.*.pdf)" -type f -delete
+        # find "$HUGOASSETS" -iname "*" -exec rm "{}" \;
+    fi
 }
 
 debug() {
@@ -53,7 +58,7 @@ debug() {
 
 usage() { echo "Usage: $0 [-s <45|90>] [-p <string>]" 1>&2; exit 1; }
 
-while getopts "cdlx" o; do
+while getopts "cdlxz" o; do
     case "${o}" in
         c)
             clean
@@ -68,6 +73,9 @@ while getopts "cdlx" o; do
         x)
             explode
             exit
+            ;;
+        z)
+            clean all
             ;;
         *)
             usage
