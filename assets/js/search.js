@@ -144,6 +144,7 @@ const removeMarkdown = (
   const source = document.getElementById('search-bar')
   const results = document.getElementById("results-container")
   let term
+  if (source) {}
   source.addEventListener("keyup", (e) => {
     if (e.key === "Enter") {
       const anchor = document.getElementsByClassName("result-card")[0]
@@ -222,18 +223,19 @@ const removeMarkdown = (
     }
   })
 
-  const searchButton = document.getElementById("search-icon")
-  searchButton.addEventListener('click', (evt) => {
-    openSearch()
-  })
-  searchButton.addEventListener('keydown', (evt) => {
-    openSearch()
-  })
-  searchContainer.addEventListener('click', (evt) => {
-    closeSearch()
-  })
-  document.getElementById("search-space").addEventListener('click', (evt) => {
-    evt.stopPropagation()
-  })
+  //QW FIXME
+  // const searchButton = document.getElementById("search-icon")
+  // searchButton.addEventListener('click', (evt) => {
+  //   openSearch()
+  // })
+  // searchButton.addEventListener('keydown', (evt) => {
+  //   openSearch()
+  // })
+  // searchContainer.addEventListener('click', (evt) => {
+  //   closeSearch()
+  // })
+  // document.getElementById("search-space").addEventListener('click', (evt) => {
+  //   evt.stopPropagation()
+  // })
 })()
 

@@ -1,5 +1,5 @@
-const capitalizeFirstLetter = ([ first, ...rest ], locale = navigator.language) =>
-  first.toLocaleUpperCase(locale) + rest.join('')
+// const capitalizeFirstLetter = ([ first, ...rest ], locale = navigator.language) =>
+//   first.toLocaleUpperCase(locale) + rest.join('')
 
 function htmlToElement(html) {
   const template = document.createElement('template')
@@ -13,53 +13,32 @@ function initPopover(baseURL) {
   document.addEventListener("DOMContentLoaded", () => {
     fetchData.then(({ content }) => {
 
-
-
-      const empties = [...document.getElementsByClassName("internal-link broken")]
-      empties.filter(link => link.dataset.src).forEach(link => {
-        console.log("DB 1", link)
-        
-        // const linkDest = content[link.dataset.src.replace(basePath, "")]
-        const linkDest = link.getAttribute('data-src').replace("/page/", "");
-        console.log("DB", linkDest)
-        if (linkDest) {
-          const placeholder = `<div class="popmeta">
-          <h2>Placeholder</h2>
-          <p>This link is a placeholder for ${capitalizeFirstLetter(linkDest)}.
-          It will (probably) be added in the future</p>
-          </div>`
-          const el = htmlToElement(placeholder)
-          link.appendChild(el)
-          link.addEventListener("mouseover", () => {
-            el.classList.add("visible")
-          })
-          link.addEventListener("mouseout", () => {
-            el.classList.remove("visible")
-          })
-        }
+    let testElements = [...document.getElementsByClassName('internal-link')];
+    testElements.forEach(link => {
+      const linkText = link.textContent
+      let popoverElement = `<div class="popmeta">
+      <h2>Placeholder</h2>
+      <p>This link is a placeholder for ${linkText}.
+      It will (probably) be added in the future</p>
+      </div>`
+      if (link.hasAttribute('data-src')) {
+        // FIXME ??
+        const destination = content[link.dataset.src.replace(basePath, "")]
+        popoverElement = `<div class="popmeta">
+        <h2>${linkText}</h2>
+        <p>${removeMarkdown(destination.content).split(" ", 20).join(" ")}...</p>
+        <p class="meta">${new Date(destination.lastmodified).toLocaleDateString()}</p>
+        </div>`        
+      } 
+      const el = htmlToElement(popoverElement)
+      link.appendChild(el)
+      link.addEventListener("mouseover", () => {
+        el.classList.add("visible")
       })
-
-      const links = [...document.getElementsByClassName("internal-link")]
-      links
-        .filter(li => li.dataset.src)
-        .forEach(li => {
-          const linkDest = content[li.dataset.src.replace(basePath, "")]
-          if (linkDest) {
-          const popoverElement = `<div class="popmeta">
-                                  <h2>${linkDest.title}</h2>
-                                  <p>${removeMarkdown(linkDest.content).split(" ", 20).join(" ")}...</p>
-                                  <p class="meta">${new Date(linkDest.lastmodified).toLocaleDateString()}</p>
-                                  </div>`
-            const el = htmlToElement(popoverElement)
-            li.appendChild(el)
-            li.addEventListener("mouseover", () => {
-              el.classList.add("visible")
-            })
-            li.addEventListener("mouseout", () => {
-              el.classList.remove("visible")
-            })
-          }
-        })
+      link.addEventListener("mouseout", () => {
+        el.classList.remove("visible")
+      })      
+    })
     })
   })
 }
