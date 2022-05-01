@@ -1,10 +1,14 @@
 <!-- Reference: https://www.gethalfmoon.com/docs/navbar -->
       <!-- Navbar (immediate child of the page wrapper) -->
       <nav class="navbar">
+
         <!-- Navbar content (with toggle sidebar button) -->
-        <div class="navbar-content">
-          <button class="btn" type="button" onclick="halfmoon.toggleSidebar()">Toggle sidebar</button>
-        </div>
+        <!-- <div class="navbar-content">
+          <button class="btn" type="button" onclick="halfmoon.toggleSidebar()">
+          <i class="fa fa-bars"></i>
+          </button>
+        </div> -->
+
         <!-- Navbar brand -->
         <a href="{{ .Site.BaseURL }}" class="navbar-brand">
           {{ .Site.Title }}

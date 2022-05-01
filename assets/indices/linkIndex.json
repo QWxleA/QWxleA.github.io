@@ -9,7 +9,7 @@
         },
         {
           "source": "/",
-          "target": "/pkm",
+          "target": "/page/pkm",
           "text": "pkm"
         },
         {
@@ -19,7 +19,7 @@
         },
         {
           "source": "/",
-          "target": "/logseq",
+          "target": "/page/logseq",
           "text": "logseq"
         },
         {
@@ -29,91 +29,60 @@
         },
         {
           "source": "/",
-          "target": "/pkm",
+          "target": "/page/pkm",
           "text": "pkm"
         }
       ],
       "/page/digital-garden": [
         {
           "source": "/page/digital-garden",
-          "target": "/keywords",
+          "target": "/page/keywords",
           "text": "keywords"
         }
       ],
       "/page/hugo": [
         {
           "source": "/page/hugo",
-          "target": "/pkm",
+          "target": "/page/pkm",
           "text": "pkm"
         },
         {
           "source": "/page/hugo",
-          "target": "/Logseq",
+          "target": "/page/logseq",
           "text": "Logseq"
         },
         {
           "source": "/page/hugo",
-          "target": "/logseq",
+          "target": "/page/logseq",
           "text": "logseq"
         }
       ],
       "/page/javascript": [
         {
           "source": "/page/javascript",
-          "target": "/Logseq",
+          "target": "/page/logseq",
           "text": "Logseq"
         },
         {
           "source": "/page/javascript",
-          "target": "/typescript",
+          "target": "/page/typescript",
           "text": "typescript"
         }
       ],
       "/page/resonance-lists-howto": [
         {
           "source": "/page/resonance-lists-howto",
-          "target": "/2/10",
+          "target": "/page/2/10",
           "text": "2/10"
         }
       ]
     },
     "backlinks": {
-      "/2/10": [
+      "/page/2/10": [
         {
           "source": "/page/resonance-lists-howto",
-          "target": "/2/10",
+          "target": "/page/2/10",
           "text": "2/10"
-        }
-      ],
-      "/Logseq": [
-        {
-          "source": "/page/hugo",
-          "target": "/Logseq",
-          "text": "Logseq"
-        },
-        {
-          "source": "/page/javascript",
-          "target": "/Logseq",
-          "text": "Logseq"
-        }
-      ],
-      "/keywords": [
-        {
-          "source": "/page/digital-garden",
-          "target": "/keywords",
-          "text": "keywords"
-        }
-      ],
-      "/logseq": [
-        {
-          "source": "/",
-          "target": "/logseq",
-          "text": "logseq"
-        },
-        {
-          "source": "/page/hugo",
-          "target": "/logseq",
-          "text": "logseq"
         }
       ],
       "/page/digital-garden": [
@@ -137,27 +106,56 @@
           "text": "javascript"
         }
       ],
-      "/pkm": [
+      "/page/keywords": [
+        {
+          "source": "/page/digital-garden",
+          "target": "/page/keywords",
+          "text": "keywords"
+        }
+      ],
+      "/page/logseq": [
         {
           "source": "/",
-          "target": "/pkm",
+          "target": "/page/logseq",
+          "text": "logseq"
+        },
+        {
+          "source": "/page/hugo",
+          "target": "/page/logseq",
+          "text": "Logseq"
+        },
+        {
+          "source": "/page/hugo",
+          "target": "/page/logseq",
+          "text": "logseq"
+        },
+        {
+          "source": "/page/javascript",
+          "target": "/page/logseq",
+          "text": "Logseq"
+        }
+      ],
+      "/page/pkm": [
+        {
+          "source": "/",
+          "target": "/page/pkm",
           "text": "pkm"
         },
         {
           "source": "/",
-          "target": "/pkm",
+          "target": "/page/pkm",
           "text": "pkm"
         },
         {
           "source": "/page/hugo",
-          "target": "/pkm",
+          "target": "/page/pkm",
           "text": "pkm"
         }
       ],
-      "/typescript": [
+      "/page/typescript": [
         {
           "source": "/page/javascript",
-          "target": "/typescript",
+          "target": "/page/typescript",
           "text": "typescript"
         }
       ]
@@ -171,7 +169,7 @@
     },
     {
       "source": "/",
-      "target": "/pkm",
+      "target": "/page/pkm",
       "text": "pkm"
     },
     {
@@ -181,7 +179,7 @@
     },
     {
       "source": "/",
-      "target": "/logseq",
+      "target": "/page/logseq",
       "text": "logseq"
     },
     {
@@ -191,42 +189,42 @@
     },
     {
       "source": "/",
-      "target": "/pkm",
+      "target": "/page/pkm",
       "text": "pkm"
     },
     {
       "source": "/page/digital-garden",
-      "target": "/keywords",
+      "target": "/page/keywords",
       "text": "keywords"
     },
     {
       "source": "/page/hugo",
-      "target": "/pkm",
+      "target": "/page/pkm",
       "text": "pkm"
     },
     {
       "source": "/page/hugo",
-      "target": "/Logseq",
+      "target": "/page/logseq",
       "text": "Logseq"
     },
     {
       "source": "/page/hugo",
-      "target": "/logseq",
+      "target": "/page/logseq",
       "text": "logseq"
     },
     {
       "source": "/page/javascript",
-      "target": "/Logseq",
+      "target": "/page/logseq",
       "text": "Logseq"
     },
     {
       "source": "/page/javascript",
-      "target": "/typescript",
+      "target": "/page/typescript",
       "text": "typescript"
     },
     {
       "source": "/page/resonance-lists-howto",
-      "target": "/2/10",
+      "target": "/page/2/10",
       "text": "2/10"
     }
   ]

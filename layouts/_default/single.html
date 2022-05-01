@@ -8,10 +8,10 @@
         {{partial "graph.html" .}}
       </div>
 
-      <div class="col-9">
+      <div class="col-9"> 
         <article class="card">
             {{if .Title}}<h2 class="card-title">{{ .Title }}</h2>{{end}}
-            {{partial "textprocessing.html" . }}
+            {{ .Content }}
         </article>
       </div>
 

@@ -1,0 +1,85 @@
+@import 'popover';
+
+//graph
+//FIXME colors are wonky
+:root {
+    --g-node-active:  red;
+    --g-node:  rgba(0, 0, 0, 0.85);
+}
+
+#graph-container {
+    --g-link: var(--primary-color-very-light);
+    // margin-left: 1em
+    // border: var(--lm-card-border-color) 1px solid
+    // border-radius: 5px
+    > svg {
+        // background-color: var(--lm-base-body-bg-color)
+        cursor: pointer;
+    }
+    > svg:hover .search-path {
+	    stroke: var(--primary-color-very-dark);
+    }
+     > svg .search-path {
+         stroke: var(--gray-color);
+         stroke-width: 2px;
+         transition: stroke 0.5s ease;
+     }
+}
+
+// Fixes
+
+// index.html list of all pages
+h3 a.btn {
+    font-size: var(--base-font-size) !important;
+}
+
+a .post-row time {
+    color: var(--lm-base-text-color) !important;
+    font-size: 1.4rem;
+}
+
+// page-list.html
+.section-ul {
+    list-style: none;
+    li::before {
+      content: "";
+    //   width: 1em;
+    //   height: 1em;
+      display: inline-block;
+    //   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='red'/%3E%3C/svg%3E");
+    //   background-size: 38%;
+    //   background-repeat: no-repeat;
+    //   background-position: left center;
+      position: relative;
+      top: 0.08rem;
+    }
+    h3 {
+        display: inline;
+    }
+    p.meta {
+        font-size: smaller;
+        color: var(--lm-base-text-color-light);
+        line-height: 0.8em;
+        margin: 0.2em 0 0 1em;
+    }
+    p.summery {
+        font-size: medium;
+        line-height: 1em;
+        margin: 1em 0 0 1em;
+    }
+  }
+
+// post block
+ul {
+    li {
+        margin-bottom: 0 !important;
+        p {
+            display: inline !important;
+            // background-color: pink;
+        }
+        h3 {
+
+        }
+    }
+}
+

@@ -49,7 +49,7 @@ How to implement this in logseq?
 
     + Done!
 
-  + Important: book != `[[boo]]`. Don't use `[[boo]]` in type.
+  + Important: book != `[boo](/page/boo)`. Don't use `[boo](/page/boo)` in type.
 
 ## Step 2 — remove some stuff we don\'t want to see
 
@@ -65,7 +65,7 @@ How to implement this in logseq?
 [(contains? #{"movie" "article" "book"} ?type)]
 (not
 [(get ?props :rating) ?rating]
-[(= "[[1/10]]" ?rating)]
+[(= "[1/10](/page/1/10)" ?rating)]
 )
 ]}
 #+END_QUERY
@@ -98,7 +98,7 @@ How to implement this in logseq?
 [(get ?props :type) ?typ]
 [(contains? #{"movie" "article" "book"} ?type)]
 [(get ?props :rating) ?rating]
-[(= "[[1/10]]" ?rating)]
+[(= "[1/10](/page/1/10)" ?rating)]
 ]}
 #+END_QUERY
 ```
@@ -128,14 +128,14 @@ How to implement this in logseq?
 #+END_QUERY
 ```
 
-  + Notice line **12** the `contains?` statement is quite complicated. This is because `1/10` and `2/10` are really `[[1/10]] and `[[2/10]]. They're not just text, they are searchable items. This is different from `type` in *Resonance List 1*, line **8**.
+  + Notice line **12** the `contains?` statement is quite complicated. This is because `1/10` and `2/10` are really `[1/10](/page/1/10) and `[2/10](/page/2/10). They're not just text, they are searchable items. This is different from `type` in *Resonance List 1*, line **8**.
 
 ## Step 4 — remove by tag
 
 
   + But what if you would like to have a tag that shows how terrible the book or movie was?
 
-  + Simple, add `tags:: [[terrible]]` (or just `terrible`, if you never want to list them, just change it accordingly in the listing below)
+  + Simple, add `tags:: [terrible](/page/terrible)` (or just `terrible`, if you never want to list them, just change it accordingly in the listing below)
 
 ```clojure {linenos=table,hl_lines=["13-14"],linenostart=1}
 #+BEGIN_QUERY
@@ -162,7 +162,7 @@ How to implement this in logseq?
 #+END_QUERY
 ```
 
-  + New are the lines **13** and **14**, we exclude `[[terrible]]` from our list.
+  + New are the lines **13** and **14**, we exclude `[terrible](/page/terrible)` from our list.
 
   + If you want to add more tags, then look at *Resonance List 3* how to do that.
 

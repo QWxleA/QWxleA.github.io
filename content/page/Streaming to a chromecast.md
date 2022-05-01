@@ -6,13 +6,13 @@ tags:
 - video
 title: Streaming to a chromecast
 categories: macos
-lastMod: 2022-04-29
+lastMod: 2022-05-01
 ---
 My mom complained about an English only TV series on Disney+. What's a helpful son to do?
 
 As it happens, streaming to a Chromecast is not hard, but sending subtitles to it seems to be all but impossible. So, hardcoded subs it is (Just like the nineties, how retro!).
 
-## Step by step
+### Step by step
 
   + This was the easiest way to get some subtitled videos on TV:
 + Take an English only video file, from _somewhere_ on the  internet (exercise left to the reader.)
@@ -22,14 +22,14 @@ As it happens, streaming to a Chromecast is not hard, but sending subtitles to i
 + Next the key to the whole conundrum: [HandBrake](https://handbrake.fr/). This app has been around for years, but is still actively developed and relatively easy to use.
 + A good alternative is [Subler](https://subler.org/), it is *way* faster, but cannot hardcode subs, so  for this Handbrake is the obvious choice.
 
-  + ### Handbrake
+### Handbrake
 
-    + To setup Handbrake for encoding on an M1, you need to use the correct settings (the app is universal):
+  + To setup Handbrake for encoding on an M1, you need to use the correct settings (the app is universal):
 Configuration: **Video** > **H.265 (VideoToolbox)** & **Chromecast 1080p**
 
 ![handbrake.png](/assets/handbrake_1649418443446_0.png)
 
-    + These settings cut the encoding time in half (still _not_ instantaneous). Next, add everything to the queue and get something to eat.
+  + These settings cut the encoding time in half (still _not_ instantaneous). Next, add everything to the queue and get something to eat.
 
 ### Playback — attempt 1
 

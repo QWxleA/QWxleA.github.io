@@ -10,11 +10,11 @@ title: hugo
 categories: development
 lastMod: 2022-04-30
 ---
-The plan is to collect useful snippets and code-examples to help creating and maintaining a [[pkm]] in Hugo (and posibly [[Logseq]]).
+The plan is to collect useful snippets and code-examples to help creating and maintaining a [pkm](/page/pkm) in Hugo (and posibly [Logseq](/page/logseq)).
 
 ### Automating import
 
-To import pages from [[logseq]]:
+To import pages from [logseq](/page/logseq):
 
 
 ```bash

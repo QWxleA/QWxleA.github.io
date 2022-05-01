@@ -21,6 +21,7 @@ FIND=/opt/homebrew/bin/gfind
 explode() {
     unzip -o -d $CONTENT $ZIP
     if [ -d "$ASSETS"  ]; then
+        mkdir -p "$HUGOASSETS"
         for a in $ASSETS/*; do 
             mv "$a" $HUGOASSETS
         done
