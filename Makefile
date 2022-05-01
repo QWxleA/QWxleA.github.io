@@ -23,7 +23,8 @@ optim: ## reduce image sizes
 	$(OPTIM) $(IMGS)
 
 serve: ## Serve Quartz locally
-	hugo-obsidian -input=content -output=assets/indices -index -root=. && hugo server --enableGitInfo --disableFastRender
+	# hugo-obsidian -input=content -output=assets/indices -index -root=. && hugo server --enableGitInfo --disableFastRender
+	hugo server --enableGitInfo --disableFastRender
 
 importscript: ## Run import script
 	$(SCRPT) -x 
