@@ -1309,12 +1309,98 @@ a.tag[data-ref="repeat"]:before {
   height: 1rem;
 }
 
-/* line 18, ../../../NOTES/logseq/export/custom.scss */
+/* line 2, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+:root {
+  --qw-yellow: #FFD800;
+  --qw-blue: #abdfff;
+  --qw-green: #ccffc1;
+  --qw-red: #ffc7c7;
+  --qw-purple: #CA1CFF;
+}
+
+/* line 10, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="#yellow"],
+span[data-ref="#purple"],
+span[data-ref="#red"],
+span[data-ref="#green"],
+span[data-ref="#blue"],
+span[data-ref="$red"],
+span[data-ref="$green"],
+span[data-ref="$blue"] {
+  display: none;
+}
+
+/* line 20, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="#red"] + mark {
+  background: var(--qw-red);
+}
+
+/* line 23, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="#green"] + mark {
+  background: var(--qw-green);
+}
+
+/* line 27, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="#blue"] + mark {
+  background: var(--qw-blue);
+}
+
+/* line 30, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="#yellow"] + mark {
+  background: var(--qw-yellow);
+}
+
+/* line 33, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="#purple"] + mark {
+  background: var(--qw-purple);
+}
+
+/* line 36, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="$red"] + mark {
+  color: var(--qw-red);
+  background: unset;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* line 42, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="$green"] + mark {
+  color: var(--qw-green);
+  background: unset;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* line 48, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="$blue"] + mark {
+  color: var(--qw-blue);
+  background: unset;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* line 54, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="$purple"] + mark {
+  color: var(--qw-purple);
+  background: unset;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* line 60, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
+span[data-ref="$yellow"] + mark {
+  color: var(--qw-yellow);
+  background: unset;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* line 19, ../../../NOTES/logseq/export/custom.scss */
 :root {
   --ls-page-text-size: 18px;
 }
 
-/* line 23, ../../../NOTES/logseq/export/custom.scss */
+/* line 24, ../../../NOTES/logseq/export/custom.scss */
 a.tag[data-ref="card"] {
   /* hides the tag itself */
   background-color: transparent;
