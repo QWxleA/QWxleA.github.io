@@ -542,7 +542,12 @@ a[href^="http"]:before {
   font-size: 0.9em;
 }
 
-/* line 27, ../../../NOTES/logseq/sass/_links.scss */
+/* line 26, ../../../NOTES/logseq/sass/_links.scss */
+.pdfViewer a[href^="http"]:before {
+  content: "";
+}
+
+/* line 31, ../../../NOTES/logseq/sass/_links.scss */
 a[href^="calibre://"]:before {
   color: white;
   /* background-color: red; */
@@ -553,7 +558,7 @@ a[href^="calibre://"]:before {
   font-size: 0.9em;
 }
 
-/* line 37, ../../../NOTES/logseq/sass/_links.scss */
+/* line 41, ../../../NOTES/logseq/sass/_links.scss */
 a[href^="https://www.youtube.com/"]:before {
   color: white;
   background-color: red;
@@ -564,7 +569,7 @@ a[href^="https://www.youtube.com/"]:before {
   font-size: 0.9em;
 }
 
-/* line 47, ../../../NOTES/logseq/sass/_links.scss */
+/* line 51, ../../../NOTES/logseq/sass/_links.scss */
 a[href^="https://en.wikipedia.org/wiki/"]:before {
   color: black;
   background-color: lightgrey;
@@ -576,7 +581,7 @@ a[href^="https://en.wikipedia.org/wiki/"]:before {
   font-size: 0.9em;
 }
 
-/* line 58, ../../../NOTES/logseq/sass/_links.scss */
+/* line 62, ../../../NOTES/logseq/sass/_links.scss */
 a[href^="https://www.reddit.com/"]:before {
   color: white;
   background-color: red;
@@ -1408,7 +1413,7 @@ a.tag[data-ref="card"] {
   font-size: 0px !important;
 }
 
-/* line 32, ../../../NOTES/logseq/export/custom.scss */
+/* line 33, ../../../NOTES/logseq/export/custom.scss */
 .flashcards-nav,
 .relative.ui__dropdown-trigger,
 .pre-block,
