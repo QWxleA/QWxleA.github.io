@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 1, ../../../NOTES/logseq/sass/_first.scss */
+/* line 1, sass/_first.scss */
 :root {
   --qw-display-search-button: none;
   --qw-display-arrow-navigation: block;
@@ -8,7 +8,7 @@
   --ls-block-bullet-threading-active-color-overwrite: orange;
   --ls-block-bullet-threading-width-overwrite: 2px;
 }
-/* line 13, ../../../NOTES/logseq/sass/_first.scss */
+/* line 13, sass/_first.scss */
 :root .white-theme,
 :root .light-theme,
 :root html[data-theme="light"],
@@ -16,7 +16,7 @@
   --qw-highlight-background-color: #fef3ac;
   --qw-highlight-text-color: #000;
 }
-/* line 22, ../../../NOTES/logseq/sass/_first.scss */
+/* line 22, sass/_first.scss */
 :root .dark-theme,
 :root html[data-theme="dark"] {
   --qw-highlight-background-color: #6b6330;
@@ -26,7 +26,7 @@
 /*-----------------------------------------------------------------------------
   Beau Haan's Zettlekasten Styles (See: https://roamresearch.com/#/app/Help/page/ULnYNyHbj)  
 ----------------------------------------------------------------------------- */
-/* line 11, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 11, sass/_beau.scss */
 span.page-reference[data-ref="fleeting notes"] {
   background: var(--ls-primary-background-color);
   background-size: 100%;
@@ -42,11 +42,11 @@ span.page-reference[data-ref="fleeting notes"] {
   position: relative;
   box-shadow: 0px 1px 3px -1px #000000, 0px -1px 5px  #DFDFDF;
 }
-/* line 25, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 25, sass/_beau.scss */
 span.page-reference[data-ref="fleeting notes"] .bracket {
   display: none;
 }
-/* line 28, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 28, sass/_beau.scss */
 span.page-reference[data-ref="fleeting notes"]::before {
   background-color: var(--ls-link-ref-text-color);
   content: "";
@@ -60,7 +60,7 @@ span.page-reference[data-ref="fleeting notes"]::before {
   height: 1.0rem;
 }
 
-/* line 44, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 44, sass/_beau.scss */
 span.page-reference[data-ref="literature notes"] {
   background: var(--ls-primary-background-color);
   background-size: 100%;
@@ -76,11 +76,11 @@ span.page-reference[data-ref="literature notes"] {
   position: relative;
   box-shadow: 0px 1px 3px -1px var(--ls-secondary-text-color), 0px -1px 5px var(--ls-secondary-background-color);
 }
-/* line 58, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 58, sass/_beau.scss */
 span.page-reference[data-ref="literature notes"] .bracket {
   display: none;
 }
-/* line 61, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 61, sass/_beau.scss */
 span.page-reference[data-ref="literature notes"]::before {
   background-color: var(--ls-link-ref-text-color);
   content: "";
@@ -95,7 +95,7 @@ span.page-reference[data-ref="literature notes"]::before {
 }
 
 /* The text *after* is not as important */
-/* line 77, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 77, sass/_beau.scss */
 span.page-reference[data-ref="reference notes"] {
   background: var(--ls-primary-background-color);
   background-size: 100%;
@@ -111,11 +111,11 @@ span.page-reference[data-ref="reference notes"] {
   position: relative;
   box-shadow: 0px 1px 3px -1px var(--ls-secondary-text-color), 0px -1px 5px var(--ls-secondary-background-color);
 }
-/* line 91, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 91, sass/_beau.scss */
 span.page-reference[data-ref="reference notes"] .bracket {
   display: none;
 }
-/* line 94, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 94, sass/_beau.scss */
 span.page-reference[data-ref="reference notes"]::before {
   background-color: var(--ls-link-ref-text-color);
   content: "";
@@ -129,17 +129,17 @@ span.page-reference[data-ref="reference notes"]::before {
   height: 1.0rem;
 }
 
-/* line 110, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 110, sass/_beau.scss */
 span.page-reference[data-ref="permanent note"] .page-ref {
   color: var(--ls-primary-background-color) !important;
 }
 
-/* line 113, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 113, sass/_beau.scss */
 span.page-reference[data-ref="permanent note"] .bracket {
   display: none;
 }
 
-/* line 116, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 116, sass/_beau.scss */
 span.page-reference[data-ref="permanent note"] {
   background-image: linear-gradient(90deg, var(--ls-head-text-color), var(--ls-head-text-color));
   background-size: 100%;
@@ -154,7 +154,7 @@ span.page-reference[data-ref="permanent note"] {
   margin: 0 0.8em 0 0.1em;
 }
 
-/* line 131, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 131, sass/_beau.scss */
 span.page-reference[data-ref="permanent note"]:after,
 span.page-reference[data-ref="permanent note"]:before {
   left: 100%;
@@ -167,7 +167,7 @@ span.page-reference[data-ref="permanent note"]:before {
   pointer-events: none;
 }
 
-/* line 143, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 143, sass/_beau.scss */
 span.page-reference[data-ref="permanent note"]::after {
   color: var(--ls-primary-text-color);
   border-left-color: var(--ls-head-text-color);
@@ -175,7 +175,7 @@ span.page-reference[data-ref="permanent note"]::after {
   margin-top: -10px;
 }
 
-/* line 153, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 153, sass/_beau.scss */
 span.page-reference[data-ref="permanent note"] + span.page-reference {
   background: #1DA1F21E !important;
   color: var(--ls-secondary-text-color) !important;
@@ -186,7 +186,7 @@ span.page-reference[data-ref="permanent note"] + span.page-reference {
   margin-left: -14px;
 }
 
-/* line 169, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 169, sass/_beau.scss */
 span.page-reference[data-ref="relevant notes"] {
   background: var(--ls-primary-background-color);
   background-size: 100%;
@@ -203,7 +203,7 @@ span.page-reference[data-ref="relevant notes"] {
   box-shadow: 0px 1px 3px -1px var(--ls-secondary-text-color), 0px -1px 5px var(--ls-secondary-background-color);
 }
 
-/* line 185, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 185, sass/_beau.scss */
 span.page-reference[data-ref="relevant notes"] + span[data-ref] {
   background: var(--ls-primary-background-color);
   color: var(--ls-primary-text-color);
@@ -216,7 +216,7 @@ span.page-reference[data-ref="relevant notes"] + span[data-ref] {
   box-shadow: inset -1px 1px 5px --ls-secondary-text-color, inset 1px -1px 3px --ls-secondary-background-color;
 }
 
-/* line 201, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 201, sass/_beau.scss */
 div.blocks-container a.tag,
 div#contents a.tag,
 span.page-reference[data-ref="relevant notes"] ~ div a.tag,
@@ -227,13 +227,13 @@ span.block-ref > div a.tag {
   font-weight: 600;
 }
 
-/* line 221, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 221, sass/_beau.scss */
 a.page-ref[data-ref="concept"] {
   color: var(--ls-primary-text-color);
   font-weight: 500;
 }
 
-/* line 225, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 225, sass/_beau.scss */
 span.page-reference[data-ref="concept"] {
   display: inline-box;
   margin: 0 !important;
@@ -250,11 +250,11 @@ span.page-reference[data-ref="concept"] {
   position: relative;
   box-shadow: 0px 1px 3px -1px #000000, 0px -1px 5px  #DFDFDF;
 }
-/* line 241, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 241, sass/_beau.scss */
 span.page-reference[data-ref="concept"] .bracket {
   display: none;
 }
-/* line 244, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 244, sass/_beau.scss */
 span.page-reference[data-ref="concept"]::before {
   background-color: var(--ls-primary-text-color);
   content: "";
@@ -267,7 +267,7 @@ span.page-reference[data-ref="concept"]::before {
   height: 1.0rem;
 }
 
-/* line 260, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 260, sass/_beau.scss */
 span.page-reference[data-ref="relevant concept"] {
   background: #fafae6;
   background-size: 100%;
@@ -283,11 +283,11 @@ span.page-reference[data-ref="relevant concept"] {
   position: relative;
   box-shadow: 0px 1px 3px -1px var(--ls-secondary-text-color), 0px -1px 5px var(--ls-secondary-background-color);
 }
-/* line 275, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 275, sass/_beau.scss */
 span.page-reference[data-ref="relevant concept"] .bracket {
   display: none;
 }
-/* line 278, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 278, sass/_beau.scss */
 span.page-reference[data-ref="relevant concept"]::before {
   background-color: var(--ls-link-ref-text-color);
   content: "";
@@ -301,7 +301,7 @@ span.page-reference[data-ref="relevant concept"]::before {
   height: 1.0rem;
 }
 
-/* line 296, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 296, sass/_beau.scss */
 :root {
   --qw-pass-text-color: #000;
   --qw-first: #e4e4b5;
@@ -309,36 +309,36 @@ span.page-reference[data-ref="relevant concept"]::before {
   --qw-third: #adad7e;
 }
 
-/* line 308, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 308, sass/_beau.scss */
 div[data-refs-self*='"1stpass"'] .block-content {
   background-color: var(--qw-first);
   color: var(--qw-pass-text-color);
 }
-/* line 311, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 311, sass/_beau.scss */
 div[data-refs-self*='"1stpass"'] .block-content a.tag[data-ref="1stpass"] {
   /* hides the tag itself */
   background-color: transparent;
   font-size: 0px;
 }
 
-/* line 308, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 308, sass/_beau.scss */
 div[data-refs-self*='"2ndpass"'] .block-content {
   background-color: var(--qw-second);
   color: var(--qw-pass-text-color);
 }
-/* line 311, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 311, sass/_beau.scss */
 div[data-refs-self*='"2ndpass"'] .block-content a.tag[data-ref="2ndpass"] {
   /* hides the tag itself */
   background-color: transparent;
   font-size: 0px;
 }
 
-/* line 308, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 308, sass/_beau.scss */
 div[data-refs-self*='"3rdpass"'] .block-content {
   background-color: var(--qw-third);
   color: var(--qw-pass-text-color);
 }
-/* line 311, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 311, sass/_beau.scss */
 div[data-refs-self*='"3rdpass"'] .block-content a.tag[data-ref="3rdpass"] {
   /* hides the tag itself */
   background-color: transparent;
@@ -346,7 +346,7 @@ div[data-refs-self*='"3rdpass"'] .block-content a.tag[data-ref="3rdpass"] {
 }
 
 /* o - Crafting Evergreen/permanent note in Logseq [[@Jeffrey Webber]] */
-/* line 339, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 339, sass/_beau.scss */
 span.page-reference[data-ref="atomic article"] {
   background: #a6d7a8;
   background-size: 100%;
@@ -362,11 +362,11 @@ span.page-reference[data-ref="atomic article"] {
   position: relative;
   box-shadow: 0px 1px 3px -1px #000000, 0px -1px 5px  #DFDFDF;
 }
-/* line 357, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 357, sass/_beau.scss */
 span.page-reference[data-ref="atomic article"] .bracket {
   display: none;
 }
-/* line 360, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 360, sass/_beau.scss */
 span.page-reference[data-ref="atomic article"]::before {
   background-color: var(--ls-link-ref-text-color);
   content: "";
@@ -380,7 +380,7 @@ span.page-reference[data-ref="atomic article"]::before {
   height: 1.0rem;
 }
 
-/* line 339, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 339, sass/_beau.scss */
 span.page-reference[data-ref="tweet"] {
   background: #c4e6f7;
   background-size: 100%;
@@ -396,11 +396,11 @@ span.page-reference[data-ref="tweet"] {
   position: relative;
   box-shadow: 0px 1px 3px -1px #000000, 0px -1px 5px  #DFDFDF;
 }
-/* line 357, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 357, sass/_beau.scss */
 span.page-reference[data-ref="tweet"] .bracket {
   display: none;
 }
-/* line 360, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 360, sass/_beau.scss */
 span.page-reference[data-ref="tweet"]::before {
   background-color: var(--ls-link-ref-text-color);
   content: "";
@@ -414,108 +414,108 @@ span.page-reference[data-ref="tweet"]::before {
   height: 1.0rem;
 }
 
-/* line 384, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 384, sass/_beau.scss */
 .references-blocks .my-2 {
   padding: 0 0 0 20px;
 }
-/* line 387, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 387, sass/_beau.scss */
 .references-blocks .ml-4 {
   margin-left: 0;
 }
-/* line 390, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 390, sass/_beau.scss */
 .references-blocks div.mr-1, .references-blocks .pr-2 {
   margin-right: 0 !important;
   padding-right: 0 !important;
 }
-/* line 394, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 394, sass/_beau.scss */
 .references-blocks .block-control {
   min-width: 0;
 }
-/* line 398, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 398, sass/_beau.scss */
 .references-blocks span.block-ref {
   overflow: hidden;
   overflow-wrap: break-word;
   height: 30px;
 }
-/* line 402, ../../../NOTES/logseq/sass/_beau.scss */
+/* line 402, sass/_beau.scss */
 .references-blocks span.block-ref::before {
   content: "";
 }
 
-/* line 5, ../../../NOTES/logseq/sass/_tweaks.scss */
+/* line 5, sass/_tweaks.scss */
 ul li p {
   margin-bottom: 0 !important;
 }
 
-/* line 11, ../../../NOTES/logseq/sass/_tweaks.scss */
+/* line 11, sass/_tweaks.scss */
 .cp__sidebar-help-btn {
   display: var(--qw-display-help-button);
 }
 
-/* line 15, ../../../NOTES/logseq/sass/_tweaks.scss */
+/* line 15, sass/_tweaks.scss */
 a.nav-left,
 a.nav-right {
   display: var(--qw-display-help-button);
 }
 
-/* line 20, ../../../NOTES/logseq/sass/_tweaks.scss */
+/* line 20, sass/_tweaks.scss */
 #search-button {
   display: var(--qw-display-search-button);
 }
 
-/* line 24, ../../../NOTES/logseq/sass/_tweaks.scss */
+/* line 24, sass/_tweaks.scss */
 .recent {
   display: var(--qw-display-recent-pages);
 }
 
 /* MARKETPLACE - hide installed =======================================*/
 /* Send to  @futurized */
-/* line 32, ../../../NOTES/logseq/sass/_tweaks.scss */
+/* line 32, sass/_tweaks.scss */
 .cp__plugins-marketplace .cp__plugins-item-card.market.installed {
   opacity: 0.4;
 }
 
 /* Default theme minor tweaks =============== */
-/* line 38, ../../../NOTES/logseq/sass/_tweaks.scss */
+/* line 38, sass/_tweaks.scss */
 .custom-query.mt-4 {
   margin-top: 0 !important;
 }
 
 /* capitalize titles */
-/* line 43, ../../../NOTES/logseq/sass/_tweaks.scss */
+/* line 43, sass/_tweaks.scss */
 .ls-page-title.title {
   text-transform: capitalize;
 }
 
 /* Horizontal lines are too big (2rem) */
-/* line 48, ../../../NOTES/logseq/sass/_tweaks.scss */
+/* line 48, sass/_tweaks.scss */
 hr, .admonitionblock {
   margin: 0.6rem 0 0.8rem 0 !important;
 }
 
 /* block references are in the default CSS */
 /* Priority colors :04/20/2022 */
-/* line 2, ../../../NOTES/logseq/sass/_youtube.scss */
+/* line 2, sass/_youtube.scss */
 iframe[id^='youtube-player'] {
   width: 320px !important;
   height: 240px !important;
 }
 
-/* line 6, ../../../NOTES/logseq/sass/_youtube.scss */
+/* line 6, sass/_youtube.scss */
 div.ls-wide-mode iframe[id^='youtube-player'] {
   height: 586px !important;
   width: 100% !important;
 }
 
 /* readablity */
-/* line 3, ../../../NOTES/logseq/sass/_fonts.scss */
+/* line 3, sass/_fonts.scss */
 * {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /* highlight */
-/* line 14, ../../../NOTES/logseq/sass/_fonts.scss */
+/* line 14, sass/_fonts.scss */
 mark {
   font-size: inherit;
   color: var(--qw-highlight-text-color);
@@ -525,7 +525,7 @@ mark {
 }
 
 /* External (https) links */
-/* line 3, ../../../NOTES/logseq/sass/_links.scss */
+/* line 3, sass/_links.scss */
 a.external-link[href^="https://twitter.com/"]:before {
   content: "🐦" !important;
   height: 15px;
@@ -533,7 +533,7 @@ a.external-link[href^="https://twitter.com/"]:before {
 }
 
 /* a[target="_blank"]::after { content: " ↗"; } */
-/* line 17, ../../../NOTES/logseq/sass/_links.scss */
+/* line 17, sass/_links.scss */
 a[href^="http"]:before {
   color: white;
   content: "🌍";
@@ -542,12 +542,12 @@ a[href^="http"]:before {
   font-size: 0.9em;
 }
 
-/* line 26, ../../../NOTES/logseq/sass/_links.scss */
+/* line 26, sass/_links.scss */
 .pdfViewer a[href^="http"]:before {
   content: "";
 }
 
-/* line 31, ../../../NOTES/logseq/sass/_links.scss */
+/* line 31, sass/_links.scss */
 a[href^="calibre://"]:before {
   color: white;
   /* background-color: red; */
@@ -558,7 +558,7 @@ a[href^="calibre://"]:before {
   font-size: 0.9em;
 }
 
-/* line 41, ../../../NOTES/logseq/sass/_links.scss */
+/* line 41, sass/_links.scss */
 a[href^="https://www.youtube.com/"]:before {
   color: white;
   background-color: red;
@@ -569,7 +569,7 @@ a[href^="https://www.youtube.com/"]:before {
   font-size: 0.9em;
 }
 
-/* line 51, ../../../NOTES/logseq/sass/_links.scss */
+/* line 51, sass/_links.scss */
 a[href^="https://en.wikipedia.org/wiki/"]:before {
   color: black;
   background-color: lightgrey;
@@ -581,7 +581,7 @@ a[href^="https://en.wikipedia.org/wiki/"]:before {
   font-size: 0.9em;
 }
 
-/* line 62, ../../../NOTES/logseq/sass/_links.scss */
+/* line 62, sass/_links.scss */
 a[href^="https://www.reddit.com/"]:before {
   color: white;
   background-color: red;
@@ -593,7 +593,7 @@ a[href^="https://www.reddit.com/"]:before {
 }
 
 /* Progress bar */
-/* line 3, ../../../NOTES/logseq/sass/_macros.scss */
+/* line 3, sass/_macros.scss */
 progress {
   vertical-align: middle;
   border-radius: 8px;
@@ -603,41 +603,41 @@ progress {
   overflow: hidden;
 }
 
-/* line 12, ../../../NOTES/logseq/sass/_macros.scss */
+/* line 12, sass/_macros.scss */
 progress::-webkit-progress-bar {
   background: var(--ls-tertiary-background-color);
   background: var(red);
 }
 
-/* line 17, ../../../NOTES/logseq/sass/_macros.scss */
+/* line 17, sass/_macros.scss */
 progress::-webkit-progress-value {
   background: var(green);
 }
 
 /* end */
-/* line 1, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 1, sass/_bullet-threading.scss */
 :root {
   --ls-block-bullet-active-color: var(--ls-block-bullet-threading-active-color-overwrite, var(--ls-link-text-color));
   --ls-block-bullet-threading-width: var(--ls-block-bullet-threading-width-overwrite, 1px);
 }
 
-/* line 12, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 12, sass/_bullet-threading.scss */
 .block-control {
   z-index: 1;
 }
 
-/* line 16, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 16, sass/_bullet-threading.scss */
 .block-children {
   border-left-color: var(--ls-guideline-color);
   border-left-width: var(--ls-block-bullet-threading-width) !important;
 }
 
-/* line 22, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 22, sass/_bullet-threading.scss */
 .block-children-container {
   position: relative;
 }
 
-/* line 26, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 26, sass/_bullet-threading.scss */
 .block-children-left-border {
   z-index: 1;
   position: absolute;
@@ -650,26 +650,26 @@ progress::-webkit-progress-value {
   transition: background-color 0.2s;
 }
 
-/* line 38, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 38, sass/_bullet-threading.scss */
 .block-children-left-border:hover {
   background-color: var(--ls-block-bullet-active-color);
 }
 
-/* line 42, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 42, sass/_bullet-threading.scss */
 .block-content-wrapper {
   position: relative;
   overflow-x: visible !important;
   /* Fixme: overflow? */
 }
 
-/* line 47, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 47, sass/_bullet-threading.scss */
 .block-content-wrapper > div:first-child {
   padding: 1px;
   margin: -1px;
   overflow-x: auto;
 }
 
-/* line 54, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 54, sass/_bullet-threading.scss */
 .bullet-container {
   height: 14px !important;
   width: 14px !important;
@@ -678,37 +678,37 @@ progress::-webkit-progress-value {
 }
 
 /* Block bullet path should only show in a nested block */
-/* line 63, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 63, sass/_bullet-threading.scss */
 .ls-block {
   /* Fix for headings like h1, h2 etc */
   /* Basic "curve" */
   /* Fix multi-line blocks with children */
 }
-/* line 64, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 64, sass/_bullet-threading.scss */
 .ls-block .bullet {
   background-color: var(--ls-block-bullet-active-color);
   box-shadow: 0 0 0 1px var(--ls-block-bullet-active-color);
 }
-/* line 69, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 69, sass/_bullet-threading.scss */
 .ls-block div.items-center {
   position: relative;
   height: 26px !important;
 }
-/* line 75, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 75, sass/_bullet-threading.scss */
 .ls-block > .items-baseline {
   align-items: initial;
 }
-/* line 79, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 79, sass/_bullet-threading.scss */
 .ls-block:not(:focus-within) .bullet {
   background-color: var(--ls-block-bullet-color);
   transform: scale(1);
   box-shadow: none;
 }
-/* line 85, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 85, sass/_bullet-threading.scss */
 .ls-block:not(:focus-within) > .items-baseline {
   align-items: baseline;
 }
-/* line 90, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 90, sass/_bullet-threading.scss */
 .ls-block .ls-block > div > div.items-center::before {
   pointer-events: none;
   content: "";
@@ -722,11 +722,11 @@ progress::-webkit-progress-value {
   border-bottom: var(--ls-block-bullet-threading-width) solid transparent;
   border-bottom-left-radius: 10px;
 }
-/* line 104, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 104, sass/_bullet-threading.scss */
 .ls-block .ls-block:focus-within > div > div.items-center::before {
   border-color: var(--ls-block-bullet-active-color);
 }
-/* line 108, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 108, sass/_bullet-threading.scss */
 .ls-block .block-children > .ls-block::before {
   pointer-events: none;
   content: "";
@@ -736,15 +736,15 @@ progress::-webkit-progress-value {
   left: calc(var(--ls-block-bullet-threading-width) * -1);
   position: absolute;
 }
-/* line 118, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 118, sass/_bullet-threading.scss */
 .ls-block .block-children:focus-within > .ls-block:not(:focus-within)::before {
   border-color: var(--ls-block-bullet-active-color);
 }
-/* line 122, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 122, sass/_bullet-threading.scss */
 .ls-block .block-children:focus-within > .ls-block:focus-within ~ .ls-block::before {
   border-color: transparent;
 }
-/* line 128, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 128, sass/_bullet-threading.scss */
 .ls-block[haschild="true"] > div > .block-content-wrapper::before {
   pointer-events: none;
   content: "";
@@ -754,19 +754,19 @@ progress::-webkit-progress-value {
   position: absolute;
   border-left: var(--ls-block-bullet-threading-width) solid transparent;
 }
-/* line 138, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 138, sass/_bullet-threading.scss */
 .ls-block[haschild="true"]:focus-within > div > .block-content-wrapper::before {
   border-color: var(--ls-block-bullet-active-color);
 }
 
 @media (max-width: 640px) {
-  /* line 158, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+  /* line 158, sass/_bullet-threading.scss */
   .ls-block[haschild="true"] > div > .block-content-wrapper::before {
     left: -11px;
   }
 }
 /* Disable for doc mode */
-/* line 164, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 164, sass/_bullet-threading.scss */
 .doc-mode div.items-center::before,
 .doc-mode div.items-center::after,
 .doc-mode .ls-block::before,
@@ -774,12 +774,12 @@ progress::-webkit-progress-value {
   display: none;
 }
 
-/* line 170, ../../../NOTES/logseq/sass/_bullet-threading.scss */
+/* line 170, sass/_bullet-threading.scss */
 .doc-mode .block-children {
   border-left-width: 0px !important;
 }
 
-/* line 8, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 8, sass/_colored_blocks.scss */
 :root {
   --qw-qtag-background-color: var(--ls-secondary-background-color);
   --qw-qtag-text-color: var(--ls-secondary-text-color);
@@ -788,7 +788,7 @@ progress::-webkit-progress-value {
   --qw-qtag-icon: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8Zz4NCgkJCTxwYXRoIGQ9Ik0xMjgsMjU2aDM0LjEzM2M0LjcxOSwwLDguNTMzLTMuODIzLDguNTMzLTguNTMzcy0zLjgxNC04LjUzMy04LjUzMy04LjUzM0gxMjhjLTQuNzE5LDAtOC41MzMsMy44MjMtOC41MzMsOC41MzMNCgkJCQlTMTIzLjI4MSwyNTYsMTI4LDI1NnoiLz4NCgkJCTxwYXRoIGQ9Ik0yNjQuNTMzLDE4Ny43MzNIMTI4Yy00LjcxOSwwLTguNTMzLDMuODIzLTguNTMzLDguNTMzczMuODE0LDguNTMzLDguNTMzLDguNTMzaDEzNi41MzMNCgkJCQljNC43MTksMCw4LjUzMy0zLjgyMyw4LjUzMy04LjUzM1MyNjkuMjUyLDE4Ny43MzMsMjY0LjUzMywxODcuNzMzeiIvPg0KCQkJPHBhdGggZD0iTTI1NiwyOTguNjY3YzAsNC43MSwzLjgxNCw4LjUzMyw4LjUzMyw4LjUzM2g4NS4zMzNjNC43MTksMCw4LjUzMy0zLjgyMyw4LjUzMy04LjUzM3MtMy44MTQtOC41MzMtOC41MzMtOC41MzNoLTg1LjMzMw0KCQkJCUMyNTkuODE0LDI5MC4xMzMsMjU2LDI5My45NTYsMjU2LDI5OC42Njd6Ii8+DQoJCQk8cGF0aCBkPSJNMjk4LjY2NywyMzguOTMzaC0xMDIuNGMtNC43MTksMC04LjUzMywzLjgyMy04LjUzMyw4LjUzM3MzLjgxNCw4LjUzMyw4LjUzMyw4LjUzM2gxMDIuNA0KCQkJCWM0LjcxOSwwLDguNTMzLTMuODIzLDguNTMzLTguNTMzUzMwMy4zODYsMjM4LjkzMywyOTguNjY3LDIzOC45MzN6Ii8+DQoJCQk8cGF0aCBkPSJNMjk4LjY2NywxMzYuNTMzaDE3LjA2N2M0LjcxOSwwLDguNTMzLTMuODIzLDguNTMzLTguNTMzcy0zLjgxNC04LjUzMy04LjUzMy04LjUzM2gtNy45Nw0KCQkJCWMzLjg2Ni0yNy44NjEsMjYuMTI5LTM0LjEyNSwyNy4xMDItMzQuMzg5YzMuODA2LTAuOTQ3LDYuNDY4LTQuMzYxLDYuNDY4LTguMjc3VjQyLjY2N2MwLTQuNzEtMy44MTQtOC41MzMtOC41MzMtOC41MzMNCgkJCQljLTIuNjg4LDAtNi42NTYtMC42NC04LjUzMy0xLjQ2OFYxNy4wNjdoNTEuMnYxNS41OTljLTEuNzc1LDAuNzc3LTUuNTMsMS40NTEtOC41MzMsMS40NjhjLTQuNzE5LDAtOC41MzMsMy44MjMtOC41MzMsOC41MzMNCgkJCQlWNzYuOGMwLDMuOTE3LDIuNjcxLDcuMzMsNi40NjgsOC4yNzdjMC4yNDcsMC4wNjgsMjMuMTc3LDYuMTM1LDI3LjEwMiwzNC4zODloLTQyLjEwM2MtNC43MTksMC04LjUzMywzLjgyMy04LjUzMyw4LjUzM3Y1MS4yDQoJCQkJYzAsNC43MSwzLjgxNCw4LjUzMyw4LjUzMyw4LjUzM2M0LjcxOSwwLDguNTMzLTMuODIzLDguNTMzLTguNTMzdi00Mi42NjdoNDIuNjY3YzQuNzE5LDAsOC41MzMtMy44MjMsOC41MzMtOC41MzMNCgkJCQljMC0zMy42MDQtMTkuNzAzLTUwLjg0Mi0zNC4xMzMtNTcuMjE2VjUwLjM5OGM5LjA1NC0xLjc3NSwxNy4wNjctNi42NTYsMTcuMDY3LTE2LjI2NXYtMjUuNkMzOTIuNTMzLDMuODIzLDM4OC43MTksMCwzODQsMA0KCQkJCWgtNjguMjY3Yy00LjcxOSwwLTguNTMzLDMuODIzLTguNTMzLDguNTMzdjI1LjZjMCw5LjYwOSw4LjAxMywxNC40OSwxNy4wNjcsMTYuMjY1djIwLjM4Ng0KCQkJCWMtMTQuNDMsNi4zNzQtMzQuMTMzLDIzLjYxMi0zNC4xMzMsNTcuMjE2QzI5MC4xMzMsMTMyLjcxLDI5My45NDgsMTM2LjUzMywyOTguNjY3LDEzNi41MzN6Ii8+DQoJCQk8cGF0aCBkPSJNMTI4LDMwNy4yaDEwMi40YzQuNzE5LDAsOC41MzMtMy44MjMsOC41MzMtOC41MzNzLTMuODE0LTguNTMzLTguNTMzLTguNTMzSDEyOGMtNC43MTksMC04LjUzMywzLjgyMy04LjUzMyw4LjUzMw0KCQkJCVMxMjMuMjgxLDMwNy4yLDEyOCwzMDcuMnoiLz4NCgkJCTxwYXRoIGQ9Ik00MzUuMiw2OC4yNjdoLTguNTMzYy00LjcxOSwwLTguNTMzLDMuODIzLTguNTMzLDguNTMzczMuODE0LDguNTMzLDguNTMzLDguNTMzaDguNTMzYzE0LjExNCwwLDI1LjYsMTEuNDg2LDI1LjYsMjUuNg0KCQkJCXYzNTguNGMwLDE0LjExNC0xMS40ODYsMjUuNi0yNS42LDI1LjZIMTk2LjI2N2MtNC43MTksMC04LjUzMywzLjgyMy04LjUzMyw4LjUzM3MzLjgxNCw4LjUzMyw4LjUzMyw4LjUzM0g0MzUuMg0KCQkJCWMyMy41MjYsMCw0Mi42NjctMTkuMTQsNDIuNjY3LTQyLjY2N3YtMzU4LjRDNDc3Ljg2Nyw4Ny40MDcsNDU4LjcyNiw2OC4yNjcsNDM1LjIsNjguMjY3eiIvPg0KCQkJPHBhdGggZD0iTTEzNi41MzMsMzc1LjQ2N0g5My44NjdjLTQuNzE5LDAtOC41MzMsMy44MjMtOC41MzMsOC41MzNzMy44MTQsOC41MzMsOC41MzMsOC41MzNoNDIuNjY3DQoJCQkJYzkuNDEyLDAsMTcuMDY3LDcuNjU0LDE3LjA2NywxNy4wNjd2NzMuMjY3bC0xMDIuNC0xMDIuNFYxMTAuOTMzYzAtMTQuMTE0LDExLjQ4Ni0yNS42LDI1LjYtMjUuNmgxOTYuMjY3DQoJCQkJYzQuNzE5LDAsOC41MzMtMy44MjMsOC41MzMtOC41MzNzLTMuODE0LTguNTMzLTguNTMzLTguNTMzSDc2LjhjLTIzLjUyNiwwLTQyLjY2NywxOS4xNC00Mi42NjcsNDIuNjY3VjM4NA0KCQkJCWMwLDIuMjYxLDAuODk2LDQuNDM3LDIuNSw2LjAzM0wxNTYuMSw1MDkuNWMxLjYzLDEuNjMsMy44MTQsMi41LDYuMDMzLDIuNWMxLjEwMSwwLDIuMjEtMC4yMTMsMy4yNjgtMC42NDgNCgkJCQljMy4xOTEtMS4zMjMsNS4yNjUtNC40MzcsNS4yNjUtNy44ODVWNDA5LjZDMTcwLjY2NywzOTAuNzc1LDE1NS4zNTgsMzc1LjQ2NywxMzYuNTMzLDM3NS40Njd6Ii8+DQoJCQk8cGF0aCBkPSJNMjQ3LjQ2NywzNTguNGgxMTkuNDY3YzQuNzE5LDAsOC41MzMtMy44MjMsOC41MzMtOC41MzNzLTMuODE0LTguNTMzLTguNTMzLTguNTMzSDI0Ny40NjcNCgkJCQljLTQuNzE5LDAtOC41MzMsMy44MjMtOC41MzMsOC41MzNTMjQyLjc0OCwzNTguNCwyNDcuNDY3LDM1OC40eiIvPg0KCQkJPHBhdGggZD0iTTM5Mi41MzMsMjQ3LjQ2N2MwLTQuNzEtMy44MTQtOC41MzMtOC41MzMtOC41MzNoLTUxLjJjLTQuNzE5LDAtOC41MzMsMy44MjMtOC41MzMsOC41MzNTMzI4LjA4MSwyNTYsMzMyLjgsMjU2SDM4NA0KCQkJCUMzODguNzE5LDI1NiwzOTIuNTMzLDI1Mi4xNzcsMzkyLjUzMywyNDcuNDY3eiIvPg0KCQk8L2c+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=');
 }
 
-/* line 16, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 16, sass/_colored_blocks.scss */
 div[data-refs-self*='"q"'] .block-content {
   background-color: var(--qw-qtag-background-color);
   color: var(--qw-qtag-text-color);
@@ -797,19 +797,19 @@ div[data-refs-self*='"q"'] .block-content {
   border-radius: 0px 5px 5px 0px;
   font-size: smaller;
 }
-/* line 23, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 23, sass/_colored_blocks.scss */
 div[data-refs-self*='"q"'] .block-content .inline {
   margin-left: 0.5em;
   position: absolute;
   top: 4px;
 }
-/* line 28, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 28, sass/_colored_blocks.scss */
 div[data-refs-self*='"q"'] .block-content a.tag[data-ref="q"] {
   /* hides the tag itself */
   background-color: transparent;
   font-size: 0px;
 }
-/* line 32, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 32, sass/_colored_blocks.scss */
 div[data-refs-self*='"q"'] .block-content a.tag[data-ref="q"]:before {
   background-color: var(--qw-qtag-text-color);
   position: relative;
@@ -825,7 +825,7 @@ div[data-refs-self*='"q"'] .block-content a.tag[data-ref="q"]:before {
 }
 
 /* Add research to block */
-/* line 51, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 51, sass/_colored_blocks.scss */
 :root {
   --qw-research-background-color: var(--ls-block-ref-link-text-color);
   --qw-research-text-color: var(--ls-secondary-text-color);
@@ -834,7 +834,7 @@ div[data-refs-self*='"q"'] .block-content a.tag[data-ref="q"]:before {
   --qw-research-icon: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDM1MC4wNDcgMzUwLjA0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzUwLjA0NyAzNTAuMDQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggZD0iTTEzNi4yNjUsODUuNTFjNC4xNDMsMCw3LjUtMy4zNTcsNy41LTcuNWMwLTQuMTQyLTMuMzU3LTcuNS03LjUtNy41Yy0zMy4yOTUsMC02MC4zODMsMjcuMDg4LTYwLjM4Myw2MC4zODMNCgkJCWMwLDMzLjI5NSwyNy4wODgsNjAuMzgzLDYwLjM4Myw2MC4zODNjNC4xNDMsMCw3LjUtMy4zNTgsNy41LTcuNWMwLTQuMTQzLTMuMzU3LTcuNS03LjUtNy41DQoJCQljLTI1LjAyMywwLTQ1LjM4My0yMC4zNTgtNDUuMzgzLTQ1LjM4M0M5MC44ODIsMTA1Ljg2OCwxMTEuMjQxLDg1LjUxLDEzNi4yNjUsODUuNTF6Ii8+DQoJCTxwYXRoIGQ9Ik0zMjYuNzc5LDI3Ni42NzdjLTAuMTY4LTAuMjA4LTQzLjY0MS00My43MDQtNDMuNjQxLTQzLjcwNFY3LjVjMC00LjE0My0zLjM1Ny03LjUtNy41LTcuNUgyNS42Mw0KCQkJYy00LjE0MiwwLTcuNSwzLjM1Ny03LjUsNy41djMzNS4wNDdjMCw0LjE0MywzLjM1OCw3LjUsNy41LDcuNWgyNTAuMDA4YzQuMTQzLDAsNy41LTMuMzU3LDcuNS03LjV2LTIyLjE2MQ0KCQkJYzMuNzMyLDMuNDExLDguNTI1LDUuMTE4LDEzLjQ2NSw1LjExOGM1Ljg1LDAsMTEuODg3LTIuMzYzLDE2LjU0NS03LjAyMmwxMS43Ni0xMS43NjENCgkJCUMzMzMuNTEzLDI5OC4xMTksMzM0LjI2MywyODQuODI4LDMyNi43NzksMjc2LjY3N3ogTTMzLjEzLDMzNS4wNDdWMTVoMjM1LjAwOHYyMDIuOTczbC0yNC4zNDgtMjQuMzQ3DQoJCQljLTAuMDAyLTAuMDAxLTAuMDAyLTAuMDAxLTAuMDAyLTAuMDAxYy0zLjk5LTMuOTktOS42NjItNi4wNTItMTUuNTQzLTUuNjY4Yy01LjYwMiwwLjM3LTEwLjk2NSwyLjg1NC0xNS4xMDUsNi45OTRsLTAuNTc4LDAuNTc2DQoJCQlsLTEwLjYwMi0xMC42MDJjMTIuMzc3LTE0LjU4OCwxOS44NjUtMzMuNDQ4LDE5Ljg2NS01NC4wMzNjMC00Ni4xMjUtMzcuNTI1LTgzLjY1LTgzLjY0OS04My42NQ0KCQkJYy00Ni4xMjcsMC04My42NTIsMzcuNTI1LTgzLjY1Miw4My42NWMwLDQ2LjEyNiwzNy41MjUsODMuNjUyLDgzLjY1Miw4My42NTJjMjAuMTQ4LDAsMzguNjU2LTcuMTY0LDUzLjExMy0xOS4wNzVsMTAuNjY2LDEwLjY2Ng0KCQkJbC0wLjU3NiwwLjU3NmMtNC4xNDEsNC4xNC02LjYyNSw5LjUwNC02Ljk5NiwxNS4xMDVjLTAuMzkxLDUuODg4LDEuNjc2LDExLjU1Myw1LjY2OCwxNS41NDVjMCwwLDAsMCwwLDAuMDAxbDY4LjA4Niw2OC4wODcNCgkJCXYyOS41OThIMzMuMTN6IE0xMzguMTc3LDE5OS41NDVjLTM3Ljg1NSwwLTY4LjY1Mi0zMC43OTctNjguNjUyLTY4LjY1MmMwLTM3Ljg1NCwzMC43OTctNjguNjUsNjguNjUyLTY4LjY1DQoJCQljMzcuODUyLDAsNjguNjQ5LDMwLjc5Nyw2OC42NDksNjguNjVDMjA2LjgyNSwxNjguNzQ4LDE3Ni4wMjksMTk5LjU0NSwxMzguMTc3LDE5OS41NDV6IE0zMTQuMzAyLDI5Ni4xMTVsLTExLjc2LDExLjc2MQ0KCQkJYy0yLjkxOCwyLjkxNy03LjI0LDMuNTI1LTkuNDM4LDEuMzI2bC04Mi40NDUtODIuNDQ3di0wLjAwMWwwLDBjLTEuMjgxLTEuMjc5LTEuMzY5LTMuMDIxLTEuMzA5LTMuOTQ2DQoJCQljMC4xMjktMS45NDMsMS4wOS0zLjk0MywyLjYzNS01LjQ4OWwxMS43NjItMTEuNzYxYzEuNTQ1LTEuNTQ1LDMuNTQ1LTIuNTA1LDUuNDg2LTIuNjM0YzAuOTIyLTAuMDU0LDIuNjcsMC4wMjgsMy45NDcsMS4zMDlsMCwwDQoJCQljMC4wMDIsMCwwLjAwMiwwLjAwMSwwLjAwMiwwLjAwMWw4Mi40NDcsODIuNDQ1bDAuMDAyLDAuMDAzQzMxNy44MjUsMjg4Ljg4MywzMTcuMjE4LDI5My4yLDMxNC4zMDIsMjk2LjExNXoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==');
 }
 
-/* line 60, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 60, sass/_colored_blocks.scss */
 div[data-refs-self*='"research"'] .block-content {
   background-color: var(--qw-research-background-color);
   filter: brightness(110%);
@@ -844,14 +844,14 @@ div[data-refs-self*='"research"'] .block-content {
   border-radius: 0px 5px 5px 0px;
   font-size: smaller;
 }
-/* line 74, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 74, sass/_colored_blocks.scss */
 div[data-refs-self*='"research"'] .block-content a.tag[data-ref="research"] {
   /* hides the tag itself */
   background-color: transparent;
   filter: brightness(90%);
   font-size: 0px;
 }
-/* line 79, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 79, sass/_colored_blocks.scss */
 div[data-refs-self*='"research"'] .block-content a.tag[data-ref="research"]:before {
   background-color: var(--qw-research-text-color);
   position: relative;
@@ -866,7 +866,7 @@ div[data-refs-self*='"research"'] .block-content a.tag[data-ref="research"]:befo
   height: 0.8rem;
 }
 
-/* line 97, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 97, sass/_colored_blocks.scss */
 :root {
   --qw-tweetimport-background-color: var(--ls-secondary-background-color);
   --qw-tweetimport-text-color: var(--ls-secondary-text-color);
@@ -875,20 +875,20 @@ div[data-refs-self*='"research"'] .block-content a.tag[data-ref="research"]:befo
   --qw-tweetimport-icon: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNTA3LjQxMyw5My4zOTRjLTMuNzA5LTIuNTEtOC42MDctMi4zODMtMTIuMTc0LDAuMzI3Yy0zLjYxMiwyLjczNS05LjQ3NCw1LjA4Ny0xNi4xMzgsNy4wMTYNCgkJCWMxOC4yNDUtMjEuMzAxLDE4LjYyMy0zNS41NDEsMTguNDA4LTM4Ljg5M2MtMC4yNDUtMy44MDEtMi41NDEtNy4xNjgtNS45ODUtOC43OTFjLTMuNDU5LTEuNjEyLTcuNTEtMS4yMy0xMC41ODcsMS4wMDUNCgkJCWMtMjEuODkzLDE1LjkwOC00My42ODksMTkuMzczLTU2Ljc5MSwxOS43NmMtMjAuMzM3LTE5LjM0Mi00Ni43MDQtMjkuOTQ0LTc0Ljc0LTI5Ljk0NGMtNjAuMjcxLDAtMTA5LjMwNyw0OS42ODQtMTA5LjMwNywxMTAuNzUxDQoJCQljMCw0Ljk0NCwwLjMyNyw5Ljg3OCwwLjk2OSwxNC43NzFDMTM4LjE3NiwxNjcuNjQ1LDU0LjY2NSw2OS4xNTUsNTMuODAzLDY4LjExOWMtMi4xODQtMi42MTctNS41LTQuMDQxLTguOTI5LTMuNzE0DQoJCQljLTMuMzk4LDAuMjk2LTYuNDQ0LDIuMjM1LTguMTQ4LDUuMTg5Yy0yOS4wMDUsNTAuMzIyLTExLjI4Niw5NC43MjUsNi41MDUsMTIxLjMyN2MtMS44MzctMS4wOTItMy4zNDItMi4wOTctNC4zNzItMi44NTcNCgkJCWMtMy4xNDMtMi4zMzctNy4zMzctMi43MjUtMTAuODUyLTAuOTk1Yy0zLjUyMSwxLjczNS01Ljc3MSw1LjI4Ni01LjgzNyw5LjIwOWMtMC43ODYsNDguMjU1LDIxLjc2NCw3Ni40OSw0My42NzQsOTIuNDkNCgkJCWMtMi4zNzIsMC4zMjctNC41OTcsMS40NTktNi4yNjYsMy4yNzZjLTIuNTEsMi43MjQtMy4zOTMsNi41NzYtMi4zMTEsMTAuMTIyYzE1LjE5NCw0OS43MzUsNTIuMDQxLDY3LjM1Miw3Ni4zNzMsNzMuNTg3DQoJCQljLTQ5LjIyLDM3LjEzOC0xMjAuNTU3LDI1LjAxNi0xMjEuMzQ4LDI0Ljg2N2MtNC43My0wLjgzMS05LjQ2NCwxLjY2My0xMS40MDgsNi4wODJjLTEuOTM5LDQuNDEzLTAuNjEyLDkuNTg3LDMuMjI1LDEyLjUxDQoJCQljNTIuNDY0LDQwLjA0MSwxMTUuMjEsNDguOTEzLDE2MC41Myw0OC45MTNjMzQuMjcyLDAsNTguNTczLTUuMDc3LDYwLjkxLTUuNTgyYzIyOC42MTctNTQuMTc5LDIzNS44NjQtMjYzLjA2MywyMzUuMzk0LTI5OC42Ng0KCQkJYzQyLjg4OC0zOS45MjksNDkuNjMzLTU1LjI1NSw1MC42ODQtNTkuMDY3QzUxMi44MTEsMTAwLjUwMiw1MTEuMTE3LDk1LjkxLDUwNy40MTMsOTMuMzk0eiBNNDQzLjI4MywxNTEuNzUyDQoJCQljLTIuMzMsMi4xNDMtMy41Niw1LjIzNS0zLjM0Niw4LjM5OGMwLjAzNiwwLjU2MSwzLjUzNiw1Ny4xNzktMjEuNjk0LDEyMC4yNjZjLTMzLjcwOSw4NC4yOTEtMTAwLjE2NCwxMzguNzI1LTE5Ny4zMDcsMTYxLjc0Ng0KCQkJYy0xLjA0MSwwLjIxOS05MC45MDUsMTguODMxLTE2OS43OTItMTguNjg5YzMzLjcyNS0xLjQxNCw4MC40MjktMTAuOTEzLDExMy4yOTItNDcuODA2YzIuNzQ1LTMuMDc3LDMuMzk4LTcuODMzLDEuNzA5LTExLjU5Mw0KCQkJYy0xLjY4OS0zLjc1LTUuNDM5LTYuNTEtOS41NTEtNi41MWMtMC4wMiwwLTAuMDQxLDAtMC4wNzEsMGMtMi43NiwwLTUwLjMzNy0wLjM1Ny03My4xMzMtNDYuMzA2DQoJCQljOS4yMTksMC4zOTgsMjAuMjQtMC4xNDUsMjkuMTIyLTQuMjM3YzQuMDkyLTEuODg4LDYuNTEtNi4xLDYuMDA1LTEwLjU3NGMtMC41MDUtNC40NzUtMy44MjEtOC4wNzktOC4yMy05LjAwOA0KCQkJYy0yLjU1Ni0wLjU0MS01Ny42NDktMTIuODM2LTY2LjE0My03Mi42OTNjOC40NjQsMy41MjYsMTkuMDE1LDYuMjU3LDI5LjUxLDQuNjg1YzQuMDMxLTAuNjAyLDcuMzMyLTMuNSw4LjQ3NC03LjQxMw0KCQkJYzEuMTM4LTMuOTA4LTAuMTA3LTguMTMtMy4xODQtMTAuODA5Yy0yLjM4My0yLjA3LTU0LjMyNy00OC4yNzMtMzAuNTQxLTEwNy45NzNjMjguMTU4LDI5LjMzMiwxMDguNDYsMTAyLjM2OCwyMDUuODMzLDk2Ljc4Ng0KCQkJYzMuMTA3LTAuMTc5LDUuOTc1LTEuNzQsNy44Mi00LjI1YzEuODQzLTIuNTEsMi40NzEtNS43MDksMS43MS04LjcyOGMtMS44MzctNy4zMTYtMi43Ny0xNC44NTctMi43Ny0yMi40MTgNCgkJCWMwLTQ5LjU0NiwzOS42NTgtODkuODUzLDg4LjQwOS04OS44NTNjMjMuODQyLDAsNDYuMjAzLDkuNTE1LDYyLjk3LDI2Ljc5NmMxLjkyMywxLjk4NSw0LjU1NiwzLjEyMiw3LjMyMiwzLjE3NA0KCQkJYzkuNjU4LDAuMDkyLDI1LjU2MS0wLjk0OSw0My41MzEtNy42MzNjLTUuMzU5LDYuMjc1LTEyLjg1MiwxMy42MjItMjMuMzMyLDIxLjg1MmMtMy42MjIsMi44NDctNC45NTQsNy43MzUtMy4yNzYsMTIuMDI2DQoJCQljMS42ODQsNC4zMDEsNi4wNTYsNy4wMiwxMC41NjYsNi42MDdjMi4xMTItMC4xNjgsMTIuMzUyLTEuMDcxLDI0LjM1Mi0zLjUwNUM0NjQuNjYyLDEzMS40LDQ1NS40OTQsMTQwLjUyMyw0NDMuMjgzLDE1MS43NTJ6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=');
 }
 
-/* line 105, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 105, sass/_colored_blocks.scss */
 div[data-refs-self*='"tweetimport"'] .block-content {
   background-color: var(--qw-tweetimport-background-color);
   color: var(--qw-tweetimport-text-color);
   border-radius: 0px 5px 5px 0px;
   padding: 5px;
 }
-/* line 110, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 110, sass/_colored_blocks.scss */
 div[data-refs-self*='"tweetimport"'] .block-content a.tag[data-ref="tweetimport"] {
   /* hides the tag itself */
   background-color: transparent;
   font-size: 0px;
 }
-/* line 114, ../../../NOTES/logseq/sass/_colored_blocks.scss */
+/* line 114, sass/_colored_blocks.scss */
 div[data-refs-self*='"tweetimport"'] .block-content a.tag[data-ref="tweetimport"]:before {
   background-color: blue;
   position: relative;
@@ -904,7 +904,7 @@ div[data-refs-self*='"tweetimport"'] .block-content a.tag[data-ref="tweetimport"
 }
 
 /* version 00 - source  https://raw.githubusercontent.com/wirtzdan/logseq-paper-theme/master/src/_blocks.scss*/
-/* line 3, ../../../NOTES/logseq/sass/_block.scss */
+/* line 3, sass/_block.scss */
 :root {
   --qw-bullet-size: 6px;
   --qw-block-max-width: calc(100% - 38px);
@@ -913,7 +913,7 @@ div[data-refs-self*='"tweetimport"'] .block-content a.tag[data-ref="tweetimport"
 }
 
 /* block reference */
-/* line 12, ../../../NOTES/logseq/sass/_block.scss */
+/* line 12, sass/_block.scss */
 .block-ref {
   font-size: inherit;
   padding: 2px 4px 2px 6px;
@@ -922,7 +922,7 @@ div[data-refs-self*='"tweetimport"'] .block-content a.tag[data-ref="tweetimport"
   background: var(--qw-block-reference-background);
   border-bottom: none;
 }
-/* line 19, ../../../NOTES/logseq/sass/_block.scss */
+/* line 19, sass/_block.scss */
 .block-ref:before {
   content: "↪";
   color: var(--ls-active-primary-color);
@@ -930,42 +930,42 @@ div[data-refs-self*='"tweetimport"'] .block-content a.tag[data-ref="tweetimport"
   font-size: 0.8em;
   padding: 0 0 0 2px;
 }
-/* line 26, ../../../NOTES/logseq/sass/_block.scss */
+/* line 26, sass/_block.scss */
 .block-ref:hover {
   background: var(--qw-block-reference-background-hover);
 }
 
-/* line 34, ../../../NOTES/logseq/sass/_block.scss */
+/* line 34, sass/_block.scss */
 .block-ref .block-body {
   display: inline-block;
 }
 
-/* line 38, ../../../NOTES/logseq/sass/_block.scss */
+/* line 38, sass/_block.scss */
 .block-ref div {
   display: inline;
   padding: 0 0.2em;
 }
 
-/* line 43, ../../../NOTES/logseq/sass/_block.scss */
+/* line 43, sass/_block.scss */
 .block-ref .block-ref {
   padding: 0 0 0 0.2em;
 }
 
-/* line 54, ../../../NOTES/logseq/sass/_block.scss */
+/* line 54, sass/_block.scss */
 .bullet-container .bullet {
   width: var(--qw-bullet-size);
   height: var(--qw-bullet-size);
   transform: scale(1.2);
 }
 
-/* line 60, ../../../NOTES/logseq/sass/_block.scss */
+/* line 60, sass/_block.scss */
 .block-control svg {
   color: var(--ct-block-arrow-color);
 }
 
 /* WIP */
 /*  [:div.aq "Looks like an interesting reference"] */
-/* line 3, ../../../NOTES/logseq/sass/_experiment.scss */
+/* line 3, sass/_experiment.scss */
 .aq {
   position: relative;
   left: 50px;
@@ -978,7 +978,7 @@ div[data-refs-self*='"tweetimport"'] .block-content a.tag[data-ref="tweetimport"
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* line 14, ../../../NOTES/logseq/sass/_experiment.scss */
+/* line 14, sass/_experiment.scss */
 .aq:before {
   content: "📝AQ";
   /* color: var(--ls-secondary-background-color); */
@@ -988,7 +988,7 @@ div[data-refs-self*='"tweetimport"'] .block-content a.tag[data-ref="tweetimport"
   font-size: smaller;
 }
 
-/* line 24, ../../../NOTES/logseq/sass/_experiment.scss */
+/* line 24, sass/_experiment.scss */
 div[data-refs-self*='"ttt"'] {
   background-color: var(--ls-block-ref-link-text-color);
   color: var(--ls-secondary-text-color);
@@ -998,21 +998,21 @@ div[data-refs-self*='"ttt"'] {
   border-radius: 0px 5px 5px 0px;
   font-size: smaller;
 }
-/* line 32, ../../../NOTES/logseq/sass/_experiment.scss */
+/* line 32, sass/_experiment.scss */
 div[data-refs-self*='"ttt"'] .block-control {
   min-width: 12px;
 }
-/* line 35, ../../../NOTES/logseq/sass/_experiment.scss */
+/* line 35, sass/_experiment.scss */
 div[data-refs-self*='"ttt"'] + div[data-refs-self='["ttt"]'] {
   background-color: #e8e5de !important;
   margin-top: 0.4em;
 }
-/* line 39, ../../../NOTES/logseq/sass/_experiment.scss */
+/* line 39, sass/_experiment.scss */
 div[data-refs-self*='"ttt"'] .inline {
   padding: 0 0 2px 0;
 }
 
-/* line 45, ../../../NOTES/logseq/sass/_experiment.scss */
+/* line 45, sass/_experiment.scss */
 a.tag[data-ref="ttt"] {
   /* hides the tag itself */
   background-color: transparent;
@@ -1020,12 +1020,12 @@ a.tag[data-ref="ttt"] {
 }
 
 /* hide tags with .v-       */
-/* line 23, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 23, sass/_tags.scss */
 #left-sidebar li[data-ref="concept"] > a, a.page-title [data-ref="concept"] {
   visibility: hidden;
   position: relative;
 }
-/* line 26, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 26, sass/_tags.scss */
 #left-sidebar li[data-ref="concept"] > a::before, a.page-title [data-ref="concept"]::before {
   content: "📔 List of concepts";
   text-transform: none !important;
@@ -1036,19 +1036,19 @@ a.tag[data-ref="ttt"] {
   width: 100%;
   padding: 2px 20px;
 }
-/* line 36, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 36, sass/_tags.scss */
 #left-sidebar li[data-ref="concept"] > a:hover::before, a.page-title [data-ref="concept"]:hover::before {
   visibility: visible;
   width: 100%;
   background-color: var(--ls-quaternary-background-color);
 }
 
-/* line 23, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 23, sass/_tags.scss */
 #left-sidebar li[data-ref="proj"] > a, a.page-title [data-ref="proj"] {
   visibility: hidden;
   position: relative;
 }
-/* line 26, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 26, sass/_tags.scss */
 #left-sidebar li[data-ref="proj"] > a::before, a.page-title [data-ref="proj"]::before {
   content: "🗂 List of projects";
   text-transform: none !important;
@@ -1059,19 +1059,19 @@ a.tag[data-ref="ttt"] {
   width: 100%;
   padding: 2px 20px;
 }
-/* line 36, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 36, sass/_tags.scss */
 #left-sidebar li[data-ref="proj"] > a:hover::before, a.page-title [data-ref="proj"]:hover::before {
   visibility: visible;
   width: 100%;
   background-color: var(--ls-quaternary-background-color);
 }
 
-/* line 23, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 23, sass/_tags.scss */
 #left-sidebar li[data-ref="quote"] > a, a.page-title [data-ref="quote"] {
   visibility: hidden;
   position: relative;
 }
-/* line 26, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 26, sass/_tags.scss */
 #left-sidebar li[data-ref="quote"] > a::before, a.page-title [data-ref="quote"]::before {
   content: "🎙 List of Quotes";
   text-transform: none !important;
@@ -1082,19 +1082,19 @@ a.tag[data-ref="ttt"] {
   width: 100%;
   padding: 2px 20px;
 }
-/* line 36, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 36, sass/_tags.scss */
 #left-sidebar li[data-ref="quote"] > a:hover::before, a.page-title [data-ref="quote"]:hover::before {
   visibility: visible;
   width: 100%;
   background-color: var(--ls-quaternary-background-color);
 }
 
-/* line 23, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 23, sass/_tags.scss */
 #left-sidebar li[data-ref="wf"] > a, a.page-title [data-ref="wf"] {
   visibility: hidden;
   position: relative;
 }
-/* line 26, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 26, sass/_tags.scss */
 #left-sidebar li[data-ref="wf"] > a::before, a.page-title [data-ref="wf"]::before {
   content: "👷🏽 List of workflows";
   text-transform: none !important;
@@ -1105,19 +1105,19 @@ a.tag[data-ref="ttt"] {
   width: 100%;
   padding: 2px 20px;
 }
-/* line 36, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 36, sass/_tags.scss */
 #left-sidebar li[data-ref="wf"] > a:hover::before, a.page-title [data-ref="wf"]:hover::before {
   visibility: visible;
   width: 100%;
   background-color: var(--ls-quaternary-background-color);
 }
 
-/* line 23, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 23, sass/_tags.scss */
 #left-sidebar li[data-ref="proj/blog"] > a, a.page-title [data-ref="proj/blog"] {
   visibility: hidden;
   position: relative;
 }
-/* line 26, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 26, sass/_tags.scss */
 #left-sidebar li[data-ref="proj/blog"] > a::before, a.page-title [data-ref="proj/blog"]::before {
   content: "👩🏻‍💻 Qwxlea.github.io";
   text-transform: none !important;
@@ -1128,19 +1128,19 @@ a.tag[data-ref="ttt"] {
   width: 100%;
   padding: 2px 20px;
 }
-/* line 36, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 36, sass/_tags.scss */
 #left-sidebar li[data-ref="proj/blog"] > a:hover::before, a.page-title [data-ref="proj/blog"]:hover::before {
   visibility: visible;
   width: 100%;
   background-color: var(--ls-quaternary-background-color);
 }
 
-/* line 23, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 23, sass/_tags.scss */
 #left-sidebar li[data-ref="question"] > a, a.page-title [data-ref="question"] {
   visibility: hidden;
   position: relative;
 }
-/* line 26, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 26, sass/_tags.scss */
 #left-sidebar li[data-ref="question"] > a::before, a.page-title [data-ref="question"]::before {
   content: "❓ List of questions";
   text-transform: none !important;
@@ -1151,19 +1151,19 @@ a.tag[data-ref="ttt"] {
   width: 100%;
   padding: 2px 20px;
 }
-/* line 36, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 36, sass/_tags.scss */
 #left-sidebar li[data-ref="question"] > a:hover::before, a.page-title [data-ref="question"]:hover::before {
   visibility: visible;
   width: 100%;
   background-color: var(--ls-quaternary-background-color);
 }
 
-/* line 23, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 23, sass/_tags.scss */
 #left-sidebar li[data-ref="Contents"] > a, a.page-title [data-ref="Contents"] {
   visibility: hidden;
   position: relative;
 }
-/* line 26, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 26, sass/_tags.scss */
 #left-sidebar li[data-ref="Contents"] > a::before, a.page-title [data-ref="Contents"]::before {
   content: "🗄 Kasten";
   text-transform: none !important;
@@ -1174,19 +1174,19 @@ a.tag[data-ref="ttt"] {
   width: 100%;
   padding: 2px 20px;
 }
-/* line 36, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 36, sass/_tags.scss */
 #left-sidebar li[data-ref="Contents"] > a:hover::before, a.page-title [data-ref="Contents"]:hover::before {
   visibility: visible;
   width: 100%;
   background-color: var(--ls-quaternary-background-color);
 }
 
-/* line 23, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 23, sass/_tags.scss */
 #left-sidebar li[data-ref="contents"] > a, a.page-title [data-ref="contents"] {
   visibility: hidden;
   position: relative;
 }
-/* line 26, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 26, sass/_tags.scss */
 #left-sidebar li[data-ref="contents"] > a::before, a.page-title [data-ref="contents"]::before {
   content: "🗄 Kasten";
   text-transform: none !important;
@@ -1197,14 +1197,14 @@ a.tag[data-ref="ttt"] {
   width: 100%;
   padding: 2px 20px;
 }
-/* line 36, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 36, sass/_tags.scss */
 #left-sidebar li[data-ref="contents"] > a:hover::before, a.page-title [data-ref="contents"]:hover::before {
   visibility: visible;
   width: 100%;
   background-color: var(--ls-quaternary-background-color);
 }
 
-/* line 54, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 54, sass/_tags.scss */
 a[data-ref^="project-idea"]::before, a > [data-ref^="project-idea"]::before, [data-ref^="project-idea"] > a::before {
   content: "💭";
   width: 1em;
@@ -1212,12 +1212,12 @@ a[data-ref^="project-idea"]::before, a > [data-ref^="project-idea"]::before, [da
   margin-right: 0.3em;
 }
 
-/* line 60, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 60, sass/_tags.scss */
 [data-ref^="project-idea"] .page-icon {
   display: none;
 }
 
-/* line 54, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 54, sass/_tags.scss */
 a[data-ref^="wf/"]::before, a > [data-ref^="wf/"]::before, [data-ref^="wf/"] > a::before {
   content: "👷🏽";
   width: 1em;
@@ -1225,19 +1225,19 @@ a[data-ref^="wf/"]::before, a > [data-ref^="wf/"]::before, [data-ref^="wf/"] > a
   margin-right: 0.3em;
 }
 
-/* line 60, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 60, sass/_tags.scss */
 [data-ref^="wf/"] .page-icon {
   display: none;
 }
 
-/* line 99, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 99, sass/_tags.scss */
 a.tag[data-ref="fixme"] {
   /* hides the tag itself */
   background-color: transparent;
   filter: brightness(90%);
   font-size: 0px !important;
 }
-/* line 104, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 104, sass/_tags.scss */
 a.tag[data-ref="fixme"]:before {
   background-color: var(--qw-research-text-color);
   position: relative;
@@ -1251,14 +1251,14 @@ a.tag[data-ref="fixme"]:before {
   height: 1rem;
 }
 
-/* line 99, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 99, sass/_tags.scss */
 a.tag[data-ref="quote"] {
   /* hides the tag itself */
   background-color: transparent;
   filter: brightness(90%);
   font-size: 0px !important;
 }
-/* line 104, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 104, sass/_tags.scss */
 a.tag[data-ref="quote"]:before {
   background-color: var(--qw-research-text-color);
   position: relative;
@@ -1272,14 +1272,14 @@ a.tag[data-ref="quote"]:before {
   height: 1rem;
 }
 
-/* line 99, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 99, sass/_tags.scss */
 a.tag[data-ref="question"] {
   /* hides the tag itself */
   background-color: transparent;
   filter: brightness(90%);
   font-size: 0px !important;
 }
-/* line 104, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 104, sass/_tags.scss */
 a.tag[data-ref="question"]:before {
   background-color: var(--qw-research-text-color);
   position: relative;
@@ -1293,14 +1293,14 @@ a.tag[data-ref="question"]:before {
   height: 1rem;
 }
 
-/* line 99, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 99, sass/_tags.scss */
 a.tag[data-ref="repeat"] {
   /* hides the tag itself */
   background-color: transparent;
   filter: brightness(90%);
   font-size: 0px !important;
 }
-/* line 104, ../../../NOTES/logseq/sass/_tags.scss */
+/* line 104, sass/_tags.scss */
 a.tag[data-ref="repeat"]:before {
   background-color: var(--qw-research-text-color);
   position: relative;
@@ -1312,111 +1312,4 @@ a.tag[data-ref="repeat"]:before {
   mask-position: center;
   width: 1rem;
   height: 1rem;
-}
-
-/* line 2, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-:root {
-  --qw-yellow: #FFD800;
-  --qw-blue: #abdfff;
-  --qw-green: #ccffc1;
-  --qw-red: #ffc7c7;
-  --qw-purple: #CA1CFF;
-}
-
-/* line 10, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="#yellow"],
-span[data-ref="#purple"],
-span[data-ref="#red"],
-span[data-ref="#green"],
-span[data-ref="#blue"],
-span[data-ref="$red"],
-span[data-ref="$green"],
-span[data-ref="$blue"] {
-  display: none;
-}
-
-/* line 20, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="#red"] + mark {
-  background: var(--qw-red);
-}
-
-/* line 23, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="#green"] + mark {
-  background: var(--qw-green);
-}
-
-/* line 27, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="#blue"] + mark {
-  background: var(--qw-blue);
-}
-
-/* line 30, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="#yellow"] + mark {
-  background: var(--qw-yellow);
-}
-
-/* line 33, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="#purple"] + mark {
-  background: var(--qw-purple);
-}
-
-/* line 36, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="$red"] + mark {
-  color: var(--qw-red);
-  background: unset;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* line 42, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="$green"] + mark {
-  color: var(--qw-green);
-  background: unset;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* line 48, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="$blue"] + mark {
-  color: var(--qw-blue);
-  background: unset;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* line 54, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="$purple"] + mark {
-  color: var(--qw-purple);
-  background: unset;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* line 60, ../../../NOTES/logseq/sass/_wrap-plugin.scss */
-span[data-ref="$yellow"] + mark {
-  color: var(--qw-yellow);
-  background: unset;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* line 19, ../../../NOTES/logseq/export/custom.scss */
-:root {
-  --ls-page-text-size: 18px;
-}
-
-/* line 24, ../../../NOTES/logseq/export/custom.scss */
-a.tag[data-ref="card"] {
-  /* hides the tag itself */
-  background-color: transparent;
-  filter: brightness(90%);
-  font-size: 0px !important;
-}
-
-/* line 33, ../../../NOTES/logseq/export/custom.scss */
-.flashcards-nav,
-.relative.ui__dropdown-trigger,
-.pre-block,
-.cp__right-sidebar-settings .ml-4.text-sm:first-of-type {
-  display: none;
 }
