@@ -16,10 +16,10 @@ return and__4251__auto__;
 })();
 if(cljs.core.truth_(temp__5720__auto__)){
 var container = temp__5720__auto__;
-var zdx = cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__109582){
-var vec__109583 = p__109582;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__109583,(0),null);
-var el = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__109583,(1),null);
+var zdx = cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__76410){
+var vec__76411 = p__76410;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__76411,(0),null);
+var el = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__76411,(1),null);
 var c = getComputedStyle(el);
 var v1 = c.visibility;
 var v2 = c.display;
@@ -87,8 +87,8 @@ return cls.add(ing_QMARK_);
 })).on("dragend",(function (e){
 cls.remove(ing_QMARK_);
 
-var G__109587 = cljs_bean.core.__GT_js(frontend.modules.layout.core.calc_layout_data(el,e));
-return (callback.cljs$core$IFn$_invoke$arity$1 ? callback.cljs$core$IFn$_invoke$arity$1(G__109587) : callback.call(null,G__109587));
+var G__76414 = cljs_bean.core.__GT_js(frontend.modules.layout.core.calc_layout_data(el,e));
+return (callback.cljs$core$IFn$_invoke$arity$1 ? callback.cljs$core$IFn$_invoke$arity$1(G__76414) : callback.call(null,G__76414));
 }));
 
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(frontend.modules.layout.core._STAR_movable_containers,cljs.core.assoc,identity,el);
@@ -111,8 +111,8 @@ return cls.add(ing_QMARK_);
 }),new cljs.core.Keyword(null,"end","end",-268185958),(function (e){
 cls.remove(ing_QMARK_);
 
-var G__109588 = cljs_bean.core.__GT_js(frontend.modules.layout.core.calc_layout_data(el,e));
-return (callback.cljs$core$IFn$_invoke$arity$1 ? callback.cljs$core$IFn$_invoke$arity$1(G__109588) : callback.call(null,G__109588));
+var G__76415 = cljs_bean.core.__GT_js(frontend.modules.layout.core.calc_layout_data(el,e));
+return (callback.cljs$core$IFn$_invoke$arity$1 ? callback.cljs$core$IFn$_invoke$arity$1(G__76415) : callback.call(null,G__76415));
 }),new cljs.core.Keyword(null,"move","move",-2110884309),(function (e){
 var dset = el.dataset;
 var w = e.rect.width;

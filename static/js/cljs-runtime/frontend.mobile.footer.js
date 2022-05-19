@@ -18,7 +18,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(frontend.mobile.footer._STAR_
 } else {
 }
 
-var attrs69124 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(frontend.state.sub(new cljs.core.Keyword("editor","record-status","editor/record-status",-122164557)),"NONE"))?(function (){
+var attrs68933 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(frontend.state.sub(new cljs.core.Keyword("editor","record-status","editor/record-status",-122164557)),"NONE"))?(function (){
 cljs.core.reset_BANG_(frontend.mobile.footer._STAR_record_start,(-1));
 
 return frontend.mobile.footer.mobile_bar_command((function (){
@@ -28,7 +28,7 @@ return frontend.mobile.record.start_recording();
 :new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.flex.flex-row","div.flex.flex-row",209103675),frontend.mobile.footer.mobile_bar_command((function (){
 return frontend.mobile.record.stop_recording();
 }),"player-stop"),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.timer.pl-2","div.timer.pl-2",1649521312),frontend.mobile.footer.seconds__GT_minutes_COLON_seconds(cljs.core.deref(frontend.mobile.footer._STAR_record_start))], null)], null));
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs69124))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","flex-row"], null)], null),attrs69124], 0))):{'className':"flex flex-row"}),((cljs.core.map_QMARK_(attrs69124))?null:[daiquiri.interpreter.interpret(attrs69124)]));
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs68933))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","flex-row"], null)], null),attrs68933], 0))):{'className':"flex flex-row"}),((cljs.core.map_QMARK_(attrs68933))?null:[daiquiri.interpreter.interpret(attrs68933)]));
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"did-mount","did-mount",918232960),(function (state){
 var comp = new cljs.core.Keyword("rum","react-component","rum/react-component",-1879897248).cljs$core$IFn$_invoke$arity$1(state);
 var callback = (function (){

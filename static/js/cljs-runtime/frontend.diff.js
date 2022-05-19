@@ -4,8 +4,8 @@ goog.scope(function(){
 });
 var module$node_modules$diff$dist$diff=shadow.js.require("module$node_modules$diff$dist$diff", {});
 frontend.diff.diff = (function frontend$diff$diff(s1,s2){
-return cljs_bean.core.__GT_clj((function (){var fexpr__95950 = frontend.diff.goog$module$goog$object.get(module$node_modules$diff$dist$diff,"diffLines");
-return (fexpr__95950.cljs$core$IFn$_invoke$arity$2 ? fexpr__95950.cljs$core$IFn$_invoke$arity$2(s1,s2) : fexpr__95950.call(null,s1,s2));
+return cljs_bean.core.__GT_clj((function (){var fexpr__63758 = frontend.diff.goog$module$goog$object.get(module$node_modules$diff$dist$diff,"diffLines");
+return (fexpr__63758.cljs$core$IFn$_invoke$arity$2 ? fexpr__63758.cljs$core$IFn$_invoke$arity$2(s1,s2) : fexpr__63758.call(null,s1,s2));
 })());
 });
 frontend.diff.inline_special_chars = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 8, ["`",null,"$",null,"*",null,"+",null,"/",null,"^",null,"~",null,"_",null], null), null);
@@ -24,53 +24,53 @@ var t2 = cljs.core.seq(clojure.string.lower_case(text));
 var i1 = (0);
 var i2 = (0);
 while(true){
-var vec__96008 = t1;
-var seq__96009 = cljs.core.seq(vec__96008);
-var first__96010 = cljs.core.first(seq__96009);
-var seq__96009__$1 = cljs.core.next(seq__96009);
-var h1 = first__96010;
-var r1 = seq__96009__$1;
-var vec__96011 = t2;
-var seq__96012 = cljs.core.seq(vec__96011);
-var first__96013 = cljs.core.first(seq__96012);
-var seq__96012__$1 = cljs.core.next(seq__96012);
-var h2 = first__96013;
-var r2 = seq__96012__$1;
+var vec__63791 = t1;
+var seq__63792 = cljs.core.seq(vec__63791);
+var first__63793 = cljs.core.first(seq__63792);
+var seq__63792__$1 = cljs.core.next(seq__63792);
+var h1 = first__63793;
+var r1 = seq__63792__$1;
+var vec__63794 = t2;
+var seq__63795 = cljs.core.seq(vec__63794);
+var first__63796 = cljs.core.first(seq__63795);
+var seq__63795__$1 = cljs.core.next(seq__63795);
+var h2 = first__63796;
+var r2 = seq__63795__$1;
 if(((cljs.core.empty_QMARK_(t1)) || (cljs.core.empty_QMARK_(t2)))){
 return i1;
 } else {
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(h1,h2)){
-var G__96029 = r1;
-var G__96030 = r2;
-var G__96031 = (i1 + (1));
-var G__96032 = (i2 + (1));
-t1 = G__96029;
-t2 = G__96030;
-i1 = G__96031;
-i2 = G__96032;
+var G__63799 = r1;
+var G__63800 = r2;
+var G__63801 = (i1 + (1));
+var G__63802 = (i2 + (1));
+t1 = G__63799;
+t2 = G__63800;
+i1 = G__63801;
+i2 = G__63802;
 continue;
 } else {
-if(cljs.core.truth_((function (){var fexpr__96017 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [" ",null,"[",null,"]",null], null), null);
-return (fexpr__96017.cljs$core$IFn$_invoke$arity$1 ? fexpr__96017.cljs$core$IFn$_invoke$arity$1(h2) : fexpr__96017.call(null,h2));
+if(cljs.core.truth_((function (){var fexpr__63797 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [" ",null,"[",null,"]",null], null), null);
+return (fexpr__63797.cljs$core$IFn$_invoke$arity$1 ? fexpr__63797.cljs$core$IFn$_invoke$arity$1(h2) : fexpr__63797.call(null,h2));
 })())){
-var G__96035 = t1;
-var G__96036 = r2;
-var G__96037 = i1;
-var G__96038 = (i2 + (1));
-t1 = G__96035;
-t2 = G__96036;
-i1 = G__96037;
-i2 = G__96038;
+var G__63803 = t1;
+var G__63804 = r2;
+var G__63805 = i1;
+var G__63806 = (i2 + (1));
+t1 = G__63803;
+t2 = G__63804;
+i1 = G__63805;
+i2 = G__63806;
 continue;
 } else {
-var G__96039 = r1;
-var G__96040 = t2;
-var G__96041 = (i1 + (1));
-var G__96042 = i2;
-t1 = G__96039;
-t2 = G__96040;
-i1 = G__96041;
-i2 = G__96042;
+var G__63807 = r1;
+var G__63808 = t2;
+var G__63809 = (i1 + (1));
+var G__63810 = i2;
+t1 = G__63807;
+t2 = G__63808;
+i1 = G__63809;
+i2 = G__63810;
 continue;
 
 }
@@ -107,13 +107,13 @@ return pos;
 }
 }
 }
-}catch (e95993){if((e95993 instanceof Error)){
-var e = e95993;
+}catch (e63772){if((e63772 instanceof Error)){
+var e = e63772;
 lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.diff",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("diff","find-position","diff/find-position",-780421417),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),e], null),new cljs.core.Keyword(null,"line","line",212345235),72], null)),null);
 
 return cljs.core.count(markup);
 } else {
-throw e95993;
+throw e63772;
 
 }
 }} else {

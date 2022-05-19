@@ -34,10 +34,10 @@ return cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(frontend.components.da
 return daiquiri.core.create_element("a",{'onClick':(function (){
 cljs.core.reset_BANG_(frontend.components.datetime._STAR_show_time_QMARK_,true);
 
-var map__66680 = frontend.date.get_local_date();
-var map__66680__$1 = cljs.core.__destructure_map(map__66680);
-var hour = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66680__$1,new cljs.core.Keyword(null,"hour","hour",-555989214));
-var minute = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66680__$1,new cljs.core.Keyword(null,"minute","minute",-642875969));
+var map__66991 = frontend.date.get_local_date();
+var map__66991__$1 = cljs.core.__destructure_map(map__66991);
+var hour = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66991__$1,new cljs.core.Keyword(null,"hour","hour",-555989214));
+var minute = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66991__$1,new cljs.core.Keyword(null,"minute","minute",-642875969));
 var result = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(hour),":",frontend.util.zero_pad(minute)].join('');
 return cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(frontend.components.datetime._STAR_timestamp,cljs.core.assoc,new cljs.core.Keyword(null,"time","time",1385887882),result);
 }),'className':"text-sm"},["Add time"]);
@@ -47,12 +47,12 @@ if((typeof frontend !== 'undefined') && (typeof frontend.components !== 'undefin
 } else {
 frontend.components.datetime._STAR_show_repeater_QMARK_ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(false);
 }
-frontend.components.datetime.repeater_cp = rum.core.lazy_build(rum.core.build_defc,(function (p__66687){
-var map__66688 = p__66687;
-var map__66688__$1 = cljs.core.__destructure_map(map__66688);
-var num = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66688__$1,new cljs.core.Keyword(null,"num","num",1985240673));
-var duration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66688__$1,new cljs.core.Keyword(null,"duration","duration",1444101068));
-var kind = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66688__$1,new cljs.core.Keyword(null,"kind","kind",-717265803));
+frontend.components.datetime.repeater_cp = rum.core.lazy_build(rum.core.build_defc,(function (p__66999){
+var map__67000 = p__66999;
+var map__67000__$1 = cljs.core.__destructure_map(map__67000);
+var num = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67000__$1,new cljs.core.Keyword(null,"num","num",1985240673));
+var duration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67000__$1,new cljs.core.Keyword(null,"duration","duration",1444101068));
+var kind = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67000__$1,new cljs.core.Keyword(null,"kind","kind",-717265803));
 var show_QMARK_ = rum.core.react(frontend.components.datetime._STAR_show_repeater_QMARK_);
 if(cljs.core.truth_((function (){var or__4253__auto__ = show_QMARK_;
 if(cljs.core.truth_(or__4253__auto__)){
@@ -112,45 +112,45 @@ frontend.util.stop(e);
 } else {
 }
 
-var map__66705_66762 = cljs.core.deref(frontend.components.datetime._STAR_timestamp);
-var map__66705_66763__$1 = cljs.core.__destructure_map(map__66705_66762);
-var timestamp_66764 = map__66705_66763__$1;
-var repeater_66765 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66705_66763__$1,new cljs.core.Keyword(null,"repeater","repeater",-1071171146));
-var date_66766 = new cljs.core.Keyword("date-picker","date","date-picker/date",-1622069581).cljs$core$IFn$_invoke$arity$1(cljs.core.deref(frontend.state.state));
-var timestamp_66767__$1 = cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(timestamp_66764,new cljs.core.Keyword(null,"date","date",-1463434462),(function (){var or__4253__auto__ = date_66766;
+var map__67052_67283 = cljs.core.deref(frontend.components.datetime._STAR_timestamp);
+var map__67052_67284__$1 = cljs.core.__destructure_map(map__67052_67283);
+var timestamp_67285 = map__67052_67284__$1;
+var repeater_67286 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67052_67284__$1,new cljs.core.Keyword(null,"repeater","repeater",-1071171146));
+var date_67287 = new cljs.core.Keyword("date-picker","date","date-picker/date",-1622069581).cljs$core$IFn$_invoke$arity$1(cljs.core.deref(frontend.state.state));
+var timestamp_67288__$1 = cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(timestamp_67285,new cljs.core.Keyword(null,"date","date",-1463434462),(function (){var or__4253__auto__ = date_67287;
 if(cljs.core.truth_(or__4253__auto__)){
 return or__4253__auto__;
 } else {
 return cljs_time.core.today();
 }
 })());
-var kind_66768 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("w",new cljs.core.Keyword(null,"duration","duration",1444101068).cljs$core$IFn$_invoke$arity$1(repeater_66765)))?"++":".+");
-var timestamp_66769__$2 = cljs.core.assoc_in(timestamp_66767__$1,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"repeater","repeater",-1071171146),new cljs.core.Keyword(null,"kind","kind",-717265803)], null),kind_66768);
-var text_66770 = frontend.handler.repeated.timestamp_map__GT_text(timestamp_66769__$2);
-var block_data_66771 = frontend.state.get_timestamp_block();
-var map__66706_66772 = block_data_66771;
-var map__66706_66773__$1 = cljs.core.__destructure_map(map__66706_66772);
-var block_66774 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66706_66773__$1,new cljs.core.Keyword(null,"block","block",664686210));
-var typ_66775 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66706_66773__$1,new cljs.core.Keyword(null,"typ","typ",-1304536900));
-var show_QMARK__66776 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66706_66773__$1,new cljs.core.Keyword(null,"show?","show?",1543842127));
-var block_id_66777 = (function (){var or__4253__auto__ = new cljs.core.Keyword("block","uuid","block/uuid",-1991494552).cljs$core$IFn$_invoke$arity$1(block_66774);
+var kind_67289 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("w",new cljs.core.Keyword(null,"duration","duration",1444101068).cljs$core$IFn$_invoke$arity$1(repeater_67286)))?"++":".+");
+var timestamp_67290__$2 = cljs.core.assoc_in(timestamp_67288__$1,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"repeater","repeater",-1071171146),new cljs.core.Keyword(null,"kind","kind",-717265803)], null),kind_67289);
+var text_67291 = frontend.handler.repeated.timestamp_map__GT_text(timestamp_67290__$2);
+var block_data_67292 = frontend.state.get_timestamp_block();
+var map__67053_67293 = block_data_67292;
+var map__67053_67294__$1 = cljs.core.__destructure_map(map__67053_67293);
+var block_67295 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67053_67294__$1,new cljs.core.Keyword(null,"block","block",664686210));
+var typ_67296 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67053_67294__$1,new cljs.core.Keyword(null,"typ","typ",-1304536900));
+var show_QMARK__67297 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67053_67294__$1,new cljs.core.Keyword(null,"show?","show?",1543842127));
+var block_id_67298 = (function (){var or__4253__auto__ = new cljs.core.Keyword("block","uuid","block/uuid",-1991494552).cljs$core$IFn$_invoke$arity$1(block_67295);
 if(cljs.core.truth_(or__4253__auto__)){
 return or__4253__auto__;
 } else {
 return new cljs.core.Keyword("block","uuid","block/uuid",-1991494552).cljs$core$IFn$_invoke$arity$1(frontend.state.get_edit_block());
 }
 })();
-var typ_66778__$1 = (function (){var or__4253__auto__ = cljs.core.deref(frontend.commands._STAR_current_command);
+var typ_67299__$1 = (function (){var or__4253__auto__ = cljs.core.deref(frontend.commands._STAR_current_command);
 if(cljs.core.truth_(or__4253__auto__)){
 return or__4253__auto__;
 } else {
-return typ_66775;
+return typ_67296;
 }
 })();
-frontend.handler.editor.set_block_timestamp_BANG_(block_id_66777,typ_66778__$1,text_66770);
+frontend.handler.editor.set_block_timestamp_BANG_(block_id_67298,typ_67299__$1,text_67291);
 
-if(cljs.core.truth_(show_QMARK__66776)){
-cljs.core.reset_BANG_(show_QMARK__66776,false);
+if(cljs.core.truth_(show_QMARK__67297)){
+cljs.core.reset_BANG_(show_QMARK__67297,false);
 } else {
 }
 
@@ -161,12 +161,12 @@ frontend.state.set_editor_show_date_picker_BANG_(false);
 return frontend.commands.restore_state(false);
 });
 frontend.components.datetime.time_repeater = rum.core.lazy_build(rum.core.build_defc,(function (){
-var map__66711 = rum.core.react(frontend.components.datetime._STAR_timestamp);
-var map__66711__$1 = cljs.core.__destructure_map(map__66711);
-var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66711__$1,new cljs.core.Keyword(null,"time","time",1385887882));
-var repeater = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66711__$1,new cljs.core.Keyword(null,"repeater","repeater",-1071171146));
-return daiquiri.core.create_element("div",{'id':"time-repeater",'className':"py-1 px-4"},[daiquiri.core.create_element("p",{'className':"text-sm opacity-50 font-medium mt-4"},["Time:"]),frontend.components.datetime.time_input(time),daiquiri.core.create_element("p",{'className':"text-sm opacity-50 font-medium mt-4"},["Repeater:"]),frontend.components.datetime.repeater_cp(repeater),(function (){var attrs66724 = frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic("Submit",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"on-click","on-click",1632826543),frontend.components.datetime.on_submit], 0));
-return daiquiri.core.create_element("p",((cljs.core.map_QMARK_(attrs66724))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["mt-4"], null)], null),attrs66724], 0))):{'className':"mt-4"}),((cljs.core.map_QMARK_(attrs66724))?null:[daiquiri.interpreter.interpret(attrs66724)]));
+var map__67067 = rum.core.react(frontend.components.datetime._STAR_timestamp);
+var map__67067__$1 = cljs.core.__destructure_map(map__67067);
+var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67067__$1,new cljs.core.Keyword(null,"time","time",1385887882));
+var repeater = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67067__$1,new cljs.core.Keyword(null,"repeater","repeater",-1071171146));
+return daiquiri.core.create_element("div",{'id':"time-repeater",'className':"py-1 px-4"},[daiquiri.core.create_element("p",{'className':"text-sm opacity-50 font-medium mt-4"},["Time:"]),frontend.components.datetime.time_input(time),daiquiri.core.create_element("p",{'className':"text-sm opacity-50 font-medium mt-4"},["Repeater:"]),frontend.components.datetime.repeater_cp(repeater),(function (){var attrs67121 = frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic("Submit",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"on-click","on-click",1632826543),frontend.components.datetime.on_submit], 0));
+return daiquiri.core.create_element("p",((cljs.core.map_QMARK_(attrs67121))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["mt-4"], null)], null),attrs67121], 0))):{'className':"mt-4"}),((cljs.core.map_QMARK_(attrs67121))?null:[daiquiri.interpreter.interpret(attrs67121)]));
 })()]);
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive,frontend.mixins.event_mixin.cljs$core$IFn$_invoke$arity$1((function (state){
 var temp__5720__auto__ = frontend.state.get_input();
@@ -213,9 +213,9 @@ return cljs.core.reset_BANG_(frontend.commands._STAR_current_command,null);
 return null;
 }
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"init","init",-1875481434),(function (state){
-var ts_66786 = cljs.core.last(new cljs.core.Keyword("rum","args","rum/args",1315791754).cljs$core$IFn$_invoke$arity$1(state));
-if(cljs.core.truth_(ts_66786)){
-cljs.core.reset_BANG_(frontend.components.datetime._STAR_timestamp,ts_66786);
+var ts_67318 = cljs.core.last(new cljs.core.Keyword("rum","args","rum/args",1315791754).cljs$core$IFn$_invoke$arity$1(state));
+if(cljs.core.truth_(ts_67318)){
+cljs.core.reset_BANG_(frontend.components.datetime._STAR_timestamp,ts_67318);
 } else {
 cljs.core.reset_BANG_(frontend.components.datetime._STAR_timestamp,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"time","time",1385887882),"",new cljs.core.Keyword(null,"repeater","repeater",-1071171146),cljs.core.PersistentArrayMap.EMPTY], null));
 }

@@ -24,12 +24,12 @@ return null;
 frontend.components.commit.add_commit_message = rum.core.lazy_build(rum.core.build_defcs,(function (state,_close_fn){
 return daiquiri.core.create_element("div",{'style':{'padding':"48px 0"},'className':"w-full mx-auto sm:max-w-lg sm:w-96"},[daiquiri.core.create_element("div",{'className':"sm:flex sm:items-start"},[daiquiri.core.create_element("div",{'className':"mt-3 text-center sm:mt-0 sm:text-left mb-2"},[daiquiri.core.create_element("h3",{'id':"modal-headline",'className':"text-lg leading-6 font-medium"},["Your commit message:"])])]),daiquiri.core.create_element("input",{'id':"commit-message",'autoFocus':true,'defaultValue':"",'className':"form-input block w-full sm:text-sm sm:leading-5 my-2"},null),daiquiri.core.create_element("div",{'className':"mt-5 sm:mt-4 flex"},[daiquiri.core.create_element("span",{'className':"flex w-full rounded-md shadow-sm"},[daiquiri.core.create_element("button",{'type':"button",'onClick':frontend.components.commit.commit_and_push_BANG_,'className':"inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5"},["Commit"])])])]);
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"did-update","did-update",-2143702256),(function (state){
-var temp__5720__auto___100201 = goog.dom.getElement("commit-message");
-if(cljs.core.truth_(temp__5720__auto___100201)){
-var input_100203 = temp__5720__auto___100201;
-input_100203.focus();
+var temp__5720__auto___66544 = goog.dom.getElement("commit-message");
+if(cljs.core.truth_(temp__5720__auto___66544)){
+var input_66545 = temp__5720__auto___66544;
+input_66545.focus();
 
-frontend.util.cursor.move_cursor_to_end(input_100203);
+frontend.util.cursor.move_cursor_to_end(input_66545);
 } else {
 }
 

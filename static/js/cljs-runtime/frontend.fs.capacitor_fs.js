@@ -37,11 +37,11 @@ return module$node_modules$$capacitor$filesystem$dist$plugin_cjs.Filesystem.read
 frontend.fs.capacitor_fs.readdir = (function frontend$fs$capacitor_fs$readdir(path){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42616__auto__){
-return promesa.protocols._promise((function (){var internal_loop_fn_name42653 = (function frontend$fs$capacitor_fs$readdir_$_internal_loop_fn_name42653(result56843,dirs56844){
-return promesa.core.then.cljs$core$IFn$_invoke$arity$2(promesa.core.all(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [result56843,dirs56844], null)),(function (p__56857){
-var vec__56858 = p__56857;
-var result = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__56858,(0),null);
-var dirs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__56858,(1),null);
+return promesa.protocols._promise((function (){var internal_loop_fn_name42653 = (function frontend$fs$capacitor_fs$readdir_$_internal_loop_fn_name42653(result57191,dirs57192){
+return promesa.core.then.cljs$core$IFn$_invoke$arity$2(promesa.core.all(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [result57191,dirs57192], null)),(function (p__57213){
+var vec__57214 = p__57213;
+var result = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57214,(0),null);
+var dirs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57214,(1),null);
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42616__auto____$1){
 return promesa.protocols._promise(((cljs.core.empty_QMARK_(dirs))?result:promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto____$1){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.first(dirs),(function (d){
@@ -70,37 +70,37 @@ return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.map.cljs$core$I
 return [clojure.string.replace(d,/\/+$/,""),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_(frontend.mobile.util.native_ios_QMARK_())?frontend.util.url_encode(file):file))].join('');
 }),files__$2),(function (files__$3){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.all(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (file){
-return promesa.core.chain.cljs$core$IFn$_invoke$arity$2(module$node_modules$$capacitor$filesystem$dist$plugin_cjs.Filesystem.stat(cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"path","path",-188191168),file], null))),(function (p1__56839_SHARP_){
-return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p1__56839_SHARP_,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+return promesa.core.chain.cljs$core$IFn$_invoke$arity$2(module$node_modules$$capacitor$filesystem$dist$plugin_cjs.Filesystem.stat(cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"path","path",-188191168),file], null))),(function (p1__57187_SHARP_){
+return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p1__57187_SHARP_,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
 }));
 }),files__$3)),(function (files_with_stats){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"uri","uri",-774711847),cljs.core.filterv((function (p__56863){
-var map__56864 = p__56863;
-var map__56864__$1 = cljs.core.__destructure_map(map__56864);
-var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56864__$1,new cljs.core.Keyword(null,"type","type",1174270348));
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"uri","uri",-774711847),cljs.core.filterv((function (p__57222){
+var map__57224 = p__57222;
+var map__57224__$1 = cljs.core.__destructure_map(map__57224);
+var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57224__$1,new cljs.core.Keyword(null,"type","type",1174270348));
 return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["directory",null,"NSFileTypeDirectory",null], null), null),type);
 }),files_with_stats)),(function (files_dir){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.all(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__56865){
-var map__56866 = p__56865;
-var map__56866__$1 = cljs.core.__destructure_map(map__56866);
-var file_result = map__56866__$1;
-var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56866__$1,new cljs.core.Keyword(null,"uri","uri",-774711847));
-return promesa.core.chain.cljs$core$IFn$_invoke$arity$variadic(frontend.fs.capacitor_fs.read_file_utf8(uri),(function (p1__56841_SHARP_){
-return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p1__56841_SHARP_,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
-}),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"data","data",-232669377),(function (p1__56842_SHARP_){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(file_result,new cljs.core.Keyword(null,"content","content",15833224),p1__56842_SHARP_);
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.all(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__57225){
+var map__57226 = p__57225;
+var map__57226__$1 = cljs.core.__destructure_map(map__57226);
+var file_result = map__57226__$1;
+var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57226__$1,new cljs.core.Keyword(null,"uri","uri",-774711847));
+return promesa.core.chain.cljs$core$IFn$_invoke$arity$variadic(frontend.fs.capacitor_fs.read_file_utf8(uri),(function (p1__57189_SHARP_){
+return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p1__57189_SHARP_,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+}),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"data","data",-232669377),(function (p1__57190_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(file_result,new cljs.core.Keyword(null,"content","content",15833224),p1__57190_SHARP_);
 })], 0));
-}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p__56867){
-var map__56868 = p__56867;
-var map__56868__$1 = cljs.core.__destructure_map(map__56868);
-var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56868__$1,new cljs.core.Keyword(null,"uri","uri",-774711847));
-return cljs.core.some((function (p1__56840_SHARP_){
-return clojure.string.ends_with_QMARK_(uri,p1__56840_SHARP_);
+}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p__57227){
+var map__57228 = p__57227;
+var map__57228__$1 = cljs.core.__destructure_map(map__57228);
+var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57228__$1,new cljs.core.Keyword(null,"uri","uri",-774711847));
+return cljs.core.some((function (p1__57188_SHARP_){
+return clojure.string.ends_with_QMARK_(uri,p1__57188_SHARP_);
 }),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [".md",".markdown",".org",".edn",".css"], null));
-}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p__56869){
-var map__56870 = p__56869;
-var map__56870__$1 = cljs.core.__destructure_map(map__56870);
-var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56870__$1,new cljs.core.Keyword(null,"type","type",1174270348));
+}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p__57229){
+var map__57230 = p__57229;
+var map__57230__$1 = cljs.core.__destructure_map(map__57230);
+var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57230__$1,new cljs.core.Keyword(null,"type","type",1174270348));
 return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["NSFileTypeRegular",null,"file",null], null), null),type);
 }),files_with_stats)))),(function (files_result){
 return promesa.protocols._promise(frontend$fs$capacitor_fs$readdir_$_internal_loop_fn_name42653(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(result,files_result),cljs.core.concat.cljs$core$IFn$_invoke$arity$2(cljs.core.rest(dirs),files_dir)));
@@ -142,13 +142,13 @@ return promesa.core.resolved(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(clojur
 return null;
 }
 });
-frontend.fs.capacitor_fs.write_file_impl_BANG_ = (function frontend$fs$capacitor_fs$write_file_impl_BANG_(_this,repo,_dir,path,content,p__56872,stat){
-var map__56873 = p__56872;
-var map__56873__$1 = cljs.core.__destructure_map(map__56873);
-var ok_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56873__$1,new cljs.core.Keyword(null,"ok-handler","ok-handler",-804644089));
-var error_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56873__$1,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776));
-var old_content = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56873__$1,new cljs.core.Keyword(null,"old-content","old-content",1851086779));
-var skip_compare_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56873__$1,new cljs.core.Keyword(null,"skip-compare?","skip-compare?",82692960));
+frontend.fs.capacitor_fs.write_file_impl_BANG_ = (function frontend$fs$capacitor_fs$write_file_impl_BANG_(_this,repo,_dir,path,content,p__57242,stat){
+var map__57243 = p__57242;
+var map__57243__$1 = cljs.core.__destructure_map(map__57243);
+var ok_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57243__$1,new cljs.core.Keyword(null,"ok-handler","ok-handler",-804644089));
+var error_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57243__$1,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776));
+var old_content = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57243__$1,new cljs.core.Keyword(null,"old-content","old-content",1851086779));
+var skip_compare_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57243__$1,new cljs.core.Keyword(null,"skip-compare?","skip-compare?",82692960));
 if(cljs.core.truth_(skip_compare_QMARK_)){
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(module$node_modules$$capacitor$filesystem$dist$plugin_cjs.Filesystem.writeFile(cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"path","path",-188191168),path,new cljs.core.Keyword(null,"data","data",-232669377),content,new cljs.core.Keyword(null,"encoding","encoding",1728578272),module$node_modules$$capacitor$filesystem$dist$plugin_cjs.Encoding.UTF8,new cljs.core.Keyword(null,"recursive","recursive",718885872),true], null))),(function (result){
@@ -163,8 +163,8 @@ return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.fs.capacit
 }));
 } else {
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.chain.cljs$core$IFn$_invoke$arity$variadic(frontend.fs.capacitor_fs.read_file_utf8(path),(function (p1__56871_SHARP_){
-return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p1__56871_SHARP_,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.chain.cljs$core$IFn$_invoke$arity$variadic(frontend.fs.capacitor_fs.read_file_utf8(path),(function (p1__57238_SHARP_){
+return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p1__57238_SHARP_,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
 }),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"data","data",-232669377)], 0)),(function (error){
 console.error(error);
 
@@ -182,9 +182,9 @@ return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__4253
 if(cljs.core.truth_(or__4253__auto__)){
 return or__4253__auto__;
 } else {
-var or__4253__auto____$1 = (function (){var G__56875 = repo;
-var G__56876 = decodeURI(path);
-return (frontend.db.get_file.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_file.cljs$core$IFn$_invoke$arity$2(G__56875,G__56876) : frontend.db.get_file.call(null,G__56875,G__56876));
+var or__4253__auto____$1 = (function (){var G__57244 = repo;
+var G__57245 = decodeURI(path);
+return (frontend.db.get_file.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_file.cljs$core$IFn$_invoke$arity$2(G__57244,G__57245) : frontend.db.get_file.call(null,G__57244,G__57245));
 })();
 if(cljs.core.truth_(or__4253__auto____$1)){
 return or__4253__auto____$1;
@@ -204,10 +204,10 @@ return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(module$node_modules$$capa
 return promesa.protocols._promise((function (){
 promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto____$2){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((cljs.core.truth_(frontend.encrypt.encrypted_db_QMARK_(frontend.state.get_current_repo()))?frontend.encrypt.decrypt.cljs$core$IFn$_invoke$arity$1(content):content),(function (content__$1){
-return promesa.protocols._promise((function (){var G__56877 = repo;
-var G__56878 = decodeURI(path);
-var G__56879 = content__$1;
-return (frontend.db.set_file_content_BANG_.cljs$core$IFn$_invoke$arity$3 ? frontend.db.set_file_content_BANG_.cljs$core$IFn$_invoke$arity$3(G__56877,G__56878,G__56879) : frontend.db.set_file_content_BANG_.call(null,G__56877,G__56878,G__56879));
+return promesa.protocols._promise((function (){var G__57249 = repo;
+var G__57250 = decodeURI(path);
+var G__57251 = content__$1;
+return (frontend.db.set_file_content_BANG_.cljs$core$IFn$_invoke$arity$3 ? frontend.db.set_file_content_BANG_.cljs$core$IFn$_invoke$arity$3(G__57249,G__57250,G__57251) : frontend.db.set_file_content_BANG_.call(null,G__57249,G__57250,G__57251));
 })());
 }));
 }));
@@ -239,22 +239,22 @@ return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.fs.capacit
 }
 });
 frontend.fs.capacitor_fs.get_file_path = (function frontend$fs$capacitor_fs$get_file_path(dir,path){
-var vec__56881 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__56880_SHARP_){
-var G__56884 = p1__56880_SHARP_;
-if((G__56884 == null)){
+var vec__57256 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__57255_SHARP_){
+var G__57259 = p1__57255_SHARP_;
+if((G__57259 == null)){
 return null;
 } else {
-return decodeURI(G__56884);
+return decodeURI(G__57259);
 }
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [dir,path], null));
-var dir__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__56881,(0),null);
-var path__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__56881,(1),null);
+var dir__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57256,(0),null);
+var path__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57256,(1),null);
 var dir__$2 = clojure.string.replace(dir__$1,/\/+$/,"");
-var path__$2 = (function (){var G__56885 = path__$1;
-if((G__56885 == null)){
+var path__$2 = (function (){var G__57260 = path__$1;
+if((G__57260 == null)){
 return null;
 } else {
-return clojure.string.replace(G__56885,/^\/+/,"");
+return clojure.string.replace(G__57260,/^\/+/,"");
 }
 })();
 var path__$3 = (((path__$2 == null))?dir__$2:((clojure.string.starts_with_QMARK_(path__$2,dir__$2))?path__$2:[dir__$2,"/",path__$2].join('')
@@ -313,13 +313,13 @@ var this__4502__auto____$1 = this;
 return this__4502__auto____$1.cljs$core$ILookup$_lookup$arity$3(null,k__4503__auto__,null);
 }));
 
-(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4504__auto__,k56906,else__4505__auto__){
+(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4504__auto__,k57271,else__4505__auto__){
 var self__ = this;
 var this__4504__auto____$1 = this;
-var G__56911 = k56906;
-switch (G__56911) {
+var G__57275 = k57271;
+switch (G__57275) {
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k56906,else__4505__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k57271,else__4505__auto__);
 
 }
 }));
@@ -327,10 +327,10 @@ return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k56906,else__
 (frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IKVReduce$_kv_reduce$arity$3 = (function (this__4522__auto__,f__4523__auto__,init__4524__auto__){
 var self__ = this;
 var this__4522__auto____$1 = this;
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__4525__auto__,p__56917){
-var vec__56920 = p__56917;
-var k__4526__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__56920,(0),null);
-var v__4527__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__56920,(1),null);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__4525__auto__,p__57276){
+var vec__57277 = p__57276;
+var k__4526__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57277,(0),null);
+var v__4527__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57277,(1),null);
 return (f__4523__auto__.cljs$core$IFn$_invoke$arity$3 ? f__4523__auto__.cljs$core$IFn$_invoke$arity$3(ret__4525__auto__,k__4526__auto__,v__4527__auto__) : f__4523__auto__.call(null,ret__4525__auto__,k__4526__auto__,v__4527__auto__));
 }),init__4524__auto__,this__4522__auto____$1);
 }));
@@ -344,10 +344,10 @@ return cljs.core.pr_sequential_writer(writer__4518__auto__,cljs.core.pr_writer,"
 return cljs.core.pr_sequential_writer(writer__4518__auto__,pr_pair__4520__auto__,"#frontend.fs.capacitor-fs.Capacitorfs{",", ","}",opts__4519__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,self__.__extmap));
 }));
 
-(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__56905){
+(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__57270){
 var self__ = this;
-var G__56905__$1 = this;
-return (new cljs.core.RecordIter((0),G__56905__$1,0,cljs.core.PersistentVector.EMPTY,(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
+var G__57270__$1 = this;
+return (new cljs.core.RecordIter((0),G__57270__$1,0,cljs.core.PersistentVector.EMPTY,(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
 }));
 
 (frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4500__auto__){
@@ -384,10 +384,10 @@ return h__4360__auto____$1;
 }
 }));
 
-(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this56907,other56908){
+(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this57272,other57273){
 var self__ = this;
-var this56907__$1 = this;
-return (((!((other56908 == null)))) && ((((this56907__$1.constructor === other56908.constructor)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this56907__$1.__extmap,other56908.__extmap)))));
+var this57272__$1 = this;
+return (((!((other57273 == null)))) && ((((this57272__$1.constructor === other57273.constructor)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this57272__$1.__extmap,other57273.__extmap)))));
 }));
 
 (frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4512__auto__,k__4513__auto__){
@@ -400,18 +400,18 @@ return (new frontend.fs.capacitor_fs.Capacitorfs(self__.__meta,cljs.core.not_emp
 }
 }));
 
-(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IAssociative$_contains_key_QMARK_$arity$2 = (function (this__4509__auto__,k56906){
+(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IAssociative$_contains_key_QMARK_$arity$2 = (function (this__4509__auto__,k57271){
 var self__ = this;
 var this__4509__auto____$1 = this;
-return cljs.core.contains_QMARK_(self__.__extmap,k56906);
+return cljs.core.contains_QMARK_(self__.__extmap,k57271);
 }));
 
-(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4510__auto__,k__4511__auto__,G__56905){
+(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4510__auto__,k__4511__auto__,G__57270){
 var self__ = this;
 var this__4510__auto____$1 = this;
-var pred__56928 = cljs.core.keyword_identical_QMARK_;
-var expr__56929 = k__4511__auto__;
-return (new frontend.fs.capacitor_fs.Capacitorfs(self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4511__auto__,G__56905),null));
+var pred__57280 = cljs.core.keyword_identical_QMARK_;
+var expr__57281 = k__4511__auto__;
+return (new frontend.fs.capacitor_fs.Capacitorfs(self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4511__auto__,G__57270),null));
 }));
 
 (frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4515__auto__){
@@ -420,10 +420,10 @@ var this__4515__auto____$1 = this;
 return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,self__.__extmap));
 }));
 
-(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4501__auto__,G__56905){
+(frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4501__auto__,G__57270){
 var self__ = this;
 var this__4501__auto____$1 = this;
-return (new frontend.fs.capacitor_fs.Capacitorfs(G__56905,self__.__extmap,self__.__hash));
+return (new frontend.fs.capacitor_fs.Capacitorfs(G__57270,self__.__extmap,self__.__hash));
 }));
 
 (frontend.fs.capacitor_fs.Capacitorfs.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4507__auto__,entry__4508__auto__){
@@ -468,11 +468,11 @@ return frontend.fs.capacitor_fs.readdir(path_or_handle);
 (frontend.fs.capacitor_fs.Capacitorfs.prototype.frontend$fs$protocol$Fs$rename_BANG_$arity$4 = (function (_this,_repo,old_path,new_path){
 var self__ = this;
 var _this__$1 = this;
-var vec__56945 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__56903_SHARP_){
-return frontend.fs.capacitor_fs.get_file_path("",p1__56903_SHARP_);
+var vec__57294 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__57268_SHARP_){
+return frontend.fs.capacitor_fs.get_file_path("",p1__57268_SHARP_);
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [old_path,new_path], null));
-var old_path__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__56945,(0),null);
-var new_path__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__56945,(1),null);
+var old_path__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57294,(0),null);
+var new_path__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57294,(1),null);
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(module$node_modules$$capacitor$filesystem$dist$plugin_cjs.Filesystem.rename(cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"from","from",1815293044),old_path__$1,new cljs.core.Keyword(null,"to","to",192099007),new_path__$1], null))),(function (_){
 return promesa.protocols._promise(null);
@@ -533,13 +533,13 @@ var self__ = this;
 var _this__$1 = this;
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(frontend.mobile.util.platform(),"android"))?frontend.fs.capacitor_fs.check_permission_android():null),(function (_){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.chain.cljs$core$IFn$_invoke$arity$2(frontend.mobile.util.folder_picker.pickFolder(),(function (p1__56904_SHARP_){
-return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p1__56904_SHARP_,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
-})),(function (p__56956){
-var map__56957 = p__56956;
-var map__56957__$1 = cljs.core.__destructure_map(map__56957);
-var path = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56957__$1,new cljs.core.Keyword(null,"path","path",-188191168));
-var localDocumentsPath = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56957__$1,new cljs.core.Keyword(null,"localDocumentsPath","localDocumentsPath",1185925114));
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.chain.cljs$core$IFn$_invoke$arity$2(frontend.mobile.util.folder_picker.pickFolder(),(function (p1__57269_SHARP_){
+return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p1__57269_SHARP_,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+})),(function (p__57309){
+var map__57310 = p__57309;
+var map__57310__$1 = cljs.core.__destructure_map(map__57310);
+var path = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57310__$1,new cljs.core.Keyword(null,"path","path",-188191168));
+var localDocumentsPath = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57310__$1,new cljs.core.Keyword(null,"localDocumentsPath","localDocumentsPath",1185925114));
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((cljs.core.truth_(frontend.mobile.util.native_ios_QMARK_())?(((!(((frontend.fs.capacitor_fs.local_container_path_QMARK_(path,localDocumentsPath)) || (frontend.fs.capacitor_fs.iCloud_container_path_QMARK_(path))))))?frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("modal","show-instruction","modal/show-instruction",-270524467)], null)):((frontend.fs.capacitor_fs.iCloud_container_path_QMARK_(path))?frontend.mobile.util.sync_icloud_repo(path):null
 )):null),(function (___$1){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.fs.capacitor_fs.readdir(path),(function (files){
@@ -568,12 +568,12 @@ return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.fs.capacit
 }));
 }));
 
-(frontend.fs.capacitor_fs.Capacitorfs.prototype.frontend$fs$protocol$Fs$delete_file_BANG_$arity$5 = (function (_this,repo,dir,path,p__57001){
+(frontend.fs.capacitor_fs.Capacitorfs.prototype.frontend$fs$protocol$Fs$delete_file_BANG_$arity$5 = (function (_this,repo,dir,path,p__57315){
 var self__ = this;
-var map__57002 = p__57001;
-var map__57002__$1 = cljs.core.__destructure_map(map__57002);
-var ok_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57002__$1,new cljs.core.Keyword(null,"ok-handler","ok-handler",-804644089));
-var error_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57002__$1,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776));
+var map__57316 = p__57315;
+var map__57316__$1 = cljs.core.__destructure_map(map__57316);
+var ok_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57316__$1,new cljs.core.Keyword(null,"ok-handler","ok-handler",-804644089));
+var error_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57316__$1,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776));
 var _this__$1 = this;
 var path__$1 = frontend.fs.capacitor_fs.get_file_path(dir,path);
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
@@ -628,12 +628,12 @@ return (new frontend.fs.capacitor_fs.Capacitorfs(null,null,null));
 /**
  * Factory function for frontend.fs.capacitor-fs/Capacitorfs, taking a map of keywords to field values.
  */
-frontend.fs.capacitor_fs.map__GT_Capacitorfs = (function frontend$fs$capacitor_fs$map__GT_Capacitorfs(G__56909){
-var extmap__4542__auto__ = (function (){var G__57003 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$1(G__56909);
-if(cljs.core.record_QMARK_(G__56909)){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__57003);
+frontend.fs.capacitor_fs.map__GT_Capacitorfs = (function frontend$fs$capacitor_fs$map__GT_Capacitorfs(G__57274){
+var extmap__4542__auto__ = (function (){var G__57325 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$1(G__57274);
+if(cljs.core.record_QMARK_(G__57274)){
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__57325);
 } else {
-return G__57003;
+return G__57325;
 }
 })();
 return (new frontend.fs.capacitor_fs.Capacitorfs(null,cljs.core.not_empty(extmap__4542__auto__),null));

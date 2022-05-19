@@ -32,13 +32,13 @@ return files;
 }
 });
 frontend.handler.common.get_config = (function frontend$handler$common$get_config(repo_url){
-var G__94116 = repo_url;
-var G__94117 = frontend.config.get_config_path.cljs$core$IFn$_invoke$arity$0();
-return (frontend.db.get_file.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_file.cljs$core$IFn$_invoke$arity$2(G__94116,G__94117) : frontend.db.get_file.call(null,G__94116,G__94117));
+var G__62608 = repo_url;
+var G__62609 = frontend.config.get_config_path.cljs$core$IFn$_invoke$arity$0();
+return (frontend.db.get_file.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_file.cljs$core$IFn$_invoke$arity$2(G__62608,G__62609) : frontend.db.get_file.call(null,G__62608,G__62609));
 });
 frontend.handler.common.safe_read_string = (function frontend$handler$common$safe_read_string(content,error_message_or_handler){
 try{return cljs.reader.read_string.cljs$core$IFn$_invoke$arity$1(content);
-}catch (e94124){var e = e94124;
+}catch (e62616){var e = e62616;
 console.error(e);
 
 if(cljs.core.fn_QMARK_(error_message_or_handler)){
@@ -76,7 +76,7 @@ return null;
 });
 frontend.handler.common.read_metadata_BANG_ = (function frontend$handler$common$read_metadata_BANG_(content){
 try{return cljs.reader.read_string.cljs$core$IFn$_invoke$arity$1(content);
-}catch (e94125){var e = e94125;
+}catch (e62632){var e = e62632;
 lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.handler.common",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("parse","metadata-failed","parse/metadata-failed",-1292284003),e,new cljs.core.Keyword(null,"line","line",212345235),88], null)),null);
 
 return cljs.core.PersistentArrayMap.EMPTY;
@@ -85,19 +85,19 @@ frontend.handler.common.get_page_default_properties = (function frontend$handler
 return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"title","title",636505583),page_name], null);
 });
 frontend.handler.common.fix_pages_timestamps = (function frontend$handler$common$fix_pages_timestamps(pages){
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__94127){
-var map__94128 = p__94127;
-var map__94128__$1 = cljs.core.__destructure_map(map__94128);
-var p = map__94128__$1;
-var created_at = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__94128__$1,new cljs.core.Keyword("block","created-at","block/created-at",1440015));
-var updated_at = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__94128__$1,new cljs.core.Keyword("block","updated-at","block/updated-at",-1516550551));
-var journal_day = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__94128__$1,new cljs.core.Keyword("block","journal-day","block/journal-day",-145748366));
-var G__94131 = p;
-var G__94131__$1 = (((created_at == null))?cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__94131,new cljs.core.Keyword("block","created-at","block/created-at",1440015),(cljs.core.truth_(journal_day)?frontend.date.journal_day__GT_ts(journal_day):frontend.util.time_ms())):G__94131);
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__62638){
+var map__62639 = p__62638;
+var map__62639__$1 = cljs.core.__destructure_map(map__62639);
+var p = map__62639__$1;
+var created_at = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62639__$1,new cljs.core.Keyword("block","created-at","block/created-at",1440015));
+var updated_at = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62639__$1,new cljs.core.Keyword("block","updated-at","block/updated-at",-1516550551));
+var journal_day = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62639__$1,new cljs.core.Keyword("block","journal-day","block/journal-day",-145748366));
+var G__62647 = p;
+var G__62647__$1 = (((created_at == null))?cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__62647,new cljs.core.Keyword("block","created-at","block/created-at",1440015),(cljs.core.truth_(journal_day)?frontend.date.journal_day__GT_ts(journal_day):frontend.util.time_ms())):G__62647);
 if((updated_at == null)){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__94131__$1,new cljs.core.Keyword("block","updated-at","block/updated-at",-1516550551),(cljs.core.truth_(journal_day)?frontend.date.journal_day__GT_ts(journal_day):frontend.util.time_ms()));
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__62647__$1,new cljs.core.Keyword("block","updated-at","block/updated-at",-1516550551),(cljs.core.truth_(journal_day)?frontend.date.journal_day__GT_ts(journal_day):frontend.util.time_ms()));
 } else {
-return G__94131__$1;
+return G__62647__$1;
 }
 }),pages);
 });
@@ -124,7 +124,7 @@ return null;
  */
 frontend.handler.common.parse_config = (function frontend$handler$common$parse_config(content){
 try{return borkdude.rewrite_edn.parse_string(content);
-}catch (e94132){var e = e94132;
+}catch (e62682){var e = e62682;
 lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.handler.common",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("parse","config-failed","parse/config-failed",1038972807),e,new cljs.core.Keyword(null,"line","line",212345235),139], null)),null);
 
 frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("backup","broken-config","backup/broken-config",1040905879),frontend.state.get_current_repo(),content], null));

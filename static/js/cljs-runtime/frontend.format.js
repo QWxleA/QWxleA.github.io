@@ -8,34 +8,10 @@ if((typeof frontend !== 'undefined') && (typeof frontend.format !== 'undefined')
 } else {
 frontend.format.adoc_record = frontend.format.adoc.__GT_AdocMode();
 }
-frontend.format.normalize = (function frontend$format$normalize(format){
-var G__73415 = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(format);
-var G__73415__$1 = (((G__73415 instanceof cljs.core.Keyword))?G__73415.fqn:null);
-switch (G__73415__$1) {
-case "md":
-return new cljs.core.Keyword(null,"markdown","markdown",1227225089);
-
-break;
-case "asciidoc":
-return new cljs.core.Keyword(null,"adoc","adoc",-1288345346);
-
-break;
-default:
-return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(format);
-
-}
-});
-frontend.format.get_format = (function frontend$format$get_format(file){
-if(cljs.core.truth_(file)){
-return frontend.format.normalize(cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(clojure.string.lower_case(cljs.core.last(clojure.string.split.cljs$core$IFn$_invoke$arity$2(file,/\./)))));
-} else {
-return null;
-}
-});
 frontend.format.get_format_record = (function frontend$format$get_format_record(format){
-var G__73416 = frontend.format.normalize(format);
-var G__73416__$1 = (((G__73416 instanceof cljs.core.Keyword))?G__73416.fqn:null);
-switch (G__73416__$1) {
+var G__63652 = logseq.graph_parser.util.normalize_format(format);
+var G__63652__$1 = (((G__63652 instanceof cljs.core.Keyword))?G__63652.fqn:null);
+switch (G__63652__$1) {
 case "org":
 return frontend.format.mldoc_record;
 
@@ -54,8 +30,8 @@ return null;
 }
 });
 frontend.format.get_default_config = (function frontend$format$get_default_config(var_args){
-var G__73418 = arguments.length;
-switch (G__73418) {
+var G__63654 = arguments.length;
+switch (G__63654) {
 case 1:
 return frontend.format.get_default_config.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -81,8 +57,8 @@ return logseq.graph_parser.mldoc.default_config.cljs$core$IFn$_invoke$arity$2(fo
 (frontend.format.get_default_config.cljs$lang$maxFixedArity = 2);
 
 frontend.format.to_html = (function frontend$format$to_html(var_args){
-var G__73422 = arguments.length;
-switch (G__73422) {
+var G__63656 = arguments.length;
+switch (G__63656) {
 case 2:
 return frontend.format.to_html.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -119,8 +95,8 @@ return content;
 (frontend.format.to_html.cljs$lang$maxFixedArity = 3);
 
 frontend.format.to_edn = (function frontend$format$to_edn(var_args){
-var G__73424 = arguments.length;
-switch (G__73424) {
+var G__63658 = arguments.length;
+switch (G__63658) {
 case 2:
 return frontend.format.to_edn.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 

@@ -4489,7 +4489,7 @@ div[data-refs-self*='"card"'] {
 @media (min-width: 640px) {
 .block-content-wrapper {
     width: calc(100% - 33px);
-    overflow-x: auto
+    overflow-x: visible
 }
   }
 .block-content {
@@ -10321,6 +10321,10 @@ html.is-mobile .ui__modal{
 .shadow-xl{
 	--tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.outline-none{
+	outline: 2px solid transparent;
+	outline-offset: 2px;
 }
 .blur{
 	--tw-blur: blur(8px);

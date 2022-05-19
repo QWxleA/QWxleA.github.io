@@ -1,10 +1,10 @@
 goog.provide('frontend.handler.history');
-frontend.handler.history.restore_cursor_BANG_ = (function frontend$handler$history$restore_cursor_BANG_(p__63065){
-var map__63066 = p__63065;
-var map__63066__$1 = cljs.core.__destructure_map(map__63066);
-var last_edit_block = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63066__$1,new cljs.core.Keyword(null,"last-edit-block","last-edit-block",-940369316));
-var container = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63066__$1,new cljs.core.Keyword(null,"container","container",-1736937707));
-var pos = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63066__$1,new cljs.core.Keyword(null,"pos","pos",-864607220));
+frontend.handler.history.restore_cursor_BANG_ = (function frontend$handler$history$restore_cursor_BANG_(p__78074){
+var map__78075 = p__78074;
+var map__78075__$1 = cljs.core.__destructure_map(map__78075);
+var last_edit_block = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__78075__$1,new cljs.core.Keyword(null,"last-edit-block","last-edit-block",-940369316));
+var container = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__78075__$1,new cljs.core.Keyword(null,"container","container",-1736937707));
+var pos = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__78075__$1,new cljs.core.Keyword(null,"pos","pos",-864607220));
 frontend.handler.ui.re_render_root_BANG_.cljs$core$IFn$_invoke$arity$0();
 
 if(cljs.core.truth_((function (){var and__4251__auto__ = container;
@@ -20,8 +20,8 @@ var container__$1 = temp__5720__auto__;
 var temp__5720__auto____$1 = new cljs.core.Keyword("block","uuid","block/uuid",-1991494552).cljs$core$IFn$_invoke$arity$1(last_edit_block);
 if(cljs.core.truth_(temp__5720__auto____$1)){
 var block_uuid = temp__5720__auto____$1;
-var temp__5720__auto____$2 = (function (){var G__63068 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","uuid","block/uuid",-1991494552),block_uuid], null);
-return (frontend.db.pull.cljs$core$IFn$_invoke$arity$1 ? frontend.db.pull.cljs$core$IFn$_invoke$arity$1(G__63068) : frontend.db.pull.call(null,G__63068));
+var temp__5720__auto____$2 = (function (){var G__78076 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","uuid","block/uuid",-1991494552),block_uuid], null);
+return (frontend.db.pull.cljs$core$IFn$_invoke$arity$1 ? frontend.db.pull.cljs$core$IFn$_invoke$arity$1(G__78076) : frontend.db.pull.call(null,G__78076));
 })();
 if(cljs.core.truth_(temp__5720__auto____$2)){
 var block = temp__5720__auto____$2;
@@ -46,10 +46,10 @@ frontend.state.set_editor_op_BANG_(new cljs.core.Keyword(null,"undo","undo",-181
 
 frontend.handler.editor.save_current_block_BANG_.cljs$core$IFn$_invoke$arity$0();
 
-var map__63069_63071 = frontend.modules.editor.undo_redo.undo();
-var map__63069_63072__$1 = cljs.core.__destructure_map(map__63069_63071);
-var editor_cursor_63073 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63069_63072__$1,new cljs.core.Keyword(null,"editor-cursor","editor-cursor",-1794173800));
-frontend.handler.history.restore_cursor_BANG_(editor_cursor_63073);
+var map__78077_78079 = frontend.modules.editor.undo_redo.undo();
+var map__78077_78080__$1 = cljs.core.__destructure_map(map__78077_78079);
+var editor_cursor_78081 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__78077_78080__$1,new cljs.core.Keyword(null,"editor-cursor","editor-cursor",-1794173800));
+frontend.handler.history.restore_cursor_BANG_(editor_cursor_78081);
 
 return frontend.state.set_editor_op_BANG_(null);
 });
@@ -58,10 +58,10 @@ frontend.util.stop(e);
 
 frontend.state.set_editor_op_BANG_(new cljs.core.Keyword(null,"redo","redo",501190664));
 
-var map__63070_63074 = frontend.modules.editor.undo_redo.redo();
-var map__63070_63075__$1 = cljs.core.__destructure_map(map__63070_63074);
-var editor_cursor_63076 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63070_63075__$1,new cljs.core.Keyword(null,"editor-cursor","editor-cursor",-1794173800));
-frontend.handler.history.restore_cursor_BANG_(editor_cursor_63076);
+var map__78078_78082 = frontend.modules.editor.undo_redo.redo();
+var map__78078_78083__$1 = cljs.core.__destructure_map(map__78078_78082);
+var editor_cursor_78084 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__78078_78083__$1,new cljs.core.Keyword(null,"editor-cursor","editor-cursor",-1794173800));
+frontend.handler.history.restore_cursor_BANG_(editor_cursor_78084);
 
 return frontend.state.set_editor_op_BANG_(null);
 });

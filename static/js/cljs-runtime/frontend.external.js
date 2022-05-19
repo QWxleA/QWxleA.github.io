@@ -4,9 +4,9 @@ if((typeof frontend !== 'undefined') && (typeof frontend.external !== 'undefined
 frontend.external.roam_record = frontend.external.roam.__GT_Roam();
 }
 frontend.external.get_record = (function frontend$external$get_record(type){
-var G__108540 = type;
-var G__108540__$1 = (((G__108540 instanceof cljs.core.Keyword))?G__108540.fqn:null);
-switch (G__108540__$1) {
+var G__75427 = type;
+var G__75427__$1 = (((G__75427 instanceof cljs.core.Keyword))?G__75427.fqn:null);
+switch (G__75427__$1) {
 case "roam":
 return frontend.external.roam_record;
 

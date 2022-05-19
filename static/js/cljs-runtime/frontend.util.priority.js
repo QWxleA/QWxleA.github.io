@@ -1,9 +1,9 @@
 goog.provide('frontend.util.priority');
 frontend.util.priority.cycle_priority_state = (function frontend$util$priority$cycle_priority_state(content){
 var priority_reg = /\[#([ABC]{1})\]\s{1}/;
-var priority = cljs.core.last(logseq.graph_parser.util.safe_re_find(priority_reg,content));
-var next_priority = (function (){var G__95866 = priority;
-switch (G__95866) {
+var priority = cljs.core.last(frontend.util.safe_re_find(priority_reg,content));
+var next_priority = (function (){var G__63685 = priority;
+switch (G__63685) {
 case "A":
 return "B";
 
@@ -30,26 +30,26 @@ return and__4251__auto__;
 });
 frontend.util.priority.add_or_update_priority = (function frontend$util$priority$add_or_update_priority(content,format,priority){
 var priority_pattern = /(\[#[ABC]\])?\s?/;
-var vec__95867 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"org","org",1495985),format))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/\*+\s/,/\n\*+\s/], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/#+\s/,/\n#+\s/], null));
-var re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95867,(0),null);
-var new_line_re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95867,(1),null);
+var vec__63687 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"org","org",1495985),format))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/\*+\s/,/\n\*+\s/], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/#+\s/,/\n#+\s/], null));
+var re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63687,(0),null);
+var new_line_re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63687,(1),null);
 var skip_hash_pos = (function (){var temp__5718__auto__ = cljs.core.seq(frontend.util.re_pos(new_line_re_pattern,content));
 if(temp__5718__auto__){
 var matches = temp__5718__auto__;
-var vec__95876 = cljs.core.last(matches);
-var start_pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95876,(0),null);
-var content__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95876,(1),null);
+var vec__63690 = cljs.core.last(matches);
+var start_pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63690,(0),null);
+var content__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63690,(1),null);
 return (start_pos + cljs.core.count(content__$1));
 } else {
-return cljs.core.count(logseq.graph_parser.util.safe_re_find(re_pattern,content));
+return cljs.core.count(frontend.util.safe_re_find(re_pattern,content));
 }
 })();
 var skip_marker_pos = (function (){var temp__5718__auto__ = cljs.core.seq(frontend.util.re_pos(frontend.util.marker.bare_marker_pattern,cljs.core.subs.cljs$core$IFn$_invoke$arity$2(content,skip_hash_pos)));
 if(temp__5718__auto__){
 var matches = temp__5718__auto__;
-var vec__95879 = cljs.core.last(matches);
-var start_pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95879,(0),null);
-var content__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95879,(1),null);
+var vec__63693 = cljs.core.last(matches);
+var start_pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63693,(0),null);
+var content__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63693,(1),null);
 return (start_pos + cljs.core.count(content__$1));
 } else {
 return (0);

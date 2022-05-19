@@ -4,26 +4,26 @@ return cljs.core.re_pattern(["^",((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(
 });
 frontend.util.marker.bare_marker_pattern = /(NOW|LATER|TODO|DOING|DONE|WAITING|WAIT|CANCELED|CANCELLED|STARTED|IN-PROGRESS){1}\s+/;
 frontend.util.marker.add_or_update_marker = (function frontend$util$marker$add_or_update_marker(content,format,marker){
-var vec__95809 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"org","org",1495985),format))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/\*+\s/,/\n\*+\s/], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/#+\s/,/\n#+\s/], null));
-var re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95809,(0),null);
-var new_line_re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95809,(1),null);
+var vec__63659 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"org","org",1495985),format))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/\*+\s/,/\n\*+\s/], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/#+\s/,/\n#+\s/], null));
+var re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63659,(0),null);
+var new_line_re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63659,(1),null);
 var pos = (function (){var temp__5718__auto__ = cljs.core.seq(frontend.util.re_pos(new_line_re_pattern,content));
 if(temp__5718__auto__){
 var matches = temp__5718__auto__;
-var vec__95813 = cljs.core.last(matches);
-var start_pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95813,(0),null);
-var content__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__95813,(1),null);
+var vec__63662 = cljs.core.last(matches);
+var start_pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63662,(0),null);
+var content__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63662,(1),null);
 return (start_pos + cljs.core.count(content__$1));
 } else {
-return cljs.core.count(logseq.graph_parser.util.safe_re_find(re_pattern,content));
+return cljs.core.count(frontend.util.safe_re_find(re_pattern,content));
 }
 })();
 var new_content = [cljs.core.subs.cljs$core$IFn$_invoke$arity$3(content,(0),pos),clojure.string.replace_first(cljs.core.subs.cljs$core$IFn$_invoke$arity$2(content,pos),frontend.util.marker.marker_pattern(format),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(marker),((cljs.core.empty_QMARK_(marker))?"":" ")].join(''))].join('');
 return new_content;
 });
 frontend.util.marker.cycle_marker_state = (function frontend$util$marker$cycle_marker_state(marker,preferred_workflow){
-var G__95822 = marker;
-switch (G__95822) {
+var G__63668 = marker;
+switch (G__63668) {
 case "TODO":
 return "DOING";
 
@@ -71,7 +71,7 @@ return frontend.util.marker.cycle_marker_state((function (){var or__4253__auto__
 if(cljs.core.truth_(or__4253__auto____$1)){
 return or__4253__auto____$1;
 } else {
-return cljs.core.last(logseq.graph_parser.util.safe_re_find(frontend.util.marker.marker_pattern(format),content__$1));
+return cljs.core.last(frontend.util.safe_re_find(frontend.util.marker.marker_pattern(format),content__$1));
 }
 })(),preferred_workflow);
 }

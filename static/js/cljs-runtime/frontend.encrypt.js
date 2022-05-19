@@ -65,8 +65,8 @@ frontend.encrypt.get_secret_key = (function frontend$encrypt$get_secret_key(repo
 return cljs.core.first(frontend.encrypt.get_key_pair(repo_url));
 });
 frontend.encrypt.encrypt = (function frontend$encrypt$encrypt(var_args){
-var G__56833 = arguments.length;
-switch (G__56833) {
+var G__57181 = arguments.length;
+switch (G__57181) {
 case 1:
 return frontend.encrypt.encrypt.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -111,8 +111,8 @@ return promesa.core.resolved(content);
 (frontend.encrypt.encrypt.cljs$lang$maxFixedArity = 2);
 
 frontend.encrypt.decrypt = (function frontend$encrypt$decrypt(var_args){
-var G__56835 = arguments.length;
-switch (G__56835) {
+var G__57183 = arguments.length;
+switch (G__57183) {
 case 1:
 return frontend.encrypt.decrypt.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -172,8 +172,8 @@ return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((((typeof frontend !== 'u
 return frontend.extensions.age_encryption.encrypt_with_user_passphrase;
 }),cljs.core.with_meta(new cljs.core.Symbol("frontend.extensions.age-encryption","encrypt-with-user-passphrase","frontend.extensions.age-encryption/encrypt-with-user-passphrase",390908103,null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("cljs.analyzer","no-resolve","cljs.analyzer/no-resolve",-1872351017),true], null)),null)):null),(function (lazy_encrypt_with_user_passphrase){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(logseq.graph_parser.utf8.encode(content),(function (content__$1){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var fexpr__56836 = cljs.core.deref(lazy_encrypt_with_user_passphrase);
-return (fexpr__56836.cljs$core$IFn$_invoke$arity$3 ? fexpr__56836.cljs$core$IFn$_invoke$arity$3(passphrase,content__$1,true) : fexpr__56836.call(null,passphrase,content__$1,true));
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var fexpr__57184 = cljs.core.deref(lazy_encrypt_with_user_passphrase);
+return (fexpr__57184.cljs$core$IFn$_invoke$arity$3 ? fexpr__57184.cljs$core$IFn$_invoke$arity$3(passphrase,content__$1,true) : fexpr__57184.call(null,passphrase,content__$1,true));
 })(),(function (encrypted){
 return promesa.protocols._promise(logseq.graph_parser.utf8.decode(encrypted));
 }));

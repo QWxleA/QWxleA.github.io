@@ -13,9 +13,9 @@ return result.value;
 });
 frontend.mobile.record.set_recording_state = (function frontend$mobile$record$set_recording_state(){
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.then.cljs$core$IFn$_invoke$arity$2(module$node_modules$capacitor_voice_recorder$dist$plugin_cjs.VoiceRecorder.getCurrentStatus(),(function (result){
-var map__69064 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(result,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
-var map__69064__$1 = cljs.core.__destructure_map(map__69064);
-var status = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__69064__$1,new cljs.core.Keyword(null,"status","status",-1997798413));
+var map__80310 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(result,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+var map__80310__$1 = cljs.core.__destructure_map(map__80310);
+var status = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__80310__$1,new cljs.core.Keyword(null,"status","status",-1997798413));
 return frontend.state.set_state_BANG_(new cljs.core.Keyword("editor","record-status","editor/record-status",-122164557),status);
 })),(function (error){
 return console.error(error);
@@ -80,11 +80,11 @@ return promesa.protocols._promise((cljs.core.truth_(edit_block)?frontend.state.a
 frontend.mobile.record.stop_recording = (function frontend$mobile$record$stop_recording(){
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.then.cljs$core$IFn$_invoke$arity$2(module$node_modules$capacitor_voice_recorder$dist$plugin_cjs.VoiceRecorder.stopRecording(),(function (result){
 var value = result.value;
-var map__69074 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(value,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
-var map__69074__$1 = cljs.core.__destructure_map(map__69074);
-var _msDuration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__69074__$1,new cljs.core.Keyword(null,"_msDuration","_msDuration",-2088496118));
-var recordDataBase64 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__69074__$1,new cljs.core.Keyword(null,"recordDataBase64","recordDataBase64",-1094381034));
-var _mimeType = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__69074__$1,new cljs.core.Keyword(null,"_mimeType","_mimeType",1358086728));
+var map__80311 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(value,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+var map__80311__$1 = cljs.core.__destructure_map(map__80311);
+var _msDuration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__80311__$1,new cljs.core.Keyword(null,"_msDuration","_msDuration",-2088496118));
+var recordDataBase64 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__80311__$1,new cljs.core.Keyword(null,"recordDataBase64","recordDataBase64",-1094381034));
+var _mimeType = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__80311__$1,new cljs.core.Keyword(null,"_mimeType","_mimeType",1358086728));
 frontend.mobile.record.set_recording_state();
 
 if(typeof recordDataBase64 === 'string'){

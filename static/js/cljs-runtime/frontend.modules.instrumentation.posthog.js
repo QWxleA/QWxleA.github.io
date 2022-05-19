@@ -33,13 +33,13 @@ return module$node_modules$posthog_js$dist$module.opt_in_capturing();
 });
 frontend.modules.instrumentation.posthog.capture = (function frontend$modules$instrumentation$posthog$capture(id,data){
 try{return module$node_modules$posthog_js$dist$module.capture(cljs.core.str.cljs$core$IFn$_invoke$arity$1(id),cljs_bean.core.__GT_js(data));
-}catch (e101067){if((e101067 instanceof Error)){
-var e = e101067;
+}catch (e73419){if((e73419 instanceof Error)){
+var e = e73419;
 console.error(e);
 
 return null;
 } else {
-throw e101067;
+throw e73419;
 
 }
 }});

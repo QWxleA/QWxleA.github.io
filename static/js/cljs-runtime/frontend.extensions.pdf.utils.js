@@ -27,34 +27,34 @@ return cljs_bean.core.__GT_clj(module$frontend$extensions$pdf$utils.optimizeClie
 return null;
 }
 });
-frontend.extensions.pdf.utils.vw_to_scaled_pos = (function frontend$extensions$pdf$utils$vw_to_scaled_pos(viewer,p__62870){
-var map__62872 = p__62870;
-var map__62872__$1 = cljs.core.__destructure_map(map__62872);
-var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62872__$1,new cljs.core.Keyword(null,"page","page",849072397));
-var bounding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62872__$1,new cljs.core.Keyword(null,"bounding","bounding",-2125178263));
-var rects = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62872__$1,new cljs.core.Keyword(null,"rects","rects",1714526167));
+frontend.extensions.pdf.utils.vw_to_scaled_pos = (function frontend$extensions$pdf$utils$vw_to_scaled_pos(viewer,p__64178){
+var map__64179 = p__64178;
+var map__64179__$1 = cljs.core.__destructure_map(map__64179);
+var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__64179__$1,new cljs.core.Keyword(null,"page","page",849072397));
+var bounding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__64179__$1,new cljs.core.Keyword(null,"bounding","bounding",-2125178263));
+var rects = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__64179__$1,new cljs.core.Keyword(null,"rects","rects",1714526167));
 var temp__5720__auto__ = viewer.getPageView((page - (1))).viewport;
 if(cljs.core.truth_(temp__5720__auto__)){
 var viewport = temp__5720__auto__;
-return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"bounding","bounding",-2125178263),frontend.extensions.pdf.utils.viewport_to_scaled(bounding,viewport),new cljs.core.Keyword(null,"rects","rects",1714526167),(function (){var iter__4652__auto__ = (function frontend$extensions$pdf$utils$vw_to_scaled_pos_$_iter__62895(s__62896){
+return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"bounding","bounding",-2125178263),frontend.extensions.pdf.utils.viewport_to_scaled(bounding,viewport),new cljs.core.Keyword(null,"rects","rects",1714526167),(function (){var iter__4652__auto__ = (function frontend$extensions$pdf$utils$vw_to_scaled_pos_$_iter__64184(s__64185){
 return (new cljs.core.LazySeq(null,(function (){
-var s__62896__$1 = s__62896;
+var s__64185__$1 = s__64185;
 while(true){
-var temp__5720__auto____$1 = cljs.core.seq(s__62896__$1);
+var temp__5720__auto____$1 = cljs.core.seq(s__64185__$1);
 if(temp__5720__auto____$1){
-var s__62896__$2 = temp__5720__auto____$1;
-if(cljs.core.chunked_seq_QMARK_(s__62896__$2)){
-var c__4650__auto__ = cljs.core.chunk_first(s__62896__$2);
+var s__64185__$2 = temp__5720__auto____$1;
+if(cljs.core.chunked_seq_QMARK_(s__64185__$2)){
+var c__4650__auto__ = cljs.core.chunk_first(s__64185__$2);
 var size__4651__auto__ = cljs.core.count(c__4650__auto__);
-var b__62899 = cljs.core.chunk_buffer(size__4651__auto__);
-if((function (){var i__62898 = (0);
+var b__64187 = cljs.core.chunk_buffer(size__4651__auto__);
+if((function (){var i__64186 = (0);
 while(true){
-if((i__62898 < size__4651__auto__)){
-var rect = cljs.core._nth(c__4650__auto__,i__62898);
-cljs.core.chunk_append(b__62899,frontend.extensions.pdf.utils.viewport_to_scaled(rect,viewport));
+if((i__64186 < size__4651__auto__)){
+var rect = cljs.core._nth(c__4650__auto__,i__64186);
+cljs.core.chunk_append(b__64187,frontend.extensions.pdf.utils.viewport_to_scaled(rect,viewport));
 
-var G__62997 = (i__62898 + (1));
-i__62898 = G__62997;
+var G__64268 = (i__64186 + (1));
+i__64186 = G__64268;
 continue;
 } else {
 return true;
@@ -62,13 +62,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__62899),frontend$extensions$pdf$utils$vw_to_scaled_pos_$_iter__62895(cljs.core.chunk_rest(s__62896__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__64187),frontend$extensions$pdf$utils$vw_to_scaled_pos_$_iter__64184(cljs.core.chunk_rest(s__64185__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__62899),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__64187),null);
 }
 } else {
-var rect = cljs.core.first(s__62896__$2);
-return cljs.core.cons(frontend.extensions.pdf.utils.viewport_to_scaled(rect,viewport),frontend$extensions$pdf$utils$vw_to_scaled_pos_$_iter__62895(cljs.core.rest(s__62896__$2)));
+var rect = cljs.core.first(s__64185__$2);
+return cljs.core.cons(frontend.extensions.pdf.utils.viewport_to_scaled(rect,viewport),frontend$extensions$pdf$utils$vw_to_scaled_pos_$_iter__64184(cljs.core.rest(s__64185__$2)));
 }
 } else {
 return null;
@@ -83,34 +83,34 @@ return iter__4652__auto__(rects);
 return null;
 }
 });
-frontend.extensions.pdf.utils.scaled_to_vw_pos = (function frontend$extensions$pdf$utils$scaled_to_vw_pos(viewer,p__62906){
-var map__62907 = p__62906;
-var map__62907__$1 = cljs.core.__destructure_map(map__62907);
-var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62907__$1,new cljs.core.Keyword(null,"page","page",849072397));
-var bounding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62907__$1,new cljs.core.Keyword(null,"bounding","bounding",-2125178263));
-var rects = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62907__$1,new cljs.core.Keyword(null,"rects","rects",1714526167));
+frontend.extensions.pdf.utils.scaled_to_vw_pos = (function frontend$extensions$pdf$utils$scaled_to_vw_pos(viewer,p__64200){
+var map__64203 = p__64200;
+var map__64203__$1 = cljs.core.__destructure_map(map__64203);
+var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__64203__$1,new cljs.core.Keyword(null,"page","page",849072397));
+var bounding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__64203__$1,new cljs.core.Keyword(null,"bounding","bounding",-2125178263));
+var rects = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__64203__$1,new cljs.core.Keyword(null,"rects","rects",1714526167));
 var temp__5720__auto__ = viewer.getPageView((page - (1))).viewport;
 if(cljs.core.truth_(temp__5720__auto__)){
 var viewport = temp__5720__auto__;
-return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"bounding","bounding",-2125178263),frontend.extensions.pdf.utils.scaled_to_viewport(bounding,viewport),new cljs.core.Keyword(null,"rects","rects",1714526167),(function (){var iter__4652__auto__ = (function frontend$extensions$pdf$utils$scaled_to_vw_pos_$_iter__62908(s__62909){
+return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"bounding","bounding",-2125178263),frontend.extensions.pdf.utils.scaled_to_viewport(bounding,viewport),new cljs.core.Keyword(null,"rects","rects",1714526167),(function (){var iter__4652__auto__ = (function frontend$extensions$pdf$utils$scaled_to_vw_pos_$_iter__64216(s__64217){
 return (new cljs.core.LazySeq(null,(function (){
-var s__62909__$1 = s__62909;
+var s__64217__$1 = s__64217;
 while(true){
-var temp__5720__auto____$1 = cljs.core.seq(s__62909__$1);
+var temp__5720__auto____$1 = cljs.core.seq(s__64217__$1);
 if(temp__5720__auto____$1){
-var s__62909__$2 = temp__5720__auto____$1;
-if(cljs.core.chunked_seq_QMARK_(s__62909__$2)){
-var c__4650__auto__ = cljs.core.chunk_first(s__62909__$2);
+var s__64217__$2 = temp__5720__auto____$1;
+if(cljs.core.chunked_seq_QMARK_(s__64217__$2)){
+var c__4650__auto__ = cljs.core.chunk_first(s__64217__$2);
 var size__4651__auto__ = cljs.core.count(c__4650__auto__);
-var b__62911 = cljs.core.chunk_buffer(size__4651__auto__);
-if((function (){var i__62910 = (0);
+var b__64219 = cljs.core.chunk_buffer(size__4651__auto__);
+if((function (){var i__64218 = (0);
 while(true){
-if((i__62910 < size__4651__auto__)){
-var rect = cljs.core._nth(c__4650__auto__,i__62910);
-cljs.core.chunk_append(b__62911,frontend.extensions.pdf.utils.scaled_to_viewport(rect,viewport));
+if((i__64218 < size__4651__auto__)){
+var rect = cljs.core._nth(c__4650__auto__,i__64218);
+cljs.core.chunk_append(b__64219,frontend.extensions.pdf.utils.scaled_to_viewport(rect,viewport));
 
-var G__63023 = (i__62910 + (1));
-i__62910 = G__63023;
+var G__64269 = (i__64218 + (1));
+i__64218 = G__64269;
 continue;
 } else {
 return true;
@@ -118,13 +118,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__62911),frontend$extensions$pdf$utils$scaled_to_vw_pos_$_iter__62908(cljs.core.chunk_rest(s__62909__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__64219),frontend$extensions$pdf$utils$scaled_to_vw_pos_$_iter__64216(cljs.core.chunk_rest(s__64217__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__62911),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__64219),null);
 }
 } else {
-var rect = cljs.core.first(s__62909__$2);
-return cljs.core.cons(frontend.extensions.pdf.utils.scaled_to_viewport(rect,viewport),frontend$extensions$pdf$utils$scaled_to_vw_pos_$_iter__62908(cljs.core.rest(s__62909__$2)));
+var rect = cljs.core.first(s__64217__$2);
+return cljs.core.cons(frontend.extensions.pdf.utils.scaled_to_viewport(rect,viewport),frontend$extensions$pdf$utils$scaled_to_vw_pos_$_iter__64216(cljs.core.rest(s__64217__$2)));
 }
 } else {
 return null;
@@ -236,8 +236,8 @@ return and__4251__auto__;
 })();
 if(cljs.core.truth_(temp__5720__auto____$1)){
 var info = temp__5720__auto____$1;
-var G__62923 = cljs_bean.core.__GT_clj(info);
-return (resolve.cljs$core$IFn$_invoke$arity$1 ? resolve.cljs$core$IFn$_invoke$arity$1(G__62923) : resolve.call(null,G__62923));
+var G__64245 = cljs_bean.core.__GT_clj(info);
+return (resolve.cljs$core$IFn$_invoke$arity$1 ? resolve.cljs$core$IFn$_invoke$arity$1(G__64245) : resolve.call(null,G__64245));
 } else {
 return null;
 }
@@ -259,11 +259,11 @@ return (viewer.currentScaleValue = "auto");
 }));
 frontend.extensions.pdf.utils.fix_nested_js = (function frontend$extensions$pdf$utils$fix_nested_js(its){
 if(cljs.core.sequential_QMARK_(its)){
-return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__62927_SHARP_){
-if(cljs.core.map_QMARK_(p1__62927_SHARP_)){
-return p1__62927_SHARP_;
+return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__64247_SHARP_){
+if(cljs.core.map_QMARK_(p1__64247_SHARP_)){
+return p1__64247_SHARP_;
 } else {
-return cljs_bean.core.__GT_clj(p1__62927_SHARP_);
+return cljs_bean.core.__GT_clj(p1__64247_SHARP_);
 }
 }),its);
 } else {
@@ -322,25 +322,25 @@ frontend.extensions.pdf.utils.get_range_rects_LT__page_cnt = (function frontend$
 var rge_rects = cljs_bean.core.__GT_clj(r.getClientRects());
 var cnt_offset = page_cnt.getBoundingClientRect();
 if(cljs.core.seq(rge_rects)){
-var rects = (function (){var iter__4652__auto__ = (function frontend$extensions$pdf$utils$get_range_rects_LT__page_cnt_$_iter__62953(s__62954){
+var rects = (function (){var iter__4652__auto__ = (function frontend$extensions$pdf$utils$get_range_rects_LT__page_cnt_$_iter__64258(s__64259){
 return (new cljs.core.LazySeq(null,(function (){
-var s__62954__$1 = s__62954;
+var s__64259__$1 = s__64259;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__62954__$1);
+var temp__5720__auto__ = cljs.core.seq(s__64259__$1);
 if(temp__5720__auto__){
-var s__62954__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__62954__$2)){
-var c__4650__auto__ = cljs.core.chunk_first(s__62954__$2);
+var s__64259__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__64259__$2)){
+var c__4650__auto__ = cljs.core.chunk_first(s__64259__$2);
 var size__4651__auto__ = cljs.core.count(c__4650__auto__);
-var b__62956 = cljs.core.chunk_buffer(size__4651__auto__);
-if((function (){var i__62955 = (0);
+var b__64261 = cljs.core.chunk_buffer(size__4651__auto__);
+if((function (){var i__64260 = (0);
 while(true){
-if((i__62955 < size__4651__auto__)){
-var rect = cljs.core._nth(c__4650__auto__,i__62955);
-cljs.core.chunk_append(b__62956,new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"top","top",-1856271961),((rect.top + page_cnt.scrollTop) - cnt_offset.top),new cljs.core.Keyword(null,"left","left",-399115937),((rect.left + page_cnt.scrollLeft) - cnt_offset.left),new cljs.core.Keyword(null,"width","width",-384071477),rect.width,new cljs.core.Keyword(null,"height","height",1025178622),rect.height], null));
+if((i__64260 < size__4651__auto__)){
+var rect = cljs.core._nth(c__4650__auto__,i__64260);
+cljs.core.chunk_append(b__64261,new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"top","top",-1856271961),((rect.top + page_cnt.scrollTop) - cnt_offset.top),new cljs.core.Keyword(null,"left","left",-399115937),((rect.left + page_cnt.scrollLeft) - cnt_offset.left),new cljs.core.Keyword(null,"width","width",-384071477),rect.width,new cljs.core.Keyword(null,"height","height",1025178622),rect.height], null));
 
-var G__63049 = (i__62955 + (1));
-i__62955 = G__63049;
+var G__64270 = (i__64260 + (1));
+i__64260 = G__64270;
 continue;
 } else {
 return true;
@@ -348,13 +348,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__62956),frontend$extensions$pdf$utils$get_range_rects_LT__page_cnt_$_iter__62953(cljs.core.chunk_rest(s__62954__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__64261),frontend$extensions$pdf$utils$get_range_rects_LT__page_cnt_$_iter__64258(cljs.core.chunk_rest(s__64259__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__62956),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__64261),null);
 }
 } else {
-var rect = cljs.core.first(s__62954__$2);
-return cljs.core.cons(new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"top","top",-1856271961),((rect.top + page_cnt.scrollTop) - cnt_offset.top),new cljs.core.Keyword(null,"left","left",-399115937),((rect.left + page_cnt.scrollLeft) - cnt_offset.left),new cljs.core.Keyword(null,"width","width",-384071477),rect.width,new cljs.core.Keyword(null,"height","height",1025178622),rect.height], null),frontend$extensions$pdf$utils$get_range_rects_LT__page_cnt_$_iter__62953(cljs.core.rest(s__62954__$2)));
+var rect = cljs.core.first(s__64259__$2);
+return cljs.core.cons(new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"top","top",-1856271961),((rect.top + page_cnt.scrollTop) - cnt_offset.top),new cljs.core.Keyword(null,"left","left",-399115937),((rect.left + page_cnt.scrollLeft) - cnt_offset.left),new cljs.core.Keyword(null,"width","width",-384071477),rect.width,new cljs.core.Keyword(null,"height","height",1025178622),rect.height], null),frontend$extensions$pdf$utils$get_range_rects_LT__page_cnt_$_iter__64258(cljs.core.rest(s__64259__$2)));
 }
 } else {
 return null;
@@ -372,21 +372,21 @@ return null;
 });
 frontend.extensions.pdf.utils.next_page = (function frontend$extensions$pdf$utils$next_page(){
 try{return cljs.core.js_invoke(window.lsPdfViewer,"nextPage");
-}catch (e62961){if((e62961 instanceof Error)){
-var _e = e62961;
+}catch (e64263){if((e64263 instanceof Error)){
+var _e = e64263;
 return null;
 } else {
-throw e62961;
+throw e64263;
 
 }
 }});
 frontend.extensions.pdf.utils.prev_page = (function frontend$extensions$pdf$utils$prev_page(){
 try{return cljs.core.js_invoke(window.lsPdfViewer,"previousPage");
-}catch (e62971){if((e62971 instanceof Error)){
-var _e = e62971;
+}catch (e64264){if((e64264 instanceof Error)){
+var _e = e64264;
 return null;
 } else {
-throw e62971;
+throw e64264;
 
 }
 }});

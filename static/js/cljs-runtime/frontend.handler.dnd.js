@@ -1,7 +1,7 @@
 goog.provide('frontend.handler.dnd');
 frontend.handler.dnd.move_blocks = (function frontend$handler$dnd$move_blocks(event,blocks,target_block,move_to){
-var blocks_SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__68285_SHARP_){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(p1__68285_SHARP_,new cljs.core.Keyword("block","level","block/level",1182509971),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("block","children","block/children",-1040716209)], 0));
+var blocks_SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__79691_SHARP_){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(p1__79691_SHARP_,new cljs.core.Keyword("block","level","block/level",1182509971),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("block","children","block/children",-1040716209)], 0));
 }),blocks);
 var first_block = cljs.core.first(blocks_SINGLEQUOTE_);
 var top_QMARK_ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(move_to,new cljs.core.Keyword(null,"top","top",-1856271961));
@@ -42,9 +42,9 @@ return frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5,
 } else {
 if(cljs.core.every_QMARK_(cljs.core.map_QMARK_,cljs.core.conj.cljs$core$IFn$_invoke$arity$2(blocks,target_block))){
 var target_node = frontend.modules.outliner.core.block(target_block);
-var transact_data__62460__auto__ = frontend.modules.outliner.core._STAR_transaction_data_STAR_;
-var opts__62461__auto__ = (cljs.core.truth_(transact_data__62460__auto__)?cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"outliner-op","outliner-op",1716232450),new cljs.core.Keyword(null,"move-blocks","move-blocks",-955702999)], null),new cljs.core.Keyword(null,"nested-transaction?","nested-transaction?",-1949299281),true):new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"outliner-op","outliner-op",1716232450),new cljs.core.Keyword(null,"move-blocks","move-blocks",-955702999)], null));
-if(cljs.core.truth_(transact_data__62460__auto__)){
+var transact_data__61861__auto__ = frontend.modules.outliner.core._STAR_transaction_data_STAR_;
+var opts__61862__auto__ = (cljs.core.truth_(transact_data__61861__auto__)?cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"outliner-op","outliner-op",1716232450),new cljs.core.Keyword(null,"move-blocks","move-blocks",-955702999)], null),new cljs.core.Keyword(null,"nested-transaction?","nested-transaction?",-1949299281),true):new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"outliner-op","outliner-op",1716232450),new cljs.core.Keyword(null,"move-blocks","move-blocks",-955702999)], null));
+if(cljs.core.truth_(transact_data__61861__auto__)){
 frontend.handler.editor.save_current_block_BANG_.cljs$core$IFn$_invoke$arity$0();
 
 if(top_QMARK_){
@@ -60,41 +60,41 @@ return frontend.modules.outliner.core.move_blocks_BANG_(blocks,new cljs.core.Key
 return frontend.modules.outliner.core.move_blocks_BANG_(blocks,target_block,(!(nested_QMARK_)));
 }
 } else {
-var _STAR_transaction_data_STAR__orig_val__68293 = frontend.modules.outliner.core._STAR_transaction_data_STAR_;
-var _STAR_transaction_data_STAR__temp_val__68294 = cljs.core.transient$(cljs.core.PersistentVector.EMPTY);
-(frontend.modules.outliner.core._STAR_transaction_data_STAR_ = _STAR_transaction_data_STAR__temp_val__68294);
+var _STAR_transaction_data_STAR__orig_val__79704 = frontend.modules.outliner.core._STAR_transaction_data_STAR_;
+var _STAR_transaction_data_STAR__temp_val__79705 = cljs.core.transient$(cljs.core.PersistentVector.EMPTY);
+(frontend.modules.outliner.core._STAR_transaction_data_STAR_ = _STAR_transaction_data_STAR__temp_val__79705);
 
 try{frontend.handler.editor.save_current_block_BANG_.cljs$core$IFn$_invoke$arity$0();
 
 if(top_QMARK_){
-var first_child_QMARK__68302 = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(frontend.modules.outliner.tree._get_parent_id(target_node),frontend.modules.outliner.tree._get_left_id(target_node));
-if(first_child_QMARK__68302){
-var parent_68303 = frontend.modules.outliner.tree._get_parent(target_node);
-frontend.modules.outliner.core.move_blocks_BANG_(blocks,new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(parent_68303),false);
+var first_child_QMARK__79726 = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(frontend.modules.outliner.tree._get_parent_id(target_node),frontend.modules.outliner.tree._get_left_id(target_node));
+if(first_child_QMARK__79726){
+var parent_79728 = frontend.modules.outliner.tree._get_parent(target_node);
+frontend.modules.outliner.core.move_blocks_BANG_(blocks,new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(parent_79728),false);
 } else {
-var before_node_68305 = frontend.modules.outliner.tree._get_left(target_node);
-frontend.modules.outliner.core.move_blocks_BANG_(blocks,new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(before_node_68305),true);
+var before_node_79729 = frontend.modules.outliner.tree._get_left(target_node);
+frontend.modules.outliner.core.move_blocks_BANG_(blocks,new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(before_node_79729),true);
 }
 } else {
 frontend.modules.outliner.core.move_blocks_BANG_(blocks,target_block,(!(nested_QMARK_)));
 }
 
-var r__62462__auto__ = cljs.core.persistent_BANG_(frontend.modules.outliner.core._STAR_transaction_data_STAR_);
-var tx__62463__auto__ = cljs.core.mapcat.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.Keyword(null,"tx-data","tx-data",934159761),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([r__62462__auto__], 0));
-var tx_meta__62464__auto__ = cljs.core.first(cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tx-meta","tx-meta",1159283194),r__62462__auto__));
-var all_tx__62465__auto__ = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(tx__62463__auto__,new cljs.core.Keyword(null,"additional-tx","additional-tx",-343057604).cljs$core$IFn$_invoke$arity$1(opts__62461__auto__));
-var opts_SHARP___62466__auto__ = cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(opts__62461__auto__,new cljs.core.Keyword(null,"additional-tx","additional-tx",-343057604)),tx_meta__62464__auto__], 0));
-if(cljs.core.seq(all_tx__62465__auto__)){
-if(cljs.core.truth_(new cljs.core.Keyword(null,"nested-transaction?","nested-transaction?",-1949299281).cljs$core$IFn$_invoke$arity$1(opts__62461__auto__))){
+var r__61863__auto__ = cljs.core.persistent_BANG_(frontend.modules.outliner.core._STAR_transaction_data_STAR_);
+var tx__61864__auto__ = cljs.core.mapcat.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.Keyword(null,"tx-data","tx-data",934159761),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([r__61863__auto__], 0));
+var tx_meta__61865__auto__ = cljs.core.first(cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tx-meta","tx-meta",1159283194),r__61863__auto__));
+var all_tx__61866__auto__ = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(tx__61864__auto__,new cljs.core.Keyword(null,"additional-tx","additional-tx",-343057604).cljs$core$IFn$_invoke$arity$1(opts__61862__auto__));
+var opts_SHARP___61867__auto__ = cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(opts__61862__auto__,new cljs.core.Keyword(null,"additional-tx","additional-tx",-343057604)),tx_meta__61865__auto__], 0));
+if(cljs.core.seq(all_tx__61866__auto__)){
+if(cljs.core.truth_(new cljs.core.Keyword(null,"nested-transaction?","nested-transaction?",-1949299281).cljs$core$IFn$_invoke$arity$1(opts__61862__auto__))){
 return null;
 } else {
-var result__62467__auto__ = frontend.modules.outliner.datascript.transact_BANG_(all_tx__62465__auto__,opts_SHARP___62466__auto__);
-return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"tx-data","tx-data",934159761),all_tx__62465__auto__,new cljs.core.Keyword(null,"tx-meta","tx-meta",1159283194),tx_meta__62464__auto__,new cljs.core.Keyword(null,"tx-report","tx-report",1910895391),result__62467__auto__], null);
+var result__61868__auto__ = frontend.modules.outliner.datascript.transact_BANG_(all_tx__61866__auto__,opts_SHARP___61867__auto__);
+return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"tx-data","tx-data",934159761),all_tx__61866__auto__,new cljs.core.Keyword(null,"tx-meta","tx-meta",1159283194),tx_meta__61865__auto__,new cljs.core.Keyword(null,"tx-report","tx-report",1910895391),result__61868__auto__], null);
 }
 } else {
 return null;
 }
-}finally {(frontend.modules.outliner.core._STAR_transaction_data_STAR_ = _STAR_transaction_data_STAR__orig_val__68293);
+}finally {(frontend.modules.outliner.core._STAR_transaction_data_STAR_ = _STAR_transaction_data_STAR__orig_val__79704);
 }}
 } else {
 return null;

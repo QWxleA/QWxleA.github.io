@@ -4,14 +4,14 @@ goog.scope(function(){
 });
 frontend.components.settings.toggle = (function frontend$components$settings$toggle(var_args){
 var args__4870__auto__ = [];
-var len__4864__auto___71827 = arguments.length;
-var i__4865__auto___71828 = (0);
+var len__4864__auto___72242 = arguments.length;
+var i__4865__auto___72243 = (0);
 while(true){
-if((i__4865__auto___71828 < len__4864__auto___71827)){
-args__4870__auto__.push((arguments[i__4865__auto___71828]));
+if((i__4865__auto___72243 < len__4864__auto___72242)){
+args__4870__auto__.push((arguments[i__4865__auto___72243]));
 
-var G__71829 = (i__4865__auto___71828 + (1));
-i__4865__auto___71828 = G__71829;
+var G__72244 = (i__4865__auto___72243 + (1));
+i__4865__auto___72243 = G__72244;
 continue;
 } else {
 }
@@ -22,56 +22,56 @@ var argseq__4871__auto__ = ((((4) < args__4870__auto__.length))?(new cljs.core.I
 return frontend.components.settings.toggle.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__4871__auto__);
 });
 
-(frontend.components.settings.toggle.cljs$core$IFn$_invoke$arity$variadic = (function (label_for,name,state,on_toggle,p__71579){
-var vec__71580 = p__71579;
-var detail_text = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71580,(0),null);
+(frontend.components.settings.toggle.cljs$core$IFn$_invoke$arity$variadic = (function (label_for,name,state,on_toggle,p__71921){
+var vec__71922 = p__71921;
+var detail_text = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71922,(0),null);
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.it.sm:grid.sm:grid-cols-3.sm:gap-4.sm:items-start","div.it.sm:grid.sm:grid-cols-3.sm:gap-4.sm:items-start",685540712),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label.block.text-sm.font-medium.leading-5.opacity-70","label.block.text-sm.font-medium.leading-5.opacity-70",643274172),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"for","for",-1323786319),label_for], null),name], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.rounded-md.sm:max-w-tss.sm:col-span-2","div.rounded-md.sm:max-w-tss.sm:col-span-2",-1315636593),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.rounded-md","div.rounded-md",-395116423),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"display","display",242065432),"flex",new cljs.core.Keyword(null,"gap","gap",80255254),"1rem",new cljs.core.Keyword(null,"align-items","align-items",-267946462),"center"], null)], null),frontend.ui.toggle.cljs$core$IFn$_invoke$arity$3(state,on_toggle,true),detail_text], null)], null)], null);
 }));
 
 (frontend.components.settings.toggle.cljs$lang$maxFixedArity = (4));
 
 /** @this {Function} */
-(frontend.components.settings.toggle.cljs$lang$applyTo = (function (seq71568){
-var G__71569 = cljs.core.first(seq71568);
-var seq71568__$1 = cljs.core.next(seq71568);
-var G__71570 = cljs.core.first(seq71568__$1);
-var seq71568__$2 = cljs.core.next(seq71568__$1);
-var G__71571 = cljs.core.first(seq71568__$2);
-var seq71568__$3 = cljs.core.next(seq71568__$2);
-var G__71572 = cljs.core.first(seq71568__$3);
-var seq71568__$4 = cljs.core.next(seq71568__$3);
+(frontend.components.settings.toggle.cljs$lang$applyTo = (function (seq71913){
+var G__71914 = cljs.core.first(seq71913);
+var seq71913__$1 = cljs.core.next(seq71913);
+var G__71915 = cljs.core.first(seq71913__$1);
+var seq71913__$2 = cljs.core.next(seq71913__$1);
+var G__71916 = cljs.core.first(seq71913__$2);
+var seq71913__$3 = cljs.core.next(seq71913__$2);
+var G__71917 = cljs.core.first(seq71913__$3);
+var seq71913__$4 = cljs.core.next(seq71913__$3);
 var self__4851__auto__ = this;
-return self__4851__auto__.cljs$core$IFn$_invoke$arity$variadic(G__71569,G__71570,G__71571,G__71572,seq71568__$4);
+return self__4851__auto__.cljs$core$IFn$_invoke$arity$variadic(G__71914,G__71915,G__71916,G__71917,seq71913__$4);
 }));
 
 frontend.components.settings.app_updater = rum.core.lazy_build(rum.core.build_defcs,(function (state,version){
 var update_pending_QMARK_ = frontend.state.sub(new cljs.core.Keyword("electron","updater-pending?","electron/updater-pending?",-1675811595));
-var map__71584 = frontend.state.sub(new cljs.core.Keyword("electron","updater","electron/updater",454456683));
-var map__71584__$1 = cljs.core.__destructure_map(map__71584);
-var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71584__$1,new cljs.core.Keyword(null,"type","type",1174270348));
-var payload = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71584__$1,new cljs.core.Keyword(null,"payload","payload",-383036092));
-return daiquiri.core.create_element("span",{'className':"cp__settings-app-updater"},[daiquiri.core.create_element("div",{'className':"ctls flex items-center"},[daiquiri.core.create_element("div",{'style':{'display':"flex",'gap':"0.5rem",'alignItems':"center"},'className':"mt-1 sm:mt-0 sm:col-span-2"},[(function (){var attrs71602 = (cljs.core.truth_(frontend.mobile.util.native_android_QMARK_())?frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic("Check for updates",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"class","class",-2030961996),"text-sm p-1 mr-1",new cljs.core.Keyword(null,"href","href",-793805698),"https://github.com/logseq/logseq/releases"], 0)):(cljs.core.truth_(frontend.mobile.util.native_ios_QMARK_())?frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic("Check for updates",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"class","class",-2030961996),"text-sm p-1 mr-1",new cljs.core.Keyword(null,"href","href",-793805698),"https://apps.apple.com/app/logseq/id1601013908"], 0)):(cljs.core.truth_(frontend.util.electron_QMARK_())?frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic((cljs.core.truth_(update_pending_QMARK_)?"Checking ...":"Check for updates"),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"class","class",-2030961996),"text-sm p-1 mr-1",new cljs.core.Keyword(null,"disabled","disabled",-1529784218),update_pending_QMARK_,new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
+var map__71928 = frontend.state.sub(new cljs.core.Keyword("electron","updater","electron/updater",454456683));
+var map__71928__$1 = cljs.core.__destructure_map(map__71928);
+var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71928__$1,new cljs.core.Keyword(null,"type","type",1174270348));
+var payload = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71928__$1,new cljs.core.Keyword(null,"payload","payload",-383036092));
+return daiquiri.core.create_element("span",{'className':"cp__settings-app-updater"},[daiquiri.core.create_element("div",{'className':"ctls flex items-center"},[daiquiri.core.create_element("div",{'style':{'display':"flex",'gap':"0.5rem",'alignItems':"center"},'className':"mt-1 sm:mt-0 sm:col-span-2"},[(function (){var attrs71945 = (cljs.core.truth_(frontend.mobile.util.native_android_QMARK_())?frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic("Check for updates",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"class","class",-2030961996),"text-sm p-1 mr-1",new cljs.core.Keyword(null,"href","href",-793805698),"https://github.com/logseq/logseq/releases"], 0)):(cljs.core.truth_(frontend.mobile.util.native_ios_QMARK_())?frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic("Check for updates",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"class","class",-2030961996),"text-sm p-1 mr-1",new cljs.core.Keyword(null,"href","href",-793805698),"https://apps.apple.com/app/logseq/id1601013908"], 0)):(cljs.core.truth_(frontend.util.electron_QMARK_())?frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic((cljs.core.truth_(update_pending_QMARK_)?"Checking ...":"Check for updates"),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"class","class",-2030961996),"text-sm p-1 mr-1",new cljs.core.Keyword(null,"disabled","disabled",-1529784218),update_pending_QMARK_,new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
 return window.apis.checkForUpdates(false);
 })], 0)):null
 )));
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71602))?daiquiri.interpreter.element_attributes(attrs71602):null),((cljs.core.map_QMARK_(attrs71602))?null:[daiquiri.interpreter.interpret(attrs71602)]));
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71945))?daiquiri.interpreter.element_attributes(attrs71945):null),((cljs.core.map_QMARK_(attrs71945))?null:[daiquiri.interpreter.interpret(attrs71945)]));
 })(),daiquiri.core.create_element("div",{'className':"text-sm opacity-50"},[["Version ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(version)].join('')])])]),(cljs.core.truth_((function (){var or__4253__auto__ = update_pending_QMARK_;
 if(cljs.core.truth_(or__4253__auto__)){
 return or__4253__auto__;
 } else {
 return clojure.string.blank_QMARK_(type);
 }
-})())?null:(function (){var attrs71600 = (function (){var G__71604 = type;
-switch (G__71604) {
+})())?null:(function (){var attrs71940 = (function (){var G__71949 = type;
+switch (G__71949) {
 case "update-not-available":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Your app is up-to-date \uD83C\uDF89"], null);
 
 break;
 case "update-available":
-var map__71605 = payload;
-var map__71605__$1 = cljs.core.__destructure_map(map__71605);
-var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71605__$1,new cljs.core.Keyword(null,"name","name",1843675177));
-var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71605__$1,new cljs.core.Keyword(null,"url","url",276297046));
+var map__71953 = payload;
+var map__71953__$1 = cljs.core.__destructure_map(map__71953);
+var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71953__$1,new cljs.core.Keyword(null,"name","name",1843675177));
+var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71953__$1,new cljs.core.Keyword(null,"url","url",276297046));
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Found new release ",new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a.link","a.link",-619461443),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (e){
 window.apis.openExternal(url);
 
@@ -88,26 +88,26 @@ return frontend.util.stop(e);
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__71604)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__71949)].join('')));
 
 }
 })();
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71600))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["update-state","text-sm"], null)], null),attrs71600], 0))):{'className':"update-state text-sm"}),((cljs.core.map_QMARK_(attrs71600))?null:[daiquiri.interpreter.interpret(attrs71600)]));
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71940))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["update-state","text-sm"], null)], null),attrs71940], 0))):{'className':"update-state text-sm"}),((cljs.core.map_QMARK_(attrs71940))?null:[daiquiri.interpreter.interpret(attrs71940)]));
 })())]);
 }),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive], null),"frontend.components.settings/app-updater");
 frontend.components.settings.outdenting_hint = rum.core.lazy_build(rum.core.build_defc,(function (){
 return daiquiri.core.create_element("div",{'style':{'boxShadow':"0 4px 20px 4px rgba(0, 20, 60, .1), 0 4px 80px -8px rgba(0, 20, 60, .2)"},'className':"ui__modal-panel"},[daiquiri.core.create_element("div",{'style':{'margin':"12px",'maxWidth':"500px"}},[daiquiri.core.create_element("p",{'className':"text-sm"},["The left side shows outdenting with the default setting, and the right shows outdenting with logical outdenting enabled. ",daiquiri.core.create_element("a",{'target':"_blank",'href':"https://discuss.logseq.com/t/whats-your-preferred-outdent-behavior-the-direct-one-or-the-logical-one/978",'className':"text-sm"},["\u2192 Learn more"])]),daiquiri.core.create_element("img",{'src':"https://discuss.logseq.com/uploads/default/original/1X/e8ea82f63a5e01f6d21b5da827927f538f3277b9.gif",'width':(500),'height':(500)},null)])]);
 }),null,"frontend.components.settings/outdenting-hint");
-frontend.components.settings.row_with_button_action = (function frontend$components$settings$row_with_button_action(p__71616){
-var map__71617 = p__71616;
-var map__71617__$1 = cljs.core.__destructure_map(map__71617);
-var left_label = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71617__$1,new cljs.core.Keyword(null,"left-label","left-label",-1662718913));
-var action = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71617__$1,new cljs.core.Keyword(null,"action","action",-811238024));
-var button_label = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71617__$1,new cljs.core.Keyword(null,"button-label","button-label",-1402542935));
-var href = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71617__$1,new cljs.core.Keyword(null,"href","href",-793805698));
-var on_click = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71617__$1,new cljs.core.Keyword(null,"on-click","on-click",1632826543));
-var desc = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71617__$1,new cljs.core.Keyword(null,"desc","desc",2093485764));
-var _for = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71617__$1,new cljs.core.Keyword(null,"-for","-for",-490432963));
+frontend.components.settings.row_with_button_action = (function frontend$components$settings$row_with_button_action(p__71964){
+var map__71965 = p__71964;
+var map__71965__$1 = cljs.core.__destructure_map(map__71965);
+var left_label = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71965__$1,new cljs.core.Keyword(null,"left-label","left-label",-1662718913));
+var action = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71965__$1,new cljs.core.Keyword(null,"action","action",-811238024));
+var button_label = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71965__$1,new cljs.core.Keyword(null,"button-label","button-label",-1402542935));
+var href = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71965__$1,new cljs.core.Keyword(null,"href","href",-793805698));
+var on_click = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71965__$1,new cljs.core.Keyword(null,"on-click","on-click",1632826543));
+var desc = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71965__$1,new cljs.core.Keyword(null,"desc","desc",2093485764));
+var _for = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71965__$1,new cljs.core.Keyword(null,"-for","-for",-490432963));
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.it.sm:grid.sm:grid-cols-3.sm:gap-4.sm:items-start","div.it.sm:grid.sm:grid-cols-3.sm:gap-4.sm:items-start",685540712),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label.block.text-sm.font-medium.leading-5.opacity-70","label.block.text-sm.font-medium.leading-5.opacity-70",643274172),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"for","for",-1323786319),_for], null),left_label], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.mt-1.sm:mt-0.sm:col-span-2","div.mt-1.sm:mt-0.sm:col-span-2",1617581337),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"display","display",242065432),"flex",new cljs.core.Keyword(null,"gap","gap",80255254),"0.5rem",new cljs.core.Keyword(null,"align-items","align-items",-267946462),"center"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),(cljs.core.truth_(action)?action:frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic(button_label,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"class","class",-2030961996),"text-sm p-1",new cljs.core.Keyword(null,"href","href",-793805698),href,new cljs.core.Keyword(null,"on-click","on-click",1632826543),on_click], 0)))], null),(cljs.core.truth_((function (){var or__4253__auto__ = frontend.util.mobile_QMARK_();
 if(cljs.core.truth_(or__4253__auto__)){
 return or__4253__auto__;
@@ -148,9 +148,9 @@ return frontend.mobile.util.is_native_platform_QMARK_();
 });
 frontend.components.settings.switch_spell_check_row = rum.core.lazy_build(rum.core.build_defcs,(function (state,t){
 var enabled_QMARK_ = frontend.state.sub(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("electron","user-cfgs","electron/user-cfgs",-76972489),new cljs.core.Keyword(null,"spell-check","spell-check",-2060352968)], null));
-return daiquiri.core.create_element("div",{'className':"it sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start"},[(function (){var attrs71632 = (t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","spell-checker","settings-page/spell-checker",234247295)) : t.call(null,new cljs.core.Keyword("settings-page","spell-checker","settings-page/spell-checker",234247295)));
-return daiquiri.core.create_element("label",((cljs.core.map_QMARK_(attrs71632))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["block","text-sm","font-medium","leading-5","opacity-70"], null)], null),attrs71632], 0))):{'className':"block text-sm font-medium leading-5 opacity-70"}),((cljs.core.map_QMARK_(attrs71632))?null:[daiquiri.interpreter.interpret(attrs71632)]));
-})(),daiquiri.core.create_element("div",null,[(function (){var attrs71638 = frontend.ui.toggle.cljs$core$IFn$_invoke$arity$3(enabled_QMARK_,(function (){
+return daiquiri.core.create_element("div",{'className':"it sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start"},[(function (){var attrs71978 = (t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","spell-checker","settings-page/spell-checker",234247295)) : t.call(null,new cljs.core.Keyword("settings-page","spell-checker","settings-page/spell-checker",234247295)));
+return daiquiri.core.create_element("label",((cljs.core.map_QMARK_(attrs71978))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["block","text-sm","font-medium","leading-5","opacity-70"], null)], null),attrs71978], 0))):{'className':"block text-sm font-medium leading-5 opacity-70"}),((cljs.core.map_QMARK_(attrs71978))?null:[daiquiri.interpreter.interpret(attrs71978)]));
+})(),daiquiri.core.create_element("div",null,[(function (){var attrs71988 = frontend.ui.toggle.cljs$core$IFn$_invoke$arity$3(enabled_QMARK_,(function (){
 frontend.state.set_state_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("electron","user-cfgs","electron/user-cfgs",-76972489),new cljs.core.Keyword(null,"spell-check","spell-check",-2060352968)], null),cljs.core.not(enabled_QMARK_));
 
 return promesa.core.then.cljs$core$IFn$_invoke$arity$2(electron.ipc.ipc.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["userAppCfgs",new cljs.core.Keyword(null,"spell-check","spell-check",-2060352968),cljs.core.not(enabled_QMARK_)], 0)),(function (){
@@ -161,19 +161,19 @@ return null;
 }
 }));
 }),true);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71638))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["rounded-md","sm:max-w-xs"], null)], null),attrs71638], 0))):{'className':"rounded-md sm:max-w-xs"}),((cljs.core.map_QMARK_(attrs71638))?null:[daiquiri.interpreter.interpret(attrs71638)]));
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71988))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["rounded-md","sm:max-w-xs"], null)], null),attrs71988], 0))):{'className':"rounded-md sm:max-w-xs"}),((cljs.core.map_QMARK_(attrs71988))?null:[daiquiri.interpreter.interpret(attrs71988)]));
 })()])]);
 }),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive], null),"frontend.components.settings/switch-spell-check-row");
 frontend.components.settings.switch_git_auto_commit_row = rum.core.lazy_build(rum.core.build_defcs,(function (state,t){
 var enabled_QMARK_ = frontend.state.get_git_auto_commit_enabled_QMARK_();
-return daiquiri.core.create_element("div",{'className':"it sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start"},[(function (){var attrs71641 = (t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","git-switcher-label","settings-page/git-switcher-label",404759182)) : t.call(null,new cljs.core.Keyword("settings-page","git-switcher-label","settings-page/git-switcher-label",404759182)));
-return daiquiri.core.create_element("label",((cljs.core.map_QMARK_(attrs71641))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["block","text-sm","font-medium","leading-5","opacity-70"], null)], null),attrs71641], 0))):{'className':"block text-sm font-medium leading-5 opacity-70"}),((cljs.core.map_QMARK_(attrs71641))?null:[daiquiri.interpreter.interpret(attrs71641)]));
-})(),daiquiri.core.create_element("div",null,[(function (){var attrs71646 = frontend.ui.toggle.cljs$core$IFn$_invoke$arity$3(enabled_QMARK_,(function (){
+return daiquiri.core.create_element("div",{'className':"it sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start"},[(function (){var attrs71992 = (t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","git-switcher-label","settings-page/git-switcher-label",404759182)) : t.call(null,new cljs.core.Keyword("settings-page","git-switcher-label","settings-page/git-switcher-label",404759182)));
+return daiquiri.core.create_element("label",((cljs.core.map_QMARK_(attrs71992))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["block","text-sm","font-medium","leading-5","opacity-70"], null)], null),attrs71992], 0))):{'className':"block text-sm font-medium leading-5 opacity-70"}),((cljs.core.map_QMARK_(attrs71992))?null:[daiquiri.interpreter.interpret(attrs71992)]));
+})(),daiquiri.core.create_element("div",null,[(function (){var attrs71993 = frontend.ui.toggle.cljs$core$IFn$_invoke$arity$3(enabled_QMARK_,(function (){
 frontend.state.set_state_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("electron","user-cfgs","electron/user-cfgs",-76972489),new cljs.core.Keyword("git","disable-auto-commit?","git/disable-auto-commit?",1374476539)], null),enabled_QMARK_);
 
 return electron.ipc.ipc.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["userAppCfgs",new cljs.core.Keyword("git","disable-auto-commit?","git/disable-auto-commit?",1374476539),enabled_QMARK_], 0));
 }),true);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71646))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["rounded-md","sm:max-w-xs"], null)], null),attrs71646], 0))):{'className':"rounded-md sm:max-w-xs"}),((cljs.core.map_QMARK_(attrs71646))?null:[daiquiri.interpreter.interpret(attrs71646)]));
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71993))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["rounded-md","sm:max-w-xs"], null)], null),attrs71993], 0))):{'className':"rounded-md sm:max-w-xs"}),((cljs.core.map_QMARK_(attrs71993))?null:[daiquiri.interpreter.interpret(attrs71993)]));
 })()])]);
 }),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive], null),"frontend.components.settings/switch-git-auto-commit-row");
 frontend.components.settings.git_auto_commit_seconds = rum.core.lazy_build(rum.core.build_defcs,(function (state,t){
@@ -184,8 +184,8 @@ return or__4253__auto__;
 return (60);
 }
 })();
-return daiquiri.core.create_element("div",{'className':"it sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start"},[(function (){var attrs71652 = (t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","git-commit-delay","settings-page/git-commit-delay",-724346800)) : t.call(null,new cljs.core.Keyword("settings-page","git-commit-delay","settings-page/git-commit-delay",-724346800)));
-return daiquiri.core.create_element("label",((cljs.core.map_QMARK_(attrs71652))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["block","text-sm","font-medium","leading-5","opacity-70"], null)], null),attrs71652], 0))):{'className':"block text-sm font-medium leading-5 opacity-70"}),((cljs.core.map_QMARK_(attrs71652))?null:[daiquiri.interpreter.interpret(attrs71652)]));
+return daiquiri.core.create_element("div",{'className':"it sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start"},[(function (){var attrs71997 = (t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","git-commit-delay","settings-page/git-commit-delay",-724346800)) : t.call(null,new cljs.core.Keyword("settings-page","git-commit-delay","settings-page/git-commit-delay",-724346800)));
+return daiquiri.core.create_element("label",((cljs.core.map_QMARK_(attrs71997))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["block","text-sm","font-medium","leading-5","opacity-70"], null)], null),attrs71997], 0))):{'className':"block text-sm font-medium leading-5 opacity-70"}),((cljs.core.map_QMARK_(attrs71997))?null:[daiquiri.interpreter.interpret(attrs71997)]));
 })(),daiquiri.core.create_element("div",{'className':"mt-1 sm:mt-0 sm:col-span-2"},[daiquiri.core.create_element("div",{'className':"max-w-lg rounded-md sm:max-w-xs"},[daiquiri.core.create_element("input",{'id':"home-default-page",'defaultValue':secs,'onBlur':(function (event){
 var value = frontend.util.safe_parse_int(frontend.util.evalue(event));
 if(((typeof value === 'number') && (((((0) < value)) && ((value < ((600) + (1)))))))){
@@ -209,9 +209,9 @@ frontend.components.settings.app_auto_update_row = rum.core.lazy_build(rum.core.
 var enabled_QMARK_ = frontend.state.sub(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("electron","user-cfgs","electron/user-cfgs",-76972489),new cljs.core.Keyword(null,"auto-update","auto-update",-1471446628)], null));
 var enabled_QMARK___$1 = (((enabled_QMARK_ == null))?true:enabled_QMARK_);
 return daiquiri.interpreter.interpret(frontend.components.settings.toggle("usage-diagnostics",(t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","auto-updater","settings-page/auto-updater",542727320)) : t.call(null,new cljs.core.Keyword("settings-page","auto-updater","settings-page/auto-updater",542727320))),enabled_QMARK___$1,(function (){
-var G__71656 = electron.ipc.ipc.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["userAppCfgs",new cljs.core.Keyword(null,"auto-update","auto-update",-1471446628),cljs.core.not(enabled_QMARK___$1)], 0));
-var fexpr__71655 = frontend.state.set_state_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("electron","user-cfgs","electron/user-cfgs",-76972489),new cljs.core.Keyword(null,"auto-update","auto-update",-1471446628)], null),cljs.core.not(enabled_QMARK___$1));
-return (fexpr__71655.cljs$core$IFn$_invoke$arity$1 ? fexpr__71655.cljs$core$IFn$_invoke$arity$1(G__71656) : fexpr__71655.call(null,G__71656));
+var G__72005 = electron.ipc.ipc.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["userAppCfgs",new cljs.core.Keyword(null,"auto-update","auto-update",-1471446628),cljs.core.not(enabled_QMARK___$1)], 0));
+var fexpr__72004 = frontend.state.set_state_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("electron","user-cfgs","electron/user-cfgs",-76972489),new cljs.core.Keyword(null,"auto-update","auto-update",-1471446628)], null),cljs.core.not(enabled_QMARK___$1));
+return (fexpr__72004.cljs$core$IFn$_invoke$arity$1 ? fexpr__72004.cljs$core$IFn$_invoke$arity$1(G__72005) : fexpr__72004.call(null,G__72005));
 })));
 }),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive], null),"frontend.components.settings/app-auto-update-row");
 frontend.components.settings.language_row = (function frontend$components$settings$language_row(t,preferred_language){
@@ -221,28 +221,28 @@ frontend.state.set_preferred_language_BANG_(lang_code);
 
 return frontend.handler.ui.re_render_root_BANG_.cljs$core$IFn$_invoke$arity$0();
 });
-var action = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"select.form-select.is-small","select.form-select.is-small",1007249743),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"value","value",305978217),preferred_language,new cljs.core.Keyword(null,"on-change","on-change",-732046149),on_change], null),(function (){var iter__4652__auto__ = (function frontend$components$settings$language_row_$_iter__71657(s__71658){
+var action = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"select.form-select.is-small","select.form-select.is-small",1007249743),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"value","value",305978217),preferred_language,new cljs.core.Keyword(null,"on-change","on-change",-732046149),on_change], null),(function (){var iter__4652__auto__ = (function frontend$components$settings$language_row_$_iter__72007(s__72008){
 return (new cljs.core.LazySeq(null,(function (){
-var s__71658__$1 = s__71658;
+var s__72008__$1 = s__72008;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__71658__$1);
+var temp__5720__auto__ = cljs.core.seq(s__72008__$1);
 if(temp__5720__auto__){
-var s__71658__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__71658__$2)){
-var c__4650__auto__ = cljs.core.chunk_first(s__71658__$2);
+var s__72008__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__72008__$2)){
+var c__4650__auto__ = cljs.core.chunk_first(s__72008__$2);
 var size__4651__auto__ = cljs.core.count(c__4650__auto__);
-var b__71660 = cljs.core.chunk_buffer(size__4651__auto__);
-if((function (){var i__71659 = (0);
+var b__72010 = cljs.core.chunk_buffer(size__4651__auto__);
+if((function (){var i__72009 = (0);
 while(true){
-if((i__71659 < size__4651__auto__)){
-var language = cljs.core._nth(c__4650__auto__,i__71659);
-cljs.core.chunk_append(b__71660,(function (){var lang_code = cljs.core.name(new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(language));
+if((i__72009 < size__4651__auto__)){
+var language = cljs.core._nth(c__4650__auto__,i__72009);
+cljs.core.chunk_append(b__72010,(function (){var lang_code = cljs.core.name(new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(language));
 var lang_label = new cljs.core.Keyword(null,"label","label",1718410804).cljs$core$IFn$_invoke$arity$1(language);
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),lang_code,new cljs.core.Keyword(null,"value","value",305978217),lang_code], null),lang_label], null);
 })());
 
-var G__71848 = (i__71659 + (1));
-i__71659 = G__71848;
+var G__72267 = (i__72009 + (1));
+i__72009 = G__72267;
 continue;
 } else {
 return true;
@@ -250,16 +250,16 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__71660),frontend$components$settings$language_row_$_iter__71657(cljs.core.chunk_rest(s__71658__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__72010),frontend$components$settings$language_row_$_iter__72007(cljs.core.chunk_rest(s__72008__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__71660),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__72010),null);
 }
 } else {
-var language = cljs.core.first(s__71658__$2);
+var language = cljs.core.first(s__72008__$2);
 return cljs.core.cons((function (){var lang_code = cljs.core.name(new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(language));
 var lang_label = new cljs.core.Keyword(null,"label","label",1718410804).cljs$core$IFn$_invoke$arity$1(language);
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),lang_code,new cljs.core.Keyword(null,"value","value",305978217),lang_code], null),lang_label], null);
-})(),frontend$components$settings$language_row_$_iter__71657(cljs.core.rest(s__71658__$2)));
+})(),frontend$components$settings$language_row_$_iter__72007(cljs.core.rest(s__72008__$2)));
 }
 } else {
 return null;
@@ -280,34 +280,34 @@ return dark_QMARK_;
 return and__4251__auto__;
 }
 })()], null)], null))], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i.mode-dark","i.mode-dark",733780794)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"strong","strong",269529000),"dark"], null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"on-click","on-click",1632826543),cljs.core.partial.cljs$core$IFn$_invoke$arity$2(frontend.state.use_theme_mode_BANG_,"system"),new cljs.core.Keyword(null,"class","class",-2030961996),frontend.util.classnames(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"active","active",1895962068),system_theme_QMARK_], null)], null))], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i.mode-system","i.mode-system",411983973)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"strong","strong",269529000),"system"], null)], null)], null);
-return frontend.components.settings.row_with_button_action(new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"left-label","left-label",-1662718913),(function (){var G__71661 = new cljs.core.Keyword("right-side-bar","switch-theme","right-side-bar/switch-theme",-247650664);
-var G__71662 = clojure.string.capitalize(switch_theme);
-return (t.cljs$core$IFn$_invoke$arity$2 ? t.cljs$core$IFn$_invoke$arity$2(G__71661,G__71662) : t.call(null,G__71661,G__71662));
+return frontend.components.settings.row_with_button_action(new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"left-label","left-label",-1662718913),(function (){var G__72022 = new cljs.core.Keyword("right-side-bar","switch-theme","right-side-bar/switch-theme",-247650664);
+var G__72023 = clojure.string.capitalize(switch_theme);
+return (t.cljs$core$IFn$_invoke$arity$2 ? t.cljs$core$IFn$_invoke$arity$2(G__72022,G__72023) : t.call(null,G__72022,G__72023));
 })(),new cljs.core.Keyword(null,"-for","-for",-490432963),"toggle_theme",new cljs.core.Keyword(null,"action","action",-811238024),pick_theme,new cljs.core.Keyword(null,"desc","desc",2093485764),frontend.ui.render_keyboard_shortcut(frontend.modules.shortcut.data_helper.gen_shortcut_seq(new cljs.core.Keyword("ui","toggle-theme","ui/toggle-theme",-91905800)))], null));
 });
 frontend.components.settings.file_format_row = (function frontend$components$settings$file_format_row(t,preferred_format){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.it.sm:grid.sm:grid-cols-3.sm:gap-4.sm:items-start","div.it.sm:grid.sm:grid-cols-3.sm:gap-4.sm:items-start",685540712),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label.block.text-sm.font-medium.leading-5.opacity-70","label.block.text-sm.font-medium.leading-5.opacity-70",643274172),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"for","for",-1323786319),"preferred_format"], null),(t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","preferred-file-format","settings-page/preferred-file-format",-474760732)) : t.call(null,new cljs.core.Keyword("settings-page","preferred-file-format","settings-page/preferred-file-format",-474760732)))], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.mt-1.sm:mt-0.sm:col-span-2","div.mt-1.sm:mt-0.sm:col-span-2",1617581337),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.max-w-lg.rounded-md","div.max-w-lg.rounded-md",-1164491035),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"select.form-select.is-small","select.form-select.is-small",1007249743),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"value","value",305978217),cljs.core.name(preferred_format),new cljs.core.Keyword(null,"on-change","on-change",-732046149),(function (e){
 var format = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(clojure.string.lower_case(frontend.util.evalue(e)));
 return frontend.handler.user.set_preferred_format_BANG_(format);
-})], null),(function (){var iter__4652__auto__ = (function frontend$components$settings$file_format_row_$_iter__71665(s__71666){
+})], null),(function (){var iter__4652__auto__ = (function frontend$components$settings$file_format_row_$_iter__72025(s__72026){
 return (new cljs.core.LazySeq(null,(function (){
-var s__71666__$1 = s__71666;
+var s__72026__$1 = s__72026;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__71666__$1);
+var temp__5720__auto__ = cljs.core.seq(s__72026__$1);
 if(temp__5720__auto__){
-var s__71666__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__71666__$2)){
-var c__4650__auto__ = cljs.core.chunk_first(s__71666__$2);
+var s__72026__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__72026__$2)){
+var c__4650__auto__ = cljs.core.chunk_first(s__72026__$2);
 var size__4651__auto__ = cljs.core.count(c__4650__auto__);
-var b__71668 = cljs.core.chunk_buffer(size__4651__auto__);
-if((function (){var i__71667 = (0);
+var b__72028 = cljs.core.chunk_buffer(size__4651__auto__);
+if((function (){var i__72027 = (0);
 while(true){
-if((i__71667 < size__4651__auto__)){
-var format = cljs.core._nth(c__4650__auto__,i__71667);
-cljs.core.chunk_append(b__71668,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),format,new cljs.core.Keyword(null,"value","value",305978217),format], null),clojure.string.capitalize(format)], null));
+if((i__72027 < size__4651__auto__)){
+var format = cljs.core._nth(c__4650__auto__,i__72027);
+cljs.core.chunk_append(b__72028,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),format,new cljs.core.Keyword(null,"value","value",305978217),format], null),clojure.string.capitalize(format)], null));
 
-var G__71852 = (i__71667 + (1));
-i__71667 = G__71852;
+var G__72273 = (i__72027 + (1));
+i__72027 = G__72273;
 continue;
 } else {
 return true;
@@ -315,13 +315,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__71668),frontend$components$settings$file_format_row_$_iter__71665(cljs.core.chunk_rest(s__71666__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__72028),frontend$components$settings$file_format_row_$_iter__72025(cljs.core.chunk_rest(s__72026__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__71668),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__72028),null);
 }
 } else {
-var format = cljs.core.first(s__71666__$2);
-return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),format,new cljs.core.Keyword(null,"value","value",305978217),format], null),clojure.string.capitalize(format)], null),frontend$components$settings$file_format_row_$_iter__71665(cljs.core.rest(s__71666__$2)));
+var format = cljs.core.first(s__72026__$2);
+return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),format,new cljs.core.Keyword(null,"value","value",305978217),format], null),clojure.string.capitalize(format)], null),frontend$components$settings$file_format_row_$_iter__72025(cljs.core.rest(s__72026__$2)));
 }
 } else {
 return null;
@@ -347,25 +347,25 @@ frontend.state.close_modal_BANG_();
 
 return frontend.handler.route.redirect_BANG_(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"to","to",192099007),new cljs.core.Keyword(null,"repos","repos",647483789)], null));
 }
-})], null),(function (){var iter__4652__auto__ = (function frontend$components$settings$date_format_row_$_iter__71672(s__71673){
+})], null),(function (){var iter__4652__auto__ = (function frontend$components$settings$date_format_row_$_iter__72036(s__72037){
 return (new cljs.core.LazySeq(null,(function (){
-var s__71673__$1 = s__71673;
+var s__72037__$1 = s__72037;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__71673__$1);
+var temp__5720__auto__ = cljs.core.seq(s__72037__$1);
 if(temp__5720__auto__){
-var s__71673__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__71673__$2)){
-var c__4650__auto__ = cljs.core.chunk_first(s__71673__$2);
+var s__72037__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__72037__$2)){
+var c__4650__auto__ = cljs.core.chunk_first(s__72037__$2);
 var size__4651__auto__ = cljs.core.count(c__4650__auto__);
-var b__71675 = cljs.core.chunk_buffer(size__4651__auto__);
-if((function (){var i__71674 = (0);
+var b__72039 = cljs.core.chunk_buffer(size__4651__auto__);
+if((function (){var i__72038 = (0);
 while(true){
-if((i__71674 < size__4651__auto__)){
-var format = cljs.core._nth(c__4650__auto__,i__71674);
-cljs.core.chunk_append(b__71675,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),format], null),format], null));
+if((i__72038 < size__4651__auto__)){
+var format = cljs.core._nth(c__4650__auto__,i__72038);
+cljs.core.chunk_append(b__72039,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),format], null),format], null));
 
-var G__71859 = (i__71674 + (1));
-i__71674 = G__71859;
+var G__72276 = (i__72038 + (1));
+i__72038 = G__72276;
 continue;
 } else {
 return true;
@@ -373,13 +373,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__71675),frontend$components$settings$date_format_row_$_iter__71672(cljs.core.chunk_rest(s__71673__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__72039),frontend$components$settings$date_format_row_$_iter__72036(cljs.core.chunk_rest(s__72037__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__71675),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__72039),null);
 }
 } else {
-var format = cljs.core.first(s__71673__$2);
-return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),format], null),format], null),frontend$components$settings$date_format_row_$_iter__71672(cljs.core.rest(s__71673__$2)));
+var format = cljs.core.first(s__72037__$2);
+return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),format], null),format], null),frontend$components$settings$date_format_row_$_iter__72036(cljs.core.rest(s__72037__$2)));
 }
 } else {
 return null;
@@ -393,32 +393,32 @@ return iter__4652__auto__(cljs.core.sort.cljs$core$IFn$_invoke$arity$1(frontend.
 });
 frontend.components.settings.workflow_row = (function frontend$components$settings$workflow_row(t,preferred_workflow){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.it.sm:grid.sm:grid-cols-3.sm:gap-4.sm:items-start","div.it.sm:grid.sm:grid-cols-3.sm:gap-4.sm:items-start",685540712),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label.block.text-sm.font-medium.leading-5.opacity-70","label.block.text-sm.font-medium.leading-5.opacity-70",643274172),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"for","for",-1323786319),"preferred_workflow"], null),(t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","preferred-workflow","settings-page/preferred-workflow",-899500557)) : t.call(null,new cljs.core.Keyword("settings-page","preferred-workflow","settings-page/preferred-workflow",-899500557)))], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.mt-1.sm:mt-0.sm:col-span-2","div.mt-1.sm:mt-0.sm:col-span-2",1617581337),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.max-w-lg.rounded-md","div.max-w-lg.rounded-md",-1164491035),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"select.form-select.is-small","select.form-select.is-small",1007249743),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"value","value",305978217),cljs.core.name(preferred_workflow),new cljs.core.Keyword(null,"on-change","on-change",-732046149),(function (e){
-return frontend.handler.user.set_preferred_workflow_BANG_((function (p1__71678_SHARP_){
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(p1__71678_SHARP_,new cljs.core.Keyword(null,"now","now",-1650525531))){
+return frontend.handler.user.set_preferred_workflow_BANG_((function (p1__72042_SHARP_){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(p1__72042_SHARP_,new cljs.core.Keyword(null,"now","now",-1650525531))){
 return new cljs.core.Keyword(null,"now","now",-1650525531);
 } else {
 return new cljs.core.Keyword(null,"todo","todo",-1046442570);
 }
 })(cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(clojure.string.lower_case(frontend.util.evalue(e)))));
-})], null),(function (){var iter__4652__auto__ = (function frontend$components$settings$workflow_row_$_iter__71681(s__71682){
+})], null),(function (){var iter__4652__auto__ = (function frontend$components$settings$workflow_row_$_iter__72043(s__72044){
 return (new cljs.core.LazySeq(null,(function (){
-var s__71682__$1 = s__71682;
+var s__72044__$1 = s__72044;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__71682__$1);
+var temp__5720__auto__ = cljs.core.seq(s__72044__$1);
 if(temp__5720__auto__){
-var s__71682__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__71682__$2)){
-var c__4650__auto__ = cljs.core.chunk_first(s__71682__$2);
+var s__72044__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__72044__$2)){
+var c__4650__auto__ = cljs.core.chunk_first(s__72044__$2);
 var size__4651__auto__ = cljs.core.count(c__4650__auto__);
-var b__71684 = cljs.core.chunk_buffer(size__4651__auto__);
-if((function (){var i__71683 = (0);
+var b__72046 = cljs.core.chunk_buffer(size__4651__auto__);
+if((function (){var i__72045 = (0);
 while(true){
-if((i__71683 < size__4651__auto__)){
-var workflow = cljs.core._nth(c__4650__auto__,i__71683);
-cljs.core.chunk_append(b__71684,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.name(workflow),new cljs.core.Keyword(null,"value","value",305978217),cljs.core.name(workflow)], null),((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(workflow,new cljs.core.Keyword(null,"now","now",-1650525531)))?"NOW/LATER":"TODO/DOING")], null));
+if((i__72045 < size__4651__auto__)){
+var workflow = cljs.core._nth(c__4650__auto__,i__72045);
+cljs.core.chunk_append(b__72046,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.name(workflow),new cljs.core.Keyword(null,"value","value",305978217),cljs.core.name(workflow)], null),((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(workflow,new cljs.core.Keyword(null,"now","now",-1650525531)))?"NOW/LATER":"TODO/DOING")], null));
 
-var G__71860 = (i__71683 + (1));
-i__71683 = G__71860;
+var G__72284 = (i__72045 + (1));
+i__72045 = G__72284;
 continue;
 } else {
 return true;
@@ -426,13 +426,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__71684),frontend$components$settings$workflow_row_$_iter__71681(cljs.core.chunk_rest(s__71682__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__72046),frontend$components$settings$workflow_row_$_iter__72043(cljs.core.chunk_rest(s__72044__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__71684),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__72046),null);
 }
 } else {
-var workflow = cljs.core.first(s__71682__$2);
-return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.name(workflow),new cljs.core.Keyword(null,"value","value",305978217),cljs.core.name(workflow)], null),((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(workflow,new cljs.core.Keyword(null,"now","now",-1650525531)))?"NOW/LATER":"TODO/DOING")], null),frontend$components$settings$workflow_row_$_iter__71681(cljs.core.rest(s__71682__$2)));
+var workflow = cljs.core.first(s__72044__$2);
+return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"option","option",65132272),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.name(workflow),new cljs.core.Keyword(null,"value","value",305978217),cljs.core.name(workflow)], null),((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(workflow,new cljs.core.Keyword(null,"now","now",-1650525531)))?"NOW/LATER":"TODO/DOING")], null),frontend$components$settings$workflow_row_$_iter__72043(cljs.core.rest(s__72044__$2)));
 }
 } else {
 return null;
@@ -514,9 +514,9 @@ return null;
 });
 frontend.components.settings.keyboard_shortcuts_row = rum.core.lazy_build(rum.core.build_defc,(function (t){
 return daiquiri.interpreter.interpret(frontend.components.settings.row_with_button_action(new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"left-label","left-label",-1662718913),(t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","customize-shortcuts","settings-page/customize-shortcuts",712859500)) : t.call(null,new cljs.core.Keyword("settings-page","customize-shortcuts","settings-page/customize-shortcuts",712859500))),new cljs.core.Keyword(null,"button-label","button-label",-1402542935),(t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("settings-page","shortcut-settings","settings-page/shortcut-settings",-1071747535)) : t.call(null,new cljs.core.Keyword("settings-page","shortcut-settings","settings-page/shortcut-settings",-1071747535))),new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
-var G__71707 = frontend.handler.route.redirect_BANG_(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"to","to",192099007),new cljs.core.Keyword(null,"shortcut-setting","shortcut-setting",1676654267)], null));
-var fexpr__71706 = frontend.state.close_settings_BANG_();
-return (fexpr__71706.cljs$core$IFn$_invoke$arity$1 ? fexpr__71706.cljs$core$IFn$_invoke$arity$1(G__71707) : fexpr__71706.call(null,G__71707));
+var G__72084 = frontend.handler.route.redirect_BANG_(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"to","to",192099007),new cljs.core.Keyword(null,"shortcut-setting","shortcut-setting",1676654267)], null));
+var fexpr__72083 = frontend.state.close_settings_BANG_();
+return (fexpr__72083.cljs$core$IFn$_invoke$arity$1 ? fexpr__72083.cljs$core$IFn$_invoke$arity$1(G__72084) : fexpr__72083.call(null,G__72084));
 }),new cljs.core.Keyword(null,"-for","-for",-490432963),"customize_shortcuts"], null)));
 }),null,"frontend.components.settings/keyboard-shortcuts-row");
 frontend.components.settings.zotero_settings_row = (function frontend$components$settings$zotero_settings_row(_t){
@@ -561,29 +561,29 @@ return frontend.state.set_developer_mode_BANG_(mode);
 });
 frontend.components.settings.plugin_enabled_switcher = rum.core.lazy_build(rum.core.build_defc,(function (t){
 var value = frontend.state.lsp_enabled_QMARK__or_theme();
-var vec__71725 = rum.core.use_state(value);
-var on_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71725,(0),null);
-var set_on_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71725,(1),null);
+var vec__72098 = rum.core.use_state(value);
+var on_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72098,(0),null);
+var set_on_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72098,(1),null);
 var on_toggle = (function (){
 var v = cljs.core.not(on_QMARK_);
 (set_on_QMARK_.cljs$core$IFn$_invoke$arity$1 ? set_on_QMARK_.cljs$core$IFn$_invoke$arity$1(v) : set_on_QMARK_.call(null,v));
 
 return frontend.storage.set(new cljs.core.Keyword(null,"lsp-core-enabled","lsp-core-enabled",-14878186),v);
 });
-var attrs71723 = frontend.ui.toggle.cljs$core$IFn$_invoke$arity$3(on_QMARK_,on_toggle,true);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71723))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","items-center"], null)], null),attrs71723], 0))):{'className':"flex items-center"}),((cljs.core.map_QMARK_(attrs71723))?[((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.boolean$(value),on_QMARK_))?daiquiri.core.create_element("div",{'className':"relative opacity-70"},[daiquiri.core.create_element("span",{'style':{'top':(-18),'left':(10)},'className':"absolute whitespace-nowrap"},[daiquiri.interpreter.interpret(frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic((t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("plugin","restart","plugin/restart",-927945071)) : t.call(null,new cljs.core.Keyword("plugin","restart","plugin/restart",-927945071))),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
+var attrs72097 = frontend.ui.toggle.cljs$core$IFn$_invoke$arity$3(on_QMARK_,on_toggle,true);
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs72097))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","items-center"], null)], null),attrs72097], 0))):{'className':"flex items-center"}),((cljs.core.map_QMARK_(attrs72097))?[((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.boolean$(value),on_QMARK_))?daiquiri.core.create_element("div",{'className':"relative opacity-70"},[daiquiri.core.create_element("span",{'style':{'top':(-18),'left':(10)},'className':"absolute whitespace-nowrap"},[daiquiri.interpreter.interpret(frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic((t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("plugin","restart","plugin/restart",-927945071)) : t.call(null,new cljs.core.Keyword("plugin","restart","plugin/restart",-927945071))),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
 return logseq.api.relaunch();
-}),new cljs.core.Keyword(null,"small?","small?",95242445),true,new cljs.core.Keyword(null,"intent","intent",-390846953),"logseq"], 0)))])]):null)]:[daiquiri.interpreter.interpret(attrs71723),((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.boolean$(value),on_QMARK_))?daiquiri.core.create_element("div",{'className':"relative opacity-70"},[daiquiri.core.create_element("span",{'style':{'top':(-18),'left':(10)},'className':"absolute whitespace-nowrap"},[daiquiri.interpreter.interpret(frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic((t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("plugin","restart","plugin/restart",-927945071)) : t.call(null,new cljs.core.Keyword("plugin","restart","plugin/restart",-927945071))),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
+}),new cljs.core.Keyword(null,"small?","small?",95242445),true,new cljs.core.Keyword(null,"intent","intent",-390846953),"logseq"], 0)))])]):null)]:[daiquiri.interpreter.interpret(attrs72097),((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.boolean$(value),on_QMARK_))?daiquiri.core.create_element("div",{'className':"relative opacity-70"},[daiquiri.core.create_element("span",{'style':{'top':(-18),'left':(10)},'className':"absolute whitespace-nowrap"},[daiquiri.interpreter.interpret(frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic((t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("plugin","restart","plugin/restart",-927945071)) : t.call(null,new cljs.core.Keyword("plugin","restart","plugin/restart",-927945071))),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
 return logseq.api.relaunch();
 }),new cljs.core.Keyword(null,"small?","small?",95242445),true,new cljs.core.Keyword(null,"intent","intent",-390846953),"logseq"], 0)))])]):null)]));
 }),null,"frontend.components.settings/plugin-enabled-switcher");
-frontend.components.settings.user_proxy_settings = rum.core.lazy_build(rum.core.build_defc,(function (p__71734){
-var map__71735 = p__71734;
-var map__71735__$1 = cljs.core.__destructure_map(map__71735);
-var agent_opts = map__71735__$1;
-var protocol = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71735__$1,new cljs.core.Keyword(null,"protocol","protocol",652470118));
-var host = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71735__$1,new cljs.core.Keyword(null,"host","host",-1558485167));
-var port = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__71735__$1,new cljs.core.Keyword(null,"port","port",1534937262));
+frontend.components.settings.user_proxy_settings = rum.core.lazy_build(rum.core.build_defc,(function (p__72111){
+var map__72112 = p__72111;
+var map__72112__$1 = cljs.core.__destructure_map(map__72112);
+var agent_opts = map__72112__$1;
+var protocol = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72112__$1,new cljs.core.Keyword(null,"protocol","protocol",652470118));
+var host = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72112__$1,new cljs.core.Keyword(null,"host","host",-1558485167));
+var port = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72112__$1,new cljs.core.Keyword(null,"port","port",1534937262));
 return daiquiri.interpreter.interpret(frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),(function (){var temp__5720__auto__ = (function (){var and__4251__auto__ = protocol;
 if(cljs.core.truth_(and__4251__auto__)){
 var and__4251__auto____$1 = host;
@@ -625,8 +625,8 @@ var theme = frontend.state.sub(new cljs.core.Keyword("ui","theme","ui/theme",-12
 var dark_QMARK_ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("dark",theme);
 var system_theme_QMARK_ = frontend.state.sub(new cljs.core.Keyword("ui","system-theme?","ui/system-theme?",1330390822));
 var switch_theme = ((dark_QMARK_)?"light":"dark");
-var attrs71749 = frontend.components.settings.version_row(frontend.context.i18n.t,frontend.version.version);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71749))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["panel-wrap","is-general"], null)], null),attrs71749], 0))):{'className':"panel-wrap is-general"}),((cljs.core.map_QMARK_(attrs71749))?[daiquiri.interpreter.interpret(frontend.components.settings.language_row(frontend.context.i18n.t,preferred_language)),daiquiri.interpreter.interpret(frontend.components.settings.theme_modes_row(frontend.context.i18n.t,switch_theme,system_theme_QMARK_,dark_QMARK_)),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_config_edn()):null),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_custom_css()):null),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_export_css()):null),frontend.components.settings.keyboard_shortcuts_row(frontend.context.i18n.t)]:[daiquiri.interpreter.interpret(attrs71749),daiquiri.interpreter.interpret(frontend.components.settings.language_row(frontend.context.i18n.t,preferred_language)),daiquiri.interpreter.interpret(frontend.components.settings.theme_modes_row(frontend.context.i18n.t,switch_theme,system_theme_QMARK_,dark_QMARK_)),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_config_edn()):null),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_custom_css()):null),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_export_css()):null),frontend.components.settings.keyboard_shortcuts_row(frontend.context.i18n.t)]));
+var attrs72120 = frontend.components.settings.version_row(frontend.context.i18n.t,frontend.version.version);
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs72120))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["panel-wrap","is-general"], null)], null),attrs72120], 0))):{'className':"panel-wrap is-general"}),((cljs.core.map_QMARK_(attrs72120))?[daiquiri.interpreter.interpret(frontend.components.settings.language_row(frontend.context.i18n.t,preferred_language)),daiquiri.interpreter.interpret(frontend.components.settings.theme_modes_row(frontend.context.i18n.t,switch_theme,system_theme_QMARK_,dark_QMARK_)),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_config_edn()):null),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_custom_css()):null),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_export_css()):null),frontend.components.settings.keyboard_shortcuts_row(frontend.context.i18n.t)]:[daiquiri.interpreter.interpret(attrs72120),daiquiri.interpreter.interpret(frontend.components.settings.language_row(frontend.context.i18n.t,preferred_language)),daiquiri.interpreter.interpret(frontend.components.settings.theme_modes_row(frontend.context.i18n.t,switch_theme,system_theme_QMARK_,dark_QMARK_)),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_config_edn()):null),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_custom_css()):null),(cljs.core.truth_(current_repo)?daiquiri.interpreter.interpret(frontend.components.settings.edit_export_css()):null),frontend.components.settings.keyboard_shortcuts_row(frontend.context.i18n.t)]));
 }),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive], null),"frontend.components.settings/settings-general");
 frontend.components.settings.settings_editor = rum.core.lazy_build(rum.core.build_defcs,(function (_state,current_repo){
 var preferred_format = frontend.state.get_preferred_format.cljs$core$IFn$_invoke$arity$0();
@@ -641,8 +641,8 @@ var enable_tooltip_QMARK_ = frontend.state.enable_tooltip_QMARK_();
 var enable_shortcut_tooltip_QMARK_ = frontend.state.sub(new cljs.core.Keyword("ui","shortcut-tooltip?","ui/shortcut-tooltip?",1921963086));
 var show_brackets_QMARK_ = frontend.state.show_brackets_QMARK_();
 var enable_git_auto_push_QMARK_ = frontend.state.enable_git_auto_push_QMARK_(current_repo);
-var attrs71752 = frontend.components.settings.file_format_row(frontend.context.i18n.t,preferred_format);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71752))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["panel-wrap","is-editor"], null)], null),attrs71752], 0))):{'className':"panel-wrap is-editor"}),((cljs.core.map_QMARK_(attrs71752))?[daiquiri.interpreter.interpret(frontend.components.settings.date_format_row(frontend.context.i18n.t,preferred_date_format)),daiquiri.interpreter.interpret(frontend.components.settings.workflow_row(frontend.context.i18n.t,preferred_workflow)),daiquiri.interpreter.interpret(frontend.components.settings.show_brackets_row(frontend.context.i18n.t,show_brackets_QMARK_)),(cljs.core.truth_(frontend.util.electron_QMARK_())?frontend.components.settings.switch_spell_check_row(frontend.context.i18n.t):null),daiquiri.interpreter.interpret(frontend.components.settings.outdenting_row(frontend.context.i18n.t,logical_outdenting_QMARK_)),(cljs.core.truth_((function (){var or__4253__auto__ = frontend.util.mobile_QMARK_();
+var attrs72135 = frontend.components.settings.file_format_row(frontend.context.i18n.t,preferred_format);
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs72135))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["panel-wrap","is-editor"], null)], null),attrs72135], 0))):{'className':"panel-wrap is-editor"}),((cljs.core.map_QMARK_(attrs72135))?[daiquiri.interpreter.interpret(frontend.components.settings.date_format_row(frontend.context.i18n.t,preferred_date_format)),daiquiri.interpreter.interpret(frontend.components.settings.workflow_row(frontend.context.i18n.t,preferred_workflow)),daiquiri.interpreter.interpret(frontend.components.settings.show_brackets_row(frontend.context.i18n.t,show_brackets_QMARK_)),(cljs.core.truth_(frontend.util.electron_QMARK_())?frontend.components.settings.switch_spell_check_row(frontend.context.i18n.t):null),daiquiri.interpreter.interpret(frontend.components.settings.outdenting_row(frontend.context.i18n.t,logical_outdenting_QMARK_)),(cljs.core.truth_((function (){var or__4253__auto__ = frontend.util.mobile_QMARK_();
 if(cljs.core.truth_(or__4253__auto__)){
 return or__4253__auto__;
 } else {
@@ -660,7 +660,7 @@ return frontend.components.settings.update_home_page(e);
 } else {
 return null;
 }
-}),'className':"form-input is-small transition duration-150 ease-in-out"},[])])])]):null),daiquiri.interpreter.interpret(frontend.components.settings.encryption_row(frontend.context.i18n.t,enable_encryption_QMARK_)),daiquiri.interpreter.interpret(frontend.components.settings.enable_all_pages_public_row(frontend.context.i18n.t,enable_all_pages_public_QMARK_)),daiquiri.interpreter.interpret(frontend.components.settings.zotero_settings_row(frontend.context.i18n.t)),daiquiri.interpreter.interpret(frontend.components.settings.auto_push_row(frontend.context.i18n.t,current_repo,enable_git_auto_push_QMARK_))]:[daiquiri.interpreter.interpret(attrs71752),daiquiri.interpreter.interpret(frontend.components.settings.date_format_row(frontend.context.i18n.t,preferred_date_format)),daiquiri.interpreter.interpret(frontend.components.settings.workflow_row(frontend.context.i18n.t,preferred_workflow)),daiquiri.interpreter.interpret(frontend.components.settings.show_brackets_row(frontend.context.i18n.t,show_brackets_QMARK_)),(cljs.core.truth_(frontend.util.electron_QMARK_())?frontend.components.settings.switch_spell_check_row(frontend.context.i18n.t):null),daiquiri.interpreter.interpret(frontend.components.settings.outdenting_row(frontend.context.i18n.t,logical_outdenting_QMARK_)),(cljs.core.truth_((function (){var or__4253__auto__ = frontend.util.mobile_QMARK_();
+}),'className':"form-input is-small transition duration-150 ease-in-out"},[])])])]):null),daiquiri.interpreter.interpret(frontend.components.settings.encryption_row(frontend.context.i18n.t,enable_encryption_QMARK_)),daiquiri.interpreter.interpret(frontend.components.settings.enable_all_pages_public_row(frontend.context.i18n.t,enable_all_pages_public_QMARK_)),daiquiri.interpreter.interpret(frontend.components.settings.zotero_settings_row(frontend.context.i18n.t)),daiquiri.interpreter.interpret(frontend.components.settings.auto_push_row(frontend.context.i18n.t,current_repo,enable_git_auto_push_QMARK_))]:[daiquiri.interpreter.interpret(attrs72135),daiquiri.interpreter.interpret(frontend.components.settings.date_format_row(frontend.context.i18n.t,preferred_date_format)),daiquiri.interpreter.interpret(frontend.components.settings.workflow_row(frontend.context.i18n.t,preferred_workflow)),daiquiri.interpreter.interpret(frontend.components.settings.show_brackets_row(frontend.context.i18n.t,show_brackets_QMARK_)),(cljs.core.truth_(frontend.util.electron_QMARK_())?frontend.components.settings.switch_spell_check_row(frontend.context.i18n.t):null),daiquiri.interpreter.interpret(frontend.components.settings.outdenting_row(frontend.context.i18n.t,logical_outdenting_QMARK_)),(cljs.core.truth_((function (){var or__4253__auto__ = frontend.util.mobile_QMARK_();
 if(cljs.core.truth_(or__4253__auto__)){
 return or__4253__auto__;
 } else {
@@ -687,14 +687,14 @@ frontend.components.settings.settings_advanced = rum.core.lazy_build(rum.core.bu
 var instrument_disabled_QMARK_ = frontend.state.sub(new cljs.core.Keyword("instrument","disabled?","instrument/disabled?",165654178));
 var developer_mode_QMARK_ = frontend.state.sub(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("ui","developer-mode?","ui/developer-mode?",-664501878)], null));
 var https_agent_opts = frontend.state.sub(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("electron","user-cfgs","electron/user-cfgs",-76972489),new cljs.core.Keyword("settings","agent","settings/agent",2144439922)], null));
-var attrs71788 = (cljs.core.truth_((function (){var and__4251__auto__ = frontend.util.mac_QMARK_;
+var attrs72163 = (cljs.core.truth_((function (){var and__4251__auto__ = frontend.util.mac_QMARK_;
 if(cljs.core.truth_(and__4251__auto__)){
 return frontend.util.electron_QMARK_();
 } else {
 return and__4251__auto__;
 }
 })())?frontend.components.settings.app_auto_update_row(frontend.context.i18n.t):null);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71788))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["panel-wrap","is-advanced"], null)], null),attrs71788], 0))):{'className':"panel-wrap is-advanced"}),((cljs.core.map_QMARK_(attrs71788))?[daiquiri.interpreter.interpret(frontend.components.settings.usage_diagnostics_row(frontend.context.i18n.t,instrument_disabled_QMARK_)),(cljs.core.truth_(frontend.mobile.util.is_native_platform_QMARK_())?null:daiquiri.interpreter.interpret(frontend.components.settings.developer_mode_row(frontend.context.i18n.t,developer_mode_QMARK_))),(cljs.core.truth_(frontend.util.electron_QMARK_())?daiquiri.interpreter.interpret(frontend.components.settings.plugin_system_switcher_row()):null),(cljs.core.truth_(frontend.util.electron_QMARK_())?daiquiri.interpreter.interpret(frontend.components.settings.https_user_agent_row(https_agent_opts)):null),daiquiri.interpreter.interpret(frontend.components.settings.clear_cache_row(frontend.context.i18n.t)),daiquiri.interpreter.interpret(frontend.ui.admonition(new cljs.core.Keyword(null,"warning","warning",-1685650671),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Clearing the cache will discard open graphs. You will lose unsaved changes."], null)))]:[daiquiri.interpreter.interpret(attrs71788),daiquiri.interpreter.interpret(frontend.components.settings.usage_diagnostics_row(frontend.context.i18n.t,instrument_disabled_QMARK_)),(cljs.core.truth_(frontend.mobile.util.is_native_platform_QMARK_())?null:daiquiri.interpreter.interpret(frontend.components.settings.developer_mode_row(frontend.context.i18n.t,developer_mode_QMARK_))),(cljs.core.truth_(frontend.util.electron_QMARK_())?daiquiri.interpreter.interpret(frontend.components.settings.plugin_system_switcher_row()):null),(cljs.core.truth_(frontend.util.electron_QMARK_())?daiquiri.interpreter.interpret(frontend.components.settings.https_user_agent_row(https_agent_opts)):null),daiquiri.interpreter.interpret(frontend.components.settings.clear_cache_row(frontend.context.i18n.t)),daiquiri.interpreter.interpret(frontend.ui.admonition(new cljs.core.Keyword(null,"warning","warning",-1685650671),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Clearing the cache will discard open graphs. You will lose unsaved changes."], null)))]));
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs72163))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["panel-wrap","is-advanced"], null)], null),attrs72163], 0))):{'className':"panel-wrap is-advanced"}),((cljs.core.map_QMARK_(attrs72163))?[daiquiri.interpreter.interpret(frontend.components.settings.usage_diagnostics_row(frontend.context.i18n.t,instrument_disabled_QMARK_)),(cljs.core.truth_(frontend.mobile.util.is_native_platform_QMARK_())?null:daiquiri.interpreter.interpret(frontend.components.settings.developer_mode_row(frontend.context.i18n.t,developer_mode_QMARK_))),(cljs.core.truth_(frontend.util.electron_QMARK_())?daiquiri.interpreter.interpret(frontend.components.settings.plugin_system_switcher_row()):null),(cljs.core.truth_(frontend.util.electron_QMARK_())?daiquiri.interpreter.interpret(frontend.components.settings.https_user_agent_row(https_agent_opts)):null),daiquiri.interpreter.interpret(frontend.components.settings.clear_cache_row(frontend.context.i18n.t)),daiquiri.interpreter.interpret(frontend.ui.admonition(new cljs.core.Keyword(null,"warning","warning",-1685650671),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Clearing the cache will discard open graphs. You will lose unsaved changes."], null)))]:[daiquiri.interpreter.interpret(attrs72163),daiquiri.interpreter.interpret(frontend.components.settings.usage_diagnostics_row(frontend.context.i18n.t,instrument_disabled_QMARK_)),(cljs.core.truth_(frontend.mobile.util.is_native_platform_QMARK_())?null:daiquiri.interpreter.interpret(frontend.components.settings.developer_mode_row(frontend.context.i18n.t,developer_mode_QMARK_))),(cljs.core.truth_(frontend.util.electron_QMARK_())?daiquiri.interpreter.interpret(frontend.components.settings.plugin_system_switcher_row()):null),(cljs.core.truth_(frontend.util.electron_QMARK_())?daiquiri.interpreter.interpret(frontend.components.settings.https_user_agent_row(https_agent_opts)):null),daiquiri.interpreter.interpret(frontend.components.settings.clear_cache_row(frontend.context.i18n.t)),daiquiri.interpreter.interpret(frontend.ui.admonition(new cljs.core.Keyword(null,"warning","warning",-1685650671),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Clearing the cache will discard open graphs. You will lose unsaved changes."], null)))]));
 }),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive], null),"frontend.components.settings/settings-advanced");
 frontend.components.settings.settings = rum.core.lazy_build(rum.core.build_defcs,(function (state){
 var current_repo = frontend.state.sub(new cljs.core.Keyword("git","current-repo","git/current-repo",107438825));
@@ -707,40 +707,40 @@ return and__4251__auto__;
 }
 })();
 var _STAR_active = new cljs.core.Keyword("frontend.components.settings","active","frontend.components.settings/active",-1461390411).cljs$core$IFn$_invoke$arity$1(state);
-return daiquiri.core.create_element("div",{'id':"settings",'className':"cp__settings-main"},[daiquiri.core.create_element("header",null,[(function (){var attrs71790 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"settings","settings",1556144875)], 0));
-return daiquiri.core.create_element("h1",((cljs.core.map_QMARK_(attrs71790))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["title"], null)], null),attrs71790], 0))):{'className':"title"}),((cljs.core.map_QMARK_(attrs71790))?null:[daiquiri.interpreter.interpret(attrs71790)]));
-})()]),daiquiri.core.create_element("div",{'className':"cp__settings-inner md:flex"},[daiquiri.core.create_element("aside",{'style':{'minWidth':"10rem"},'className':"md:w-64"},[daiquiri.core.create_element("ul",null,[cljs.core.into_array.cljs$core$IFn$_invoke$arity$1((function (){var iter__4652__auto__ = (function frontend$components$settings$iter__71794(s__71795){
+return daiquiri.core.create_element("div",{'id':"settings",'className':"cp__settings-main"},[daiquiri.core.create_element("header",null,[(function (){var attrs72196 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"settings","settings",1556144875)], 0));
+return daiquiri.core.create_element("h1",((cljs.core.map_QMARK_(attrs72196))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["title"], null)], null),attrs72196], 0))):{'className':"title"}),((cljs.core.map_QMARK_(attrs72196))?null:[daiquiri.interpreter.interpret(attrs72196)]));
+})()]),daiquiri.core.create_element("div",{'className':"cp__settings-inner md:flex"},[daiquiri.core.create_element("aside",{'style':{'minWidth':"10rem"},'className':"md:w-64"},[daiquiri.core.create_element("ul",null,[cljs.core.into_array.cljs$core$IFn$_invoke$arity$1((function (){var iter__4652__auto__ = (function frontend$components$settings$iter__72203(s__72204){
 return (new cljs.core.LazySeq(null,(function (){
-var s__71795__$1 = s__71795;
+var s__72204__$1 = s__72204;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__71795__$1);
+var temp__5720__auto__ = cljs.core.seq(s__72204__$1);
 if(temp__5720__auto__){
-var s__71795__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__71795__$2)){
-var c__4650__auto__ = cljs.core.chunk_first(s__71795__$2);
+var s__72204__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__72204__$2)){
+var c__4650__auto__ = cljs.core.chunk_first(s__72204__$2);
 var size__4651__auto__ = cljs.core.count(c__4650__auto__);
-var b__71797 = cljs.core.chunk_buffer(size__4651__auto__);
-if((function (){var i__71796 = (0);
+var b__72206 = cljs.core.chunk_buffer(size__4651__auto__);
+if((function (){var i__72205 = (0);
 while(true){
-if((i__71796 < size__4651__auto__)){
-var vec__71798 = cljs.core._nth(c__4650__auto__,i__71796);
-var label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71798,(0),null);
-var text = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71798,(1),null);
-var icon = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71798,(2),null);
-cljs.core.chunk_append(b__71797,(cljs.core.truth_(label)?daiquiri.core.create_element("li",{'key':text,'onClick':((function (i__71796,vec__71798,label,text,icon,c__4650__auto__,size__4651__auto__,b__71797,s__71795__$2,temp__5720__auto__,current_repo,_installed_plugins,plugins_of_settings,_STAR_active){
+if((i__72205 < size__4651__auto__)){
+var vec__72213 = cljs.core._nth(c__4650__auto__,i__72205);
+var label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72213,(0),null);
+var text = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72213,(1),null);
+var icon = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72213,(2),null);
+cljs.core.chunk_append(b__72206,(cljs.core.truth_(label)?daiquiri.core.create_element("li",{'key':text,'onClick':((function (i__72205,vec__72213,label,text,icon,c__4650__auto__,size__4651__auto__,b__72206,s__72204__$2,temp__5720__auto__,current_repo,_installed_plugins,plugins_of_settings,_STAR_active){
 return (function (){
 return cljs.core.reset_BANG_(_STAR_active,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [label,cljs.core.first(cljs.core.deref(_STAR_active))], null));
-});})(i__71796,vec__71798,label,text,icon,c__4650__auto__,size__4651__auto__,b__71797,s__71795__$2,temp__5720__auto__,current_repo,_installed_plugins,plugins_of_settings,_STAR_active))
-,'className':daiquiri.util.join_classes(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [frontend.util.classnames(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"active","active",1895962068),cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(label,cljs.core.first(cljs.core.deref(_STAR_active)))], null)], null))], null))},[(function (){var attrs71810 = icon;
-return daiquiri.core.create_element("a",((cljs.core.map_QMARK_(attrs71810))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","items-center"], null)], null),attrs71810], 0))):{'className':"flex items-center"}),((cljs.core.map_QMARK_(attrs71810))?[(function (){var attrs71811 = text;
-return daiquiri.core.create_element("strong",((cljs.core.map_QMARK_(attrs71811))?daiquiri.interpreter.element_attributes(attrs71811):null),((cljs.core.map_QMARK_(attrs71811))?null:[daiquiri.interpreter.interpret(attrs71811)]));
-})()]:[daiquiri.interpreter.interpret(attrs71810),(function (){var attrs71812 = text;
-return daiquiri.core.create_element("strong",((cljs.core.map_QMARK_(attrs71812))?daiquiri.interpreter.element_attributes(attrs71812):null),((cljs.core.map_QMARK_(attrs71812))?null:[daiquiri.interpreter.interpret(attrs71812)]));
+});})(i__72205,vec__72213,label,text,icon,c__4650__auto__,size__4651__auto__,b__72206,s__72204__$2,temp__5720__auto__,current_repo,_installed_plugins,plugins_of_settings,_STAR_active))
+,'className':daiquiri.util.join_classes(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [frontend.util.classnames(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"active","active",1895962068),cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(label,cljs.core.first(cljs.core.deref(_STAR_active)))], null)], null))], null))},[(function (){var attrs72217 = icon;
+return daiquiri.core.create_element("a",((cljs.core.map_QMARK_(attrs72217))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","items-center"], null)], null),attrs72217], 0))):{'className':"flex items-center"}),((cljs.core.map_QMARK_(attrs72217))?[(function (){var attrs72218 = text;
+return daiquiri.core.create_element("strong",((cljs.core.map_QMARK_(attrs72218))?daiquiri.interpreter.element_attributes(attrs72218):null),((cljs.core.map_QMARK_(attrs72218))?null:[daiquiri.interpreter.interpret(attrs72218)]));
+})()]:[daiquiri.interpreter.interpret(attrs72217),(function (){var attrs72219 = text;
+return daiquiri.core.create_element("strong",((cljs.core.map_QMARK_(attrs72219))?daiquiri.interpreter.element_attributes(attrs72219):null),((cljs.core.map_QMARK_(attrs72219))?null:[daiquiri.interpreter.interpret(attrs72219)]));
 })()]));
 })()]):null));
 
-var G__71882 = (i__71796 + (1));
-i__71796 = G__71882;
+var G__72305 = (i__72205 + (1));
+i__72205 = G__72305;
 continue;
 } else {
 return true;
@@ -748,26 +748,26 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__71797),frontend$components$settings$iter__71794(cljs.core.chunk_rest(s__71795__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__72206),frontend$components$settings$iter__72203(cljs.core.chunk_rest(s__72204__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__71797),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__72206),null);
 }
 } else {
-var vec__71813 = cljs.core.first(s__71795__$2);
-var label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71813,(0),null);
-var text = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71813,(1),null);
-var icon = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__71813,(2),null);
-return cljs.core.cons((cljs.core.truth_(label)?daiquiri.core.create_element("li",{'key':text,'onClick':((function (vec__71813,label,text,icon,s__71795__$2,temp__5720__auto__,current_repo,_installed_plugins,plugins_of_settings,_STAR_active){
+var vec__72225 = cljs.core.first(s__72204__$2);
+var label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72225,(0),null);
+var text = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72225,(1),null);
+var icon = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72225,(2),null);
+return cljs.core.cons((cljs.core.truth_(label)?daiquiri.core.create_element("li",{'key':text,'onClick':((function (vec__72225,label,text,icon,s__72204__$2,temp__5720__auto__,current_repo,_installed_plugins,plugins_of_settings,_STAR_active){
 return (function (){
 return cljs.core.reset_BANG_(_STAR_active,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [label,cljs.core.first(cljs.core.deref(_STAR_active))], null));
-});})(vec__71813,label,text,icon,s__71795__$2,temp__5720__auto__,current_repo,_installed_plugins,plugins_of_settings,_STAR_active))
-,'className':daiquiri.util.join_classes(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [frontend.util.classnames(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"active","active",1895962068),cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(label,cljs.core.first(cljs.core.deref(_STAR_active)))], null)], null))], null))},[(function (){var attrs71810 = icon;
-return daiquiri.core.create_element("a",((cljs.core.map_QMARK_(attrs71810))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","items-center"], null)], null),attrs71810], 0))):{'className':"flex items-center"}),((cljs.core.map_QMARK_(attrs71810))?[(function (){var attrs71811 = text;
-return daiquiri.core.create_element("strong",((cljs.core.map_QMARK_(attrs71811))?daiquiri.interpreter.element_attributes(attrs71811):null),((cljs.core.map_QMARK_(attrs71811))?null:[daiquiri.interpreter.interpret(attrs71811)]));
-})()]:[daiquiri.interpreter.interpret(attrs71810),(function (){var attrs71812 = text;
-return daiquiri.core.create_element("strong",((cljs.core.map_QMARK_(attrs71812))?daiquiri.interpreter.element_attributes(attrs71812):null),((cljs.core.map_QMARK_(attrs71812))?null:[daiquiri.interpreter.interpret(attrs71812)]));
+});})(vec__72225,label,text,icon,s__72204__$2,temp__5720__auto__,current_repo,_installed_plugins,plugins_of_settings,_STAR_active))
+,'className':daiquiri.util.join_classes(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [frontend.util.classnames(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"active","active",1895962068),cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(label,cljs.core.first(cljs.core.deref(_STAR_active)))], null)], null))], null))},[(function (){var attrs72217 = icon;
+return daiquiri.core.create_element("a",((cljs.core.map_QMARK_(attrs72217))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","items-center"], null)], null),attrs72217], 0))):{'className':"flex items-center"}),((cljs.core.map_QMARK_(attrs72217))?[(function (){var attrs72218 = text;
+return daiquiri.core.create_element("strong",((cljs.core.map_QMARK_(attrs72218))?daiquiri.interpreter.element_attributes(attrs72218):null),((cljs.core.map_QMARK_(attrs72218))?null:[daiquiri.interpreter.interpret(attrs72218)]));
+})()]:[daiquiri.interpreter.interpret(attrs72217),(function (){var attrs72219 = text;
+return daiquiri.core.create_element("strong",((cljs.core.map_QMARK_(attrs72219))?daiquiri.interpreter.element_attributes(attrs72219):null),((cljs.core.map_QMARK_(attrs72219))?null:[daiquiri.interpreter.interpret(attrs72219)]));
 })()]));
-})()]):null),frontend$components$settings$iter__71794(cljs.core.rest(s__71795__$2)));
+})()]):null),frontend$components$settings$iter__72203(cljs.core.rest(s__72204__$2)));
 }
 } else {
 return null;
@@ -777,9 +777,9 @@ break;
 }),null,null));
 });
 return iter__4652__auto__(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"general","general",380803686),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("settings-page","tab-general","settings-page/tab-general",1840304513)], 0)),frontend.ui.icon.cljs$core$IFn$_invoke$arity$2("adjustments",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),(20)], null)], null))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"editor","editor",-989377770),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("settings-page","tab-editor","settings-page/tab-editor",-1772715324)], 0)),frontend.ui.icon.cljs$core$IFn$_invoke$arity$2("writing",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),(20)], null)], null))], null),(cljs.core.truth_(frontend.mobile.util.is_native_platform_QMARK_())?null:new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"git","git",-163493751),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("settings-page","tab-version-control","settings-page/tab-version-control",-65211424)], 0)),frontend.ui.icon.cljs$core$IFn$_invoke$arity$2("history",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),(20)], null)], null))], null)),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"advanced","advanced",-451287892),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("settings-page","tab-advanced","settings-page/tab-advanced",-1070820797)], 0)),frontend.ui.icon.cljs$core$IFn$_invoke$arity$2("bulb",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),(20)], null)], null))], null),(cljs.core.truth_(plugins_of_settings)?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"plugins-setting","plugins-setting",-1797317643),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"settings-of-plugins","settings-of-plugins",-1896805353)], 0)),frontend.ui.icon.cljs$core$IFn$_invoke$arity$1("puzzle")], null):null)], null));
-})())])]),(function (){var attrs71793 = (function (){var G__71820 = cljs.core.first(cljs.core.deref(_STAR_active));
-var G__71820__$1 = (((G__71820 instanceof cljs.core.Keyword))?G__71820.fqn:null);
-switch (G__71820__$1) {
+})())])]),(function (){var attrs72202 = (function (){var G__72230 = cljs.core.first(cljs.core.deref(_STAR_active));
+var G__72230__$1 = (((G__72230 instanceof cljs.core.Keyword))?G__72230.fqn:null);
+switch (G__72230__$1) {
 case "plugins-setting":
 var label = cljs.core.second(cljs.core.deref(_STAR_active));
 frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("go","plugins-settings","go/plugins-settings",-583021288),new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(cljs.core.first(plugins_of_settings))], null));
@@ -810,7 +810,7 @@ return null;
 
 }
 })();
-return daiquiri.core.create_element("article",((cljs.core.map_QMARK_(attrs71793))?daiquiri.interpreter.element_attributes(attrs71793):null),((cljs.core.map_QMARK_(attrs71793))?null:[daiquiri.interpreter.interpret(attrs71793)]));
+return daiquiri.core.create_element("article",((cljs.core.map_QMARK_(attrs72202))?daiquiri.interpreter.element_attributes(attrs72202):null),((cljs.core.map_QMARK_(attrs72202))?null:[daiquiri.interpreter.interpret(attrs72202)]));
 })()])]);
 }),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.local.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"general","general",380803686),new cljs.core.Keyword(null,"general","general",380803686)], null),new cljs.core.Keyword("frontend.components.settings","active","frontend.components.settings/active",-1461390411)),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"will-mount","will-mount",-434633071),(function (state){
 frontend.state.load_app_user_cfgs.cljs$core$IFn$_invoke$arity$0();

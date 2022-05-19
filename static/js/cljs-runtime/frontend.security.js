@@ -8,7 +8,7 @@ var and__4251__auto____$2 = new cljs.core.Keyword(null,"href","href",-793805698)
 if(cljs.core.truth_(and__4251__auto____$2)){
 var and__4251__auto____$3 = new cljs.core.Keyword(null,"href","href",-793805698).cljs$core$IFn$_invoke$arity$1(cljs.core.second(f));
 if(cljs.core.truth_(and__4251__auto____$3)){
-return logseq.graph_parser.util.safe_re_find(/javascript/i,new cljs.core.Keyword(null,"href","href",-793805698).cljs$core$IFn$_invoke$arity$1(cljs.core.second(f)));
+return frontend.util.safe_re_find(/javascript/i,new cljs.core.Keyword(null,"href","href",-793805698).cljs$core$IFn$_invoke$arity$1(cljs.core.second(f)));
 } else {
 return and__4251__auto____$3;
 }

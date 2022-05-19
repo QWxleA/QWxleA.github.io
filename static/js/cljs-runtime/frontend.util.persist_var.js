@@ -8,7 +8,7 @@ return frontend.config.get_file_path(frontend.state.get_current_repo(),[frontend
  */
 frontend.util.persist_var.ILoad = function(){};
 
-var frontend$util$persist_var$ILoad$_load$dyn_95705 = (function (this$){
+var frontend$util$persist_var$ILoad$_load$dyn_64044 = (function (this$){
 var x__4550__auto__ = (((this$ == null))?null:this$);
 var m__4551__auto__ = (frontend.util.persist_var._load[goog.typeOf(x__4550__auto__)]);
 if((!((m__4551__auto__ == null)))){
@@ -26,11 +26,11 @@ frontend.util.persist_var._load = (function frontend$util$persist_var$_load(this
 if((((!((this$ == null)))) && ((!((this$.frontend$util$persist_var$ILoad$_load$arity$1 == null)))))){
 return this$.frontend$util$persist_var$ILoad$_load$arity$1(this$);
 } else {
-return frontend$util$persist_var$ILoad$_load$dyn_95705(this$);
+return frontend$util$persist_var$ILoad$_load$dyn_64044(this$);
 }
 });
 
-var frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_95706 = (function (this$){
+var frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_64049 = (function (this$){
 var x__4550__auto__ = (((this$ == null))?null:this$);
 var m__4551__auto__ = (frontend.util.persist_var._loaded_QMARK_[goog.typeOf(x__4550__auto__)]);
 if((!((m__4551__auto__ == null)))){
@@ -48,7 +48,7 @@ frontend.util.persist_var._loaded_QMARK_ = (function frontend$util$persist_var$_
 if((((!((this$ == null)))) && ((!((this$.frontend$util$persist_var$ILoad$_loaded_QMARK_$arity$1 == null)))))){
 return this$.frontend$util$persist_var$ILoad$_loaded_QMARK_$arity$1(this$);
 } else {
-return frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_95706(this$);
+return frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_64049(this$);
 }
 });
 
@@ -58,7 +58,7 @@ return frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_95706(this$);
  */
 frontend.util.persist_var.ISave = function(){};
 
-var frontend$util$persist_var$ISave$_save$dyn_95707 = (function (this$){
+var frontend$util$persist_var$ISave$_save$dyn_64055 = (function (this$){
 var x__4550__auto__ = (((this$ == null))?null:this$);
 var m__4551__auto__ = (frontend.util.persist_var._save[goog.typeOf(x__4550__auto__)]);
 if((!((m__4551__auto__ == null)))){
@@ -76,7 +76,7 @@ frontend.util.persist_var._save = (function frontend$util$persist_var$_save(this
 if((((!((this$ == null)))) && ((!((this$.frontend$util$persist_var$ISave$_save$arity$1 == null)))))){
 return this$.frontend$util$persist_var$ISave$_save$arity$1(this$);
 } else {
-return frontend$util$persist_var$ISave$_save$dyn_95707(this$);
+return frontend$util$persist_var$ISave$_save$dyn_64055(this$);
 }
 });
 
@@ -86,7 +86,7 @@ return frontend$util$persist_var$ISave$_save$dyn_95707(this$);
  */
 frontend.util.persist_var.IResetValue = function(){};
 
-var frontend$util$persist_var$IResetValue$_reset_value_BANG_$dyn_95710 = (function (this$,new$,graph){
+var frontend$util$persist_var$IResetValue$_reset_value_BANG_$dyn_64056 = (function (this$,new$,graph){
 var x__4550__auto__ = (((this$ == null))?null:this$);
 var m__4551__auto__ = (frontend.util.persist_var._reset_value_BANG_[goog.typeOf(x__4550__auto__)]);
 if((!((m__4551__auto__ == null)))){
@@ -104,7 +104,7 @@ frontend.util.persist_var._reset_value_BANG_ = (function frontend$util$persist_v
 if((((!((this$ == null)))) && ((!((this$.frontend$util$persist_var$IResetValue$_reset_value_BANG_$arity$3 == null)))))){
 return this$.frontend$util$persist_var$IResetValue$_reset_value_BANG_$arity$3(this$,new$,graph);
 } else {
-return frontend$util$persist_var$IResetValue$_reset_value_BANG_$dyn_95710(this$,new$,graph);
+return frontend$util$persist_var$IResetValue$_reset_value_BANG_$dyn_64056(this$,new$,graph);
 }
 });
 
@@ -146,13 +146,13 @@ return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.catch$.cljs$
 return promesa.protocols._promise((function (){var temp__5720__auto__ = (function (){var and__4251__auto__ = (!((content == null)));
 if(and__4251__auto__){
 try{return cljs.reader.read_string.cljs$core$IFn$_invoke$arity$1(content);
-}catch (e95686){if((e95686 instanceof Error)){
-var e = e95686;
+}catch (e64002){if((e64002 instanceof Error)){
+var e = e64002;
 cljs.core.println.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("load persist-var failed: %s",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.util.persist_var.load_path(self__.location)], 0))], 0));
 
 return console.dir(e);
 } else {
-throw e95686;
+throw e64002;
 
 }
 }} else {
