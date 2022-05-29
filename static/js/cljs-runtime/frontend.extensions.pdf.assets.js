@@ -13,9 +13,9 @@ var web_link_QMARK_ = clojure.string.starts_with_QMARK_(full_path,"http");
 var ext_name = frontend.util.get_file_ext(filename);
 var url = ((web_link_QMARK_)?full_path:(cljs.core.truth_(frontend.util.absolute_path_QMARK_(full_path))?["file://",cljs.core.str.cljs$core$IFn$_invoke$arity$1(full_path)].join(''):((clojure.string.starts_with_QMARK_(full_path,"file:/"))?full_path:(function (){var full_path__$1 = clojure.string.replace(full_path,/^[.\\/\\]+/,"");
 var full_path__$2 = (((!(clojure.string.starts_with_QMARK_(full_path__$1,logseq.graph_parser.config.local_assets_dir))))?(frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(logseq.graph_parser.config.local_assets_dir,full_path__$1) : frontend.util.node_path.join.call(null,logseq.graph_parser.config.local_assets_dir,full_path__$1)):full_path__$1);
-return ["file://",cljs.core.str.cljs$core$IFn$_invoke$arity$1((function (){var G__56509 = frontend.config.get_repo_dir(frontend.state.get_current_repo());
-var G__56510 = full_path__$2;
-return (frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(G__56509,G__56510) : frontend.util.node_path.join.call(null,G__56509,G__56510));
+return ["file://",cljs.core.str.cljs$core$IFn$_invoke$arity$1((function (){var G__48215 = frontend.config.get_repo_dir(frontend.state.get_current_repo());
+var G__48216 = full_path__$2;
+return (frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(G__48215,G__48216) : frontend.util.node_path.join.call(null,G__48215,G__48216));
 })())].join('');
 })()
 )));
@@ -33,10 +33,10 @@ return new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"ke
 return null;
 }
 });
-frontend.extensions.pdf.assets.load_hls_data$ = (function frontend$extensions$pdf$assets$load_hls_data$(p__56524){
-var map__56525 = p__56524;
-var map__56525__$1 = cljs.core.__destructure_map(map__56525);
-var hls_file = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56525__$1,new cljs.core.Keyword(null,"hls-file","hls-file",192681120));
+frontend.extensions.pdf.assets.load_hls_data$ = (function frontend$extensions$pdf$assets$load_hls_data$(p__48218){
+var map__48220 = p__48218;
+var map__48220__$1 = cljs.core.__destructure_map(map__48220);
+var hls_file = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48220__$1,new cljs.core.Keyword(null,"hls-file","hls-file",192681120));
 if(cljs.core.truth_(hls_file)){
 var repo_cur = frontend.state.get_current_repo();
 var repo_dir = frontend.config.get_repo_dir(repo_cur);
@@ -53,10 +53,10 @@ return promesa.protocols._promise(data);
 return null;
 }
 });
-frontend.extensions.pdf.assets.persist_hls_data$ = (function frontend$extensions$pdf$assets$persist_hls_data$(p__56534,highlights){
-var map__56535 = p__56534;
-var map__56535__$1 = cljs.core.__destructure_map(map__56535);
-var hls_file = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56535__$1,new cljs.core.Keyword(null,"hls-file","hls-file",192681120));
+frontend.extensions.pdf.assets.persist_hls_data$ = (function frontend$extensions$pdf$assets$persist_hls_data$(p__48223,highlights){
+var map__48224 = p__48223;
+var map__48224__$1 = cljs.core.__destructure_map(map__48224);
+var hls_file = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48224__$1,new cljs.core.Keyword(null,"hls-file","hls-file",192681120));
 if(cljs.core.truth_(hls_file)){
 var repo_cur = frontend.state.get_current_repo();
 var repo_dir = frontend.config.get_repo_dir(repo_cur);
@@ -89,13 +89,13 @@ return (!((cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(hl,new cljs.core.Persi
 return and__5041__auto__;
 }
 });
-frontend.extensions.pdf.assets.persist_hl_area_image$ = (function frontend$extensions$pdf$assets$persist_hl_area_image$(viewer,current,new_hl,old_hl,p__56553){
-var map__56554 = p__56553;
-var map__56554__$1 = cljs.core.__destructure_map(map__56554);
-var top = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56554__$1,new cljs.core.Keyword(null,"top","top",-1856271961));
-var left = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56554__$1,new cljs.core.Keyword(null,"left","left",-399115937));
-var width = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56554__$1,new cljs.core.Keyword(null,"width","width",-384071477));
-var height = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56554__$1,new cljs.core.Keyword(null,"height","height",1025178622));
+frontend.extensions.pdf.assets.persist_hl_area_image$ = (function frontend$extensions$pdf$assets$persist_hl_area_image$(viewer,current,new_hl,old_hl,p__48226){
+var map__48227 = p__48226;
+var map__48227__$1 = cljs.core.__destructure_map(map__48227);
+var top = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48227__$1,new cljs.core.Keyword(null,"top","top",-1856271961));
+var left = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48227__$1,new cljs.core.Keyword(null,"left","left",-399115937));
+var width = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48227__$1,new cljs.core.Keyword(null,"width","width",-384071477));
+var height = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48227__$1,new cljs.core.Keyword(null,"height","height",1025178622));
 var temp__5720__auto__ = (function (){var and__5041__auto__ = new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(current);
 if(cljs.core.truth_(and__5041__auto__)){
 return viewer.getPageView((new cljs.core.Keyword(null,"page","page",849072397).cljs$core$IFn$_invoke$arity$1(new_hl) - (1))).canvas;
@@ -127,10 +127,10 @@ var callback = (function (png){
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(console.time(new cljs.core.Keyword(null,"write-area-image","write-area-image",-1753983626)),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(png.arrayBuffer(),(function (png__$1){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(current,(function (p__56568){
-var map__56570 = p__56568;
-var map__56570__$1 = cljs.core.__destructure_map(map__56570);
-var key = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56570__$1,new cljs.core.Keyword(null,"key","key",-1516042587));
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(current,(function (p__48230){
+var map__48231 = p__48230;
+var map__48231__$1 = cljs.core.__destructure_map(map__48231);
+var key = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48231__$1,new cljs.core.Keyword(null,"key","key",-1516042587));
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(new_hl,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"content","content",15833224),new cljs.core.Keyword(null,"image","image",-58725096)], null)),(function (fstamp){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var and__5041__auto__ = old_hl;
 if(cljs.core.truth_(and__5041__auto__)){
@@ -152,8 +152,8 @@ return and__5041__auto__;
 })(),(function (old_fpath){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var and__5041__auto__ = old_fpath;
 if(cljs.core.truth_(and__5041__auto__)){
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(frontend.fs.rename_BANG_,repo_cur,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__56552_SHARP_){
-return (frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(repo_dir,p1__56552_SHARP_) : frontend.util.node_path.join.call(null,repo_dir,p1__56552_SHARP_));
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(frontend.fs.rename_BANG_,repo_cur,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__48225_SHARP_){
+return (frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(repo_dir,p1__48225_SHARP_) : frontend.util.node_path.join.call(null,repo_dir,p1__48225_SHARP_));
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [old_fpath,new_fpath], null)));
 } else {
 return and__5041__auto__;
@@ -215,9 +215,9 @@ var repo_dir = frontend.config.get_repo_dir(repo_cur);
 var fstamp = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(hl,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"content","content",15833224),new cljs.core.Keyword(null,"image","image",-58725096)], null));
 var fname = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"page","page",849072397).cljs$core$IFn$_invoke$arity$1(hl)),"_",cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(hl))].join('');
 var fdir = [logseq.graph_parser.config.local_assets_dir,"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(fkey)].join('');
-var fpath = (function (){var G__56595 = repo_dir;
-var G__56596 = [fdir,"/",fname,"_",cljs.core.str.cljs$core$IFn$_invoke$arity$1(fstamp),".png"].join('');
-return (frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(G__56595,G__56596) : frontend.util.node_path.join.call(null,G__56595,G__56596));
+var fpath = (function (){var G__48243 = repo_dir;
+var G__48244 = [fdir,"/",fname,"_",cljs.core.str.cljs$core$IFn$_invoke$arity$1(fstamp),".png"].join('');
+return (frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(G__48243,G__48244) : frontend.util.node_path.join.call(null,G__48243,G__48244));
 })();
 return frontend.fs.unlink_BANG_(repo_cur,fpath,cljs.core.PersistentArrayMap.EMPTY);
 } else {
@@ -235,9 +235,9 @@ var repo_dir = frontend.config.get_repo_dir(frontend.state.get_current_repo());
 var asset_dir = (frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(repo_dir,logseq.graph_parser.config.local_assets_dir) : frontend.util.node_path.join.call(null,repo_dir,logseq.graph_parser.config.local_assets_dir));
 var url__$1 = ((clojure.string.includes_QMARK_(url,asset_dir))?["..",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.last(clojure.string.split.cljs$core$IFn$_invoke$arity$2(url,repo_dir)))].join(''):url);
 var label = new cljs.core.Keyword(null,"filename","filename",-1428840783).cljs$core$IFn$_invoke$arity$1(pdf_current);
-frontend.handler.page.create_BANG_.cljs$core$IFn$_invoke$arity$2(page_name__$1,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"redirect?","redirect?",-1229259098),false,new cljs.core.Keyword(null,"create-first-block?","create-first-block?",397553841),false,new cljs.core.Keyword(null,"split-namespace?","split-namespace?",-1035468161),false,new cljs.core.Keyword(null,"format","format",-1306924766),format,new cljs.core.Keyword(null,"properties","properties",685819552),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"file","file",-1269645878),(function (){var G__56607 = format;
-var G__56607__$1 = (((G__56607 instanceof cljs.core.Keyword))?G__56607.fqn:null);
-switch (G__56607__$1) {
+frontend.handler.page.create_BANG_.cljs$core$IFn$_invoke$arity$2(page_name__$1,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"redirect?","redirect?",-1229259098),false,new cljs.core.Keyword(null,"create-first-block?","create-first-block?",397553841),false,new cljs.core.Keyword(null,"split-namespace?","split-namespace?",-1035468161),false,new cljs.core.Keyword(null,"format","format",-1306924766),format,new cljs.core.Keyword(null,"properties","properties",685819552),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"file","file",-1269645878),(function (){var G__48245 = format;
+var G__48245__$1 = (((G__48245 instanceof cljs.core.Keyword))?G__48245.fqn:null);
+switch (G__48245__$1) {
 case "markdown":
 return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[%s](%s)",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([label,url__$1], 0));
 
@@ -257,12 +257,12 @@ return frontend.db.model.get_page(page_name__$1);
 return page;
 }
 });
-frontend.extensions.pdf.assets.create_ref_block_BANG_ = (function frontend$extensions$pdf$assets$create_ref_block_BANG_(p__56617){
-var map__56618 = p__56617;
-var map__56618__$1 = cljs.core.__destructure_map(map__56618);
-var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56618__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
-var content = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56618__$1,new cljs.core.Keyword(null,"content","content",15833224));
-var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56618__$1,new cljs.core.Keyword(null,"page","page",849072397));
+frontend.extensions.pdf.assets.create_ref_block_BANG_ = (function frontend$extensions$pdf$assets$create_ref_block_BANG_(p__48255){
+var map__48256 = p__48255;
+var map__48256__$1 = cljs.core.__destructure_map(map__48256);
+var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48256__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var content = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48256__$1,new cljs.core.Keyword(null,"content","content",15833224));
+var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48256__$1,new cljs.core.Keyword(null,"page","page",849072397));
 var temp__5720__auto__ = new cljs.core.Keyword("pdf","current","pdf/current",-1087936477).cljs$core$IFn$_invoke$arity$1(cljs.core.deref(frontend.state.state));
 if(cljs.core.truth_(temp__5720__auto__)){
 var pdf_current = temp__5720__auto__;
@@ -277,13 +277,13 @@ console.debug("[existed ref block]",ref_block);
 return ref_block;
 } else {
 var text = new cljs.core.Keyword(null,"text","text",-1790561697).cljs$core$IFn$_invoke$arity$1(content);
-var wrap_props = (function (p1__56613_SHARP_){
+var wrap_props = (function (p1__48254_SHARP_){
 var temp__5718__auto____$1 = new cljs.core.Keyword(null,"image","image",-58725096).cljs$core$IFn$_invoke$arity$1(content);
 if(cljs.core.truth_(temp__5718__auto____$1)){
 var stamp = temp__5718__auto____$1;
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(p1__56613_SHARP_,new cljs.core.Keyword(null,"hl-type","hl-type",992471876),"area",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"hl-stamp","hl-stamp",-695479513),stamp], 0));
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(p1__48254_SHARP_,new cljs.core.Keyword(null,"hl-type","hl-type",992471876),"area",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"hl-stamp","hl-stamp",-695479513),stamp], 0));
 } else {
-return p1__56613_SHARP_;
+return p1__48254_SHARP_;
 }
 });
 return frontend.handler.editor.api_insert_new_block_BANG_(text,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword("block","name","block/name",1619760316).cljs$core$IFn$_invoke$arity$1(ref_page),new cljs.core.Keyword(null,"custom-uuid","custom-uuid",-1095135430),id,new cljs.core.Keyword(null,"properties","properties",685819552),wrap_props(new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"ls-type","ls-type",1383834313),"annotation",new cljs.core.Keyword(null,"hl-page","hl-page",949012424),page,new cljs.core.Keyword(null,"id","id",-1388402092),cljs.core.str.cljs$core$IFn$_invoke$arity$1(id)], null))], null));
@@ -295,10 +295,10 @@ return null;
 return null;
 }
 });
-frontend.extensions.pdf.assets.del_ref_block_BANG_ = (function frontend$extensions$pdf$assets$del_ref_block_BANG_(p__56634){
-var map__56635 = p__56634;
-var map__56635__$1 = cljs.core.__destructure_map(map__56635);
-var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56635__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+frontend.extensions.pdf.assets.del_ref_block_BANG_ = (function frontend$extensions$pdf$assets$del_ref_block_BANG_(p__48258){
+var map__48259 = p__48258;
+var map__48259__$1 = cljs.core.__destructure_map(map__48259);
+var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48259__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
 var temp__5720__auto__ = frontend.state.get_current_repo();
 if(cljs.core.truth_(temp__5720__auto__)){
 var repo = temp__5720__auto__;
@@ -348,8 +348,8 @@ return and__5041__auto__;
 return promesa.protocols._promise((function (){var file_path__$1 = (cljs.core.truth_(file_path)?file_path:[cljs.core.str.cljs$core$IFn$_invoke$arity$1(target_key),".pdf"].join(''));
 var temp__5718__auto__ = (function (){var and__5041__auto__ = hls__$1;
 if(cljs.core.truth_(and__5041__auto__)){
-return medley.core.find_first.cljs$core$IFn$_invoke$arity$2((function (p1__56640_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(id,new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__56640_SHARP_));
+return medley.core.find_first.cljs$core$IFn$_invoke$arity$2((function (p1__48261_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(id,new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__48261_SHARP_));
 }),hls__$1);
 } else {
 return and__5041__auto__;
@@ -371,10 +371,10 @@ return console.debug("[Unmatched highlight ref]",block);
 return null;
 }
 });
-frontend.extensions.pdf.assets.goto_block_ref_BANG_ = (function frontend$extensions$pdf$assets$goto_block_ref_BANG_(p__56646){
-var map__56647 = p__56646;
-var map__56647__$1 = cljs.core.__destructure_map(map__56647);
-var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56647__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+frontend.extensions.pdf.assets.goto_block_ref_BANG_ = (function frontend$extensions$pdf$assets$goto_block_ref_BANG_(p__48268){
+var map__48269 = p__48268;
+var map__48269__$1 = cljs.core.__destructure_map(map__48269);
+var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__48269__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
 if(cljs.core.truth_(id)){
 return reitit.frontend.easy.push_state.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"name","name",1843675177),cljs.core.str.cljs$core$IFn$_invoke$arity$1(id)], null));
 } else {
@@ -382,8 +382,8 @@ return null;
 }
 });
 frontend.extensions.pdf.assets.goto_annotations_page_BANG_ = (function frontend$extensions$pdf$assets$goto_annotations_page_BANG_(var_args){
-var G__56653 = arguments.length;
-switch (G__56653) {
+var G__48272 = arguments.length;
+switch (G__48272) {
 case 1:
 return frontend.extensions.pdf.assets.goto_annotations_page_BANG_.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 

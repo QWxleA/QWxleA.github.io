@@ -1,11 +1,11 @@
 goog.provide('frontend.modules.shortcut.data_helper');
 frontend.modules.shortcut.data_helper.get_bindings = (function frontend$modules$shortcut$data_helper$get_bindings(){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__54756){
-var vec__54757 = p__54756;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54757,(0),null);
-var map__54760 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54757,(1),null);
-var map__54760__$1 = cljs.core.__destructure_map(map__54760);
-var binding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54760__$1,new cljs.core.Keyword(null,"binding","binding",539932593));
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__47884){
+var vec__47885 = p__47884;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47885,(0),null);
+var map__47888 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47885,(1),null);
+var map__47888__$1 = cljs.core.__destructure_map(map__47888);
+var binding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47888__$1,new cljs.core.Keyword(null,"binding","binding",539932593));
 return cljs.core.PersistentArrayMap.createAsIfByAssoc([k,binding]);
 }),cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.vals(cljs.core.deref(frontend.modules.shortcut.config.config)))));
 });
@@ -28,24 +28,24 @@ return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2(frontend.modules.shortcut.da
 }
 });
 frontend.modules.shortcut.data_helper.normalize_user_keyname = (function frontend$modules$shortcut$data_helper$normalize_user_keyname(k){
-var G__54769 = k;
-var G__54769__$1 = (((G__54769 == null))?null:frontend.util.safe_lower_case(G__54769));
-var G__54769__$2 = (((G__54769__$1 == null))?null:clojure.string.replace(G__54769__$1,/;+/,"semicolon"));
-var G__54769__$3 = (((G__54769__$2 == null))?null:clojure.string.replace(G__54769__$2,/=+/,"equals"));
-var G__54769__$4 = (((G__54769__$3 == null))?null:clojure.string.replace(G__54769__$3,/~+/,"dash"));
-var G__54769__$5 = (((G__54769__$4 == null))?null:clojure.string.replace(G__54769__$4,"[","open-square-bracket"));
-var G__54769__$6 = (((G__54769__$5 == null))?null:clojure.string.replace(G__54769__$5,"]","close-square-bracket"));
-if((G__54769__$6 == null)){
+var G__47889 = k;
+var G__47889__$1 = (((G__47889 == null))?null:frontend.util.safe_lower_case(G__47889));
+var G__47889__$2 = (((G__47889__$1 == null))?null:clojure.string.replace(G__47889__$1,/;+/,"semicolon"));
+var G__47889__$3 = (((G__47889__$2 == null))?null:clojure.string.replace(G__47889__$2,/=+/,"equals"));
+var G__47889__$4 = (((G__47889__$3 == null))?null:clojure.string.replace(G__47889__$3,/~+/,"dash"));
+var G__47889__$5 = (((G__47889__$4 == null))?null:clojure.string.replace(G__47889__$4,"[","open-square-bracket"));
+var G__47889__$6 = (((G__47889__$5 == null))?null:clojure.string.replace(G__47889__$5,"]","close-square-bracket"));
+if((G__47889__$6 == null)){
 return null;
 } else {
-return clojure.string.replace(G__54769__$6,"'","single-quote");
+return clojure.string.replace(G__47889__$6,"'","single-quote");
 }
 });
 frontend.modules.shortcut.data_helper.binding_by_category = (function frontend$modules$shortcut$data_helper$binding_by_category(name){
-var dict = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__54770){
-var vec__54771 = p__54770;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54771,(0),null);
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54771,(1),null);
+var dict = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__47890){
+var vec__47891 = p__47890;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47891,(0),null);
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47891,(1),null);
 return cljs.core.PersistentArrayMap.createAsIfByAssoc([k,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"binding","binding",539932593),frontend.modules.shortcut.data_helper.shortcut_binding(k)], null)]);
 }),cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.merge,cljs.core.vals(cljs.core.deref(frontend.modules.shortcut.config.config)))));
 return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (k){
@@ -53,8 +53,8 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 }),(frontend.modules.shortcut.config.category.cljs$core$IFn$_invoke$arity$1 ? frontend.modules.shortcut.config.category.cljs$core$IFn$_invoke$arity$1(name) : frontend.modules.shortcut.config.category.call(null,name)));
 });
 frontend.modules.shortcut.data_helper.shortcut_map = (function frontend$modules$shortcut$data_helper$shortcut_map(var_args){
-var G__54775 = arguments.length;
-switch (G__54775) {
+var G__47895 = arguments.length;
+switch (G__47895) {
 case 1:
 return frontend.modules.shortcut.data_helper.shortcut_map.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -75,25 +75,25 @@ return frontend.modules.shortcut.data_helper.shortcut_map.cljs$core$IFn$_invoke$
 
 (frontend.modules.shortcut.data_helper.shortcut_map.cljs$core$IFn$_invoke$arity$2 = (function (handler_id,state){
 var raw = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.modules.shortcut.config.config),handler_id);
-var handler_m = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__54776){
-var vec__54777 = p__54776;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54777,(0),null);
-var map__54780 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54777,(1),null);
-var map__54780__$1 = cljs.core.__destructure_map(map__54780);
-var fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54780__$1,new cljs.core.Keyword(null,"fn","fn",-1175266204));
+var handler_m = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__47896){
+var vec__47897 = p__47896;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47897,(0),null);
+var map__47900 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47897,(1),null);
+var map__47900__$1 = cljs.core.__destructure_map(map__47900);
+var fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47900__$1,new cljs.core.Keyword(null,"fn","fn",-1175266204));
 return cljs.core.PersistentArrayMap.createAsIfByAssoc([k,fn]);
 }),raw));
 var before = new cljs.core.Keyword(null,"before","before",-1633692388).cljs$core$IFn$_invoke$arity$1(cljs.core.meta(raw));
-var G__54781 = handler_m;
-var G__54781__$1 = (cljs.core.truth_(state)?cljs.core.reduce_kv((function (r,k,handle_fn){
+var G__47901 = handler_m;
+var G__47901__$1 = (cljs.core.truth_(state)?cljs.core.reduce_kv((function (r,k,handle_fn){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(r,k,cljs.core.partial.cljs$core$IFn$_invoke$arity$2(handle_fn,state));
-}),cljs.core.PersistentArrayMap.EMPTY,G__54781):G__54781);
+}),cljs.core.PersistentArrayMap.EMPTY,G__47901):G__47901);
 if(cljs.core.truth_(before)){
 return cljs.core.reduce_kv((function (r,k,v){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(r,k,(before.cljs$core$IFn$_invoke$arity$1 ? before.cljs$core$IFn$_invoke$arity$1(v) : before.call(null,v)));
-}),cljs.core.PersistentArrayMap.EMPTY,G__54781__$1);
+}),cljs.core.PersistentArrayMap.EMPTY,G__47901__$1);
 } else {
-return G__54781__$1;
+return G__47901__$1;
 }
 }));
 
@@ -155,8 +155,8 @@ var temp__5720__auto__ = (frontend.db.get_file.cljs$core$IFn$_invoke$arity$1 ? f
 if(cljs.core.truth_(temp__5720__auto__)){
 var content = temp__5720__auto__;
 var result = frontend.handler.common.parse_config(content);
-var new_result = borkdude.rewrite_edn.update(result,new cljs.core.Keyword(null,"shortcuts","shortcuts",1717107810),(function (p1__54783_SHARP_){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(borkdude.rewrite_edn.sexpr(p1__54783_SHARP_),k);
+var new_result = borkdude.rewrite_edn.update(result,new cljs.core.Keyword(null,"shortcuts","shortcuts",1717107810),(function (p1__47902_SHARP_){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(borkdude.rewrite_edn.sexpr(p1__47902_SHARP_),k);
 }));
 var new_content = cljs.core.str.cljs$core$IFn$_invoke$arity$1(new_result);
 frontend.handler.common.reset_config_BANG_(repo,new_content);
@@ -171,10 +171,10 @@ return null;
  *   eg: :editor/new-line -> :shortcut.handler/block-editing-only
  */
 frontend.modules.shortcut.data_helper.get_group = (function frontend$modules$shortcut$data_helper$get_group(k){
-return cljs.core.first(cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.key,cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p__54789){
-var vec__54790 = p__54789;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54790,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54790,(1),null);
+return cljs.core.first(cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.key,cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p__47903){
+var vec__47904 = p__47903;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47904,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47904,(1),null);
 return cljs.core.contains_QMARK_(v,k);
 }),cljs.core.deref(frontend.modules.shortcut.config.config))));
 });
@@ -184,13 +184,13 @@ return false;
 } else {
 var handler_id = frontend.modules.shortcut.data_helper.get_group(k);
 var shortcut_m = frontend.modules.shortcut.data_helper.shortcut_map.cljs$core$IFn$_invoke$arity$1(handler_id);
-var parse_shortcut = (function (p1__54799_SHARP_){
-try{return goog.ui.KeyboardShortcutHandler.parseStringShortcut(p1__54799_SHARP_);
-}catch (e54833){if((e54833 instanceof Error)){
-var e = e54833;
-return console.error("[shortcut/parse-error]",[cljs.core.str.cljs$core$IFn$_invoke$arity$1(p1__54799_SHARP_)," - ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(e.message)].join(''));
+var parse_shortcut = (function (p1__47907_SHARP_){
+try{return goog.ui.KeyboardShortcutHandler.parseStringShortcut(p1__47907_SHARP_);
+}catch (e47908){if((e47908 instanceof Error)){
+var e = e47908;
+return console.error("[shortcut/parse-error]",[cljs.core.str.cljs$core$IFn$_invoke$arity$1(p1__47907_SHARP_)," - ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(e.message)].join(''));
 } else {
-throw e54833;
+throw e47908;
 
 }
 }});
@@ -203,17 +203,17 @@ return cljs.core.some(cljs.core.PersistentHashSet.createAsIfByAssoc([b]),rest_bi
 });
 frontend.modules.shortcut.data_helper.shortcut_data_by_id = (function frontend$modules$shortcut$data_helper$shortcut_data_by_id(id){
 var binding = frontend.modules.shortcut.data_helper.shortcut_binding(id);
-var data = (function (){var G__54864 = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.vals(cljs.core.deref(frontend.modules.shortcut.config.config)));
-return (id.cljs$core$IFn$_invoke$arity$1 ? id.cljs$core$IFn$_invoke$arity$1(G__54864) : id.call(null,G__54864));
+var data = (function (){var G__47909 = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.vals(cljs.core.deref(frontend.modules.shortcut.config.config)));
+return (id.cljs$core$IFn$_invoke$arity$1 ? id.cljs$core$IFn$_invoke$arity$1(G__47909) : id.call(null,G__47909));
 })();
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(data,new cljs.core.Keyword(null,"binding","binding",539932593),frontend.modules.shortcut.data_helper.binding_for_display(id,binding));
 });
 frontend.modules.shortcut.data_helper.shortcuts__GT_commands = (function frontend$modules$shortcut$data_helper$shortcuts__GT_commands(handler_id){
 var m = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.modules.shortcut.config.config),handler_id);
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__54865){
-var vec__54866 = p__54865;
-var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54866,(0),null);
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__54866,(1),null);
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__47910){
+var vec__47911 = p__47910;
+var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47911,(0),null);
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47911,(1),null);
 return clojure.set.rename_keys(cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(frontend.modules.shortcut.data_helper.shortcut_data_by_id(id),new cljs.core.Keyword(null,"id","id",-1388402092),id,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"handler-id","handler-id",1160395333),handler_id], 0)),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"binding","binding",539932593),new cljs.core.Keyword(null,"shortcut","shortcut",-431647697),new cljs.core.Keyword(null,"fn","fn",-1175266204),new cljs.core.Keyword(null,"action","action",-811238024)], null));
 }),m);
 });

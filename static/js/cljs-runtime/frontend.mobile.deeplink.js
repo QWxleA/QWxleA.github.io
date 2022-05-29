@@ -6,15 +6,15 @@ var hostname = parsed_url.hostname;
 var pathname = parsed_url.pathname;
 var search_params = parsed_url.searchParams;
 var current_repo_url = frontend.state.get_current_repo();
-var get_graph_name_fn = (function (p1__61466_SHARP_){
-return clojure.string.lower_case(cljs.core.last(clojure.string.split.cljs$core$IFn$_invoke$arity$2(logseq.graph_parser.text.get_graph_name_from_path(p1__61466_SHARP_),"/")));
+var get_graph_name_fn = (function (p1__51706_SHARP_){
+return clojure.string.lower_case(cljs.core.last(clojure.string.split.cljs$core$IFn$_invoke$arity$2(logseq.graph_parser.text.get_graph_name_from_path(p1__51706_SHARP_),"/")));
 });
 var current_graph_name = get_graph_name_fn(current_repo_url);
-var repos = cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"url","url",276297046),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__61467_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(p1__61467_SHARP_),frontend.config.local_repo);
+var repos = cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"url","url",276297046),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__51707_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(p1__51707_SHARP_),frontend.config.local_repo);
 }),frontend.state.sub(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"me","me",-139006693),new cljs.core.Keyword(null,"repos","repos",647483789)], null))));
-var repo_names = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__61468_SHARP_){
-return get_graph_name_fn(p1__61468_SHARP_);
+var repo_names = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__51708_SHARP_){
+return get_graph_name_fn(p1__51708_SHARP_);
 }),repos);
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(hostname,"auth-callback")){
 var temp__5720__auto__ = search_params.get("code");
@@ -26,28 +26,28 @@ return null;
 }
 } else {
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(hostname,"graph")){
-var graph_name = (function (){var G__61474 = pathname;
-var G__61474__$1 = (((G__61474 == null))?null:clojure.string.replace(G__61474,"/",""));
-if((G__61474__$1 == null)){
+var graph_name = (function (){var G__51726 = pathname;
+var G__51726__$1 = (((G__51726 == null))?null:clojure.string.replace(G__51726,"/",""));
+if((G__51726__$1 == null)){
 return null;
 } else {
-return clojure.string.lower_case(G__61474__$1);
+return clojure.string.lower_case(G__51726__$1);
 }
 })();
-var vec__61471 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__61469_SHARP_){
-return search_params.get(p1__61469_SHARP_);
+var vec__51723 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__51709_SHARP_){
+return search_params.get(p1__51709_SHARP_);
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["page","block-id"], null));
-var page_name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61471,(0),null);
-var block_uuid = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61471,(1),null);
+var page_name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__51723,(0),null);
+var block_uuid = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__51723,(1),null);
 if(clojure.string.blank_QMARK_(graph_name)){
 return null;
 } else {
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(graph_name,current_graph_name)){
 } else {
-var graph_idx_61484 = repo_names.indexOf(graph_name);
-var graph_url_61485 = ((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(graph_idx_61484,(-1)))?cljs.core.nth.cljs$core$IFn$_invoke$arity$2(repos,graph_idx_61484):null);
-if(cljs.core.truth_(graph_url_61485)){
-frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("graph","switch","graph/switch",178853840),graph_url_61485], null));
+var graph_idx_51735 = repo_names.indexOf(graph_name);
+var graph_url_51736 = ((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(graph_idx_51735,(-1)))?cljs.core.nth.cljs$core$IFn$_invoke$arity$2(repos,graph_idx_51735):null);
+if(cljs.core.truth_(graph_url_51736)){
+frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("graph","switch","graph/switch",178853840),graph_url_51736], null));
 
 cljs.core.reset_BANG_(frontend.mobile.deeplink._STAR_link_to_another_graph,true);
 } else {
@@ -64,8 +64,8 @@ return cljs.core.deref(frontend.mobile.deeplink._STAR_link_to_another_graph);
 })())){
 return setTimeout((function (){
 if(cljs.core.truth_(page_name)){
-var db_page_name_61486 = frontend.db.model.get_redirect_page_name.cljs$core$IFn$_invoke$arity$1(page_name);
-frontend.handler.editor.insert_first_page_block_if_not_exists_BANG_.cljs$core$IFn$_invoke$arity$1(db_page_name_61486);
+var db_page_name_51737 = frontend.db.model.get_redirect_page_name.cljs$core$IFn$_invoke$arity$1(page_name);
+frontend.handler.editor.insert_first_page_block_if_not_exists_BANG_.cljs$core$IFn$_invoke$arity$1(db_page_name_51737);
 } else {
 if(cljs.core.truth_(block_uuid)){
 if(cljs.core.truth_(frontend.db.model.get_block_by_uuid(block_uuid))){

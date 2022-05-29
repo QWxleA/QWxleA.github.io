@@ -94,9 +94,9 @@ var temp__5720__auto__ = frontend.handler.goog$module$goog$object.getValueByKeys
 if(cljs.core.truth_(temp__5720__auto__)){
 var devtool_message = temp__5720__auto__;
 var msg_type = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(cljs.reader.read_string.cljs$core$IFn$_invoke$arity$1(devtool_message));
-var G__61682 = msg_type;
-var G__61682__$1 = (((G__61682 instanceof cljs.core.Keyword))?G__61682.fqn:null);
-switch (G__61682__$1) {
+var G__51848 = msg_type;
+var G__51848__$1 = (((G__51848 instanceof cljs.core.Keyword))?G__51848.fqn:null);
+switch (G__51848__$1) {
 case "datalog-console.client/request-whole-database-as-string":
 return window.postMessage(({":datalog-console.remote/remote-message": cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([db], 0))}),"*");
 

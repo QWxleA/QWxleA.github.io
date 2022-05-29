@@ -11,10 +11,10 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(frontend.mobile.mobile_bar.co
 return frontend.handler.config.set_config_BANG_(new cljs.core.Keyword("mobile","toolbar-stats","mobile/toolbar-stats",1960694079),cljs.core.deref(frontend.mobile.mobile_bar.commands_stats));
 });
 frontend.mobile.mobile_bar.command = rum.core.lazy_build(rum.core.build_defc,(function() { 
-var G__62461__delegate = function (command_handler,icon,p__62449){
-var vec__62450 = p__62449;
-var count_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__62450,(0),null);
-var event_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__62450,(1),null);
+var G__52622__delegate = function (command_handler,icon,p__52610){
+var vec__52611 = p__52610;
+var count_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__52611,(0),null);
+var event_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__52611,(1),null);
 return daiquiri.core.create_element("div",null,[daiquiri.core.create_element("button",{'onMouseDown':(function (e){
 frontend.util.stop(e);
 
@@ -32,24 +32,24 @@ if(cljs.core.truth_(event_QMARK_)){
 return frontend.state.set_state_BANG_(new cljs.core.Keyword("mobile","toolbar-update-observer","mobile/toolbar-update-observer",-472907328),cljs.core.rand_int((1000000)));
 }),'className':"bottom-action"},[daiquiri.interpreter.interpret(frontend.ui.icon.cljs$core$IFn$_invoke$arity$2(icon,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"fontSize","fontSize",919623033),frontend.ui.icon_size], null)], null)))])]);
 };
-var G__62461 = function (command_handler,icon,var_args){
-var p__62449 = null;
+var G__52622 = function (command_handler,icon,var_args){
+var p__52610 = null;
 if (arguments.length > 2) {
-var G__62462__i = 0, G__62462__a = new Array(arguments.length -  2);
-while (G__62462__i < G__62462__a.length) {G__62462__a[G__62462__i] = arguments[G__62462__i + 2]; ++G__62462__i;}
-  p__62449 = new cljs.core.IndexedSeq(G__62462__a,0,null);
+var G__52623__i = 0, G__52623__a = new Array(arguments.length -  2);
+while (G__52623__i < G__52623__a.length) {G__52623__a[G__52623__i] = arguments[G__52623__i + 2]; ++G__52623__i;}
+  p__52610 = new cljs.core.IndexedSeq(G__52623__a,0,null);
 } 
-return G__62461__delegate.call(this,command_handler,icon,p__62449);};
-G__62461.cljs$lang$maxFixedArity = 2;
-G__62461.cljs$lang$applyTo = (function (arglist__62463){
-var command_handler = cljs.core.first(arglist__62463);
-arglist__62463 = cljs.core.next(arglist__62463);
-var icon = cljs.core.first(arglist__62463);
-var p__62449 = cljs.core.rest(arglist__62463);
-return G__62461__delegate(command_handler,icon,p__62449);
+return G__52622__delegate.call(this,command_handler,icon,p__52610);};
+G__52622.cljs$lang$maxFixedArity = 2;
+G__52622.cljs$lang$applyTo = (function (arglist__52624){
+var command_handler = cljs.core.first(arglist__52624);
+arglist__52624 = cljs.core.next(arglist__52624);
+var icon = cljs.core.first(arglist__52624);
+var p__52610 = cljs.core.rest(arglist__52624);
+return G__52622__delegate(command_handler,icon,p__52610);
 });
-G__62461.cljs$core$IFn$_invoke$arity$variadic = G__62461__delegate;
-return G__62461;
+G__52622.cljs$core$IFn$_invoke$arity$variadic = G__52622__delegate;
+return G__52622;
 })()
 ,null,"frontend.mobile.mobile-bar/command");
 frontend.mobile.mobile_bar.indent_outdent = rum.core.lazy_build(rum.core.build_defc,(function (indent_QMARK_,icon){
@@ -165,27 +165,27 @@ return frontend.handler.editor.insert_new_block_BANG_.cljs$core$IFn$_invoke$arit
 } else {
 return frontend.commands.simple_insert_BANG_(parent_id,"\n",cljs.core.PersistentArrayMap.EMPTY);
 }
-}),"arrow-back"),cljs.core.into_array.cljs$core$IFn$_invoke$arity$1((function (){var iter__5520__auto__ = (function frontend$mobile$mobile_bar$iter__62453(s__62454){
+}),"arrow-back"),cljs.core.into_array.cljs$core$IFn$_invoke$arity$1((function (){var iter__5520__auto__ = (function frontend$mobile$mobile_bar$iter__52614(s__52615){
 return (new cljs.core.LazySeq(null,(function (){
-var s__62454__$1 = s__62454;
+var s__52615__$1 = s__52615;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__62454__$1);
+var temp__5720__auto__ = cljs.core.seq(s__52615__$1);
 if(temp__5720__auto__){
-var s__62454__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__62454__$2)){
-var c__5518__auto__ = cljs.core.chunk_first(s__62454__$2);
+var s__52615__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__52615__$2)){
+var c__5518__auto__ = cljs.core.chunk_first(s__52615__$2);
 var size__5519__auto__ = cljs.core.count(c__5518__auto__);
-var b__62456 = cljs.core.chunk_buffer(size__5519__auto__);
-if((function (){var i__62455 = (0);
+var b__52617 = cljs.core.chunk_buffer(size__5519__auto__);
+if((function (){var i__52616 = (0);
 while(true){
-if((i__62455 < size__5519__auto__)){
-var command = cljs.core._nth(c__5518__auto__,i__62455);
-cljs.core.chunk_append(b__62456,daiquiri.interpreter.interpret((function (){var fexpr__62458 = cljs.core.first(command);
-return (fexpr__62458.cljs$core$IFn$_invoke$arity$1 ? fexpr__62458.cljs$core$IFn$_invoke$arity$1(commands) : fexpr__62458.call(null,commands));
+if((i__52616 < size__5519__auto__)){
+var command = cljs.core._nth(c__5518__auto__,i__52616);
+cljs.core.chunk_append(b__52617,daiquiri.interpreter.interpret((function (){var fexpr__52619 = cljs.core.first(command);
+return (fexpr__52619.cljs$core$IFn$_invoke$arity$1 ? fexpr__52619.cljs$core$IFn$_invoke$arity$1(commands) : fexpr__52619.call(null,commands));
 })()));
 
-var G__62464 = (i__62455 + (1));
-i__62455 = G__62464;
+var G__52625 = (i__52616 + (1));
+i__52616 = G__52625;
 continue;
 } else {
 return true;
@@ -193,15 +193,15 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__62456),frontend$mobile$mobile_bar$iter__62453(cljs.core.chunk_rest(s__62454__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__52617),frontend$mobile$mobile_bar$iter__52614(cljs.core.chunk_rest(s__52615__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__62456),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__52617),null);
 }
 } else {
-var command = cljs.core.first(s__62454__$2);
-return cljs.core.cons(daiquiri.interpreter.interpret((function (){var fexpr__62460 = cljs.core.first(command);
-return (fexpr__62460.cljs$core$IFn$_invoke$arity$1 ? fexpr__62460.cljs$core$IFn$_invoke$arity$1(commands) : fexpr__62460.call(null,commands));
-})()),frontend$mobile$mobile_bar$iter__62453(cljs.core.rest(s__62454__$2)));
+var command = cljs.core.first(s__52615__$2);
+return cljs.core.cons(daiquiri.interpreter.interpret((function (){var fexpr__52621 = cljs.core.first(command);
+return (fexpr__52621.cljs$core$IFn$_invoke$arity$1 ? fexpr__52621.cljs$core$IFn$_invoke$arity$1(commands) : fexpr__52621.call(null,commands));
+})()),frontend$mobile$mobile_bar$iter__52614(cljs.core.rest(s__52615__$2)));
 }
 } else {
 return null;

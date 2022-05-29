@@ -8,8 +8,8 @@ frontend.mobile.core._STAR_last_shared_seconds = cljs.core.atom.cljs$core$IFn$_i
  * Initialize iOS-specified event listeners
  */
 frontend.mobile.core.ios_init = (function frontend$mobile$core$ios_init(){
-var path_61544 = frontend.fs.capacitor_fs.iOS_ensure_documents_BANG_();
-cljs.core.println.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["iOS container path: ",path_61544], 0));
+var path_51773 = frontend.fs.capacitor_fs.iOS_ensure_documents_BANG_();
+cljs.core.println.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["iOS container path: ",path_51773], 0));
 
 window.addEventListener("load",(function (_event){
 if(cljs.core.truth_(cljs.core.deref(frontend.mobile.core._STAR_url))){

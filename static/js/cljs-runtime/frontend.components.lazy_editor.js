@@ -18,8 +18,8 @@ return "";
 })();
 var code__$2 = clojure.string.replace_first(code__$1,/\n$/,"");
 if(cljs.core.truth_(loaded_QMARK_)){
-return daiquiri.interpreter.interpret((function (){var fexpr__56753 = cljs.core.deref(frontend.components.lazy_editor.lazy_editor);
-return (fexpr__56753.cljs$core$IFn$_invoke$arity$6 ? fexpr__56753.cljs$core$IFn$_invoke$arity$6(config,id,attr,code__$2,theme,options) : fexpr__56753.call(null,config,id,attr,code__$2,theme,options));
+return daiquiri.interpreter.interpret((function (){var fexpr__48804 = cljs.core.deref(frontend.components.lazy_editor.lazy_editor);
+return (fexpr__48804.cljs$core$IFn$_invoke$arity$6 ? fexpr__48804.cljs$core$IFn$_invoke$arity$6(config,id,attr,code__$2,theme,options) : fexpr__48804.call(null,config,id,attr,code__$2,theme,options));
 })());
 } else {
 return daiquiri.interpreter.interpret(frontend.ui.loading("CodeMirror"));

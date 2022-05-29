@@ -1,12 +1,12 @@
 goog.provide('frontend.components.command_palette');
-frontend.components.command_palette.translate = (function frontend$components$command_palette$translate(t,p__61573){
-var map__61574 = p__61573;
-var map__61574__$1 = cljs.core.__destructure_map(map__61574);
-var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61574__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
-var desc = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61574__$1,new cljs.core.Keyword(null,"desc","desc",2093485764));
+frontend.components.command_palette.translate = (function frontend$components$command_palette$translate(t,p__51837){
+var map__51838 = p__51837;
+var map__51838__$1 = cljs.core.__destructure_map(map__51838);
+var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__51838__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var desc = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__51838__$1,new cljs.core.Keyword(null,"desc","desc",2093485764));
 if(cljs.core.truth_(id)){
-var desc_i18n = (function (){var G__61575 = frontend.modules.shortcut.data_helper.decorate_namespace(id);
-return (t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(G__61575) : t.call(null,G__61575));
+var desc_i18n = (function (){var G__51839 = frontend.modules.shortcut.data_helper.decorate_namespace(id);
+return (t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(G__51839) : t.call(null,G__51839));
 })();
 if(clojure.string.starts_with_QMARK_(desc_i18n,"{Missing key")){
 return desc;
@@ -20,35 +20,35 @@ return null;
 frontend.components.command_palette.get_matched_commands = (function frontend$components$command_palette$get_matched_commands(commands,input,limit,t){
 return frontend.search.fuzzy_search.cljs$core$IFn$_invoke$arity$variadic(commands,input,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"limit","limit",-1355822363),limit,new cljs.core.Keyword(null,"extract-fn","extract-fn",-339752723),cljs.core.partial.cljs$core$IFn$_invoke$arity$2(frontend.components.command_palette.translate,t)], 0));
 });
-frontend.components.command_palette.render_command = rum.core.lazy_build(rum.core.build_defc,(function (p__61587,chosen_QMARK_){
-var map__61588 = p__61587;
-var map__61588__$1 = cljs.core.__destructure_map(map__61588);
-var cmd = map__61588__$1;
-var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61588__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
-var shortcut = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61588__$1,new cljs.core.Keyword(null,"shortcut","shortcut",-431647697));
+frontend.components.command_palette.render_command = rum.core.lazy_build(rum.core.build_defc,(function (p__51840,chosen_QMARK_){
+var map__51841 = p__51840;
+var map__51841__$1 = cljs.core.__destructure_map(map__51841);
+var cmd = map__51841__$1;
+var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__51841__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var shortcut = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__51841__$1,new cljs.core.Keyword(null,"shortcut","shortcut",-431647697));
 var first_shortcut = cljs.core.first(clojure.string.split.cljs$core$IFn$_invoke$arity$2(shortcut,/ \| /));
 var desc = frontend.components.command_palette.translate(frontend.context.i18n.t,cmd);
-return daiquiri.core.create_element("div",{'className':daiquiri.util.join_classes(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["inline-grid","grid-cols-4","gap-x-4","w-full",(cljs.core.truth_(chosen_QMARK_)?"chosen":null)], null))},[(function (){var attrs61589 = desc;
-return daiquiri.core.create_element("span",((cljs.core.map_QMARK_(attrs61589))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["col-span-3"], null)], null),attrs61589], 0))):{'className':"col-span-3"}),((cljs.core.map_QMARK_(attrs61589))?null:[daiquiri.interpreter.interpret(attrs61589)]));
-})(),(function (){var attrs61595 = (cljs.core.truth_((function (){var and__5041__auto__ = (id instanceof cljs.core.Keyword);
+return daiquiri.core.create_element("div",{'className':daiquiri.util.join_classes(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["inline-grid","grid-cols-4","gap-x-4","w-full",(cljs.core.truth_(chosen_QMARK_)?"chosen":null)], null))},[(function (){var attrs51842 = desc;
+return daiquiri.core.create_element("span",((cljs.core.map_QMARK_(attrs51842))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["col-span-3"], null)], null),attrs51842], 0))):{'className':"col-span-3"}),((cljs.core.map_QMARK_(attrs51842))?null:[daiquiri.interpreter.interpret(attrs51842)]));
+})(),(function (){var attrs51843 = (cljs.core.truth_((function (){var and__5041__auto__ = (id instanceof cljs.core.Keyword);
 if(and__5041__auto__){
 return cljs.core.namespace(id);
 } else {
 return and__5041__auto__;
 }
 })())?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code.opacity-20.bg-transparent","code.opacity-20.bg-transparent",-2039164517),cljs.core.namespace(id)], null):null);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs61595))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["col-span-1","justify-end","tip","flex"], null)], null),attrs61595], 0))):{'className':"col-span-1 justify-end tip flex"}),((cljs.core.map_QMARK_(attrs61595))?[((clojure.string.blank_QMARK_(first_shortcut))?null:(function (){var attrs61596 = first_shortcut;
-return daiquiri.core.create_element("code",((cljs.core.map_QMARK_(attrs61596))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["ml-1"], null)], null),attrs61596], 0))):{'className':"ml-1"}),((cljs.core.map_QMARK_(attrs61596))?null:[daiquiri.interpreter.interpret(attrs61596)]));
-})())]:[daiquiri.interpreter.interpret(attrs61595),((clojure.string.blank_QMARK_(first_shortcut))?null:(function (){var attrs61601 = first_shortcut;
-return daiquiri.core.create_element("code",((cljs.core.map_QMARK_(attrs61601))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["ml-1"], null)], null),attrs61601], 0))):{'className':"ml-1"}),((cljs.core.map_QMARK_(attrs61601))?null:[daiquiri.interpreter.interpret(attrs61601)]));
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs51843))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["col-span-1","justify-end","tip","flex"], null)], null),attrs51843], 0))):{'className':"col-span-1 justify-end tip flex"}),((cljs.core.map_QMARK_(attrs51843))?[((clojure.string.blank_QMARK_(first_shortcut))?null:(function (){var attrs51844 = first_shortcut;
+return daiquiri.core.create_element("code",((cljs.core.map_QMARK_(attrs51844))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["ml-1"], null)], null),attrs51844], 0))):{'className':"ml-1"}),((cljs.core.map_QMARK_(attrs51844))?null:[daiquiri.interpreter.interpret(attrs51844)]));
+})())]:[daiquiri.interpreter.interpret(attrs51843),((clojure.string.blank_QMARK_(first_shortcut))?null:(function (){var attrs51845 = first_shortcut;
+return daiquiri.core.create_element("code",((cljs.core.map_QMARK_(attrs51845))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["ml-1"], null)], null),attrs51845], 0))):{'className':"ml-1"}),((cljs.core.map_QMARK_(attrs51845))?null:[daiquiri.interpreter.interpret(attrs51845)]));
 })())]));
 })()]);
 }),null,"frontend.components.command-palette/render-command");
-frontend.components.command_palette.command_palette = rum.core.lazy_build(rum.core.build_defcs,(function (state,p__61644){
-var map__61645 = p__61644;
-var map__61645__$1 = cljs.core.__destructure_map(map__61645);
-var commands = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61645__$1,new cljs.core.Keyword(null,"commands","commands",161008658));
-var limit = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__61645__$1,new cljs.core.Keyword(null,"limit","limit",-1355822363),(100));
+frontend.components.command_palette.command_palette = rum.core.lazy_build(rum.core.build_defcs,(function (state,p__51846){
+var map__51847 = p__51846;
+var map__51847__$1 = cljs.core.__destructure_map(map__51847);
+var commands = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__51847__$1,new cljs.core.Keyword(null,"commands","commands",161008658));
+var limit = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__51847__$1,new cljs.core.Keyword(null,"limit","limit",-1355822363),(100));
 var input = new cljs.core.Keyword("frontend.components.command-palette","input","frontend.components.command-palette/input",1220040504).cljs$core$IFn$_invoke$arity$1(state);
 return daiquiri.core.create_element("div",{'className':"cp__palette cp__palette-main"},[daiquiri.core.create_element("div",{'className':"input-wrap"},[daiquiri.core.create_element("input",{'type':"text",'placeholder':frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("command-palette","prompt","command-palette/prompt",478070476)], 0)),'autoFocus':true,'value':cljs.core.deref(input),'onChange':rum.core.mark_sync_update((function (e){
 return cljs.core.reset_BANG_(input,frontend.util.evalue(e));

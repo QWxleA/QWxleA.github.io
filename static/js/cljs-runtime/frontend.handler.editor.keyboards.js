@@ -6,10 +6,10 @@ var target = e.target;
 if(dommy.core.has_class_QMARK_(target,"bottom-action")){
 return e.preventDefault();
 } else {
-var map__58780 = frontend.handler.editor.get_state();
-var map__58780__$1 = cljs.core.__destructure_map(map__58780);
-var on_hide = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58780__$1,new cljs.core.Keyword(null,"on-hide","on-hide",1263105709));
-var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58780__$1,new cljs.core.Keyword(null,"value","value",305978217));
+var map__49556 = frontend.handler.editor.get_state();
+var map__49556__$1 = cljs.core.__destructure_map(map__49556);
+var on_hide = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49556__$1,new cljs.core.Keyword(null,"on-hide","on-hide",1263105709));
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49556__$1,new cljs.core.Keyword(null,"value","value",305978217));
 if(cljs.core.truth_(on_hide)){
 (on_hide.cljs$core$IFn$_invoke$arity$2 ? on_hide.cljs$core$IFn$_invoke$arity$2(value,event) : on_hide.call(null,value,event));
 } else {

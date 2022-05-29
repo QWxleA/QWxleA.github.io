@@ -1,18 +1,18 @@
 goog.provide('frontend.handler.editor.lifecycle');
 frontend.handler.editor.lifecycle.did_mount_BANG_ = (function frontend$handler$editor$lifecycle$did_mount_BANG_(state){
-var vec__58850_58858 = new cljs.core.Keyword("rum","args","rum/args",1315791754).cljs$core$IFn$_invoke$arity$1(state);
-var map__58853_58859 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__58850_58858,(0),null);
-var map__58853_58860__$1 = cljs.core.__destructure_map(map__58853_58859);
-var block_parent_id_58861 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58853_58860__$1,new cljs.core.Keyword(null,"block-parent-id","block-parent-id",801282550));
-var id_58862 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__58850_58858,(1),null);
-var content_58863 = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.state.state),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("editor","content","editor/content",-756190443),id_58862], null));
-if(cljs.core.truth_(block_parent_id_58861)){
-frontend.state.set_editing_block_dom_id_BANG_(block_parent_id_58861);
+var vec__49658_49669 = new cljs.core.Keyword("rum","args","rum/args",1315791754).cljs$core$IFn$_invoke$arity$1(state);
+var map__49661_49670 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49658_49669,(0),null);
+var map__49661_49671__$1 = cljs.core.__destructure_map(map__49661_49670);
+var block_parent_id_49672 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49661_49671__$1,new cljs.core.Keyword(null,"block-parent-id","block-parent-id",801282550));
+var id_49673 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49658_49669,(1),null);
+var content_49674 = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.state.state),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("editor","content","editor/content",-756190443),id_49673], null));
+if(cljs.core.truth_(block_parent_id_49672)){
+frontend.state.set_editing_block_dom_id_BANG_(block_parent_id_49672);
 } else {
 }
 
-if(cljs.core.truth_(content_58863)){
-frontend.handler.editor.restore_cursor_pos_BANG_(id_58862,content_58863);
+if(cljs.core.truth_(content_49674)){
+frontend.handler.editor.restore_cursor_pos_BANG_(id_49673,content_49674);
 } else {
 }
 
@@ -20,13 +20,13 @@ setTimeout((function (){
 return frontend.handler.editor.keyboards.esc_save_BANG_(state);
 }),(100));
 
-var temp__5720__auto___58864 = goog.dom.getElement(id_58862);
-if(cljs.core.truth_(temp__5720__auto___58864)){
-var element_58865 = temp__5720__auto___58864;
-element_58865.focus();
+var temp__5720__auto___49675 = goog.dom.getElement(id_49673);
+if(cljs.core.truth_(temp__5720__auto___49675)){
+var element_49676 = temp__5720__auto___49675;
+element_49676.focus();
 
 setTimeout((function (){
-return frontend.util.scroll_editor_cursor(element_58865);
+return frontend.util.scroll_editor_cursor(element_49676);
 }),(50));
 } else {
 }
@@ -39,14 +39,14 @@ frontend.handler.editor.keyboards.esc_save_BANG_(state);
 return state;
 });
 frontend.handler.editor.lifecycle.will_unmount = (function frontend$handler$editor$lifecycle$will_unmount(state){
-var map__58857_58866 = frontend.handler.editor.get_state();
-var map__58857_58867__$1 = cljs.core.__destructure_map(map__58857_58866);
-var value_58868 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58857_58867__$1,new cljs.core.Keyword(null,"value","value",305978217));
+var map__49668_49677 = frontend.handler.editor.get_state();
+var map__49668_49678__$1 = cljs.core.__destructure_map(map__49668_49677);
+var value_49679 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49668_49678__$1,new cljs.core.Keyword(null,"value","value",305978217));
 frontend.handler.editor.clear_when_saved_BANG_();
 
 if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"insert","insert",1286475395),null,new cljs.core.Keyword(null,"redo","redo",501190664),null,new cljs.core.Keyword(null,"auto-save","auto-save",1805740650),null,new cljs.core.Keyword(null,"delete","delete",-1768633620),null,new cljs.core.Keyword(null,"undo","undo",-1818036302),null,new cljs.core.Keyword(null,"indent-outdent","indent-outdent",874329747),null], null), null),frontend.state.get_editor_op())){
 } else {
-frontend.handler.editor.save_block_BANG_.cljs$core$IFn$_invoke$arity$2(frontend.handler.editor.get_state(),value_58868);
+frontend.handler.editor.save_block_BANG_.cljs$core$IFn$_invoke$arity$2(frontend.handler.editor.get_state(),value_49679);
 }
 
 return state;
