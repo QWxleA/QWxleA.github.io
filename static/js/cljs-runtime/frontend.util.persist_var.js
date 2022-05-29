@@ -8,15 +8,15 @@ return frontend.config.get_file_path(frontend.state.get_current_repo(),[frontend
  */
 frontend.util.persist_var.ILoad = function(){};
 
-var frontend$util$persist_var$ILoad$_load$dyn_64044 = (function (this$){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.util.persist_var._load[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4551__auto__.call(null,this$));
+var frontend$util$persist_var$ILoad$_load$dyn_51407 = (function (this$){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.util.persist_var._load[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$1 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__5391__auto__.call(null,this$));
 } else {
-var m__4549__auto__ = (frontend.util.persist_var._load["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4549__auto__.call(null,this$));
+var m__5389__auto__ = (frontend.util.persist_var._load["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$1 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__5389__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("ILoad.-load",this$);
 }
@@ -26,19 +26,19 @@ frontend.util.persist_var._load = (function frontend$util$persist_var$_load(this
 if((((!((this$ == null)))) && ((!((this$.frontend$util$persist_var$ILoad$_load$arity$1 == null)))))){
 return this$.frontend$util$persist_var$ILoad$_load$arity$1(this$);
 } else {
-return frontend$util$persist_var$ILoad$_load$dyn_64044(this$);
+return frontend$util$persist_var$ILoad$_load$dyn_51407(this$);
 }
 });
 
-var frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_64049 = (function (this$){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.util.persist_var._loaded_QMARK_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4551__auto__.call(null,this$));
+var frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_51409 = (function (this$){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.util.persist_var._loaded_QMARK_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$1 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__5391__auto__.call(null,this$));
 } else {
-var m__4549__auto__ = (frontend.util.persist_var._loaded_QMARK_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4549__auto__.call(null,this$));
+var m__5389__auto__ = (frontend.util.persist_var._loaded_QMARK_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$1 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__5389__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("ILoad.-loaded?",this$);
 }
@@ -48,7 +48,7 @@ frontend.util.persist_var._loaded_QMARK_ = (function frontend$util$persist_var$_
 if((((!((this$ == null)))) && ((!((this$.frontend$util$persist_var$ILoad$_loaded_QMARK_$arity$1 == null)))))){
 return this$.frontend$util$persist_var$ILoad$_loaded_QMARK_$arity$1(this$);
 } else {
-return frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_64049(this$);
+return frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_51409(this$);
 }
 });
 
@@ -58,15 +58,15 @@ return frontend$util$persist_var$ILoad$_loaded_QMARK_$dyn_64049(this$);
  */
 frontend.util.persist_var.ISave = function(){};
 
-var frontend$util$persist_var$ISave$_save$dyn_64055 = (function (this$){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.util.persist_var._save[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4551__auto__.call(null,this$));
+var frontend$util$persist_var$ISave$_save$dyn_51411 = (function (this$){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.util.persist_var._save[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$1 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__5391__auto__.call(null,this$));
 } else {
-var m__4549__auto__ = (frontend.util.persist_var._save["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4549__auto__.call(null,this$));
+var m__5389__auto__ = (frontend.util.persist_var._save["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$1 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__5389__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("ISave.-save",this$);
 }
@@ -76,7 +76,7 @@ frontend.util.persist_var._save = (function frontend$util$persist_var$_save(this
 if((((!((this$ == null)))) && ((!((this$.frontend$util$persist_var$ISave$_save$arity$1 == null)))))){
 return this$.frontend$util$persist_var$ISave$_save$arity$1(this$);
 } else {
-return frontend$util$persist_var$ISave$_save$dyn_64055(this$);
+return frontend$util$persist_var$ISave$_save$dyn_51411(this$);
 }
 });
 
@@ -86,15 +86,15 @@ return frontend$util$persist_var$ISave$_save$dyn_64055(this$);
  */
 frontend.util.persist_var.IResetValue = function(){};
 
-var frontend$util$persist_var$IResetValue$_reset_value_BANG_$dyn_64056 = (function (this$,new$,graph){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.util.persist_var._reset_value_BANG_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$3(this$,new$,graph) : m__4551__auto__.call(null,this$,new$,graph));
+var frontend$util$persist_var$IResetValue$_reset_value_BANG_$dyn_51417 = (function (this$,new$,graph){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.util.persist_var._reset_value_BANG_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$3 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$3(this$,new$,graph) : m__5391__auto__.call(null,this$,new$,graph));
 } else {
-var m__4549__auto__ = (frontend.util.persist_var._reset_value_BANG_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$3(this$,new$,graph) : m__4549__auto__.call(null,this$,new$,graph));
+var m__5389__auto__ = (frontend.util.persist_var._reset_value_BANG_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$3 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$3(this$,new$,graph) : m__5389__auto__.call(null,this$,new$,graph));
 } else {
 throw cljs.core.missing_protocol("IResetValue.-reset-value!",this$);
 }
@@ -104,7 +104,7 @@ frontend.util.persist_var._reset_value_BANG_ = (function frontend$util$persist_v
 if((((!((this$ == null)))) && ((!((this$.frontend$util$persist_var$IResetValue$_reset_value_BANG_$arity$3 == null)))))){
 return this$.frontend$util$persist_var$IResetValue$_reset_value_BANG_$arity$3(this$,new$,graph);
 } else {
-return frontend$util$persist_var$IResetValue$_reset_value_BANG_$dyn_64056(this$,new$,graph);
+return frontend$util$persist_var$IResetValue$_reset_value_BANG_$dyn_51417(this$,new$,graph);
 }
 });
 
@@ -141,22 +141,22 @@ if(cljs.core.truth_(frontend.config.demo_graph_QMARK_.cljs$core$IFn$_invoke$arit
 return null;
 } else {
 var repo = frontend.state.get_current_repo();
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(frontend.fs.read_file.cljs$core$IFn$_invoke$arity$2(frontend.config.get_repo_dir(frontend.state.get_current_repo()),frontend.util.persist_var.load_path(self__.location)),cljs.core.constantly(null)),(function (content){
-return promesa.protocols._promise((function (){var temp__5720__auto__ = (function (){var and__4251__auto__ = (!((content == null)));
-if(and__4251__auto__){
+return promesa.protocols._promise((function (){var temp__5720__auto__ = (function (){var and__5041__auto__ = (!((content == null)));
+if(and__5041__auto__){
 try{return cljs.reader.read_string.cljs$core$IFn$_invoke$arity$1(content);
-}catch (e64002){if((e64002 instanceof Error)){
-var e = e64002;
+}catch (e51394){if((e51394 instanceof Error)){
+var e = e51394;
 cljs.core.println.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("load persist-var failed: %s",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.util.persist_var.load_path(self__.location)], 0))], 0));
 
 return console.dir(e);
 } else {
-throw e64002;
+throw e51394;
 
 }
 }} else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })();
 if(cljs.core.truth_(temp__5720__auto__)){
@@ -223,8 +223,8 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 
 (frontend.util.persist_var.PersistVar.cljs$lang$ctorStr = "frontend.util.persist-var/PersistVar");
 
-(frontend.util.persist_var.PersistVar.cljs$lang$ctorPrWriter = (function (this__4491__auto__,writer__4492__auto__,opt__4493__auto__){
-return cljs.core._write(writer__4492__auto__,"frontend.util.persist-var/PersistVar");
+(frontend.util.persist_var.PersistVar.cljs$lang$ctorPrWriter = (function (this__5327__auto__,writer__5328__auto__,opt__5329__auto__){
+return cljs.core._write(writer__5328__auto__,"frontend.util.persist-var/PersistVar");
 }));
 
 /**

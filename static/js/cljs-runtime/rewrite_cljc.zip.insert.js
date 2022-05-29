@@ -7,11 +7,11 @@ rewrite_cljc.zip.insert.space = rewrite_cljc.node.spaces((1));
 rewrite_cljc.zip.insert.insert = (function rewrite_cljc$zip$insert$insert(move_fn,insert_fn,prefix,zloc,item){
 var item_node = rewrite_cljc.node.coerce(item);
 var next_node = (move_fn.cljs$core$IFn$_invoke$arity$1 ? move_fn.cljs$core$IFn$_invoke$arity$1(zloc) : move_fn.call(null,zloc));
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(insert_fn,zloc,cljs.core.concat.cljs$core$IFn$_invoke$arity$variadic((cljs.core.truth_((function (){var and__4251__auto__ = next_node;
-if(cljs.core.truth_(and__4251__auto__)){
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(insert_fn,zloc,cljs.core.concat.cljs$core$IFn$_invoke$arity$variadic((cljs.core.truth_((function (){var and__5041__auto__ = next_node;
+if(cljs.core.truth_(and__5041__auto__)){
 return cljs.core.not(rewrite_cljc.zip.whitespace.whitespace_QMARK_(next_node));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rewrite_cljc.zip.insert.space], null):null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [item_node], null),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([((cljs.core.not(rewrite_cljc.zip.whitespace.whitespace_QMARK_(zloc)))?prefix:null)], 0)));
 });
@@ -40,13 +40,13 @@ return rewrite_cljc.zip.insert.insert(rewrite_cljc.custom_zipper.core.down,rewri
  *   Will insert a space if necessary.
  */
 rewrite_cljc.zip.insert.append_child = (function rewrite_cljc$zip$insert$append_child(zloc,item){
-return rewrite_cljc.zip.insert.insert((function (p1__92961_SHARP_){
-var G__92963 = p1__92961_SHARP_;
-var G__92963__$1 = (((G__92963 == null))?null:rewrite_cljc.custom_zipper.core.down(G__92963));
-if((G__92963__$1 == null)){
+return rewrite_cljc.zip.insert.insert((function (p1__78759_SHARP_){
+var G__78760 = p1__78759_SHARP_;
+var G__78760__$1 = (((G__78760 == null))?null:rewrite_cljc.custom_zipper.core.down(G__78760));
+if((G__78760__$1 == null)){
 return null;
 } else {
-return rewrite_cljc.custom_zipper.core.rightmost(G__92963__$1);
+return rewrite_cljc.custom_zipper.core.rightmost(G__78760__$1);
 }
 }),rewrite_cljc.custom_zipper.core.append_child,cljs.core.PersistentVector.EMPTY,zloc,item);
 });

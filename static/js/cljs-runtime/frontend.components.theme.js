@@ -1,22 +1,22 @@
 goog.provide('frontend.components.theme');
-frontend.components.theme.container = rum.core.lazy_build(rum.core.build_defc,(function (p__72371,child){
-var map__72372 = p__72371;
-var map__72372__$1 = cljs.core.__destructure_map(map__72372);
-var t = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"t","t",-1397832519));
-var system_theme_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"system-theme?","system-theme?",1330394234));
-var settings_open_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"settings-open?","settings-open?",1491874651));
-var sidebar_open_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"sidebar-open?","sidebar-open?",-1099774467));
-var current_repo = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"current-repo","current-repo",134812359));
-var db_restoring_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"db-restoring?","db-restoring?",-1548628664));
-var sidebar_blocks_len = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"sidebar-blocks-len","sidebar-blocks-len",235708585));
-var route = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"route","route",329891309));
-var on_click = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"on-click","on-click",1632826543));
-var theme = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"theme","theme",-1247880880));
-var nfs_granted_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__72372__$1,new cljs.core.Keyword(null,"nfs-granted?","nfs-granted?",-649584328));
+frontend.components.theme.container = rum.core.lazy_build(rum.core.build_defc,(function (p__62438,child){
+var map__62439 = p__62438;
+var map__62439__$1 = cljs.core.__destructure_map(map__62439);
+var t = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"t","t",-1397832519));
+var system_theme_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"system-theme?","system-theme?",1330394234));
+var settings_open_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"settings-open?","settings-open?",1491874651));
+var sidebar_open_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"sidebar-open?","sidebar-open?",-1099774467));
+var current_repo = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"current-repo","current-repo",134812359));
+var db_restoring_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"db-restoring?","db-restoring?",-1548628664));
+var sidebar_blocks_len = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"sidebar-blocks-len","sidebar-blocks-len",235708585));
+var route = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"route","route",329891309));
+var on_click = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"on-click","on-click",1632826543));
+var theme = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"theme","theme",-1247880880));
+var nfs_granted_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62439__$1,new cljs.core.Keyword(null,"nfs-granted?","nfs-granted?",-649584328));
 var mounted_fn = frontend.rum.use_mounted();
-var vec__72373 = rum.core.use_state(false);
-var restored_sidebar_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72373,(0),null);
-var set_restored_sidebar_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__72373,(1),null);
+var vec__62440 = rum.core.use_state(false);
+var restored_sidebar_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__62440,(0),null);
+var set_restored_sidebar_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__62440,(1),null);
 rum.core.use_effect_BANG_.cljs$core$IFn$_invoke$arity$2((function (){
 var doc = document.documentElement;
 var cls = doc.classList;
@@ -28,15 +28,17 @@ cls.add("dark");
 cls.remove("dark");
 }
 
+frontend.ui.apply_custom_theme_effect_BANG_(theme);
+
 return frontend.handler.plugin.hook_plugin_app.cljs$core$IFn$_invoke$arity$3(new cljs.core.Keyword(null,"theme-mode-changed","theme-mode-changed",-761875935),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"mode","mode",654403691),theme], null),null);
 }),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [theme], null));
 
 rum.core.use_effect_BANG_.cljs$core$IFn$_invoke$arity$2((function (){
-if(cljs.core.truth_((function (){var and__4251__auto__ = restored_sidebar_QMARK_;
-if(cljs.core.truth_(and__4251__auto__)){
+if(cljs.core.truth_((function (){var and__5041__auto__ = restored_sidebar_QMARK_;
+if(cljs.core.truth_(and__5041__auto__)){
 return mounted_fn();
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 frontend.handler.plugin.hook_plugin_app.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"sidebar-visible-changed","sidebar-visible-changed",946926799),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"visible","visible",-1024216805),sidebar_open_QMARK_], null));
@@ -68,9 +70,9 @@ var db_restored_QMARK_ = db_restoring_QMARK_ === false;
 if(cljs.core.truth_(db_restoring_QMARK_)){
 return frontend.util.set_title_BANG_("Loading");
 } else {
-if(cljs.core.truth_((function (){var or__4253__auto__ = nfs_granted_QMARK_;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+if(cljs.core.truth_((function (){var or__5043__auto__ = nfs_granted_QMARK_;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return db_restored_QMARK_;
 }
@@ -87,20 +89,20 @@ if(cljs.core.truth_(db_restoring_QMARK_)){
 return null;
 } else {
 var repos = frontend.state.get_repos();
-if(cljs.core.not((function (){var or__4253__auto__ = (function (){var and__4251__auto__ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2((1),cljs.core.count(repos));
-if(and__4251__auto__){
-var and__4251__auto____$1 = new cljs.core.Keyword(null,"example?","example?",-1695437732).cljs$core$IFn$_invoke$arity$1(cljs.core.first(repos));
-if(cljs.core.truth_(and__4251__auto____$1)){
+if(cljs.core.not((function (){var or__5043__auto__ = (function (){var and__5041__auto__ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2((1),cljs.core.count(repos));
+if(and__5041__auto__){
+var and__5041__auto____$1 = new cljs.core.Keyword(null,"example?","example?",-1695437732).cljs$core$IFn$_invoke$arity$1(cljs.core.first(repos));
+if(cljs.core.truth_(and__5041__auto____$1)){
 return cljs.core.not(frontend.util.mobile_QMARK_());
 } else {
-return and__4251__auto____$1;
+return and__5041__auto____$1;
 }
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return ((frontend.config.publishing_QMARK_) || (cljs.core.seq(repos)));
 }

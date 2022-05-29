@@ -1,14 +1,14 @@
 goog.provide('frontend.db.outliner');
 frontend.db.outliner.get_by_id = (function frontend$db$outliner$get_by_id(conn,id){
-try{var G__96651 = cljs.core.deref(conn);
-var G__96652 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"*","*",345799209,null)], null);
-var G__96653 = id;
-return (datascript.core.pull.cljs$core$IFn$_invoke$arity$3 ? datascript.core.pull.cljs$core$IFn$_invoke$arity$3(G__96651,G__96652,G__96653) : datascript.core.pull.call(null,G__96651,G__96652,G__96653));
-}catch (e96650){if((e96650 instanceof Error)){
-var _e = e96650;
+try{var G__82599 = cljs.core.deref(conn);
+var G__82600 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"*","*",345799209,null)], null);
+var G__82602 = id;
+return (datascript.core.pull.cljs$core$IFn$_invoke$arity$3 ? datascript.core.pull.cljs$core$IFn$_invoke$arity$3(G__82599,G__82600,G__82602) : datascript.core.pull.call(null,G__82599,G__82600,G__82602));
+}catch (e82596){if((e82596 instanceof Error)){
+var _e = e82596;
 return null;
 } else {
-throw e96650;
+throw e82596;
 
 }
 }});

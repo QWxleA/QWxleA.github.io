@@ -16,11 +16,11 @@ logseq.graph_parser.property.properties_end_pattern = cljs.core.re_pattern(goog.
 }
 logseq.graph_parser.property.contains_properties_QMARK_ = (function logseq$graph_parser$property$contains_properties_QMARK_(content){
 if(cljs.core.truth_(content)){
-var and__4251__auto__ = clojure.string.includes_QMARK_(content,logseq.graph_parser.property.properties_start);
-if(and__4251__auto__){
+var and__5041__auto__ = clojure.string.includes_QMARK_(content,logseq.graph_parser.property.properties_start);
+if(and__5041__auto__){
 return logseq.graph_parser.util.safe_re_find(logseq.graph_parser.property.properties_end_pattern,content);
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 } else {
 return null;
@@ -37,14 +37,14 @@ var end_idx = lines.indexOf(logseq.graph_parser.property.properties_end);
 if((((start_idx >= (0))) && ((((end_idx > (0))) && ((end_idx > start_idx)))))){
 var before = cljs.core.subvec.cljs$core$IFn$_invoke$arity$3(lines,(0),start_idx);
 var middle = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (text){
-var vec__47531 = logseq.graph_parser.util.split_first(":",cljs.core.subs.cljs$core$IFn$_invoke$arity$2(text,(1)));
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47531,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47531,(1),null);
-if(cljs.core.truth_((function (){var and__4251__auto__ = k;
-if(cljs.core.truth_(and__4251__auto__)){
+var vec__59209 = logseq.graph_parser.util.split_first(":",cljs.core.subs.cljs$core$IFn$_invoke$arity$2(text,(1)));
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59209,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59209,(1),null);
+if(cljs.core.truth_((function (){var and__5041__auto__ = k;
+if(cljs.core.truth_(and__5041__auto__)){
 return v;
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 var k__$1 = clojure.string.replace(k,"_","-");

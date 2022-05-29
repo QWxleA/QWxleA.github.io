@@ -39,12 +39,12 @@ return rewrite_cljc.zip.subedit.move_to(zloc_SINGLEQUOTE_,rewrite_cljc.zip.subed
  * Create and return a zipper whose root is the current node in `zloc`.
  */
 rewrite_cljc.zip.subedit.subzip = (function rewrite_cljc$zip$subedit$subzip(zloc){
-var zloc_SINGLEQUOTE_ = (function (){var G__94565 = zloc;
-var G__94565__$1 = (((G__94565 == null))?null:rewrite_cljc.custom_zipper.core.node(G__94565));
-if((G__94565__$1 == null)){
+var zloc_SINGLEQUOTE_ = (function (){var G__80403 = zloc;
+var G__80403__$1 = (((G__80403 == null))?null:rewrite_cljc.custom_zipper.core.node(G__80403));
+if((G__80403__$1 == null)){
 return null;
 } else {
-return rewrite_cljc.zip.base.edn_STAR_.cljs$core$IFn$_invoke$arity$1(G__94565__$1);
+return rewrite_cljc.zip.base.edn_STAR_.cljs$core$IFn$_invoke$arity$1(G__80403__$1);
 }
 })();
 if(cljs.core.truth_(zloc_SINGLEQUOTE_)){
@@ -59,8 +59,8 @@ return zloc_SINGLEQUOTE_;
  * The resulting zipper will be located on the root of the modified sub-tree.
  */
 rewrite_cljc.zip.subedit.subedit_node = (function rewrite_cljc$zip$subedit$subedit_node(zloc,f){
-var zloc_SINGLEQUOTE_ = (function (){var G__94566 = rewrite_cljc.zip.subedit.subzip(zloc);
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__94566) : f.call(null,G__94566));
+var zloc_SINGLEQUOTE_ = (function (){var G__80404 = rewrite_cljc.zip.subedit.subzip(zloc);
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__80404) : f.call(null,G__80404));
 })();
 if((!((zloc_SINGLEQUOTE_ == null)))){
 } else {

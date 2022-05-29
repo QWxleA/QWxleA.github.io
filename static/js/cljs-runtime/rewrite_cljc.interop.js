@@ -5,23 +5,23 @@ goog.provide('rewrite_cljc.interop');
  *   %d and %s are known to work in both.
  */
 rewrite_cljc.interop.simple_format = (function rewrite_cljc$interop$simple_format(var_args){
-var args__4870__auto__ = [];
-var len__4864__auto___91288 = arguments.length;
-var i__4865__auto___91289 = (0);
+var args__5772__auto__ = [];
+var len__5766__auto___77109 = arguments.length;
+var i__5767__auto___77110 = (0);
 while(true){
-if((i__4865__auto___91289 < len__4864__auto___91288)){
-args__4870__auto__.push((arguments[i__4865__auto___91289]));
+if((i__5767__auto___77110 < len__5766__auto___77109)){
+args__5772__auto__.push((arguments[i__5767__auto___77110]));
 
-var G__91290 = (i__4865__auto___91289 + (1));
-i__4865__auto___91289 = G__91290;
+var G__77111 = (i__5767__auto___77110 + (1));
+i__5767__auto___77110 = G__77111;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__4871__auto__ = ((((1) < args__4870__auto__.length))?(new cljs.core.IndexedSeq(args__4870__auto__.slice((1)),(0),null)):null);
-return rewrite_cljc.interop.simple_format.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4871__auto__);
+var argseq__5773__auto__ = ((((1) < args__5772__auto__.length))?(new cljs.core.IndexedSeq(args__5772__auto__.slice((1)),(0),null)):null);
+return rewrite_cljc.interop.simple_format.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5773__auto__);
 });
 
 (rewrite_cljc.interop.simple_format.cljs$core$IFn$_invoke$arity$variadic = (function (template,args){
@@ -31,11 +31,11 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(goog.string.format,template
 (rewrite_cljc.interop.simple_format.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(rewrite_cljc.interop.simple_format.cljs$lang$applyTo = (function (seq91285){
-var G__91286 = cljs.core.first(seq91285);
-var seq91285__$1 = cljs.core.next(seq91285);
-var self__4851__auto__ = this;
-return self__4851__auto__.cljs$core$IFn$_invoke$arity$variadic(G__91286,seq91285__$1);
+(rewrite_cljc.interop.simple_format.cljs$lang$applyTo = (function (seq77106){
+var G__77107 = cljs.core.first(seq77106);
+var seq77106__$1 = cljs.core.next(seq77106);
+var self__5751__auto__ = this;
+return self__5751__auto__.cljs$core$IFn$_invoke$arity$variadic(G__77107,seq77106__$1);
 }));
 
 rewrite_cljc.interop.str__GT_int = (function rewrite_cljc$interop$str__GT_int(s){
@@ -51,11 +51,11 @@ rewrite_cljc.interop.max_int = (function rewrite_cljc$interop$max_int(){
 return Number.MAX_SAFE_INTEGER;
 });
 rewrite_cljc.interop.clojure_whitespace_QMARK_ = (function rewrite_cljc$interop$clojure_whitespace_QMARK_(c){
-var and__4251__auto__ = c;
-if(cljs.core.truth_(and__4251__auto__)){
+var and__5041__auto__ = c;
+if(cljs.core.truth_(and__5041__auto__)){
 return ((-1) < ["\r","\n","\t"," ",","].indexOf(c));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 });
 rewrite_cljc.interop.meta_available_QMARK_ = (function rewrite_cljc$interop$meta_available_QMARK_(data){

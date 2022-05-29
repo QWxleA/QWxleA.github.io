@@ -28,9 +28,9 @@ frontend.handler.instrument_BANG_ = (function frontend$handler$instrument_BANG_(
 var total = frontend.extensions.srs.get_srs_cards_total();
 frontend.state.set_state_BANG_(new cljs.core.Keyword("srs","cards-due-count","srs/cards-due-count",950004746),total);
 
-frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"instrument","instrument",-960698844),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword("flashcards","count","flashcards/count",1183528136),new cljs.core.Keyword(null,"payload","payload",-383036092),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"total","total",1916810418),(function (){var or__4253__auto__ = total;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"instrument","instrument",-960698844),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword("flashcards","count","flashcards/count",1183528136),new cljs.core.Keyword(null,"payload","payload",-383036092),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"total","total",1916810418),(function (){var or__5043__auto__ = total;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return (0);
 }
@@ -51,7 +51,7 @@ frontend.modules.shortcut.core.unlisten_all();
 
 frontend.modules.shortcut.core.refresh_BANG_();
 
-if(((cljs.core.not(cljs.core.seq((frontend.db.get_files.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_files.cljs$core$IFn$_invoke$arity$1(frontend.config.local_repo) : frontend.db.get_files.call(null,frontend.config.local_repo))))) && (((cljs.core.not(cljs.core.some(frontend.config.local_db_QMARK_,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"url","url",276297046),repos)))) && (cljs.core.not(frontend.mobile.util.is_native_platform_QMARK_())))))){
+if(((cljs.core.not(cljs.core.seq((frontend.db.get_files.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_files.cljs$core$IFn$_invoke$arity$1(frontend.config.local_repo) : frontend.db.get_files.call(null,frontend.config.local_repo))))) && (((cljs.core.not(cljs.core.some(frontend.config.local_db_QMARK_,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"url","url",276297046),repos)))) && (cljs.core.not(frontend.mobile.util.native_platform_QMARK_())))))){
 frontend.handler.repo.setup_local_repo_if_not_exists_BANG_();
 } else {
 frontend.state.set_db_restoring_BANG_(false);
@@ -70,7 +70,7 @@ frontend.handler.file.watch_for_current_graph_dir_BANG_();
 
 return frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("graph","ready","graph/ready",1121782733),frontend.state.get_current_repo()], null));
 })),(function (error){
-return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.handler",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"exception","exception",-335277064),error,new cljs.core.Keyword(null,"line","line",212345235),113], null)),error);
+return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.handler",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"exception","exception",-335277064),error,new cljs.core.Keyword(null,"line","line",212345235),114], null)),error);
 }));
 });
 frontend.handler.handle_connection_change = (function frontend$handler$handle_connection_change(e){
@@ -94,9 +94,9 @@ var temp__5720__auto__ = frontend.handler.goog$module$goog$object.getValueByKeys
 if(cljs.core.truth_(temp__5720__auto__)){
 var devtool_message = temp__5720__auto__;
 var msg_type = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(cljs.reader.read_string.cljs$core$IFn$_invoke$arity$1(devtool_message));
-var G__71632 = msg_type;
-var G__71632__$1 = (((G__71632 instanceof cljs.core.Keyword))?G__71632.fqn:null);
-switch (G__71632__$1) {
+var G__61682 = msg_type;
+var G__61682__$1 = (((G__61682 instanceof cljs.core.Keyword))?G__61682.fqn:null);
+switch (G__61682__$1) {
 case "datalog-console.client/request-whole-database-as-string":
 return window.postMessage(({":datalog-console.remote/remote-message": cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([db], 0))}),"*");
 
@@ -111,7 +111,7 @@ return null;
 }));
 });
 frontend.handler.get_repos = (function frontend$handler$get_repos(){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.db.persist.get_all_graphs(),(function (nfs_dbs){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (db){
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"url","url",276297046),db,new cljs.core.Keyword(null,"nfs?","nfs?",-544337673),true], null);
@@ -125,7 +125,7 @@ return promesa.protocols._promise(((cljs.core.seq(nfs_dbs__$1))?nfs_dbs__$1:new 
 frontend.handler.clear_cache_BANG_ = (function frontend$handler$clear_cache_BANG_(){
 frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$3("Clearing...",new cljs.core.Keyword(null,"warning","warning",-1685650671),false);
 
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((cljs.core.truth_(frontend.util.electron_QMARK_())?electron.ipc.ipc.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["clearCache"], 0)):null),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.idb.clear_local_storage_and_idb_BANG_(),(function (___$1){
 return promesa.protocols._promise(setTimeout((function (){
@@ -174,15 +174,15 @@ frontend.db.react.run_custom_queries_when_idle_BANG_();
 
 frontend.handler.events.run_BANG_();
 
-promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.handler.get_repos(),(function (repos){
 return promesa.protocols._promise((function (){
 frontend.state.set_repos_BANG_(repos);
 
 frontend.handler.restore_and_setup_BANG_(repos,db_schema);
 
-if(cljs.core.truth_(frontend.mobile.util.is_native_platform_QMARK_())){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42616__auto__){
+if(cljs.core.truth_(frontend.mobile.util.native_platform_QMARK_())){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28350__auto__){
 return promesa.protocols._promise(frontend.mobile.util.hide_splash());
 }));
 } else {
@@ -219,7 +219,7 @@ frontend.handler.stop_BANG_ = (function frontend$handler$stop_BANG_(){
 return cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["stop!"], 0));
 });
 frontend.handler.quit_and_install_new_version_BANG_ = (function frontend$handler$quit_and_install_new_version_BANG_(){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(electron.listener.persist_dbs_BANG_(),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(electron.ipc.invoke.cljs$core$IFn$_invoke$arity$variadic("set-quit-dirty-state",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([false], 0)),(function (___$1){
 return promesa.protocols._promise(electron.ipc.ipc.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"quitAndInstall","quitAndInstall",-856751624)], 0)));

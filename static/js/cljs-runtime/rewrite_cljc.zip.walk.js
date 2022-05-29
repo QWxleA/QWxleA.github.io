@@ -9,17 +9,17 @@ if(cljs.core.truth_((p_QMARK_.cljs$core$IFn$_invoke$arity$1 ? p_QMARK_.cljs$core
 var temp__5718__auto__ = (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(loc) : f.call(null,loc));
 if(cljs.core.truth_(temp__5718__auto__)){
 var n = temp__5718__auto__;
-var G__94578 = rewrite_cljc.zip.move.next(n);
-loc = G__94578;
+var G__80442 = rewrite_cljc.zip.move.next(n);
+loc = G__80442;
 continue;
 } else {
-var G__94579 = rewrite_cljc.zip.move.next(loc);
-loc = G__94579;
+var G__80443 = rewrite_cljc.zip.move.next(loc);
+loc = G__80443;
 continue;
 }
 } else {
-var G__94580 = rewrite_cljc.zip.move.next(loc);
-loc = G__94580;
+var G__80444 = rewrite_cljc.zip.move.next(loc);
+loc = G__80444;
 continue;
 }
 }
@@ -44,8 +44,8 @@ break;
  * WARNING: when function `f` changes the location in the zipper, normal traversal will be affected.
  */
 rewrite_cljc.zip.walk.prewalk = (function rewrite_cljc$zip$walk$prewalk(var_args){
-var G__94573 = arguments.length;
-switch (G__94573) {
+var G__80432 = arguments.length;
+switch (G__80432) {
 case 2:
 return rewrite_cljc.zip.walk.prewalk.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -74,9 +74,9 @@ rewrite_cljc.zip.walk.postwalk_subtree = (function rewrite_cljc$zip$walk$postwal
 var nloc = rewrite_cljc.zip.move.next(loc);
 var loc_SINGLEQUOTE_ = (cljs.core.truth_(rewrite_cljc.zip.move.end_QMARK_(nloc))?loc:rewrite_cljc.zip.move.prev((rewrite_cljc.zip.walk.postwalk_subtree.cljs$core$IFn$_invoke$arity$3 ? rewrite_cljc.zip.walk.postwalk_subtree.cljs$core$IFn$_invoke$arity$3(p_QMARK_,f,nloc) : rewrite_cljc.zip.walk.postwalk_subtree.call(null,p_QMARK_,f,nloc))));
 if(cljs.core.truth_((p_QMARK_.cljs$core$IFn$_invoke$arity$1 ? p_QMARK_.cljs$core$IFn$_invoke$arity$1(loc_SINGLEQUOTE_) : p_QMARK_.call(null,loc_SINGLEQUOTE_)))){
-var or__4253__auto__ = (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(loc_SINGLEQUOTE_) : f.call(null,loc_SINGLEQUOTE_));
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var or__5043__auto__ = (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(loc_SINGLEQUOTE_) : f.call(null,loc_SINGLEQUOTE_));
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return loc_SINGLEQUOTE_;
 }
@@ -102,8 +102,8 @@ return loc_SINGLEQUOTE_;
  * WARNING: when function `f` changes the location in the zipper, normal traversal will be affected.
  */
 rewrite_cljc.zip.walk.postwalk = (function rewrite_cljc$zip$walk$postwalk(var_args){
-var G__94576 = arguments.length;
-switch (G__94576) {
+var G__80441 = arguments.length;
+switch (G__80441) {
 case 2:
 return rewrite_cljc.zip.walk.postwalk.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -123,8 +123,8 @@ return rewrite_cljc.zip.walk.postwalk.cljs$core$IFn$_invoke$arity$3(zloc,cljs.co
 }));
 
 (rewrite_cljc.zip.walk.postwalk.cljs$core$IFn$_invoke$arity$3 = (function (zloc,p_QMARK_,f){
-return rewrite_cljc.zip.subedit.subedit_node(zloc,(function (p1__94574_SHARP_){
-return rewrite_cljc.zip.walk.postwalk_subtree(p_QMARK_,f,p1__94574_SHARP_);
+return rewrite_cljc.zip.subedit.subedit_node(zloc,(function (p1__80436_SHARP_){
+return rewrite_cljc.zip.walk.postwalk_subtree(p_QMARK_,f,p1__80436_SHARP_);
 }));
 }));
 

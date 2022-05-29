@@ -25,11 +25,11 @@ return frontend.date.get_date_time_string_3();
 }
 });
 frontend.util.clock.clock_interval = (function frontend$util$clock$clock_interval(stime,etime){
-var vec__65052 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__65051_SHARP_){
-return cljs_time.format.parse.cljs$core$IFn$_invoke$arity$2((cljs.core.truth_(frontend.util.clock.support_seconds_QMARK_)?frontend.date.custom_formatter_4:frontend.date.custom_formatter_3),p1__65051_SHARP_);
+var vec__50745 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__50688_SHARP_){
+return cljs_time.format.parse.cljs$core$IFn$_invoke$arity$2((cljs.core.truth_(frontend.util.clock.support_seconds_QMARK_)?frontend.date.custom_formatter_4:frontend.date.custom_formatter_3),p1__50688_SHARP_);
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [stime,etime], null));
-var stime__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__65052,(0),null);
-var etime__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__65052,(1),null);
+var stime__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50745,(0),null);
+var etime__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50745,(1),null);
 var interval = cljs_time.core.interval(stime__$1,etime__$1);
 var minutes = cljs_time.core.in_minutes(interval);
 var seconds = cljs_time.core.in_seconds(interval);
@@ -43,7 +43,7 @@ frontend.util.clock.clock_in = (function frontend$util$clock$clock_in(format,con
 return frontend.util.drawer.insert_drawer(format,content,"logbook",frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("CLOCK: [%s]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.util.clock.now()], 0)));
 });
 frontend.util.clock.clock_out = (function frontend$util$clock$clock_out(format,content){
-try{var or__4253__auto__ = (function (){var temp__5720__auto__ = cljs.core.last(cljs.core.last(frontend.util.drawer.get_drawer_ast(format,content,"logbook")));
+try{var or__5043__auto__ = (function (){var temp__5720__auto__ = cljs.core.last(cljs.core.last(frontend.util.drawer.get_drawer_ast(format,content,"logbook")));
 if(cljs.core.truth_(temp__5720__auto__)){
 var clock_in_log = temp__5720__auto__;
 var clock_in_log__$1 = clojure.string.trim(clock_in_log);
@@ -60,16 +60,16 @@ return null;
 return null;
 }
 })();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return content;
 }
-}catch (e65055){if((e65055 instanceof Error)){
-var _e = e65055;
+}catch (e50765){if((e50765 instanceof Error)){
+var _e = e50765;
 return content;
 } else {
-throw e65055;
+throw e50765;
 
 }
 }});
@@ -80,19 +80,19 @@ var logbook = temp__5720__auto__;
 var temp__5720__auto____$1 = cljs.core.last(logbook);
 if(cljs.core.truth_(temp__5720__auto____$1)){
 var logbook_lines = temp__5720__auto____$1;
-var temp__5720__auto____$2 = cljs.core.seq(cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__65056_SHARP_){
-return clojure.string.starts_with_QMARK_(p1__65056_SHARP_,"CLOCK:");
+var temp__5720__auto____$2 = cljs.core.seq(cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__50884_SHARP_){
+return clojure.string.starts_with_QMARK_(p1__50884_SHARP_,"CLOCK:");
 }),logbook_lines));
 if(temp__5720__auto____$2){
 var clock_lines = temp__5720__auto____$2;
-var vec__65059 = cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.map,cljs.core._PLUS_,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__65058_SHARP_){
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.int$,p1__65058_SHARP_);
-}),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__65057_SHARP_){
-return clojure.string.split.cljs$core$IFn$_invoke$arity$2(clojure.string.trim(cljs.core.last(clojure.string.split.cljs$core$IFn$_invoke$arity$2(p1__65057_SHARP_,"=>"))),":");
+var vec__50899 = cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.map,cljs.core._PLUS_,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__50886_SHARP_){
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.int$,p1__50886_SHARP_);
+}),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__50885_SHARP_){
+return clojure.string.split.cljs$core$IFn$_invoke$arity$2(clojure.string.trim(cljs.core.last(clojure.string.split.cljs$core$IFn$_invoke$arity$2(p1__50885_SHARP_,"=>"))),":");
 }),clock_lines)));
-var hours = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__65059,(0),null);
-var minutes = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__65059,(1),null);
-var seconds = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__65059,(2),null);
+var hours = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50899,(0),null);
+var minutes = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50899,(1),null);
+var seconds = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50899,(2),null);
 var duration = cljs_time.core.period.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.Keyword(null,"hours","hours",58380855),hours,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"minutes","minutes",1319166394),minutes,new cljs.core.Keyword(null,"seconds","seconds",-445266194),seconds], 0));
 var duration_in_minutes = cljs_time.core.in_minutes(duration);
 var zero_minutes_QMARK_ = (duration_in_minutes === (0));

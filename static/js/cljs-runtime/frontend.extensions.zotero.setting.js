@@ -14,11 +14,11 @@ return profiles;
 });
 frontend.extensions.zotero.setting.profile = (function frontend$extensions$zotero$setting$profile(){
 var profile = frontend.storage.get(new cljs.core.Keyword("zotero","setting-profile","zotero/setting-profile",1949443220));
-if(cljs.core.truth_((function (){var and__4251__auto__ = profile;
-if(cljs.core.truth_(and__4251__auto__)){
+if(cljs.core.truth_((function (){var and__5041__auto__ = profile;
+if(cljs.core.truth_(and__5041__auto__)){
 return cljs.core.contains_QMARK_(frontend.extensions.zotero.setting.all_profiles(),profile);
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 return profile;
@@ -53,8 +53,8 @@ return frontend.handler.config.set_config_BANG_(new cljs.core.Keyword("zotero","
 });
 frontend.extensions.zotero.setting.set_setting_BANG_ = (function frontend$extensions$zotero$setting$set_setting_BANG_(k,v){
 var profile = frontend.extensions.zotero.setting.profile();
-var new_settings = cljs.core.update.cljs$core$IFn$_invoke$arity$3(frontend.extensions.zotero.setting.sub_zotero_config(),profile,(function (p1__66050_SHARP_){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__66050_SHARP_,k,v);
+var new_settings = cljs.core.update.cljs$core$IFn$_invoke$arity$3(frontend.extensions.zotero.setting.sub_zotero_config(),profile,(function (p1__56580_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__56580_SHARP_,k,v);
 }));
 return frontend.handler.config.set_config_BANG_(new cljs.core.Keyword("zotero","settings-v2","zotero/settings-v2",-666496103),new_settings);
 });

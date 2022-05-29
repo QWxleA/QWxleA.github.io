@@ -17,8 +17,8 @@ logseq.graph_parser.utf8.decode = (function logseq$graph_parser$utf8$decode(arr)
 return logseq.graph_parser.utf8.decoder.decode(arr);
 });
 logseq.graph_parser.utf8.substring = (function logseq$graph_parser$utf8$substring(var_args){
-var G__73121 = arguments.length;
-switch (G__73121) {
+var G__58899 = arguments.length;
+switch (G__58899) {
 case 2:
 return logseq.graph_parser.utf8.substring.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 

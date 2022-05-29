@@ -1,49 +1,49 @@
 goog.provide('frontend.mobile.intent');
 var module$node_modules$$capacitor$filesystem$dist$plugin_cjs=shadow.js.require("module$node_modules$$capacitor$filesystem$dist$plugin_cjs", {});
-var module$node_modules$send_intent$dist$esm$index=shadow.js.require("module$node_modules$send_intent$dist$esm$index", {});
 var module$node_modules$path$path=shadow.js.require("module$node_modules$path$path", {});
+var module$node_modules$send_intent$dist$esm$index=shadow.js.require("module$node_modules$send_intent$dist$esm$index", {});
 frontend.mobile.intent.handle_received_text = (function frontend$mobile$intent$handle_received_text(result){
-var map__81956 = result;
-var map__81956__$1 = cljs.core.__destructure_map(map__81956);
-var title = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__81956__$1,new cljs.core.Keyword(null,"title","title",636505583));
-var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__81956__$1,new cljs.core.Keyword(null,"url","url",276297046));
-var page = (function (){var or__4253__auto__ = frontend.state.get_current_page();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var map__61220 = result;
+var map__61220__$1 = cljs.core.__destructure_map(map__61220);
+var title = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61220__$1,new cljs.core.Keyword(null,"title","title",636505583));
+var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61220__$1,new cljs.core.Keyword(null,"url","url",276297046));
+var page = (function (){var or__5043__auto__ = frontend.state.get_current_page();
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return clojure.string.lower_case(frontend.date.journal_name.cljs$core$IFn$_invoke$arity$0());
 }
 })();
 var format = (frontend.db.get_page_format.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_page_format.cljs$core$IFn$_invoke$arity$1(page) : frontend.db.get_page_format.call(null,page));
 var time = frontend.date.get_current_time();
-var url__$1 = (cljs.core.truth_((function (){var and__4251__auto__ = logseq.graph_parser.mldoc.link_QMARK_(format,title);
-if(cljs.core.truth_(and__4251__auto__)){
+var url__$1 = (cljs.core.truth_((function (){var and__5041__auto__ = logseq.graph_parser.mldoc.link_QMARK_(format,title);
+if(cljs.core.truth_(and__5041__auto__)){
 return cljs.core.not(url);
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())?title:url);
 var text = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(url__$1,title))?null:title);
-var vec__81957 = (((function (){var or__4253__auto__ = logseq.graph_parser.mldoc.link_QMARK_(format,url__$1);
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var vec__61221 = (((function (){var or__5043__auto__ = logseq.graph_parser.mldoc.link_QMARK_(format,url__$1);
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return cljs.core.not(url__$1);
 }
 })())?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [text,url__$1], null):clojure.string.split.cljs$core$IFn$_invoke$arity$2(url__$1,"\"\n"));
-var text__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__81957,(0),null);
-var url__$2 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__81957,(1),null);
-var text__$2 = (function (){var G__81961 = text__$1;
-if((G__81961 == null)){
+var text__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61221,(0),null);
+var url__$2 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61221,(1),null);
+var text__$2 = (function (){var G__61225 = text__$1;
+if((G__61225 == null)){
 return null;
 } else {
-return clojure.string.replace(G__81961,/^\"/,"");
+return clojure.string.replace(G__61225,/^\"/,"");
 }
 })();
-var url__$3 = (function (){var and__4251__auto__ = url__$2;
-if(cljs.core.truth_(and__4251__auto__)){
-if(((clojure.string.includes_QMARK_(url__$2,"youtube.com")) || (clojure.string.includes_QMARK_(url__$2,"youtu.be")))){
-return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("{{youtube %s}}",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([url__$2], 0));
+var url__$3 = (function (){var and__5041__auto__ = url__$2;
+if(cljs.core.truth_(and__5041__auto__)){
+if(cljs.core.boolean$(logseq.graph_parser.text.get_matched_video(url__$2))){
+return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("{{video %s}}",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([url__$2], 0));
 } else {
 if(((clojure.string.includes_QMARK_(url__$2,"twitter.com")) && (clojure.string.includes_QMARK_(url__$2,"status")))){
 return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("{{twitter %s}}",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([url__$2], 0));
@@ -57,19 +57,19 @@ return url__$2;
 }
 }
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })();
 var template = cljs.core.get_in.cljs$core$IFn$_invoke$arity$3(frontend.state.get_config.cljs$core$IFn$_invoke$arity$0(),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"quick-capture-templates","quick-capture-templates",-1488741596),new cljs.core.Keyword(null,"text","text",-1790561697)], null),"**{time}** [[quick capture]]: {text} {url}");
-var values = clojure.string.replace(clojure.string.replace(clojure.string.replace(template,"{time}",time),"{text}",(function (){var or__4253__auto__ = text__$2;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var values = clojure.string.replace(clojure.string.replace(clojure.string.replace(template,"{time}",time),"{text}",(function (){var or__5043__auto__ = text__$2;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return "";
 }
-})()),"{url}",(function (){var or__4253__auto__ = url__$3;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+})()),"{url}",(function (){var or__5043__auto__ = url__$3;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return "";
 }
@@ -81,7 +81,7 @@ return frontend.handler.editor.api_insert_new_block_BANG_(values,new cljs.core.P
 }
 });
 frontend.mobile.intent.embed_asset_file = (function frontend$mobile$intent$embed_asset_file(url,format){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(module$node_modules$path$path.basename(url),(function (basename){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((frontend.util.node_path.name.cljs$core$IFn$_invoke$arity$1 ? frontend.util.node_path.name.cljs$core$IFn$_invoke$arity$1(basename) : frontend.util.node_path.name.call(null,basename)),(function (label){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.date.get_current_time(),(function (time){
@@ -92,9 +92,9 @@ return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.mobile.int
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("../assets/%s",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([basename], 0)),(function (url__$1){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.handler.editor.get_asset_file_link(format,url__$1,label,true),(function (url__$2){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.get_in.cljs$core$IFn$_invoke$arity$3(frontend.state.get_config.cljs$core$IFn$_invoke$arity$0(),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"quick-capture-templates","quick-capture-templates",-1488741596),new cljs.core.Keyword(null,"media","media",-1066138403)], null),"**{time}** [[quick capture]]: {url}"),(function (template){
-return promesa.protocols._promise(clojure.string.replace(clojure.string.replace(template,"{time}",time),"{url}",(function (){var or__4253__auto__ = url__$2;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+return promesa.protocols._promise(clojure.string.replace(clojure.string.replace(template,"{time}",time),"{url}",(function (){var or__5043__auto__ = url__$2;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return "";
 }
@@ -110,31 +110,33 @@ return "";
 }));
 });
 frontend.mobile.intent.embed_text_file = (function frontend$mobile$intent$embed_text_file(url,title){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.date.get_current_time(),(function (time){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var G__81963 = (function (){var or__4253__auto__ = title;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var G__61233 = (function (){var or__5043__auto__ = title;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return module$node_modules$path$path.basename(url);
 }
 })();
-var G__81963__$1 = (((G__81963 == null))?null:decodeURIComponent(G__81963));
-if((G__81963__$1 == null)){
+var G__61233__$1 = (((G__61233 == null))?null:decodeURIComponent(G__61233));
+var G__61233__$2 = (((G__61233__$1 == null))?null:(frontend.util.node_path.name.cljs$core$IFn$_invoke$arity$1 ? frontend.util.node_path.name.cljs$core$IFn$_invoke$arity$1(G__61233__$1) : frontend.util.node_path.name.call(null,G__61233__$1)));
+var G__61233__$3 = (((G__61233__$2 == null))?null:frontend.util.file_name_sanity(G__61233__$2));
+if((G__61233__$3 == null)){
 return null;
 } else {
-return (frontend.util.node_path.name.cljs$core$IFn$_invoke$arity$1 ? frontend.util.node_path.name.cljs$core$IFn$_invoke$arity$1(G__81963__$1) : frontend.util.node_path.name.call(null,G__81963__$1));
+return clojure.string.replace(G__61233__$3,".","");
 }
 })(),(function (title__$1){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(module$node_modules$path$path.join(frontend.config.get_repo_dir(frontend.state.get_current_repo()),frontend.config.get_pages_directory(),module$node_modules$path$path.basename(url)),(function (path){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(module$node_modules$path$path.join(frontend.config.get_repo_dir(frontend.state.get_current_repo()),frontend.config.get_pages_directory(),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(encodeURI(title__$1)),cljs.core.str.cljs$core$IFn$_invoke$arity$1(module$node_modules$path$path.extname(url))].join('')),(function (path){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(module$node_modules$$capacitor$filesystem$dist$plugin_cjs.Filesystem.copy(cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"from","from",1815293044),url,new cljs.core.Keyword(null,"to","to",192099007),path], null))),(function (error){
-return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.mobile.intent",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"copy-file-error","copy-file-error",-264206453),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),error], null),new cljs.core.Keyword(null,"line","line",212345235),88], null)),null);
+return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.mobile.intent",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"copy-file-error","copy-file-error",-264206453),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),error], null),new cljs.core.Keyword(null,"line","line",212345235),90], null)),null);
 })),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([title__$1], 0)),(function (url__$1){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.get_in.cljs$core$IFn$_invoke$arity$3(frontend.state.get_config.cljs$core$IFn$_invoke$arity$0(),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"quick-capture-templates","quick-capture-templates",-1488741596),new cljs.core.Keyword(null,"text","text",-1790561697)], null),"**{time}** [[quick capture]]: {url}"),(function (template){
-return promesa.protocols._promise(clojure.string.replace(clojure.string.replace(template,"{time}",time),"{url}",(function (){var or__4253__auto__ = url__$1;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+return promesa.protocols._promise(clojure.string.replace(clojure.string.replace(template,"{time}",time),"{url}",(function (){var or__5043__auto__ = url__$1;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return "";
 }
@@ -148,14 +150,14 @@ return "";
 }));
 });
 frontend.mobile.intent.handle_received_media = (function frontend$mobile$intent$handle_received_media(result){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(result,(function (p__81969){
-var map__81970 = p__81969;
-var map__81970__$1 = cljs.core.__destructure_map(map__81970);
-var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__81970__$1,new cljs.core.Keyword(null,"url","url",276297046));
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__4253__auto__ = frontend.state.get_current_page();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(result,(function (p__61234){
+var map__61235 = p__61234;
+var map__61235__$1 = cljs.core.__destructure_map(map__61235);
+var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61235__$1,new cljs.core.Keyword(null,"url","url",276297046));
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__5043__auto__ = frontend.state.get_current_page();
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return clojure.string.lower_case(frontend.date.journal_name.cljs$core$IFn$_invoke$arity$0());
 }
@@ -170,16 +172,16 @@ return promesa.protocols._promise((cljs.core.truth_(frontend.state.get_edit_bloc
 }));
 });
 frontend.mobile.intent.handle_received_application = (function frontend$mobile$intent$handle_received_application(result){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(result,(function (p__81980){
-var map__81984 = p__81980;
-var map__81984__$1 = cljs.core.__destructure_map(map__81984);
-var title = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__81984__$1,new cljs.core.Keyword(null,"title","title",636505583));
-var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__81984__$1,new cljs.core.Keyword(null,"url","url",276297046));
-var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__81984__$1,new cljs.core.Keyword(null,"type","type",1174270348));
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__4253__auto__ = frontend.state.get_current_page();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(result,(function (p__61236){
+var map__61237 = p__61236;
+var map__61237__$1 = cljs.core.__destructure_map(map__61237);
+var title = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61237__$1,new cljs.core.Keyword(null,"title","title",636505583));
+var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61237__$1,new cljs.core.Keyword(null,"url","url",276297046));
+var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61237__$1,new cljs.core.Keyword(null,"type","type",1174270348));
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__5043__auto__ = frontend.state.get_current_page();
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return clojure.string.lower_case(frontend.date.journal_name.cljs$core$IFn$_invoke$arity$0());
 }
@@ -197,28 +199,28 @@ return promesa.protocols._promise((cljs.core.truth_(frontend.state.get_edit_bloc
 }));
 });
 frontend.mobile.intent.decode_received_result = (function frontend$mobile$intent$decode_received_result(m){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,(function (){var iter__4652__auto__ = (function frontend$mobile$intent$decode_received_result_$_iter__81997(s__81998){
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,(function (){var iter__5520__auto__ = (function frontend$mobile$intent$decode_received_result_$_iter__61238(s__61239){
 return (new cljs.core.LazySeq(null,(function (){
-var s__81998__$1 = s__81998;
+var s__61239__$1 = s__61239;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__81998__$1);
+var temp__5720__auto__ = cljs.core.seq(s__61239__$1);
 if(temp__5720__auto__){
-var s__81998__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__81998__$2)){
-var c__4650__auto__ = cljs.core.chunk_first(s__81998__$2);
-var size__4651__auto__ = cljs.core.count(c__4650__auto__);
-var b__82000 = cljs.core.chunk_buffer(size__4651__auto__);
-if((function (){var i__81999 = (0);
+var s__61239__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__61239__$2)){
+var c__5518__auto__ = cljs.core.chunk_first(s__61239__$2);
+var size__5519__auto__ = cljs.core.count(c__5518__auto__);
+var b__61241 = cljs.core.chunk_buffer(size__5519__auto__);
+if((function (){var i__61240 = (0);
 while(true){
-if((i__81999 < size__4651__auto__)){
-var vec__82018 = cljs.core._nth(c__4650__auto__,i__81999);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82018,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82018,(1),null);
-cljs.core.chunk_append(b__82000,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [k,((cljs.core.vector_QMARK_(v))?cljs.core.vec(cljs.core.map.cljs$core$IFn$_invoke$arity$2(frontend.mobile.intent.decode_received_result,v)):((clojure.string.blank_QMARK_(v))?null:(cljs.core.truth_(frontend.mobile.util.native_ios_QMARK_())?decodeURIComponent(v):v)
+if((i__61240 < size__5519__auto__)){
+var vec__61242 = cljs.core._nth(c__5518__auto__,i__61240);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61242,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61242,(1),null);
+cljs.core.chunk_append(b__61241,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [k,((cljs.core.vector_QMARK_(v))?cljs.core.vec(cljs.core.map.cljs$core$IFn$_invoke$arity$2(frontend.mobile.intent.decode_received_result,v)):((clojure.string.blank_QMARK_(v))?null:(cljs.core.truth_(frontend.mobile.util.native_ios_QMARK_())?decodeURIComponent(v):v)
 ))], null));
 
-var G__82108 = (i__81999 + (1));
-i__81999 = G__82108;
+var G__61470 = (i__61240 + (1));
+i__61240 = G__61470;
 continue;
 } else {
 return true;
@@ -226,16 +228,16 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__82000),frontend$mobile$intent$decode_received_result_$_iter__81997(cljs.core.chunk_rest(s__81998__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__61241),frontend$mobile$intent$decode_received_result_$_iter__61238(cljs.core.chunk_rest(s__61239__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__82000),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__61241),null);
 }
 } else {
-var vec__82025 = cljs.core.first(s__81998__$2);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82025,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82025,(1),null);
+var vec__61245 = cljs.core.first(s__61239__$2);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61245,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61245,(1),null);
 return cljs.core.cons(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [k,((cljs.core.vector_QMARK_(v))?cljs.core.vec(cljs.core.map.cljs$core$IFn$_invoke$arity$2(frontend.mobile.intent.decode_received_result,v)):((clojure.string.blank_QMARK_(v))?null:(cljs.core.truth_(frontend.mobile.util.native_ios_QMARK_())?decodeURIComponent(v):v)
-))], null),frontend$mobile$intent$decode_received_result_$_iter__81997(cljs.core.rest(s__81998__$2)));
+))], null),frontend$mobile$intent$decode_received_result_$_iter__61238(cljs.core.rest(s__61239__$2)));
 }
 } else {
 return null;
@@ -244,44 +246,40 @@ break;
 }
 }),null,null));
 });
-return iter__4652__auto__(m);
+return iter__5520__auto__(m);
 })());
 });
-frontend.mobile.intent.handle_received = (function frontend$mobile$intent$handle_received(){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(module$node_modules$send_intent$dist$esm$index.SendIntent.checkSendIntentReceived(),(function (error){
-return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.mobile.intent",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"intent-received-error","intent-received-error",2097503730),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),error], null),new cljs.core.Keyword(null,"line","line",212345235),151], null)),null);
-})),(function (received){
-return promesa.protocols._promise((cljs.core.truth_(received)?(function (){var result = frontend.mobile.intent.decode_received_result(cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(received,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0)));
-var temp__5720__auto__ = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(result);
+frontend.mobile.intent.handle_result = (function frontend$mobile$intent$handle_result(result){
+var result__$1 = frontend.mobile.intent.decode_received_result(result);
+var temp__5720__auto__ = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(result__$1);
 if(cljs.core.truth_(temp__5720__auto__)){
 var type = temp__5720__auto__;
 if(clojure.string.starts_with_QMARK_(type,"text/")){
-return frontend.mobile.intent.handle_received_text(result);
+return frontend.mobile.intent.handle_received_text(result__$1);
 } else {
 if(((clojure.string.starts_with_QMARK_(type,"image/")) || (((clojure.string.starts_with_QMARK_(type,"video/")) || (clojure.string.starts_with_QMARK_(type,"audio/")))))){
-return frontend.mobile.intent.handle_received_media(result);
+return frontend.mobile.intent.handle_received_media(result__$1);
 } else {
 if(clojure.string.starts_with_QMARK_(type,"application/")){
-return frontend.mobile.intent.handle_received_application(result);
+return frontend.mobile.intent.handle_received_application(result__$1);
 } else {
-return frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$3(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),"Parsing current shared content are not supported. Please report the following codes on ",new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"href","href",-793805698),"https://github.com/logseq/logseq/issues/new?labels=from:in-app&template=bug_report.yaml",new cljs.core.Keyword(null,"target","target",253001721),"_blank"], null),"Github"], null),". We will look into it soon.",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"pre.code","pre.code",2043838796),(function (){var sb__4795__auto__ = (new goog.string.StringBuffer());
-var _STAR_print_newline_STAR__orig_val__82036_82114 = cljs.core._STAR_print_newline_STAR_;
-var _STAR_print_fn_STAR__orig_val__82037_82115 = cljs.core._STAR_print_fn_STAR_;
-var _STAR_print_newline_STAR__temp_val__82038_82116 = true;
-var _STAR_print_fn_STAR__temp_val__82039_82117 = (function (x__4796__auto__){
-return sb__4795__auto__.append(x__4796__auto__);
+return frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$3(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),"Parsing current shared content are not supported. Please report the following codes on ",new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"href","href",-793805698),"https://github.com/logseq/logseq/issues/new?labels=from:in-app&template=bug_report.yaml",new cljs.core.Keyword(null,"target","target",253001721),"_blank"], null),"Github"], null),". We will look into it soon.",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"pre.code","pre.code",2043838796),(function (){var sb__5687__auto__ = (new goog.string.StringBuffer());
+var _STAR_print_newline_STAR__orig_val__61276_61477 = cljs.core._STAR_print_newline_STAR_;
+var _STAR_print_fn_STAR__orig_val__61277_61478 = cljs.core._STAR_print_fn_STAR_;
+var _STAR_print_newline_STAR__temp_val__61278_61479 = true;
+var _STAR_print_fn_STAR__temp_val__61279_61480 = (function (x__5688__auto__){
+return sb__5687__auto__.append(x__5688__auto__);
 });
-(cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR__temp_val__82038_82116);
+(cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR__temp_val__61278_61479);
 
-(cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR__temp_val__82039_82117);
+(cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR__temp_val__61279_61480);
 
-try{cljs.pprint.pprint.cljs$core$IFn$_invoke$arity$1(result);
-}finally {(cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR__orig_val__82037_82115);
+try{cljs.pprint.pprint.cljs$core$IFn$_invoke$arity$1(result__$1);
+}finally {(cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR__orig_val__61277_61478);
 
-(cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR__orig_val__82036_82114);
+(cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR__orig_val__61276_61477);
 }
-return cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__4795__auto__);
+return cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__5687__auto__);
 })()], null)], null),new cljs.core.Keyword(null,"warning","warning",-1685650671),false);
 
 }
@@ -290,6 +288,14 @@ return cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__4795__auto__);
 } else {
 return null;
 }
+});
+frontend.mobile.intent.handle_received = (function frontend$mobile$intent$handle_received(){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(module$node_modules$send_intent$dist$esm$index.SendIntent.checkSendIntentReceived(),(function (error){
+return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.mobile.intent",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"intent-received-error","intent-received-error",2097503730),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),error], null),new cljs.core.Keyword(null,"line","line",212345235),177], null)),null);
+})),(function (received){
+return promesa.protocols._promise((cljs.core.truth_(received)?(function (){var result = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(received,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+return frontend.mobile.intent.handle_result(result);
 })():null));
 }));
 }));

@@ -4,15 +4,15 @@ return cljs.core.re_pattern(["^",((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(
 });
 frontend.util.marker.bare_marker_pattern = /(NOW|LATER|TODO|DOING|DONE|WAITING|WAIT|CANCELED|CANCELLED|STARTED|IN-PROGRESS){1}\s+/;
 frontend.util.marker.add_or_update_marker = (function frontend$util$marker$add_or_update_marker(content,format,marker){
-var vec__63659 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"org","org",1495985),format))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/\*+\s/,/\n\*+\s/], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/#+\s/,/\n#+\s/], null));
-var re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63659,(0),null);
-var new_line_re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63659,(1),null);
+var vec__49227 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"org","org",1495985),format))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/\*+\s/,/\n\*+\s/], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [/#+\s/,/\n#+\s/], null));
+var re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49227,(0),null);
+var new_line_re_pattern = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49227,(1),null);
 var pos = (function (){var temp__5718__auto__ = cljs.core.seq(frontend.util.re_pos(new_line_re_pattern,content));
 if(temp__5718__auto__){
 var matches = temp__5718__auto__;
-var vec__63662 = cljs.core.last(matches);
-var start_pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63662,(0),null);
-var content__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__63662,(1),null);
+var vec__49230 = cljs.core.last(matches);
+var start_pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49230,(0),null);
+var content__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49230,(1),null);
 return (start_pos + cljs.core.count(content__$1));
 } else {
 return cljs.core.count(frontend.util.safe_re_find(re_pattern,content));
@@ -22,8 +22,8 @@ var new_content = [cljs.core.subs.cljs$core$IFn$_invoke$arity$3(content,(0),pos)
 return new_content;
 });
 frontend.util.marker.cycle_marker_state = (function frontend$util$marker$cycle_marker_state(marker,preferred_workflow){
-var G__63668 = marker;
-switch (G__63668) {
+var G__49233 = marker;
+switch (G__49233) {
 case "TODO":
 return "DOING";
 
@@ -63,13 +63,13 @@ return "TODO";
  */
 frontend.util.marker.cycle_marker = (function frontend$util$marker$cycle_marker(content,marker,new_marker,format,preferred_workflow){
 var content__$1 = clojure.string.triml(content);
-var new_marker__$1 = (function (){var or__4253__auto__ = new_marker;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var new_marker__$1 = (function (){var or__5043__auto__ = new_marker;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
-return frontend.util.marker.cycle_marker_state((function (){var or__4253__auto____$1 = marker;
-if(cljs.core.truth_(or__4253__auto____$1)){
-return or__4253__auto____$1;
+return frontend.util.marker.cycle_marker_state((function (){var or__5043__auto____$1 = marker;
+if(cljs.core.truth_(or__5043__auto____$1)){
+return or__5043__auto____$1;
 } else {
 return cljs.core.last(frontend.util.safe_re_find(frontend.util.marker.marker_pattern(format),content__$1));
 }

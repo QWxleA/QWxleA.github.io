@@ -11,7 +11,7 @@ return url;
 }
 });
 frontend.db.conn.get_repo_name = (function frontend$db$conn$get_repo_name(repo){
-if(cljs.core.truth_(frontend.mobile.util.is_native_platform_QMARK_())){
+if(cljs.core.truth_(frontend.mobile.util.native_platform_QMARK_())){
 return logseq.graph_parser.text.get_graph_name_from_path(repo);
 } else {
 if(frontend.config.local_db_QMARK_(repo)){
@@ -26,11 +26,11 @@ return frontend.db.conn.get_repo_path(repo);
  * repo-path: output of `get-repo-name`
  */
 frontend.db.conn.get_short_repo_name = (function frontend$db$conn$get_short_repo_name(repo_path){
-if(cljs.core.truth_((function (){var or__4253__auto__ = frontend.util.electron_QMARK_();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+if(cljs.core.truth_((function (){var or__5043__auto__ = frontend.util.electron_QMARK_();
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
-return frontend.mobile.util.is_native_platform_QMARK_();
+return frontend.mobile.util.native_platform_QMARK_();
 }
 })())){
 return logseq.graph_parser.text.get_file_basename(repo_path);
@@ -47,8 +47,8 @@ return null;
 }
 });
 frontend.db.conn.get_db = (function frontend$db$conn$get_db(var_args){
-var G__63392 = arguments.length;
-switch (G__63392) {
+var G__33317 = arguments.length;
+switch (G__33317) {
 case 0:
 return frontend.db.conn.get_db.cljs$core$IFn$_invoke$arity$0();
 
@@ -102,17 +102,17 @@ return cljs.core.reset_BANG_(conn,db);
 frontend.db.conn.remove_conn_BANG_ = (function frontend$db$conn$remove_conn_BANG_(repo){
 return cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$3(frontend.db.conn.conns,cljs.core.dissoc,frontend.db.conn.datascript_db(repo));
 });
-frontend.db.conn.me_tx = (function frontend$db$conn$me_tx(_db,p__63402){
-var map__63403 = p__63402;
-var map__63403__$1 = cljs.core.__destructure_map(map__63403);
-var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63403__$1,new cljs.core.Keyword(null,"name","name",1843675177));
-var email = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63403__$1,new cljs.core.Keyword(null,"email","email",1415816706));
-var avatar = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63403__$1,new cljs.core.Keyword(null,"avatar","avatar",-1607499307));
+frontend.db.conn.me_tx = (function frontend$db$conn$me_tx(_db,p__33321){
+var map__33322 = p__33321;
+var map__33322__$1 = cljs.core.__destructure_map(map__33322);
+var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__33322__$1,new cljs.core.Keyword(null,"name","name",1843675177));
+var email = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__33322__$1,new cljs.core.Keyword(null,"email","email",1415816706));
+var avatar = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__33322__$1,new cljs.core.Keyword(null,"avatar","avatar",-1607499307));
 return logseq.graph_parser.util.remove_nils(new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword("me","name","me/name",1843678673),name,new cljs.core.Keyword("me","email","me/email",1415861402),email,new cljs.core.Keyword("me","avatar","me/avatar",-1607499667),avatar], null));
 });
 frontend.db.conn.start_BANG_ = (function frontend$db$conn$start_BANG_(var_args){
-var G__63405 = arguments.length;
-switch (G__63405) {
+var G__33324 = arguments.length;
+switch (G__33324) {
 case 2:
 return frontend.db.conn.start_BANG_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -131,20 +131,20 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 return frontend.db.conn.start_BANG_.cljs$core$IFn$_invoke$arity$3(me__$1,repo,cljs.core.PersistentArrayMap.EMPTY);
 }));
 
-(frontend.db.conn.start_BANG_.cljs$core$IFn$_invoke$arity$3 = (function (me__$1,repo,p__63406){
-var map__63407 = p__63406;
-var map__63407__$1 = cljs.core.__destructure_map(map__63407);
-var db_type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63407__$1,new cljs.core.Keyword(null,"db-type","db-type",404552925));
-var listen_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63407__$1,new cljs.core.Keyword(null,"listen-handler","listen-handler",-1690024921));
+(frontend.db.conn.start_BANG_.cljs$core$IFn$_invoke$arity$3 = (function (me__$1,repo,p__33325){
+var map__33326 = p__33325;
+var map__33326__$1 = cljs.core.__destructure_map(map__33326);
+var db_type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__33326__$1,new cljs.core.Keyword(null,"db-type","db-type",404552925));
+var listen_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__33326__$1,new cljs.core.Keyword(null,"listen-handler","listen-handler",-1690024921));
 var db_name = frontend.db.conn.datascript_db(repo);
 var db_conn = datascript.core.create_conn.cljs$core$IFn$_invoke$arity$1(frontend.db_schema.schema);
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(frontend.db.conn.conns,cljs.core.assoc,db_name,db_conn);
 
-datascript.core.transact_BANG_.cljs$core$IFn$_invoke$arity$2(db_conn,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var G__63408 = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("schema","version","schema/version",1396190655),frontend.db_schema.version], null);
+datascript.core.transact_BANG_.cljs$core$IFn$_invoke$arity$2(db_conn,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var G__33327 = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("schema","version","schema/version",1396190655),frontend.db_schema.version], null);
 if(cljs.core.truth_(db_type)){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__63408,new cljs.core.Keyword("db","type","db/type",1174271242),db_type);
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__33327,new cljs.core.Keyword("db","type","db/type",1174271242),db_type);
 } else {
-return G__63408;
+return G__33327;
 }
 })(),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword("block","name","block/name",1619760316),"card",new cljs.core.Keyword("block","original-name","block/original-name",-1620099234),"card",new cljs.core.Keyword("block","uuid","block/uuid",-1991494552),datascript.core.squuid.cljs$core$IFn$_invoke$arity$0()], null)], null));
 

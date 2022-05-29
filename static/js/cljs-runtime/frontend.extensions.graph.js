@@ -19,9 +19,9 @@ return graph.resetEdgeStyle(edge,cljs_bean.core.__GT_js(new cljs.core.Persistent
 }));
 });
 frontend.extensions.graph.on_click_handler = (function frontend$extensions$graph$on_click_handler(graph,node,event,_STAR_focus_nodes,_STAR_n_hops,drag_QMARK_,dark_QMARK_){
-if(cljs.core.truth_((function (){var or__4253__auto__ = frontend.extensions.graph.goog$module$goog$object.get(event,"shiftKey");
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+if(cljs.core.truth_((function (){var or__5043__auto__ = frontend.extensions.graph.goog$module$goog$object.get(event,"shiftKey");
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return drag_QMARK_;
 }
@@ -52,11 +52,11 @@ return frontend.handler.route.redirect_to_page_BANG_.cljs$core$IFn$_invoke$arity
 frontend.extensions.graph.graph_2d = rum.core.lazy_build(rum.core.build_defcs,(function (state,_opts){
 return daiquiri.core.create_element("div",{'ref':(function (value){
 var ref = cljs.core.get.cljs$core$IFn$_invoke$arity$2(state,new cljs.core.Keyword(null,"ref","ref",1289896967));
-if(cljs.core.truth_((function (){var and__4251__auto__ = ref;
-if(cljs.core.truth_(and__4251__auto__)){
+if(cljs.core.truth_((function (){var and__5041__auto__ = ref;
+if(cljs.core.truth_(and__5041__auto__)){
 return value;
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 return cljs.core.reset_BANG_(ref,value);

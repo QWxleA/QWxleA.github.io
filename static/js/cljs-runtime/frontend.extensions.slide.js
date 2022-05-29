@@ -5,9 +5,9 @@ return window.Reveal;
 frontend.extensions.slide.with_properties = (function frontend$extensions$slide$with_properties(m,block){
 var properties = new cljs.core.Keyword("block","properties","block/properties",708347145).cljs$core$IFn$_invoke$arity$1(block);
 if(cljs.core.seq(properties)){
-return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([m,medley.core.map_keys((function (k){
+return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([m,cljs.core.update_keys(properties,(function (k){
 return clojure.string.replace(["data-",cljs.core.name(k)].join(''),"data-data-","data-");
-}),properties)], 0));
+}))], 0));
 } else {
 return m;
 }
@@ -25,40 +25,40 @@ var deep_level_QMARK_ = (level >= (2));
 var children = new cljs.core.Keyword("block","children","block/children",-1040716209).cljs$core$IFn$_invoke$arity$1(block);
 var has_children_QMARK_ = cljs.core.seq(children);
 var children__$1 = ((((has_children_QMARK_) && ((!(deep_level_QMARK_)))))?cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (block__$1){
-var G__71634 = config;
-var G__71635 = block__$1;
-var G__71636 = (level + (1));
-return (frontend.extensions.slide.block_container.cljs$core$IFn$_invoke$arity$3 ? frontend.extensions.slide.block_container.cljs$core$IFn$_invoke$arity$3(G__71634,G__71635,G__71636) : frontend.extensions.slide.block_container.call(null,G__71634,G__71635,G__71636));
+var G__61723 = config;
+var G__61724 = block__$1;
+var G__61725 = (level + (1));
+return (frontend.extensions.slide.block_container.cljs$core$IFn$_invoke$arity$3 ? frontend.extensions.slide.block_container.cljs$core$IFn$_invoke$arity$3(G__61723,G__61724,G__61725) : frontend.extensions.slide.block_container.call(null,G__61723,G__61724,G__61725));
 }),children):null);
 var block_el = frontend.components.block.block_container(config,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(block,new cljs.core.Keyword("block","children","block/children",-1040716209)));
 var dom_attrs = frontend.extensions.slide.with_properties(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),["slide-block-",cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("block","uuid","block/uuid",-1991494552).cljs$core$IFn$_invoke$arity$1(block))].join('')], null),block);
 if(has_children_QMARK_){
-var attrs71637 = dom_attrs;
-return daiquiri.core.create_element("section",((cljs.core.map_QMARK_(attrs71637))?daiquiri.interpreter.element_attributes(attrs71637):null),((cljs.core.map_QMARK_(attrs71637))?[(function (){var attrs71638 = block_el;
-return daiquiri.core.create_element("section",((cljs.core.map_QMARK_(attrs71638))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["relative"], null)], null),attrs71638], 0))):{'className':"relative"}),((cljs.core.map_QMARK_(attrs71638))?[((deep_level_QMARK_)?daiquiri.core.create_element("span",{'className':"opacity-30 text-xl"},["Hidden children"]):null)]:[daiquiri.interpreter.interpret(attrs71638),((deep_level_QMARK_)?daiquiri.core.create_element("span",{'className':"opacity-30 text-xl"},["Hidden children"]):null)]));
-})(),daiquiri.interpreter.interpret(children__$1)]:[daiquiri.interpreter.interpret(attrs71637),(function (){var attrs71643 = block_el;
-return daiquiri.core.create_element("section",((cljs.core.map_QMARK_(attrs71643))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["relative"], null)], null),attrs71643], 0))):{'className':"relative"}),((cljs.core.map_QMARK_(attrs71643))?[((deep_level_QMARK_)?daiquiri.core.create_element("span",{'className':"opacity-30 text-xl"},["Hidden children"]):null)]:[daiquiri.interpreter.interpret(attrs71643),((deep_level_QMARK_)?daiquiri.core.create_element("span",{'className':"opacity-30 text-xl"},["Hidden children"]):null)]));
+var attrs61726 = dom_attrs;
+return daiquiri.core.create_element("section",((cljs.core.map_QMARK_(attrs61726))?daiquiri.interpreter.element_attributes(attrs61726):null),((cljs.core.map_QMARK_(attrs61726))?[(function (){var attrs61727 = block_el;
+return daiquiri.core.create_element("section",((cljs.core.map_QMARK_(attrs61727))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["relative"], null)], null),attrs61727], 0))):{'className':"relative"}),((cljs.core.map_QMARK_(attrs61727))?[((deep_level_QMARK_)?daiquiri.core.create_element("span",{'className':"opacity-30 text-xl"},["Hidden children"]):null)]:[daiquiri.interpreter.interpret(attrs61727),((deep_level_QMARK_)?daiquiri.core.create_element("span",{'className':"opacity-30 text-xl"},["Hidden children"]):null)]));
+})(),daiquiri.interpreter.interpret(children__$1)]:[daiquiri.interpreter.interpret(attrs61726),(function (){var attrs61732 = block_el;
+return daiquiri.core.create_element("section",((cljs.core.map_QMARK_(attrs61732))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["relative"], null)], null),attrs61732], 0))):{'className':"relative"}),((cljs.core.map_QMARK_(attrs61732))?[((deep_level_QMARK_)?daiquiri.core.create_element("span",{'className':"opacity-30 text-xl"},["Hidden children"]):null)]:[daiquiri.interpreter.interpret(attrs61732),((deep_level_QMARK_)?daiquiri.core.create_element("span",{'className':"opacity-30 text-xl"},["Hidden children"]):null)]));
 })(),daiquiri.interpreter.interpret(children__$1)]));
 } else {
-var attrs71648 = dom_attrs;
-return daiquiri.core.create_element("section",((cljs.core.map_QMARK_(attrs71648))?daiquiri.interpreter.element_attributes(attrs71648):null),((cljs.core.map_QMARK_(attrs71648))?[daiquiri.interpreter.interpret(block_el)]:[daiquiri.interpreter.interpret(attrs71648),daiquiri.interpreter.interpret(block_el)]));
+var attrs61737 = dom_attrs;
+return daiquiri.core.create_element("section",((cljs.core.map_QMARK_(attrs61737))?daiquiri.interpreter.element_attributes(attrs61737):null),((cljs.core.map_QMARK_(attrs61737))?[daiquiri.interpreter.interpret(block_el)]:[daiquiri.interpreter.interpret(attrs61737),daiquiri.interpreter.interpret(block_el)]));
 }
 }),null,"frontend.extensions.slide/block-container");
 frontend.extensions.slide.slide_content = (function frontend$extensions$slide$slide_content(loading_QMARK_,style,config,blocks){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p.text-sm","p.text-sm",-1988028746),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.opacity-70","span.opacity-70",1907592405),"Tip: press "], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),"f"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.opacity-70","span.opacity-70",1907592405)," to go fullscreen"], null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.reveal","div.reveal",-318716100),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),style], null),(cljs.core.truth_(loading_QMARK_)?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.ls-center","div.ls-center",501392471),frontend.ui.loading("")], null):null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.slides","div.slides",1806431712),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__71649_SHARP_){
-return frontend.extensions.slide.block_container(config,p1__71649_SHARP_,(1));
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p.text-sm","p.text-sm",-1988028746),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.opacity-70","span.opacity-70",1907592405),"Tip: press "], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),"f"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.opacity-70","span.opacity-70",1907592405)," to go fullscreen"], null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.reveal","div.reveal",-318716100),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),style], null),(cljs.core.truth_(loading_QMARK_)?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.ls-center","div.ls-center",501392471),frontend.ui.loading("")], null):null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.slides","div.slides",1806431712),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__61738_SHARP_){
+return frontend.extensions.slide.block_container(config,p1__61738_SHARP_,(1));
 }),blocks)], null)], null)], null);
 });
 frontend.extensions.slide.slide = rum.core.lazy_build(rum.core.build_defc,(function (page_name){
 var loading_QMARK_ = rum.core.react(frontend.extensions.slide._STAR_loading_QMARK_);
-var page = (function (){var G__71650 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),page_name], null);
-return (frontend.db.entity.cljs$core$IFn$_invoke$arity$1 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$1(G__71650) : frontend.db.entity.call(null,G__71650));
+var page = (function (){var G__61739 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),page_name], null);
+return (frontend.db.entity.cljs$core$IFn$_invoke$arity$1 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$1(G__61739) : frontend.db.entity.call(null,G__61739));
 })();
 var journal_QMARK_ = new cljs.core.Keyword(null,"journal?","journal?",-897756522).cljs$core$IFn$_invoke$arity$1(page);
 var repo = frontend.state.get_current_repo();
-var blocks = frontend.modules.outliner.tree.blocks__GT_vec_tree.cljs$core$IFn$_invoke$arity$2((function (){var G__71651 = repo;
-var G__71652 = new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1(page);
-return (frontend.db.get_paginated_blocks.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_paginated_blocks.cljs$core$IFn$_invoke$arity$2(G__71651,G__71652) : frontend.db.get_paginated_blocks.call(null,G__71651,G__71652));
+var blocks = frontend.modules.outliner.tree.blocks__GT_vec_tree.cljs$core$IFn$_invoke$arity$2((function (){var G__61740 = repo;
+var G__61741 = new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1(page);
+return (frontend.db.get_paginated_blocks.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_paginated_blocks.cljs$core$IFn$_invoke$arity$2(G__61740,G__61741) : frontend.db.get_paginated_blocks.call(null,G__61740,G__61741));
 })(),page_name);
 var blocks__$1 = (cljs.core.truth_(journal_QMARK_)?cljs.core.rest(blocks):blocks);
 var config = new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"id","id",-1388402092),"slide-reveal-js",new cljs.core.Keyword(null,"slide?","slide?",1648217264),true,new cljs.core.Keyword(null,"sidebar?","sidebar?",-534999672),true,new cljs.core.Keyword(null,"page-name","page-name",974981762),page_name], null);

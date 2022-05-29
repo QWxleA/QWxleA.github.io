@@ -1,7 +1,7 @@
 goog.provide('frontend.db.persist');
 frontend.db.persist.get_all_graphs = (function frontend$db$persist$get_all_graphs(){
 if(cljs.core.truth_(frontend.util.electron_QMARK_())){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(electron.ipc.ipc.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["getGraphs"], 0)),(function (result){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.vec(result),(function (result__$1){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(((cljs.core.seq(result__$1))?result__$1:frontend.idb.get_nfs_dbs()),(function (result__$2){
@@ -16,7 +16,7 @@ return frontend.idb.get_nfs_dbs();
 });
 frontend.db.persist.get_serialized_graph = (function frontend$db$persist$get_serialized_graph(graph_name){
 if(cljs.core.truth_(frontend.util.electron_QMARK_())){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(electron.ipc.ipc.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["getSerializedGraph",graph_name], 0)),(function (result){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((cljs.core.truth_(result)?result:(function (){var graph_name__$1 = [frontend.config.idb_db_prefix,cljs.core.str.cljs$core$IFn$_invoke$arity$1(graph_name)].join('');
 return frontend.idb.get_item(graph_name__$1);

@@ -11,8 +11,8 @@ if((typeof frontend !== 'undefined') && (typeof frontend.util !== 'undefined') &
 frontend.util.drawer.logbook_start = ":LOGBOOK:";
 }
 frontend.util.drawer.build_drawer_str = (function frontend$util$drawer$build_drawer_str(var_args){
-var G__47672 = arguments.length;
-switch (G__47672) {
+var G__33261 = arguments.length;
+switch (G__33261) {
 case 1:
 return frontend.util.drawer.build_drawer_str.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -60,19 +60,19 @@ return frontend.format.mldoc.typ_drawer_QMARK_(x,typ);
 var lines = clojure.string.split_lines(content);
 var title = cljs.core.first(lines);
 var body = cljs.core.rest(lines);
-var scheduled = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__47673_SHARP_){
-return clojure.string.starts_with_QMARK_(p1__47673_SHARP_,"SCHEDULED");
+var scheduled = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__33263_SHARP_){
+return clojure.string.starts_with_QMARK_(p1__33263_SHARP_,"SCHEDULED");
 }),lines);
-var deadline = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__47674_SHARP_){
-return clojure.string.starts_with_QMARK_(p1__47674_SHARP_,"DEADLINE");
+var deadline = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__33264_SHARP_){
+return clojure.string.starts_with_QMARK_(p1__33264_SHARP_,"DEADLINE");
 }),lines);
-var body_without_timestamps = cljs.core.vec(cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__47675_SHARP_){
-return (!(((clojure.string.starts_with_QMARK_(p1__47675_SHARP_,"SCHEDULED")) || (clojure.string.starts_with_QMARK_(p1__47675_SHARP_,"DEADLINE")))));
+var body_without_timestamps = cljs.core.vec(cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__33265_SHARP_){
+return (!(((clojure.string.starts_with_QMARK_(p1__33265_SHARP_,"SCHEDULED")) || (clojure.string.starts_with_QMARK_(p1__33265_SHARP_,"DEADLINE")))));
 }),body));
 var start_idx = body_without_timestamps.indexOf(frontend.util.drawer.drawer_start(typ));
-var end_idx = (function (){var vec__47677 = cljs.core.split_at(start_idx,body_without_timestamps);
-var before = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47677,(0),null);
-var after = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47677,(1),null);
+var end_idx = (function (){var vec__33271 = cljs.core.split_at(start_idx,body_without_timestamps);
+var before = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33271,(0),null);
+var after = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33271,(1),null);
 return (cljs.core.count(before) + after.indexOf(frontend.util.drawer.drawer_end));
 })();
 var result = ((cljs.core.not(has_typ_drawer_QMARK_))?(function (){var drawer = frontend.util.drawer.build_drawer_str.cljs$core$IFn$_invoke$arity$2(typ,value);
@@ -93,11 +93,11 @@ return clojure.string.join.cljs$core$IFn$_invoke$arity$2("\n",cljs.core.concat.c
 } else {
 return clojure.string.join.cljs$core$IFn$_invoke$arity$2("\n",cljs.core.concat.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [title], null),scheduled,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([deadline,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [drawer], null),body_without_timestamps], 0)));
 }
-})():(cljs.core.truth_((function (){var and__4251__auto__ = has_typ_drawer_QMARK_;
-if(cljs.core.truth_(and__4251__auto__)){
+})():(cljs.core.truth_((function (){var and__5041__auto__ = has_typ_drawer_QMARK_;
+if(cljs.core.truth_(and__5041__auto__)){
 return (((start_idx >= (0))) && ((((end_idx > (0))) && ((end_idx > start_idx)))));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())?(function (){var before = cljs.core.subvec.cljs$core$IFn$_invoke$arity$3(body_without_timestamps,(0),start_idx);
 var middle = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(cljs.core.subvec.cljs$core$IFn$_invoke$arity$3(body_without_timestamps,(start_idx + (1)),end_idx),value);
@@ -107,13 +107,13 @@ return clojure.string.join.cljs$core$IFn$_invoke$arity$2("\n",lines__$1);
 })():content
 ));
 return clojure.string.trimr(result);
-}catch (e47676){if((e47676 instanceof Error)){
-var e = e47676;
+}catch (e33268){if((e33268 instanceof Error)){
+var e = e33268;
 console.error(e);
 
 return content;
 } else {
-throw e47676;
+throw e33268;
 
 }
 }} else {
@@ -121,22 +121,22 @@ return null;
 }
 });
 frontend.util.drawer.contains_logbook_QMARK_ = (function frontend$util$drawer$contains_logbook_QMARK_(content){
-var and__4251__auto__ = frontend.util.safe_re_find(cljs.core.re_pattern(["(?i)",frontend.util.drawer.logbook_start].join('')),content);
-if(cljs.core.truth_(and__4251__auto__)){
+var and__5041__auto__ = frontend.util.safe_re_find(cljs.core.re_pattern(["(?i)",frontend.util.drawer.logbook_start].join('')),content);
+if(cljs.core.truth_(and__5041__auto__)){
 return frontend.util.safe_re_find(cljs.core.re_pattern(["(?i)",frontend.util.drawer.drawer_end].join('')),content);
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 });
 frontend.util.drawer.remove_logbook = (function frontend$util$drawer$remove_logbook(content){
 if(cljs.core.truth_(content)){
 if(cljs.core.truth_(frontend.util.drawer.contains_logbook_QMARK_(content))){
 var lines = clojure.string.split_lines(content);
-var vec__47684 = cljs.core.split_with((function (l){
+var vec__33279 = cljs.core.split_with((function (l){
 return (!(clojure.string.starts_with_QMARK_(clojure.string.upper_case(clojure.string.triml(l)),":LOGBOOK:")));
 }),lines);
-var title_lines = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47684,(0),null);
-var body = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47684,(1),null);
+var title_lines = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33279,(0),null);
+var body = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33279,(1),null);
 var body__$1 = cljs.core.drop_while.cljs$core$IFn$_invoke$arity$2((function (l){
 var l_SINGLEQUOTE_ = clojure.string.lower_case(clojure.string.trim(l));
 return (((!(clojure.string.starts_with_QMARK_(l_SINGLEQUOTE_,":end:")))) || (clojure.string.blank_QMARK_(l)));

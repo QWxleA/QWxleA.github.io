@@ -13,20 +13,20 @@ return result.value;
 });
 frontend.mobile.record.set_recording_state = (function frontend$mobile$record$set_recording_state(){
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.then.cljs$core$IFn$_invoke$arity$2(module$node_modules$capacitor_voice_recorder$dist$plugin_cjs.VoiceRecorder.getCurrentStatus(),(function (result){
-var map__80310 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(result,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
-var map__80310__$1 = cljs.core.__destructure_map(map__80310);
-var status = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__80310__$1,new cljs.core.Keyword(null,"status","status",-1997798413));
+var map__58838 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(result,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+var map__58838__$1 = cljs.core.__destructure_map(map__58838);
+var status = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58838__$1,new cljs.core.Keyword(null,"status","status",-1997798413));
 return frontend.state.set_state_BANG_(new cljs.core.Keyword("editor","record-status","editor/record-status",-122164557),status);
 })),(function (error){
 return console.error(error);
 }));
 });
 frontend.mobile.record.start_recording = (function frontend$mobile$record$start_recording(){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.mobile.record.has_audio_recording_permission_QMARK_(),(function (permission_granted_QMARK_){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__4253__auto__ = permission_granted_QMARK_;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__5043__auto__ = permission_granted_QMARK_;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return frontend.mobile.record.request_audio_recording_permission();
 }
@@ -43,19 +43,19 @@ return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.mobile.rec
 }));
 });
 frontend.mobile.record.embed_audio = (function frontend$mobile$record$embed_audio(database64){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__4253__auto__ = frontend.state.get_current_page();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__5043__auto__ = frontend.state.get_current_page();
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return clojure.string.lower_case(frontend.date.journal_name.cljs$core$IFn$_invoke$arity$0());
 }
 })(),(function (page){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2([cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.date.get_date_time_string_2()),".mp3"].join(''),(function (filename){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.state.get_edit_block(),(function (edit_block){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__4253__auto__ = new cljs.core.Keyword("block","format","block/format",-1212045901).cljs$core$IFn$_invoke$arity$1(edit_block);
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var or__5043__auto__ = new cljs.core.Keyword("block","format","block/format",-1212045901).cljs$core$IFn$_invoke$arity$1(edit_block);
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return (frontend.db.get_page_format.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_page_format.cljs$core$IFn$_invoke$arity$1(page) : frontend.db.get_page_format.call(null,page));
 }
@@ -80,11 +80,11 @@ return promesa.protocols._promise((cljs.core.truth_(edit_block)?frontend.state.a
 frontend.mobile.record.stop_recording = (function frontend$mobile$record$stop_recording(){
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.then.cljs$core$IFn$_invoke$arity$2(module$node_modules$capacitor_voice_recorder$dist$plugin_cjs.VoiceRecorder.stopRecording(),(function (result){
 var value = result.value;
-var map__80311 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(value,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
-var map__80311__$1 = cljs.core.__destructure_map(map__80311);
-var _msDuration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__80311__$1,new cljs.core.Keyword(null,"_msDuration","_msDuration",-2088496118));
-var recordDataBase64 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__80311__$1,new cljs.core.Keyword(null,"recordDataBase64","recordDataBase64",-1094381034));
-var _mimeType = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__80311__$1,new cljs.core.Keyword(null,"_mimeType","_mimeType",1358086728));
+var map__58842 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(value,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+var map__58842__$1 = cljs.core.__destructure_map(map__58842);
+var _msDuration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58842__$1,new cljs.core.Keyword(null,"_msDuration","_msDuration",-2088496118));
+var recordDataBase64 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58842__$1,new cljs.core.Keyword(null,"recordDataBase64","recordDataBase64",-1094381034));
+var _mimeType = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58842__$1,new cljs.core.Keyword(null,"_mimeType","_mimeType",1358086728));
 frontend.mobile.record.set_recording_state();
 
 if(typeof recordDataBase64 === 'string'){

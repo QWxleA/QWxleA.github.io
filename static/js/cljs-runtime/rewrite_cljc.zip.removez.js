@@ -56,12 +56,12 @@ if(cljs.core.truth_(zloc)){
 throw (new Error("Assert failed: zloc"));
 }
 
-var _PERCENT_ = rewrite_cljc.zip.removez.remove_p(zloc,(function (p1__92960_SHARP_){
-var and__4251__auto__ = rewrite_cljc.zip.whitespace.whitespace_QMARK_(p1__92960_SHARP_);
-if(cljs.core.truth_(and__4251__auto__)){
-return cljs.core.not(rewrite_cljc.zip.whitespace.linebreak_QMARK_(p1__92960_SHARP_));
+var _PERCENT_ = rewrite_cljc.zip.removez.remove_p(zloc,(function (p1__78801_SHARP_){
+var and__5041__auto__ = rewrite_cljc.zip.whitespace.whitespace_QMARK_(p1__78801_SHARP_);
+if(cljs.core.truth_(and__5041__auto__)){
+return cljs.core.not(rewrite_cljc.zip.whitespace.linebreak_QMARK_(p1__78801_SHARP_));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 }));
 if(cljs.core.truth_(_PERCENT_)){

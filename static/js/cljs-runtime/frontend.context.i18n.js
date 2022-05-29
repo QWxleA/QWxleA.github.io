@@ -2,23 +2,23 @@ goog.provide('frontend.context.i18n');
 frontend.context.i18n.dicts = cljs.core.merge_with.cljs$core$IFn$_invoke$arity$variadic(cljs.core.merge,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.dicts.dicts,frontend.modules.shortcut.dicts.dicts], 0));
 frontend.context.i18n.translate = tongue.core.build_translate(frontend.context.i18n.dicts);
 frontend.context.i18n.t = (function frontend$context$i18n$t(var_args){
-var args__4870__auto__ = [];
-var len__4864__auto___63381 = arguments.length;
-var i__4865__auto___63382 = (0);
+var args__5772__auto__ = [];
+var len__5766__auto___33185 = arguments.length;
+var i__5767__auto___33186 = (0);
 while(true){
-if((i__4865__auto___63382 < len__4864__auto___63381)){
-args__4870__auto__.push((arguments[i__4865__auto___63382]));
+if((i__5767__auto___33186 < len__5766__auto___33185)){
+args__5772__auto__.push((arguments[i__5767__auto___33186]));
 
-var G__63383 = (i__4865__auto___63382 + (1));
-i__4865__auto___63382 = G__63383;
+var G__33187 = (i__5767__auto___33186 + (1));
+i__5767__auto___33186 = G__33187;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__4871__auto__ = ((((0) < args__4870__auto__.length))?(new cljs.core.IndexedSeq(args__4870__auto__.slice((0)),(0),null)):null);
-return frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(argseq__4871__auto__);
+var argseq__5773__auto__ = ((((0) < args__5772__auto__.length))?(new cljs.core.IndexedSeq(args__5772__auto__.slice((0)),(0),null)):null);
+return frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(argseq__5773__auto__);
 });
 
 (frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic = (function (args){
@@ -29,9 +29,9 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(frontend.context.i18n.trans
 (frontend.context.i18n.t.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(frontend.context.i18n.t.cljs$lang$applyTo = (function (seq63372){
-var self__4852__auto__ = this;
-return self__4852__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq63372));
+(frontend.context.i18n.t.cljs$lang$applyTo = (function (seq33169){
+var self__5752__auto__ = this;
+return self__5752__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq33169));
 }));
 
 frontend.context.i18n.fetch_local_language = (function frontend$context$i18n$fetch_local_language(){

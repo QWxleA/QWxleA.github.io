@@ -9,22 +9,22 @@ return rewrite_cljc.interop.clojure_whitespace_QMARK_(c);
  * Check if a given character is a linebreak.
  */
 rewrite_cljc.parser.utils.linebreak_QMARK_ = (function rewrite_cljc$parser$utils$linebreak_QMARK_(c){
-var and__4251__auto__ = c;
-if(cljs.core.truth_(and__4251__auto__)){
+var and__5041__auto__ = c;
+if(cljs.core.truth_(and__5041__auto__)){
 return ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(c,"\n")) || (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(c,"\r")));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 });
 /**
  * Check if a given character is a non-linebreak whitespace.
  */
 rewrite_cljc.parser.utils.space_QMARK_ = (function rewrite_cljc$parser$utils$space_QMARK_(c){
-var and__4251__auto__ = cljs.core.not(rewrite_cljc.parser.utils.linebreak_QMARK_(c));
-if(and__4251__auto__){
+var and__5041__auto__ = cljs.core.not(rewrite_cljc.parser.utils.linebreak_QMARK_(c));
+if(and__5041__auto__){
 return rewrite_cljc.parser.utils.whitespace_QMARK_(c);
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 });
 /**
@@ -36,23 +36,23 @@ reader.cljs$tools$reader$reader_types$Reader$read_char$arity$1(null);
 return null;
 });
 rewrite_cljc.parser.utils.throw_reader = (function rewrite_cljc$parser$utils$throw_reader(var_args){
-var args__4870__auto__ = [];
-var len__4864__auto___92714 = arguments.length;
-var i__4865__auto___92715 = (0);
+var args__5772__auto__ = [];
+var len__5766__auto___78534 = arguments.length;
+var i__5767__auto___78535 = (0);
 while(true){
-if((i__4865__auto___92715 < len__4864__auto___92714)){
-args__4870__auto__.push((arguments[i__4865__auto___92715]));
+if((i__5767__auto___78535 < len__5766__auto___78534)){
+args__5772__auto__.push((arguments[i__5767__auto___78535]));
 
-var G__92716 = (i__4865__auto___92715 + (1));
-i__4865__auto___92715 = G__92716;
+var G__78536 = (i__5767__auto___78535 + (1));
+i__5767__auto___78535 = G__78536;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__4871__auto__ = ((((1) < args__4870__auto__.length))?(new cljs.core.IndexedSeq(args__4870__auto__.slice((1)),(0),null)):null);
-return rewrite_cljc.parser.utils.throw_reader.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4871__auto__);
+var argseq__5773__auto__ = ((((1) < args__5772__auto__.length))?(new cljs.core.IndexedSeq(args__5772__auto__.slice((1)),(0),null)):null);
+return rewrite_cljc.parser.utils.throw_reader.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5773__auto__);
 });
 
 (rewrite_cljc.parser.utils.throw_reader.cljs$core$IFn$_invoke$arity$variadic = (function (reader,msg){
@@ -64,11 +64,11 @@ throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2([cljs.core.str.cljs$core$I
 (rewrite_cljc.parser.utils.throw_reader.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(rewrite_cljc.parser.utils.throw_reader.cljs$lang$applyTo = (function (seq92711){
-var G__92712 = cljs.core.first(seq92711);
-var seq92711__$1 = cljs.core.next(seq92711);
-var self__4851__auto__ = this;
-return self__4851__auto__.cljs$core$IFn$_invoke$arity$variadic(G__92712,seq92711__$1);
+(rewrite_cljc.parser.utils.throw_reader.cljs$lang$applyTo = (function (seq78532){
+var G__78533 = cljs.core.first(seq78532);
+var seq78532__$1 = cljs.core.next(seq78532);
+var self__5751__auto__ = this;
+return self__5751__auto__.cljs$core$IFn$_invoke$arity$variadic(G__78533,seq78532__$1);
 }));
 
 rewrite_cljc.parser.utils.read_eol = (function rewrite_cljc$parser$utils$read_eol(reader){
@@ -80,8 +80,8 @@ var c = temp__5718__auto__;
 if(cljs.core.truth_(rewrite_cljc.parser.utils.linebreak_QMARK_(c))){
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.conj.cljs$core$IFn$_invoke$arity$2(char_seq,c));
 } else {
-var G__92717 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(char_seq,c);
-char_seq = G__92717;
+var G__78538 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(char_seq,c);
+char_seq = G__78538;
 continue;
 }
 } else {

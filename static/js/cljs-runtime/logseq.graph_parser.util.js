@@ -1,9 +1,4 @@
 goog.provide('logseq.graph_parser.util');
-logseq.graph_parser.util.uuid_pattern = "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}";
-if((typeof logseq !== 'undefined') && (typeof logseq.graph_parser !== 'undefined') && (typeof logseq.graph_parser.util !== 'undefined') && (typeof logseq.graph_parser.util.exactly_uuid_pattern !== 'undefined')){
-} else {
-logseq.graph_parser.util.exactly_uuid_pattern = cljs.core.re_pattern(["(?i)^",logseq.graph_parser.util.uuid_pattern,"$"].join(''));
-}
 /**
  * Copy of frontend.util/safe-re-find. Too basic to couple to main app
  */
@@ -18,12 +13,6 @@ return cljs.core.re_find(pattern,s);
 } else {
 return null;
 }
-});
-/**
- * Copy of frontend.util/uuid-string?. Too basic to couple to main app
- */
-logseq.graph_parser.util.uuid_string_QMARK_ = (function logseq$graph_parser$util$uuid_string_QMARK_(s){
-return logseq.graph_parser.util.safe_re_find(logseq.graph_parser.util.exactly_uuid_pattern,s);
 });
 /**
  * Normalize file path (for reading paths from FS, not required by writting)
@@ -69,8 +58,8 @@ return null;
 }
 });
 logseq.graph_parser.util.safe_subs = (function logseq$graph_parser$util$safe_subs(var_args){
-var G__44282 = arguments.length;
-switch (G__44282) {
+var G__51811 = arguments.length;
+switch (G__51811) {
 case 2:
 return logseq.graph_parser.util.safe_subs.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -92,12 +81,12 @@ return logseq.graph_parser.util.safe_subs.cljs$core$IFn$_invoke$arity$3(s,start,
 
 (logseq.graph_parser.util.safe_subs.cljs$core$IFn$_invoke$arity$3 = (function (s,start,end){
 var c = cljs.core.count(s);
-return cljs.core.subs.cljs$core$IFn$_invoke$arity$3(s,(function (){var x__4339__auto__ = c;
-var y__4340__auto__ = start;
-return ((x__4339__auto__ < y__4340__auto__) ? x__4339__auto__ : y__4340__auto__);
-})(),(function (){var x__4339__auto__ = c;
-var y__4340__auto__ = end;
-return ((x__4339__auto__ < y__4340__auto__) ? x__4339__auto__ : y__4340__auto__);
+return cljs.core.subs.cljs$core$IFn$_invoke$arity$3(s,(function (){var x__5131__auto__ = c;
+var y__5132__auto__ = start;
+return ((x__5131__auto__ < y__5132__auto__) ? x__5131__auto__ : y__5132__auto__);
+})(),(function (){var x__5131__auto__ = c;
+var y__5132__auto__ = end;
+return ((x__5131__auto__ < y__5132__auto__) ? x__5131__auto__ : y__5132__auto__);
 })());
 }));
 
@@ -109,54 +98,25 @@ return clojure.string.trim(cljs.core.subs.cljs$core$IFn$_invoke$arity$3(v,(1),(c
 logseq.graph_parser.util.wrapped_by_quotes_QMARK_ = (function logseq$graph_parser$util$wrapped_by_quotes_QMARK_(v){
 return ((typeof v === 'string') && ((((cljs.core.count(v) >= (2))) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$variadic("\"",cljs.core.first(v),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.last(v)], 0))))));
 });
-/**
- * Copy of frontend.util/parse-int. Too basic to couple to main app
- */
-logseq.graph_parser.util.parse_int = (function logseq$graph_parser$util$parse_int(x){
-if(typeof x === 'string'){
-return parseInt(x);
-} else {
-return x;
-}
-});
-/**
- * Copy of frontend.util/safe-parse-int. Too basic to couple to main app
- */
-logseq.graph_parser.util.safe_parse_int = (function logseq$graph_parser$util$safe_parse_int(x){
-var result = logseq.graph_parser.util.parse_int(x);
-if(cljs.core.truth_(isNaN(result))){
-return null;
-} else {
-return result;
-}
-});
 logseq.graph_parser.util.url_QMARK_ = (function logseq$graph_parser$util$url_QMARK_(s){
-var and__4251__auto__ = typeof s === 'string';
-if(and__4251__auto__){
+var and__5041__auto__ = typeof s === 'string';
+if(and__5041__auto__){
 try{(new URL(s));
 
 return true;
-}catch (e44318){if((e44318 instanceof Error)){
-var _e = e44318;
+}catch (e51815){if((e51815 instanceof Error)){
+var _e = e51815;
 return false;
 } else {
-throw e44318;
+throw e51815;
 
 }
 }} else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 });
 logseq.graph_parser.util.json__GT_clj = (function logseq$graph_parser$util$json__GT_clj(json_string){
 return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(JSON.parse(json_string),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
-});
-/**
- * Maps function `f` over the keys of map `m` to produce a new map.
- */
-logseq.graph_parser.util.map_keys = (function logseq$graph_parser$util$map_keys(f,m){
-return cljs.core.reduce_kv((function (m_,k,v){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m_,(f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(k) : f.call(null,k)),v);
-}),cljs.core.PersistentArrayMap.EMPTY,m);
 });
 /**
  * Copy of frontend.util/zero-pad. Too basic to couple to main app
@@ -172,21 +132,21 @@ return cljs.core.str.cljs$core$IFn$_invoke$arity$1(n);
  * Copy of frontend.util/get-file-ext. Too basic to couple to main app
  */
 logseq.graph_parser.util.get_file_ext = (function logseq$graph_parser$util$get_file_ext(file){
-var and__4251__auto__ = typeof file === 'string';
-if(and__4251__auto__){
-var and__4251__auto____$1 = clojure.string.includes_QMARK_(file,".");
-if(and__4251__auto____$1){
-var G__44334 = cljs.core.last(clojure.string.split.cljs$core$IFn$_invoke$arity$2(file,/\./));
-if((G__44334 == null)){
+var and__5041__auto__ = typeof file === 'string';
+if(and__5041__auto__){
+var and__5041__auto____$1 = clojure.string.includes_QMARK_(file,".");
+if(and__5041__auto____$1){
+var G__51843 = cljs.core.last(clojure.string.split.cljs$core$IFn$_invoke$arity$2(file,/\./));
+if((G__51843 == null)){
 return null;
 } else {
-return clojure.string.lower_case(G__44334);
+return clojure.string.lower_case(G__51843);
 }
 } else {
-return and__4251__auto____$1;
+return and__5041__auto____$1;
 }
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 });
 logseq.graph_parser.util.remove_boundary_slashes = (function logseq$graph_parser$util$remove_boundary_slashes(s){
@@ -208,10 +168,10 @@ var result = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVect
 while(true){
 if(cljs.core.seq(others)){
 var prev = cljs.core.last(result);
-var G__44395 = cljs.core.rest(others);
-var G__44396 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(result,[cljs.core.str.cljs$core$IFn$_invoke$arity$1(prev),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.first(others))].join(''));
-others = G__44395;
-result = G__44396;
+var G__51906 = cljs.core.rest(others);
+var G__51907 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(result,[cljs.core.str.cljs$core$IFn$_invoke$arity$1(prev),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.first(others))].join(''));
+others = G__51906;
+result = G__51907;
 continue;
 } else {
 return result;
@@ -223,8 +183,8 @@ break;
  * Sanitize the page-name.
  */
 logseq.graph_parser.util.page_name_sanity = (function logseq$graph_parser$util$page_name_sanity(var_args){
-var G__44366 = arguments.length;
-switch (G__44366) {
+var G__51875 = arguments.length;
+switch (G__51875) {
 case 1:
 return logseq.graph_parser.util.page_name_sanity.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -244,12 +204,12 @@ return logseq.graph_parser.util.page_name_sanity.cljs$core$IFn$_invoke$arity$2(p
 }));
 
 (logseq.graph_parser.util.page_name_sanity.cljs$core$IFn$_invoke$arity$2 = (function (page_name,replace_slash_QMARK_){
-var page = (function (){var G__44369 = page_name;
-var G__44369__$1 = (((G__44369 == null))?null:logseq.graph_parser.util.remove_boundary_slashes(G__44369));
-if((G__44369__$1 == null)){
+var page = (function (){var G__51876 = page_name;
+var G__51876__$1 = (((G__51876 == null))?null:logseq.graph_parser.util.remove_boundary_slashes(G__51876));
+if((G__51876__$1 == null)){
 return null;
 } else {
-return logseq.graph_parser.util.path_normalize(G__44369__$1);
+return logseq.graph_parser.util.path_normalize(G__51876__$1);
 }
 })();
 if(cljs.core.truth_(replace_slash_QMARK_)){
@@ -268,12 +228,12 @@ logseq.graph_parser.util.page_name_sanity_lc = (function logseq$graph_parser$uti
 return logseq.graph_parser.util.page_name_sanity.cljs$core$IFn$_invoke$arity$1(clojure.string.lower_case(s));
 });
 logseq.graph_parser.util.capitalize_all = (function logseq$graph_parser$util$capitalize_all(s){
-var G__44370 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/ /);
-var G__44370__$1 = (((G__44370 == null))?null:cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.capitalize,G__44370));
-if((G__44370__$1 == null)){
+var G__51878 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/ /);
+var G__51878__$1 = (((G__51878 == null))?null:cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.capitalize,G__51878));
+if((G__51878__$1 == null)){
 return null;
 } else {
-return clojure.string.join.cljs$core$IFn$_invoke$arity$2(" ",G__44370__$1);
+return clojure.string.join.cljs$core$IFn$_invoke$arity$2(" ",G__51878__$1);
 }
 });
 /**
@@ -281,8 +241,8 @@ return clojure.string.join.cljs$core$IFn$_invoke$arity$2(" ",G__44370__$1);
  */
 logseq.graph_parser.util.distinct_by = (function logseq$graph_parser$util$distinct_by(f,col){
 return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (acc,x){
-if(cljs.core.truth_(cljs.core.some((function (p1__44371_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2((f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(x) : f.call(null,x)),(f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__44371_SHARP_) : f.call(null,p1__44371_SHARP_)));
+if(cljs.core.truth_(cljs.core.some((function (p1__51882_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2((f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(x) : f.call(null,x)),(f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__51882_SHARP_) : f.call(null,p1__51882_SHARP_)));
 }),acc))){
 return acc;
 } else {
@@ -291,9 +251,9 @@ return cljs.core.vec(cljs.core.conj.cljs$core$IFn$_invoke$arity$2(acc,x));
 }),cljs.core.PersistentVector.EMPTY,col);
 });
 logseq.graph_parser.util.normalize_format = (function logseq$graph_parser$util$normalize_format(format){
-var G__44379 = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(format);
-var G__44379__$1 = (((G__44379 instanceof cljs.core.Keyword))?G__44379.fqn:null);
-switch (G__44379__$1) {
+var G__51883 = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(format);
+var G__51883__$1 = (((G__51883 instanceof cljs.core.Keyword))?G__51883.fqn:null);
+switch (G__51883__$1) {
 case "md":
 return new cljs.core.Keyword(null,"markdown","markdown",1227225089);
 

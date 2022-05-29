@@ -14,8 +14,8 @@ return obj;
 }
 });
 instaparse.transform.enlive_transform = (function instaparse$transform$enlive_transform(transform_map,parse_tree){
-var transform = (function (){var G__110805 = new cljs.core.Keyword(null,"tag","tag",-1290361223).cljs$core$IFn$_invoke$arity$1(parse_tree);
-return (transform_map.cljs$core$IFn$_invoke$arity$1 ? transform_map.cljs$core$IFn$_invoke$arity$1(G__110805) : transform_map.call(null,G__110805));
+var transform = (function (){var G__97393 = new cljs.core.Keyword(null,"tag","tag",-1290361223).cljs$core$IFn$_invoke$arity$1(parse_tree);
+return (transform_map.cljs$core$IFn$_invoke$arity$1 ? transform_map.cljs$core$IFn$_invoke$arity$1(G__97393) : transform_map.call(null,G__97393));
 })();
 if(cljs.core.truth_(transform)){
 return instaparse.transform.merge_meta(cljs.core.apply.cljs$core$IFn$_invoke$arity$2(transform,cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.partial.cljs$core$IFn$_invoke$arity$2(instaparse.transform.enlive_transform,transform_map),new cljs.core.Keyword(null,"content","content",15833224).cljs$core$IFn$_invoke$arity$1(parse_tree))),cljs.core.meta(parse_tree));
@@ -30,8 +30,8 @@ return parse_tree;
 });
 instaparse.transform.hiccup_transform = (function instaparse$transform$hiccup_transform(transform_map,parse_tree){
 if(((cljs.core.sequential_QMARK_(parse_tree)) && (cljs.core.seq(parse_tree)))){
-var temp__5718__auto__ = (function (){var G__110806 = cljs.core.first(parse_tree);
-return (transform_map.cljs$core$IFn$_invoke$arity$1 ? transform_map.cljs$core$IFn$_invoke$arity$1(G__110806) : transform_map.call(null,G__110806));
+var temp__5718__auto__ = (function (){var G__97399 = cljs.core.first(parse_tree);
+return (transform_map.cljs$core$IFn$_invoke$arity$1 ? transform_map.cljs$core$IFn$_invoke$arity$1(G__97399) : transform_map.call(null,G__97399));
 })();
 if(cljs.core.truth_(temp__5718__auto__)){
 var transform = temp__5718__auto__;
@@ -55,11 +55,11 @@ instaparse.transform.transform = (function instaparse$transform$transform(transf
 if(typeof parse_tree === 'string'){
 return parse_tree;
 } else {
-if(cljs.core.truth_((function (){var and__4251__auto__ = cljs.core.map_QMARK_(parse_tree);
-if(and__4251__auto__){
+if(cljs.core.truth_((function (){var and__5041__auto__ = cljs.core.map_QMARK_(parse_tree);
+if(and__5041__auto__){
 return new cljs.core.Keyword(null,"tag","tag",-1290361223).cljs$core$IFn$_invoke$arity$1(parse_tree);
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 return instaparse.transform.enlive_transform(transform_map,parse_tree);

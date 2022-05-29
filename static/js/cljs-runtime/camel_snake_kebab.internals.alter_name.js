@@ -5,15 +5,15 @@ goog.provide('camel_snake_kebab.internals.alter_name');
  */
 camel_snake_kebab.internals.alter_name.AlterName = function(){};
 
-var camel_snake_kebab$internals$alter_name$AlterName$alter_name$dyn_95257 = (function (this$,f){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (camel_snake_kebab.internals.alter_name.alter_name[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$2(this$,f) : m__4551__auto__.call(null,this$,f));
+var camel_snake_kebab$internals$alter_name$AlterName$alter_name$dyn_81148 = (function (this$,f){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (camel_snake_kebab.internals.alter_name.alter_name[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$2(this$,f) : m__5391__auto__.call(null,this$,f));
 } else {
-var m__4549__auto__ = (camel_snake_kebab.internals.alter_name.alter_name["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$2(this$,f) : m__4549__auto__.call(null,this$,f));
+var m__5389__auto__ = (camel_snake_kebab.internals.alter_name.alter_name["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$2(this$,f) : m__5389__auto__.call(null,this$,f));
 } else {
 throw cljs.core.missing_protocol("AlterName.alter-name",this$);
 }
@@ -26,7 +26,7 @@ camel_snake_kebab.internals.alter_name.alter_name = (function camel_snake_kebab$
 if((((!((this$ == null)))) && ((!((this$.camel_snake_kebab$internals$alter_name$AlterName$alter_name$arity$2 == null)))))){
 return this$.camel_snake_kebab$internals$alter_name$AlterName$alter_name$arity$2(this$,f);
 } else {
-return camel_snake_kebab$internals$alter_name$AlterName$alter_name$dyn_95257(this$,f);
+return camel_snake_kebab$internals$alter_name$AlterName$alter_name$dyn_81148(this$,f);
 }
 });
 
@@ -43,8 +43,8 @@ var this$__$1 = this;
 if(cljs.core.truth_(cljs.core.namespace(this$__$1))){
 throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("Namespaced keywords are not supported",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"input","input",556931961),this$__$1], null));
 } else {
-return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1((function (){var G__95254 = cljs.core.name(this$__$1);
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__95254) : f.call(null,G__95254));
+return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1((function (){var G__81146 = cljs.core.name(this$__$1);
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__81146) : f.call(null,G__81146));
 })());
 }
 }));
@@ -56,8 +56,8 @@ var this$__$1 = this;
 if(cljs.core.truth_(cljs.core.namespace(this$__$1))){
 throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("Namespaced symbols are not supported",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"input","input",556931961),this$__$1], null));
 } else {
-return cljs.core.symbol.cljs$core$IFn$_invoke$arity$1((function (){var G__95256 = cljs.core.name(this$__$1);
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__95256) : f.call(null,G__95256));
+return cljs.core.symbol.cljs$core$IFn$_invoke$arity$1((function (){var G__81147 = cljs.core.name(this$__$1);
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__81147) : f.call(null,G__81147));
 })());
 }
 }));

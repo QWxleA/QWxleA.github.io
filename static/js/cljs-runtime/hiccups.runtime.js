@@ -23,12 +23,12 @@ hiccups.runtime.xml_mode_QMARK_ = (function hiccups$runtime$xml_mode_QMARK_(){
 return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(hiccups.runtime._STAR_html_mode_STAR_,new cljs.core.Keyword(null,"xml","xml",-1170142052));
 });
 hiccups.runtime.in_mode = (function hiccups$runtime$in_mode(mode,f){
-var _STAR_html_mode_STAR__orig_val__96202 = hiccups.runtime._STAR_html_mode_STAR_;
-var _STAR_html_mode_STAR__temp_val__96203 = mode;
-(hiccups.runtime._STAR_html_mode_STAR_ = _STAR_html_mode_STAR__temp_val__96203);
+var _STAR_html_mode_STAR__orig_val__82159 = hiccups.runtime._STAR_html_mode_STAR_;
+var _STAR_html_mode_STAR__temp_val__82160 = mode;
+(hiccups.runtime._STAR_html_mode_STAR_ = _STAR_html_mode_STAR__temp_val__82160);
 
 try{return (f.cljs$core$IFn$_invoke$arity$0 ? f.cljs$core$IFn$_invoke$arity$0() : f.call(null));
-}finally {(hiccups.runtime._STAR_html_mode_STAR_ = _STAR_html_mode_STAR__orig_val__96202);
+}finally {(hiccups.runtime._STAR_html_mode_STAR_ = _STAR_html_mode_STAR__orig_val__82159);
 }});
 /**
  * Change special characters into HTML character entities.
@@ -47,10 +47,10 @@ return ">";
 hiccups.runtime.xml_attribute = (function hiccups$runtime$xml_attribute(name,value){
 return [" ",hiccups.runtime.as_str(name),"=\"",hiccups.runtime.escape_html(value),"\""].join('');
 });
-hiccups.runtime.render_attribute = (function hiccups$runtime$render_attribute(p__96211){
-var vec__96212 = p__96211;
-var name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__96212,(0),null);
-var value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__96212,(1),null);
+hiccups.runtime.render_attribute = (function hiccups$runtime$render_attribute(p__82165){
+var vec__82166 = p__82165;
+var name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82166,(0),null);
+var value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82166,(1),null);
 if(value === true){
 if(hiccups.runtime.xml_mode_QMARK_()){
 return hiccups.runtime.xml_attribute(name,name);
@@ -72,23 +72,23 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.sor
 /**
  * Ensure a tag vector is of the form [tag-name attrs content].
  */
-hiccups.runtime.normalize_element = (function hiccups$runtime$normalize_element(p__96218){
-var vec__96220 = p__96218;
-var seq__96221 = cljs.core.seq(vec__96220);
-var first__96222 = cljs.core.first(seq__96221);
-var seq__96221__$1 = cljs.core.next(seq__96221);
-var tag = first__96222;
-var content = seq__96221__$1;
+hiccups.runtime.normalize_element = (function hiccups$runtime$normalize_element(p__82170){
+var vec__82174 = p__82170;
+var seq__82175 = cljs.core.seq(vec__82174);
+var first__82176 = cljs.core.first(seq__82175);
+var seq__82175__$1 = cljs.core.next(seq__82175);
+var tag = first__82176;
+var content = seq__82175__$1;
 if((!((((tag instanceof cljs.core.Keyword)) || ((((tag instanceof cljs.core.Symbol)) || (typeof tag === 'string'))))))){
 throw [cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag)," is not a valid tag name"].join('');
 } else {
 }
 
-var vec__96223 = cljs.core.re_matches(hiccups.runtime.re_tag,hiccups.runtime.as_str(tag));
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__96223,(0),null);
-var tag__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__96223,(1),null);
-var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__96223,(2),null);
-var class$ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__96223,(3),null);
+var vec__82177 = cljs.core.re_matches(hiccups.runtime.re_tag,hiccups.runtime.as_str(tag));
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82177,(0),null);
+var tag__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82177,(1),null);
+var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82177,(2),null);
+var class$ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82177,(3),null);
 var tag_attrs = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"id","id",-1388402092),id,new cljs.core.Keyword(null,"class","class",-2030961996),(cljs.core.truth_(class$)?clojure.string.replace(class$,"."," "):null)], null);
 var map_attrs = cljs.core.first(content);
 if(cljs.core.map_QMARK_(map_attrs)){
@@ -101,13 +101,13 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
  * Render a tag vector as a HTML element.
  */
 hiccups.runtime.render_element = (function hiccups$runtime$render_element(element){
-var vec__96226 = hiccups.runtime.normalize_element(element);
-var tag = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__96226,(0),null);
-var attrs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__96226,(1),null);
-var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__96226,(2),null);
-if(cljs.core.truth_((function (){var or__4253__auto__ = content;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var vec__82180 = hiccups.runtime.normalize_element(element);
+var tag = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82180,(0),null);
+var attrs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82180,(1),null);
+var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82180,(2),null);
+if(cljs.core.truth_((function (){var or__5043__auto__ = content;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return (hiccups.runtime.container_tags.cljs$core$IFn$_invoke$arity$1 ? hiccups.runtime.container_tags.cljs$core$IFn$_invoke$arity$1(tag) : hiccups.runtime.container_tags.call(null,tag));
 }

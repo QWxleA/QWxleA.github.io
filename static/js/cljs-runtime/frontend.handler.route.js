@@ -2,23 +2,21 @@ goog.provide('frontend.handler.route');
 /**
  * If `push` is truthy, previous page will be left in history.
  */
-frontend.handler.route.redirect_BANG_ = (function frontend$handler$route$redirect_BANG_(p__60336){
-var map__60337 = p__60336;
-var map__60337__$1 = cljs.core.__destructure_map(map__60337);
-var to = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60337__$1,new cljs.core.Keyword(null,"to","to",192099007));
-var path_params = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60337__$1,new cljs.core.Keyword(null,"path-params","path-params",-48130597));
-var query_params = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60337__$1,new cljs.core.Keyword(null,"query-params","query-params",900640534));
-var push = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__60337__$1,new cljs.core.Keyword(null,"push","push",799791267),true);
-var route_fn_60365 = (cljs.core.truth_(push)?reitit.frontend.easy.push_state:reitit.frontend.easy.replace_state);
-frontend.state.save_scroll_position_BANG_.cljs$core$IFn$_invoke$arity$1(frontend.util.scroll_top.cljs$core$IFn$_invoke$arity$0());
-
-(route_fn_60365.cljs$core$IFn$_invoke$arity$3 ? route_fn_60365.cljs$core$IFn$_invoke$arity$3(to,path_params,query_params) : route_fn_60365.call(null,to,path_params,query_params));
+frontend.handler.route.redirect_BANG_ = (function frontend$handler$route$redirect_BANG_(p__46899){
+var map__46900 = p__46899;
+var map__46900__$1 = cljs.core.__destructure_map(map__46900);
+var to = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46900__$1,new cljs.core.Keyword(null,"to","to",192099007));
+var path_params = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46900__$1,new cljs.core.Keyword(null,"path-params","path-params",-48130597));
+var query_params = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46900__$1,new cljs.core.Keyword(null,"query-params","query-params",900640534));
+var push = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__46900__$1,new cljs.core.Keyword(null,"push","push",799791267),true);
+var route_fn_46917 = (cljs.core.truth_(push)?reitit.frontend.easy.push_state:reitit.frontend.easy.replace_state);
+(route_fn_46917.cljs$core$IFn$_invoke$arity$3 ? route_fn_46917.cljs$core$IFn$_invoke$arity$3(to,path_params,query_params) : route_fn_46917.call(null,to,path_params,query_params));
 
 return null;
 });
 frontend.handler.route.redirect_to_home_BANG_ = (function frontend$handler$route$redirect_to_home_BANG_(var_args){
-var G__60339 = arguments.length;
-switch (G__60339) {
+var G__46902 = arguments.length;
+switch (G__46902) {
 case 0:
 return frontend.handler.route.redirect_to_home_BANG_.cljs$core$IFn$_invoke$arity$0();
 
@@ -58,8 +56,8 @@ return frontend.handler.route.redirect_BANG_(new cljs.core.PersistentArrayMap(nu
  * Must ensure `page-name` is dereferenced (not an alias), or it will create a wrong new page with that name (#3511).
  */
 frontend.handler.route.redirect_to_page_BANG_ = (function frontend$handler$route$redirect_to_page_BANG_(var_args){
-var G__60341 = arguments.length;
-switch (G__60341) {
+var G__46904 = arguments.length;
+switch (G__46904) {
 case 1:
 return frontend.handler.route.redirect_to_page_BANG_.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -99,9 +97,9 @@ return frontend.handler.route.redirect_BANG_(new cljs.core.PersistentArrayMap(nu
 (frontend.handler.route.redirect_to_page_BANG_.cljs$lang$maxFixedArity = 3);
 
 frontend.handler.route.get_title = (function frontend$handler$route$get_title(name,path_params){
-var G__60342 = name;
-var G__60342__$1 = (((G__60342 instanceof cljs.core.Keyword))?G__60342.fqn:null);
-switch (G__60342__$1) {
+var G__46905 = name;
+var G__46905__$1 = (((G__46905 instanceof cljs.core.Keyword))?G__46905.fqn:null);
+switch (G__46905__$1) {
 case "home":
 return "Logseq";
 
@@ -142,8 +140,8 @@ case "page":
 var name__$1 = new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(path_params);
 var block_QMARK_ = frontend.util.uuid_string_QMARK_(name__$1);
 if(cljs.core.truth_(block_QMARK_)){
-var temp__5718__auto__ = (function (){var G__60343 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","uuid","block/uuid",-1991494552),medley.core.uuid(name__$1)], null);
-return (frontend.db.entity.cljs$core$IFn$_invoke$arity$1 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$1(G__60343) : frontend.db.entity.call(null,G__60343));
+var temp__5718__auto__ = (function (){var G__46906 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","uuid","block/uuid",-1991494552),cljs.core.uuid(name__$1)], null);
+return (frontend.db.entity.cljs$core$IFn$_invoke$arity$1 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$1(G__46906) : frontend.db.entity.call(null,G__46906));
 })();
 if(cljs.core.truth_(temp__5718__auto__)){
 var block = temp__5718__auto__;
@@ -157,12 +155,12 @@ return content;
 return "Page no longer exists!!";
 }
 } else {
-var page = (function (){var G__60344 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),(frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1 ? frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1(name__$1) : frontend.util.page_name_sanity_lc.call(null,name__$1))], null);
-return (frontend.db.pull.cljs$core$IFn$_invoke$arity$1 ? frontend.db.pull.cljs$core$IFn$_invoke$arity$1(G__60344) : frontend.db.pull.call(null,G__60344));
+var page = (function (){var G__46907 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),(frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1 ? frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1(name__$1) : frontend.util.page_name_sanity_lc.call(null,name__$1))], null);
+return (frontend.db.pull.cljs$core$IFn$_invoke$arity$1 ? frontend.db.pull.cljs$core$IFn$_invoke$arity$1(G__46907) : frontend.db.pull.call(null,G__46907));
 })();
-var or__4253__auto__ = frontend.util.get_page_original_name(page);
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var or__5043__auto__ = frontend.util.get_page_original_name(page);
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return "Logseq";
 }
@@ -195,17 +193,17 @@ return "Logseq";
 }
 });
 frontend.handler.route.update_page_title_BANG_ = (function frontend$handler$route$update_page_title_BANG_(route){
-var map__60345 = route;
-var map__60345__$1 = cljs.core.__destructure_map(map__60345);
-var data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60345__$1,new cljs.core.Keyword(null,"data","data",-232669377));
-var path_params = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60345__$1,new cljs.core.Keyword(null,"path-params","path-params",-48130597));
+var map__46908 = route;
+var map__46908__$1 = cljs.core.__destructure_map(map__46908);
+var data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46908__$1,new cljs.core.Keyword(null,"data","data",-232669377));
+var path_params = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46908__$1,new cljs.core.Keyword(null,"path-params","path-params",-48130597));
 var title = frontend.handler.route.get_title(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(data),path_params);
 return frontend.util.set_title_BANG_(title);
 });
 frontend.handler.route.update_page_label_BANG_ = (function frontend$handler$route$update_page_label_BANG_(route){
-var map__60346 = route;
-var map__60346__$1 = cljs.core.__destructure_map(map__60346);
-var data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60346__$1,new cljs.core.Keyword(null,"data","data",-232669377));
+var map__46909 = route;
+var map__46909__$1 = cljs.core.__destructure_map(map__46909);
+var data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46909__$1,new cljs.core.Keyword(null,"data","data",-232669377));
 var temp__5720__auto__ = new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(data);
 if(cljs.core.truth_(temp__5720__auto__)){
 var data_name = temp__5720__auto__;
@@ -236,7 +234,9 @@ if(cljs.core.truth_(temp__5718__auto__)){
 var anchor = temp__5718__auto__;
 return frontend.handler.route.jump_to_anchor_BANG_(anchor);
 } else {
+return setTimeout((function (){
 return frontend.util.scroll_to.cljs$core$IFn$_invoke$arity$3(frontend.util.app_scroll_container_node(),frontend.state.get_saved_scroll_position.cljs$core$IFn$_invoke$arity$0(),false);
+}),(100));
 }
 });
 frontend.handler.route.go_to_search_BANG_ = (function frontend$handler$route$go_to_search_BANG_(search_mode){
@@ -252,16 +252,16 @@ return frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 1, 5,
 frontend.handler.route.go_to_journals_BANG_ = (function frontend$handler$route$go_to_journals_BANG_(){
 frontend.state.set_journals_length_BANG_((3));
 
-var route_60374 = ((frontend.state.custom_home_page_QMARK_())?new cljs.core.Keyword(null,"all-journals","all-journals",-347015095):new cljs.core.Keyword(null,"home","home",-74557309));
-frontend.handler.route.redirect_BANG_(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"to","to",192099007),route_60374], null));
+var route_46925 = ((frontend.state.custom_home_page_QMARK_())?new cljs.core.Keyword(null,"all-journals","all-journals",-347015095):new cljs.core.Keyword(null,"home","home",-74557309));
+frontend.handler.route.redirect_BANG_(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"to","to",192099007),route_46925], null));
 
 return frontend.util.scroll_to_top.cljs$core$IFn$_invoke$arity$0();
 });
 frontend.handler.route.redirect_to_file_BANG_ = (function frontend$handler$route$redirect_to_file_BANG_(page){
-var temp__5720__auto__ = new cljs.core.Keyword("file","path","file/path",-191335748).cljs$core$IFn$_invoke$arity$1((function (){var G__60351 = new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1((function (){var G__60353 = clojure.string.lower_case(page);
-return (frontend.db.get_page_file.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_page_file.cljs$core$IFn$_invoke$arity$1(G__60353) : frontend.db.get_page_file.call(null,G__60353));
+var temp__5720__auto__ = new cljs.core.Keyword("file","path","file/path",-191335748).cljs$core$IFn$_invoke$arity$1((function (){var G__46910 = new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1((function (){var G__46911 = clojure.string.lower_case(page);
+return (frontend.db.get_page_file.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_page_file.cljs$core$IFn$_invoke$arity$1(G__46911) : frontend.db.get_page_file.call(null,G__46911));
 })());
-return (frontend.db.entity.cljs$core$IFn$_invoke$arity$1 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$1(G__60351) : frontend.db.entity.call(null,G__60351));
+return (frontend.db.entity.cljs$core$IFn$_invoke$arity$1 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$1(G__46910) : frontend.db.entity.call(null,G__46910));
 })());
 if(cljs.core.truth_(temp__5720__auto__)){
 var path = temp__5720__auto__;
@@ -272,9 +272,9 @@ return null;
 });
 frontend.handler.route.toggle_between_page_and_file_BANG_ = (function frontend$handler$route$toggle_between_page_and_file_BANG_(_e){
 var current_route = frontend.state.get_current_route();
-var G__60357 = current_route;
-var G__60357__$1 = (((G__60357 instanceof cljs.core.Keyword))?G__60357.fqn:null);
-switch (G__60357__$1) {
+var G__46914 = current_route;
+var G__46914__$1 = (((G__46914 instanceof cljs.core.Keyword))?G__46914.fqn:null);
+switch (G__46914__$1) {
 case "home":
 return frontend.handler.route.redirect_to_file_BANG_(frontend.date.today());
 

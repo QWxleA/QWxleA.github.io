@@ -291,12 +291,12 @@ return ((rewrite_cljc.node.whitespace.whitespace_QMARK_(node)) || (rewrite_cljc.
  */
 rewrite_cljc.node.value = (function rewrite_cljc$node$value(node){
 if(cljs.core.truth_(rewrite_cljc.node.protocols.inner_QMARK_(node))){
-var G__92713 = rewrite_cljc.node.protocols.children(node);
-var G__92713__$1 = (((G__92713 == null))?null:cljs.core.first(G__92713));
-if((G__92713__$1 == null)){
+var G__78560 = rewrite_cljc.node.protocols.children(node);
+var G__78560__$1 = (((G__78560 == null))?null:cljs.core.first(G__78560));
+if((G__78560__$1 == null)){
 return null;
 } else {
-return cljs.core.juxt.cljs$core$IFn$_invoke$arity$2(rewrite_cljc.node.protocols.tag,rewrite_cljc.node.protocols.sexpr)(G__92713__$1);
+return cljs.core.juxt.cljs$core$IFn$_invoke$arity$2(rewrite_cljc.node.protocols.tag,rewrite_cljc.node.protocols.sexpr)(G__78560__$1);
 }
 } else {
 return rewrite_cljc.node.protocols.sexpr(node);

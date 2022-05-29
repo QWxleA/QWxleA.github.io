@@ -11,46 +11,46 @@ return module$node_modules$path$path.parse(clojure.string.replace(path,"+","/"))
 }
 });
 logseq.graph_parser.text.get_page_name = (function logseq$graph_parser$text$get_page_name(s){
-var and__4251__auto__ = typeof s === 'string';
-if(and__4251__auto__){
-var or__4253__auto__ = (function (){var temp__5720__auto__ = cljs.core.re_matches(logseq.graph_parser.text.markdown_page_ref_re,s);
+var and__5041__auto__ = typeof s === 'string';
+if(and__5041__auto__){
+var or__5043__auto__ = (function (){var temp__5720__auto__ = cljs.core.re_matches(logseq.graph_parser.text.markdown_page_ref_re,s);
 if(cljs.core.truth_(temp__5720__auto__)){
-var vec__47452 = temp__5720__auto__;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47452,(0),null);
-var label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47452,(1),null);
-var _path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47452,(2),null);
+var vec__59178 = temp__5720__auto__;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59178,(0),null);
+var label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59178,(1),null);
+var _path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59178,(2),null);
 return clojure.string.trim(label);
 } else {
 return null;
 }
 })();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
-var or__4253__auto____$1 = (function (){var temp__5720__auto__ = cljs.core.re_matches(logseq.graph_parser.text.org_page_ref_re,s);
+var or__5043__auto____$1 = (function (){var temp__5720__auto__ = cljs.core.re_matches(logseq.graph_parser.text.org_page_ref_re,s);
 if(cljs.core.truth_(temp__5720__auto__)){
-var vec__47455 = temp__5720__auto__;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47455,(0),null);
-var path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47455,(1),null);
-var _label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47455,(2),null);
-var G__47458 = logseq.graph_parser.text.get_file_basename(path);
-if((G__47458 == null)){
+var vec__59181 = temp__5720__auto__;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59181,(0),null);
+var path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59181,(1),null);
+var _label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59181,(2),null);
+var G__59184 = logseq.graph_parser.text.get_file_basename(path);
+if((G__59184 == null)){
 return null;
 } else {
-return clojure.string.replace(G__47458,".","/");
+return clojure.string.replace(G__59184,".","/");
 }
 } else {
 return null;
 }
 })();
-if(cljs.core.truth_(or__4253__auto____$1)){
-return or__4253__auto____$1;
+if(cljs.core.truth_(or__5043__auto____$1)){
+return or__5043__auto____$1;
 } else {
 return cljs.core.second(cljs.core.re_matches(logseq.graph_parser.text.page_ref_re_0,s));
 }
 }
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 });
 logseq.graph_parser.text.page_ref_QMARK_ = (function logseq$graph_parser$text$page_ref_QMARK_(s){
@@ -58,11 +58,11 @@ return ((typeof s === 'string') && (((clojure.string.starts_with_QMARK_(s,"[["))
 });
 logseq.graph_parser.text.block_ref_re = /\(\(([a-zA-z0-9]{8}-[a-zA-z0-9]{4}-[a-zA-z0-9]{4}-[a-zA-z0-9]{4}-[a-zA-z0-9]{12})\)\)/;
 logseq.graph_parser.text.get_block_ref = (function logseq$graph_parser$text$get_block_ref(s){
-var and__4251__auto__ = typeof s === 'string';
-if(and__4251__auto__){
+var and__5041__auto__ = typeof s === 'string';
+if(and__5041__auto__){
 return cljs.core.second(cljs.core.re_matches(logseq.graph_parser.text.block_ref_re,s));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 });
 logseq.graph_parser.text.block_ref_QMARK_ = (function logseq$graph_parser$text$block_ref_QMARK_(s){
@@ -82,9 +82,9 @@ if((typeof logseq !== 'undefined') && (typeof logseq.graph_parser !== 'undefined
 logseq.graph_parser.text.between_re = /\(between ([^\)]+)\)/;
 }
 logseq.graph_parser.text.page_ref_un_brackets_BANG_ = (function logseq$graph_parser$text$page_ref_un_brackets_BANG_(s){
-var or__4253__auto__ = logseq.graph_parser.text.get_page_name(s);
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var or__5043__auto__ = logseq.graph_parser.text.get_page_name(s);
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return s;
 }
@@ -102,12 +102,12 @@ return null;
 });
 logseq.graph_parser.text.sep_by_comma = (function logseq$graph_parser$text$sep_by_comma(s){
 if(cljs.core.truth_(s)){
-var G__47459 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/[\,|，]{1}/);
-var G__47459__$1 = (((G__47459 == null))?null:cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,G__47459));
-if((G__47459__$1 == null)){
+var G__59188 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/[\,|，]{1}/);
+var G__59188__$1 = (((G__59188 == null))?null:cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,G__59188));
+if((G__59188__$1 == null)){
 return null;
 } else {
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,G__47459__$1);
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,G__59188__$1);
 }
 } else {
 return null;
@@ -115,12 +115,12 @@ return null;
 });
 logseq.graph_parser.text.sep_by_hashtag = (function logseq$graph_parser$text$sep_by_hashtag(s){
 if(cljs.core.truth_(s)){
-var G__47461 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/#/);
-var G__47461__$1 = (((G__47461 == null))?null:cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,G__47461));
-if((G__47461__$1 == null)){
+var G__59189 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/#/);
+var G__59189__$1 = (((G__59189 == null))?null:cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,G__59189));
+if((G__59189__$1 == null)){
 return null;
 } else {
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,G__47461__$1);
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,G__59189__$1);
 }
 } else {
 return null;
@@ -144,15 +144,15 @@ return null;
 }
 });
 logseq.graph_parser.text.concat_nested_pages = (function logseq$graph_parser$text$concat_nested_pages(coll){
-return cljs.core.first(cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p__47466,s){
-var vec__47467 = p__47466;
-var acc = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47467,(0),null);
-var not_matched_s = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__47467,(1),null);
-if(cljs.core.truth_((function (){var and__4251__auto__ = not_matched_s;
-if(cljs.core.truth_(and__4251__auto__)){
+return cljs.core.first(cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p__59190,s){
+var vec__59191 = p__59190;
+var acc = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59191,(0),null);
+var not_matched_s = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59191,(1),null);
+if(cljs.core.truth_((function (){var and__5041__auto__ = not_matched_s;
+if(cljs.core.truth_(and__5041__auto__)){
 return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(s,"]]");
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 var s_SINGLEQUOTE_ = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(not_matched_s),cljs.core.str.cljs$core$IFn$_invoke$arity$1(s)].join('');
@@ -178,10 +178,32 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 logseq.graph_parser.text.sep_by_quotes = (function logseq$graph_parser$text$sep_by_quotes(s){
 return clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/(\"[^\"]*\")/);
 });
+logseq.graph_parser.text.bilibili_regex = /^((?:https?:)?\/\/)?((?:www).)?((?:bilibili.com))(\/(?:video\/)?)([\w-]+)(\S+)?$/;
+logseq.graph_parser.text.loom_regex = /^((?:https?:)?\/\/)?((?:www).)?((?:loom.com))(\/(?:share\/|embed\/))([\w-]+)(\S+)?$/;
+logseq.graph_parser.text.vimeo_regex = /^((?:https?:)?\/\/)?((?:www).)?((?:player.vimeo.com|vimeo.com))(\/(?:video\/)?)([\w-]+)(\S+)?$/;
+logseq.graph_parser.text.youtube_regex = /^((?:https?:)?\/\/)?((?:www|m).)?((?:youtube.com|youtu.be|y2u.be|youtube-nocookie.com))(\/(?:[\w-]+\?v=|embed\/|v\/)?)([\w-]+)([\S^\?]+)?$/;
+logseq.graph_parser.text.get_matched_video = (function logseq$graph_parser$text$get_matched_video(url){
+var or__5043__auto__ = cljs.core.re_find(logseq.graph_parser.text.youtube_regex,url);
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
+} else {
+var or__5043__auto____$1 = cljs.core.re_find(logseq.graph_parser.text.loom_regex,url);
+if(cljs.core.truth_(or__5043__auto____$1)){
+return or__5043__auto____$1;
+} else {
+var or__5043__auto____$2 = cljs.core.re_find(logseq.graph_parser.text.vimeo_regex,url);
+if(cljs.core.truth_(or__5043__auto____$2)){
+return or__5043__auto____$2;
+} else {
+return cljs.core.re_find(logseq.graph_parser.text.bilibili_regex,url);
+}
+}
+}
+});
 logseq.graph_parser.text.markdown_link = /\[([^\[]+)\](\(.*\))/;
 logseq.graph_parser.text.split_page_refs_without_brackets = (function logseq$graph_parser$text$split_page_refs_without_brackets(var_args){
-var G__47472 = arguments.length;
-switch (G__47472) {
+var G__59196 = arguments.length;
+switch (G__59196) {
 case 1:
 return logseq.graph_parser.text.split_page_refs_without_brackets.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -200,32 +222,32 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 return logseq.graph_parser.text.split_page_refs_without_brackets.cljs$core$IFn$_invoke$arity$2(s,cljs.core.PersistentArrayMap.EMPTY);
 }));
 
-(logseq.graph_parser.text.split_page_refs_without_brackets.cljs$core$IFn$_invoke$arity$2 = (function (s,p__47473){
-var map__47474 = p__47473;
-var map__47474__$1 = cljs.core.__destructure_map(map__47474);
-var un_brackets_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__47474__$1,new cljs.core.Keyword(null,"un-brackets?","un-brackets?",518613875),true);
+(logseq.graph_parser.text.split_page_refs_without_brackets.cljs$core$IFn$_invoke$arity$2 = (function (s,p__59197){
+var map__59198 = p__59197;
+var map__59198__$1 = cljs.core.__destructure_map(map__59198);
+var un_brackets_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__59198__$1,new cljs.core.Keyword(null,"un-brackets?","un-brackets?",518613875),true);
 if(((typeof s === 'string') && (logseq.graph_parser.util.wrapped_by_quotes_QMARK_(s)))){
 return logseq.graph_parser.util.unquote_string(s);
 } else {
-if(cljs.core.truth_((function (){var and__4251__auto__ = typeof s === 'string';
-if(and__4251__auto__){
+if(cljs.core.truth_((function (){var and__5041__auto__ = typeof s === 'string';
+if(and__5041__auto__){
 return cljs.core.re_find(logseq.graph_parser.text.markdown_link,s);
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 return s;
 } else {
-if(cljs.core.truth_((function (){var and__4251__auto__ = typeof s === 'string';
-if(and__4251__auto__){
-var or__4253__auto__ = logseq.graph_parser.util.safe_re_find(logseq.graph_parser.text.page_ref_re,s);
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+if(cljs.core.truth_((function (){var and__5041__auto__ = typeof s === 'string';
+if(and__5041__auto__){
+var or__5043__auto__ = logseq.graph_parser.util.safe_re_find(logseq.graph_parser.text.page_ref_re,s);
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return logseq.graph_parser.util.safe_re_find(/[\,|，|#|\"]+/,s);
 }
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 var result = cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(cljs.core.mapcat.cljs$core$IFn$_invoke$arity$variadic((function (s__$1){
@@ -245,8 +267,8 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 } else {
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [s__$1], null);
 }
-}),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__47470_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(p1__47470_SHARP_,"");
+}),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__59194_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(p1__59194_SHARP_,"");
 }),cljs.core.mapcat.cljs$core$IFn$_invoke$arity$variadic((function (s__$1){
 if(logseq.graph_parser.util.wrapped_by_quotes_QMARK_(s__$1)){
 return null;
@@ -291,8 +313,8 @@ var text__$1 = (cljs.core.truth_(trim_left_QMARK_)?clojure.string.triml(text):te
 return clojure.string.replace_first(text__$1,cljs.core.re_pattern(pattern__$1),"");
 });
 logseq.graph_parser.text.remove_level_spaces = (function logseq$graph_parser$text$remove_level_spaces(var_args){
-var G__47481 = arguments.length;
-switch (G__47481) {
+var G__59200 = arguments.length;
+switch (G__59200) {
 case 3:
 return logseq.graph_parser.text.remove_level_spaces.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -394,10 +416,10 @@ while(true){
 var temp__5718__auto__ = clojure.string.index_of.cljs$core$IFn$_invoke$arity$3(s,value,i);
 if(cljs.core.truth_(temp__5718__auto__)){
 var i__$1 = temp__5718__auto__;
-var G__47504 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(acc,i__$1);
-var G__47505 = (i__$1 + cljs.core.count(value));
-acc = G__47504;
-i = G__47505;
+var G__59206 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(acc,i__$1);
+var G__59207 = (i__$1 + cljs.core.count(value));
+acc = G__59206;
+i = G__59207;
 continue;
 } else {
 return acc;
@@ -452,8 +474,8 @@ if((typeof logseq !== 'undefined') && (typeof logseq.graph_parser !== 'undefined
 logseq.graph_parser.text.non_parsing_properties = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["background-color",null,"background_color",null], null), null));
 }
 logseq.graph_parser.text.parse_property = (function logseq$graph_parser$text$parse_property(var_args){
-var G__47497 = arguments.length;
-switch (G__47497) {
+var G__59202 = arguments.length;
+switch (G__59202) {
 case 3:
 return logseq.graph_parser.text.parse_property.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -485,14 +507,14 @@ return true;
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(v__$2,"false")){
 return false;
 } else {
-if(cljs.core.truth_((function (){var and__4251__auto__ = cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(k__$1,"alias");
-if(and__4251__auto__){
+if(cljs.core.truth_((function (){var and__5041__auto__ = cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(k__$1,"alias");
+if(and__5041__auto__){
 return logseq.graph_parser.util.safe_re_find(/^\d+$/,v__$2);
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
-return logseq.graph_parser.util.safe_parse_int(v__$2);
+return cljs.core.parse_long(v__$2);
 } else {
 if(logseq.graph_parser.util.wrapped_by_quotes_QMARK_(v__$2)){
 return v__$2;

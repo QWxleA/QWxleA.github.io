@@ -4,8 +4,8 @@ var contents = frontend.state.get_notification_contents();
 return frontend.state.set_state_BANG_(new cljs.core.Keyword("notification","contents","notification/contents",-1760740618),cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(contents,uid));
 });
 frontend.handler.notification.show_BANG_ = (function frontend$handler$notification$show_BANG_(var_args){
-var G__57853 = arguments.length;
-switch (G__57853) {
+var G__43505 = arguments.length;
+switch (G__43505) {
 case 2:
 return frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -42,27 +42,27 @@ return frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$5(co
 
 (frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$5 = (function (content,status,clear_QMARK_,uid,timeout){
 var contents = frontend.state.get_notification_contents();
-var uid__$1 = (function (){var or__4253__auto__ = uid;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var uid__$1 = (function (){var or__5043__auto__ = uid;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(frontend.util.unique_id());
 }
 })();
 frontend.state.set_state_BANG_(new cljs.core.Keyword("notification","contents","notification/contents",-1760740618),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(contents,uid__$1,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"content","content",15833224),content,new cljs.core.Keyword(null,"status","status",-1997798413),status], null)));
 
-if(cljs.core.truth_((function (){var and__4251__auto__ = clear_QMARK_;
-if(cljs.core.truth_(and__4251__auto__)){
+if(cljs.core.truth_((function (){var and__5041__auto__ = clear_QMARK_;
+if(cljs.core.truth_(and__5041__auto__)){
 return cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(status,new cljs.core.Keyword(null,"error","error",-978969032));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 setTimeout((function (){
 return frontend.handler.notification.clear_BANG_(uid__$1);
-}),(function (){var or__4253__auto__ = timeout;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+}),(function (){var or__5043__auto__ = timeout;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return (1500);
 }

@@ -8,9 +8,9 @@ return false;
 });
 frontend.modules.shortcut.before.enable_when_not_editing_mode_BANG_ = (function frontend$modules$shortcut$before$enable_when_not_editing_mode_BANG_(f){
 return (function (e){
-if(cljs.core.truth_((function (){var or__4253__auto__ = frontend.state.editing_QMARK_();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+if(cljs.core.truth_((function (){var or__5043__auto__ = frontend.state.editing_QMARK_();
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return frontend.util.input_QMARK_(e.target);
 }
@@ -26,7 +26,11 @@ return false;
 frontend.modules.shortcut.before.enable_when_editing_mode_BANG_ = (function frontend$modules$shortcut$before$enable_when_editing_mode_BANG_(f){
 return (function (e){
 if(cljs.core.truth_(frontend.state.editing_QMARK_())){
+if(cljs.core.truth_(frontend.mobile.util.native_ios_QMARK_())){
+frontend.util.stop_propagation(e);
+} else {
 frontend.util.stop(e);
+}
 
 return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(e) : f.call(null,e));
 } else {

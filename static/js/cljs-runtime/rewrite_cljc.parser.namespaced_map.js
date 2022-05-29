@@ -1,10 +1,10 @@
 goog.provide('rewrite_cljc.parser.namespaced_map');
 rewrite_cljc.parser.namespaced_map.specifies_aliased_QMARK_ = (function rewrite_cljc$parser$namespaced_map$specifies_aliased_QMARK_(reader){
-var G__92757 = rewrite_cljc.reader.peek(reader);
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(null,G__92757)){
+var G__78567 = rewrite_cljc.reader.peek(reader);
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(null,G__78567)){
 return rewrite_cljc.parser.utils.throw_reader.cljs$core$IFn$_invoke$arity$variadic(reader,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["Unexpected EOF."], 0));
 } else {
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(":",G__92757)){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(":",G__78567)){
 rewrite_cljc.reader.ignore(reader);
 
 return true;
@@ -44,8 +44,8 @@ return vs;
 var temp__5718__auto__ = (read_next.cljs$core$IFn$_invoke$arity$1 ? read_next.cljs$core$IFn$_invoke$arity$1(reader) : read_next.call(null,reader));
 if(cljs.core.truth_(temp__5718__auto__)){
 var v = temp__5718__auto__;
-var G__92770 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(vs,v);
-vs = G__92770;
+var G__78571 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(vs,v);
+vs = G__78571;
 continue;
 } else {
 return null;

@@ -1,8 +1,8 @@
 goog.provide('frontend.extensions.highlight');
 frontend.extensions.highlight.highlight_BANG_ = (function frontend$extensions$highlight$highlight_BANG_(state){
-var vec__102590 = new cljs.core.Keyword("rum","args","rum/args",1315791754).cljs$core$IFn$_invoke$arity$1(state);
-var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__102590,(0),null);
-var attr = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__102590,(1),null);
+var vec__88115 = new cljs.core.Keyword("rum","args","rum/args",1315791754).cljs$core$IFn$_invoke$arity$1(state);
+var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__88115,(0),null);
+var attr = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__88115,(1),null);
 if(cljs.core.truth_(new cljs.core.Keyword(null,"data-lang","data-lang",969460304).cljs$core$IFn$_invoke$arity$1(attr))){
 var temp__5720__auto__ = document.getElementById(id);
 if(cljs.core.truth_(temp__5720__auto__)){
@@ -16,8 +16,8 @@ return null;
 }
 });
 frontend.extensions.highlight.highlight = rum.core.lazy_build(rum.core.build_defcs,(function (state,id,attr,code){
-return daiquiri.core.create_element("pre",{'className':"code pre-wrap-white-space"},[(function (){var attrs102661 = cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(attr,new cljs.core.Keyword(null,"id","id",-1388402092),id);
-return daiquiri.core.create_element("code",((cljs.core.map_QMARK_(attrs102661))?daiquiri.interpreter.element_attributes(attrs102661):null),((cljs.core.map_QMARK_(attrs102661))?[daiquiri.interpreter.interpret(code)]:[daiquiri.interpreter.interpret(attrs102661),daiquiri.interpreter.interpret(code)]));
+return daiquiri.core.create_element("pre",{'className':"code pre-wrap-white-space"},[(function (){var attrs88119 = cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(attr,new cljs.core.Keyword(null,"id","id",-1388402092),id);
+return daiquiri.core.create_element("code",((cljs.core.map_QMARK_(attrs88119))?daiquiri.interpreter.element_attributes(attrs88119):null),((cljs.core.map_QMARK_(attrs88119))?[daiquiri.interpreter.interpret(code)]:[daiquiri.interpreter.interpret(attrs88119),daiquiri.interpreter.interpret(code)]));
 })()]);
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"did-mount","did-mount",918232960),(function (state){
 frontend.extensions.highlight.highlight_BANG_(state);

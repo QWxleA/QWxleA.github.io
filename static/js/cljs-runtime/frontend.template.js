@@ -1,18 +1,18 @@
 goog.provide('frontend.template');
 frontend.template.variable_rules = (function frontend$template$variable_rules(){
-return new cljs.core.PersistentArrayMap(null, 5, ["today",frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.date.today()], 0)),"yesterday",frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.date.yesterday()], 0)),"tomorrow",frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.date.tomorrow()], 0)),"time",frontend.date.get_current_time(),"current page",frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (){var or__4253__auto__ = frontend.state.get_current_page();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+return new cljs.core.PersistentArrayMap(null, 5, ["today",frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.date.today()], 0)),"yesterday",frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.date.yesterday()], 0)),"tomorrow",frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.date.tomorrow()], 0)),"time",frontend.date.get_current_time(),"current page",frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (){var or__5043__auto__ = frontend.state.get_current_page();
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return frontend.date.today();
 }
 })()], 0))], null);
 });
 frontend.template.resolve_dynamic_template_BANG_ = (function frontend$template$resolve_dynamic_template_BANG_(content){
-return clojure.string.replace(content,/<%([^%].*?)%>/,(function (p__57468){
-var vec__57469 = p__57468;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57469,(0),null);
-var match = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57469,(1),null);
+return clojure.string.replace(content,/<%([^%].*?)%>/,(function (p__37361){
+var vec__37362 = p__37361;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37362,(0),null);
+var match = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37362,(1),null);
 var match__$1 = clojure.string.trim(match);
 if(clojure.string.blank_QMARK_(match__$1)){
 return "";

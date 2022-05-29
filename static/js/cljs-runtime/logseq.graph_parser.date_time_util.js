@@ -14,11 +14,11 @@ return null;
 } else {
 var temp__5720__auto__ = cljs.core.first(cljs.core.filter.cljs$core$IFn$_invoke$arity$2(cljs.core.some_QMARK_,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (formatter){
 try{return cljs_time.format.parse.cljs$core$IFn$_invoke$arity$2(cljs_time.format.formatter.cljs$core$IFn$_invoke$arity$1(formatter),logseq.graph_parser.util.capitalize_all(journal_title));
-}catch (e47312){if((e47312 instanceof Error)){
-var _e = e47312;
+}catch (e58759){if((e58759 instanceof Error)){
+var _e = e58759;
 return null;
 } else {
-throw e47312;
+throw e58759;
 
 }
 }}),formatters)));
@@ -33,8 +33,8 @@ return null;
 logseq.graph_parser.date_time_util.journal_title__GT_int = (function logseq$graph_parser$date_time_util$journal_title__GT_int(journal_title,formatters){
 if(cljs.core.truth_(journal_title)){
 var journal_title__$1 = logseq.graph_parser.util.capitalize_all(journal_title);
-return logseq.graph_parser.date_time_util.journal_title__GT_(journal_title__$1,(function (p1__47313_SHARP_){
-return logseq.graph_parser.util.parse_int(cljs_time.format.unparse(cljs_time.format.formatter.cljs$core$IFn$_invoke$arity$1("yyyyMMdd"),p1__47313_SHARP_));
+return logseq.graph_parser.date_time_util.journal_title__GT_(journal_title__$1,(function (p1__58760_SHARP_){
+return cljs.core.parse_long(cljs_time.format.unparse(cljs_time.format.formatter.cljs$core$IFn$_invoke$arity$1("yyyyMMdd"),p1__58760_SHARP_));
 }),formatters);
 } else {
 return null;

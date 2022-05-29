@@ -12,8 +12,8 @@ if((typeof frontend !== 'undefined') && (typeof frontend.components !== 'undefin
 frontend.components.svg.loading = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"svg.h-5.w-5.animate-spin","svg.h-5.w-5.animate-spin",1962492730),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"version","version",425292698),"1.1",new cljs.core.Keyword(null,"view-box","view-box",-1792199155),"0 0 24 24",new cljs.core.Keyword(null,"fill","fill",883462889),"none",new cljs.core.Keyword(null,"display","display",242065432),"inline-block"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"circle.opacity-25","circle.opacity-25",-2135642308),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"cx","cx",1272694324),(12),new cljs.core.Keyword(null,"cy","cy",755331060),(12),new cljs.core.Keyword(null,"r","r",-471384190),(10),new cljs.core.Keyword(null,"stroke","stroke",1741823555),"currentColor",new cljs.core.Keyword(null,"stroke-width","stroke-width",716836435),(4)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"path.opacity-75","path.opacity-75",1184631242),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"fill","fill",883462889),"currentColor",new cljs.core.Keyword(null,"d","d",1972142424),"M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"], null)], null)], null);
 }
 frontend.components.svg.hero_icon = (function frontend$components$svg$hero_icon(var_args){
-var G__95333 = arguments.length;
-switch (G__95333) {
+var G__48983 = arguments.length;
+switch (G__48983) {
 case 1:
 return frontend.components.svg.hero_icon.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -57,8 +57,8 @@ frontend.components.svg.caution = rum.core.lazy_build(rum.core.build_defc,(funct
 return daiquiri.core.create_element("svg",{'viewBox':"0 0 384 512",'fill':"currentColor",'color':"#bf3400",'className':"h-8 w-8 svg-shadow caution"},[daiquiri.core.create_element("path",{'d':"M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"},null)]);
 }),null,"frontend.components.svg/caution");
 frontend.components.svg.warning = (function frontend$components$svg$warning(var_args){
-var G__95400 = arguments.length;
-switch (G__95400) {
+var G__49041 = arguments.length;
+switch (G__49041) {
 case 0:
 return frontend.components.svg.warning.cljs$core$IFn$_invoke$arity$0();
 
@@ -103,8 +103,8 @@ frontend.components.svg.clock = new cljs.core.PersistentVector(null, 3, 5, cljs.
 frontend.components.svg.search = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"svg.h-5.w-5","svg.h-5.w-5",312747905),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"view-box","view-box",-1792199155),"0 0 20 20",new cljs.core.Keyword(null,"fill","fill",883462889),"currentColor"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"path","path",-188191168),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"d","d",1972142424),"M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z",new cljs.core.Keyword(null,"clip-rule","clip-rule",335492201),"evenodd",new cljs.core.Keyword(null,"fill-rule","fill-rule",-1824841598),"evenodd"], null)], null)], null);
 frontend.components.svg.edit = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"svg.h-6.w-6","svg.h-6.w-6",1735621584),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"stroke","stroke",1741823555),"currentColor",new cljs.core.Keyword(null,"view-box","view-box",-1792199155),"0 0 24 24",new cljs.core.Keyword(null,"fill","fill",883462889),"none"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"path","path",-188191168),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"d","d",1972142424),"M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z",new cljs.core.Keyword(null,"stroke-width","stroke-width",716836435),"2",new cljs.core.Keyword(null,"stroke-linejoin","stroke-linejoin",-1810816406),"round",new cljs.core.Keyword(null,"stroke-linecap","stroke-linecap",-1201103248),"round"], null)], null)], null);
 frontend.components.svg.github = (function frontend$components$svg$github(var_args){
-var G__95499 = arguments.length;
-switch (G__95499) {
+var G__49067 = arguments.length;
+switch (G__49067) {
 case 0:
 return frontend.components.svg.github.cljs$core$IFn$_invoke$arity$0();
 
@@ -133,8 +133,8 @@ frontend.components.svg.info = (function frontend$components$svg$info(){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"svg","svg",856789142),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"class","class",-2030961996),"info",new cljs.core.Keyword(null,"view-box","view-box",-1792199155),"0 0 16 16",new cljs.core.Keyword(null,"width","width",-384071477),"16px",new cljs.core.Keyword(null,"height","height",1025178622),"16px"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"g","g",1738089905),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"path","path",-188191168),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"transform","transform",1381301764),"scale(0.25)"], null),new cljs.core.Keyword(null,"d","d",1972142424),"m32 2c-16.568 0-30 13.432-30 30s13.432 30 30 30 30-13.432 30-30-13.432-30-30-30m5 49.75h-10v-24h10v24m-5-29.5c-2.761 0-5-2.238-5-5s2.239-5 5-5c2.762 0 5 2.238 5 5s-2.238 5-5 5"], null)], null)], null)], null);
 });
 frontend.components.svg.zoom_in = (function frontend$components$svg$zoom_in(var_args){
-var G__95504 = arguments.length;
-switch (G__95504) {
+var G__49075 = arguments.length;
+switch (G__49075) {
 case 0:
 return frontend.components.svg.zoom_in.cljs$core$IFn$_invoke$arity$0();
 
@@ -160,8 +160,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.zoom_in.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.zoom_out = (function frontend$components$svg$zoom_out(var_args){
-var G__95541 = arguments.length;
-switch (G__95541) {
+var G__49081 = arguments.length;
+switch (G__49081) {
 case 0:
 return frontend.components.svg.zoom_out.cljs$core$IFn$_invoke$arity$0();
 
@@ -187,8 +187,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.zoom_out.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.icon_area = (function frontend$components$svg$icon_area(var_args){
-var G__95557 = arguments.length;
-switch (G__95557) {
+var G__49090 = arguments.length;
+switch (G__49090) {
 case 0:
 return frontend.components.svg.icon_area.cljs$core$IFn$_invoke$arity$0();
 
@@ -215,8 +215,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.icon_area.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.icon_info = (function frontend$components$svg$icon_info(var_args){
-var G__95586 = arguments.length;
-switch (G__95586) {
+var G__49096 = arguments.length;
+switch (G__49096) {
 case 0:
 return frontend.components.svg.icon_info.cljs$core$IFn$_invoke$arity$0();
 
@@ -242,8 +242,8 @@ return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.icon_info.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.view_list = (function frontend$components$svg$view_list(var_args){
-var G__95617 = arguments.length;
-switch (G__95617) {
+var G__49113 = arguments.length;
+switch (G__49113) {
 case 0:
 return frontend.components.svg.view_list.cljs$core$IFn$_invoke$arity$0();
 
@@ -269,8 +269,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.view_list.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.highlighter = (function frontend$components$svg$highlighter(var_args){
-var G__95624 = arguments.length;
-switch (G__95624) {
+var G__49118 = arguments.length;
+switch (G__49118) {
 case 0:
 return frontend.components.svg.highlighter.cljs$core$IFn$_invoke$arity$0();
 
@@ -296,8 +296,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.highlighter.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.adjustments = (function frontend$components$svg$adjustments(var_args){
-var G__95633 = arguments.length;
-switch (G__95633) {
+var G__49129 = arguments.length;
+switch (G__49129) {
 case 0:
 return frontend.components.svg.adjustments.cljs$core$IFn$_invoke$arity$0();
 
@@ -323,8 +323,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.adjustments.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.check = (function frontend$components$svg$check(var_args){
-var G__95638 = arguments.length;
-switch (G__95638) {
+var G__49147 = arguments.length;
+switch (G__49147) {
 case 0:
 return frontend.components.svg.check.cljs$core$IFn$_invoke$arity$0();
 
@@ -350,8 +350,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.check.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.cloud_down = (function frontend$components$svg$cloud_down(var_args){
-var G__95642 = arguments.length;
-switch (G__95642) {
+var G__49156 = arguments.length;
+switch (G__49156) {
 case 0:
 return frontend.components.svg.cloud_down.cljs$core$IFn$_invoke$arity$0();
 
@@ -377,8 +377,8 @@ return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.cloud_down.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.star = (function frontend$components$svg$star(var_args){
-var G__95644 = arguments.length;
-switch (G__95644) {
+var G__49165 = arguments.length;
+switch (G__49165) {
 case 0:
 return frontend.components.svg.star.cljs$core$IFn$_invoke$arity$0();
 
@@ -404,8 +404,8 @@ return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.star.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.apps = (function frontend$components$svg$apps(var_args){
-var G__95649 = arguments.length;
-switch (G__95649) {
+var G__49171 = arguments.length;
+switch (G__49171) {
 case 0:
 return frontend.components.svg.apps.cljs$core$IFn$_invoke$arity$0();
 
@@ -431,8 +431,8 @@ return new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.apps.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.reload = (function frontend$components$svg$reload(var_args){
-var G__95656 = arguments.length;
-switch (G__95656) {
+var G__49179 = arguments.length;
+switch (G__49179) {
 case 0:
 return frontend.components.svg.reload.cljs$core$IFn$_invoke$arity$0();
 
@@ -458,8 +458,8 @@ return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.reload.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.offline = (function frontend$components$svg$offline(var_args){
-var G__95665 = arguments.length;
-switch (G__95665) {
+var G__49195 = arguments.length;
+switch (G__49195) {
 case 0:
 return frontend.components.svg.offline.cljs$core$IFn$_invoke$arity$0();
 
@@ -485,8 +485,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.offline.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.annotations = (function frontend$components$svg$annotations(var_args){
-var G__95668 = arguments.length;
-switch (G__95668) {
+var G__49206 = arguments.length;
+switch (G__49206) {
 case 0:
 return frontend.components.svg.annotations.cljs$core$IFn$_invoke$arity$0();
 
@@ -512,8 +512,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.annotations.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.up_narrow = (function frontend$components$svg$up_narrow(var_args){
-var G__95670 = arguments.length;
-switch (G__95670) {
+var G__49211 = arguments.length;
+switch (G__49211) {
 case 0:
 return frontend.components.svg.up_narrow.cljs$core$IFn$_invoke$arity$0();
 
@@ -539,8 +539,8 @@ return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.up_narrow.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.down_narrow = (function frontend$components$svg$down_narrow(var_args){
-var G__95672 = arguments.length;
-switch (G__95672) {
+var G__49217 = arguments.length;
+switch (G__49217) {
 case 0:
 return frontend.components.svg.down_narrow.cljs$core$IFn$_invoke$arity$0();
 
@@ -566,8 +566,8 @@ return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.down_narrow.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.maximize = (function frontend$components$svg$maximize(var_args){
-var G__95674 = arguments.length;
-switch (G__95674) {
+var G__49219 = arguments.length;
+switch (G__49219) {
 case 0:
 return frontend.components.svg.maximize.cljs$core$IFn$_invoke$arity$0();
 
@@ -593,8 +593,8 @@ return new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.maximize.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.help_circle = (function frontend$components$svg$help_circle(var_args){
-var G__95676 = arguments.length;
-switch (G__95676) {
+var G__49226 = arguments.length;
+switch (G__49226) {
 case 0:
 return frontend.components.svg.help_circle.cljs$core$IFn$_invoke$arity$0();
 
@@ -620,8 +620,8 @@ return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMP
 (frontend.components.svg.help_circle.cljs$lang$maxFixedArity = 1);
 
 frontend.components.svg.roam_research = (function frontend$components$svg$roam_research(var_args){
-var G__95689 = arguments.length;
-switch (G__95689) {
+var G__49238 = arguments.length;
+switch (G__49238) {
 case 0:
 return frontend.components.svg.roam_research.cljs$core$IFn$_invoke$arity$0();
 
@@ -646,5 +646,6 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 
 (frontend.components.svg.roam_research.cljs$lang$maxFixedArity = 1);
 
+frontend.components.svg.circle_stop = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"svg","svg",856789142),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"width","width",-384071477),"1.3rem",new cljs.core.Keyword(null,"height","height",1025178622),"1.3rem",new cljs.core.Keyword(null,"viewBox","viewBox",-469489477),"0 0 512 512",new cljs.core.Keyword(null,"fill","fill",883462889),"currentColor"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"path","path",-188191168),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"d","d",1972142424),"M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM352 328c0 13.2-10.8 24-24 24h-144C170.8 352 160 341.2 160 328v-144C160 170.8 170.8 160 184 160h144C341.2 160 352 170.8 352 184V328z"], null)], null)], null);
 
 //# sourceMappingURL=frontend.components.svg.js.map

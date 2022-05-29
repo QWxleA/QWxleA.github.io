@@ -3,10 +3,10 @@ goog.provide('camel_snake_kebab.extras');
  * Recursively transforms all map keys in coll with t.
  */
 camel_snake_kebab.extras.transform_keys = (function camel_snake_kebab$extras$transform_keys(t,coll){
-var transform = (function camel_snake_kebab$extras$transform_keys_$_transform(p__102812){
-var vec__102813 = p__102812;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__102813,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__102813,(1),null);
+var transform = (function camel_snake_kebab$extras$transform_keys_$_transform(p__88564){
+var vec__88565 = p__88564;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__88565,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__88565,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(t.cljs$core$IFn$_invoke$arity$1 ? t.cljs$core$IFn$_invoke$arity$1(k) : t.call(null,k)),v], null);
 });
 return clojure.walk.postwalk((function (x){

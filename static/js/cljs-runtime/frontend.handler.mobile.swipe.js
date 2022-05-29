@@ -2,19 +2,19 @@ goog.provide('frontend.handler.mobile.swipe');
 frontend.handler.mobile.swipe.setup_listeners_BANG_ = (function frontend$handler$mobile$swipe$setup_listeners_BANG_(){
 var container = document;
 return container.addEventListener("swiped",(function (e){
-var detail = (function (){var G__76071 = e.detail;
-if((G__76071 == null)){
+var detail = (function (){var G__62277 = e.detail;
+if((G__62277 == null)){
 return null;
 } else {
-return cljs_bean.core.__GT_clj(G__76071);
+return cljs_bean.core.__GT_clj(G__62277);
 }
 })();
 var width = window.innerWidth;
 var height = window.innerHeight;
 var xstart = new cljs.core.Keyword(null,"xStart","xStart",-245795236).cljs$core$IFn$_invoke$arity$1(detail);
 var ystart = new cljs.core.Keyword(null,"yStart","yStart",440532913).cljs$core$IFn$_invoke$arity$1(detail);
-var G__76072 = new cljs.core.Keyword(null,"dir","dir",1734754661).cljs$core$IFn$_invoke$arity$1(detail);
-switch (G__76072) {
+var G__62278 = new cljs.core.Keyword(null,"dir","dir",1734754661).cljs$core$IFn$_invoke$arity$1(detail);
+switch (G__62278) {
 case "left":
 if((((xstart > (width / 1.2))) && ((!(frontend.util.sm_breakpoint_QMARK_()))))){
 if(cljs.core.truth_(frontend.state.sub(new cljs.core.Keyword("ui","sidebar-open?","ui/sidebar-open?",-1099744887)))){
@@ -37,11 +37,11 @@ return null;
 
 break;
 case "right":
-if(cljs.core.truth_((function (){var and__4251__auto__ = frontend.mobile.util.native_android_QMARK_();
-if(cljs.core.truth_(and__4251__auto__)){
+if(cljs.core.truth_((function (){var and__5041__auto__ = frontend.mobile.util.native_android_QMARK_();
+if(cljs.core.truth_(and__5041__auto__)){
 return (ystart <= (height / (2)));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 if(cljs.core.truth_(frontend.state.get_left_sidebar_open_QMARK_())){
@@ -62,11 +62,11 @@ return frontend.state.set_state_BANG_(new cljs.core.Keyword("ui","sidebar-open?"
 return null;
 }
 } else {
-if(cljs.core.truth_((function (){var and__4251__auto__ = frontend.mobile.util.native_ios_QMARK_();
-if(cljs.core.truth_(and__4251__auto__)){
+if(cljs.core.truth_((function (){var and__5041__auto__ = frontend.mobile.util.native_ios_QMARK_();
+if(cljs.core.truth_(and__5041__auto__)){
 return (new cljs.core.Keyword(null,"xStart","xStart",-245795236).cljs$core$IFn$_invoke$arity$1(detail) <= (20));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 if(cljs.core.truth_(frontend.state.get_left_sidebar_open_QMARK_())){

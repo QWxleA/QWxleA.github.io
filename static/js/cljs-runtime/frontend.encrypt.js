@@ -30,7 +30,7 @@ var keys__$1 = ((typeof keys === 'string')?cljs.reader.read_string.cljs$core$IFn
 return (frontend.db.set_key_value.cljs$core$IFn$_invoke$arity$3 ? frontend.db.set_key_value.cljs$core$IFn$_invoke$arity$3(repo_url,new cljs.core.Keyword("db","encrypted?","db/encrypted?",491114125),true) : frontend.db.set_key_value.call(null,repo_url,new cljs.core.Keyword("db","encrypted?","db/encrypted?",491114125),true));
 });
 frontend.encrypt.generate_key_pair = (function frontend$encrypt$generate_key_pair(){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.encrypt.goog$module$shadow$loader.load(new cljs.core.Keyword(null,"age-encryption","age-encryption",-236825227)),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((((typeof frontend !== 'undefined') && (typeof frontend.extensions !== 'undefined') && (typeof frontend.extensions.age_encryption !== 'undefined') && (typeof frontend.extensions.age_encryption.keygen !== 'undefined'))?(new cljs.core.Var((function (){
 return frontend.extensions.age_encryption.keygen;
@@ -46,7 +46,7 @@ frontend.encrypt.generate_key_pair_and_save_BANG_ = (function frontend$encrypt$g
 if(cljs.core.truth_(frontend.encrypt.get_key_pair(repo_url))){
 return null;
 } else {
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.encrypt.generate_key_pair(),(function (keys){
 return promesa.protocols._promise((function (){
 frontend.encrypt.save_key_pair_BANG_(repo_url,keys);
@@ -65,8 +65,8 @@ frontend.encrypt.get_secret_key = (function frontend$encrypt$get_secret_key(repo
 return cljs.core.first(frontend.encrypt.get_key_pair(repo_url));
 });
 frontend.encrypt.encrypt = (function frontend$encrypt$encrypt(var_args){
-var G__57181 = arguments.length;
-switch (G__57181) {
+var G__43619 = arguments.length;
+switch (G__43619) {
 case 1:
 return frontend.encrypt.encrypt.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -87,7 +87,7 @@ return frontend.encrypt.encrypt.cljs$core$IFn$_invoke$arity$2(frontend.state.get
 
 (frontend.encrypt.encrypt.cljs$core$IFn$_invoke$arity$2 = (function (repo_url,content){
 if(cljs.core.truth_(frontend.encrypt.encrypted_db_QMARK_(repo_url))){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.encrypt.goog$module$shadow$loader.load(new cljs.core.Keyword(null,"age-encryption","age-encryption",-236825227)),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((((typeof frontend !== 'undefined') && (typeof frontend.extensions !== 'undefined') && (typeof frontend.extensions.age_encryption !== 'undefined') && (typeof frontend.extensions.age_encryption.encrypt_with_x25519 !== 'undefined'))?(new cljs.core.Var((function (){
 return frontend.extensions.age_encryption.encrypt_with_x25519;
@@ -111,8 +111,8 @@ return promesa.core.resolved(content);
 (frontend.encrypt.encrypt.cljs$lang$maxFixedArity = 2);
 
 frontend.encrypt.decrypt = (function frontend$encrypt$decrypt(var_args){
-var G__57183 = arguments.length;
-switch (G__57183) {
+var G__43621 = arguments.length;
+switch (G__43621) {
 case 1:
 return frontend.encrypt.decrypt.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -132,18 +132,18 @@ return frontend.encrypt.decrypt.cljs$core$IFn$_invoke$arity$2(frontend.state.get
 }));
 
 (frontend.encrypt.decrypt.cljs$core$IFn$_invoke$arity$2 = (function (repo_url,content){
-if(cljs.core.truth_((function (){var and__4251__auto__ = frontend.encrypt.encrypted_db_QMARK_(repo_url);
-if(cljs.core.truth_(and__4251__auto__)){
+if(cljs.core.truth_((function (){var and__5041__auto__ = frontend.encrypt.encrypted_db_QMARK_(repo_url);
+if(cljs.core.truth_(and__5041__auto__)){
 return frontend.encrypt.content_encrypted_QMARK_(content);
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 var content__$1 = logseq.graph_parser.utf8.encode(content);
 var temp__5718__auto__ = frontend.encrypt.get_secret_key(repo_url);
 if(cljs.core.truth_(temp__5718__auto__)){
 var secret_key = temp__5718__auto__;
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.encrypt.goog$module$shadow$loader.load(new cljs.core.Keyword(null,"age-encryption","age-encryption",-236825227)),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((((typeof frontend !== 'undefined') && (typeof frontend.extensions !== 'undefined') && (typeof frontend.extensions.age_encryption !== 'undefined') && (typeof frontend.extensions.age_encryption.decrypt_with_x25519 !== 'undefined'))?(new cljs.core.Var((function (){
 return frontend.extensions.age_encryption.decrypt_with_x25519;
@@ -166,14 +166,14 @@ return promesa.core.resolved(content);
 (frontend.encrypt.decrypt.cljs$lang$maxFixedArity = 2);
 
 frontend.encrypt.encrypt_with_passphrase = (function frontend$encrypt$encrypt_with_passphrase(passphrase,content){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.encrypt.goog$module$shadow$loader.load(new cljs.core.Keyword(null,"age-encryption","age-encryption",-236825227)),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((((typeof frontend !== 'undefined') && (typeof frontend.extensions !== 'undefined') && (typeof frontend.extensions.age_encryption !== 'undefined') && (typeof frontend.extensions.age_encryption.encrypt_with_user_passphrase !== 'undefined'))?(new cljs.core.Var((function (){
 return frontend.extensions.age_encryption.encrypt_with_user_passphrase;
 }),cljs.core.with_meta(new cljs.core.Symbol("frontend.extensions.age-encryption","encrypt-with-user-passphrase","frontend.extensions.age-encryption/encrypt-with-user-passphrase",390908103,null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("cljs.analyzer","no-resolve","cljs.analyzer/no-resolve",-1872351017),true], null)),null)):null),(function (lazy_encrypt_with_user_passphrase){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(logseq.graph_parser.utf8.encode(content),(function (content__$1){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var fexpr__57184 = cljs.core.deref(lazy_encrypt_with_user_passphrase);
-return (fexpr__57184.cljs$core$IFn$_invoke$arity$3 ? fexpr__57184.cljs$core$IFn$_invoke$arity$3(passphrase,content__$1,true) : fexpr__57184.call(null,passphrase,content__$1,true));
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((function (){var fexpr__43622 = cljs.core.deref(lazy_encrypt_with_user_passphrase);
+return (fexpr__43622.cljs$core$IFn$_invoke$arity$3 ? fexpr__43622.cljs$core$IFn$_invoke$arity$3(passphrase,content__$1,true) : fexpr__43622.call(null,passphrase,content__$1,true));
 })(),(function (encrypted){
 return promesa.protocols._promise(logseq.graph_parser.utf8.decode(encrypted));
 }));
@@ -183,7 +183,7 @@ return promesa.protocols._promise(logseq.graph_parser.utf8.decode(encrypted));
 }));
 });
 frontend.encrypt.decrypt_with_passphrase = (function frontend$encrypt$decrypt_with_passphrase(passphrase,content){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.encrypt.goog$module$shadow$loader.load(new cljs.core.Keyword(null,"age-encryption","age-encryption",-236825227)),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2((((typeof frontend !== 'undefined') && (typeof frontend.extensions !== 'undefined') && (typeof frontend.extensions.age_encryption !== 'undefined') && (typeof frontend.extensions.age_encryption.decrypt_with_user_passphrase !== 'undefined'))?(new cljs.core.Var((function (){
 return frontend.extensions.age_encryption.decrypt_with_user_passphrase;

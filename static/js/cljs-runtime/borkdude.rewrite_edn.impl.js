@@ -55,10 +55,10 @@ var zloc__$6 = borkdude.rewrite_edn.impl.skip_right(rewrite_cljc.zip.right(zloc_
 var zloc__$7 = rewrite_cljc.zip.replace(zloc__$6,rewrite_cljc.node.coerce(v));
 return rewrite_cljc.zip.root(zloc__$7);
 } else {
-var G__95155 = (key_count + (1));
-var G__95156 = borkdude.rewrite_edn.impl.skip_right(rewrite_cljc.zip.right(borkdude.rewrite_edn.impl.skip_right(zloc__$5)));
-key_count = G__95155;
-zloc__$5 = G__95156;
+var G__81128 = (key_count + (1));
+var G__81129 = borkdude.rewrite_edn.impl.skip_right(rewrite_cljc.zip.right(borkdude.rewrite_edn.impl.skip_right(zloc__$5)));
+key_count = G__81128;
+zloc__$5 = G__81129;
 continue;
 }
 }
@@ -77,10 +77,10 @@ var nil_QMARK_ = (((new cljs.core.Keyword(null,"token","token",-1211463215) === 
 var zloc__$2 = ((nil_QMARK_)?rewrite_cljc.zip.replace(zloc__$1,rewrite_cljc.node.coerce(cljs.core.PersistentArrayMap.EMPTY)):zloc__$1);
 var empty_QMARK_ = ((nil_QMARK_) || ((cljs.core.count(new cljs.core.Keyword(null,"children","children",-940561982).cljs$core$IFn$_invoke$arity$1(rewrite_cljc.zip.node(zloc__$2))) === (0))));
 if(empty_QMARK_){
-var G__95138 = rewrite_cljc.zip.root(rewrite_cljc.zip.append_child(rewrite_cljc.zip.append_child(zloc__$2,rewrite_cljc.node.coerce(k)),rewrite_cljc.node.coerce(null)));
-var G__95139 = k;
-var G__95140 = f;
-return (borkdude.rewrite_edn.impl.update.cljs$core$IFn$_invoke$arity$3 ? borkdude.rewrite_edn.impl.update.cljs$core$IFn$_invoke$arity$3(G__95138,G__95139,G__95140) : borkdude.rewrite_edn.impl.update.call(null,G__95138,G__95139,G__95140));
+var G__81113 = rewrite_cljc.zip.root(rewrite_cljc.zip.append_child(rewrite_cljc.zip.append_child(zloc__$2,rewrite_cljc.node.coerce(k)),rewrite_cljc.node.coerce(null)));
+var G__81114 = k;
+var G__81115 = f;
+return (borkdude.rewrite_edn.impl.update.cljs$core$IFn$_invoke$arity$3 ? borkdude.rewrite_edn.impl.update.cljs$core$IFn$_invoke$arity$3(G__81113,G__81114,G__81115) : borkdude.rewrite_edn.impl.update.call(null,G__81113,G__81114,G__81115));
 } else {
 var zloc__$3 = rewrite_cljc.zip.down(zloc__$2);
 var zloc__$4 = borkdude.rewrite_edn.impl.skip_right(zloc__$3);
@@ -92,13 +92,13 @@ return rewrite_cljc.zip.root(rewrite_cljc.zip.insert_right(rewrite_cljc.zip.righ
 var current_k = rewrite_cljc.zip.sexpr(zloc__$5);
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(current_k,k)){
 var zloc__$6 = borkdude.rewrite_edn.impl.skip_right(rewrite_cljc.zip.right(zloc__$5));
-var zloc__$7 = rewrite_cljc.zip.replace(zloc__$6,rewrite_cljc.node.coerce((function (){var G__95142 = rewrite_cljc.zip.node(zloc__$6);
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__95142) : f.call(null,G__95142));
+var zloc__$7 = rewrite_cljc.zip.replace(zloc__$6,rewrite_cljc.node.coerce((function (){var G__81117 = rewrite_cljc.zip.node(zloc__$6);
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__81117) : f.call(null,G__81117));
 })()));
 return rewrite_cljc.zip.root(zloc__$7);
 } else {
-var G__95161 = borkdude.rewrite_edn.impl.skip_right(rewrite_cljc.zip.right(borkdude.rewrite_edn.impl.skip_right(zloc__$5)));
-zloc__$5 = G__95161;
+var G__81130 = borkdude.rewrite_edn.impl.skip_right(rewrite_cljc.zip.right(borkdude.rewrite_edn.impl.skip_right(zloc__$5)));
+zloc__$5 = G__81130;
 continue;
 }
 }
@@ -110,11 +110,11 @@ borkdude.rewrite_edn.impl.update_in = (function borkdude$rewrite_edn$impl$update
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2((1),cljs.core.count(keys))){
 return borkdude.rewrite_edn.impl.update(forms,cljs.core.first(keys),f);
 } else {
-return borkdude.rewrite_edn.impl.update(forms,cljs.core.first(keys),(function (p1__95143_SHARP_){
-var G__95145 = p1__95143_SHARP_;
-var G__95146 = cljs.core.rest(keys);
-var G__95147 = f;
-return (borkdude.rewrite_edn.impl.update_in.cljs$core$IFn$_invoke$arity$3 ? borkdude.rewrite_edn.impl.update_in.cljs$core$IFn$_invoke$arity$3(G__95145,G__95146,G__95147) : borkdude.rewrite_edn.impl.update_in.call(null,G__95145,G__95146,G__95147));
+return borkdude.rewrite_edn.impl.update(forms,cljs.core.first(keys),(function (p1__81118_SHARP_){
+var G__81119 = p1__81118_SHARP_;
+var G__81120 = cljs.core.rest(keys);
+var G__81121 = f;
+return (borkdude.rewrite_edn.impl.update_in.cljs$core$IFn$_invoke$arity$3 ? borkdude.rewrite_edn.impl.update_in.cljs$core$IFn$_invoke$arity$3(G__81119,G__81120,G__81121) : borkdude.rewrite_edn.impl.update_in.call(null,G__81119,G__81120,G__81121));
 }));
 }
 });
@@ -122,11 +122,11 @@ borkdude.rewrite_edn.impl.assoc_in = (function borkdude$rewrite_edn$impl$assoc_i
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2((1),cljs.core.count(keys))){
 return borkdude.rewrite_edn.impl.assoc(forms,cljs.core.first(keys),v);
 } else {
-return borkdude.rewrite_edn.impl.update(forms,cljs.core.first(keys),(function (p1__95148_SHARP_){
-var G__95149 = p1__95148_SHARP_;
-var G__95150 = cljs.core.rest(keys);
-var G__95151 = v;
-return (borkdude.rewrite_edn.impl.assoc_in.cljs$core$IFn$_invoke$arity$3 ? borkdude.rewrite_edn.impl.assoc_in.cljs$core$IFn$_invoke$arity$3(G__95149,G__95150,G__95151) : borkdude.rewrite_edn.impl.assoc_in.call(null,G__95149,G__95150,G__95151));
+return borkdude.rewrite_edn.impl.update(forms,cljs.core.first(keys),(function (p1__81122_SHARP_){
+var G__81123 = p1__81122_SHARP_;
+var G__81124 = cljs.core.rest(keys);
+var G__81125 = v;
+return (borkdude.rewrite_edn.impl.assoc_in.cljs$core$IFn$_invoke$arity$3 ? borkdude.rewrite_edn.impl.assoc_in.cljs$core$IFn$_invoke$arity$3(G__81123,G__81124,G__81125) : borkdude.rewrite_edn.impl.assoc_in.call(null,G__81123,G__81124,G__81125));
 }));
 }
 });
@@ -142,13 +142,13 @@ while(true){
 if(rewrite_cljc.zip.rightmost_QMARK_(zloc__$4)){
 return rewrite_cljc.zip.root(zloc__$4);
 } else {
-var zloc__$5 = (function (){var new_key = rewrite_cljc.node.coerce((function (){var G__95153 = rewrite_cljc.zip.sexpr(zloc__$4);
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__95153) : f.call(null,G__95153));
+var zloc__$5 = (function (){var new_key = rewrite_cljc.node.coerce((function (){var G__81127 = rewrite_cljc.zip.sexpr(zloc__$4);
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__81127) : f.call(null,G__81127));
 })());
 return rewrite_cljc.zip.right(rewrite_cljc.zip.replace(zloc__$4,new_key));
 })();
-var G__95166 = borkdude.rewrite_edn.impl.skip_right(borkdude.rewrite_edn.impl.maybe_right(borkdude.rewrite_edn.impl.skip_right(zloc__$5)));
-zloc__$4 = G__95166;
+var G__81131 = borkdude.rewrite_edn.impl.skip_right(borkdude.rewrite_edn.impl.maybe_right(borkdude.rewrite_edn.impl.skip_right(zloc__$5)));
+zloc__$4 = G__81131;
 continue;
 }
 break;

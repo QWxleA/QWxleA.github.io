@@ -9,10 +9,10 @@ return cljs.core.reset_BANG_(reveal_secret_phrase_QMARK_,true);
 } else {
 return null;
 }
-}),'className':"cursor-pointer block w-full rounded-sm p-2"},[daiquiri.core.create_element("div",{'className':"font-medium"},["Public Key:"]),(function (){var attrs71203 = public_key;
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71203))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["font-mono","select-all","break-all"], null)], null),attrs71203], 0))):{'className':"font-mono select-all break-all"}),((cljs.core.map_QMARK_(attrs71203))?null:[daiquiri.interpreter.interpret(attrs71203)]));
-})(),(cljs.core.truth_(cljs.core.deref(reveal_secret_phrase_QMARK_))?daiquiri.core.create_element("div",null,[daiquiri.core.create_element("div",{'className':"mt-1 font-medium"},["Private Key:"]),(function (){var attrs71208 = private_key;
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs71208))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["font-mono","select-all","break-all"], null)], null),attrs71208], 0))):{'className':"font-mono select-all break-all"}),((cljs.core.map_QMARK_(attrs71208))?null:[daiquiri.interpreter.interpret(attrs71208)]));
+}),'className':"cursor-pointer block w-full rounded-sm p-2"},[daiquiri.core.create_element("div",{'className':"font-medium"},["Public Key:"]),(function (){var attrs60955 = public_key;
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs60955))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["font-mono","select-all","break-all"], null)], null),attrs60955], 0))):{'className':"font-mono select-all break-all"}),((cljs.core.map_QMARK_(attrs60955))?null:[daiquiri.interpreter.interpret(attrs60955)]));
+})(),(cljs.core.truth_(cljs.core.deref(reveal_secret_phrase_QMARK_))?daiquiri.core.create_element("div",null,[daiquiri.core.create_element("div",{'className':"mt-1 font-medium"},["Private Key:"]),(function (){var attrs60960 = private_key;
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs60960))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["font-mono","select-all","break-all"], null)], null),attrs60960], 0))):{'className':"font-mono select-all break-all"}),((cljs.core.map_QMARK_(attrs60960))?null:[daiquiri.interpreter.interpret(attrs60960)]));
 })()]):daiquiri.core.create_element("div",{'className':"underline"},["click to view the private key"]))])])]),daiquiri.core.create_element("div",{'className':"mt-5 sm:mt-4 sm:flex sm:flex-row-reverse"},[daiquiri.core.create_element("span",{'className':"mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"},[daiquiri.core.create_element("button",{'type':"button",'onClick':close_fn,'className':"inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5"},[daiquiri.interpreter.interpret(frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"close","close",1835149582)], 0)))])])])]);
 }),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.local.cljs$core$IFn$_invoke$arity$2(false,new cljs.core.Keyword("frontend.components.encryption","reveal-secret-phrase?","frontend.components.encryption/reveal-secret-phrase?",-1672016298))], null),"frontend.components.encryption/encryption-dialog-inner");
 frontend.components.encryption.encryption_dialog = (function frontend$components$encryption$encryption_dialog(repo_url){
@@ -35,7 +35,7 @@ return null;
 if(cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(password),cljs.core.deref(password_confirm))){
 return frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$2("The passwords are not matched.",new cljs.core.Keyword(null,"error","error",-978969032));
 } else {
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.encrypt.generate_key_pair_and_save_BANG_(repo_url),(function (keys){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.encrypt.encrypt_with_passphrase(value,keys),(function (db_encrypted_secret){
 return promesa.protocols._promise((function (){
@@ -87,7 +87,7 @@ if(clojure.string.blank_QMARK_(value)){
 return null;
 } else {
 var repo = frontend.state.get_current_repo();
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42616__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28350__auto__){
 return promesa.protocols._promise(promesa.core.finally$.cljs$core$IFn$_invoke$arity$2(promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.then.cljs$core$IFn$_invoke$arity$2(frontend.encrypt.decrypt_with_passphrase(value,db_encrypted_secret),(function (keys){
 frontend.encrypt.save_key_pair_BANG_(repo,keys);
 

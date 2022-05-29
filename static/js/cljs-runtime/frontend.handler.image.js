@@ -3,17 +3,17 @@ goog.scope(function(){
   frontend.handler.image.goog$module$goog$object = goog.module.get('goog.object');
 });
 frontend.handler.image.render_local_images_BANG_ = (function frontend$handler$image$render_local_images_BANG_(){
-if(cljs.core.truth_((function (){var and__4251__auto__ = (function (){var or__4253__auto__ = frontend.util.electron_QMARK_();
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+if(cljs.core.truth_((function (){var and__5041__auto__ = (function (){var or__5043__auto__ = frontend.util.electron_QMARK_();
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return frontend.mobile.util.native_ios_QMARK_();
 }
 })();
-if(cljs.core.truth_(and__4251__auto__)){
+if(cljs.core.truth_(and__5041__auto__)){
 return frontend.config.local_db_QMARK_(frontend.state.get_current_repo());
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 })())){
 return null;
@@ -24,106 +24,106 @@ return image.getAttribute("src");
 });
 var local_images = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (image){
 var src = get_src(image);
-var and__4251__auto__ = src;
-if(cljs.core.truth_(and__4251__auto__)){
+var and__5041__auto__ = src;
+if(cljs.core.truth_(and__5041__auto__)){
 return (!(((frontend.util.starts_with_QMARK_(src,"http://")) || (((frontend.util.starts_with_QMARK_(src,"https://")) || (((frontend.util.starts_with_QMARK_(src,"blob:")) || (frontend.util.starts_with_QMARK_(src,"data:")))))))));
 } else {
-return and__4251__auto__;
+return and__5041__auto__;
 }
 }),images);
-var seq__63260 = cljs.core.seq(local_images);
-var chunk__63261 = null;
-var count__63262 = (0);
-var i__63263 = (0);
+var seq__50364 = cljs.core.seq(local_images);
+var chunk__50365 = null;
+var count__50366 = (0);
+var i__50367 = (0);
 while(true){
-if((i__63263 < count__63262)){
-var img = chunk__63261.cljs$core$IIndexed$_nth$arity$2(null,i__63263);
-frontend.handler.image.goog$module$goog$object.set(img,"onerror",((function (seq__63260,chunk__63261,count__63262,i__63263,img,images,get_src,local_images){
+if((i__50367 < count__50366)){
+var img = chunk__50365.cljs$core$IIndexed$_nth$arity$2(null,i__50367);
+frontend.handler.image.goog$module$goog$object.set(img,"onerror",((function (seq__50364,chunk__50365,count__50366,i__50367,img,images,get_src,local_images){
 return (function (){
 return frontend.handler.image.goog$module$goog$object.set(frontend.handler.image.goog$module$goog$object.get(img,"style"),"display","none");
-});})(seq__63260,chunk__63261,count__63262,i__63263,img,images,get_src,local_images))
+});})(seq__50364,chunk__50365,count__50366,i__50367,img,images,get_src,local_images))
 );
 
-var path_63350 = get_src(img);
-var path_63351__$1 = clojure.string.replace_first(path_63350,"file:","");
-var path_63352__$2 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.first(path_63351__$1),"."))?cljs.core.subs.cljs$core$IFn$_invoke$arity$2(path_63351__$1,(1)):path_63351__$1);
-frontend.util.p_handle.cljs$core$IFn$_invoke$arity$3(frontend.fs.read_file.cljs$core$IFn$_invoke$arity$3(frontend.config.get_repo_dir(frontend.state.get_current_repo()),path_63352__$2,cljs.core.PersistentArrayMap.EMPTY),((function (seq__63260,chunk__63261,count__63262,i__63263,path_63350,path_63351__$1,path_63352__$2,img,images,get_src,local_images){
+var path_50388 = get_src(img);
+var path_50389__$1 = clojure.string.replace_first(path_50388,"file:","");
+var path_50390__$2 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.first(path_50389__$1),"."))?cljs.core.subs.cljs$core$IFn$_invoke$arity$2(path_50389__$1,(1)):path_50389__$1);
+frontend.util.p_handle.cljs$core$IFn$_invoke$arity$3(frontend.fs.read_file.cljs$core$IFn$_invoke$arity$3(frontend.config.get_repo_dir(frontend.state.get_current_repo()),path_50390__$2,cljs.core.PersistentArrayMap.EMPTY),((function (seq__50364,chunk__50365,count__50366,i__50367,path_50388,path_50389__$1,path_50390__$2,img,images,get_src,local_images){
 return (function (blob){
 var blob__$1 = (new Blob([blob],cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"type","type",1174270348),"image"], null))));
 var img_url = frontend.image.create_object_url(blob__$1);
 frontend.handler.image.goog$module$goog$object.set(img,"src",img_url);
 
 return frontend.handler.image.goog$module$goog$object.set(frontend.handler.image.goog$module$goog$object.get(img,"style"),"display","initial");
-});})(seq__63260,chunk__63261,count__63262,i__63263,path_63350,path_63351__$1,path_63352__$2,img,images,get_src,local_images))
-,((function (seq__63260,chunk__63261,count__63262,i__63263,path_63350,path_63351__$1,path_63352__$2,img,images,get_src,local_images){
+});})(seq__50364,chunk__50365,count__50366,i__50367,path_50388,path_50389__$1,path_50390__$2,img,images,get_src,local_images))
+,((function (seq__50364,chunk__50365,count__50366,i__50367,path_50388,path_50389__$1,path_50390__$2,img,images,get_src,local_images){
 return (function (error){
 cljs.core.println.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["Can't read local image file: "], 0));
 
 return console.dir(error);
-});})(seq__63260,chunk__63261,count__63262,i__63263,path_63350,path_63351__$1,path_63352__$2,img,images,get_src,local_images))
+});})(seq__50364,chunk__50365,count__50366,i__50367,path_50388,path_50389__$1,path_50390__$2,img,images,get_src,local_images))
 );
 
 
-var G__63363 = seq__63260;
-var G__63364 = chunk__63261;
-var G__63365 = count__63262;
-var G__63366 = (i__63263 + (1));
-seq__63260 = G__63363;
-chunk__63261 = G__63364;
-count__63262 = G__63365;
-i__63263 = G__63366;
+var G__50395 = seq__50364;
+var G__50396 = chunk__50365;
+var G__50397 = count__50366;
+var G__50398 = (i__50367 + (1));
+seq__50364 = G__50395;
+chunk__50365 = G__50396;
+count__50366 = G__50397;
+i__50367 = G__50398;
 continue;
 } else {
-var temp__5720__auto__ = cljs.core.seq(seq__63260);
+var temp__5720__auto__ = cljs.core.seq(seq__50364);
 if(temp__5720__auto__){
-var seq__63260__$1 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(seq__63260__$1)){
-var c__4679__auto__ = cljs.core.chunk_first(seq__63260__$1);
-var G__63368 = cljs.core.chunk_rest(seq__63260__$1);
-var G__63369 = c__4679__auto__;
-var G__63370 = cljs.core.count(c__4679__auto__);
-var G__63371 = (0);
-seq__63260 = G__63368;
-chunk__63261 = G__63369;
-count__63262 = G__63370;
-i__63263 = G__63371;
+var seq__50364__$1 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(seq__50364__$1)){
+var c__5565__auto__ = cljs.core.chunk_first(seq__50364__$1);
+var G__50399 = cljs.core.chunk_rest(seq__50364__$1);
+var G__50400 = c__5565__auto__;
+var G__50401 = cljs.core.count(c__5565__auto__);
+var G__50402 = (0);
+seq__50364 = G__50399;
+chunk__50365 = G__50400;
+count__50366 = G__50401;
+i__50367 = G__50402;
 continue;
 } else {
-var img = cljs.core.first(seq__63260__$1);
-frontend.handler.image.goog$module$goog$object.set(img,"onerror",((function (seq__63260,chunk__63261,count__63262,i__63263,img,seq__63260__$1,temp__5720__auto__,images,get_src,local_images){
+var img = cljs.core.first(seq__50364__$1);
+frontend.handler.image.goog$module$goog$object.set(img,"onerror",((function (seq__50364,chunk__50365,count__50366,i__50367,img,seq__50364__$1,temp__5720__auto__,images,get_src,local_images){
 return (function (){
 return frontend.handler.image.goog$module$goog$object.set(frontend.handler.image.goog$module$goog$object.get(img,"style"),"display","none");
-});})(seq__63260,chunk__63261,count__63262,i__63263,img,seq__63260__$1,temp__5720__auto__,images,get_src,local_images))
+});})(seq__50364,chunk__50365,count__50366,i__50367,img,seq__50364__$1,temp__5720__auto__,images,get_src,local_images))
 );
 
-var path_63372 = get_src(img);
-var path_63373__$1 = clojure.string.replace_first(path_63372,"file:","");
-var path_63374__$2 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.first(path_63373__$1),"."))?cljs.core.subs.cljs$core$IFn$_invoke$arity$2(path_63373__$1,(1)):path_63373__$1);
-frontend.util.p_handle.cljs$core$IFn$_invoke$arity$3(frontend.fs.read_file.cljs$core$IFn$_invoke$arity$3(frontend.config.get_repo_dir(frontend.state.get_current_repo()),path_63374__$2,cljs.core.PersistentArrayMap.EMPTY),((function (seq__63260,chunk__63261,count__63262,i__63263,path_63372,path_63373__$1,path_63374__$2,img,seq__63260__$1,temp__5720__auto__,images,get_src,local_images){
+var path_50403 = get_src(img);
+var path_50404__$1 = clojure.string.replace_first(path_50403,"file:","");
+var path_50405__$2 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.first(path_50404__$1),"."))?cljs.core.subs.cljs$core$IFn$_invoke$arity$2(path_50404__$1,(1)):path_50404__$1);
+frontend.util.p_handle.cljs$core$IFn$_invoke$arity$3(frontend.fs.read_file.cljs$core$IFn$_invoke$arity$3(frontend.config.get_repo_dir(frontend.state.get_current_repo()),path_50405__$2,cljs.core.PersistentArrayMap.EMPTY),((function (seq__50364,chunk__50365,count__50366,i__50367,path_50403,path_50404__$1,path_50405__$2,img,seq__50364__$1,temp__5720__auto__,images,get_src,local_images){
 return (function (blob){
 var blob__$1 = (new Blob([blob],cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"type","type",1174270348),"image"], null))));
 var img_url = frontend.image.create_object_url(blob__$1);
 frontend.handler.image.goog$module$goog$object.set(img,"src",img_url);
 
 return frontend.handler.image.goog$module$goog$object.set(frontend.handler.image.goog$module$goog$object.get(img,"style"),"display","initial");
-});})(seq__63260,chunk__63261,count__63262,i__63263,path_63372,path_63373__$1,path_63374__$2,img,seq__63260__$1,temp__5720__auto__,images,get_src,local_images))
-,((function (seq__63260,chunk__63261,count__63262,i__63263,path_63372,path_63373__$1,path_63374__$2,img,seq__63260__$1,temp__5720__auto__,images,get_src,local_images){
+});})(seq__50364,chunk__50365,count__50366,i__50367,path_50403,path_50404__$1,path_50405__$2,img,seq__50364__$1,temp__5720__auto__,images,get_src,local_images))
+,((function (seq__50364,chunk__50365,count__50366,i__50367,path_50403,path_50404__$1,path_50405__$2,img,seq__50364__$1,temp__5720__auto__,images,get_src,local_images){
 return (function (error){
 cljs.core.println.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["Can't read local image file: "], 0));
 
 return console.dir(error);
-});})(seq__63260,chunk__63261,count__63262,i__63263,path_63372,path_63373__$1,path_63374__$2,img,seq__63260__$1,temp__5720__auto__,images,get_src,local_images))
+});})(seq__50364,chunk__50365,count__50366,i__50367,path_50403,path_50404__$1,path_50405__$2,img,seq__50364__$1,temp__5720__auto__,images,get_src,local_images))
 );
 
 
-var G__63384 = cljs.core.next(seq__63260__$1);
-var G__63385 = null;
-var G__63386 = (0);
-var G__63387 = (0);
-seq__63260 = G__63384;
-chunk__63261 = G__63385;
-count__63262 = G__63386;
-i__63263 = G__63387;
+var G__50408 = cljs.core.next(seq__50364__$1);
+var G__50409 = null;
+var G__50410 = (0);
+var G__50411 = (0);
+seq__50364 = G__50408;
+chunk__50365 = G__50409;
+count__50366 = G__50410;
+i__50367 = G__50411;
 continue;
 }
 } else {
@@ -132,11 +132,11 @@ return null;
 }
 break;
 }
-}catch (e63259){if((e63259 instanceof Error)){
-var _e = e63259;
+}catch (e50363){if((e50363 instanceof Error)){
+var _e = e50363;
 return null;
 } else {
-throw e63259;
+throw e50363;
 
 }
 }}
@@ -147,18 +147,18 @@ return frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$2(ne
 } else {
 cljs.core.reset_BANG_(uploading_QMARK_,true);
 
-return frontend.util.post([frontend.config.api,"presigned_url"].join(''),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"filename","filename",-1428840783),filename,new cljs.core.Keyword(null,"mime-type","mime-type",1058646439),mime_type], null),(function (p__63296){
-var map__63297 = p__63296;
-var map__63297__$1 = cljs.core.__destructure_map(map__63297);
-var resp = map__63297__$1;
-var presigned_url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63297__$1,new cljs.core.Keyword(null,"presigned-url","presigned-url",90607137));
-var s3_object_key = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63297__$1,new cljs.core.Keyword(null,"s3-object-key","s3-object-key",-2006382897));
+return frontend.util.post([frontend.config.api,"presigned_url"].join(''),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"filename","filename",-1428840783),filename,new cljs.core.Keyword(null,"mime-type","mime-type",1058646439),mime_type], null),(function (p__50376){
+var map__50377 = p__50376;
+var map__50377__$1 = cljs.core.__destructure_map(map__50377);
+var resp = map__50377__$1;
+var presigned_url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50377__$1,new cljs.core.Keyword(null,"presigned-url","presigned-url",90607137));
+var s3_object_key = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50377__$1,new cljs.core.Keyword(null,"s3-object-key","s3-object-key",-2006382897));
 if(cljs.core.truth_(presigned_url)){
 return frontend.util.upload(presigned_url,file,(function (_result){
-return frontend.util.post([frontend.config.api,"signed_url"].join(''),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s3-object-key","s3-object-key",-2006382897),s3_object_key], null),(function (p__63302){
-var map__63303 = p__63302;
-var map__63303__$1 = cljs.core.__destructure_map(map__63303);
-var signed_url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__63303__$1,new cljs.core.Keyword(null,"signed-url","signed-url",1201672543));
+return frontend.util.post([frontend.config.api,"signed_url"].join(''),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s3-object-key","s3-object-key",-2006382897),s3_object_key], null),(function (p__50378){
+var map__50379 = p__50378;
+var map__50379__$1 = cljs.core.__destructure_map(map__50379);
+var signed_url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50379__$1,new cljs.core.Keyword(null,"signed-url","signed-url",1201672543));
 cljs.core.reset_BANG_(uploading_QMARK_,false);
 
 if(cljs.core.truth_(signed_url)){

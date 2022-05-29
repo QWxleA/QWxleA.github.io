@@ -1,7 +1,7 @@
 goog.provide('frontend.loader');
 frontend.loader.load = (function frontend$loader$load(var_args){
-var G__73381 = arguments.length;
-switch (G__73381) {
+var G__74134 = arguments.length;
+switch (G__74134) {
 case 2:
 return frontend.loader.load.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 

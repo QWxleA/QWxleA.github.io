@@ -96,8 +96,8 @@ return cljs.core.hash(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.Per
 (linked.set.LinkedSet.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (coll,other){
 var self__ = this;
 var coll__$1 = this;
-return ((cljs.core.set_QMARK_(other)) && ((((cljs.core.count(coll__$1) === cljs.core.count(other))) && (cljs.core.every_QMARK_((function (p1__73243_SHARP_){
-return cljs.core.contains_QMARK_(coll__$1,p1__73243_SHARP_);
+return ((cljs.core.set_QMARK_(other)) && ((((cljs.core.count(coll__$1) === cljs.core.count(other))) && (cljs.core.every_QMARK_((function (p1__58990_SHARP_){
+return cljs.core.contains_QMARK_(coll__$1,p1__58990_SHARP_);
 }),other)))));
 }));
 
@@ -137,11 +137,11 @@ var coll__$1 = this;
 return (new linked.set.LinkedSet(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.linked_map,o,null)));
 }));
 
-(linked.set.LinkedSet.prototype.call = (function (unused__10938__auto__){
+(linked.set.LinkedSet.prototype.call = (function (unused__11779__auto__){
 var self__ = this;
 var self__ = this;
-var G__73269 = (arguments.length - (1));
-switch (G__73269) {
+var G__58997 = (arguments.length - (1));
+switch (G__58997) {
 case (1):
 return self__.cljs$core$IFn$_invoke$arity$1((arguments[(1)]));
 
@@ -156,10 +156,10 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 }
 }));
 
-(linked.set.LinkedSet.prototype.apply = (function (self__,args73251){
+(linked.set.LinkedSet.prototype.apply = (function (self__,args58991){
 var self__ = this;
 var self____$1 = this;
-return self____$1.call.apply(self____$1,[self____$1].concat(cljs.core.aclone(args73251)));
+return self____$1.call.apply(self____$1,[self____$1].concat(cljs.core.aclone(args58991)));
 }));
 
 (linked.set.LinkedSet.prototype.cljs$core$IFn$_invoke$arity$1 = (function (k){
@@ -182,8 +182,8 @@ return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMP
 
 (linked.set.LinkedSet.cljs$lang$ctorStr = "linked.set/LinkedSet");
 
-(linked.set.LinkedSet.cljs$lang$ctorPrWriter = (function (this__4491__auto__,writer__4492__auto__,opt__4493__auto__){
-return cljs.core._write(writer__4492__auto__,"linked.set/LinkedSet");
+(linked.set.LinkedSet.cljs$lang$ctorPrWriter = (function (this__5327__auto__,writer__5328__auto__,opt__5329__auto__){
+return cljs.core._write(writer__5328__auto__,"linked.set/LinkedSet");
 }));
 
 /**

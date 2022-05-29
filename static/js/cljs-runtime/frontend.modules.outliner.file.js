@@ -15,10 +15,10 @@ frontend.modules.outliner.file.writes_finished_QMARK_ = (function frontend$modul
 return cljs.core.empty_QMARK_(cljs.core.deref(frontend.modules.outliner.file.write_chan_batch_buf));
 });
 frontend.modules.outliner.file.do_write_file_BANG_ = (function frontend$modules$outliner$file$do_write_file_BANG_(repo,page_db_id){
-var page_block = (function (){var G__77315 = repo;
-var G__77316 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"*","*",345799209,null)], null);
-var G__77317 = page_db_id;
-return (frontend.db.pull.cljs$core$IFn$_invoke$arity$3 ? frontend.db.pull.cljs$core$IFn$_invoke$arity$3(G__77315,G__77316,G__77317) : frontend.db.pull.call(null,G__77315,G__77316,G__77317));
+var page_block = (function (){var G__50360 = repo;
+var G__50361 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"*","*",345799209,null)], null);
+var G__50362 = page_db_id;
+return (frontend.db.pull.cljs$core$IFn$_invoke$arity$3 ? frontend.db.pull.cljs$core$IFn$_invoke$arity$3(G__50360,G__50361,G__50362) : frontend.db.pull.call(null,G__50360,G__50361,G__50362));
 })();
 var page_db_id__$1 = new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1(page_block);
 var blocks = frontend.db.model.get_page_blocks_no_cache.cljs$core$IFn$_invoke$arity$2(repo,new cljs.core.Keyword("block","name","block/name",1619760316).cljs$core$IFn$_invoke$arity$1(page_block));
@@ -38,75 +38,75 @@ if(cljs.core.seq(pages)){
 if(frontend.config.publishing_QMARK_){
 return null;
 } else {
-var seq__77321 = cljs.core.seq(cljs.core.set(pages));
-var chunk__77322 = null;
-var count__77323 = (0);
-var i__77324 = (0);
+var seq__50368 = cljs.core.seq(cljs.core.set(pages));
+var chunk__50369 = null;
+var count__50370 = (0);
+var i__50371 = (0);
 while(true){
-if((i__77324 < count__77323)){
-var vec__77341 = chunk__77322.cljs$core$IIndexed$_nth$arity$2(null,i__77324);
-var repo = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__77341,(0),null);
-var page_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__77341,(1),null);
+if((i__50371 < count__50370)){
+var vec__50384 = chunk__50369.cljs$core$IIndexed$_nth$arity$2(null,i__50371);
+var repo = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50384,(0),null);
+var page_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50384,(1),null);
 try{frontend.modules.outliner.file.do_write_file_BANG_(repo,page_id);
-}catch (e77345){if((e77345 instanceof Error)){
-var e_77364 = e77345;
-frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Write file failed, please copy the changes to other editors in case of losing data."], null),"Error: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.modules.outliner.file.goog$module$goog$object.get(e_77364,"stack"))], null),new cljs.core.Keyword(null,"error","error",-978969032));
+}catch (e50387){if((e50387 instanceof Error)){
+var e_50412 = e50387;
+frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Write file failed, please copy the changes to other editors in case of losing data."], null),"Error: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.modules.outliner.file.goog$module$goog$object.get(e_50412,"stack"))], null),new cljs.core.Keyword(null,"error","error",-978969032));
 
-lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.modules.outliner.file",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("file","write-file-error","file/write-file-error",-1260826625),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),e_77364], null),new cljs.core.Keyword(null,"line","line",212345235),49], null)),null);
+lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.modules.outliner.file",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("file","write-file-error","file/write-file-error",-1260826625),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),e_50412], null),new cljs.core.Keyword(null,"line","line",212345235),49], null)),null);
 } else {
-throw e77345;
+throw e50387;
 
 }
 }
 
-var G__77370 = seq__77321;
-var G__77371 = chunk__77322;
-var G__77372 = count__77323;
-var G__77373 = (i__77324 + (1));
-seq__77321 = G__77370;
-chunk__77322 = G__77371;
-count__77323 = G__77372;
-i__77324 = G__77373;
+var G__50413 = seq__50368;
+var G__50414 = chunk__50369;
+var G__50415 = count__50370;
+var G__50416 = (i__50371 + (1));
+seq__50368 = G__50413;
+chunk__50369 = G__50414;
+count__50370 = G__50415;
+i__50371 = G__50416;
 continue;
 } else {
-var temp__5720__auto__ = cljs.core.seq(seq__77321);
+var temp__5720__auto__ = cljs.core.seq(seq__50368);
 if(temp__5720__auto__){
-var seq__77321__$1 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(seq__77321__$1)){
-var c__4679__auto__ = cljs.core.chunk_first(seq__77321__$1);
-var G__77374 = cljs.core.chunk_rest(seq__77321__$1);
-var G__77375 = c__4679__auto__;
-var G__77376 = cljs.core.count(c__4679__auto__);
-var G__77377 = (0);
-seq__77321 = G__77374;
-chunk__77322 = G__77375;
-count__77323 = G__77376;
-i__77324 = G__77377;
+var seq__50368__$1 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(seq__50368__$1)){
+var c__5565__auto__ = cljs.core.chunk_first(seq__50368__$1);
+var G__50417 = cljs.core.chunk_rest(seq__50368__$1);
+var G__50418 = c__5565__auto__;
+var G__50419 = cljs.core.count(c__5565__auto__);
+var G__50420 = (0);
+seq__50368 = G__50417;
+chunk__50369 = G__50418;
+count__50370 = G__50419;
+i__50371 = G__50420;
 continue;
 } else {
-var vec__77347 = cljs.core.first(seq__77321__$1);
-var repo = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__77347,(0),null);
-var page_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__77347,(1),null);
+var vec__50391 = cljs.core.first(seq__50368__$1);
+var repo = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50391,(0),null);
+var page_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50391,(1),null);
 try{frontend.modules.outliner.file.do_write_file_BANG_(repo,page_id);
-}catch (e77350){if((e77350 instanceof Error)){
-var e_77379 = e77350;
-frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Write file failed, please copy the changes to other editors in case of losing data."], null),"Error: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.modules.outliner.file.goog$module$goog$object.get(e_77379,"stack"))], null),new cljs.core.Keyword(null,"error","error",-978969032));
+}catch (e50394){if((e50394 instanceof Error)){
+var e_50421 = e50394;
+frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Write file failed, please copy the changes to other editors in case of losing data."], null),"Error: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.modules.outliner.file.goog$module$goog$object.get(e_50421,"stack"))], null),new cljs.core.Keyword(null,"error","error",-978969032));
 
-lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.modules.outliner.file",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("file","write-file-error","file/write-file-error",-1260826625),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),e_77379], null),new cljs.core.Keyword(null,"line","line",212345235),49], null)),null);
+lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.modules.outliner.file",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("file","write-file-error","file/write-file-error",-1260826625),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),e_50421], null),new cljs.core.Keyword(null,"line","line",212345235),49], null)),null);
 } else {
-throw e77350;
+throw e50394;
 
 }
 }
 
-var G__77381 = cljs.core.next(seq__77321__$1);
-var G__77382 = null;
-var G__77383 = (0);
-var G__77384 = (0);
-seq__77321 = G__77381;
-chunk__77322 = G__77382;
-count__77323 = G__77383;
-i__77324 = G__77384;
+var G__50422 = cljs.core.next(seq__50368__$1);
+var G__50423 = null;
+var G__50424 = (0);
+var G__50425 = (0);
+seq__50368 = G__50422;
+chunk__50369 = G__50423;
+count__50370 = G__50424;
+i__50371 = G__50425;
 continue;
 }
 } else {
@@ -120,10 +120,10 @@ break;
 return null;
 }
 });
-frontend.modules.outliner.file.sync_to_file = (function frontend$modules$outliner$file$sync_to_file(p__77355){
-var map__77356 = p__77355;
-var map__77356__$1 = cljs.core.__destructure_map(map__77356);
-var page_db_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__77356__$1,new cljs.core.Keyword("db","id","db/id",-1388397098));
+frontend.modules.outliner.file.sync_to_file = (function frontend$modules$outliner$file$sync_to_file(p__50406){
+var map__50407 = p__50406;
+var map__50407__$1 = cljs.core.__destructure_map(map__50407);
+var page_db_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50407__$1,new cljs.core.Keyword("db","id","db/id",-1388397098));
 if((page_db_id == null)){
 return frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$2("Write file failed, can't find the current page!",new cljs.core.Keyword(null,"error","error",-978969032));
 } else {

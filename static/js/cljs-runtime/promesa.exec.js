@@ -21,8 +21,8 @@ return (promesa.exec.__GT_CurrentThreadExecutor.cljs$core$IFn$_invoke$arity$0 ? 
 }),null));
 }
 promesa.exec.resolve_executor = (function promesa$exec$resolve_executor(var_args){
-var G__65115 = arguments.length;
-switch (G__65115) {
+var G__50966 = arguments.length;
+switch (G__50966) {
 case 0:
 return promesa.exec.resolve_executor.cljs$core$IFn$_invoke$arity$0();
 
@@ -56,8 +56,8 @@ return executor;
 (promesa.exec.resolve_executor.cljs$lang$maxFixedArity = 1);
 
 promesa.exec.resolve_scheduler = (function promesa$exec$resolve_scheduler(var_args){
-var G__65119 = arguments.length;
-switch (G__65119) {
+var G__50989 = arguments.length;
+switch (G__50989) {
 case 0:
 return promesa.exec.resolve_scheduler.cljs$core$IFn$_invoke$arity$0();
 
@@ -94,8 +94,8 @@ return scheduler;
  * Run the task in the provided executor.
  */
 promesa.exec.run_BANG_ = (function promesa$exec$run_BANG_(var_args){
-var G__65122 = arguments.length;
-switch (G__65122) {
+var G__50997 = arguments.length;
+switch (G__50997) {
 case 1:
 return promesa.exec.run_BANG_.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -128,8 +128,8 @@ return promesa.protocols._run_BANG_(promesa.exec.resolve_executor.cljs$core$IFn$
  *   A task is a plain clojure function.
  */
 promesa.exec.submit_BANG_ = (function promesa$exec$submit_BANG_(var_args){
-var G__65125 = arguments.length;
-switch (G__65125) {
+var G__51002 = arguments.length;
+switch (G__51002) {
 case 1:
 return promesa.exec.submit_BANG_.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -162,8 +162,8 @@ return promesa.protocols._submit_BANG_(promesa.exec.resolve_executor.cljs$core$I
  *   it uses the `setTimeout` function.
  */
 promesa.exec.schedule_BANG_ = (function promesa$exec$schedule_BANG_(var_args){
-var G__65127 = arguments.length;
-switch (G__65127) {
+var G__51006 = arguments.length;
+switch (G__51006) {
 case 2:
 return promesa.exec.schedule_BANG_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -235,8 +235,8 @@ return cljs.core.PersistentVector.EMPTY;
 
 (promesa.exec.MicrotaskExecutor.cljs$lang$ctorStr = "promesa.exec/MicrotaskExecutor");
 
-(promesa.exec.MicrotaskExecutor.cljs$lang$ctorPrWriter = (function (this__4491__auto__,writer__4492__auto__,opt__4493__auto__){
-return cljs.core._write(writer__4492__auto__,"promesa.exec/MicrotaskExecutor");
+(promesa.exec.MicrotaskExecutor.cljs$lang$ctorPrWriter = (function (this__5327__auto__,writer__5328__auto__,opt__5329__auto__){
+return cljs.core._write(writer__5328__auto__,"promesa.exec/MicrotaskExecutor");
 }));
 
 /**
@@ -277,8 +277,8 @@ return cljs.core.PersistentVector.EMPTY;
 
 (promesa.exec.CurrentThreadExecutor.cljs$lang$ctorStr = "promesa.exec/CurrentThreadExecutor");
 
-(promesa.exec.CurrentThreadExecutor.cljs$lang$ctorPrWriter = (function (this__4491__auto__,writer__4492__auto__,opt__4493__auto__){
-return cljs.core._write(writer__4492__auto__,"promesa.exec/CurrentThreadExecutor");
+(promesa.exec.CurrentThreadExecutor.cljs$lang$ctorPrWriter = (function (this__5327__auto__,writer__5328__auto__,opt__5329__auto__){
+return cljs.core._write(writer__5328__auto__,"promesa.exec/CurrentThreadExecutor");
 }));
 
 /**
@@ -335,8 +335,8 @@ return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMP
 
 (promesa.exec.ScheduledTask.cljs$lang$ctorStr = "promesa.exec/ScheduledTask");
 
-(promesa.exec.ScheduledTask.cljs$lang$ctorPrWriter = (function (this__4491__auto__,writer__4492__auto__,opt__4493__auto__){
-return cljs.core._write(writer__4492__auto__,"promesa.exec/ScheduledTask");
+(promesa.exec.ScheduledTask.cljs$lang$ctorPrWriter = (function (this__5327__auto__,writer__5328__auto__,opt__5329__auto__){
+return cljs.core._write(writer__5328__auto__,"promesa.exec/ScheduledTask");
 }));
 
 /**
@@ -378,8 +378,8 @@ return cljs.core.PersistentVector.EMPTY;
 
 (promesa.exec.ScheduledExecutor.cljs$lang$ctorStr = "promesa.exec/ScheduledExecutor");
 
-(promesa.exec.ScheduledExecutor.cljs$lang$ctorPrWriter = (function (this__4491__auto__,writer__4492__auto__,opt__4493__auto__){
-return cljs.core._write(writer__4492__auto__,"promesa.exec/ScheduledExecutor");
+(promesa.exec.ScheduledExecutor.cljs$lang$ctorPrWriter = (function (this__5327__auto__,writer__5328__auto__,opt__5329__auto__){
+return cljs.core._write(writer__5328__auto__,"promesa.exec/ScheduledExecutor");
 }));
 
 /**

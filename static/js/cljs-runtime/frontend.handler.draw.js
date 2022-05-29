@@ -16,12 +16,12 @@ var path = file;
 var repo = frontend.state.get_current_repo();
 if(cljs.core.truth_(repo)){
 var repo_dir = frontend.config.get_repo_dir(repo);
-return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42616__auto__){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.handler.draw.create_draws_directory_BANG_(repo),(function (___42615__auto__){
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.fs.write_file_BANG_(repo,repo_dir,path,data,null),(function (___42615__auto____$1){
-return promesa.protocols._promise((function (){var G__62972 = repo;
-var G__62973 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword("file","path","file/path",-191335748),path,new cljs.core.Keyword("block","name","block/name",1619760316),(frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1 ? frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1(file) : frontend.util.page_name_sanity_lc.call(null,file)),new cljs.core.Keyword("block","file","block/file",183171933),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("file","path","file/path",-191335748),path], null),new cljs.core.Keyword("block","journal?","block/journal?",-970683127),false], null)], null);
-return (frontend.db.transact_BANG_.cljs$core$IFn$_invoke$arity$2 ? frontend.db.transact_BANG_.cljs$core$IFn$_invoke$arity$2(G__62972,G__62973) : frontend.db.transact_BANG_.call(null,G__62972,G__62973));
+return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28350__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.handler.draw.create_draws_directory_BANG_(repo),(function (___28349__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.fs.write_file_BANG_(repo,repo_dir,path,data,null),(function (___28349__auto____$1){
+return promesa.protocols._promise((function (){var G__49641 = repo;
+var G__49642 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword("file","path","file/path",-191335748),path,new cljs.core.Keyword("block","name","block/name",1619760316),(frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1 ? frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1(file) : frontend.util.page_name_sanity_lc.call(null,file)),new cljs.core.Keyword("block","file","block/file",183171933),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("file","path","file/path",-191335748),path], null),new cljs.core.Keyword("block","journal?","block/journal?",-970683127),false], null)], null);
+return (frontend.db.transact_BANG_.cljs$core$IFn$_invoke$arity$2 ? frontend.db.transact_BANG_.cljs$core$IFn$_invoke$arity$2(G__49641,G__49642) : frontend.db.transact_BANG_.call(null,G__49641,G__49642));
 })());
 }));
 }));
@@ -58,7 +58,7 @@ frontend.handler.draw.create_draw_with_default_content = (function frontend$hand
 var temp__5720__auto__ = frontend.state.get_current_repo();
 if(cljs.core.truth_(temp__5720__auto__)){
 var repo = temp__5720__auto__;
-return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___42626__auto__){
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.fs.file_exists_QMARK_(frontend.config.get_repo_dir(repo),[logseq.graph_parser.config.default_draw_directory,cljs.core.str.cljs$core$IFn$_invoke$arity$1(current_file)].join('')),(function (exists_QMARK_){
 return promesa.protocols._promise((cljs.core.truth_(exists_QMARK_)?null:frontend.handler.draw.save_excalidraw_BANG_(current_file,frontend.handler.draw.default_content)));
 }));

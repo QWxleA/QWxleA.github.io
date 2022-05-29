@@ -2,13 +2,13 @@ goog.provide('frontend.modules.datascript_report.core');
 frontend.modules.datascript_report.core.keys_of_deleted_entity = (1);
 frontend.modules.datascript_report.core.safe_pull = (function frontend$modules$datascript_report$core$safe_pull(db,selector,eid){
 try{return (datascript.core.pull.cljs$core$IFn$_invoke$arity$3 ? datascript.core.pull.cljs$core$IFn$_invoke$arity$3(db,selector,eid) : datascript.core.pull.call(null,db,selector,eid));
-}catch (e96749){if((e96749 instanceof Error)){
-var e = e96749;
+}catch (e82687){if((e82687 instanceof Error)){
+var e = e82687;
 console.error(e);
 
 return null;
 } else {
-throw e96749;
+throw e82687;
 
 }
 }});
@@ -20,13 +20,13 @@ return frontend.modules.datascript_report.core.safe_pull(db_before,new cljs.core
 return r;
 }
 });
-frontend.modules.datascript_report.core.get_blocks_and_pages = (function frontend$modules$datascript_report$core$get_blocks_and_pages(p__96758){
-var map__96759 = p__96758;
-var map__96759__$1 = cljs.core.__destructure_map(map__96759);
-var db_before = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__96759__$1,new cljs.core.Keyword(null,"db-before","db-before",-553691536));
-var db_after = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__96759__$1,new cljs.core.Keyword(null,"db-after","db-after",-571884666));
-var tx_data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__96759__$1,new cljs.core.Keyword(null,"tx-data","tx-data",934159761));
-var tx_meta = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__96759__$1,new cljs.core.Keyword(null,"tx-meta","tx-meta",1159283194));
+frontend.modules.datascript_report.core.get_blocks_and_pages = (function frontend$modules$datascript_report$core$get_blocks_and_pages(p__82695){
+var map__82696 = p__82695;
+var map__82696__$1 = cljs.core.__destructure_map(map__82696);
+var db_before = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82696__$1,new cljs.core.Keyword(null,"db-before","db-before",-553691536));
+var db_after = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82696__$1,new cljs.core.Keyword(null,"db-after","db-after",-571884666));
+var tx_data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82696__$1,new cljs.core.Keyword(null,"tx-data","tx-data",934159761));
+var tx_meta = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82696__$1,new cljs.core.Keyword(null,"tx-meta","tx-meta",1159283194));
 var updated_db_ids = cljs.core.set(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2(cljs.core.first,tx_data));
 var result = cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (acc,x){
 var block_entity = frontend.modules.datascript_report.core.get_entity_from_db_after_or_before(db_before,db_after,x);
@@ -38,16 +38,16 @@ return frontend.modules.datascript_report.core.get_entity_from_db_after_or_befor
 return null;
 }
 })();
-var G__96760 = acc;
-var G__96760__$1 = (((!((block_entity == null))))?cljs.core.update.cljs$core$IFn$_invoke$arity$4(G__96760,new cljs.core.Keyword(null,"blocks","blocks",-610462153),cljs.core.conj,block_entity):G__96760);
+var G__82697 = acc;
+var G__82697__$1 = (((!((block_entity == null))))?cljs.core.update.cljs$core$IFn$_invoke$arity$4(G__82697,new cljs.core.Keyword(null,"blocks","blocks",-610462153),cljs.core.conj,block_entity):G__82697);
 if((!((page_entity == null)))){
-return cljs.core.update.cljs$core$IFn$_invoke$arity$4(G__96760__$1,new cljs.core.Keyword(null,"pages","pages",-285406513),cljs.core.conj,page_entity);
+return cljs.core.update.cljs$core$IFn$_invoke$arity$4(G__82697__$1,new cljs.core.Keyword(null,"pages","pages",-285406513),cljs.core.conj,page_entity);
 } else {
-return G__96760__$1;
+return G__82697__$1;
 }
 }),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"blocks","blocks",-610462153),cljs.core.PersistentHashSet.EMPTY,new cljs.core.Keyword(null,"pages","pages",-285406513),cljs.core.PersistentHashSet.EMPTY], null),updated_db_ids);
-var tx_meta_pages = cljs.core.set(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__96757_SHARP_){
-return frontend.modules.datascript_report.core.get_entity_from_db_after_or_before(db_before,db_after,p1__96757_SHARP_);
+var tx_meta_pages = cljs.core.set(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__82693_SHARP_){
+return frontend.modules.datascript_report.core.get_entity_from_db_after_or_before(db_before,db_after,p1__82693_SHARP_);
 }),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"from-page","from-page",75165656).cljs$core$IFn$_invoke$arity$1(tx_meta),new cljs.core.Keyword(null,"target-page","target-page",-920102649).cljs$core$IFn$_invoke$arity$1(tx_meta)], null))));
 if(cljs.core.seq(tx_meta_pages)){
 return cljs.core.update.cljs$core$IFn$_invoke$arity$4(result,new cljs.core.Keyword(null,"pages","pages",-285406513),clojure.set.union,tx_meta_pages);
@@ -55,21 +55,21 @@ return cljs.core.update.cljs$core$IFn$_invoke$arity$4(result,new cljs.core.Keywo
 return result;
 }
 });
-frontend.modules.datascript_report.core.get_blocks = (function frontend$modules$datascript_report$core$get_blocks(p__96761){
-var map__96762 = p__96761;
-var map__96762__$1 = cljs.core.__destructure_map(map__96762);
-var _tx_report = map__96762__$1;
-var db_before = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__96762__$1,new cljs.core.Keyword(null,"db-before","db-before",-553691536));
-var db_after = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__96762__$1,new cljs.core.Keyword(null,"db-after","db-after",-571884666));
-var tx_data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__96762__$1,new cljs.core.Keyword(null,"tx-data","tx-data",934159761));
+frontend.modules.datascript_report.core.get_blocks = (function frontend$modules$datascript_report$core$get_blocks(p__82703){
+var map__82704 = p__82703;
+var map__82704__$1 = cljs.core.__destructure_map(map__82704);
+var _tx_report = map__82704__$1;
+var db_before = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82704__$1,new cljs.core.Keyword(null,"db-before","db-before",-553691536));
+var db_after = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82704__$1,new cljs.core.Keyword(null,"db-after","db-after",-571884666));
+var tx_data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82704__$1,new cljs.core.Keyword(null,"tx-data","tx-data",934159761));
 var updated_db_ids = cljs.core.set(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2(cljs.core.first,tx_data));
 return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (acc,x){
 var block_entity = frontend.modules.datascript_report.core.get_entity_from_db_after_or_before(db_before,db_after,x);
-var G__96763 = acc;
+var G__82705 = acc;
 if((!((block_entity == null)))){
-return cljs.core.conj.cljs$core$IFn$_invoke$arity$2(G__96763,block_entity);
+return cljs.core.conj.cljs$core$IFn$_invoke$arity$2(G__82705,block_entity);
 } else {
-return G__96763;
+return G__82705;
 }
 }),cljs.core.PersistentVector.EMPTY,updated_db_ids);
 });

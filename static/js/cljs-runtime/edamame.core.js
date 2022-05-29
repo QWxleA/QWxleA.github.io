@@ -55,8 +55,8 @@ goog.provide('edamame.core');
  *   
  */
 edamame.core.parse_string = (function edamame$core$parse_string(var_args){
-var G__79884 = arguments.length;
-switch (G__79884) {
+var G__63282 = arguments.length;
+switch (G__63282) {
 case 1:
 return edamame.core.parse_string.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -86,8 +86,8 @@ return edamame.impl.parser.parse_string(s,opts);
  *   in a vector.
  */
 edamame.core.parse_string_all = (function edamame$core$parse_string_all(var_args){
-var G__79886 = arguments.length;
-switch (G__79886) {
+var G__63302 = arguments.length;
+switch (G__63302) {
 case 1:
 return edamame.core.parse_string_all.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -140,8 +140,8 @@ return edamame.impl.parser.normalize_opts(opts);
  *   be normalized with normalize-opts first.
  */
 edamame.core.parse_next = (function edamame$core$parse_next(var_args){
-var G__79890 = arguments.length;
-switch (G__79890) {
+var G__63438 = arguments.length;
+switch (G__63438) {
 case 1:
 return edamame.core.parse_next.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -163,9 +163,9 @@ return edamame.core.parse_next.cljs$core$IFn$_invoke$arity$2(reader,edamame.impl
 (edamame.core.parse_next.cljs$core$IFn$_invoke$arity$2 = (function (reader,opts){
 var v = edamame.impl.parser.parse_next.cljs$core$IFn$_invoke$arity$2(opts,reader);
 if((edamame.impl.parser.eof === v)){
-var or__4253__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(opts,new cljs.core.Keyword(null,"eof","eof",-489063237));
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var or__5043__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(opts,new cljs.core.Keyword(null,"eof","eof",-489063237));
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return new cljs.core.Keyword("edamame.core","eof","edamame.core/eof",1855384188);
 }

@@ -7,20 +7,20 @@ var obj = (new promesa.impl._STAR_default_promise_STAR_((function (resolve,rejec
 
 return (state.reject = reject);
 })));
-var x65149 = obj;
-(x65149.promesa$protocols$ICompletable$ = cljs.core.PROTOCOL_SENTINEL);
+var x51159 = obj;
+(x51159.promesa$protocols$ICompletable$ = cljs.core.PROTOCOL_SENTINEL);
 
-(x65149.promesa$protocols$ICompletable$_resolve_BANG_$arity$2 = (function (_,v){
+(x51159.promesa$protocols$ICompletable$_resolve_BANG_$arity$2 = (function (_,v){
 var ___$1 = this;
 return state.resolve(v);
 }));
 
-(x65149.promesa$protocols$ICompletable$_reject_BANG_$arity$2 = (function (_,v){
+(x51159.promesa$protocols$ICompletable$_reject_BANG_$arity$2 = (function (_,v){
 var ___$1 = this;
 return state.reject(v);
 }));
 
-return x65149;
+return x51159;
 });
 promesa.impl.extend_promise_BANG_ = (function promesa$impl$extend_promise_BANG_(t){
 (t.prototype.promesa$protocols$IPromiseFactory$ = cljs.core.PROTOCOL_SENTINEL);
@@ -34,56 +34,56 @@ return p__$1;
 
 (t.prototype.promesa$protocols$IPromise$_map$arity$2 = (function (it,f){
 var it__$1 = this;
-return it__$1.then((function (p1__65154_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__65154_SHARP_) : f.call(null,p1__65154_SHARP_));
+return it__$1.then((function (p1__51161_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__51161_SHARP_) : f.call(null,p1__51161_SHARP_));
 }));
 }));
 
 (t.prototype.promesa$protocols$IPromise$_map$arity$3 = (function (it,f,e){
 var it__$1 = this;
-return it__$1.then((function (p1__65156_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__65156_SHARP_) : f.call(null,p1__65156_SHARP_));
+return it__$1.then((function (p1__51162_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__51162_SHARP_) : f.call(null,p1__51162_SHARP_));
 }));
 }));
 
 (t.prototype.promesa$protocols$IPromise$_bind$arity$2 = (function (it,f){
 var it__$1 = this;
-return it__$1.then((function (p1__65157_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__65157_SHARP_) : f.call(null,p1__65157_SHARP_));
+return it__$1.then((function (p1__51163_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__51163_SHARP_) : f.call(null,p1__51163_SHARP_));
 }));
 }));
 
 (t.prototype.promesa$protocols$IPromise$_bind$arity$3 = (function (it,f,e){
 var it__$1 = this;
-return it__$1.then((function (p1__65161_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__65161_SHARP_) : f.call(null,p1__65161_SHARP_));
+return it__$1.then((function (p1__51164_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__51164_SHARP_) : f.call(null,p1__51164_SHARP_));
 }));
 }));
 
 (t.prototype.promesa$protocols$IPromise$_handle$arity$2 = (function (it,f){
 var it__$1 = this;
-return it__$1.then((function (p1__65162_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(p1__65162_SHARP_,null) : f.call(null,p1__65162_SHARP_,null));
-}),(function (p1__65163_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(null,p1__65163_SHARP_) : f.call(null,null,p1__65163_SHARP_));
+return it__$1.then((function (p1__51165_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(p1__51165_SHARP_,null) : f.call(null,p1__51165_SHARP_,null));
+}),(function (p1__51166_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(null,p1__51166_SHARP_) : f.call(null,null,p1__51166_SHARP_));
 }));
 }));
 
 (t.prototype.promesa$protocols$IPromise$_handle$arity$3 = (function (it,f,e){
 var it__$1 = this;
-return it__$1.then((function (p1__65164_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(p1__65164_SHARP_,null) : f.call(null,p1__65164_SHARP_,null));
-}),(function (p1__65165_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(null,p1__65165_SHARP_) : f.call(null,null,p1__65165_SHARP_));
+return it__$1.then((function (p1__51167_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(p1__51167_SHARP_,null) : f.call(null,p1__51167_SHARP_,null));
+}),(function (p1__51168_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(null,p1__51168_SHARP_) : f.call(null,null,p1__51168_SHARP_));
 }));
 }));
 
 (t.prototype.promesa$protocols$IPromise$_finally$arity$2 = (function (it,f){
 var it__$1 = this;
-it__$1.then((function (p1__65166_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(p1__65166_SHARP_,null) : f.call(null,p1__65166_SHARP_,null));
-}),(function (p1__65167_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(null,p1__65167_SHARP_) : f.call(null,null,p1__65167_SHARP_));
+it__$1.then((function (p1__51169_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(p1__51169_SHARP_,null) : f.call(null,p1__51169_SHARP_,null));
+}),(function (p1__51170_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(null,p1__51170_SHARP_) : f.call(null,null,p1__51170_SHARP_));
 }));
 
 return it__$1;
@@ -91,10 +91,10 @@ return it__$1;
 
 (t.prototype.promesa$protocols$IPromise$_finally$arity$3 = (function (it,f,executor){
 var it__$1 = this;
-it__$1.then((function (p1__65168_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(p1__65168_SHARP_,null) : f.call(null,p1__65168_SHARP_,null));
-}),(function (p1__65169_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(null,p1__65169_SHARP_) : f.call(null,null,p1__65169_SHARP_));
+it__$1.then((function (p1__51171_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(p1__51171_SHARP_,null) : f.call(null,p1__51171_SHARP_,null));
+}),(function (p1__51172_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$2 ? f.cljs$core$IFn$_invoke$arity$2(null,p1__51172_SHARP_) : f.call(null,null,p1__51172_SHARP_));
 }));
 
 return it__$1;
@@ -102,8 +102,8 @@ return it__$1;
 
 return (t.prototype.promesa$protocols$IPromise$_catch$arity$2 = (function (it,f){
 var it__$1 = this;
-return it__$1.catch((function (p1__65170_SHARP_){
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__65170_SHARP_) : f.call(null,p1__65170_SHARP_));
+return it__$1.catch((function (p1__51173_SHARP_){
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(p1__51173_SHARP_) : f.call(null,p1__51173_SHARP_));
 }));
 }));
 });
@@ -111,94 +111,94 @@ promesa.impl.extend_promise_BANG_(Promise);
 (promesa.protocols.IPromise["_"] = true);
 
 (promesa.protocols._map["_"] = (function() {
-var G__65243 = null;
-var G__65243__2 = (function (it,f){
+var G__51186 = null;
+var G__51186__2 = (function (it,f){
 return promesa.protocols._map(promesa.protocols._promise(it),f);
 });
-var G__65243__3 = (function (it,f,e){
+var G__51186__3 = (function (it,f,e){
 return promesa.protocols._map(promesa.protocols._promise(it),f,e);
 });
-G__65243 = function(it,f,e){
+G__51186 = function(it,f,e){
 switch(arguments.length){
 case 2:
-return G__65243__2.call(this,it,f);
+return G__51186__2.call(this,it,f);
 case 3:
-return G__65243__3.call(this,it,f,e);
+return G__51186__3.call(this,it,f,e);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__65243.cljs$core$IFn$_invoke$arity$2 = G__65243__2;
-G__65243.cljs$core$IFn$_invoke$arity$3 = G__65243__3;
-return G__65243;
+G__51186.cljs$core$IFn$_invoke$arity$2 = G__51186__2;
+G__51186.cljs$core$IFn$_invoke$arity$3 = G__51186__3;
+return G__51186;
 })()
 );
 
 (promesa.protocols._bind["_"] = (function() {
-var G__65244 = null;
-var G__65244__2 = (function (it,f){
+var G__51187 = null;
+var G__51187__2 = (function (it,f){
 return promesa.protocols._bind(promesa.protocols._promise(it),f);
 });
-var G__65244__3 = (function (it,f,e){
+var G__51187__3 = (function (it,f,e){
 return promesa.protocols._bind(promesa.protocols._promise(it),f,e);
 });
-G__65244 = function(it,f,e){
+G__51187 = function(it,f,e){
 switch(arguments.length){
 case 2:
-return G__65244__2.call(this,it,f);
+return G__51187__2.call(this,it,f);
 case 3:
-return G__65244__3.call(this,it,f,e);
+return G__51187__3.call(this,it,f,e);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__65244.cljs$core$IFn$_invoke$arity$2 = G__65244__2;
-G__65244.cljs$core$IFn$_invoke$arity$3 = G__65244__3;
-return G__65244;
+G__51187.cljs$core$IFn$_invoke$arity$2 = G__51187__2;
+G__51187.cljs$core$IFn$_invoke$arity$3 = G__51187__3;
+return G__51187;
 })()
 );
 
 (promesa.protocols._handle["_"] = (function() {
-var G__65245 = null;
-var G__65245__2 = (function (it,f){
+var G__51192 = null;
+var G__51192__2 = (function (it,f){
 return promesa.protocols._handle(promesa.protocols._promise(it),f);
 });
-var G__65245__3 = (function (it,f,e){
+var G__51192__3 = (function (it,f,e){
 return promesa.protocols._handle(promesa.protocols._promise(it),f,e);
 });
-G__65245 = function(it,f,e){
+G__51192 = function(it,f,e){
 switch(arguments.length){
 case 2:
-return G__65245__2.call(this,it,f);
+return G__51192__2.call(this,it,f);
 case 3:
-return G__65245__3.call(this,it,f,e);
+return G__51192__3.call(this,it,f,e);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__65245.cljs$core$IFn$_invoke$arity$2 = G__65245__2;
-G__65245.cljs$core$IFn$_invoke$arity$3 = G__65245__3;
-return G__65245;
+G__51192.cljs$core$IFn$_invoke$arity$2 = G__51192__2;
+G__51192.cljs$core$IFn$_invoke$arity$3 = G__51192__3;
+return G__51192;
 })()
 );
 
 (promesa.protocols._finally["_"] = (function() {
-var G__65246 = null;
-var G__65246__2 = (function (it,f){
+var G__51193 = null;
+var G__51193__2 = (function (it,f){
 return promesa.protocols._finally(promesa.protocols._promise(it),f);
 });
-var G__65246__3 = (function (it,f,e){
+var G__51193__3 = (function (it,f,e){
 return promesa.protocols._finally(promesa.protocols._promise(it),f,e);
 });
-G__65246 = function(it,f,e){
+G__51193 = function(it,f,e){
 switch(arguments.length){
 case 2:
-return G__65246__2.call(this,it,f);
+return G__51193__2.call(this,it,f);
 case 3:
-return G__65246__3.call(this,it,f,e);
+return G__51193__3.call(this,it,f,e);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__65246.cljs$core$IFn$_invoke$arity$2 = G__65246__2;
-G__65246.cljs$core$IFn$_invoke$arity$3 = G__65246__3;
-return G__65246;
+G__51193.cljs$core$IFn$_invoke$arity$2 = G__51193__2;
+G__51193.cljs$core$IFn$_invoke$arity$3 = G__51193__3;
+return G__51193;
 })()
 );
 

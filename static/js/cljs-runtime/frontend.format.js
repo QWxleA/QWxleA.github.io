@@ -9,9 +9,9 @@ if((typeof frontend !== 'undefined') && (typeof frontend.format !== 'undefined')
 frontend.format.adoc_record = frontend.format.adoc.__GT_AdocMode();
 }
 frontend.format.get_format_record = (function frontend$format$get_format_record(format){
-var G__63652 = logseq.graph_parser.util.normalize_format(format);
-var G__63652__$1 = (((G__63652 instanceof cljs.core.Keyword))?G__63652.fqn:null);
-switch (G__63652__$1) {
+var G__49220 = logseq.graph_parser.util.normalize_format(format);
+var G__49220__$1 = (((G__49220 instanceof cljs.core.Keyword))?G__49220.fqn:null);
+switch (G__49220__$1) {
 case "org":
 return frontend.format.mldoc_record;
 
@@ -30,8 +30,8 @@ return null;
 }
 });
 frontend.format.get_default_config = (function frontend$format$get_default_config(var_args){
-var G__63654 = arguments.length;
-switch (G__63654) {
+var G__49222 = arguments.length;
+switch (G__49222) {
 case 1:
 return frontend.format.get_default_config.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -57,8 +57,8 @@ return logseq.graph_parser.mldoc.default_config.cljs$core$IFn$_invoke$arity$2(fo
 (frontend.format.get_default_config.cljs$lang$maxFixedArity = 2);
 
 frontend.format.to_html = (function frontend$format$to_html(var_args){
-var G__63656 = arguments.length;
-switch (G__63656) {
+var G__49224 = arguments.length;
+switch (G__49224) {
 case 2:
 return frontend.format.to_html.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -95,8 +95,8 @@ return content;
 (frontend.format.to_html.cljs$lang$maxFixedArity = 3);
 
 frontend.format.to_edn = (function frontend$format$to_edn(var_args){
-var G__63658 = arguments.length;
-switch (G__63658) {
+var G__49235 = arguments.length;
+switch (G__49235) {
 case 2:
 return frontend.format.to_edn.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -116,9 +116,9 @@ return frontend.format.to_edn.cljs$core$IFn$_invoke$arity$3(content,format,front
 }));
 
 (frontend.format.to_edn.cljs$core$IFn$_invoke$arity$3 = (function (content,format,config){
-var config__$1 = (function (){var or__4253__auto__ = config;
-if(cljs.core.truth_(or__4253__auto__)){
-return or__4253__auto__;
+var config__$1 = (function (){var or__5043__auto__ = config;
+if(cljs.core.truth_(or__5043__auto__)){
+return or__5043__auto__;
 } else {
 return frontend.format.get_default_config.cljs$core$IFn$_invoke$arity$1(format);
 }

@@ -5,15 +5,15 @@ goog.provide('frontend.fs.protocol');
  */
 frontend.fs.protocol.Fs = function(){};
 
-var frontend$fs$protocol$Fs$mkdir_BANG_$dyn_88196 = (function (this$,dir){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.mkdir_BANG_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4551__auto__.call(null,this$,dir));
+var frontend$fs$protocol$Fs$mkdir_BANG_$dyn_73936 = (function (this$,dir){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.mkdir_BANG_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5391__auto__.call(null,this$,dir));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.mkdir_BANG_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4549__auto__.call(null,this$,dir));
+var m__5389__auto__ = (frontend.fs.protocol.mkdir_BANG_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5389__auto__.call(null,this$,dir));
 } else {
 throw cljs.core.missing_protocol("Fs.mkdir!",this$);
 }
@@ -23,19 +23,19 @@ frontend.fs.protocol.mkdir_BANG_ = (function frontend$fs$protocol$mkdir_BANG_(th
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$mkdir_BANG_$arity$2 == null)))))){
 return this$.frontend$fs$protocol$Fs$mkdir_BANG_$arity$2(this$,dir);
 } else {
-return frontend$fs$protocol$Fs$mkdir_BANG_$dyn_88196(this$,dir);
+return frontend$fs$protocol$Fs$mkdir_BANG_$dyn_73936(this$,dir);
 }
 });
 
-var frontend$fs$protocol$Fs$mkdir_recur_BANG_$dyn_88198 = (function (this$,dir){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.mkdir_recur_BANG_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4551__auto__.call(null,this$,dir));
+var frontend$fs$protocol$Fs$mkdir_recur_BANG_$dyn_73937 = (function (this$,dir){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.mkdir_recur_BANG_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5391__auto__.call(null,this$,dir));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.mkdir_recur_BANG_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4549__auto__.call(null,this$,dir));
+var m__5389__auto__ = (frontend.fs.protocol.mkdir_recur_BANG_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5389__auto__.call(null,this$,dir));
 } else {
 throw cljs.core.missing_protocol("Fs.mkdir-recur!",this$);
 }
@@ -45,19 +45,19 @@ frontend.fs.protocol.mkdir_recur_BANG_ = (function frontend$fs$protocol$mkdir_re
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$mkdir_recur_BANG_$arity$2 == null)))))){
 return this$.frontend$fs$protocol$Fs$mkdir_recur_BANG_$arity$2(this$,dir);
 } else {
-return frontend$fs$protocol$Fs$mkdir_recur_BANG_$dyn_88198(this$,dir);
+return frontend$fs$protocol$Fs$mkdir_recur_BANG_$dyn_73937(this$,dir);
 }
 });
 
-var frontend$fs$protocol$Fs$readdir$dyn_88201 = (function (this$,dir){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.readdir[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4551__auto__.call(null,this$,dir));
+var frontend$fs$protocol$Fs$readdir$dyn_73938 = (function (this$,dir){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.readdir[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5391__auto__.call(null,this$,dir));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.readdir["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4549__auto__.call(null,this$,dir));
+var m__5389__auto__ = (frontend.fs.protocol.readdir["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5389__auto__.call(null,this$,dir));
 } else {
 throw cljs.core.missing_protocol("Fs.readdir",this$);
 }
@@ -67,19 +67,19 @@ frontend.fs.protocol.readdir = (function frontend$fs$protocol$readdir(this$,dir)
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$readdir$arity$2 == null)))))){
 return this$.frontend$fs$protocol$Fs$readdir$arity$2(this$,dir);
 } else {
-return frontend$fs$protocol$Fs$readdir$dyn_88201(this$,dir);
+return frontend$fs$protocol$Fs$readdir$dyn_73938(this$,dir);
 }
 });
 
-var frontend$fs$protocol$Fs$unlink_BANG_$dyn_88202 = (function (this$,repo,path,opts){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.unlink_BANG_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$4 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$4(this$,repo,path,opts) : m__4551__auto__.call(null,this$,repo,path,opts));
+var frontend$fs$protocol$Fs$unlink_BANG_$dyn_73939 = (function (this$,repo,path,opts){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.unlink_BANG_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$4 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$4(this$,repo,path,opts) : m__5391__auto__.call(null,this$,repo,path,opts));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.unlink_BANG_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$4 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$4(this$,repo,path,opts) : m__4549__auto__.call(null,this$,repo,path,opts));
+var m__5389__auto__ = (frontend.fs.protocol.unlink_BANG_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$4 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$4(this$,repo,path,opts) : m__5389__auto__.call(null,this$,repo,path,opts));
 } else {
 throw cljs.core.missing_protocol("Fs.unlink!",this$);
 }
@@ -89,19 +89,19 @@ frontend.fs.protocol.unlink_BANG_ = (function frontend$fs$protocol$unlink_BANG_(
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$unlink_BANG_$arity$4 == null)))))){
 return this$.frontend$fs$protocol$Fs$unlink_BANG_$arity$4(this$,repo,path,opts);
 } else {
-return frontend$fs$protocol$Fs$unlink_BANG_$dyn_88202(this$,repo,path,opts);
+return frontend$fs$protocol$Fs$unlink_BANG_$dyn_73939(this$,repo,path,opts);
 }
 });
 
-var frontend$fs$protocol$Fs$rmdir_BANG_$dyn_88203 = (function (this$,dir){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.rmdir_BANG_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4551__auto__.call(null,this$,dir));
+var frontend$fs$protocol$Fs$rmdir_BANG_$dyn_73940 = (function (this$,dir){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.rmdir_BANG_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5391__auto__.call(null,this$,dir));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.rmdir_BANG_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4549__auto__.call(null,this$,dir));
+var m__5389__auto__ = (frontend.fs.protocol.rmdir_BANG_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5389__auto__.call(null,this$,dir));
 } else {
 throw cljs.core.missing_protocol("Fs.rmdir!",this$);
 }
@@ -111,19 +111,19 @@ frontend.fs.protocol.rmdir_BANG_ = (function frontend$fs$protocol$rmdir_BANG_(th
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$rmdir_BANG_$arity$2 == null)))))){
 return this$.frontend$fs$protocol$Fs$rmdir_BANG_$arity$2(this$,dir);
 } else {
-return frontend$fs$protocol$Fs$rmdir_BANG_$dyn_88203(this$,dir);
+return frontend$fs$protocol$Fs$rmdir_BANG_$dyn_73940(this$,dir);
 }
 });
 
-var frontend$fs$protocol$Fs$read_file$dyn_88204 = (function (this$,dir,path,opts){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.read_file[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$4 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$4(this$,dir,path,opts) : m__4551__auto__.call(null,this$,dir,path,opts));
+var frontend$fs$protocol$Fs$read_file$dyn_73941 = (function (this$,dir,path,opts){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.read_file[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$4 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$4(this$,dir,path,opts) : m__5391__auto__.call(null,this$,dir,path,opts));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.read_file["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$4 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$4(this$,dir,path,opts) : m__4549__auto__.call(null,this$,dir,path,opts));
+var m__5389__auto__ = (frontend.fs.protocol.read_file["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$4 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$4(this$,dir,path,opts) : m__5389__auto__.call(null,this$,dir,path,opts));
 } else {
 throw cljs.core.missing_protocol("Fs.read-file",this$);
 }
@@ -133,19 +133,19 @@ frontend.fs.protocol.read_file = (function frontend$fs$protocol$read_file(this$,
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$read_file$arity$4 == null)))))){
 return this$.frontend$fs$protocol$Fs$read_file$arity$4(this$,dir,path,opts);
 } else {
-return frontend$fs$protocol$Fs$read_file$dyn_88204(this$,dir,path,opts);
+return frontend$fs$protocol$Fs$read_file$dyn_73941(this$,dir,path,opts);
 }
 });
 
-var frontend$fs$protocol$Fs$delete_file_BANG_$dyn_88207 = (function (this$,repo,dir,path,opts){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.delete_file_BANG_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$5 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$5(this$,repo,dir,path,opts) : m__4551__auto__.call(null,this$,repo,dir,path,opts));
+var frontend$fs$protocol$Fs$delete_file_BANG_$dyn_73942 = (function (this$,repo,dir,path,opts){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.delete_file_BANG_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$5 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$5(this$,repo,dir,path,opts) : m__5391__auto__.call(null,this$,repo,dir,path,opts));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.delete_file_BANG_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$5 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$5(this$,repo,dir,path,opts) : m__4549__auto__.call(null,this$,repo,dir,path,opts));
+var m__5389__auto__ = (frontend.fs.protocol.delete_file_BANG_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$5 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$5(this$,repo,dir,path,opts) : m__5389__auto__.call(null,this$,repo,dir,path,opts));
 } else {
 throw cljs.core.missing_protocol("Fs.delete-file!",this$);
 }
@@ -155,19 +155,19 @@ frontend.fs.protocol.delete_file_BANG_ = (function frontend$fs$protocol$delete_f
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$delete_file_BANG_$arity$5 == null)))))){
 return this$.frontend$fs$protocol$Fs$delete_file_BANG_$arity$5(this$,repo,dir,path,opts);
 } else {
-return frontend$fs$protocol$Fs$delete_file_BANG_$dyn_88207(this$,repo,dir,path,opts);
+return frontend$fs$protocol$Fs$delete_file_BANG_$dyn_73942(this$,repo,dir,path,opts);
 }
 });
 
-var frontend$fs$protocol$Fs$write_file_BANG_$dyn_88209 = (function (this$,repo,dir,path,content,opts){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.write_file_BANG_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$6 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$6(this$,repo,dir,path,content,opts) : m__4551__auto__.call(null,this$,repo,dir,path,content,opts));
+var frontend$fs$protocol$Fs$write_file_BANG_$dyn_73943 = (function (this$,repo,dir,path,content,opts){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.write_file_BANG_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$6 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$6(this$,repo,dir,path,content,opts) : m__5391__auto__.call(null,this$,repo,dir,path,content,opts));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.write_file_BANG_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$6 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$6(this$,repo,dir,path,content,opts) : m__4549__auto__.call(null,this$,repo,dir,path,content,opts));
+var m__5389__auto__ = (frontend.fs.protocol.write_file_BANG_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$6 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$6(this$,repo,dir,path,content,opts) : m__5389__auto__.call(null,this$,repo,dir,path,content,opts));
 } else {
 throw cljs.core.missing_protocol("Fs.write-file!",this$);
 }
@@ -177,19 +177,19 @@ frontend.fs.protocol.write_file_BANG_ = (function frontend$fs$protocol$write_fil
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$write_file_BANG_$arity$6 == null)))))){
 return this$.frontend$fs$protocol$Fs$write_file_BANG_$arity$6(this$,repo,dir,path,content,opts);
 } else {
-return frontend$fs$protocol$Fs$write_file_BANG_$dyn_88209(this$,repo,dir,path,content,opts);
+return frontend$fs$protocol$Fs$write_file_BANG_$dyn_73943(this$,repo,dir,path,content,opts);
 }
 });
 
-var frontend$fs$protocol$Fs$rename_BANG_$dyn_88210 = (function (this$,repo,old_path,new_path){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.rename_BANG_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$4 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$4(this$,repo,old_path,new_path) : m__4551__auto__.call(null,this$,repo,old_path,new_path));
+var frontend$fs$protocol$Fs$rename_BANG_$dyn_73944 = (function (this$,repo,old_path,new_path){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.rename_BANG_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$4 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$4(this$,repo,old_path,new_path) : m__5391__auto__.call(null,this$,repo,old_path,new_path));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.rename_BANG_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$4 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$4(this$,repo,old_path,new_path) : m__4549__auto__.call(null,this$,repo,old_path,new_path));
+var m__5389__auto__ = (frontend.fs.protocol.rename_BANG_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$4 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$4(this$,repo,old_path,new_path) : m__5389__auto__.call(null,this$,repo,old_path,new_path));
 } else {
 throw cljs.core.missing_protocol("Fs.rename!",this$);
 }
@@ -199,19 +199,19 @@ frontend.fs.protocol.rename_BANG_ = (function frontend$fs$protocol$rename_BANG_(
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$rename_BANG_$arity$4 == null)))))){
 return this$.frontend$fs$protocol$Fs$rename_BANG_$arity$4(this$,repo,old_path,new_path);
 } else {
-return frontend$fs$protocol$Fs$rename_BANG_$dyn_88210(this$,repo,old_path,new_path);
+return frontend$fs$protocol$Fs$rename_BANG_$dyn_73944(this$,repo,old_path,new_path);
 }
 });
 
-var frontend$fs$protocol$Fs$stat$dyn_88211 = (function (this$,dir,path){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.stat[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$3(this$,dir,path) : m__4551__auto__.call(null,this$,dir,path));
+var frontend$fs$protocol$Fs$stat$dyn_73945 = (function (this$,dir,path){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.stat[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$3 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$3(this$,dir,path) : m__5391__auto__.call(null,this$,dir,path));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.stat["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$3(this$,dir,path) : m__4549__auto__.call(null,this$,dir,path));
+var m__5389__auto__ = (frontend.fs.protocol.stat["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$3 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$3(this$,dir,path) : m__5389__auto__.call(null,this$,dir,path));
 } else {
 throw cljs.core.missing_protocol("Fs.stat",this$);
 }
@@ -221,19 +221,19 @@ frontend.fs.protocol.stat = (function frontend$fs$protocol$stat(this$,dir,path){
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$stat$arity$3 == null)))))){
 return this$.frontend$fs$protocol$Fs$stat$arity$3(this$,dir,path);
 } else {
-return frontend$fs$protocol$Fs$stat$dyn_88211(this$,dir,path);
+return frontend$fs$protocol$Fs$stat$dyn_73945(this$,dir,path);
 }
 });
 
-var frontend$fs$protocol$Fs$open_dir$dyn_88214 = (function (this$,ok_handler){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.open_dir[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$2(this$,ok_handler) : m__4551__auto__.call(null,this$,ok_handler));
+var frontend$fs$protocol$Fs$open_dir$dyn_73946 = (function (this$,ok_handler){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.open_dir[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$2(this$,ok_handler) : m__5391__auto__.call(null,this$,ok_handler));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.open_dir["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$2(this$,ok_handler) : m__4549__auto__.call(null,this$,ok_handler));
+var m__5389__auto__ = (frontend.fs.protocol.open_dir["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$2(this$,ok_handler) : m__5389__auto__.call(null,this$,ok_handler));
 } else {
 throw cljs.core.missing_protocol("Fs.open-dir",this$);
 }
@@ -243,19 +243,19 @@ frontend.fs.protocol.open_dir = (function frontend$fs$protocol$open_dir(this$,ok
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$open_dir$arity$2 == null)))))){
 return this$.frontend$fs$protocol$Fs$open_dir$arity$2(this$,ok_handler);
 } else {
-return frontend$fs$protocol$Fs$open_dir$dyn_88214(this$,ok_handler);
+return frontend$fs$protocol$Fs$open_dir$dyn_73946(this$,ok_handler);
 }
 });
 
-var frontend$fs$protocol$Fs$get_files$dyn_88216 = (function (this$,path_or_handle,ok_handler){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.get_files[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$3(this$,path_or_handle,ok_handler) : m__4551__auto__.call(null,this$,path_or_handle,ok_handler));
+var frontend$fs$protocol$Fs$get_files$dyn_73947 = (function (this$,path_or_handle,ok_handler){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.get_files[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$3 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$3(this$,path_or_handle,ok_handler) : m__5391__auto__.call(null,this$,path_or_handle,ok_handler));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.get_files["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$3(this$,path_or_handle,ok_handler) : m__4549__auto__.call(null,this$,path_or_handle,ok_handler));
+var m__5389__auto__ = (frontend.fs.protocol.get_files["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$3 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$3(this$,path_or_handle,ok_handler) : m__5389__auto__.call(null,this$,path_or_handle,ok_handler));
 } else {
 throw cljs.core.missing_protocol("Fs.get-files",this$);
 }
@@ -265,19 +265,19 @@ frontend.fs.protocol.get_files = (function frontend$fs$protocol$get_files(this$,
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$get_files$arity$3 == null)))))){
 return this$.frontend$fs$protocol$Fs$get_files$arity$3(this$,path_or_handle,ok_handler);
 } else {
-return frontend$fs$protocol$Fs$get_files$dyn_88216(this$,path_or_handle,ok_handler);
+return frontend$fs$protocol$Fs$get_files$dyn_73947(this$,path_or_handle,ok_handler);
 }
 });
 
-var frontend$fs$protocol$Fs$watch_dir_BANG_$dyn_88218 = (function (this$,dir){
-var x__4550__auto__ = (((this$ == null))?null:this$);
-var m__4551__auto__ = (frontend.fs.protocol.watch_dir_BANG_[goog.typeOf(x__4550__auto__)]);
-if((!((m__4551__auto__ == null)))){
-return (m__4551__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4551__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4551__auto__.call(null,this$,dir));
+var frontend$fs$protocol$Fs$watch_dir_BANG_$dyn_73948 = (function (this$,dir){
+var x__5390__auto__ = (((this$ == null))?null:this$);
+var m__5391__auto__ = (frontend.fs.protocol.watch_dir_BANG_[goog.typeOf(x__5390__auto__)]);
+if((!((m__5391__auto__ == null)))){
+return (m__5391__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5391__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5391__auto__.call(null,this$,dir));
 } else {
-var m__4549__auto__ = (frontend.fs.protocol.watch_dir_BANG_["_"]);
-if((!((m__4549__auto__ == null)))){
-return (m__4549__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4549__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__4549__auto__.call(null,this$,dir));
+var m__5389__auto__ = (frontend.fs.protocol.watch_dir_BANG_["_"]);
+if((!((m__5389__auto__ == null)))){
+return (m__5389__auto__.cljs$core$IFn$_invoke$arity$2 ? m__5389__auto__.cljs$core$IFn$_invoke$arity$2(this$,dir) : m__5389__auto__.call(null,this$,dir));
 } else {
 throw cljs.core.missing_protocol("Fs.watch-dir!",this$);
 }
@@ -287,7 +287,7 @@ frontend.fs.protocol.watch_dir_BANG_ = (function frontend$fs$protocol$watch_dir_
 if((((!((this$ == null)))) && ((!((this$.frontend$fs$protocol$Fs$watch_dir_BANG_$arity$2 == null)))))){
 return this$.frontend$fs$protocol$Fs$watch_dir_BANG_$arity$2(this$,dir);
 } else {
-return frontend$fs$protocol$Fs$watch_dir_BANG_$dyn_88218(this$,dir);
+return frontend$fs$protocol$Fs$watch_dir_BANG_$dyn_73948(this$,dir);
 }
 });
 
