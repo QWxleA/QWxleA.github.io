@@ -3,14 +3,14 @@ frontend.context.i18n.dicts = cljs.core.merge_with.cljs$core$IFn$_invoke$arity$v
 frontend.context.i18n.translate = tongue.core.build_translate(frontend.context.i18n.dicts);
 frontend.context.i18n.t = (function frontend$context$i18n$t(var_args){
 var args__5772__auto__ = [];
-var len__5766__auto___33185 = arguments.length;
-var i__5767__auto___33186 = (0);
+var len__5766__auto___32792 = arguments.length;
+var i__5767__auto___32793 = (0);
 while(true){
-if((i__5767__auto___33186 < len__5766__auto___33185)){
-args__5772__auto__.push((arguments[i__5767__auto___33186]));
+if((i__5767__auto___32793 < len__5766__auto___32792)){
+args__5772__auto__.push((arguments[i__5767__auto___32793]));
 
-var G__33187 = (i__5767__auto___33186 + (1));
-i__5767__auto___33186 = G__33187;
+var G__32794 = (i__5767__auto___32793 + (1));
+i__5767__auto___32793 = G__32794;
 continue;
 } else {
 }
@@ -29,9 +29,9 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(frontend.context.i18n.trans
 (frontend.context.i18n.t.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(frontend.context.i18n.t.cljs$lang$applyTo = (function (seq33169){
+(frontend.context.i18n.t.cljs$lang$applyTo = (function (seq32786){
 var self__5752__auto__ = this;
-return self__5752__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq33169));
+return self__5752__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq32786));
 }));
 
 frontend.context.i18n.fetch_local_language = (function frontend$context$i18n$fetch_local_language(){

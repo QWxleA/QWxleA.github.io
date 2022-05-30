@@ -2,10 +2,10 @@ goog.provide('frontend.components.shortcut');
 frontend.components.shortcut.customize_shortcut_dialog_inner = rum.core.lazy_build(rum.core.build_defcs,(function (state,k,action_name,current_binding){
 var keypress = new cljs.core.Keyword("rum","local","rum/local",-1497916586).cljs$core$IFn$_invoke$arity$1(state);
 var keyboard_shortcut = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("",cljs.core.deref(keypress)))?current_binding:cljs.core.deref(keypress));
-return daiquiri.core.create_element("div",null,[daiquiri.core.create_element("div",null,[daiquiri.core.create_element("p",{'className':"mb-4"},["Press any sequence of keys to set the shortcut for the ",(function (){var attrs52703 = action_name;
-return daiquiri.core.create_element("b",((cljs.core.map_QMARK_(attrs52703))?daiquiri.interpreter.element_attributes(attrs52703):null),((cljs.core.map_QMARK_(attrs52703))?null:[daiquiri.interpreter.interpret(attrs52703)]));
-})()," action."]),(function (){var attrs52702 = frontend.ui.render_keyboard_shortcut(clojure.string.split.cljs$core$IFn$_invoke$arity$2(clojure.string.lower_case(clojure.string.trim(keyboard_shortcut)),/ |\+/));
-return daiquiri.core.create_element("p",((cljs.core.map_QMARK_(attrs52702))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["mb-4","mt-4"], null)], null),attrs52702], 0))):{'className':"mb-4 mt-4"}),((cljs.core.map_QMARK_(attrs52702))?[" ",daiquiri.core.create_element("a",{'style':{'marginLeft':"12px"},'onClick':(function (){
+return daiquiri.core.create_element("div",null,[daiquiri.core.create_element("div",null,[daiquiri.core.create_element("p",{'className':"mb-4"},["Press any sequence of keys to set the shortcut for the ",(function (){var attrs62220 = action_name;
+return daiquiri.core.create_element("b",((cljs.core.map_QMARK_(attrs62220))?daiquiri.interpreter.element_attributes(attrs62220):null),((cljs.core.map_QMARK_(attrs62220))?null:[daiquiri.interpreter.interpret(attrs62220)]));
+})()," action."]),(function (){var attrs62219 = frontend.ui.render_keyboard_shortcut(clojure.string.split.cljs$core$IFn$_invoke$arity$2(clojure.string.lower_case(clojure.string.trim(keyboard_shortcut)),/ |\+/));
+return daiquiri.core.create_element("p",((cljs.core.map_QMARK_(attrs62219))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["mb-4","mt-4"], null)], null),attrs62219], 0))):{'className':"mb-4 mt-4"}),((cljs.core.map_QMARK_(attrs62219))?[" ",daiquiri.core.create_element("a",{'style':{'marginLeft':"12px"},'onClick':(function (){
 frontend.modules.shortcut.data_helper.remove_shortcut(k);
 
 frontend.modules.shortcut.core.refresh_BANG_();
@@ -13,7 +13,7 @@ frontend.modules.shortcut.core.refresh_BANG_();
 return cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(keypress,(function (){
 return "";
 }));
-}),'className':"text-sm"},["Reset"])]:[daiquiri.interpreter.interpret(attrs52702)," ",daiquiri.core.create_element("a",{'style':{'marginLeft':"12px"},'onClick':(function (){
+}),'className':"text-sm"},["Reset"])]:[daiquiri.interpreter.interpret(attrs62219)," ",daiquiri.core.create_element("a",{'style':{'marginLeft':"12px"},'onClick':(function (){
 frontend.modules.shortcut.data_helper.remove_shortcut(k);
 
 frontend.modules.shortcut.core.refresh_BANG_();
@@ -22,12 +22,12 @@ return cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(keypress,(function (){
 return "";
 }));
 }),'className':"text-sm"},["Reset"])]));
-})()]),(function (){var attrs52700 = frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic("Save",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"on-click","on-click",1632826543),frontend.state.close_modal_BANG_], 0));
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs52700))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["cancel-save-buttons","text-right","mt-4"], null)], null),attrs52700], 0))):{'className':"cancel-save-buttons text-right mt-4"}),((cljs.core.map_QMARK_(attrs52700))?[daiquiri.core.create_element("a",{'onClick':(function (){
+})()]),(function (){var attrs62217 = frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic("Save",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"on-click","on-click",1632826543),frontend.state.close_modal_BANG_], 0));
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs62217))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["cancel-save-buttons","text-right","mt-4"], null)], null),attrs62217], 0))):{'className':"cancel-save-buttons text-right mt-4"}),((cljs.core.map_QMARK_(attrs62217))?[daiquiri.core.create_element("a",{'onClick':(function (){
 cljs.core.reset_BANG_(keypress,frontend.modules.shortcut.data_helper.binding_for_storage(current_binding));
 
 return frontend.state.close_modal_BANG_();
-}),'className':"ml-4"},["Cancel"])]:[daiquiri.interpreter.interpret(attrs52700),daiquiri.core.create_element("a",{'onClick':(function (){
+}),'className':"ml-4"},["Cancel"])]:[daiquiri.interpreter.interpret(attrs62217),daiquiri.core.create_element("a",{'onClick':(function (){
 cljs.core.reset_BANG_(keypress,frontend.modules.shortcut.data_helper.binding_for_storage(current_binding));
 
 return frontend.state.close_modal_BANG_();
@@ -44,79 +44,79 @@ var conflict_QMARK_ = frontend.modules.shortcut.data_helper.potential_conflict_Q
 var displayed_binding = frontend.modules.shortcut.data_helper.binding_for_display(k,binding);
 var disabled_QMARK_ = clojure.string.includes_QMARK_(displayed_binding,"system default");
 if(cljs.core.not(configurable_QMARK_)){
-var attrs52705 = displayed_binding;
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52705))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-right"], null)], null),attrs52705], 0))):{'className':"text-right"}),((cljs.core.map_QMARK_(attrs52705))?null:[attrs52705]));
+var attrs62231 = displayed_binding;
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62231))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-right"], null)], null),attrs62231], 0))):{'className':"text-right"}),((cljs.core.map_QMARK_(attrs62231))?null:[attrs62231]));
 } else {
-var attrs52706 = frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic(displayed_binding,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"class","class",-2030961996),"text-sm p-1",new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"cursor","cursor",1011937484),((disabled_QMARK_)?"not-allowed":"pointer")], null),new cljs.core.Keyword(null,"title","title",636505583),((conflict_QMARK_)?"Shortcut conflict!":((disabled_QMARK_)?"Cannot override system default":"Click to modify")),new cljs.core.Keyword(null,"background","background",-863952629),((conflict_QMARK_)?"pink":((disabled_QMARK_)?"gray":null)),new cljs.core.Keyword(null,"on-click","on-click",1632826543),((disabled_QMARK_)?null:(function (){
+var attrs62232 = frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic(displayed_binding,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"class","class",-2030961996),"text-sm p-1",new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"cursor","cursor",1011937484),((disabled_QMARK_)?"not-allowed":"pointer")], null),new cljs.core.Keyword(null,"title","title",636505583),((conflict_QMARK_)?"Shortcut conflict!":((disabled_QMARK_)?"Cannot override system default":"Click to modify")),new cljs.core.Keyword(null,"background","background",-863952629),((conflict_QMARK_)?"pink":((disabled_QMARK_)?"gray":null)),new cljs.core.Keyword(null,"on-click","on-click",1632826543),((disabled_QMARK_)?null:(function (){
 return frontend.state.set_modal_BANG_.cljs$core$IFn$_invoke$arity$1(frontend.components.shortcut.customize_shortcut_dialog(k,action_name,displayed_binding));
 }))], 0));
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52706))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-right"], null)], null),attrs52706], 0))):{'className':"text-right"}),((cljs.core.map_QMARK_(attrs52706))?null:[daiquiri.interpreter.interpret(attrs52706)]));
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62232))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-right"], null)], null),attrs62232], 0))):{'className':"text-right"}),((cljs.core.map_QMARK_(attrs62232))?null:[daiquiri.interpreter.interpret(attrs62232)]));
 }
 }),null,"frontend.components.shortcut/shortcut-col");
 frontend.components.shortcut.shortcut_table = rum.core.lazy_build(rum.core.build_defc,(function() {
-var G__52803 = null;
-var G__52803__1 = (function (name){
+var G__62294 = null;
+var G__62294__1 = (function (name){
 return daiquiri.interpreter.interpret((frontend.components.shortcut.shortcut_table.cljs$core$IFn$_invoke$arity$2 ? frontend.components.shortcut.shortcut_table.cljs$core$IFn$_invoke$arity$2(name,false) : frontend.components.shortcut.shortcut_table.call(null,name,false)));
 });
-var G__52803__2 = (function (name,configurable_QMARK_){
+var G__62294__2 = (function (name,configurable_QMARK_){
 var shortcut_config = rum.core.cursor_in(frontend.state.state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"config","config",994861415),frontend.state.get_current_repo(),new cljs.core.Keyword(null,"shortcuts","shortcuts",1717107810)], null));
 var _ = rum.core.react(shortcut_config);
-return daiquiri.core.create_element("div",null,[daiquiri.core.create_element("table",null,[daiquiri.core.create_element("thead",null,[daiquiri.core.create_element("tr",null,[daiquiri.core.create_element("th",{'className':"text-left"},[(function (){var attrs52723 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([name], 0));
-return daiquiri.core.create_element("b",((cljs.core.map_QMARK_(attrs52723))?daiquiri.interpreter.element_attributes(attrs52723):null),((cljs.core.map_QMARK_(attrs52723))?null:[daiquiri.interpreter.interpret(attrs52723)]));
-})()]),daiquiri.core.create_element("th",{'className':"text-right"},null)])]),(function (){var attrs52720 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__52734){
-var vec__52735 = p__52734;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__52735,(0),null);
-var map__52738 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__52735,(1),null);
-var map__52738__$1 = cljs.core.__destructure_map(map__52738);
-var binding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__52738__$1,new cljs.core.Keyword(null,"binding","binding",539932593));
+return daiquiri.core.create_element("div",null,[daiquiri.core.create_element("table",null,[daiquiri.core.create_element("thead",null,[daiquiri.core.create_element("tr",null,[daiquiri.core.create_element("th",{'className':"text-left"},[(function (){var attrs62259 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([name], 0));
+return daiquiri.core.create_element("b",((cljs.core.map_QMARK_(attrs62259))?daiquiri.interpreter.element_attributes(attrs62259):null),((cljs.core.map_QMARK_(attrs62259))?null:[daiquiri.interpreter.interpret(attrs62259)]));
+})()]),daiquiri.core.create_element("th",{'className':"text-right"},null)])]),(function (){var attrs62253 = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__62260){
+var vec__62261 = p__62260;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__62261,(0),null);
+var map__62264 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__62261,(1),null);
+var map__62264__$1 = cljs.core.__destructure_map(map__62264);
+var binding = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62264__$1,new cljs.core.Keyword(null,"binding","binding",539932593));
 return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),k], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td.text-left","td.text-left",511611147),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.modules.shortcut.data_helper.decorate_namespace(k)], 0))], null),frontend.components.shortcut.shortcut_col(k,binding,configurable_QMARK_,frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([frontend.modules.shortcut.data_helper.decorate_namespace(k)], 0)))], null);
 }),frontend.modules.shortcut.data_helper.binding_by_category(name));
-return daiquiri.core.create_element("tbody",((cljs.core.map_QMARK_(attrs52720))?daiquiri.interpreter.element_attributes(attrs52720):null),((cljs.core.map_QMARK_(attrs52720))?null:[daiquiri.interpreter.interpret(attrs52720)]));
+return daiquiri.core.create_element("tbody",((cljs.core.map_QMARK_(attrs62253))?daiquiri.interpreter.element_attributes(attrs62253):null),((cljs.core.map_QMARK_(attrs62253))?null:[daiquiri.interpreter.interpret(attrs62253)]));
 })()])]);
 });
-G__52803 = function(name,configurable_QMARK_){
+G__62294 = function(name,configurable_QMARK_){
 switch(arguments.length){
 case 1:
-return G__52803__1.call(this,name);
+return G__62294__1.call(this,name);
 case 2:
-return G__52803__2.call(this,name,configurable_QMARK_);
+return G__62294__2.call(this,name,configurable_QMARK_);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__52803.cljs$core$IFn$_invoke$arity$1 = G__52803__1;
-G__52803.cljs$core$IFn$_invoke$arity$2 = G__52803__2;
-return G__52803;
+G__62294.cljs$core$IFn$_invoke$arity$1 = G__62294__1;
+G__62294.cljs$core$IFn$_invoke$arity$2 = G__62294__2;
+return G__62294;
 })()
 ,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive], null),"frontend.components.shortcut/shortcut-table");
 frontend.components.shortcut.trigger_table = rum.core.lazy_build(rum.core.build_defc,(function (){
-return daiquiri.core.create_element("table",null,[daiquiri.core.create_element("thead",null,[daiquiri.core.create_element("tr",null,[daiquiri.core.create_element("th",{'className':"text-left"},[(function (){var attrs52739 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","shortcuts-triggers","help/shortcuts-triggers",199917649)], 0));
-return daiquiri.core.create_element("b",((cljs.core.map_QMARK_(attrs52739))?daiquiri.interpreter.element_attributes(attrs52739):null),((cljs.core.map_QMARK_(attrs52739))?null:[daiquiri.interpreter.interpret(attrs52739)]));
-})()]),daiquiri.core.create_element("th",{'className':"text-right"},[(function (){var attrs52740 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","shortcut","help/shortcut",-428457104)], 0));
-return daiquiri.core.create_element("b",((cljs.core.map_QMARK_(attrs52740))?daiquiri.interpreter.element_attributes(attrs52740):null),((cljs.core.map_QMARK_(attrs52740))?null:[daiquiri.interpreter.interpret(attrs52740)]));
-})()])])]),daiquiri.core.create_element("tbody",null,[daiquiri.core.create_element("tr",null,[(function (){var attrs52741 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","slash-autocomplete","help/slash-autocomplete",-2068260592)], 0));
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52741))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs52741], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs52741))?null:[daiquiri.interpreter.interpret(attrs52741)]));
-})(),daiquiri.core.create_element("td",{'className':"text-right"},[daiquiri.core.create_element("code",null,["/"])])]),daiquiri.core.create_element("tr",null,[(function (){var attrs52769 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","block-content-autocomplete","help/block-content-autocomplete",908208756)], 0));
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52769))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs52769], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs52769))?null:[daiquiri.interpreter.interpret(attrs52769)]));
-})(),daiquiri.core.create_element("td",{'className':"text-right"},[daiquiri.core.create_element("code",null,["<"])])]),daiquiri.core.create_element("tr",null,[(function (){var attrs52772 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","reference-autocomplete","help/reference-autocomplete",1106720492)], 0));
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52772))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs52772], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs52772))?null:[daiquiri.interpreter.interpret(attrs52772)]));
-})(),daiquiri.core.create_element("td",{'className':"text-right"},[daiquiri.core.create_element("code",null,["[[]]"])])]),daiquiri.core.create_element("tr",null,[(function (){var attrs52775 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","block-reference","help/block-reference",249625077)], 0));
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52775))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs52775], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs52775))?null:[daiquiri.interpreter.interpret(attrs52775)]));
-})(),daiquiri.core.create_element("td",{'className':"text-right"},[daiquiri.core.create_element("code",null,["(())"])])]),daiquiri.core.create_element("tr",null,[(function (){var attrs52778 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("command.editor","open-link-in-sidebar","command.editor/open-link-in-sidebar",205625165)], 0));
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52778))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs52778], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs52778))?null:[daiquiri.interpreter.interpret(attrs52778)]));
-})(),(function (){var attrs52779 = frontend.ui.render_keyboard_shortcut(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["shift","click"], null));
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52779))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-right"], null)], null),attrs52779], 0))):{'className':"text-right"}),((cljs.core.map_QMARK_(attrs52779))?null:[daiquiri.interpreter.interpret(attrs52779)]));
-})()]),daiquiri.core.create_element("tr",null,[(function (){var attrs52781 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","context-menu","help/context-menu",-995197236)], 0));
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52781))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs52781], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs52781))?null:[daiquiri.interpreter.interpret(attrs52781)]));
-})(),(function (){var attrs52782 = frontend.ui.render_keyboard_shortcut(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["right","click"], null));
-return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs52782))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-right"], null)], null),attrs52782], 0))):{'className':"text-right"}),((cljs.core.map_QMARK_(attrs52782))?null:[daiquiri.interpreter.interpret(attrs52782)]));
+return daiquiri.core.create_element("table",null,[daiquiri.core.create_element("thead",null,[daiquiri.core.create_element("tr",null,[daiquiri.core.create_element("th",{'className':"text-left"},[(function (){var attrs62266 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","shortcuts-triggers","help/shortcuts-triggers",199917649)], 0));
+return daiquiri.core.create_element("b",((cljs.core.map_QMARK_(attrs62266))?daiquiri.interpreter.element_attributes(attrs62266):null),((cljs.core.map_QMARK_(attrs62266))?null:[daiquiri.interpreter.interpret(attrs62266)]));
+})()]),daiquiri.core.create_element("th",{'className':"text-right"},[(function (){var attrs62268 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","shortcut","help/shortcut",-428457104)], 0));
+return daiquiri.core.create_element("b",((cljs.core.map_QMARK_(attrs62268))?daiquiri.interpreter.element_attributes(attrs62268):null),((cljs.core.map_QMARK_(attrs62268))?null:[daiquiri.interpreter.interpret(attrs62268)]));
+})()])])]),daiquiri.core.create_element("tbody",null,[daiquiri.core.create_element("tr",null,[(function (){var attrs62269 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","slash-autocomplete","help/slash-autocomplete",-2068260592)], 0));
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62269))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs62269], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs62269))?null:[daiquiri.interpreter.interpret(attrs62269)]));
+})(),daiquiri.core.create_element("td",{'className':"text-right"},[daiquiri.core.create_element("code",null,["/"])])]),daiquiri.core.create_element("tr",null,[(function (){var attrs62272 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","block-content-autocomplete","help/block-content-autocomplete",908208756)], 0));
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62272))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs62272], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs62272))?null:[daiquiri.interpreter.interpret(attrs62272)]));
+})(),daiquiri.core.create_element("td",{'className':"text-right"},[daiquiri.core.create_element("code",null,["<"])])]),daiquiri.core.create_element("tr",null,[(function (){var attrs62276 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","reference-autocomplete","help/reference-autocomplete",1106720492)], 0));
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62276))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs62276], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs62276))?null:[daiquiri.interpreter.interpret(attrs62276)]));
+})(),daiquiri.core.create_element("td",{'className':"text-right"},[daiquiri.core.create_element("code",null,["[[]]"])])]),daiquiri.core.create_element("tr",null,[(function (){var attrs62280 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","block-reference","help/block-reference",249625077)], 0));
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62280))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs62280], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs62280))?null:[daiquiri.interpreter.interpret(attrs62280)]));
+})(),daiquiri.core.create_element("td",{'className':"text-right"},[daiquiri.core.create_element("code",null,["(())"])])]),daiquiri.core.create_element("tr",null,[(function (){var attrs62283 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("command.editor","open-link-in-sidebar","command.editor/open-link-in-sidebar",205625165)], 0));
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62283))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs62283], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs62283))?null:[daiquiri.interpreter.interpret(attrs62283)]));
+})(),(function (){var attrs62284 = frontend.ui.render_keyboard_shortcut(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["shift","click"], null));
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62284))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-right"], null)], null),attrs62284], 0))):{'className':"text-right"}),((cljs.core.map_QMARK_(attrs62284))?null:[daiquiri.interpreter.interpret(attrs62284)]));
+})()]),daiquiri.core.create_element("tr",null,[(function (){var attrs62285 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","context-menu","help/context-menu",-995197236)], 0));
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62285))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-left"], null)], null),attrs62285], 0))):{'className':"text-left"}),((cljs.core.map_QMARK_(attrs62285))?null:[daiquiri.interpreter.interpret(attrs62285)]));
+})(),(function (){var attrs62286 = frontend.ui.render_keyboard_shortcut(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["right","click"], null));
+return daiquiri.core.create_element("td",((cljs.core.map_QMARK_(attrs62286))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text-right"], null)], null),attrs62286], 0))):{'className':"text-right"}),((cljs.core.map_QMARK_(attrs62286))?null:[daiquiri.interpreter.interpret(attrs62286)]));
 })()])])]);
 }),null,"frontend.components.shortcut/trigger-table");
 frontend.components.shortcut.markdown_and_orgmode_syntax = (function frontend$components$shortcut$markdown_and_orgmode_syntax(){
 var list = new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"bold","bold",-116809535),new cljs.core.Keyword(null,"italics","italics",1203296858),new cljs.core.Keyword(null,"del","del",574975584),new cljs.core.Keyword(null,"mark","mark",-373816345),new cljs.core.Keyword(null,"latex","latex",-1820161144),new cljs.core.Keyword(null,"code","code",1586293142),new cljs.core.Keyword(null,"link","link",-1769163468),new cljs.core.Keyword(null,"pre","pre",2118456869),new cljs.core.Keyword(null,"img","img",1442687358)], null);
 var preferred_format = frontend.state.get_preferred_format.cljs$core$IFn$_invoke$arity$0();
-var title = (function (){var G__52790 = preferred_format;
-var G__52790__$1 = (((G__52790 instanceof cljs.core.Keyword))?G__52790.fqn:null);
-switch (G__52790__$1) {
+var title = (function (){var G__62287 = preferred_format;
+var G__62287__$1 = (((G__62287 instanceof cljs.core.Keyword))?G__62287.fqn:null);
+switch (G__62287__$1) {
 case "markdown":
 return frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","markdown-syntax","help/markdown-syntax",1027419613)], 0));
 
@@ -126,13 +126,13 @@ return frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.pr
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__52790__$1)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__62287__$1)].join('')));
 
 }
 })();
-var learn_more = (function (){var G__52793 = preferred_format;
-var G__52793__$1 = (((G__52793 instanceof cljs.core.Keyword))?G__52793.fqn:null);
-switch (G__52793__$1) {
+var learn_more = (function (){var G__62288 = preferred_format;
+var G__62288__$1 = (((G__62288 instanceof cljs.core.Keyword))?G__62288.fqn:null);
+switch (G__62288__$1) {
 case "markdown":
 return "https://www.markdownguide.org/basic-syntax";
 
@@ -142,13 +142,13 @@ return "https://orgmode.org/worg/dev/org-syntax.html";
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__52793__$1)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__62288__$1)].join('')));
 
 }
 })();
-var raw = (function (){var G__52794 = preferred_format;
-var G__52794__$1 = (((G__52794 instanceof cljs.core.Keyword))?G__52794.fqn:null);
-switch (G__52794__$1) {
+var raw = (function (){var G__62289 = preferred_format;
+var G__62289__$1 = (((G__62289 instanceof cljs.core.Keyword))?G__62289.fqn:null);
+switch (G__62289__$1) {
 case "markdown":
 return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"del","del",574975584),new cljs.core.Keyword(null,"bold","bold",-116809535),new cljs.core.Keyword(null,"pre","pre",2118456869),new cljs.core.Keyword(null,"mark","mark",-373816345),new cljs.core.Keyword(null,"latex","latex",-1820161144),new cljs.core.Keyword(null,"link","link",-1769163468),new cljs.core.Keyword(null,"code","code",1586293142),new cljs.core.Keyword(null,"italics","italics",1203296858),new cljs.core.Keyword(null,"img","img",1442687358)],[["~~",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"strikethrough","strikethrough",1012146804)], 0))),"~~"].join(''),["**",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"bold","bold",-116809535)], 0))),"**"].join(''),"```clojure\n  (println \"Hello world!\")\n```",["^^",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"highlight","highlight",-800930873)], 0))),"^^"].join(''),"$$E = mc^2$$","[Link](https://www.example.com)",["`",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"code","code",1586293142)], 0))),"`"].join(''),["_",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"italics","italics",1203296858)], 0))),"_"].join(''),"![image](https://asset.logseq.com/static/img/logo.png)"]);
 
@@ -158,7 +158,7 @@ return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"del",
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__52794__$1)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__62289__$1)].join('')));
 
 }
 })();
@@ -168,8 +168,8 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 }),list)], null)], null);
 });
 frontend.components.shortcut.shortcut = rum.core.lazy_build(rum.core.build_defc,(function (){
-return daiquiri.core.create_element("div",null,[(function (){var attrs52801 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","shortcut-page-title","help/shortcut-page-title",-1549774481)], 0));
-return daiquiri.core.create_element("h1",((cljs.core.map_QMARK_(attrs52801))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["title"], null)], null),attrs52801], 0))):{'className':"title"}),((cljs.core.map_QMARK_(attrs52801))?null:[daiquiri.interpreter.interpret(attrs52801)]));
+return daiquiri.core.create_element("div",null,[(function (){var attrs62291 = frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("help","shortcut-page-title","help/shortcut-page-title",-1549774481)], 0));
+return daiquiri.core.create_element("h1",((cljs.core.map_QMARK_(attrs62291))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["title"], null)], null),attrs62291], 0))):{'className':"title"}),((cljs.core.map_QMARK_(attrs62291))?null:[daiquiri.interpreter.interpret(attrs62291)]));
 })(),frontend.components.shortcut.trigger_table(),daiquiri.interpreter.interpret(frontend.components.shortcut.markdown_and_orgmode_syntax()),frontend.components.shortcut.shortcut_table(new cljs.core.Keyword("shortcut.category","basics","shortcut.category/basics",-1775874746),true),frontend.components.shortcut.shortcut_table(new cljs.core.Keyword("shortcut.category","navigating","shortcut.category/navigating",-2030317791),true),frontend.components.shortcut.shortcut_table(new cljs.core.Keyword("shortcut.category","block-editing","shortcut.category/block-editing",-1150211354),true),frontend.components.shortcut.shortcut_table(new cljs.core.Keyword("shortcut.category","block-command-editing","shortcut.category/block-command-editing",1958480544),true),frontend.components.shortcut.shortcut_table(new cljs.core.Keyword("shortcut.category","block-selection","shortcut.category/block-selection",1439375136),true),frontend.components.shortcut.shortcut_table(new cljs.core.Keyword("shortcut.category","formatting","shortcut.category/formatting",-723875074),true),frontend.components.shortcut.shortcut_table(new cljs.core.Keyword("shortcut.category","toggle","shortcut.category/toggle",677164372),true),frontend.components.shortcut.shortcut_table(new cljs.core.Keyword("shortcut.category","others","shortcut.category/others",1492019197),true)]);
 }),null,"frontend.components.shortcut/shortcut");
 

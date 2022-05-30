@@ -13,9 +13,9 @@ return result.value;
 });
 frontend.mobile.record.set_recording_state = (function frontend$mobile$record$set_recording_state(){
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.then.cljs$core$IFn$_invoke$arity$2(module$node_modules$capacitor_voice_recorder$dist$plugin_cjs.VoiceRecorder.getCurrentStatus(),(function (result){
-var map__49726 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(result,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
-var map__49726__$1 = cljs.core.__destructure_map(map__49726);
-var status = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49726__$1,new cljs.core.Keyword(null,"status","status",-1997798413));
+var map__58472 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(result,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+var map__58472__$1 = cljs.core.__destructure_map(map__58472);
+var status = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58472__$1,new cljs.core.Keyword(null,"status","status",-1997798413));
 return frontend.state.set_state_BANG_(new cljs.core.Keyword("editor","record-status","editor/record-status",-122164557),status);
 })),(function (error){
 return console.error(error);
@@ -66,7 +66,9 @@ return lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.mobile.rec
 })),(function (_file){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("../assets/%s",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([filename], 0)),(function (url){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.handler.editor.get_asset_file_link(format,url,filename,true),(function (file_link){
-return promesa.protocols._promise((cljs.core.truth_(edit_block)?frontend.state.append_current_edit_content_BANG_(file_link):frontend.handler.editor.api_insert_new_block_BANG_(file_link,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"page","page",849072397),page,new cljs.core.Keyword(null,"edit-block?","edit-block?",-310383789),false,new cljs.core.Keyword(null,"replace-empty-target?","replace-empty-target?",-923732440),true], null))));
+return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(cljs.core.truth_(cljs.core.parse_uuid(page))?new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"block-uuid","block-uuid",-1558039638),cljs.core.uuid(page)], null):new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"page","page",849072397),page], null)),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"edit-block?","edit-block?",-310383789),false,new cljs.core.Keyword(null,"replace-empty-target?","replace-empty-target?",-923732440),true], null)], 0)),(function (args){
+return promesa.protocols._promise((cljs.core.truth_(edit_block)?frontend.state.append_current_edit_content_BANG_(file_link):frontend.handler.editor.api_insert_new_block_BANG_(file_link,args)));
+}));
 }));
 }));
 }));
@@ -80,11 +82,11 @@ return promesa.protocols._promise((cljs.core.truth_(edit_block)?frontend.state.a
 frontend.mobile.record.stop_recording = (function frontend$mobile$record$stop_recording(){
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.then.cljs$core$IFn$_invoke$arity$2(module$node_modules$capacitor_voice_recorder$dist$plugin_cjs.VoiceRecorder.stopRecording(),(function (result){
 var value = result.value;
-var map__49741 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(value,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
-var map__49741__$1 = cljs.core.__destructure_map(map__49741);
-var _msDuration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49741__$1,new cljs.core.Keyword(null,"_msDuration","_msDuration",-2088496118));
-var recordDataBase64 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49741__$1,new cljs.core.Keyword(null,"recordDataBase64","recordDataBase64",-1094381034));
-var _mimeType = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49741__$1,new cljs.core.Keyword(null,"_mimeType","_mimeType",1358086728));
+var map__58475 = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(value,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true], 0));
+var map__58475__$1 = cljs.core.__destructure_map(map__58475);
+var _msDuration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58475__$1,new cljs.core.Keyword(null,"_msDuration","_msDuration",-2088496118));
+var recordDataBase64 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58475__$1,new cljs.core.Keyword(null,"recordDataBase64","recordDataBase64",-1094381034));
+var _mimeType = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__58475__$1,new cljs.core.Keyword(null,"_mimeType","_mimeType",1358086728));
 frontend.mobile.record.set_recording_state();
 
 if(typeof recordDataBase64 === 'string'){

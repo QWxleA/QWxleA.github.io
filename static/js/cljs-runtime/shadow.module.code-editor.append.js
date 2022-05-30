@@ -132,6 +132,7 @@ SHADOW_ENV.setLoaded("module$node_modules$codemirror$mode$yacas$yacas.js");
 SHADOW_ENV.setLoaded("module$node_modules$codemirror$mode$yaml$yaml.js");
 SHADOW_ENV.setLoaded("module$node_modules$codemirror$mode$yaml_frontmatter$yaml_frontmatter.js");
 SHADOW_ENV.setLoaded("module$node_modules$codemirror$mode$z80$z80.js");
+SHADOW_ENV.setLoaded("module$node_modules$bignumber_DOT_js$bignumber.js");
 SHADOW_ENV.setLoaded("instaparse.auto_flatten_seq.js");
 SHADOW_ENV.setLoaded("instaparse.print.js");
 SHADOW_ENV.setLoaded("instaparse.failure.js");

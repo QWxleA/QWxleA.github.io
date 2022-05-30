@@ -11,8 +11,8 @@ if((typeof frontend !== 'undefined') && (typeof frontend.util !== 'undefined') &
 frontend.util.drawer.logbook_start = ":LOGBOOK:";
 }
 frontend.util.drawer.build_drawer_str = (function frontend$util$drawer$build_drawer_str(var_args){
-var G__33261 = arguments.length;
-switch (G__33261) {
+var G__32924 = arguments.length;
+switch (G__32924) {
 case 1:
 return frontend.util.drawer.build_drawer_str.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -60,19 +60,19 @@ return frontend.format.mldoc.typ_drawer_QMARK_(x,typ);
 var lines = clojure.string.split_lines(content);
 var title = cljs.core.first(lines);
 var body = cljs.core.rest(lines);
-var scheduled = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__33263_SHARP_){
-return clojure.string.starts_with_QMARK_(p1__33263_SHARP_,"SCHEDULED");
+var scheduled = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__32928_SHARP_){
+return clojure.string.starts_with_QMARK_(p1__32928_SHARP_,"SCHEDULED");
 }),lines);
-var deadline = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__33264_SHARP_){
-return clojure.string.starts_with_QMARK_(p1__33264_SHARP_,"DEADLINE");
+var deadline = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__32929_SHARP_){
+return clojure.string.starts_with_QMARK_(p1__32929_SHARP_,"DEADLINE");
 }),lines);
-var body_without_timestamps = cljs.core.vec(cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__33265_SHARP_){
-return (!(((clojure.string.starts_with_QMARK_(p1__33265_SHARP_,"SCHEDULED")) || (clojure.string.starts_with_QMARK_(p1__33265_SHARP_,"DEADLINE")))));
+var body_without_timestamps = cljs.core.vec(cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__32930_SHARP_){
+return (!(((clojure.string.starts_with_QMARK_(p1__32930_SHARP_,"SCHEDULED")) || (clojure.string.starts_with_QMARK_(p1__32930_SHARP_,"DEADLINE")))));
 }),body));
 var start_idx = body_without_timestamps.indexOf(frontend.util.drawer.drawer_start(typ));
-var end_idx = (function (){var vec__33271 = cljs.core.split_at(start_idx,body_without_timestamps);
-var before = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33271,(0),null);
-var after = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33271,(1),null);
+var end_idx = (function (){var vec__32933 = cljs.core.split_at(start_idx,body_without_timestamps);
+var before = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32933,(0),null);
+var after = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32933,(1),null);
 return (cljs.core.count(before) + after.indexOf(frontend.util.drawer.drawer_end));
 })();
 var result = ((cljs.core.not(has_typ_drawer_QMARK_))?(function (){var drawer = frontend.util.drawer.build_drawer_str.cljs$core$IFn$_invoke$arity$2(typ,value);
@@ -107,13 +107,13 @@ return clojure.string.join.cljs$core$IFn$_invoke$arity$2("\n",lines__$1);
 })():content
 ));
 return clojure.string.trimr(result);
-}catch (e33268){if((e33268 instanceof Error)){
-var e = e33268;
+}catch (e32932){if((e32932 instanceof Error)){
+var e = e32932;
 console.error(e);
 
 return content;
 } else {
-throw e33268;
+throw e32932;
 
 }
 }} else {
@@ -132,11 +132,11 @@ frontend.util.drawer.remove_logbook = (function frontend$util$drawer$remove_logb
 if(cljs.core.truth_(content)){
 if(cljs.core.truth_(frontend.util.drawer.contains_logbook_QMARK_(content))){
 var lines = clojure.string.split_lines(content);
-var vec__33279 = cljs.core.split_with((function (l){
+var vec__32943 = cljs.core.split_with((function (l){
 return (!(clojure.string.starts_with_QMARK_(clojure.string.upper_case(clojure.string.triml(l)),":LOGBOOK:")));
 }),lines);
-var title_lines = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33279,(0),null);
-var body = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33279,(1),null);
+var title_lines = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32943,(0),null);
+var body = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32943,(1),null);
 var body__$1 = cljs.core.drop_while.cljs$core$IFn$_invoke$arity$2((function (l){
 var l_SINGLEQUOTE_ = clojure.string.lower_case(clojure.string.trim(l));
 return (((!(clojure.string.starts_with_QMARK_(l_SINGLEQUOTE_,":end:")))) || (clojure.string.blank_QMARK_(l)));

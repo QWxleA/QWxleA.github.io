@@ -23,7 +23,11 @@ cljs.core.reset_BANG_(frontend.mobile.footer._STAR_record_start,(-1));
 
 return frontend.mobile.footer.mobile_bar_command(frontend.mobile.record.start_recording,"microphone");
 } else {
-return daiquiri.core.create_element("div",{'className':"flex flex-row items-center"},[frontend.mobile.footer.mobile_bar_command(frontend.mobile.record.stop_recording,"player-stop"),daiquiri.core.create_element("div",{'onClick':frontend.mobile.record.stop_recording,'className':"timer pl-2"},[daiquiri.interpreter.interpret(frontend.mobile.footer.seconds__GT_minutes_COLON_seconds(cljs.core.deref(frontend.mobile.footer._STAR_record_start)))])]);
+return daiquiri.core.create_element("div",{'className':"flex flex-row items-center"},[frontend.mobile.footer.mobile_bar_command((function (){
+frontend.mobile.record.stop_recording();
+
+return cljs.core.reset_BANG_(frontend.mobile.footer._STAR_record_start,(-1));
+}),"player-stop"),daiquiri.core.create_element("div",{'onClick':frontend.mobile.record.stop_recording,'className':"timer pl-2"},[daiquiri.interpreter.interpret(frontend.mobile.footer.seconds__GT_minutes_COLON_seconds(cljs.core.deref(frontend.mobile.footer._STAR_record_start)))])]);
 }
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"did-mount","did-mount",918232960),(function (state){
 var comp = new cljs.core.Keyword("rum","react-component","rum/react-component",-1879897248).cljs$core$IFn$_invoke$arity$1(state);
@@ -38,21 +42,21 @@ clearInterval(new cljs.core.Keyword("frontend.mobile.footer","interval","fronten
 return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(state,new cljs.core.Keyword("frontend.mobile.footer","interval","frontend.mobile.footer/interval",-960322604));
 })], null)], null),"frontend.mobile.footer/audio-record-cp");
 frontend.mobile.footer.footer = rum.core.lazy_build(rum.core.build_defc,(function (){
-if(cljs.core.truth_((function (){var and__5041__auto__ = frontend.state.mobile_QMARK_();
+if(cljs.core.truth_((function (){var and__5041__auto__ = frontend.state.sub(new cljs.core.Keyword("mobile","show-tabbar?","mobile/show-tabbar?",925227298));
 if(cljs.core.truth_(and__5041__auto__)){
-var and__5041__auto____$1 = frontend.state.sub(new cljs.core.Keyword("mobile","show-tabbar?","mobile/show-tabbar?",925227298));
-if(cljs.core.truth_(and__5041__auto____$1)){
 return frontend.state.get_current_repo();
-} else {
-return and__5041__auto____$1;
-}
 } else {
 return and__5041__auto__;
 }
 })())){
 return daiquiri.core.create_element("div",{'className':"cp__footer w-full bottom-0 justify-between"},[frontend.mobile.footer.audio_record_cp(),frontend.mobile.footer.mobile_bar_command((function (){
-return frontend.state.toggle_document_mode_BANG_();
-}),"notes"),frontend.mobile.footer.mobile_bar_command((function (){
+if(cljs.core.truth_(frontend.mobile.util.native_ipad_QMARK_())){
+} else {
+frontend.state.set_left_sidebar_open_BANG_(false);
+}
+
+return frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("go","search","go/search",1564957958)], null));
+}),"search"),frontend.mobile.footer.mobile_bar_command(frontend.state.toggle_document_mode_BANG_,"notes"),frontend.mobile.footer.mobile_bar_command((function (){
 var page = (function (){var or__5043__auto__ = frontend.state.get_current_page();
 if(cljs.core.truth_(or__5043__auto__)){
 return or__5043__auto__;

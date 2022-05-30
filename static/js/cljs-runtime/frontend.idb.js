@@ -11,53 +11,53 @@ frontend.idb.clear_idb_BANG_ = (function frontend$idb$clear_idb_BANG_(){
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(module$frontend$idbkv.clear(frontend.idb.store),(function (_){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(window.indexedDB.databases(),(function (dbs){
-return promesa.protocols._promise((function (){var seq__43124 = cljs.core.seq(dbs);
-var chunk__43125 = null;
-var count__43126 = (0);
-var i__43127 = (0);
+return promesa.protocols._promise((function (){var seq__42743 = cljs.core.seq(dbs);
+var chunk__42744 = null;
+var count__42745 = (0);
+var i__42746 = (0);
 while(true){
-if((i__43127 < count__43126)){
-var db = chunk__43125.cljs$core$IIndexed$_nth$arity$2(null,i__43127);
+if((i__42746 < count__42745)){
+var db = chunk__42744.cljs$core$IIndexed$_nth$arity$2(null,i__42746);
 window.indexedDB.deleteDatabase(frontend.idb.goog$module$goog$object.get(db,"name"));
 
 
-var G__43129 = seq__43124;
-var G__43130 = chunk__43125;
-var G__43131 = count__43126;
-var G__43132 = (i__43127 + (1));
-seq__43124 = G__43129;
-chunk__43125 = G__43130;
-count__43126 = G__43131;
-i__43127 = G__43132;
+var G__42748 = seq__42743;
+var G__42749 = chunk__42744;
+var G__42750 = count__42745;
+var G__42751 = (i__42746 + (1));
+seq__42743 = G__42748;
+chunk__42744 = G__42749;
+count__42745 = G__42750;
+i__42746 = G__42751;
 continue;
 } else {
-var temp__5720__auto__ = cljs.core.seq(seq__43124);
+var temp__5720__auto__ = cljs.core.seq(seq__42743);
 if(temp__5720__auto__){
-var seq__43124__$1 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(seq__43124__$1)){
-var c__5565__auto__ = cljs.core.chunk_first(seq__43124__$1);
-var G__43133 = cljs.core.chunk_rest(seq__43124__$1);
-var G__43134 = c__5565__auto__;
-var G__43135 = cljs.core.count(c__5565__auto__);
-var G__43136 = (0);
-seq__43124 = G__43133;
-chunk__43125 = G__43134;
-count__43126 = G__43135;
-i__43127 = G__43136;
+var seq__42743__$1 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(seq__42743__$1)){
+var c__5565__auto__ = cljs.core.chunk_first(seq__42743__$1);
+var G__42752 = cljs.core.chunk_rest(seq__42743__$1);
+var G__42753 = c__5565__auto__;
+var G__42754 = cljs.core.count(c__5565__auto__);
+var G__42755 = (0);
+seq__42743 = G__42752;
+chunk__42744 = G__42753;
+count__42745 = G__42754;
+i__42746 = G__42755;
 continue;
 } else {
-var db = cljs.core.first(seq__43124__$1);
+var db = cljs.core.first(seq__42743__$1);
 window.indexedDB.deleteDatabase(frontend.idb.goog$module$goog$object.get(db,"name"));
 
 
-var G__43137 = cljs.core.next(seq__43124__$1);
-var G__43138 = null;
-var G__43139 = (0);
-var G__43140 = (0);
-seq__43124 = G__43137;
-chunk__43125 = G__43138;
-count__43126 = G__43139;
-i__43127 = G__43140;
+var G__42756 = cljs.core.next(seq__42743__$1);
+var G__42757 = null;
+var G__42758 = (0);
+var G__42759 = (0);
+seq__42743 = G__42756;
+chunk__42744 = G__42757;
+count__42745 = G__42758;
+i__42746 = G__42759;
 continue;
 }
 } else {
@@ -112,8 +112,8 @@ return module$frontend$idbkv.keys(frontend.idb.store);
 frontend.idb.get_nfs_dbs = (function frontend$idb$get_nfs_dbs(){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.idb.get_keys(),(function (ks){
-return promesa.protocols._promise(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__43128_SHARP_){
-return clojure.string.replace_first(p1__43128_SHARP_,frontend.config.idb_db_prefix,"");
+return promesa.protocols._promise(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__42747_SHARP_){
+return clojure.string.replace_first(p1__42747_SHARP_,frontend.config.idb_db_prefix,"");
 }),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (k){
 return clojure.string.starts_with_QMARK_(k,[frontend.config.idb_db_prefix,frontend.config.local_db_prefix].join(''));
 }),ks)));

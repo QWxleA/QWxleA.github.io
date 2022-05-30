@@ -18,12 +18,12 @@ return frontend.components.widgets.add_graph();
 })());
 }),null,"frontend.components.repo/add-repo");
 frontend.components.repo.repos = rum.core.lazy_build(rum.core.build_defc,(function (){
-var repos = cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__52199_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(p1__52199_SHARP_),frontend.config.local_repo);
+var repos = cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__61688_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(p1__61688_SHARP_),frontend.config.local_repo);
 }),frontend.state.sub(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"me","me",-139006693),new cljs.core.Keyword(null,"repos","repos",647483789)], null)));
 var repos__$1 = frontend.util.distinct_by(new cljs.core.Keyword(null,"url","url",276297046),repos);
 if(cljs.core.seq(repos__$1)){
-return daiquiri.core.create_element("div",{'id':"graphs"},[daiquiri.core.create_element("h1",{'className':"title"},["All Graphs"]),daiquiri.core.create_element("p",{'className':"ml-2 opacity-70"},["A \"graph\" in Logseq means a local directory."]),daiquiri.core.create_element("div",{'className':"pl-1 content mt-3"},[(function (){var attrs52204 = (cljs.core.truth_((function (){var or__5043__auto__ = frontend.handler.web.nfs.supported_QMARK_();
+return daiquiri.core.create_element("div",{'id':"graphs"},[daiquiri.core.create_element("h1",{'className':"title"},["All Graphs"]),daiquiri.core.create_element("p",{'className':"ml-2 opacity-70"},["A \"graph\" in Logseq means a local directory."]),daiquiri.core.create_element("div",{'className':"pl-1 content mt-3"},[(function (){var attrs61714 = (cljs.core.truth_((function (){var or__5043__auto__ = frontend.handler.web.nfs.supported_QMARK_();
 if(cljs.core.truth_(or__5043__auto__)){
 return or__5043__auto__;
 } else {
@@ -32,53 +32,53 @@ return frontend.mobile.util.native_platform_QMARK_();
 })())?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.mr-8","div.mr-8",674865009),frontend.ui.button.cljs$core$IFn$_invoke$arity$variadic(frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"open-a-directory","open-a-directory",981257354)], 0)),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
 return frontend.handler.page.ls_dir_files_BANG_(frontend.modules.shortcut.core.refresh_BANG_);
 })], 0))], null):null);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs52204))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","flex-row","my-4"], null)], null),attrs52204], 0))):{'className':"flex flex-row my-4"}),((cljs.core.map_QMARK_(attrs52204))?null:[daiquiri.interpreter.interpret(attrs52204)]));
-})(),cljs.core.into_array.cljs$core$IFn$_invoke$arity$1((function (){var iter__5520__auto__ = (function frontend$components$repo$iter__52205(s__52206){
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs61714))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["flex","flex-row","my-4"], null)], null),attrs61714], 0))):{'className':"flex flex-row my-4"}),((cljs.core.map_QMARK_(attrs61714))?null:[daiquiri.interpreter.interpret(attrs61714)]));
+})(),cljs.core.into_array.cljs$core$IFn$_invoke$arity$1((function (){var iter__5520__auto__ = (function frontend$components$repo$iter__61724(s__61725){
 return (new cljs.core.LazySeq(null,(function (){
-var s__52206__$1 = s__52206;
+var s__61725__$1 = s__61725;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__52206__$1);
+var temp__5720__auto__ = cljs.core.seq(s__61725__$1);
 if(temp__5720__auto__){
-var s__52206__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__52206__$2)){
-var c__5518__auto__ = cljs.core.chunk_first(s__52206__$2);
+var s__61725__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__61725__$2)){
+var c__5518__auto__ = cljs.core.chunk_first(s__61725__$2);
 var size__5519__auto__ = cljs.core.count(c__5518__auto__);
-var b__52208 = cljs.core.chunk_buffer(size__5519__auto__);
-if((function (){var i__52207 = (0);
+var b__61727 = cljs.core.chunk_buffer(size__5519__auto__);
+if((function (){var i__61726 = (0);
 while(true){
-if((i__52207 < size__5519__auto__)){
-var map__52209 = cljs.core._nth(c__5518__auto__,i__52207);
-var map__52209__$1 = cljs.core.__destructure_map(map__52209);
-var repo = map__52209__$1;
-var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__52209__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
-var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__52209__$1,new cljs.core.Keyword(null,"url","url",276297046));
-cljs.core.chunk_append(b__52208,(function (){var local_QMARK_ = frontend.config.local_db_QMARK_(url);
+if((i__61726 < size__5519__auto__)){
+var map__61730 = cljs.core._nth(c__5518__auto__,i__61726);
+var map__61730__$1 = cljs.core.__destructure_map(map__61730);
+var repo = map__61730__$1;
+var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61730__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61730__$1,new cljs.core.Keyword(null,"url","url",276297046));
+cljs.core.chunk_append(b__61727,(function (){var local_QMARK_ = frontend.config.local_db_QMARK_(url);
 return daiquiri.core.create_element("div",{'key':id,'className':"flex justify-between mb-4"},[((local_QMARK_)?(function (){var local_dir = frontend.config.get_local_dir(url);
 var graph_name = logseq.graph_parser.text.get_graph_name_from_path(local_dir);
-return daiquiri.core.create_element("a",{'title':local_dir,'onClick':((function (i__52207,local_dir,graph_name,local_QMARK_,map__52209,map__52209__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__52208,s__52206__$2,temp__5720__auto__,repos,repos__$1){
+return daiquiri.core.create_element("a",{'title':local_dir,'onClick':((function (i__61726,local_dir,graph_name,local_QMARK_,map__61730,map__61730__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__61727,s__61725__$2,temp__5720__auto__,repos,repos__$1){
 return (function (){
 return frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("graph","switch","graph/switch",178853840),url], null));
-});})(i__52207,local_dir,graph_name,local_QMARK_,map__52209,map__52209__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__52208,s__52206__$2,temp__5720__auto__,repos,repos__$1))
+});})(i__61726,local_dir,graph_name,local_QMARK_,map__61730,map__61730__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__61727,s__61725__$2,temp__5720__auto__,repos,repos__$1))
 },[graph_name]);
-})():daiquiri.core.create_element("a",{'target':"_blank",'href':url},[daiquiri.interpreter.interpret((frontend.db.get_repo_path.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_repo_path.cljs$core$IFn$_invoke$arity$1(url) : frontend.db.get_repo_path.call(null,url)))])),(function (){var attrs52210 = (cljs.core.truth_(frontend.encrypt.encrypted_db_QMARK_(url))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a.control","a.control",1833131627),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"title","title",636505583),"Show encryption information about this graph",new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (i__52207,local_QMARK_,map__52209,map__52209__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__52208,s__52206__$2,temp__5720__auto__,repos,repos__$1){
+})():daiquiri.core.create_element("a",{'target':"_blank",'href':url},[daiquiri.interpreter.interpret((frontend.db.get_repo_path.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_repo_path.cljs$core$IFn$_invoke$arity$1(url) : frontend.db.get_repo_path.call(null,url)))])),(function (){var attrs61732 = (cljs.core.truth_(frontend.encrypt.encrypted_db_QMARK_(url))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a.control","a.control",1833131627),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"title","title",636505583),"Show encryption information about this graph",new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (i__61726,local_QMARK_,map__61730,map__61730__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__61727,s__61725__$2,temp__5720__auto__,repos,repos__$1){
 return (function (){
 return frontend.state.set_modal_BANG_.cljs$core$IFn$_invoke$arity$1(frontend.components.encryption.encryption_dialog(url));
-});})(i__52207,local_QMARK_,map__52209,map__52209__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__52208,s__52206__$2,temp__5720__auto__,repos,repos__$1))
+});})(i__61726,local_QMARK_,map__61730,map__61730__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__61727,s__61725__$2,temp__5720__auto__,repos,repos__$1))
 ], null),"\uD83D\uDD10"], null):null);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs52210))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["controls"], null)], null),attrs52210], 0))):{'className':"controls"}),((cljs.core.map_QMARK_(attrs52210))?[daiquiri.core.create_element("a",{'title':"No worries, unlink this graph will clear its cache only, it does not remove your files on the disk.",'onClick':((function (i__52207,attrs52210,local_QMARK_,map__52209,map__52209__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__52208,s__52206__$2,temp__5720__auto__,repos,repos__$1){
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs61732))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["controls"], null)], null),attrs61732], 0))):{'className':"controls"}),((cljs.core.map_QMARK_(attrs61732))?[daiquiri.core.create_element("a",{'title':"No worries, unlink this graph will clear its cache only, it does not remove your files on the disk.",'onClick':((function (i__61726,attrs61732,local_QMARK_,map__61730,map__61730__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__61727,s__61725__$2,temp__5720__auto__,repos,repos__$1){
 return (function (){
 return frontend.handler.repo.remove_repo_BANG_(repo);
-});})(i__52207,attrs52210,local_QMARK_,map__52209,map__52209__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__52208,s__52206__$2,temp__5720__auto__,repos,repos__$1))
-,'className':"text-gray-400 ml-4 font-medium text-sm"},["Unlink"])]:[daiquiri.interpreter.interpret(attrs52210),daiquiri.core.create_element("a",{'title':"No worries, unlink this graph will clear its cache only, it does not remove your files on the disk.",'onClick':((function (i__52207,attrs52210,local_QMARK_,map__52209,map__52209__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__52208,s__52206__$2,temp__5720__auto__,repos,repos__$1){
+});})(i__61726,attrs61732,local_QMARK_,map__61730,map__61730__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__61727,s__61725__$2,temp__5720__auto__,repos,repos__$1))
+,'className':"text-gray-400 ml-4 font-medium text-sm"},["Unlink"])]:[daiquiri.interpreter.interpret(attrs61732),daiquiri.core.create_element("a",{'title':"No worries, unlink this graph will clear its cache only, it does not remove your files on the disk.",'onClick':((function (i__61726,attrs61732,local_QMARK_,map__61730,map__61730__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__61727,s__61725__$2,temp__5720__auto__,repos,repos__$1){
 return (function (){
 return frontend.handler.repo.remove_repo_BANG_(repo);
-});})(i__52207,attrs52210,local_QMARK_,map__52209,map__52209__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__52208,s__52206__$2,temp__5720__auto__,repos,repos__$1))
+});})(i__61726,attrs61732,local_QMARK_,map__61730,map__61730__$1,repo,id,url,c__5518__auto__,size__5519__auto__,b__61727,s__61725__$2,temp__5720__auto__,repos,repos__$1))
 ,'className':"text-gray-400 ml-4 font-medium text-sm"},["Unlink"])]));
 })()]);
 })());
 
-var G__52266 = (i__52207 + (1));
-i__52207 = G__52266;
+var G__61771 = (i__61726 + (1));
+i__61726 = G__61771;
 continue;
 } else {
 return true;
@@ -86,40 +86,40 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__52208),frontend$components$repo$iter__52205(cljs.core.chunk_rest(s__52206__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__61727),frontend$components$repo$iter__61724(cljs.core.chunk_rest(s__61725__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__52208),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__61727),null);
 }
 } else {
-var map__52218 = cljs.core.first(s__52206__$2);
-var map__52218__$1 = cljs.core.__destructure_map(map__52218);
-var repo = map__52218__$1;
-var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__52218__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
-var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__52218__$1,new cljs.core.Keyword(null,"url","url",276297046));
+var map__61739 = cljs.core.first(s__61725__$2);
+var map__61739__$1 = cljs.core.__destructure_map(map__61739);
+var repo = map__61739__$1;
+var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61739__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61739__$1,new cljs.core.Keyword(null,"url","url",276297046));
 return cljs.core.cons((function (){var local_QMARK_ = frontend.config.local_db_QMARK_(url);
 return daiquiri.core.create_element("div",{'key':id,'className':"flex justify-between mb-4"},[((local_QMARK_)?(function (){var local_dir = frontend.config.get_local_dir(url);
 var graph_name = logseq.graph_parser.text.get_graph_name_from_path(local_dir);
-return daiquiri.core.create_element("a",{'title':local_dir,'onClick':((function (local_dir,graph_name,local_QMARK_,map__52218,map__52218__$1,repo,id,url,s__52206__$2,temp__5720__auto__,repos,repos__$1){
+return daiquiri.core.create_element("a",{'title':local_dir,'onClick':((function (local_dir,graph_name,local_QMARK_,map__61739,map__61739__$1,repo,id,url,s__61725__$2,temp__5720__auto__,repos,repos__$1){
 return (function (){
 return frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("graph","switch","graph/switch",178853840),url], null));
-});})(local_dir,graph_name,local_QMARK_,map__52218,map__52218__$1,repo,id,url,s__52206__$2,temp__5720__auto__,repos,repos__$1))
+});})(local_dir,graph_name,local_QMARK_,map__61739,map__61739__$1,repo,id,url,s__61725__$2,temp__5720__auto__,repos,repos__$1))
 },[graph_name]);
-})():daiquiri.core.create_element("a",{'target':"_blank",'href':url},[daiquiri.interpreter.interpret((frontend.db.get_repo_path.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_repo_path.cljs$core$IFn$_invoke$arity$1(url) : frontend.db.get_repo_path.call(null,url)))])),(function (){var attrs52210 = (cljs.core.truth_(frontend.encrypt.encrypted_db_QMARK_(url))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a.control","a.control",1833131627),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"title","title",636505583),"Show encryption information about this graph",new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (local_QMARK_,map__52218,map__52218__$1,repo,id,url,s__52206__$2,temp__5720__auto__,repos,repos__$1){
+})():daiquiri.core.create_element("a",{'target':"_blank",'href':url},[daiquiri.interpreter.interpret((frontend.db.get_repo_path.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_repo_path.cljs$core$IFn$_invoke$arity$1(url) : frontend.db.get_repo_path.call(null,url)))])),(function (){var attrs61732 = (cljs.core.truth_(frontend.encrypt.encrypted_db_QMARK_(url))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a.control","a.control",1833131627),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"title","title",636505583),"Show encryption information about this graph",new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (local_QMARK_,map__61739,map__61739__$1,repo,id,url,s__61725__$2,temp__5720__auto__,repos,repos__$1){
 return (function (){
 return frontend.state.set_modal_BANG_.cljs$core$IFn$_invoke$arity$1(frontend.components.encryption.encryption_dialog(url));
-});})(local_QMARK_,map__52218,map__52218__$1,repo,id,url,s__52206__$2,temp__5720__auto__,repos,repos__$1))
+});})(local_QMARK_,map__61739,map__61739__$1,repo,id,url,s__61725__$2,temp__5720__auto__,repos,repos__$1))
 ], null),"\uD83D\uDD10"], null):null);
-return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs52210))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["controls"], null)], null),attrs52210], 0))):{'className':"controls"}),((cljs.core.map_QMARK_(attrs52210))?[daiquiri.core.create_element("a",{'title':"No worries, unlink this graph will clear its cache only, it does not remove your files on the disk.",'onClick':((function (attrs52210,local_QMARK_,map__52218,map__52218__$1,repo,id,url,s__52206__$2,temp__5720__auto__,repos,repos__$1){
+return daiquiri.core.create_element("div",((cljs.core.map_QMARK_(attrs61732))?daiquiri.interpreter.element_attributes(daiquiri.normalize.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["controls"], null)], null),attrs61732], 0))):{'className':"controls"}),((cljs.core.map_QMARK_(attrs61732))?[daiquiri.core.create_element("a",{'title':"No worries, unlink this graph will clear its cache only, it does not remove your files on the disk.",'onClick':((function (attrs61732,local_QMARK_,map__61739,map__61739__$1,repo,id,url,s__61725__$2,temp__5720__auto__,repos,repos__$1){
 return (function (){
 return frontend.handler.repo.remove_repo_BANG_(repo);
-});})(attrs52210,local_QMARK_,map__52218,map__52218__$1,repo,id,url,s__52206__$2,temp__5720__auto__,repos,repos__$1))
-,'className':"text-gray-400 ml-4 font-medium text-sm"},["Unlink"])]:[daiquiri.interpreter.interpret(attrs52210),daiquiri.core.create_element("a",{'title':"No worries, unlink this graph will clear its cache only, it does not remove your files on the disk.",'onClick':((function (attrs52210,local_QMARK_,map__52218,map__52218__$1,repo,id,url,s__52206__$2,temp__5720__auto__,repos,repos__$1){
+});})(attrs61732,local_QMARK_,map__61739,map__61739__$1,repo,id,url,s__61725__$2,temp__5720__auto__,repos,repos__$1))
+,'className':"text-gray-400 ml-4 font-medium text-sm"},["Unlink"])]:[daiquiri.interpreter.interpret(attrs61732),daiquiri.core.create_element("a",{'title':"No worries, unlink this graph will clear its cache only, it does not remove your files on the disk.",'onClick':((function (attrs61732,local_QMARK_,map__61739,map__61739__$1,repo,id,url,s__61725__$2,temp__5720__auto__,repos,repos__$1){
 return (function (){
 return frontend.handler.repo.remove_repo_BANG_(repo);
-});})(attrs52210,local_QMARK_,map__52218,map__52218__$1,repo,id,url,s__52206__$2,temp__5720__auto__,repos,repos__$1))
+});})(attrs61732,local_QMARK_,map__61739,map__61739__$1,repo,id,url,s__61725__$2,temp__5720__auto__,repos,repos__$1))
 ,'className':"text-gray-400 ml-4 font-medium text-sm"},["Unlink"])]));
 })()]);
-})(),frontend$components$repo$iter__52205(cljs.core.rest(s__52206__$2)));
+})(),frontend$components$repo$iter__61724(cljs.core.rest(s__61725__$2)));
 }
 } else {
 return null;
@@ -154,10 +154,10 @@ frontend.components.repo.repos_dropdown_links = (function frontend$components$re
 var switch_repos = cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (repo){
 return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(current_repo,new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(repo));
 }),repos);
-var repo_links = cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__52228){
-var map__52229 = p__52228;
-var map__52229__$1 = cljs.core.__destructure_map(map__52229);
-var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__52229__$1,new cljs.core.Keyword(null,"url","url",276297046));
+var repo_links = cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__61752){
+var map__61753 = p__61752;
+var map__61753__$1 = cljs.core.__destructure_map(map__61753);
+var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61753__$1,new cljs.core.Keyword(null,"url","url",276297046));
 var repo_path = (frontend.db.get_repo_name.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_repo_name.cljs$core$IFn$_invoke$arity$1(url) : frontend.db.get_repo_name.call(null,url));
 var short_repo_name = logseq.graph_parser.text.get_graph_name_from_path(repo_path);
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"title","title",636505583),short_repo_name,new cljs.core.Keyword(null,"hover-detail","hover-detail",-1668874248),repo_path,new cljs.core.Keyword(null,"options","options",99638489),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),"ml-1",new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (e){
@@ -197,10 +197,10 @@ return frontend.handler.web.nfs.refresh_BANG_(frontend.state.get_current_repo(),
 return null;
 }
 })();
-var reindex_link = new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"title","title",636505583),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"re-index","re-index",-1408098109)], 0)),new cljs.core.Keyword(null,"hover-detail","hover-detail",-1668874248),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"re-index-detail","re-index-detail",555553184)], 0)),new cljs.core.Keyword(null,"options","options",99638489),(function (){var G__52230 = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
+var reindex_link = new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"title","title",636505583),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"re-index","re-index",-1408098109)], 0)),new cljs.core.Keyword(null,"hover-detail","hover-detail",-1668874248),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"re-index-detail","re-index-detail",555553184)], 0)),new cljs.core.Keyword(null,"options","options",99638489),(function (){var G__61757 = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
 return frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("graph","ask-for-re-index","graph/ask-for-re-index",2038098533),_STAR_multiple_windows_QMARK_], null));
 })], null);
-return G__52230;
+return G__61757;
 })()], null);
 var new_window_link = (cljs.core.truth_(frontend.util.electron_QMARK_())?new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"title","title",636505583),frontend.context.i18n.t.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"open-new-window","open-new-window",-483331731)], 0)),new cljs.core.Keyword(null,"options","options",99638489),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
 return frontend.state.pub_event_BANG_(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("graph","open-new-window","graph/open-new-window",-397266781),null], null));
@@ -219,10 +219,10 @@ var repos__$1 = cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (r){
 return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(frontend.config.local_repo,new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(r));
 }),repos);
 var links = frontend.components.repo.repos_dropdown_links(repos__$1,current_repo,multiple_windows_QMARK_);
-var render_content = (function (p__52242){
-var map__52243 = p__52242;
-var map__52243__$1 = cljs.core.__destructure_map(map__52243);
-var toggle_fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__52243__$1,new cljs.core.Keyword(null,"toggle-fn","toggle-fn",-1172657425));
+var render_content = (function (p__61767){
+var map__61768 = p__61767;
+var map__61768__$1 = cljs.core.__destructure_map(map__61768);
+var toggle_fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61768__$1,new cljs.core.Keyword(null,"toggle-fn","toggle-fn",-1172657425));
 var repo_path = (frontend.db.get_repo_name.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_repo_name.cljs$core$IFn$_invoke$arity$1(current_repo) : frontend.db.get_repo_name.call(null,current_repo));
 var short_repo_name = (frontend.db.get_short_repo_name.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_short_repo_name.cljs$core$IFn$_invoke$arity$1(repo_path) : frontend.db.get_short_repo_name.call(null,repo_path));
 return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a.item.group.flex.items-center.px-2.py-2.text-sm.font-medium.rounded-md","a.item.group.flex.items-center.px-2.py-2.text-sm.font-medium.rounded-md",-1773757540),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
@@ -231,11 +231,11 @@ frontend.components.repo.check_multiple_windows_QMARK_(state);
 return (toggle_fn.cljs$core$IFn$_invoke$arity$0 ? toggle_fn.cljs$core$IFn$_invoke$arity$0() : toggle_fn.call(null));
 }),new cljs.core.Keyword(null,"title","title",636505583),repo_path], null),frontend.ui.icon.cljs$core$IFn$_invoke$arity$2("database mr-3",new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),(20)], null),new cljs.core.Keyword(null,"id","id",-1388402092),"database-icon"], null)),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.graphs","div.graphs",2051391861),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span#repo-switch.block.pr-2.whitespace-nowrap","span#repo-switch.block.pr-2.whitespace-nowrap",886377000),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span#repo-name.font-medium","span#repo-name.font-medium",-1930713868),short_repo_name], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.dropdown-caret.ml-2","span.dropdown-caret.ml-2",724124714),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"border-top-color","border-top-color",-804629899),"#6b7280"], null)], null)], null)], null)], null)], null);
 });
-var links_header = (function (){var G__52244 = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"modal-class","modal-class",226435127),frontend.util.hiccup__GT_class("origin-top-right.absolute.left-0.mt-2.rounded-md.shadow-lg")], null);
+var links_header = (function (){var G__61769 = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"modal-class","modal-class",226435127),frontend.util.hiccup__GT_class("origin-top-right.absolute.left-0.mt-2.rounded-md.shadow-lg")], null);
 if((cljs.core.count(repos__$1) > (1))){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__52244,new cljs.core.Keyword(null,"links-header","links-header",-1729119536),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.font-medium.text-sm.opacity-60.px-4.pt-2","div.font-medium.text-sm.opacity-60.px-4.pt-2",917690640),"Switch to:"], null));
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__61769,new cljs.core.Keyword(null,"links-header","links-header",-1729119536),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.font-medium.text-sm.opacity-60.px-4.pt-2","div.font-medium.text-sm.opacity-60.px-4.pt-2",917690640),"Switch to:"], null));
 } else {
-return G__52244;
+return G__61769;
 }
 })();
 if(cljs.core.seq(repos__$1)){

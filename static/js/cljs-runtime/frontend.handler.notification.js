@@ -4,8 +4,8 @@ var contents = frontend.state.get_notification_contents();
 return frontend.state.set_state_BANG_(new cljs.core.Keyword("notification","contents","notification/contents",-1760740618),cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(contents,uid));
 });
 frontend.handler.notification.show_BANG_ = (function frontend$handler$notification$show_BANG_(var_args){
-var G__43505 = arguments.length;
-switch (G__43505) {
+var G__43124 = arguments.length;
+switch (G__43124) {
 case 2:
 return frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 

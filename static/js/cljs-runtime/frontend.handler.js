@@ -94,9 +94,9 @@ var temp__5720__auto__ = frontend.handler.goog$module$goog$object.getValueByKeys
 if(cljs.core.truth_(temp__5720__auto__)){
 var devtool_message = temp__5720__auto__;
 var msg_type = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(cljs.reader.read_string.cljs$core$IFn$_invoke$arity$1(devtool_message));
-var G__51848 = msg_type;
-var G__51848__$1 = (((G__51848 instanceof cljs.core.Keyword))?G__51848.fqn:null);
-switch (G__51848__$1) {
+var G__61275 = msg_type;
+var G__61275__$1 = (((G__61275 instanceof cljs.core.Keyword))?G__61275.fqn:null);
+switch (G__61275__$1) {
 case "datalog-console.client/request-whole-database-as-string":
 return window.postMessage(({":datalog-console.remote/remote-message": cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([db], 0))}),"*");
 
@@ -146,6 +146,7 @@ frontend.state.set_component_BANG_(new cljs.core.Keyword("block","linked-referen
 
 return frontend.handler.command_palette.register_global_shortcut_commands();
 });
+cljs.core.reset_BANG_(frontend.db._STAR_db_listener,frontend.modules.outliner.datascript.after_transact_pipelines);
 frontend.handler.start_BANG_ = (function frontend$handler$start_BANG_(render){
 frontend.handler.set_global_error_notification_BANG_();
 
@@ -192,8 +193,6 @@ return null;
 );
 }));
 }));
-
-cljs.core.reset_BANG_(frontend.db._STAR_sync_search_indice_f,frontend.search.sync_search_indice_BANG_);
 
 frontend.db.run_batch_txs_BANG_();
 

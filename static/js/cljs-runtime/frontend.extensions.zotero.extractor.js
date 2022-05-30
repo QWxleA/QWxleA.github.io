@@ -8,8 +8,8 @@ frontend.extensions.zotero.extractor.extract = (function (){var method_table__56
 var prefer_table__5640__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
 var method_cache__5641__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
 var cached_hierarchy__5642__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
-var hierarchy__5643__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"hierarchy","hierarchy",-1053470341),(function (){var fexpr__57630 = cljs.core.get_global_hierarchy;
-return (fexpr__57630.cljs$core$IFn$_invoke$arity$0 ? fexpr__57630.cljs$core$IFn$_invoke$arity$0() : fexpr__57630.call(null));
+var hierarchy__5643__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"hierarchy","hierarchy",-1053470341),(function (){var fexpr__57155 = cljs.core.get_global_hierarchy;
+return (fexpr__57155.cljs$core$IFn$_invoke$arity$0 ? fexpr__57155.cljs$core$IFn$_invoke$arity$0() : fexpr__57155.call(null));
 })());
 return (new cljs.core.MultiFn(cljs.core.symbol.cljs$core$IFn$_invoke$arity$2("frontend.extensions.zotero.extractor","extract"),frontend.extensions.zotero.extractor.item_type,new cljs.core.Keyword(null,"default","default",-1987822328),hierarchy__5643__auto__,method_table__5639__auto__,prefer_table__5640__auto__,method_cache__5641__auto__,cached_hierarchy__5642__auto__));
 })();
@@ -32,8 +32,8 @@ frontend.extensions.zotero.extractor.item_key = (function frontend$extensions$zo
 return new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(item);
 });
 frontend.extensions.zotero.extractor.page_name = (function frontend$extensions$zotero$extractor$page_name(item){
-var page_title = (function (){var G__57631 = frontend.extensions.zotero.extractor.item_type(item);
-switch (G__57631) {
+var page_title = (function (){var G__57177 = frontend.extensions.zotero.extractor.item_type(item);
+switch (G__57177) {
 case "case":
 return new cljs.core.Keyword(null,"case-name","case-name",668298969).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(item));
 
@@ -68,23 +68,23 @@ frontend.extensions.zotero.extractor.authors = (function frontend$extensions$zot
 var creators = new cljs.core.Keyword(null,"creators","creators",-1519765535).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(item));
 var authors = cljs.core.into.cljs$core$IFn$_invoke$arity$3(cljs.core.PersistentVector.EMPTY,cljs.core.comp.cljs$core$IFn$_invoke$arity$2(cljs.core.filter.cljs$core$IFn$_invoke$arity$1((function (m){
 return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("author",new cljs.core.Keyword(null,"creator-type","creator-type",-817347270).cljs$core$IFn$_invoke$arity$1(m));
-})),cljs.core.map.cljs$core$IFn$_invoke$arity$1((function (p__57632){
-var map__57633 = p__57632;
-var map__57633__$1 = cljs.core.__destructure_map(map__57633);
-var first_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57633__$1,new cljs.core.Keyword(null,"first-name","first-name",-1559982131));
-var last_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57633__$1,new cljs.core.Keyword(null,"last-name","last-name",-1695738974));
-var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57633__$1,new cljs.core.Keyword(null,"name","name",1843675177));
+})),cljs.core.map.cljs$core$IFn$_invoke$arity$1((function (p__57179){
+var map__57180 = p__57179;
+var map__57180__$1 = cljs.core.__destructure_map(map__57180);
+var first_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57180__$1,new cljs.core.Keyword(null,"first-name","first-name",-1559982131));
+var last_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57180__$1,new cljs.core.Keyword(null,"last-name","last-name",-1695738974));
+var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57180__$1,new cljs.core.Keyword(null,"name","name",1843675177));
 return clojure.string.trim((cljs.core.truth_(name)?name:[cljs.core.str.cljs$core$IFn$_invoke$arity$1(first_name)," ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(last_name)].join('')));
 }))),creators);
 return cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(authors);
 });
 frontend.extensions.zotero.extractor.tags = (function frontend$extensions$zotero$extractor$tags(item){
-var tags = cljs.core.mapcat.cljs$core$IFn$_invoke$arity$variadic((function (p1__57634_SHARP_){
-return clojure.string.split.cljs$core$IFn$_invoke$arity$2(p1__57634_SHARP_,/,\s?/);
-}),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__57635){
-var map__57636 = p__57635;
-var map__57636__$1 = cljs.core.__destructure_map(map__57636);
-var tag = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57636__$1,new cljs.core.Keyword(null,"tag","tag",-1290361223));
+var tags = cljs.core.mapcat.cljs$core$IFn$_invoke$arity$variadic((function (p1__57183_SHARP_){
+return clojure.string.split.cljs$core$IFn$_invoke$arity$2(p1__57183_SHARP_,/,\s?/);
+}),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__57188){
+var map__57189 = p__57188;
+var map__57189__$1 = cljs.core.__destructure_map(map__57189);
+var tag = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57189__$1,new cljs.core.Keyword(null,"tag","tag",-1290361223));
 return clojure.string.trim(tag);
 }),new cljs.core.Keyword(null,"tags","tags",1771418977).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(item)))], 0));
 var extra_tags = cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,clojure.string.split.cljs$core$IFn$_invoke$arity$2(frontend.extensions.zotero.setting.setting(new cljs.core.Keyword(null,"extra-tags","extra-tags",-1152617311)),/,/)));
@@ -100,10 +100,10 @@ return new cljs.core.Keyword(null,"date","date",-1463434462).cljs$core$IFn$_invo
 }
 });
 frontend.extensions.zotero.extractor.wrap_in_doublequotes = (function frontend$extensions$zotero$extractor$wrap_in_doublequotes(m){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__57638){
-var vec__57639 = p__57638;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57639,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57639,(1),null);
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__57210){
+var vec__57212 = p__57210;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57212,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57212,(1),null);
 if(clojure.string.includes_QMARK_(cljs.core.str.cljs$core$IFn$_invoke$arity$1(v),",")){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [k,cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([v], 0))], null);
 } else {
@@ -112,16 +112,16 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 }),m));
 });
 frontend.extensions.zotero.extractor.skip_newline_properties = (function frontend$extensions$zotero$extractor$skip_newline_properties(m){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p__57642){
-var vec__57643 = p__57642;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57643,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57643,(1),null);
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p__57218){
+var vec__57223 = p__57218;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57223,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__57223,(1),null);
 return clojure.string.includes_QMARK_(cljs.core.str.cljs$core$IFn$_invoke$arity$1(v),"\n");
 }),m));
 });
 frontend.extensions.zotero.extractor.markdown_link = (function frontend$extensions$zotero$extractor$markdown_link(var_args){
-var G__57647 = arguments.length;
-switch (G__57647) {
+var G__57232 = arguments.length;
+switch (G__57232) {
 case 2:
 return frontend.extensions.zotero.extractor.markdown_link.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -181,7 +181,7 @@ return ((clojure.string.blank_QMARK_(v)) || (cljs.core.empty_QMARK_(v)));
 });
 frontend.extensions.zotero.extractor.extract.cljs$core$IMultiFn$_add_method$arity$3(null,"note",(function (item){
 var note_html = new cljs.core.Keyword(null,"note","note",1426297904).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(item));
-return frontend.extensions.html_parser.parse(new cljs.core.Keyword(null,"markdown","markdown",1227225089),note_html);
+return frontend.extensions.html_parser.convert(new cljs.core.Keyword(null,"markdown","markdown",1227225089),note_html);
 }));
 frontend.extensions.zotero.extractor.zotero_imported_file_macro = (function frontend$extensions$zotero$extractor$zotero_imported_file_macro(item_key,filename){
 return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("{{zotero-imported-file %s, %s}}",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([item_key,cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([filename], 0))], 0));
@@ -190,16 +190,16 @@ frontend.extensions.zotero.extractor.zotero_linked_file_macro = (function fronte
 return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("{{zotero-linked-file %s}}",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([path], 0))], 0));
 });
 frontend.extensions.zotero.extractor.extract.cljs$core$IMultiFn$_add_method$arity$3(null,"attachment",(function (item){
-var map__57648 = new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(item);
-var map__57648__$1 = cljs.core.__destructure_map(map__57648);
-var title = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57648__$1,new cljs.core.Keyword(null,"title","title",636505583));
-var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57648__$1,new cljs.core.Keyword(null,"url","url",276297046));
-var link_mode = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57648__$1,new cljs.core.Keyword(null,"link-mode","link-mode",-960686913));
-var path = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57648__$1,new cljs.core.Keyword(null,"path","path",-188191168));
-var content_type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57648__$1,new cljs.core.Keyword(null,"content-type","content-type",-508222634));
-var filename = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57648__$1,new cljs.core.Keyword(null,"filename","filename",-1428840783));
-var G__57649 = link_mode;
-switch (G__57649) {
+var map__57376 = new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(item);
+var map__57376__$1 = cljs.core.__destructure_map(map__57376);
+var title = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57376__$1,new cljs.core.Keyword(null,"title","title",636505583));
+var url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57376__$1,new cljs.core.Keyword(null,"url","url",276297046));
+var link_mode = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57376__$1,new cljs.core.Keyword(null,"link-mode","link-mode",-960686913));
+var path = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57376__$1,new cljs.core.Keyword(null,"path","path",-188191168));
+var content_type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57376__$1,new cljs.core.Keyword(null,"content-type","content-type",-508222634));
+var filename = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__57376__$1,new cljs.core.Keyword(null,"filename","filename",-1428840783));
+var G__57379 = link_mode;
+switch (G__57379) {
 case "imported_file":
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.extensions.zotero.extractor.markdown_link.cljs$core$IFn$_invoke$arity$2(title,frontend.extensions.zotero.extractor.local_link(item)))," ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.extensions.zotero.extractor.zotero_imported_file_macro(frontend.extensions.zotero.extractor.item_key(item),filename))].join('');
 
@@ -226,7 +226,7 @@ return frontend.extensions.zotero.extractor.markdown_link.cljs$core$IFn$_invoke$
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__57649)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__57379)].join('')));
 
 }
 }));

@@ -9,9 +9,9 @@ if((typeof frontend !== 'undefined') && (typeof frontend.format !== 'undefined')
 frontend.format.adoc_record = frontend.format.adoc.__GT_AdocMode();
 }
 frontend.format.get_format_record = (function frontend$format$get_format_record(format){
-var G__49220 = logseq.graph_parser.util.normalize_format(format);
-var G__49220__$1 = (((G__49220 instanceof cljs.core.Keyword))?G__49220.fqn:null);
-switch (G__49220__$1) {
+var G__48924 = logseq.graph_parser.util.normalize_format(format);
+var G__48924__$1 = (((G__48924 instanceof cljs.core.Keyword))?G__48924.fqn:null);
+switch (G__48924__$1) {
 case "org":
 return frontend.format.mldoc_record;
 
@@ -30,8 +30,8 @@ return null;
 }
 });
 frontend.format.get_default_config = (function frontend$format$get_default_config(var_args){
-var G__49222 = arguments.length;
-switch (G__49222) {
+var G__48926 = arguments.length;
+switch (G__48926) {
 case 1:
 return frontend.format.get_default_config.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -57,8 +57,8 @@ return logseq.graph_parser.mldoc.default_config.cljs$core$IFn$_invoke$arity$2(fo
 (frontend.format.get_default_config.cljs$lang$maxFixedArity = 2);
 
 frontend.format.to_html = (function frontend$format$to_html(var_args){
-var G__49224 = arguments.length;
-switch (G__49224) {
+var G__48929 = arguments.length;
+switch (G__48929) {
 case 2:
 return frontend.format.to_html.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -95,8 +95,8 @@ return content;
 (frontend.format.to_html.cljs$lang$maxFixedArity = 3);
 
 frontend.format.to_edn = (function frontend$format$to_edn(var_args){
-var G__49235 = arguments.length;
-switch (G__49235) {
+var G__48931 = arguments.length;
+switch (G__48931) {
 case 2:
 return frontend.format.to_edn.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 

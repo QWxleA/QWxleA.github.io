@@ -19,57 +19,57 @@ var zip = (new module$node_modules$jszip$lib$index());
 var zip_foldername = cljs.core.subs.cljs$core$IFn$_invoke$arity$2(zip_filename,(clojure.string.last_index_of.cljs$core$IFn$_invoke$arity$2(zip_filename,"/") + (1)));
 var src_filepath = clojure.string.replace(repo,frontend.config.local_db_prefix,"");
 var folder = zip.folder(zip_foldername);
-var seq__49661_49697 = cljs.core.seq(file_name__GT_content);
-var chunk__49662_49698 = null;
-var count__49663_49699 = (0);
-var i__49664_49700 = (0);
+var seq__49658_49679 = cljs.core.seq(file_name__GT_content);
+var chunk__49659_49680 = null;
+var count__49660_49681 = (0);
+var i__49661_49682 = (0);
 while(true){
-if((i__49664_49700 < count__49663_49699)){
-var vec__49672_49701 = chunk__49662_49698.cljs$core$IIndexed$_nth$arity$2(null,i__49664_49700);
-var file_name_49702 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49672_49701,(0),null);
-var content_49703 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49672_49701,(1),null);
-folder.file(clojure.string.replace(clojure.string.replace(file_name_49702,src_filepath,""),/^\/+/,""),content_49703);
+if((i__49661_49682 < count__49660_49681)){
+var vec__49670_49683 = chunk__49659_49680.cljs$core$IIndexed$_nth$arity$2(null,i__49661_49682);
+var file_name_49684 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49670_49683,(0),null);
+var content_49685 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49670_49683,(1),null);
+folder.file(clojure.string.replace(clojure.string.replace(file_name_49684,src_filepath,""),/^\/+/,""),content_49685);
 
 
-var G__49704 = seq__49661_49697;
-var G__49705 = chunk__49662_49698;
-var G__49706 = count__49663_49699;
-var G__49707 = (i__49664_49700 + (1));
-seq__49661_49697 = G__49704;
-chunk__49662_49698 = G__49705;
-count__49663_49699 = G__49706;
-i__49664_49700 = G__49707;
+var G__49686 = seq__49658_49679;
+var G__49687 = chunk__49659_49680;
+var G__49688 = count__49660_49681;
+var G__49689 = (i__49661_49682 + (1));
+seq__49658_49679 = G__49686;
+chunk__49659_49680 = G__49687;
+count__49660_49681 = G__49688;
+i__49661_49682 = G__49689;
 continue;
 } else {
-var temp__5720__auto___49708 = cljs.core.seq(seq__49661_49697);
-if(temp__5720__auto___49708){
-var seq__49661_49709__$1 = temp__5720__auto___49708;
-if(cljs.core.chunked_seq_QMARK_(seq__49661_49709__$1)){
-var c__5565__auto___49710 = cljs.core.chunk_first(seq__49661_49709__$1);
-var G__49711 = cljs.core.chunk_rest(seq__49661_49709__$1);
-var G__49712 = c__5565__auto___49710;
-var G__49713 = cljs.core.count(c__5565__auto___49710);
-var G__49714 = (0);
-seq__49661_49697 = G__49711;
-chunk__49662_49698 = G__49712;
-count__49663_49699 = G__49713;
-i__49664_49700 = G__49714;
+var temp__5720__auto___49690 = cljs.core.seq(seq__49658_49679);
+if(temp__5720__auto___49690){
+var seq__49658_49691__$1 = temp__5720__auto___49690;
+if(cljs.core.chunked_seq_QMARK_(seq__49658_49691__$1)){
+var c__5565__auto___49692 = cljs.core.chunk_first(seq__49658_49691__$1);
+var G__49693 = cljs.core.chunk_rest(seq__49658_49691__$1);
+var G__49694 = c__5565__auto___49692;
+var G__49695 = cljs.core.count(c__5565__auto___49692);
+var G__49696 = (0);
+seq__49658_49679 = G__49693;
+chunk__49659_49680 = G__49694;
+count__49660_49681 = G__49695;
+i__49661_49682 = G__49696;
 continue;
 } else {
-var vec__49675_49715 = cljs.core.first(seq__49661_49709__$1);
-var file_name_49716 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49675_49715,(0),null);
-var content_49717 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49675_49715,(1),null);
-folder.file(clojure.string.replace(clojure.string.replace(file_name_49716,src_filepath,""),/^\/+/,""),content_49717);
+var vec__49673_49697 = cljs.core.first(seq__49658_49691__$1);
+var file_name_49698 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49673_49697,(0),null);
+var content_49699 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49673_49697,(1),null);
+folder.file(clojure.string.replace(clojure.string.replace(file_name_49698,src_filepath,""),/^\/+/,""),content_49699);
 
 
-var G__49718 = cljs.core.next(seq__49661_49709__$1);
-var G__49719 = null;
-var G__49720 = (0);
-var G__49721 = (0);
-seq__49661_49697 = G__49718;
-chunk__49662_49698 = G__49719;
-count__49663_49699 = G__49720;
-i__49664_49700 = G__49721;
+var G__49700 = cljs.core.next(seq__49658_49691__$1);
+var G__49701 = null;
+var G__49702 = (0);
+var G__49703 = (0);
+seq__49658_49679 = G__49700;
+chunk__49659_49680 = G__49701;
+count__49660_49681 = G__49702;
+i__49661_49682 = G__49703;
 continue;
 }
 } else {

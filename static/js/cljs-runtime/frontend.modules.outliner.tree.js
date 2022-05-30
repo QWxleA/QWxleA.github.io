@@ -5,7 +5,7 @@ goog.provide('frontend.modules.outliner.tree');
  */
 frontend.modules.outliner.tree.INode = function(){};
 
-var frontend$modules$outliner$tree$INode$_get_id$dyn_49983 = (function (this$){
+var frontend$modules$outliner$tree$INode$_get_id$dyn_49533 = (function (this$){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._get_id[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -23,11 +23,11 @@ frontend.modules.outliner.tree._get_id = (function frontend$modules$outliner$tre
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_get_id$arity$1 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_get_id$arity$1(this$);
 } else {
-return frontend$modules$outliner$tree$INode$_get_id$dyn_49983(this$);
+return frontend$modules$outliner$tree$INode$_get_id$dyn_49533(this$);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_get_parent_id$dyn_49985 = (function (this$){
+var frontend$modules$outliner$tree$INode$_get_parent_id$dyn_49534 = (function (this$){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._get_parent_id[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -45,11 +45,11 @@ frontend.modules.outliner.tree._get_parent_id = (function frontend$modules$outli
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_get_parent_id$arity$1 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_get_parent_id$arity$1(this$);
 } else {
-return frontend$modules$outliner$tree$INode$_get_parent_id$dyn_49985(this$);
+return frontend$modules$outliner$tree$INode$_get_parent_id$dyn_49534(this$);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_set_parent_id$dyn_49989 = (function (this$,parent_id){
+var frontend$modules$outliner$tree$INode$_set_parent_id$dyn_49535 = (function (this$,parent_id){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._set_parent_id[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -67,11 +67,11 @@ frontend.modules.outliner.tree._set_parent_id = (function frontend$modules$outli
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_set_parent_id$arity$2 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_set_parent_id$arity$2(this$,parent_id);
 } else {
-return frontend$modules$outliner$tree$INode$_set_parent_id$dyn_49989(this$,parent_id);
+return frontend$modules$outliner$tree$INode$_set_parent_id$dyn_49535(this$,parent_id);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_get_left_id$dyn_49993 = (function (this$){
+var frontend$modules$outliner$tree$INode$_get_left_id$dyn_49536 = (function (this$){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._get_left_id[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -89,11 +89,11 @@ frontend.modules.outliner.tree._get_left_id = (function frontend$modules$outline
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_get_left_id$arity$1 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_get_left_id$arity$1(this$);
 } else {
-return frontend$modules$outliner$tree$INode$_get_left_id$dyn_49993(this$);
+return frontend$modules$outliner$tree$INode$_get_left_id$dyn_49536(this$);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_set_left_id$dyn_49994 = (function (this$,left_id){
+var frontend$modules$outliner$tree$INode$_set_left_id$dyn_49537 = (function (this$,left_id){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._set_left_id[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -111,11 +111,11 @@ frontend.modules.outliner.tree._set_left_id = (function frontend$modules$outline
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_set_left_id$arity$2 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_set_left_id$arity$2(this$,left_id);
 } else {
-return frontend$modules$outliner$tree$INode$_set_left_id$dyn_49994(this$,left_id);
+return frontend$modules$outliner$tree$INode$_set_left_id$dyn_49537(this$,left_id);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_get_parent$dyn_49996 = (function (this$){
+var frontend$modules$outliner$tree$INode$_get_parent$dyn_49538 = (function (this$){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._get_parent[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -133,11 +133,11 @@ frontend.modules.outliner.tree._get_parent = (function frontend$modules$outliner
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_get_parent$arity$1 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_get_parent$arity$1(this$);
 } else {
-return frontend$modules$outliner$tree$INode$_get_parent$dyn_49996(this$);
+return frontend$modules$outliner$tree$INode$_get_parent$dyn_49538(this$);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_get_left$dyn_49999 = (function (this$){
+var frontend$modules$outliner$tree$INode$_get_left$dyn_49539 = (function (this$){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._get_left[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -155,11 +155,11 @@ frontend.modules.outliner.tree._get_left = (function frontend$modules$outliner$t
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_get_left$arity$1 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_get_left$arity$1(this$);
 } else {
-return frontend$modules$outliner$tree$INode$_get_left$dyn_49999(this$);
+return frontend$modules$outliner$tree$INode$_get_left$dyn_49539(this$);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_get_right$dyn_50000 = (function (this$){
+var frontend$modules$outliner$tree$INode$_get_right$dyn_49540 = (function (this$){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._get_right[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -177,11 +177,11 @@ frontend.modules.outliner.tree._get_right = (function frontend$modules$outliner$
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_get_right$arity$1 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_get_right$arity$1(this$);
 } else {
-return frontend$modules$outliner$tree$INode$_get_right$dyn_50000(this$);
+return frontend$modules$outliner$tree$INode$_get_right$dyn_49540(this$);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_get_down$dyn_50001 = (function (this$){
+var frontend$modules$outliner$tree$INode$_get_down$dyn_49541 = (function (this$){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._get_down[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -199,11 +199,11 @@ frontend.modules.outliner.tree._get_down = (function frontend$modules$outliner$t
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_get_down$arity$1 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_get_down$arity$1(this$);
 } else {
-return frontend$modules$outliner$tree$INode$_get_down$dyn_50001(this$);
+return frontend$modules$outliner$tree$INode$_get_down$dyn_49541(this$);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_save$dyn_50002 = (function (this$,db){
+var frontend$modules$outliner$tree$INode$_save$dyn_49542 = (function (this$,db){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._save[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -221,11 +221,11 @@ frontend.modules.outliner.tree._save = (function frontend$modules$outliner$tree$
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_save$arity$2 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_save$arity$2(this$,db);
 } else {
-return frontend$modules$outliner$tree$INode$_save$dyn_50002(this$,db);
+return frontend$modules$outliner$tree$INode$_save$dyn_49542(this$,db);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_del$dyn_50003 = (function (this$,db,children_QMARK_){
+var frontend$modules$outliner$tree$INode$_del$dyn_49543 = (function (this$,db,children_QMARK_){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._del[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -243,11 +243,11 @@ frontend.modules.outliner.tree._del = (function frontend$modules$outliner$tree$_
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_del$arity$3 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_del$arity$3(this$,db,children_QMARK_);
 } else {
-return frontend$modules$outliner$tree$INode$_del$dyn_50003(this$,db,children_QMARK_);
+return frontend$modules$outliner$tree$INode$_del$dyn_49543(this$,db,children_QMARK_);
 }
 });
 
-var frontend$modules$outliner$tree$INode$_get_children$dyn_50004 = (function (this$){
+var frontend$modules$outliner$tree$INode$_get_children$dyn_49544 = (function (this$){
 var x__5390__auto__ = (((this$ == null))?null:this$);
 var m__5391__auto__ = (frontend.modules.outliner.tree._get_children[goog.typeOf(x__5390__auto__)]);
 if((!((m__5391__auto__ == null)))){
@@ -265,7 +265,7 @@ frontend.modules.outliner.tree._get_children = (function frontend$modules$outlin
 if((((!((this$ == null)))) && ((!((this$.frontend$modules$outliner$tree$INode$_get_children$arity$1 == null)))))){
 return this$.frontend$modules$outliner$tree$INode$_get_children$arity$1(this$);
 } else {
-return frontend$modules$outliner$tree$INode$_get_children$dyn_50004(this$);
+return frontend$modules$outliner$tree$INode$_get_children$dyn_49544(this$);
 }
 });
 
@@ -291,16 +291,16 @@ return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("db","id
 var root__$1 = id_map(root);
 var parent_blocks = cljs.core.group_by(new cljs.core.Keyword("block","parent","block/parent",-918309064),blocks);
 var sort_fn = (function (parent){
-var G__49960 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(parent_blocks,parent);
-var G__49961 = parent;
-return (frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2 ? frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2(G__49960,G__49961) : frontend.db.sort_by_left.call(null,G__49960,G__49961));
+var G__49511 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(parent_blocks,parent);
+var G__49512 = parent;
+return (frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2 ? frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2(G__49511,G__49512) : frontend.db.sort_by_left.call(null,G__49511,G__49512));
 });
 var block_children = (function frontend$modules$outliner$tree$blocks__GT_vec_tree_aux_$_block_children(parent,level){
 return cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (m){
 var parent__$1 = id_map(m);
-var children = (function (){var G__49962 = frontend$modules$outliner$tree$blocks__GT_vec_tree_aux_$_block_children(parent__$1,(level + (1)));
-var G__49963 = parent__$1;
-return (frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2 ? frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2(G__49962,G__49963) : frontend.db.sort_by_left.call(null,G__49962,G__49963));
+var children = (function (){var G__49513 = frontend$modules$outliner$tree$blocks__GT_vec_tree_aux_$_block_children(parent__$1,(level + (1)));
+var G__49514 = parent__$1;
+return (frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2 ? frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2(G__49513,G__49514) : frontend.db.sort_by_left.call(null,G__49513,G__49514));
 })();
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(m,new cljs.core.Keyword("block","level","block/level",1182509971),level,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword("block","children","block/children",-1040716209),children], 0));
 }),sort_fn(parent));
@@ -312,14 +312,14 @@ if(typeof root_id === 'string'){
 var temp__5718__auto__ = cljs.core.parse_uuid(root_id);
 if(cljs.core.truth_(temp__5718__auto__)){
 var id = temp__5718__auto__;
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [false,(function (){var G__49965 = repo;
-var G__49966 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","uuid","block/uuid",-1991494552),id], null);
-return (frontend.db.entity.cljs$core$IFn$_invoke$arity$2 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$2(G__49965,G__49966) : frontend.db.entity.call(null,G__49965,G__49966));
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [false,(function (){var G__49520 = repo;
+var G__49521 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","uuid","block/uuid",-1991494552),id], null);
+return (frontend.db.entity.cljs$core$IFn$_invoke$arity$2 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$2(G__49520,G__49521) : frontend.db.entity.call(null,G__49520,G__49521));
 })()], null);
 } else {
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [true,(function (){var G__49967 = repo;
-var G__49968 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),clojure.string.lower_case(root_id)], null);
-return (frontend.db.entity.cljs$core$IFn$_invoke$arity$2 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$2(G__49967,G__49968) : frontend.db.entity.call(null,G__49967,G__49968));
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [true,(function (){var G__49522 = repo;
+var G__49523 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),clojure.string.lower_case(root_id)], null);
+return (frontend.db.entity.cljs$core$IFn$_invoke$arity$2 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$2(G__49522,G__49523) : frontend.db.entity.call(null,G__49522,G__49523));
 })()], null);
 }
 } else {
@@ -327,8 +327,8 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 }
 });
 frontend.modules.outliner.tree.blocks__GT_vec_tree = (function frontend$modules$outliner$tree$blocks__GT_vec_tree(var_args){
-var G__49975 = arguments.length;
-switch (G__49975) {
+var G__49526 = arguments.length;
+switch (G__49526) {
 case 2:
 return frontend.modules.outliner.tree.blocks__GT_vec_tree.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -348,9 +348,9 @@ return frontend.modules.outliner.tree.blocks__GT_vec_tree.cljs$core$IFn$_invoke$
 }));
 
 (frontend.modules.outliner.tree.blocks__GT_vec_tree.cljs$core$IFn$_invoke$arity$3 = (function (repo,blocks,root_id){
-var vec__49976 = frontend.modules.outliner.tree.get_root_and_page(repo,cljs.core.str.cljs$core$IFn$_invoke$arity$1(root_id));
-var page_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49976,(0),null);
-var root = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49976,(1),null);
+var vec__49527 = frontend.modules.outliner.tree.get_root_and_page(repo,cljs.core.str.cljs$core$IFn$_invoke$arity$1(root_id));
+var page_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49527,(0),null);
+var root = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49527,(1),null);
 if(cljs.core.not(root)){
 return blocks;
 } else {
@@ -358,9 +358,9 @@ var result = frontend.modules.outliner.tree.blocks__GT_vec_tree_aux(blocks,root)
 if(cljs.core.truth_(page_QMARK_)){
 return result;
 } else {
-var root_block = cljs.core.some((function (p1__49972_SHARP_){
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1(p1__49972_SHARP_),new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1(root))){
-return p1__49972_SHARP_;
+var root_block = cljs.core.some((function (p1__49524_SHARP_){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1(p1__49524_SHARP_),new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1(root))){
+return p1__49524_SHARP_;
 } else {
 return null;
 }
@@ -376,12 +376,12 @@ return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMP
 frontend.modules.outliner.tree.sort_blocks_aux = (function frontend$modules$outliner$tree$sort_blocks_aux(parents,parent_groups){
 return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (parent){
 var parent_id = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("db","id","db/id",-1388397098),new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1(parent)], null);
-var children = (function (){var G__49980 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(parent_groups),parent_id);
-var G__49981 = parent;
-return (frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2 ? frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2(G__49980,G__49981) : frontend.db.sort_by_left.call(null,G__49980,G__49981));
+var children = (function (){var G__49531 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(parent_groups),parent_id);
+var G__49532 = parent;
+return (frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2 ? frontend.db.sort_by_left.cljs$core$IFn$_invoke$arity$2(G__49531,G__49532) : frontend.db.sort_by_left.call(null,G__49531,G__49532));
 })();
-var _ = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(parent_groups,(function (p1__49979_SHARP_){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(p1__49979_SHARP_,parent_id);
+var _ = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(parent_groups,(function (p1__49530_SHARP_){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(p1__49530_SHARP_,parent_id);
 }));
 var sorted_nested_children = (cljs.core.truth_(cljs.core.not_empty(children))?(frontend.modules.outliner.tree.sort_blocks_aux.cljs$core$IFn$_invoke$arity$2 ? frontend.modules.outliner.tree.sort_blocks_aux.cljs$core$IFn$_invoke$arity$2(children,parent_groups) : frontend.modules.outliner.tree.sort_blocks_aux.call(null,children,parent_groups)):null);
 if(cljs.core.truth_(sorted_nested_children)){

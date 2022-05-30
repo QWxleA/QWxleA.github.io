@@ -18,9 +18,9 @@ logseq.graph_parser.mldoc.astExportMarkdown = logseq.graph_parser.mldoc.goog$mod
 logseq.graph_parser.mldoc.default_references = JSON.stringify(cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"embed_blocks","embed_blocks",785928846),cljs.core.PersistentVector.EMPTY,new cljs.core.Keyword(null,"embed_pages","embed_pages",94877387),cljs.core.PersistentVector.EMPTY], null)));
 logseq.graph_parser.mldoc.convert_export_md_remove_options = (function logseq$graph_parser$mldoc$convert_export_md_remove_options(opts){
 return cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.empty_QMARK_,cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (opt){
-var G__59058 = opt;
-var G__59058__$1 = (((G__59058 instanceof cljs.core.Keyword))?G__59058.fqn:null);
-switch (G__59058__$1) {
+var G__32650 = opt;
+var G__32650__$1 = (((G__32650 instanceof cljs.core.Keyword))?G__32650.fqn:null);
+switch (G__32650__$1) {
 case "page-ref":
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Page_ref"], null);
 
@@ -42,20 +42,20 @@ logseq.graph_parser.mldoc.inline_parse_json = (function logseq$graph_parser$mldo
 return (logseq.graph_parser.mldoc.parseInlineJson.cljs$core$IFn$_invoke$arity$2 ? logseq.graph_parser.mldoc.parseInlineJson.cljs$core$IFn$_invoke$arity$2(text,config) : logseq.graph_parser.mldoc.parseInlineJson.call(null,text,config));
 });
 logseq.graph_parser.mldoc.ast_export_markdown = (function logseq$graph_parser$mldoc$ast_export_markdown(ast,config,references){
-var G__59064 = ast;
-var G__59065 = config;
-var G__59066 = (function (){var or__5043__auto__ = references;
+var G__32651 = ast;
+var G__32652 = config;
+var G__32653 = (function (){var or__5043__auto__ = references;
 if(cljs.core.truth_(or__5043__auto__)){
 return or__5043__auto__;
 } else {
 return logseq.graph_parser.mldoc.default_references;
 }
 })();
-return (logseq.graph_parser.mldoc.astExportMarkdown.cljs$core$IFn$_invoke$arity$3 ? logseq.graph_parser.mldoc.astExportMarkdown.cljs$core$IFn$_invoke$arity$3(G__59064,G__59065,G__59066) : logseq.graph_parser.mldoc.astExportMarkdown.call(null,G__59064,G__59065,G__59066));
+return (logseq.graph_parser.mldoc.astExportMarkdown.cljs$core$IFn$_invoke$arity$3 ? logseq.graph_parser.mldoc.astExportMarkdown.cljs$core$IFn$_invoke$arity$3(G__32651,G__32652,G__32653) : logseq.graph_parser.mldoc.astExportMarkdown.call(null,G__32651,G__32652,G__32653));
 });
 logseq.graph_parser.mldoc.default_config = (function logseq$graph_parser$mldoc$default_config(var_args){
-var G__59071 = arguments.length;
-switch (G__59071) {
+var G__32658 = arguments.length;
+switch (G__32658) {
 case 1:
 return logseq.graph_parser.mldoc.default_config.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -74,14 +74,14 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 return logseq.graph_parser.mldoc.default_config.cljs$core$IFn$_invoke$arity$2(format,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"export-heading-to-list?","export-heading-to-list?",-596132321),false], null));
 }));
 
-(logseq.graph_parser.mldoc.default_config.cljs$core$IFn$_invoke$arity$2 = (function (format,p__59072){
-var map__59073 = p__59072;
-var map__59073__$1 = cljs.core.__destructure_map(map__59073);
-var export_heading_to_list_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__59073__$1,new cljs.core.Keyword(null,"export-heading-to-list?","export-heading-to-list?",-596132321));
-var export_keep_properties_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__59073__$1,new cljs.core.Keyword(null,"export-keep-properties?","export-keep-properties?",1001383866));
-var export_md_indent_style = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__59073__$1,new cljs.core.Keyword(null,"export-md-indent-style","export-md-indent-style",481813710));
-var export_md_remove_options = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__59073__$1,new cljs.core.Keyword(null,"export-md-remove-options","export-md-remove-options",-1015252352));
-var parse_outline_only_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__59073__$1,new cljs.core.Keyword(null,"parse_outline_only?","parse_outline_only?",-731229637));
+(logseq.graph_parser.mldoc.default_config.cljs$core$IFn$_invoke$arity$2 = (function (format,p__32659){
+var map__32660 = p__32659;
+var map__32660__$1 = cljs.core.__destructure_map(map__32660);
+var export_heading_to_list_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__32660__$1,new cljs.core.Keyword(null,"export-heading-to-list?","export-heading-to-list?",-596132321));
+var export_keep_properties_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__32660__$1,new cljs.core.Keyword(null,"export-keep-properties?","export-keep-properties?",1001383866));
+var export_md_indent_style = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__32660__$1,new cljs.core.Keyword(null,"export-md-indent-style","export-md-indent-style",481813710));
+var export_md_remove_options = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__32660__$1,new cljs.core.Keyword(null,"export-md-remove-options","export-md-remove-options",-1015252352));
+var parse_outline_only_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__32660__$1,new cljs.core.Keyword(null,"parse_outline_only?","parse_outline_only?",-731229637));
 var format__$1 = clojure.string.capitalize(cljs.core.name((function (){var or__5043__auto__ = format;
 if(cljs.core.truth_(or__5043__auto__)){
 return or__5043__auto__;
@@ -89,8 +89,8 @@ return or__5043__auto__;
 return new cljs.core.Keyword(null,"markdown","markdown",1227225089);
 }
 })()));
-return JSON.stringify(cljs_bean.core.__GT_js(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__59068_SHARP_){
-return (!((cljs.core.second(p1__59068_SHARP_) == null)));
+return JSON.stringify(cljs_bean.core.__GT_js(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__32654_SHARP_){
+return (!((cljs.core.second(p1__32654_SHARP_) == null)));
 }),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"toc","toc",2050089251),new cljs.core.Keyword(null,"export_md_indent_style","export_md_indent_style",-323704308),new cljs.core.Keyword(null,"exporting_keep_properties","exporting_keep_properties",-955323347),new cljs.core.Keyword(null,"parse_outline_only","parse_outline_only",-1224318063),new cljs.core.Keyword(null,"export_md_remove_options","export_md_remove_options",-1267687277),new cljs.core.Keyword(null,"heading_to_list","heading_to_list",-525406087),new cljs.core.Keyword(null,"heading_number","heading_number",1357313628),new cljs.core.Keyword(null,"keep_line_break","keep_line_break",-1954057059)],[format__$1,false,export_md_indent_style,export_keep_properties_QMARK_,(function (){var or__5043__auto__ = parse_outline_only_QMARK_;
 if(cljs.core.truth_(or__5043__auto__)){
 return or__5043__auto__;
@@ -110,12 +110,12 @@ return false;
 
 logseq.graph_parser.mldoc.remove_indentation_spaces = (function logseq$graph_parser$mldoc$remove_indentation_spaces(s,level,remove_first_line_QMARK_){
 var lines = clojure.string.split_lines(s);
-var vec__59082 = lines;
-var seq__59083 = cljs.core.seq(vec__59082);
-var first__59084 = cljs.core.first(seq__59083);
-var seq__59083__$1 = cljs.core.next(seq__59083);
-var f = first__59084;
-var r = seq__59083__$1;
+var vec__32661 = lines;
+var seq__32662 = cljs.core.seq(vec__32661);
+var first__32663 = cljs.core.first(seq__32662);
+var seq__32662__$1 = cljs.core.next(seq__32662);
+var f = first__32663;
+var r = seq__32662__$1;
 var body = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (line){
 if(clojure.string.blank_QMARK_(logseq.graph_parser.util.safe_subs.cljs$core$IFn$_invoke$arity$3(line,(0),level))){
 return logseq.graph_parser.util.safe_subs.cljs$core$IFn$_invoke$arity$2(line,level);
@@ -128,15 +128,15 @@ return clojure.string.join.cljs$core$IFn$_invoke$arity$2("\n",content);
 });
 logseq.graph_parser.mldoc.update_src_full_content = (function logseq$graph_parser$mldoc$update_src_full_content(ast,content){
 var content__$1 = logseq.graph_parser.utf8.encode(content);
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__59087){
-var vec__59088 = p__59087;
-var block = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59088,(0),null);
-var pos_meta = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59088,(1),null);
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__32664){
+var vec__32665 = p__32664;
+var block = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32665,(0),null);
+var pos_meta = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32665,(1),null);
 if(((cljs.core.vector_QMARK_(block)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Src",cljs.core.first(block))))){
-var map__59091 = pos_meta;
-var map__59091__$1 = cljs.core.__destructure_map(map__59091);
-var start_pos = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__59091__$1,new cljs.core.Keyword(null,"start_pos","start_pos",272375959));
-var end_pos = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__59091__$1,new cljs.core.Keyword(null,"end_pos","end_pos",-1418940));
+var map__32668 = pos_meta;
+var map__32668__$1 = cljs.core.__destructure_map(map__32668);
+var start_pos = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__32668__$1,new cljs.core.Keyword(null,"start_pos","start_pos",272375959));
+var end_pos = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__32668__$1,new cljs.core.Keyword(null,"end_pos","end_pos",-1418940));
 var content__$2 = logseq.graph_parser.utf8.substring.cljs$core$IFn$_invoke$arity$3(content__$1,start_pos,end_pos);
 var spaces = cljs.core.re_find(/^[\t ]+/,cljs.core.first(clojure.string.split_lines(content__$2)));
 var content__$3 = (cljs.core.truth_(spaces)?logseq.graph_parser.mldoc.remove_indentation_spaces(content__$2,cljs.core.count(spaces),true):content__$2);
@@ -156,14 +156,14 @@ return s;
 });
 logseq.graph_parser.mldoc.__GT_vec_concat = (function logseq$graph_parser$mldoc$__GT_vec_concat(var_args){
 var args__5772__auto__ = [];
-var len__5766__auto___59185 = arguments.length;
-var i__5767__auto___59186 = (0);
+var len__5766__auto___32710 = arguments.length;
+var i__5767__auto___32711 = (0);
 while(true){
-if((i__5767__auto___59186 < len__5766__auto___59185)){
-args__5772__auto__.push((arguments[i__5767__auto___59186]));
+if((i__5767__auto___32711 < len__5766__auto___32710)){
+args__5772__auto__.push((arguments[i__5767__auto___32711]));
 
-var G__59187 = (i__5767__auto___59186 + (1));
-i__5767__auto___59186 = G__59187;
+var G__32712 = (i__5767__auto___32711 + (1));
+i__5767__auto___32711 = G__32712;
 continue;
 } else {
 }
@@ -181,30 +181,30 @@ return cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(cljs.core.apply.cljs$cor
 (logseq.graph_parser.mldoc.__GT_vec_concat.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(logseq.graph_parser.mldoc.__GT_vec_concat.cljs$lang$applyTo = (function (seq59095){
+(logseq.graph_parser.mldoc.__GT_vec_concat.cljs$lang$applyTo = (function (seq32669){
 var self__5752__auto__ = this;
-return self__5752__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq59095));
+return self__5752__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq32669));
 }));
 
 logseq.graph_parser.mldoc.collect_page_properties = (function logseq$graph_parser$mldoc$collect_page_properties(ast,parse_property,config_state){
 if(cljs.core.seq(ast)){
 var original_ast = ast;
 var ast__$1 = cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.first,ast);
-var directive_QMARK_ = (function (p__59102){
-var vec__59103 = p__59102;
-var item = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59103,(0),null);
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59103,(1),null);
+var directive_QMARK_ = (function (p__32677){
+var vec__32678 = p__32677;
+var item = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32678,(0),null);
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32678,(1),null);
 return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("directive",clojure.string.lower_case(cljs.core.first(item)));
 });
 var grouped_ast = cljs.core.group_by(directive_QMARK_,original_ast);
 var directive_ast = cljs.core.take_while.cljs$core$IFn$_invoke$arity$2(directive_QMARK_,original_ast);
-var vec__59099 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Property_Drawer",cljs.core.ffirst(ast__$1)))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.last(cljs.core.first(ast__$1)),cljs.core.rest(original_ast)], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.rest,cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.first,directive_ast)),cljs.core.get.cljs$core$IFn$_invoke$arity$2(grouped_ast,false)], null));
-var properties_ast = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59099,(0),null);
-var other_ast = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59099,(1),null);
-var properties = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__59106){
-var vec__59107 = p__59106;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59107,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59107,(1),null);
+var vec__32674 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Property_Drawer",cljs.core.ffirst(ast__$1)))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.last(cljs.core.first(ast__$1)),cljs.core.rest(original_ast)], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.rest,cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.first,directive_ast)),cljs.core.get.cljs$core$IFn$_invoke$arity$2(grouped_ast,false)], null));
+var properties_ast = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32674,(0),null);
+var other_ast = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32674,(1),null);
+var properties = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__32681){
+var vec__32682 = p__32681;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32682,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32682,(1),null);
 var k__$1 = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(clojure.string.lower_case(k));
 var v__$1 = ((cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"description","description",-1428560544),null,new cljs.core.Keyword(null,"filters","filters",974726919),null,new cljs.core.Keyword(null,"title","title",636505583),null,new cljs.core.Keyword(null,"macro","macro",-867863404),null], null), null),k__$1))?v:(parse_property.cljs$core$IFn$_invoke$arity$3 ? parse_property.cljs$core$IFn$_invoke$arity$3(k__$1,v,config_state) : parse_property.call(null,k__$1,v,config_state)));
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [k__$1,v__$1], null);
@@ -213,23 +213,23 @@ var properties__$1 = cljs.core.into.cljs$core$IFn$_invoke$arity$2(linked.core.ma
 var macro_properties = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (x){
 return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"macro","macro",-867863404),cljs.core.first(x));
 }),properties__$1);
-var macros = ((cljs.core.seq(macro_properties))?cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__59110){
-var vec__59111 = p__59110;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59111,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59111,(1),null);
-var vec__59116 = logseq.graph_parser.util.split_first(" ",v);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59116,(0),null);
-var v__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59116,(1),null);
+var macros = ((cljs.core.seq(macro_properties))?cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__32685){
+var vec__32686 = p__32685;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32686,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32686,(1),null);
+var vec__32689 = logseq.graph_parser.util.split_first(" ",v);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32689,(0),null);
+var v__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32689,(1),null);
 return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [k,v__$1], null));
 }),macro_properties)):cljs.core.PersistentArrayMap.EMPTY);
 var properties__$2 = cljs.core.into.cljs$core$IFn$_invoke$arity$2(linked.core.map.cljs$core$IFn$_invoke$arity$0(),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (x){
 return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"macro","macro",-867863404),cljs.core.first(x));
 }),properties__$1));
-var properties__$3 = (function (){var G__59125 = properties__$2;
+var properties__$3 = (function (){var G__32692 = properties__$2;
 if(cljs.core.seq(macros)){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__59125,new cljs.core.Keyword(null,"macros","macros",811339431),macros);
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__32692,new cljs.core.Keyword(null,"macros","macros",811339431),macros);
 } else {
-return G__59125;
+return G__32692;
 }
 })();
 var alias = new cljs.core.Keyword(null,"alias","alias",-2039751630).cljs$core$IFn$_invoke$arity$1(properties__$3);
@@ -246,10 +246,10 @@ var tags = new cljs.core.Keyword(null,"tags","tags",1771418977).cljs$core$IFn$_i
 var tags__$1 = cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,logseq.graph_parser.mldoc.__GT_vec_concat.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([tags,filetags], 0)));
 var properties__$4 = cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(properties__$3,new cljs.core.Keyword(null,"tags","tags",1771418977),tags__$1,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"alias","alias",-2039751630),alias__$1], 0));
 var properties__$5 = cljs.core.update.cljs$core$IFn$_invoke$arity$3(properties__$4,new cljs.core.Keyword(null,"filetags","filetags",-1157605850),cljs.core.constantly(filetags));
-var properties__$6 = cljs.core.into.cljs$core$IFn$_invoke$arity$2(linked.core.map.cljs$core$IFn$_invoke$arity$0(),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p__59141){
-var vec__59142 = p__59141;
-var _k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59142,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59142,(1),null);
+var properties__$6 = cljs.core.into.cljs$core$IFn$_invoke$arity$2(linked.core.map.cljs$core$IFn$_invoke$arity$0(),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p__32693){
+var vec__32694 = p__32693;
+var _k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32694,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32694,(1),null);
 return (((v == null)) || (((cljs.core.coll_QMARK_(v)) && (cljs.core.empty_QMARK_(v)))));
 }),properties__$5));
 if(cljs.core.seq(properties__$6)){
@@ -269,7 +269,7 @@ return cljs.core.PersistentVector.EMPTY;
 } else {
 return logseq.graph_parser.mldoc.collect_page_properties(logseq.graph_parser.mldoc.update_src_full_content(logseq.graph_parser.util.json__GT_clj(logseq.graph_parser.mldoc.parse_json(content,config)),content),logseq.graph_parser.mldoc.parse_property,config_state);
 }
-}catch (e59146){var e = e59146;
+}catch (e32698){var e = e32698;
 lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("logseq.graph-parser.mldoc",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"unexpected-error","unexpected-error",1973845951),e,new cljs.core.Keyword(null,"line","line",212345235),184], null)),null);
 
 return cljs.core.PersistentVector.EMPTY;
@@ -283,17 +283,17 @@ return cljs.core.PersistentArrayMap.EMPTY;
 } else {
 return logseq.graph_parser.util.json__GT_clj(logseq.graph_parser.mldoc.inline_parse_json(text,config));
 }
-}catch (e59162){var _e = e59162;
+}catch (e32701){var _e = e32701;
 return cljs.core.PersistentVector.EMPTY;
 }});
 logseq.graph_parser.mldoc.link_QMARK_ = (function logseq$graph_parser$mldoc$link_QMARK_(format,link){
 if(typeof link === 'string'){
-var vec__59164 = cljs.core.first(logseq.graph_parser.mldoc.inline__GT_edn(link,logseq.graph_parser.mldoc.default_config.cljs$core$IFn$_invoke$arity$1(format)));
-var type = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59164,(0),null);
-var link__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59164,(1),null);
-var vec__59167 = new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(link__$1);
-var ref_type = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59167,(0),null);
-var ref_value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59167,(1),null);
+var vec__32702 = cljs.core.first(logseq.graph_parser.mldoc.inline__GT_edn(link,logseq.graph_parser.mldoc.default_config.cljs$core$IFn$_invoke$arity$1(format)));
+var type = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32702,(0),null);
+var link__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32702,(1),null);
+var vec__32705 = new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(link__$1);
+var ref_type = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32705,(0),null);
+var ref_value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32705,(1),null);
 return ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Link",type)) && ((((!(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Page_ref",null,"Block_ref",null], null), null),ref_type)))) || (((cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, ["Page_ref",null], null), null),ref_type)) && (((logseq.graph_parser.config.draw_QMARK_(ref_value)) || (cljs.core.boolean$(logseq.graph_parser.config.local_asset_QMARK_(ref_value))))))))));
 } else {
 return null;

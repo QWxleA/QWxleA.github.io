@@ -15,10 +15,10 @@ var and__5041__auto__ = typeof s === 'string';
 if(and__5041__auto__){
 var or__5043__auto__ = (function (){var temp__5720__auto__ = cljs.core.re_matches(logseq.graph_parser.text.markdown_page_ref_re,s);
 if(cljs.core.truth_(temp__5720__auto__)){
-var vec__59178 = temp__5720__auto__;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59178,(0),null);
-var label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59178,(1),null);
-var _path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59178,(2),null);
+var vec__32716 = temp__5720__auto__;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32716,(0),null);
+var label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32716,(1),null);
+var _path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32716,(2),null);
 return clojure.string.trim(label);
 } else {
 return null;
@@ -29,15 +29,15 @@ return or__5043__auto__;
 } else {
 var or__5043__auto____$1 = (function (){var temp__5720__auto__ = cljs.core.re_matches(logseq.graph_parser.text.org_page_ref_re,s);
 if(cljs.core.truth_(temp__5720__auto__)){
-var vec__59181 = temp__5720__auto__;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59181,(0),null);
-var path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59181,(1),null);
-var _label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59181,(2),null);
-var G__59184 = logseq.graph_parser.text.get_file_basename(path);
-if((G__59184 == null)){
+var vec__32719 = temp__5720__auto__;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32719,(0),null);
+var path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32719,(1),null);
+var _label = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32719,(2),null);
+var G__32722 = logseq.graph_parser.text.get_file_basename(path);
+if((G__32722 == null)){
 return null;
 } else {
-return clojure.string.replace(G__59184,".","/");
+return clojure.string.replace(G__32722,".","/");
 }
 } else {
 return null;
@@ -102,12 +102,12 @@ return null;
 });
 logseq.graph_parser.text.sep_by_comma = (function logseq$graph_parser$text$sep_by_comma(s){
 if(cljs.core.truth_(s)){
-var G__59188 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/[\,|，]{1}/);
-var G__59188__$1 = (((G__59188 == null))?null:cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,G__59188));
-if((G__59188__$1 == null)){
+var G__32723 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/[\,|，]{1}/);
+var G__32723__$1 = (((G__32723 == null))?null:cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,G__32723));
+if((G__32723__$1 == null)){
 return null;
 } else {
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,G__59188__$1);
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,G__32723__$1);
 }
 } else {
 return null;
@@ -115,12 +115,12 @@ return null;
 });
 logseq.graph_parser.text.sep_by_hashtag = (function logseq$graph_parser$text$sep_by_hashtag(s){
 if(cljs.core.truth_(s)){
-var G__59189 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/#/);
-var G__59189__$1 = (((G__59189 == null))?null:cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,G__59189));
-if((G__59189__$1 == null)){
+var G__32725 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(s,/#/);
+var G__32725__$1 = (((G__32725 == null))?null:cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,G__32725));
+if((G__32725__$1 == null)){
 return null;
 } else {
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,G__59189__$1);
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.trim,G__32725__$1);
 }
 } else {
 return null;
@@ -144,10 +144,10 @@ return null;
 }
 });
 logseq.graph_parser.text.concat_nested_pages = (function logseq$graph_parser$text$concat_nested_pages(coll){
-return cljs.core.first(cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p__59190,s){
-var vec__59191 = p__59190;
-var acc = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59191,(0),null);
-var not_matched_s = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__59191,(1),null);
+return cljs.core.first(cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p__32729,s){
+var vec__32730 = p__32729;
+var acc = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32730,(0),null);
+var not_matched_s = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32730,(1),null);
 if(cljs.core.truth_((function (){var and__5041__auto__ = not_matched_s;
 if(cljs.core.truth_(and__5041__auto__)){
 return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(s,"]]");
@@ -202,8 +202,8 @@ return cljs.core.re_find(logseq.graph_parser.text.bilibili_regex,url);
 });
 logseq.graph_parser.text.markdown_link = /\[([^\[]+)\](\(.*\))/;
 logseq.graph_parser.text.split_page_refs_without_brackets = (function logseq$graph_parser$text$split_page_refs_without_brackets(var_args){
-var G__59196 = arguments.length;
-switch (G__59196) {
+var G__32737 = arguments.length;
+switch (G__32737) {
 case 1:
 return logseq.graph_parser.text.split_page_refs_without_brackets.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -222,10 +222,10 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 return logseq.graph_parser.text.split_page_refs_without_brackets.cljs$core$IFn$_invoke$arity$2(s,cljs.core.PersistentArrayMap.EMPTY);
 }));
 
-(logseq.graph_parser.text.split_page_refs_without_brackets.cljs$core$IFn$_invoke$arity$2 = (function (s,p__59197){
-var map__59198 = p__59197;
-var map__59198__$1 = cljs.core.__destructure_map(map__59198);
-var un_brackets_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__59198__$1,new cljs.core.Keyword(null,"un-brackets?","un-brackets?",518613875),true);
+(logseq.graph_parser.text.split_page_refs_without_brackets.cljs$core$IFn$_invoke$arity$2 = (function (s,p__32738){
+var map__32739 = p__32738;
+var map__32739__$1 = cljs.core.__destructure_map(map__32739);
+var un_brackets_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__32739__$1,new cljs.core.Keyword(null,"un-brackets?","un-brackets?",518613875),true);
 if(((typeof s === 'string') && (logseq.graph_parser.util.wrapped_by_quotes_QMARK_(s)))){
 return logseq.graph_parser.util.unquote_string(s);
 } else {
@@ -267,8 +267,8 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 } else {
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [s__$1], null);
 }
-}),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__59194_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(p1__59194_SHARP_,"");
+}),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__32733_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(p1__32733_SHARP_,"");
 }),cljs.core.mapcat.cljs$core$IFn$_invoke$arity$variadic((function (s__$1){
 if(logseq.graph_parser.util.wrapped_by_quotes_QMARK_(s__$1)){
 return null;
@@ -313,8 +313,8 @@ var text__$1 = (cljs.core.truth_(trim_left_QMARK_)?clojure.string.triml(text):te
 return clojure.string.replace_first(text__$1,cljs.core.re_pattern(pattern__$1),"");
 });
 logseq.graph_parser.text.remove_level_spaces = (function logseq$graph_parser$text$remove_level_spaces(var_args){
-var G__59200 = arguments.length;
-switch (G__59200) {
+var G__32741 = arguments.length;
+switch (G__32741) {
 case 3:
 return logseq.graph_parser.text.remove_level_spaces.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -416,10 +416,10 @@ while(true){
 var temp__5718__auto__ = clojure.string.index_of.cljs$core$IFn$_invoke$arity$3(s,value,i);
 if(cljs.core.truth_(temp__5718__auto__)){
 var i__$1 = temp__5718__auto__;
-var G__59206 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(acc,i__$1);
-var G__59207 = (i__$1 + cljs.core.count(value));
-acc = G__59206;
-i = G__59207;
+var G__32767 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(acc,i__$1);
+var G__32768 = (i__$1 + cljs.core.count(value));
+acc = G__32767;
+i = G__32768;
 continue;
 } else {
 return acc;
@@ -474,8 +474,8 @@ if((typeof logseq !== 'undefined') && (typeof logseq.graph_parser !== 'undefined
 logseq.graph_parser.text.non_parsing_properties = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["background-color",null,"background_color",null], null), null));
 }
 logseq.graph_parser.text.parse_property = (function logseq$graph_parser$text$parse_property(var_args){
-var G__59202 = arguments.length;
-switch (G__59202) {
+var G__32749 = arguments.length;
+switch (G__32749) {
 case 3:
 return logseq.graph_parser.text.parse_property.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
