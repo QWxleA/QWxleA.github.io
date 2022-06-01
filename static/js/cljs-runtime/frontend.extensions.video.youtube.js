@@ -39,7 +39,7 @@ return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(players,id,player);
 } else {
 return null;
 }
-}catch (e48910){var _e = e48910;
+}catch (e49153){var _e = e49153;
 return null;
 }});
 frontend.extensions.video.youtube.youtube_video = rum.core.lazy_build(rum.core.build_defcs,(function (state,id){
@@ -50,24 +50,24 @@ return ((x__5131__auto__ < y__5132__auto__) ? x__5131__auto__ : y__5132__auto__)
 var height = ((width * ((315) / (560))) | (0));
 return daiquiri.core.create_element("iframe",{'id':["youtube-player-",cljs.core.str.cljs$core$IFn$_invoke$arity$1(id)].join(''),'allowFullScreen':"allowfullscreen",'allow':"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope",'frameBorder':"0",'src':["https://www.youtube.com/embed/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(id),"?enablejsapi=1"].join(''),'height':height,'width':width},[]);
 }),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive,rum.core.local.cljs$core$IFn$_invoke$arity$2(null,new cljs.core.Keyword("frontend.extensions.video.youtube","player","frontend.extensions.video.youtube/player",-814163162)),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"did-mount","did-mount",918232960),(function (state){
-var c__27595__auto___48945 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
+var c__27595__auto___49200 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
 cljs.core.async.impl.dispatch.run((function (){
-var f__27596__auto__ = (function (){var switch__27572__auto__ = (function (state_48916){
-var state_val_48917 = (state_48916[(1)]);
-if((state_val_48917 === (1))){
-var inst_48911 = frontend.extensions.video.youtube.load_youtube_api();
-var state_48916__$1 = state_48916;
-return cljs.core.async.impl.ioc_helpers.take_BANG_(state_48916__$1,(2),inst_48911);
+var f__27596__auto__ = (function (){var switch__27572__auto__ = (function (state_49160){
+var state_val_49161 = (state_49160[(1)]);
+if((state_val_49161 === (1))){
+var inst_49155 = frontend.extensions.video.youtube.load_youtube_api();
+var state_49160__$1 = state_49160;
+return cljs.core.async.impl.ioc_helpers.take_BANG_(state_49160__$1,(2),inst_49155);
 } else {
-if((state_val_48917 === (2))){
-var inst_48913 = (state_48916[(2)]);
-var inst_48914 = frontend.extensions.video.youtube.register_player(state);
-var state_48916__$1 = (function (){var statearr_48918 = state_48916;
-(statearr_48918[(7)] = inst_48913);
+if((state_val_49161 === (2))){
+var inst_49157 = (state_49160[(2)]);
+var inst_49158 = frontend.extensions.video.youtube.register_player(state);
+var state_49160__$1 = (function (){var statearr_49166 = state_49160;
+(statearr_49166[(7)] = inst_49157);
 
-return statearr_48918;
+return statearr_49166;
 })();
-return cljs.core.async.impl.ioc_helpers.return_chan(state_48916__$1,inst_48914);
+return cljs.core.async.impl.ioc_helpers.return_chan(state_49160__$1,inst_49158);
 } else {
 return null;
 }
@@ -76,17 +76,17 @@ return null;
 return (function() {
 var frontend$extensions$video$youtube$state_machine__27573__auto__ = null;
 var frontend$extensions$video$youtube$state_machine__27573__auto____0 = (function (){
-var statearr_48919 = [null,null,null,null,null,null,null,null];
-(statearr_48919[(0)] = frontend$extensions$video$youtube$state_machine__27573__auto__);
+var statearr_49173 = [null,null,null,null,null,null,null,null];
+(statearr_49173[(0)] = frontend$extensions$video$youtube$state_machine__27573__auto__);
 
-(statearr_48919[(1)] = (1));
+(statearr_49173[(1)] = (1));
 
-return statearr_48919;
+return statearr_49173;
 });
-var frontend$extensions$video$youtube$state_machine__27573__auto____1 = (function (state_48916){
+var frontend$extensions$video$youtube$state_machine__27573__auto____1 = (function (state_49160){
 while(true){
 var ret_value__27574__auto__ = (function (){try{while(true){
-var result__27575__auto__ = switch__27572__auto__(state_48916);
+var result__27575__auto__ = switch__27572__auto__(state_49160);
 if(cljs.core.keyword_identical_QMARK_(result__27575__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
 continue;
 } else {
@@ -94,14 +94,14 @@ return result__27575__auto__;
 }
 break;
 }
-}catch (e48920){var ex__27576__auto__ = e48920;
-var statearr_48921_48946 = state_48916;
-(statearr_48921_48946[(2)] = ex__27576__auto__);
+}catch (e49177){var ex__27576__auto__ = e49177;
+var statearr_49178_49201 = state_49160;
+(statearr_49178_49201[(2)] = ex__27576__auto__);
 
 
-if(cljs.core.seq((state_48916[(4)]))){
-var statearr_48922_48947 = state_48916;
-(statearr_48922_48947[(1)] = cljs.core.first((state_48916[(4)])));
+if(cljs.core.seq((state_49160[(4)]))){
+var statearr_49179_49202 = state_49160;
+(statearr_49179_49202[(1)] = cljs.core.first((state_49160[(4)])));
 
 } else {
 throw ex__27576__auto__;
@@ -110,8 +110,8 @@ throw ex__27576__auto__;
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 }})();
 if(cljs.core.keyword_identical_QMARK_(ret_value__27574__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
-var G__48948 = state_48916;
-state_48916 = G__48948;
+var G__49203 = state_49160;
+state_49160 = G__49203;
 continue;
 } else {
 return ret_value__27574__auto__;
@@ -119,12 +119,12 @@ return ret_value__27574__auto__;
 break;
 }
 });
-frontend$extensions$video$youtube$state_machine__27573__auto__ = function(state_48916){
+frontend$extensions$video$youtube$state_machine__27573__auto__ = function(state_49160){
 switch(arguments.length){
 case 0:
 return frontend$extensions$video$youtube$state_machine__27573__auto____0.call(this);
 case 1:
-return frontend$extensions$video$youtube$state_machine__27573__auto____1.call(this,state_48916);
+return frontend$extensions$video$youtube$state_machine__27573__auto____1.call(this,state_49160);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -133,10 +133,10 @@ frontend$extensions$video$youtube$state_machine__27573__auto__.cljs$core$IFn$_in
 return frontend$extensions$video$youtube$state_machine__27573__auto__;
 })()
 })();
-var state__27597__auto__ = (function (){var statearr_48923 = f__27596__auto__();
-(statearr_48923[(6)] = c__27595__auto___48945);
+var state__27597__auto__ = (function (){var statearr_49183 = f__27596__auto__();
+(statearr_49183[(6)] = c__27595__auto___49200);
 
-return statearr_48923;
+return statearr_49183;
 })();
 return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__27597__auto__);
 }));
@@ -167,8 +167,8 @@ frontend.extensions.video.youtube.dom_after_video_node_QMARK_ = (function fronte
 return (!(((video_node.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_FOLLOWING) === (0))));
 });
 frontend.extensions.video.youtube.get_player = (function frontend$extensions$video$youtube$get_player(target){
-var temp__5720__auto__ = cljs.core.last(cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__48927_SHARP_){
-return frontend.extensions.video.youtube.dom_after_video_node_QMARK_(p1__48927_SHARP_,target);
+var temp__5720__auto__ = cljs.core.last(cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__49186_SHARP_){
+return frontend.extensions.video.youtube.dom_after_video_node_QMARK_(p1__49186_SHARP_,target);
 }),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (node){
 var src = frontend.extensions.video.youtube.goog$module$goog$object.get(node,"src","");
 return clojure.string.includes_QMARK_(src,"youtube.com");
@@ -215,15 +215,15 @@ var reg = /^(?:(\d+):)?([0-5]\d):([0-5]\d)$/;
 var reg_number = /^\d+$/;
 var timestamp__$1 = cljs.core.str.cljs$core$IFn$_invoke$arity$1(timestamp);
 var total_seconds = frontend.util.safe_parse_int(cljs.core.re_matches(reg_number,timestamp__$1));
-var vec__48936 = cljs.core.re_matches(reg,timestamp__$1);
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__48936,(0),null);
-var hours = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__48936,(1),null);
-var minutes = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__48936,(2),null);
-var seconds = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__48936,(3),null);
-var vec__48939 = cljs.core.map.cljs$core$IFn$_invoke$arity$2(frontend.util.safe_parse_int,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [hours,minutes,seconds], null));
-var hours__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__48939,(0),null);
-var minutes__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__48939,(1),null);
-var seconds__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__48939,(2),null);
+var vec__49194 = cljs.core.re_matches(reg,timestamp__$1);
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49194,(0),null);
+var hours = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49194,(1),null);
+var minutes = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49194,(2),null);
+var seconds = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49194,(3),null);
+var vec__49197 = cljs.core.map.cljs$core$IFn$_invoke$arity$2(frontend.util.safe_parse_int,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [hours,minutes,seconds], null));
+var hours__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49197,(0),null);
+var minutes__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49197,(1),null);
+var seconds__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49197,(2),null);
 if(cljs.core.truth_(total_seconds)){
 return total_seconds;
 } else {

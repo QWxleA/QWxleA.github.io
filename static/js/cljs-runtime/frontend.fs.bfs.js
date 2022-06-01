@@ -32,13 +32,13 @@ var this__5340__auto____$1 = this;
 return this__5340__auto____$1.cljs$core$ILookup$_lookup$arity$3(null,k__5341__auto__,null);
 }));
 
-(frontend.fs.bfs.Bfs.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__5342__auto__,k43564,else__5343__auto__){
+(frontend.fs.bfs.Bfs.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__5342__auto__,k43548,else__5343__auto__){
 var self__ = this;
 var this__5342__auto____$1 = this;
-var G__43569 = k43564;
-switch (G__43569) {
+var G__43552 = k43548;
+switch (G__43552) {
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k43564,else__5343__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k43548,else__5343__auto__);
 
 }
 }));
@@ -46,10 +46,10 @@ return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k43564,else__
 (frontend.fs.bfs.Bfs.prototype.cljs$core$IKVReduce$_kv_reduce$arity$3 = (function (this__5360__auto__,f__5361__auto__,init__5362__auto__){
 var self__ = this;
 var this__5360__auto____$1 = this;
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__5363__auto__,p__43570){
-var vec__43571 = p__43570;
-var k__5364__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__43571,(0),null);
-var v__5365__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__43571,(1),null);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__5363__auto__,p__43553){
+var vec__43554 = p__43553;
+var k__5364__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__43554,(0),null);
+var v__5365__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__43554,(1),null);
 return (f__5361__auto__.cljs$core$IFn$_invoke$arity$3 ? f__5361__auto__.cljs$core$IFn$_invoke$arity$3(ret__5363__auto__,k__5364__auto__,v__5365__auto__) : f__5361__auto__.call(null,ret__5363__auto__,k__5364__auto__,v__5365__auto__));
 }),init__5362__auto__,this__5360__auto____$1);
 }));
@@ -63,10 +63,10 @@ return cljs.core.pr_sequential_writer(writer__5356__auto__,cljs.core.pr_writer,"
 return cljs.core.pr_sequential_writer(writer__5356__auto__,pr_pair__5358__auto__,"#frontend.fs.bfs.Bfs{",", ","}",opts__5357__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,self__.__extmap));
 }));
 
-(frontend.fs.bfs.Bfs.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__43563){
+(frontend.fs.bfs.Bfs.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__43547){
 var self__ = this;
-var G__43563__$1 = this;
-return (new cljs.core.RecordIter((0),G__43563__$1,0,cljs.core.PersistentVector.EMPTY,(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
+var G__43547__$1 = this;
+return (new cljs.core.RecordIter((0),G__43547__$1,0,cljs.core.PersistentVector.EMPTY,(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
 }));
 
 (frontend.fs.bfs.Bfs.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__5338__auto__){
@@ -103,10 +103,10 @@ return h__5152__auto____$1;
 }
 }));
 
-(frontend.fs.bfs.Bfs.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this43565,other43566){
+(frontend.fs.bfs.Bfs.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this43549,other43550){
 var self__ = this;
-var this43565__$1 = this;
-return (((!((other43566 == null)))) && ((((this43565__$1.constructor === other43566.constructor)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this43565__$1.__extmap,other43566.__extmap)))));
+var this43549__$1 = this;
+return (((!((other43550 == null)))) && ((((this43549__$1.constructor === other43550.constructor)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this43549__$1.__extmap,other43550.__extmap)))));
 }));
 
 (frontend.fs.bfs.Bfs.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__5350__auto__,k__5351__auto__){
@@ -119,18 +119,18 @@ return (new frontend.fs.bfs.Bfs(self__.__meta,cljs.core.not_empty(cljs.core.diss
 }
 }));
 
-(frontend.fs.bfs.Bfs.prototype.cljs$core$IAssociative$_contains_key_QMARK_$arity$2 = (function (this__5347__auto__,k43564){
+(frontend.fs.bfs.Bfs.prototype.cljs$core$IAssociative$_contains_key_QMARK_$arity$2 = (function (this__5347__auto__,k43548){
 var self__ = this;
 var this__5347__auto____$1 = this;
-return cljs.core.contains_QMARK_(self__.__extmap,k43564);
+return cljs.core.contains_QMARK_(self__.__extmap,k43548);
 }));
 
-(frontend.fs.bfs.Bfs.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__5348__auto__,k__5349__auto__,G__43563){
+(frontend.fs.bfs.Bfs.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__5348__auto__,k__5349__auto__,G__43547){
 var self__ = this;
 var this__5348__auto____$1 = this;
-var pred__43579 = cljs.core.keyword_identical_QMARK_;
-var expr__43580 = k__5349__auto__;
-return (new frontend.fs.bfs.Bfs(self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__5349__auto__,G__43563),null));
+var pred__43558 = cljs.core.keyword_identical_QMARK_;
+var expr__43559 = k__5349__auto__;
+return (new frontend.fs.bfs.Bfs(self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__5349__auto__,G__43547),null));
 }));
 
 (frontend.fs.bfs.Bfs.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__5353__auto__){
@@ -139,10 +139,10 @@ var this__5353__auto____$1 = this;
 return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,self__.__extmap));
 }));
 
-(frontend.fs.bfs.Bfs.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__5339__auto__,G__43563){
+(frontend.fs.bfs.Bfs.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__5339__auto__,G__43547){
 var self__ = this;
 var this__5339__auto____$1 = this;
-return (new frontend.fs.bfs.Bfs(G__43563,self__.__extmap,self__.__hash));
+return (new frontend.fs.bfs.Bfs(G__43547,self__.__extmap,self__.__hash));
 }));
 
 (frontend.fs.bfs.Bfs.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__5345__auto__,entry__5346__auto__){
@@ -275,12 +275,12 @@ return (new frontend.fs.bfs.Bfs(null,null,null));
 /**
  * Factory function for frontend.fs.bfs/Bfs, taking a map of keywords to field values.
  */
-frontend.fs.bfs.map__GT_Bfs = (function frontend$fs$bfs$map__GT_Bfs(G__43567){
-var extmap__5382__auto__ = (function (){var G__43583 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$1(G__43567);
-if(cljs.core.record_QMARK_(G__43567)){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__43583);
+frontend.fs.bfs.map__GT_Bfs = (function frontend$fs$bfs$map__GT_Bfs(G__43551){
+var extmap__5382__auto__ = (function (){var G__43564 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$1(G__43551);
+if(cljs.core.record_QMARK_(G__43551)){
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__43564);
 } else {
-return G__43583;
+return G__43564;
 }
 })();
 return (new frontend.fs.bfs.Bfs(null,cljs.core.not_empty(extmap__5382__auto__),null));

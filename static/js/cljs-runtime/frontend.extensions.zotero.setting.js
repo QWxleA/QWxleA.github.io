@@ -53,8 +53,8 @@ return frontend.handler.config.set_config_BANG_(new cljs.core.Keyword("zotero","
 });
 frontend.extensions.zotero.setting.set_setting_BANG_ = (function frontend$extensions$zotero$setting$set_setting_BANG_(k,v){
 var profile = frontend.extensions.zotero.setting.profile();
-var new_settings = cljs.core.update.cljs$core$IFn$_invoke$arity$3(frontend.extensions.zotero.setting.sub_zotero_config(),profile,(function (p1__57007_SHARP_){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__57007_SHARP_,k,v);
+var new_settings = cljs.core.update.cljs$core$IFn$_invoke$arity$3(frontend.extensions.zotero.setting.sub_zotero_config(),profile,(function (p1__57453_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__57453_SHARP_,k,v);
 }));
 return frontend.handler.config.set_config_BANG_(new cljs.core.Keyword("zotero","settings-v2","zotero/settings-v2",-666496103),new_settings);
 });

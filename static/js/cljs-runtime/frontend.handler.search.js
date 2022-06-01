@@ -21,8 +21,8 @@ frontend.handler.search.sanity_search_content = (function frontend$handler$searc
 return frontend.util.property.remove_built_in_properties(format,frontend.util.drawer.remove_logbook(logseq.graph_parser.text.remove_level_spaces.cljs$core$IFn$_invoke$arity$3(content,format,frontend.config.get_block_pattern(format))));
 });
 frontend.handler.search.search = (function frontend$handler$search$search(var_args){
-var G__44489 = arguments.length;
-switch (G__44489) {
+var G__44869 = arguments.length;
+switch (G__44869) {
 case 2:
 return frontend.handler.search.search.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -41,19 +41,19 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 return frontend.handler.search.search.cljs$core$IFn$_invoke$arity$3(repo,q,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"limit","limit",-1355822363),(20)], null));
 }));
 
-(frontend.handler.search.search.cljs$core$IFn$_invoke$arity$3 = (function (repo,q,p__44490){
-var map__44491 = p__44490;
-var map__44491__$1 = cljs.core.__destructure_map(map__44491);
-var opts = map__44491__$1;
-var page_db_id = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__44491__$1,new cljs.core.Keyword(null,"page-db-id","page-db-id",-761574235),null);
-var limit = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__44491__$1,new cljs.core.Keyword(null,"limit","limit",-1355822363),(20));
-var more_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44491__$1,new cljs.core.Keyword(null,"more?","more?",519437444));
+(frontend.handler.search.search.cljs$core$IFn$_invoke$arity$3 = (function (repo,q,p__44872){
+var map__44873 = p__44872;
+var map__44873__$1 = cljs.core.__destructure_map(map__44873);
+var opts = map__44873__$1;
+var page_db_id = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__44873__$1,new cljs.core.Keyword(null,"page-db-id","page-db-id",-761574235),null);
+var limit = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__44873__$1,new cljs.core.Keyword(null,"limit","limit",-1355822363),(20));
+var more_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44873__$1,new cljs.core.Keyword(null,"more?","more?",519437444));
 if(clojure.string.blank_QMARK_(q)){
 return null;
 } else {
-var page_db_id__$1 = ((typeof page_db_id === 'string')?new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1((function (){var G__44494 = repo;
-var G__44495 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),(frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1 ? frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1(page_db_id) : frontend.util.page_name_sanity_lc.call(null,page_db_id))], null);
-return (frontend.db.entity.cljs$core$IFn$_invoke$arity$2 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$2(G__44494,G__44495) : frontend.db.entity.call(null,G__44494,G__44495));
+var page_db_id__$1 = ((typeof page_db_id === 'string')?new cljs.core.Keyword("db","id","db/id",-1388397098).cljs$core$IFn$_invoke$arity$1((function (){var G__44876 = repo;
+var G__44877 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),(frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1 ? frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1(page_db_id) : frontend.util.page_name_sanity_lc.call(null,page_db_id))], null);
+return (frontend.db.entity.cljs$core$IFn$_invoke$arity$2 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$2(G__44876,G__44877) : frontend.db.entity.call(null,G__44876,G__44877));
 })()):page_db_id);
 var opts__$1 = (cljs.core.truth_(page_db_id__$1)?cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(opts,new cljs.core.Keyword(null,"page","page",849072397),cljs.core.str.cljs$core$IFn$_invoke$arity$1(page_db_id__$1)):opts);
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
@@ -70,8 +70,8 @@ return cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(frontend.state.state,c
 (frontend.handler.search.search.cljs$lang$maxFixedArity = 3);
 
 frontend.handler.search.clear_search_BANG_ = (function frontend$handler$search$clear_search_BANG_(var_args){
-var G__44500 = arguments.length;
-switch (G__44500) {
+var G__44881 = arguments.length;
+switch (G__44881) {
 case 0:
 return frontend.handler.search.clear_search_BANG_.cljs$core$IFn$_invoke$arity$0();
 
@@ -91,8 +91,8 @@ return frontend.handler.search.clear_search_BANG_.cljs$core$IFn$_invoke$arity$1(
 }));
 
 (frontend.handler.search.clear_search_BANG_.cljs$core$IFn$_invoke$arity$1 = (function (clear_search_mode_QMARK_){
-var m_44529 = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("search","result","search/result",443756363),null,new cljs.core.Keyword("search","q","search/q",-553992135),""], null);
-cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$3(frontend.state.state,cljs.core.merge,m_44529);
+var m_44917 = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("search","result","search/result",443756363),null,new cljs.core.Keyword("search","q","search/q",-553992135),""], null);
+cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$3(frontend.state.state,cljs.core.merge,m_44917);
 
 if(cljs.core.truth_((function (){var and__5041__auto__ = clear_search_mode_QMARK_;
 if(cljs.core.truth_(and__5041__auto__)){
@@ -110,8 +110,8 @@ return null;
 (frontend.handler.search.clear_search_BANG_.cljs$lang$maxFixedArity = 1);
 
 frontend.handler.search.rebuild_indices_BANG_ = (function frontend$handler$search$rebuild_indices_BANG_(var_args){
-var G__44503 = arguments.length;
-switch (G__44503) {
+var G__44888 = arguments.length;
+switch (G__44888) {
 case 0:
 return frontend.handler.search.rebuild_indices_BANG_.cljs$core$IFn$_invoke$arity$0();
 
@@ -143,8 +143,8 @@ return promesa.protocols._promise((cljs.core.truth_(notice_QMARK_)?frontend.hand
 (frontend.handler.search.rebuild_indices_BANG_.cljs$lang$maxFixedArity = 1);
 
 frontend.handler.search.rebuild_indices_when_stale_BANG_ = (function frontend$handler$search$rebuild_indices_when_stale_BANG_(var_args){
-var G__44510 = arguments.length;
-switch (G__44510) {
+var G__44891 = arguments.length;
+switch (G__44891) {
 case 0:
 return frontend.handler.search.rebuild_indices_when_stale_BANG_.cljs$core$IFn$_invoke$arity$0();
 

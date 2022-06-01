@@ -7,13 +7,13 @@ frontend.search.db.indices = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 /**
  * Convert a block to the index for searching
  */
-frontend.search.db.block__GT_index = (function frontend$search$db$block__GT_index(p__43336){
-var map__43337 = p__43336;
-var map__43337__$1 = cljs.core.__destructure_map(map__43337);
-var block = map__43337__$1;
-var uuid = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43337__$1,new cljs.core.Keyword("block","uuid","block/uuid",-1991494552));
-var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43337__$1,new cljs.core.Keyword("block","page","block/page",822314108));
-var content = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43337__$1,new cljs.core.Keyword("block","content","block/content",-161885195));
+frontend.search.db.block__GT_index = (function frontend$search$db$block__GT_index(p__43716){
+var map__43717 = p__43716;
+var map__43717__$1 = cljs.core.__destructure_map(map__43717);
+var block = map__43717__$1;
+var uuid = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43717__$1,new cljs.core.Keyword("block","uuid","block/uuid",-1991494552));
+var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43717__$1,new cljs.core.Keyword("block","page","block/page",822314108));
+var content = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43717__$1,new cljs.core.Keyword("block","content","block/content",-161885195));
 var temp__5720__auto__ = frontend.util.search_normalize(content);
 if(cljs.core.truth_(temp__5720__auto__)){
 var content__$1 = temp__5720__auto__;
@@ -43,8 +43,8 @@ frontend.search.db.make_pages_indice_BANG_ = (function frontend$search$db$make_p
 var temp__5720__auto__ = frontend.state.get_current_repo();
 if(cljs.core.truth_(temp__5720__auto__)){
 var repo = temp__5720__auto__;
-var pages = cljs_bean.core.__GT_js(cljs.core.map.cljs$core$IFn$_invoke$arity$2(frontend.search.db.original_page_name__GT_index,cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,(function (){var G__43338 = frontend.state.get_current_repo();
-return (frontend.db.get_pages.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_pages.cljs$core$IFn$_invoke$arity$1(G__43338) : frontend.db.get_pages.call(null,G__43338));
+var pages = cljs_bean.core.__GT_js(cljs.core.map.cljs$core$IFn$_invoke$arity$2(frontend.search.db.original_page_name__GT_index,cljs.core.remove.cljs$core$IFn$_invoke$arity$2(clojure.string.blank_QMARK_,(function (){var G__43718 = frontend.state.get_current_repo();
+return (frontend.db.get_pages.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_pages.cljs$core$IFn$_invoke$arity$1(G__43718) : frontend.db.get_pages.call(null,G__43718));
 })())));
 var indice = (new module$node_modules$fuse_DOT_js$dist$fuse_common(pages,cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"keys","keys",1068423698),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["name"], null),new cljs.core.Keyword(null,"shouldSort","shouldSort",-1733947834),true,new cljs.core.Keyword(null,"tokenize","tokenize",1336117716),true,new cljs.core.Keyword(null,"minMatchCharLength","minMatchCharLength",-46930554),(1),new cljs.core.Keyword(null,"distance","distance",-1671893894),(1000),new cljs.core.Keyword(null,"threshold","threshold",204221583),0.35], null))));
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(frontend.search.db.indices,cljs.core.assoc_in,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [repo,new cljs.core.Keyword(null,"pages","pages",-285406513)], null),indice);

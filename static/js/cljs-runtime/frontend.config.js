@@ -64,35 +64,35 @@ return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(frontend.config.asset_domain
 }
 });
 frontend.config.text_formats = (function frontend$config$text_formats(){
-var config_formats = (function (){var G__32815 = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.state.state),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"config","config",994861415),new cljs.core.Keyword(null,"text-formats","text-formats",-737633982)], null));
-var G__32815__$1 = (((G__32815 == null))?null:cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"keyword","keyword",811389747),G__32815));
-if((G__32815__$1 == null)){
+var config_formats = (function (){var G__33154 = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.state.state),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"config","config",994861415),new cljs.core.Keyword(null,"text-formats","text-formats",-737633982)], null));
+var G__33154__$1 = (((G__33154 == null))?null:cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"keyword","keyword",811389747),G__33154));
+if((G__33154__$1 == null)){
 return null;
 } else {
-return cljs.core.set(G__32815__$1);
+return cljs.core.set(G__33154__$1);
 }
 })();
 return clojure.set.union.cljs$core$IFn$_invoke$arity$2(config_formats,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 24, [new cljs.core.Keyword(null,"dat","dat",683898592),null,new cljs.core.Keyword(null,"markdown","markdown",1227225089),null,new cljs.core.Keyword(null,"js","js",1768080579),null,new cljs.core.Keyword(null,"txt","txt",626843688),null,new cljs.core.Keyword(null,"yml","yml",1135976041),null,new cljs.core.Keyword(null,"erl","erl",-1257006295),null,new cljs.core.Keyword(null,"excalidraw","excalidraw",-397772502),null,new cljs.core.Keyword(null,"css","css",1135045163),null,new cljs.core.Keyword(null,"asciidoc","asciidoc",1736965296),null,new cljs.core.Keyword(null,"ts","ts",1617209904),null,new cljs.core.Keyword(null,"rb","rb",1673817808),null,new cljs.core.Keyword(null,"ml","ml",1909675057),null,new cljs.core.Keyword(null,"java","java",1958249105),null,new cljs.core.Keyword(null,"c","c",-1763192079),null,new cljs.core.Keyword(null,"org","org",1495985),null,new cljs.core.Keyword(null,"ex","ex",-1413771341),null,new cljs.core.Keyword(null,"edn","edn",1317840885),null,new cljs.core.Keyword(null,"php","php",-97199496),null,new cljs.core.Keyword(null,"rst","rst",-824162183),null,new cljs.core.Keyword(null,"json","json",1279968570),null,new cljs.core.Keyword(null,"clj","clj",-660495428),null,new cljs.core.Keyword(null,"adoc","adoc",-1288345346),null,new cljs.core.Keyword(null,"html","html",-998796897),null,new cljs.core.Keyword(null,"md","md",707286655),null], null), null));
 });
 frontend.config.markup_formats = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"markdown","markdown",1227225089),null,new cljs.core.Keyword(null,"asciidoc","asciidoc",1736965296),null,new cljs.core.Keyword(null,"org","org",1495985),null,new cljs.core.Keyword(null,"rst","rst",-824162183),null,new cljs.core.Keyword(null,"adoc","adoc",-1288345346),null,new cljs.core.Keyword(null,"md","md",707286655),null], null), null);
 frontend.config.img_formats = (function frontend$config$img_formats(){
-var config_formats = (function (){var G__32817 = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.state.state),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"config","config",994861415),new cljs.core.Keyword(null,"image-formats","image-formats",-1902870378)], null));
-var G__32817__$1 = (((G__32817 == null))?null:cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"keyword","keyword",811389747),G__32817));
-if((G__32817__$1 == null)){
+var config_formats = (function (){var G__33157 = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.state.state),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"config","config",994861415),new cljs.core.Keyword(null,"image-formats","image-formats",-1902870378)], null));
+var G__33157__$1 = (((G__33157 == null))?null:cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"keyword","keyword",811389747),G__33157));
+if((G__33157__$1 == null)){
 return null;
 } else {
-return cljs.core.set(G__32817__$1);
+return cljs.core.set(G__33157__$1);
 }
 })();
 return clojure.set.union.cljs$core$IFn$_invoke$arity$2(config_formats,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"bmp","bmp",1866754050),null,new cljs.core.Keyword(null,"png","png",551930691),null,new cljs.core.Keyword(null,"gif","gif",1261828260),null,new cljs.core.Keyword(null,"webp","webp",1501869900),null,new cljs.core.Keyword(null,"svg","svg",856789142),null,new cljs.core.Keyword(null,"jpeg","jpeg",-646816934),null,new cljs.core.Keyword(null,"ico","ico",1994407291),null,new cljs.core.Keyword(null,"jpg","jpg",-1835942949),null], null), null));
 });
 frontend.config.doc_formats = (function frontend$config$doc_formats(){
-var config_formats = (function (){var G__32819 = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.state.state),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"config","config",994861415),new cljs.core.Keyword(null,"document-formats","document-formats",1220198709)], null));
-var G__32819__$1 = (((G__32819 == null))?null:cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"keyword","keyword",811389747),G__32819));
-if((G__32819__$1 == null)){
+var config_formats = (function (){var G__33160 = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(frontend.state.state),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"config","config",994861415),new cljs.core.Keyword(null,"document-formats","document-formats",1220198709)], null));
+var G__33160__$1 = (((G__33160 == null))?null:cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"keyword","keyword",811389747),G__33160));
+if((G__33160__$1 == null)){
 return null;
 } else {
-return cljs.core.set(G__32819__$1);
+return cljs.core.set(G__33160__$1);
 }
 })();
 return clojure.set.union.cljs$core$IFn$_invoke$arity$2(config_formats,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 9, [new cljs.core.Keyword(null,"one","one",935007904),null,new cljs.core.Keyword(null,"pptx","pptx",1751889346),null,new cljs.core.Keyword(null,"ppt","ppt",976691076),null,new cljs.core.Keyword(null,"xlsx","xlsx",847128521),null,new cljs.core.Keyword(null,"pdf","pdf",1586765132),null,new cljs.core.Keyword(null,"epub","epub",-826123950),null,new cljs.core.Keyword(null,"xls","xls",732635219),null,new cljs.core.Keyword(null,"doc","doc",1913296891),null,new cljs.core.Keyword(null,"docx","docx",-566057986),null], null), null));
@@ -113,9 +113,9 @@ return frontend.state.get_preferred_format.cljs$core$IFn$_invoke$arity$0();
 }
 })();
 var format__$2 = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(format__$1);
-var G__32820 = format__$2;
-var G__32820__$1 = (((G__32820 instanceof cljs.core.Keyword))?G__32820.fqn:null);
-switch (G__32820__$1) {
+var G__33170 = format__$2;
+var G__33170__$1 = (((G__33170 instanceof cljs.core.Keyword))?G__33170.fqn:null);
+switch (G__33170__$1) {
 case "org":
 return "*";
 
@@ -133,9 +133,9 @@ return or__5043__auto__;
 return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(frontend.state.get_preferred_format.cljs$core$IFn$_invoke$arity$0());
 }
 })();
-var G__32824 = format__$1;
-var G__32824__$1 = (((G__32824 instanceof cljs.core.Keyword))?G__32824.fqn:null);
-switch (G__32824__$1) {
+var G__33172 = format__$1;
+var G__33172__$1 = (((G__33172 instanceof cljs.core.Keyword))?G__33172.fqn:null);
+switch (G__33172__$1) {
 case "org":
 return "-----";
 
@@ -157,9 +157,9 @@ return or__5043__auto__;
 return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(frontend.state.get_preferred_format.cljs$core$IFn$_invoke$arity$0());
 }
 })();
-var G__32826 = format__$1;
-var G__32826__$1 = (((G__32826 instanceof cljs.core.Keyword))?G__32826.fqn:null);
-switch (G__32826__$1) {
+var G__33176 = format__$1;
+var G__33176__$1 = (((G__33176 instanceof cljs.core.Keyword))?G__33176.fqn:null);
+switch (G__33176__$1) {
 case "org":
 return "*";
 
@@ -181,9 +181,9 @@ return or__5043__auto__;
 return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(frontend.state.get_preferred_format.cljs$core$IFn$_invoke$arity$0());
 }
 })();
-var G__32830 = format__$1;
-var G__32830__$1 = (((G__32830 instanceof cljs.core.Keyword))?G__32830.fqn:null);
-switch (G__32830__$1) {
+var G__33179 = format__$1;
+var G__33179__$1 = (((G__33179 instanceof cljs.core.Keyword))?G__33179.fqn:null);
+switch (G__33179__$1) {
 case "org":
 return "/";
 
@@ -205,9 +205,9 @@ return or__5043__auto__;
 return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(frontend.state.get_preferred_format.cljs$core$IFn$_invoke$arity$0());
 }
 })();
-var G__32832 = format__$1;
-var G__32832__$1 = (((G__32832 instanceof cljs.core.Keyword))?G__32832.fqn:null);
-switch (G__32832__$1) {
+var G__33182 = format__$1;
+var G__33182__$1 = (((G__33182 instanceof cljs.core.Keyword))?G__33182.fqn:null);
+switch (G__33182__$1) {
 case "org":
 return "_";
 
@@ -229,9 +229,9 @@ return or__5043__auto__;
 return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(frontend.state.get_preferred_format.cljs$core$IFn$_invoke$arity$0());
 }
 })();
-var G__32837 = format__$1;
-var G__32837__$1 = (((G__32837 instanceof cljs.core.Keyword))?G__32837.fqn:null);
-switch (G__32837__$1) {
+var G__33187 = format__$1;
+var G__33187__$1 = (((G__33187 instanceof cljs.core.Keyword))?G__33187.fqn:null);
+switch (G__33187__$1) {
 case "org":
 return "+";
 
@@ -246,9 +246,9 @@ return "";
 }
 });
 frontend.config.get_highlight = (function frontend$config$get_highlight(format){
-var G__32839 = format;
-var G__32839__$1 = (((G__32839 instanceof cljs.core.Keyword))?G__32839.fqn:null);
-switch (G__32839__$1) {
+var G__33190 = format;
+var G__33190__$1 = (((G__33190 instanceof cljs.core.Keyword))?G__33190.fqn:null);
+switch (G__33190__$1) {
 case "org":
 return "^^";
 
@@ -270,9 +270,9 @@ return or__5043__auto__;
 return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(frontend.state.get_preferred_format.cljs$core$IFn$_invoke$arity$0());
 }
 })();
-var G__32840 = format__$1;
-var G__32840__$1 = (((G__32840 instanceof cljs.core.Keyword))?G__32840.fqn:null);
-switch (G__32840__$1) {
+var G__33193 = format__$1;
+var G__33193__$1 = (((G__33193 instanceof cljs.core.Keyword))?G__33193.fqn:null);
+switch (G__33193__$1) {
 case "org":
 return "~";
 
@@ -287,9 +287,9 @@ return "";
 }
 });
 frontend.config.get_empty_link_and_forward_pos = (function frontend$config$get_empty_link_and_forward_pos(format){
-var G__32841 = format;
-var G__32841__$1 = (((G__32841 instanceof cljs.core.Keyword))?G__32841.fqn:null);
-switch (G__32841__$1) {
+var G__33195 = format;
+var G__33195__$1 = (((G__33195 instanceof cljs.core.Keyword))?G__33195.fqn:null);
+switch (G__33195__$1) {
 case "org":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["[[][]]",(2)], null);
 
@@ -305,9 +305,9 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 });
 frontend.config.link_format = (function frontend$config$link_format(format,label,link){
 if(cljs.core.truth_(label)){
-var G__32844 = format;
-var G__32844__$1 = (((G__32844 instanceof cljs.core.Keyword))?G__32844.fqn:null);
-switch (G__32844__$1) {
+var G__33199 = format;
+var G__33199__$1 = (((G__33199 instanceof cljs.core.Keyword))?G__33199.fqn:null);
+switch (G__33199__$1) {
 case "org":
 return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s][%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([link,label], 0));
 
@@ -317,7 +317,7 @@ return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[%s](%s)",cljs
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__32844__$1)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__33199__$1)].join('')));
 
 }
 } else {
@@ -325,9 +325,9 @@ return link;
 }
 });
 frontend.config.with_default_link = (function frontend$config$with_default_link(format,link){
-var G__32845 = format;
-var G__32845__$1 = (((G__32845 instanceof cljs.core.Keyword))?G__32845.fqn:null);
-switch (G__32845__$1) {
+var G__33201 = format;
+var G__33201__$1 = (((G__33201 instanceof cljs.core.Keyword))?G__33201.fqn:null);
+switch (G__33201__$1) {
 case "org":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s][]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([link], 0)),((4) + cljs.core.count(link))], null);
 
@@ -342,9 +342,9 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 }
 });
 frontend.config.with_label_link = (function frontend$config$with_label_link(format,label,link){
-var G__32849 = format;
-var G__32849__$1 = (((G__32849 instanceof cljs.core.Keyword))?G__32849.fqn:null);
-switch (G__32849__$1) {
+var G__33203 = format;
+var G__33203__$1 = (((G__33203 instanceof cljs.core.Keyword))?G__33203.fqn:null);
+switch (G__33203__$1) {
 case "org":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[%s][%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([link,label], 0)),(((4) + cljs.core.count(link)) + cljs.core.count(label))], null);
 
@@ -359,9 +359,9 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 }
 });
 frontend.config.with_default_label = (function frontend$config$with_default_label(format,label){
-var G__32850 = format;
-var G__32850__$1 = (((G__32850 instanceof cljs.core.Keyword))?G__32850.fqn:null);
-switch (G__32850__$1) {
+var G__33204 = format;
+var G__33204__$1 = (((G__33204 instanceof cljs.core.Keyword))?G__33204.fqn:null);
+switch (G__33204__$1) {
 case "org":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("[[][%s]]",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([label], 0)),(2)], null);
 
@@ -376,9 +376,9 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 }
 });
 frontend.config.properties_wrapper_pattern = (function frontend$config$properties_wrapper_pattern(format){
-var G__32855 = format;
-var G__32855__$1 = (((G__32855 instanceof cljs.core.Keyword))?G__32855.fqn:null);
-switch (G__32855__$1) {
+var G__33207 = format;
+var G__33207__$1 = (((G__33207 instanceof cljs.core.Keyword))?G__33207.fqn:null);
+switch (G__33207__$1) {
 case "markdown":
 return "---\n%s\n---";
 
@@ -389,9 +389,9 @@ return "%s";
 }
 });
 frontend.config.get_file_extension = (function frontend$config$get_file_extension(format){
-var G__32856 = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(format);
-var G__32856__$1 = (((G__32856 instanceof cljs.core.Keyword))?G__32856.fqn:null);
-switch (G__32856__$1) {
+var G__33208 = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(format);
+var G__33208__$1 = (((G__33208 instanceof cljs.core.Keyword))?G__33208.fqn:null);
+switch (G__33208__$1) {
 case "markdown":
 return "md";
 
@@ -430,8 +430,8 @@ if((typeof frontend !== 'undefined') && (typeof frontend.config !== 'undefined')
 frontend.config.local_repo = "local";
 }
 frontend.config.demo_graph_QMARK_ = (function frontend$config$demo_graph_QMARK_(var_args){
-var G__32865 = arguments.length;
-switch (G__32865) {
+var G__33218 = arguments.length;
+switch (G__33218) {
 case 0:
 return frontend.config.demo_graph_QMARK_.cljs$core$IFn$_invoke$arity$0();
 
@@ -466,7 +466,7 @@ frontend.config.export_css_file = "export.css";
 frontend.config.custom_js_file = "custom.js";
 frontend.config.metadata_file = "metadata.edn";
 frontend.config.pages_metadata_file = "pages-metadata.edn";
-frontend.config.config_default_content = "{:meta/version 1\n\n ;; Currently, we support either \"Markdown\" or \"Org\".\n ;; This can overwrite your global preference so that\n ;; maybe your personal preferred format is Org but you'd\n ;; need to use Markdown for some projects.\n ;; :preferred-format \"\"\n\n ;; Preferred workflow style.\n ;; Value is either \":now\" for NOW/LATER style,\n ;; or \":todo\" for TODO/DOING style.\n :preferred-workflow :now\n\n ;; The app will ignore those directories or files.\n ;; E.g. \"/archived\" \"/test.md\"\n :hidden []\n\n ;; When creating the new journal page, the app will use your template if there is one.\n ;; You only need to input your template name here.\n :default-templates\n {:journals \"\"}\n\n ;; Whether to enable hover on tooltip preview feature\n ;; Default is true, you can also toggle this via setting page\n :ui/enable-tooltip? true\n\n :feature/enable-block-timestamps? false\n\n ;; Specify the date on which the week starts.\n ;; Goes from 0 to 6 (Monday to Sunday), default to 6\n :start-of-week 6\n\n ;; Specify a custom CSS import\n ;; This option take precedence over your local `logseq/custom.css` file\n ;; You may find a list of awesome logseq themes here:\n ;; https://github.com/logseq/awesome-logseq#css-themes\n ;; Example:\n ;; :custom-css-url \"@import url('https://cdn.jsdelivr.net/gh/dracula/logseq@master/custom.css');\"\n\n ;; When :all-pages-public? true, export repo would export all pages within that repo.\n ;; Regardless of whether you've set any page to public or not.\n ;; Example:\n ;; :publishing/all-pages-public? true\n\n ;; Specify default home page and sidebar status for Logseq\n ;; If not specified, Logseq default opens journals page on startup\n ;; value for `:page` is name of page\n ;; Possible options for `:sidebar` are\n ;; 1. `\"Contents\"` to open up `Contents` in sidebar by default\n ;; 2. `page name` to open up some page in sidebar\n ;; 3. Or multiple pages in an array [\"Contents\" \"Page A\" \"Page B\"]\n ;; If `:sidebar` is not set, sidebar will be hidden\n ;; Example:\n ;; 1. Setup page \"Changelog\" as home page and \"Contents\" in sidebar\n ;; :default-home {:page \"Changelog\", :sidebar \"Contents\"}\n ;; 2. Setup page \"Jun 3rd, 2021\" as home page without sidebar\n ;; :default-home {:page \"Jun 3rd, 2021\"}\n ;; 3. Setup page \"home\" as home page with multiple pages in sidebar\n ;; :default-home {:page \"home\" :sidebar [\"page a\" \"page b\"]}\n\n ;; Tell logseq to use a specific folder in the repo as a default location for notes\n ;; if not specified, notes are stored in `pages` directory\n ;; :pages-directory \"your-directory\"\n\n ;; Tell logseq to use a specific folder in the repo as a default location for journals\n ;; if not specified, journals are stored in `journals` directory\n ;; :journals-directory \"your-directory\"\n\n ;; Set this to true will convert\n ;; `[[Grant Ideas]]` to `[[file:./grant_ideas.org][Grant Ideas]]` for org-mode\n ;; For more, see https://github.com/logseq/logseq/issues/672\n ;; :org-mode/insert-file-link? true\n\n ;; If you prefer to use the file name as the page title\n ;; instead of the first heading's title\n ;; the only option for now is `file`\n ;; :page-name-order \"file\"\n\n ;; Setup custom shortcuts under `:shortcuts` key\n ;; Syntax:\n ;; 1. `+` means keys pressing simultaneously. eg: `ctrl+shift+a`\n ;; 2. ` ` empty space between keys represents key chords. eg: `t s` means press `s` follow by `t`\n ;; 3. `mod` means `Ctrl` for Windows/Linux  and `Command` for Mac\n ;; 4. use `false` to disable particular shortcut\n ;; 4. you can define multiple bindings for one action, eg `[\"ctrl+j\" \"down\"]`\n ;; full list of configurable shortcuts are available below:\n ;; https://github.com/logseq/logseq/blob/master/src/main/frontend/modules/shortcut/config.cljs\n ;; Example:\n ;; :shortcuts\n ;; {:editor/new-block       \"enter\"\n ;;  :editor/new-line        \"shift+enter\"\n ;;  :editor/insert-link     \"mod+shift+k\"\n ;;  :editor/hightlight       false\n ;;  :ui/toggle-settings     \"t s\"\n ;;  :editor/up              [\"ctrl+k\" \"up\"]\n ;;  :editor/down            [\"ctrl+j\" \"down\"]\n ;;  :editor/left            [\"ctrl+h\" \"left\"]\n ;;  :editor/right           [\"ctrl+l\" \"right\"]}\n :shortcuts {}\n\n ;; By default, pressing `Enter` in the document mode will create a new line.\n ;; Set this to `true` so that it's the same behaviour as the usual outliner mode.\n :shortcut/doc-mode-enter-for-new-block? false\n\n ;; Whether to show command doc on hover\n :ui/show-command-doc? true\n\n ;; Whether to show empty bullets for non-document mode (the default mode)\n :ui/show-empty-bullets? false\n\n ;; The app will show those queries in today's journal page,\n ;; the \"NOW\" query asks the tasks which need to be finished \"now\",\n ;; the \"NEXT\" query asks the future tasks.\n :default-queries\n {:journals\n  [{:title \"\uD83D\uDD28 NOW\"\n    :query [:find (pull ?h [*])\n            :in $ ?start ?today\n            :where\n            [?h :block/marker ?marker]\n            [(contains? #{\"NOW\" \"DOING\"} ?marker)]\n            [?h :block/page ?p]\n            [?p :block/journal? true]\n            [?p :block/journal-day ?d]\n            [(>= ?d ?start)]\n            [(<= ?d ?today)]]\n    :inputs [:14d :today]\n    :result-transform (fn [result]\n                        (sort-by (fn [h]\n                                   (get h :block/priority \"Z\")) result))\n    :collapsed? false}\n   {:title \"\uD83D\uDCC5 NEXT\"\n    :query [:find (pull ?h [*])\n            :in $ ?start ?next\n            :where\n            [?h :block/marker ?marker]\n            [(contains? #{\"NOW\" \"LATER\" \"TODO\"} ?marker)]\n            [?h :block/ref-pages ?p]\n            [?p :block/journal? true]\n            [?p :block/journal-day ?d]\n            [(> ?d ?start)]\n            [(< ?d ?next)]]\n    :inputs [:today :7d-after]\n    :collapsed? false}]}\n\n ;; Add your own commands to speedup.\n ;; E.g. [[\"js\" \"Javascript\"]]\n :commands\n []\n\n ;; By default, a block can only be collapsed if it has some children.\n ;; `:outliner/block-title-collapse-enabled? true` enables a block with a title\n ;; (multiple lines) can be collapsed too. For example:\n ;; - block title\n ;;   block content\n :outliner/block-title-collapse-enabled? false\n\n ;; Macros replace texts and will make you more productive.\n ;; For example:\n ;; Add this to the macros below:\n ;; {\"poem\" \"Rose is $1, violet's $2. Life's ordered: Org assists you.\"}\n ;; input \"{{{poem red,blue}}}\"\n ;; becomes\n ;; Rose is red, violet's blue. Life's ordered: Org assists you.\n :macros {}\n\n ;; The default level to be opened for the linked references.\n ;; For example, if we have some example blocks like this:\n ;; - a [[page]] (level 1)\n ;;   - b        (level 2)\n ;;     - c      (level 3)\n ;;       - d    (level 4)\n ;;\n ;; With the default value of level 2, `b` will be collapsed.\n ;; If we set the level's value to 3, `b` will be opened and `c` will be collapsed.\n :ref/default-open-blocks-level 2\n\n :ref/linked-references-collapsed-threshold 50\n\n ;; any number between 0 and 1 (the greater it is the faster the changes of the next-interval of card reviews) (default 0.5)\n ;; :srs/learning-fraction 0.5\n\n ;; the initial interval after the first successful review of a card (default 4)\n ;; :srs/initial-interval 4\n\n ;; hide specific properties for blocks\n ;; E.g. #{:created-at :updated-at}\n ;; :block-hidden-properties #{}\n\n ;; logbook setup\n ;; :logbook/settings\n ;; {:with-second-support? false ;limit logbook to minutes, seconds will be eliminated\n ;;  :enabled-in-all-blocks true ;display logbook in all blocks after timetracking\n ;;  :enabled-in-timestamped-blocks false ;don't display logbook at all\n ;; }\n\n ;; Mobile photo uploading setup\n ;; :mobile/photo\n ;; {:allow-editing? true}\n\n ;; Extra CodeMirror options\n ;; :editor/extra-codemirror-options {:keyMap \"emacs\" :lineWrapping true}\n\n ;; ignore #+keyword: for parsing page references in orgmode\n ;; :ignored-page-references-keywords #{\"author\" \"startup\"}\n \n ;; Quick capture templates on mobile for recieving contents from other apps.\n ;; Each template contains three elements {time}, {text} and {url}, which can be auto-expanded\n ;; by received contents from other apps. Note: the {} cannot be omitted.\n ;; - {time}: capture time\n ;; - {text}: text that users selected before sharing.\n ;; - {url}: url or assets path for media files stored in Logseq.\n ;; You can also reorder them, or even only use one or two of them in the template.\n ;; You can also insert or format any text in the template as shown in the following examples.\n ;; :quick-capture-templates\n ;; {:text \"[[quick capture]] **{time}**: \\n - {text} from {url}\"\n ;;  :media \"[[quick capture]] **{time}**: \\n - {url}\"}\n }\n";
+frontend.config.config_default_content = "{:meta/version 1\n\n ;; Currently, we support either \"Markdown\" or \"Org\".\n ;; This can overwrite your global preference so that\n ;; maybe your personal preferred format is Org but you'd\n ;; need to use Markdown for some projects.\n ;; :preferred-format \"\"\n\n ;; Preferred workflow style.\n ;; Value is either \":now\" for NOW/LATER style,\n ;; or \":todo\" for TODO/DOING style.\n :preferred-workflow :now\n\n ;; The app will ignore those directories or files.\n ;; E.g. \"/archived\" \"/test.md\"\n :hidden []\n\n ;; When creating the new journal page, the app will use your template if there is one.\n ;; You only need to input your template name here.\n :default-templates\n {:journals \"\"}\n\n ;; Whether to enable hover on tooltip preview feature\n ;; Default is true, you can also toggle this via setting page\n :ui/enable-tooltip? true\n\n :feature/enable-block-timestamps? false\n\n ;; Specify the date on which the week starts.\n ;; Goes from 0 to 6 (Monday to Sunday), default to 6\n :start-of-week 6\n\n ;; Specify a custom CSS import\n ;; This option take precedence over your local `logseq/custom.css` file\n ;; You may find a list of awesome logseq themes here:\n ;; https://github.com/logseq/awesome-logseq#css-themes\n ;; Example:\n ;; :custom-css-url \"@import url('https://cdn.jsdelivr.net/gh/dracula/logseq@master/custom.css');\"\n\n ;; When :all-pages-public? true, export repo would export all pages within that repo.\n ;; Regardless of whether you've set any page to public or not.\n ;; Example:\n ;; :publishing/all-pages-public? true\n\n ;; Specify default home page and sidebar status for Logseq\n ;; If not specified, Logseq default opens journals page on startup\n ;; value for `:page` is name of page\n ;; Possible options for `:sidebar` are\n ;; 1. `\"Contents\"` to open up `Contents` in sidebar by default\n ;; 2. `page name` to open up some page in sidebar\n ;; 3. Or multiple pages in an array [\"Contents\" \"Page A\" \"Page B\"]\n ;; If `:sidebar` is not set, sidebar will be hidden\n ;; Example:\n ;; 1. Setup page \"Changelog\" as home page and \"Contents\" in sidebar\n ;; :default-home {:page \"Changelog\", :sidebar \"Contents\"}\n ;; 2. Setup page \"Jun 3rd, 2021\" as home page without sidebar\n ;; :default-home {:page \"Jun 3rd, 2021\"}\n ;; 3. Setup page \"home\" as home page with multiple pages in sidebar\n ;; :default-home {:page \"home\" :sidebar [\"page a\" \"page b\"]}\n\n ;; Tell logseq to use a specific folder in the repo as a default location for notes\n ;; if not specified, notes are stored in `pages` directory\n ;; :pages-directory \"your-directory\"\n\n ;; Tell logseq to use a specific folder in the repo as a default location for journals\n ;; if not specified, journals are stored in `journals` directory\n ;; :journals-directory \"your-directory\"\n\n ;; Set this to true will convert\n ;; `[[Grant Ideas]]` to `[[file:./grant_ideas.org][Grant Ideas]]` for org-mode\n ;; For more, see https://github.com/logseq/logseq/issues/672\n ;; :org-mode/insert-file-link? true\n\n ;; If you prefer to use the file name as the page title\n ;; instead of the first heading's title\n ;; the only option for now is `file`\n ;; :page-name-order \"file\"\n\n ;; Setup custom shortcuts under `:shortcuts` key\n ;; Syntax:\n ;; 1. `+` means keys pressing simultaneously. eg: `ctrl+shift+a`\n ;; 2. ` ` empty space between keys represents key chords. eg: `t s` means press `s` follow by `t`\n ;; 3. `mod` means `Ctrl` for Windows/Linux  and `Command` for Mac\n ;; 4. use `false` to disable particular shortcut\n ;; 4. you can define multiple bindings for one action, eg `[\"ctrl+j\" \"down\"]`\n ;; full list of configurable shortcuts are available below:\n ;; https://github.com/logseq/logseq/blob/master/src/main/frontend/modules/shortcut/config.cljs\n ;; Example:\n ;; :shortcuts\n ;; {:editor/new-block       \"enter\"\n ;;  :editor/new-line        \"shift+enter\"\n ;;  :editor/insert-link     \"mod+shift+k\"\n ;;  :editor/hightlight       false\n ;;  :ui/toggle-settings     \"t s\"\n ;;  :editor/up              [\"ctrl+k\" \"up\"]\n ;;  :editor/down            [\"ctrl+j\" \"down\"]\n ;;  :editor/left            [\"ctrl+h\" \"left\"]\n ;;  :editor/right           [\"ctrl+l\" \"right\"]}\n :shortcuts {}\n\n ;; By default, pressing `Enter` in the document mode will create a new line.\n ;; Set this to `true` so that it's the same behaviour as the usual outliner mode.\n :shortcut/doc-mode-enter-for-new-block? false\n\n ;; Whether to show command doc on hover\n :ui/show-command-doc? true\n\n ;; Whether to show empty bullets for non-document mode (the default mode)\n :ui/show-empty-bullets? false\n\n ;; The app will show those queries in today's journal page,\n ;; the \"NOW\" query asks the tasks which need to be finished \"now\",\n ;; the \"NEXT\" query asks the future tasks.\n :default-queries\n {:journals\n  [{:title \"\uD83D\uDD28 NOW\"\n    :query [:find (pull ?h [*])\n            :in $ ?start ?today\n            :where\n            [?h :block/marker ?marker]\n            [(contains? #{\"NOW\" \"DOING\"} ?marker)]\n            [?h :block/page ?p]\n            [?p :block/journal? true]\n            [?p :block/journal-day ?d]\n            [(>= ?d ?start)]\n            [(<= ?d ?today)]]\n    :inputs [:14d :today]\n    :result-transform (fn [result]\n                        (sort-by (fn [h]\n                                   (get h :block/priority \"Z\")) result))\n    :collapsed? false}\n   {:title \"\uD83D\uDCC5 NEXT\"\n    :query [:find (pull ?h [*])\n            :in $ ?start ?next\n            :where\n            [?h :block/marker ?marker]\n            [(contains? #{\"NOW\" \"LATER\" \"TODO\"} ?marker)]\n            [?h :block/ref-pages ?p]\n            [?p :block/journal? true]\n            [?p :block/journal-day ?d]\n            [(> ?d ?start)]\n            [(< ?d ?next)]]\n    :inputs [:today :7d-after]\n    :collapsed? false}]}\n\n ;; Add your own commands to speedup.\n ;; E.g. [[\"js\" \"Javascript\"]]\n :commands\n []\n\n ;; By default, a block can only be collapsed if it has some children.\n ;; `:outliner/block-title-collapse-enabled? true` enables a block with a title\n ;; (multiple lines) can be collapsed too. For example:\n ;; - block title\n ;;   block content\n :outliner/block-title-collapse-enabled? false\n\n ;; Macros replace texts and will make you more productive.\n ;; For example:\n ;; Add this to the macros below:\n ;; {\"poem\" \"Rose is $1, violet's $2. Life's ordered: Org assists you.\"}\n ;; input \"{{{poem red,blue}}}\"\n ;; becomes\n ;; Rose is red, violet's blue. Life's ordered: Org assists you.\n :macros {}\n\n ;; The default level to be opened for the linked references.\n ;; For example, if we have some example blocks like this:\n ;; - a [[page]] (level 1)\n ;;   - b        (level 2)\n ;;     - c      (level 3)\n ;;       - d    (level 4)\n ;;\n ;; With the default value of level 2, `b` will be collapsed.\n ;; If we set the level's value to 3, `b` will be opened and `c` will be collapsed.\n :ref/default-open-blocks-level 2\n\n :ref/linked-references-collapsed-threshold 50\n\n :favorites [\"How to take dummy notes?\"]\n\n ;; any number between 0 and 1 (the greater it is the faster the changes of the next-interval of card reviews) (default 0.5)\n ;; :srs/learning-fraction 0.5\n\n ;; the initial interval after the first successful review of a card (default 4)\n ;; :srs/initial-interval 4\n\n ;; hide specific properties for blocks\n ;; E.g. #{:created-at :updated-at}\n ;; :block-hidden-properties #{}\n\n ;; logbook setup\n ;; :logbook/settings\n ;; {:with-second-support? false ;limit logbook to minutes, seconds will be eliminated\n ;;  :enabled-in-all-blocks true ;display logbook in all blocks after timetracking\n ;;  :enabled-in-timestamped-blocks false ;don't display logbook at all\n ;; }\n\n ;; Mobile photo uploading setup\n ;; :mobile/photo\n ;; {:allow-editing? true}\n\n ;; Extra CodeMirror options\n ;; :editor/extra-codemirror-options {:keyMap \"emacs\" :lineWrapping true}\n\n ;; ignore #+keyword: for parsing page references in orgmode\n ;; :ignored-page-references-keywords #{\"author\" \"startup\"}\n \n ;; Quick capture templates on mobile for recieving contents from other apps.\n ;; Each template contains three elements {time}, {text} and {url}, which can be auto-expanded\n ;; by received contents from other apps. Note: the {} cannot be omitted.\n ;; - {time}: capture time\n ;; - {text}: text that users selected before sharing.\n ;; - {url}: url or assets path for media files stored in Logseq.\n ;; You can also reorder them, or even only use one or two of them in the template.\n ;; You can also insert or format any text in the template as shown in the following examples.\n ;; :quick-capture-templates\n ;; {:text \"[[quick capture]] **{time}**: \\n - {text} from {url}\"\n ;;  :media \"[[quick capture]] **{time}**: \\n - {url}\"}\n }\n";
 frontend.config.markers = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 11, ["started",null,"doing",null,"cancelled",null,"wait",null,"waiting",null,"in-progress",null,"todo",null,"now",null,"later",null,"done",null,"canceled",null], null), null);
 if((typeof frontend !== 'undefined') && (typeof frontend.config !== 'undefined') && (typeof frontend.config.idb_db_prefix !== 'undefined')){
 } else {
@@ -541,9 +541,9 @@ return and__5041__auto__;
 })())){
 return path;
 } else {
-var G__32877 = frontend.config.get_repo_dir(repo_url);
-var G__32878 = path;
-return (frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(G__32877,G__32878) : frontend.util.node_path.join.call(null,G__32877,G__32878));
+var G__33236 = frontend.config.get_repo_dir(repo_url);
+var G__33237 = path;
+return (frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2 ? frontend.util.node_path.join.cljs$core$IFn$_invoke$arity$2(G__33236,G__33237) : frontend.util.node_path.join.call(null,G__33236,G__33237));
 }
 });
 /**
@@ -594,8 +594,8 @@ return null;
 }
 });
 frontend.config.get_config_path = (function frontend$config$get_config_path(var_args){
-var G__32880 = arguments.length;
-switch (G__32880) {
+var G__33249 = arguments.length;
+switch (G__33249) {
 case 0:
 return frontend.config.get_config_path.cljs$core$IFn$_invoke$arity$0();
 
@@ -625,8 +625,8 @@ return null;
 (frontend.config.get_config_path.cljs$lang$maxFixedArity = 1);
 
 frontend.config.get_metadata_path = (function frontend$config$get_metadata_path(var_args){
-var G__32882 = arguments.length;
-switch (G__32882) {
+var G__33251 = arguments.length;
+switch (G__33251) {
 case 0:
 return frontend.config.get_metadata_path.cljs$core$IFn$_invoke$arity$0();
 
@@ -656,8 +656,8 @@ return null;
 (frontend.config.get_metadata_path.cljs$lang$maxFixedArity = 1);
 
 frontend.config.get_pages_metadata_path = (function frontend$config$get_pages_metadata_path(var_args){
-var G__32884 = arguments.length;
-switch (G__32884) {
+var G__33254 = arguments.length;
+switch (G__33254) {
 case 0:
 return frontend.config.get_pages_metadata_path.cljs$core$IFn$_invoke$arity$0();
 
@@ -687,8 +687,8 @@ return null;
 (frontend.config.get_pages_metadata_path.cljs$lang$maxFixedArity = 1);
 
 frontend.config.get_custom_css_path = (function frontend$config$get_custom_css_path(var_args){
-var G__32886 = arguments.length;
-switch (G__32886) {
+var G__33256 = arguments.length;
+switch (G__33256) {
 case 0:
 return frontend.config.get_custom_css_path.cljs$core$IFn$_invoke$arity$0();
 
@@ -718,8 +718,8 @@ return null;
 (frontend.config.get_custom_css_path.cljs$lang$maxFixedArity = 1);
 
 frontend.config.get_export_css_path = (function frontend$config$get_export_css_path(var_args){
-var G__32891 = arguments.length;
-switch (G__32891) {
+var G__33258 = arguments.length;
+switch (G__33258) {
 case 0:
 return frontend.config.get_export_css_path.cljs$core$IFn$_invoke$arity$0();
 
@@ -749,8 +749,8 @@ return null;
 (frontend.config.get_export_css_path.cljs$lang$maxFixedArity = 1);
 
 frontend.config.get_custom_js_path = (function frontend$config$get_custom_js_path(var_args){
-var G__32893 = arguments.length;
-switch (G__32893) {
+var G__33260 = arguments.length;
+switch (G__33260) {
 case 0:
 return frontend.config.get_custom_js_path.cljs$core$IFn$_invoke$arity$0();
 

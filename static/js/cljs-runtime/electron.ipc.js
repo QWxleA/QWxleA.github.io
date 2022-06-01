@@ -1,14 +1,14 @@
 goog.provide('electron.ipc');
 electron.ipc.ipc = (function electron$ipc$ipc(var_args){
 var args__5772__auto__ = [];
-var len__5766__auto___31599 = arguments.length;
-var i__5767__auto___31600 = (0);
+var len__5766__auto___31530 = arguments.length;
+var i__5767__auto___31531 = (0);
 while(true){
-if((i__5767__auto___31600 < len__5766__auto___31599)){
-args__5772__auto__.push((arguments[i__5767__auto___31600]));
+if((i__5767__auto___31531 < len__5766__auto___31530)){
+args__5772__auto__.push((arguments[i__5767__auto___31531]));
 
-var G__31601 = (i__5767__auto___31600 + (1));
-i__5767__auto___31600 = G__31601;
+var G__31532 = (i__5767__auto___31531 + (1));
+i__5767__auto___31531 = G__31532;
 continue;
 } else {
 }
@@ -34,21 +34,21 @@ return null;
 (electron.ipc.ipc.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(electron.ipc.ipc.cljs$lang$applyTo = (function (seq31596){
+(electron.ipc.ipc.cljs$lang$applyTo = (function (seq31520){
 var self__5752__auto__ = this;
-return self__5752__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq31596));
+return self__5752__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq31520));
 }));
 
 electron.ipc.invoke = (function electron$ipc$invoke(var_args){
 var args__5772__auto__ = [];
-var len__5766__auto___31602 = arguments.length;
-var i__5767__auto___31603 = (0);
+var len__5766__auto___31541 = arguments.length;
+var i__5767__auto___31542 = (0);
 while(true){
-if((i__5767__auto___31603 < len__5766__auto___31602)){
-args__5772__auto__.push((arguments[i__5767__auto___31603]));
+if((i__5767__auto___31542 < len__5766__auto___31541)){
+args__5772__auto__.push((arguments[i__5767__auto___31542]));
 
-var G__31604 = (i__5767__auto___31603 + (1));
-i__5767__auto___31603 = G__31604;
+var G__31543 = (i__5767__auto___31542 + (1));
+i__5767__auto___31542 = G__31543;
 continue;
 } else {
 }
@@ -74,11 +74,11 @@ return null;
 (electron.ipc.invoke.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(electron.ipc.invoke.cljs$lang$applyTo = (function (seq31597){
-var G__31598 = cljs.core.first(seq31597);
-var seq31597__$1 = cljs.core.next(seq31597);
+(electron.ipc.invoke.cljs$lang$applyTo = (function (seq31526){
+var G__31527 = cljs.core.first(seq31526);
+var seq31526__$1 = cljs.core.next(seq31526);
 var self__5751__auto__ = this;
-return self__5751__auto__.cljs$core$IFn$_invoke$arity$variadic(G__31598,seq31597__$1);
+return self__5751__auto__.cljs$core$IFn$_invoke$arity$variadic(G__31527,seq31526__$1);
 }));
 
 

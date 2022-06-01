@@ -139,7 +139,7 @@ var getClipText$$module$frontend$utils = (cb, errorHandler) => {
     }
   });
 };
-var writeClipboard$$module$frontend$utils = (text, isHtml) => {
+var writeClipboard$$module$frontend$utils = ({text, html}) => {
   if (typeof navigator.permissions == "undefined") {
     module$node_modules$$capacitor$clipboard$dist$plugin_cjs.Clipboard.write({string:text});
     return;
@@ -153,9 +153,9 @@ var writeClipboard$$module$frontend$utils = (text, isHtml) => {
     if (typeof ClipboardItem !== "undefined") {
       let blob = new Blob([text], {type:["text/plain"]});
       let data = [new ClipboardItem({["text/plain"]:blob})];
-      if (isHtml) {
-        blob = new Blob([text], {type:["text/plain", "text/html"]});
-        data = [new ClipboardItem({["text/plain"]:blob, ["text/html"]:blob})];
+      if (html) {
+        let richBlob = new Blob([html], {type:["text/html"]});
+        data = [new ClipboardItem({["text/plain"]:blob, ["text/html"]:richBlob})];
       }
       promise_written = navigator.clipboard.write(data);
     } else {

@@ -4,11 +4,11 @@ goog.scope(function(){
 });
 var module$node_modules$diff$dist$diff=shadow.js.require("module$node_modules$diff$dist$diff", {});
 frontend.diff.diff = (function frontend$diff$diff(s1,s2){
-return cljs_bean.core.__GT_clj((function (){var G__49124 = s1;
-var G__49125 = s2;
-var G__49126 = cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 1, ["newlineIsToken",true], null));
-var fexpr__49123 = frontend.diff.goog$module$goog$object.get(module$node_modules$diff$dist$diff,"diffLines");
-return (fexpr__49123.cljs$core$IFn$_invoke$arity$3 ? fexpr__49123.cljs$core$IFn$_invoke$arity$3(G__49124,G__49125,G__49126) : fexpr__49123.call(null,G__49124,G__49125,G__49126));
+return cljs_bean.core.__GT_clj((function (){var G__49221 = s1;
+var G__49222 = s2;
+var G__49223 = cljs.core.clj__GT_js(new cljs.core.PersistentArrayMap(null, 1, ["newlineIsToken",true], null));
+var fexpr__49220 = frontend.diff.goog$module$goog$object.get(module$node_modules$diff$dist$diff,"diffLines");
+return (fexpr__49220.cljs$core$IFn$_invoke$arity$3 ? fexpr__49220.cljs$core$IFn$_invoke$arity$3(G__49221,G__49222,G__49223) : fexpr__49220.call(null,G__49221,G__49222,G__49223));
 })());
 });
 frontend.diff.inline_special_chars = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 8, ["`",null,"$",null,"*",null,"+",null,"/",null,"^",null,"~",null,"_",null], null), null);
@@ -27,53 +27,53 @@ var t2 = cljs.core.seq(clojure.string.lower_case(text));
 var i1 = (0);
 var i2 = (0);
 while(true){
-var vec__49144 = t1;
-var seq__49145 = cljs.core.seq(vec__49144);
-var first__49146 = cljs.core.first(seq__49145);
-var seq__49145__$1 = cljs.core.next(seq__49145);
-var h1 = first__49146;
-var r1 = seq__49145__$1;
-var vec__49147 = t2;
-var seq__49148 = cljs.core.seq(vec__49147);
-var first__49149 = cljs.core.first(seq__49148);
-var seq__49148__$1 = cljs.core.next(seq__49148);
-var h2 = first__49149;
-var r2 = seq__49148__$1;
+var vec__49244 = t1;
+var seq__49245 = cljs.core.seq(vec__49244);
+var first__49246 = cljs.core.first(seq__49245);
+var seq__49245__$1 = cljs.core.next(seq__49245);
+var h1 = first__49246;
+var r1 = seq__49245__$1;
+var vec__49247 = t2;
+var seq__49248 = cljs.core.seq(vec__49247);
+var first__49249 = cljs.core.first(seq__49248);
+var seq__49248__$1 = cljs.core.next(seq__49248);
+var h2 = first__49249;
+var r2 = seq__49248__$1;
 if(((cljs.core.empty_QMARK_(t1)) || (cljs.core.empty_QMARK_(t2)))){
 return i1;
 } else {
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(h1,h2)){
-var G__49158 = r1;
-var G__49159 = r2;
-var G__49160 = (i1 + (1));
-var G__49161 = (i2 + (1));
-t1 = G__49158;
-t2 = G__49159;
-i1 = G__49160;
-i2 = G__49161;
+var G__49265 = r1;
+var G__49266 = r2;
+var G__49267 = (i1 + (1));
+var G__49268 = (i2 + (1));
+t1 = G__49265;
+t2 = G__49266;
+i1 = G__49267;
+i2 = G__49268;
 continue;
 } else {
-if(cljs.core.truth_((function (){var fexpr__49151 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [" ",null,"[",null,"]",null], null), null);
-return (fexpr__49151.cljs$core$IFn$_invoke$arity$1 ? fexpr__49151.cljs$core$IFn$_invoke$arity$1(h2) : fexpr__49151.call(null,h2));
+if(cljs.core.truth_((function (){var fexpr__49253 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [" ",null,"[",null,"]",null], null), null);
+return (fexpr__49253.cljs$core$IFn$_invoke$arity$1 ? fexpr__49253.cljs$core$IFn$_invoke$arity$1(h2) : fexpr__49253.call(null,h2));
 })())){
-var G__49162 = t1;
-var G__49163 = r2;
-var G__49164 = i1;
-var G__49165 = (i2 + (1));
-t1 = G__49162;
-t2 = G__49163;
-i1 = G__49164;
-i2 = G__49165;
+var G__49273 = t1;
+var G__49274 = r2;
+var G__49275 = i1;
+var G__49276 = (i2 + (1));
+t1 = G__49273;
+t2 = G__49274;
+i1 = G__49275;
+i2 = G__49276;
 continue;
 } else {
-var G__49166 = r1;
-var G__49167 = t2;
-var G__49168 = (i1 + (1));
-var G__49169 = i2;
-t1 = G__49166;
-t2 = G__49167;
-i1 = G__49168;
-i2 = G__49169;
+var G__49277 = r1;
+var G__49278 = t2;
+var G__49279 = (i1 + (1));
+var G__49280 = i2;
+t1 = G__49277;
+t2 = G__49278;
+i1 = G__49279;
+i2 = G__49280;
 continue;
 
 }
@@ -110,13 +110,13 @@ return pos;
 }
 }
 }
-}catch (e49135){if((e49135 instanceof Error)){
-var e = e49135;
+}catch (e49228){if((e49228 instanceof Error)){
+var e = e49228;
 lambdaisland.glogi.log.cljs$core$IFn$_invoke$arity$4("frontend.diff",new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.identity(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword("diff","find-position","diff/find-position",-780421417),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"error","error",-978969032),e], null),new cljs.core.Keyword(null,"line","line",212345235),72], null)),null);
 
 return cljs.core.count(markup);
 } else {
-throw e49135;
+throw e49228;
 
 }
 }} else {

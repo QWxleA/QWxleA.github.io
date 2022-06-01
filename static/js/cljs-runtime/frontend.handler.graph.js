@@ -1,9 +1,9 @@
 goog.provide('frontend.handler.graph');
 frontend.handler.graph.build_links = (function frontend$handler$graph$build_links(links){
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__60022){
-var vec__60023 = p__60022;
-var from = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60023,(0),null);
-var to = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60023,(1),null);
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__53426){
+var vec__53427 = p__53426;
+var from = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53427,(0),null);
+var to = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53427,(1),null);
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"source","source",-433931539),from,new cljs.core.Keyword(null,"target","target",253001721),to], null);
 }),links);
 });
@@ -20,20 +20,20 @@ var pages = cljs.core.set(cljs.core.flatten(nodes));
 return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p){
 var p__$1 = cljs.core.str.cljs$core$IFn$_invoke$arity$1(p);
 var current_page_QMARK_ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(p__$1,current_page__$1);
-var color = (function (){var G__60029 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [dark_QMARK_,current_page_QMARK_], null);
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [false,false], null),G__60029)){
+var color = (function (){var G__53430 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [dark_QMARK_,current_page_QMARK_], null);
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [false,false], null),G__53430)){
 return "#999";
 } else {
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [false,true], null),G__60029)){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [false,true], null),G__53430)){
 return "#045591";
 } else {
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [true,false], null),G__60029)){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [true,false], null),G__53430)){
 return "#93a1a1";
 } else {
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [true,true], null),G__60029)){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [true,true], null),G__53430)){
 return "#ffffff";
 } else {
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__60029)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__53430)].join('')));
 
 }
 }
@@ -46,11 +46,11 @@ var size = (((8) * (function (){var x__5128__auto__ = 1.0;
 var y__5129__auto__ = Math.cbrt(n);
 return ((x__5128__auto__ > y__5129__auto__) ? x__5128__auto__ : y__5129__auto__);
 })()) | (0));
-var G__60033 = new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"id","id",-1388402092),p__$1,new cljs.core.Keyword(null,"label","label",1718410804),p__$1,new cljs.core.Keyword(null,"size","size",1098693007),size,new cljs.core.Keyword(null,"color","color",1011675173),color__$1], null);
+var G__53431 = new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"id","id",-1388402092),p__$1,new cljs.core.Keyword(null,"label","label",1718410804),p__$1,new cljs.core.Keyword(null,"size","size",1098693007),size,new cljs.core.Keyword(null,"color","color",1011675173),color__$1], null);
 if(cljs.core.contains_QMARK_(parents,p__$1)){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__60033,new cljs.core.Keyword(null,"parent","parent",-878878779),true);
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(G__53431,new cljs.core.Keyword(null,"parent","parent",-878878779),true);
 } else {
-return G__60033;
+return G__53431;
 }
 }),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,pages));
 });
@@ -67,17 +67,17 @@ return cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (node){
 return frontend.handler.graph.uuid_or_asset_QMARK_(new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(node));
 }),nodes);
 });
-frontend.handler.graph.normalize_page_name = (function frontend$handler$graph$normalize_page_name(p__60044){
-var map__60045 = p__60044;
-var map__60045__$1 = cljs.core.__destructure_map(map__60045);
-var nodes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60045__$1,new cljs.core.Keyword(null,"nodes","nodes",-2099585805));
-var links = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60045__$1,new cljs.core.Keyword(null,"links","links",-654507394));
-var page_name__GT_original_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60045__$1,new cljs.core.Keyword(null,"page-name->original-name","page-name->original-name",599049389));
-var links__$1 = cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__60046){
-var map__60047 = p__60046;
-var map__60047__$1 = cljs.core.__destructure_map(map__60047);
-var source = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60047__$1,new cljs.core.Keyword(null,"source","source",-433931539));
-var target = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60047__$1,new cljs.core.Keyword(null,"target","target",253001721));
+frontend.handler.graph.normalize_page_name = (function frontend$handler$graph$normalize_page_name(p__53432){
+var map__53433 = p__53432;
+var map__53433__$1 = cljs.core.__destructure_map(map__53433);
+var nodes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__53433__$1,new cljs.core.Keyword(null,"nodes","nodes",-2099585805));
+var links = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__53433__$1,new cljs.core.Keyword(null,"links","links",-654507394));
+var page_name__GT_original_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__53433__$1,new cljs.core.Keyword(null,"page-name->original-name","page-name->original-name",599049389));
+var links__$1 = cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__53434){
+var map__53435 = p__53434;
+var map__53435__$1 = cljs.core.__destructure_map(map__53435);
+var source = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__53435__$1,new cljs.core.Keyword(null,"source","source",-433931539));
+var target = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__53435__$1,new cljs.core.Keyword(null,"target","target",253001721));
 var source__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(page_name__GT_original_name,source);
 var target__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(page_name__GT_original_name,target);
 if(cljs.core.truth_((function (){var and__5041__auto__ = source__$1;
@@ -105,12 +105,12 @@ return new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$a
 }),frontend.handler.graph.remove_uuids_and_files_BANG_(nodes))));
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"nodes","nodes",-2099585805),nodes__$1,new cljs.core.Keyword(null,"links","links",-654507394),links__$1], null);
 });
-frontend.handler.graph.build_global_graph = (function frontend$handler$graph$build_global_graph(theme,p__60050){
-var map__60051 = p__60050;
-var map__60051__$1 = cljs.core.__destructure_map(map__60051);
-var journal_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60051__$1,new cljs.core.Keyword(null,"journal?","journal?",-897756522));
-var orphan_pages_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60051__$1,new cljs.core.Keyword(null,"orphan-pages?","orphan-pages?",-824819206));
-var builtin_pages_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60051__$1,new cljs.core.Keyword(null,"builtin-pages?","builtin-pages?",1299611390));
+frontend.handler.graph.build_global_graph = (function frontend$handler$graph$build_global_graph(theme,p__53437){
+var map__53438 = p__53437;
+var map__53438__$1 = cljs.core.__destructure_map(map__53438);
+var journal_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__53438__$1,new cljs.core.Keyword(null,"journal?","journal?",-897756522));
+var orphan_pages_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__53438__$1,new cljs.core.Keyword(null,"orphan-pages?","orphan-pages?",-824819206));
+var builtin_pages_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__53438__$1,new cljs.core.Keyword(null,"builtin-pages?","builtin-pages?",1299611390));
 var dark_QMARK_ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("dark",theme);
 var current_page = (function (){var or__5043__auto__ = new cljs.core.Keyword("block","name","block/name",1619760316).cljs$core$IFn$_invoke$arity$1((frontend.db.get_current_page.cljs$core$IFn$_invoke$arity$0 ? frontend.db.get_current_page.cljs$core$IFn$_invoke$arity$0() : frontend.db.get_current_page.call(null)));
 if(cljs.core.truth_(or__5043__auto__)){
@@ -141,28 +141,28 @@ var pages_after_journal_filter = ((cljs.core.not(journal_QMARK_))?cljs.core.remo
 var links = cljs.core.concat.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(relation),cljs.core.seq(tagged_pages),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.seq(namespaces)], 0));
 var linked__$1 = cljs.core.set(cljs.core.flatten(links));
 var build_in_pages = cljs.core.set(cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.lower_case,frontend.db.default$.built_in_pages_names));
-var nodes = (function (){var G__60052 = cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword("block","name","block/name",1619760316),pages_after_journal_filter);
-var G__60052__$1 = ((cljs.core.not(builtin_pages_QMARK_))?cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p){
+var nodes = (function (){var G__53439 = cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword("block","name","block/name",1619760316),pages_after_journal_filter);
+var G__53439__$1 = ((cljs.core.not(builtin_pages_QMARK_))?cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p){
 return cljs.core.contains_QMARK_(build_in_pages,clojure.string.lower_case(p));
-}),G__60052):G__60052);
+}),G__53439):G__53439);
 if(cljs.core.not(orphan_pages_QMARK_)){
-return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__60049_SHARP_){
-return cljs.core.contains_QMARK_(linked__$1,clojure.string.lower_case(p1__60049_SHARP_));
-}),G__60052__$1);
+return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__53436_SHARP_){
+return cljs.core.contains_QMARK_(linked__$1,clojure.string.lower_case(p1__53436_SHARP_));
+}),G__53439__$1);
 } else {
-return G__60052__$1;
+return G__53439__$1;
 }
 })();
-var page_links = cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (m,p__60053){
-var vec__60054 = p__60053;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60054,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60054,(1),null);
+var page_links = cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (m,p__53440){
+var vec__53441 = p__53440;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53441,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53441,(1),null);
 return cljs.core.update.cljs$core$IFn$_invoke$arity$3(cljs.core.update.cljs$core$IFn$_invoke$arity$3(m,k,cljs.core.inc),v,cljs.core.inc);
 }),cljs.core.PersistentArrayMap.EMPTY,links);
-var links__$1 = frontend.handler.graph.build_links(cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p__60057){
-var vec__60059 = p__60057;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60059,(0),null);
-var to = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60059,(1),null);
+var links__$1 = frontend.handler.graph.build_links(cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p__53444){
+var vec__53445 = p__53444;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53445,(0),null);
+var to = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53445,(1),null);
 return (to == null);
 }),links));
 var nodes__$1 = frontend.handler.graph.build_nodes(dark_QMARK_,clojure.string.lower_case(current_page),page_links,tags,nodes,namespaces);
@@ -177,25 +177,25 @@ var temp__5720__auto__ = frontend.state.get_current_repo();
 if(cljs.core.truth_(temp__5720__auto__)){
 var repo = temp__5720__auto__;
 var page__$1 = (frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1 ? frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1(page) : frontend.util.page_name_sanity_lc.call(null,page));
-var page_entity = (function (){var G__60064 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),page__$1], null);
-return (frontend.db.entity.cljs$core$IFn$_invoke$arity$1 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$1(G__60064) : frontend.db.entity.call(null,G__60064));
+var page_entity = (function (){var G__53449 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("block","name","block/name",1619760316),page__$1], null);
+return (frontend.db.entity.cljs$core$IFn$_invoke$arity$1 ? frontend.db.entity.cljs$core$IFn$_invoke$arity$1(G__53449) : frontend.db.entity.call(null,G__53449));
 })();
 var tags = new cljs.core.Keyword(null,"tags","tags",1771418977).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword("block","properties","block/properties",708347145).cljs$core$IFn$_invoke$arity$1(page_entity));
-var tags__$1 = cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__60063_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(page__$1,p1__60063_SHARP_);
+var tags__$1 = cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__53448_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(page__$1,p1__53448_SHARP_);
 }),tags);
 var ref_pages = (frontend.db.get_page_referenced_pages.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_page_referenced_pages.cljs$core$IFn$_invoke$arity$2(repo,page__$1) : frontend.db.get_page_referenced_pages.call(null,repo,page__$1));
 var mentioned_pages = (frontend.db.get_pages_that_mentioned_page.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_pages_that_mentioned_page.cljs$core$IFn$_invoke$arity$2(repo,page__$1) : frontend.db.get_pages_that_mentioned_page.call(null,repo,page__$1));
 var namespaces = (frontend.db.get_all_namespace_relation.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_all_namespace_relation.cljs$core$IFn$_invoke$arity$1(repo) : frontend.db.get_all_namespace_relation.call(null,repo));
-var links = cljs.core.concat.cljs$core$IFn$_invoke$arity$variadic(namespaces,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__60066){
-var vec__60067 = p__60066;
-var p = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60067,(0),null);
-var _aliases = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60067,(1),null);
+var links = cljs.core.concat.cljs$core$IFn$_invoke$arity$variadic(namespaces,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__53450){
+var vec__53451 = p__53450;
+var p = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53451,(0),null);
+var _aliases = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53451,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [page__$1,p], null);
-}),ref_pages),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__60070){
-var vec__60071 = p__60070;
-var p = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60071,(0),null);
-var _aliases = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60071,(1),null);
+}),ref_pages),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__53454){
+var vec__53455 = p__53454;
+var p = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53455,(0),null);
+var _aliases = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53455,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [p,page__$1], null);
 }),mentioned_pages),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (tag){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [page__$1,tag], null);
@@ -239,10 +239,10 @@ if(cljs.core.truth_(temp__5720__auto__)){
 var repo = temp__5720__auto__;
 var ref_blocks = (frontend.db.get_block_referenced_blocks.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_block_referenced_blocks.cljs$core$IFn$_invoke$arity$1(block) : frontend.db.get_block_referenced_blocks.call(null,block));
 var namespaces = (frontend.db.get_all_namespace_relation.cljs$core$IFn$_invoke$arity$1 ? frontend.db.get_all_namespace_relation.cljs$core$IFn$_invoke$arity$1(repo) : frontend.db.get_all_namespace_relation.call(null,repo));
-var links = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__60080){
-var vec__60081 = p__60080;
-var p = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60081,(0),null);
-var _aliases = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__60081,(1),null);
+var links = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__53458){
+var vec__53459 = p__53458;
+var p = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53459,(0),null);
+var _aliases = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__53459,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [block,p], null);
 }),ref_blocks),namespaces);
 var other_blocks = cljs.core.set(cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,cljs.core.concat.cljs$core$IFn$_invoke$arity$1(cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.first,ref_blocks))));
@@ -263,11 +263,11 @@ return null;
 /**
  * Get all nodes that are n hops from nodes (a collection of node ids)
  */
-frontend.handler.graph.n_hops = (function frontend$handler$graph$n_hops(p__60090,nodes,level){
-var map__60091 = p__60090;
-var map__60091__$1 = cljs.core.__destructure_map(map__60091);
-var graph = map__60091__$1;
-var links = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__60091__$1,new cljs.core.Keyword(null,"links","links",-654507394));
+frontend.handler.graph.n_hops = (function frontend$handler$graph$n_hops(p__53462,nodes,level){
+var map__53463 = p__53462;
+var map__53463__$1 = cljs.core.__destructure_map(map__53463);
+var graph = map__53463__$1;
+var links = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__53463__$1,new cljs.core.Keyword(null,"links","links",-654507394));
 var search_nodes = (function (forward_QMARK_){
 var links__$1 = cljs.core.group_by((cljs.core.truth_(forward_QMARK_)?new cljs.core.Keyword(null,"source","source",-433931539):new cljs.core.Keyword(null,"target","target",253001721)),links);
 var nodes__$1 = nodes;
@@ -276,14 +276,14 @@ while(true){
 if((level__$1 === (0))){
 return nodes__$1;
 } else {
-var G__60133 = cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.concat,nodes__$1,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (nodes__$1,level__$1,links__$1,map__60091,map__60091__$1,graph,links){
+var G__53464 = cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.concat,nodes__$1,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (nodes__$1,level__$1,links__$1,map__53463,map__53463__$1,graph,links){
 return (function (id){
 return cljs.core.map.cljs$core$IFn$_invoke$arity$2((cljs.core.truth_(forward_QMARK_)?new cljs.core.Keyword(null,"target","target",253001721):new cljs.core.Keyword(null,"source","source",-433931539)),cljs.core.get.cljs$core$IFn$_invoke$arity$2(links__$1,id));
-});})(nodes__$1,level__$1,links__$1,map__60091,map__60091__$1,graph,links))
+});})(nodes__$1,level__$1,links__$1,map__53463,map__53463__$1,graph,links))
 ,nodes__$1)));
-var G__60134 = (level__$1 - (1));
-nodes__$1 = G__60133;
-level__$1 = G__60134;
+var G__53465 = (level__$1 - (1));
+nodes__$1 = G__53464;
+level__$1 = G__53465;
 continue;
 }
 break;

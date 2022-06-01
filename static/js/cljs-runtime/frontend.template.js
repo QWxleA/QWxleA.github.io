@@ -9,10 +9,10 @@ return frontend.date.today();
 })()], 0))], null);
 });
 frontend.template.resolve_dynamic_template_BANG_ = (function frontend$template$resolve_dynamic_template_BANG_(content){
-return clojure.string.replace(content,/<%([^%].*?)%>/,(function (p__36980){
-var vec__36981 = p__36980;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__36981,(0),null);
-var match = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__36981,(1),null);
+return clojure.string.replace(content,/<%([^%].*?)%>/,(function (p__37345){
+var vec__37346 = p__37345;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37346,(0),null);
+var match = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37346,(1),null);
 var match__$1 = clojure.string.trim(match);
 if(clojure.string.blank_QMARK_(match__$1)){
 return "";

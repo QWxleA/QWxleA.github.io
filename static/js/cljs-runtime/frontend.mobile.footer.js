@@ -11,23 +11,22 @@ var minutes = cljs.core.quot(seconds,(60));
 var seconds__$1 = cljs.core.mod(seconds,(60));
 return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("%02d:%02d",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([minutes,seconds__$1], 0));
 });
-frontend.mobile.footer._STAR_record_start = cljs.core.atom.cljs$core$IFn$_invoke$arity$1((-1));
+frontend.mobile.footer._STAR_record_start = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 frontend.mobile.footer.audio_record_cp = rum.core.lazy_build(rum.core.build_defcs,(function (state){
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(frontend.state.sub(new cljs.core.Keyword("editor","record-status","editor/record-status",-122164557)),"RECORDING")){
-cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(frontend.mobile.footer._STAR_record_start,cljs.core.inc);
-} else {
-}
-
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(frontend.state.sub(new cljs.core.Keyword("editor","record-status","editor/record-status",-122164557)),"NONE")){
-cljs.core.reset_BANG_(frontend.mobile.footer._STAR_record_start,(-1));
+return frontend.mobile.footer.mobile_bar_command((function (){
+frontend.mobile.record.start_recording();
 
-return frontend.mobile.footer.mobile_bar_command(frontend.mobile.record.start_recording,"microphone");
+return cljs.core.reset_BANG_(frontend.mobile.footer._STAR_record_start,Date.now());
+}),"microphone");
 } else {
 return daiquiri.core.create_element("div",{'className':"flex flex-row items-center"},[frontend.mobile.footer.mobile_bar_command((function (){
-frontend.mobile.record.stop_recording();
+cljs.core.reset_BANG_(frontend.mobile.footer._STAR_record_start,null);
 
-return cljs.core.reset_BANG_(frontend.mobile.footer._STAR_record_start,(-1));
-}),"player-stop"),daiquiri.core.create_element("div",{'onClick':frontend.mobile.record.stop_recording,'className':"timer pl-2"},[daiquiri.interpreter.interpret(frontend.mobile.footer.seconds__GT_minutes_COLON_seconds(cljs.core.deref(frontend.mobile.footer._STAR_record_start)))])]);
+frontend.state.set_state_BANG_(new cljs.core.Keyword("mobile","show-recording-bar?","mobile/show-recording-bar?",-758548785),false);
+
+return frontend.mobile.record.stop_recording();
+}),"player-stop"),daiquiri.core.create_element("div",{'onClick':frontend.mobile.record.stop_recording,'className':"timer ml-2"},[daiquiri.interpreter.interpret(frontend.mobile.footer.seconds__GT_minutes_COLON_seconds(((Date.now() - cljs.core.deref(frontend.mobile.footer._STAR_record_start)) / (1000))))])]);
 }
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rum.core.reactive,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"did-mount","did-mount",918232960),(function (state){
 var comp = new cljs.core.Keyword("rum","react-component","rum/react-component",-1879897248).cljs$core$IFn$_invoke$arity$1(state);

@@ -18,33 +18,33 @@ frontend.mobile.action_bar.action_bar = rum.core.lazy_build(rum.core.build_defcs
 return daiquiri.interpreter.interpret((function (){var temp__5720__auto__ = frontend.state.sub(new cljs.core.Keyword("mobile","actioned-block","mobile/actioned-block",347869705));
 if(cljs.core.truth_(temp__5720__auto__)){
 var block = temp__5720__auto__;
-var map__61987 = block;
-var map__61987__$1 = cljs.core.__destructure_map(map__61987);
-var uuid = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61987__$1,new cljs.core.Keyword("block","uuid","block/uuid",-1991494552));
-var children = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61987__$1,new cljs.core.Keyword("block","children","block/children",-1040716209));
-var last_child_block_id = ((cljs.core.empty_QMARK_(children))?null:new cljs.core.Keyword("block","uuid","block/uuid",-1991494552).cljs$core$IFn$_invoke$arity$1(cljs.core.last((function (){var G__61988 = frontend.state.get_current_repo();
-var G__61989 = uuid;
-return (frontend.db.get_block_children.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_block_children.cljs$core$IFn$_invoke$arity$2(G__61988,G__61989) : frontend.db.get_block_children.call(null,G__61988,G__61989));
+var map__62374 = block;
+var map__62374__$1 = cljs.core.__destructure_map(map__62374);
+var uuid = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62374__$1,new cljs.core.Keyword("block","uuid","block/uuid",-1991494552));
+var children = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__62374__$1,new cljs.core.Keyword("block","children","block/children",-1040716209));
+var last_child_block_id = ((cljs.core.empty_QMARK_(children))?null:new cljs.core.Keyword("block","uuid","block/uuid",-1991494552).cljs$core$IFn$_invoke$arity$1(cljs.core.last((function (){var G__62375 = frontend.state.get_current_repo();
+var G__62376 = uuid;
+return (frontend.db.get_block_children.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_block_children.cljs$core$IFn$_invoke$arity$2(G__62375,G__62376) : frontend.db.get_block_children.call(null,G__62375,G__62376));
 })())));
-var tag_id_61990 = (function (){var or__5043__auto__ = last_child_block_id;
+var tag_id_62378 = (function (){var or__5043__auto__ = last_child_block_id;
 if(cljs.core.truth_(or__5043__auto__)){
 return or__5043__auto__;
 } else {
 return uuid;
 }
 })();
-var bottom_el_61991 = goog.dom.getElement(["block-content-",cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag_id_61990)].join(''));
-var bottom_61992 = frontend.mobile.action_bar.goog$module$goog$object.get(bottom_el_61991.getBoundingClientRect(),"bottom");
-var vw_height_61993 = (function (){var or__5043__auto__ = window.visualViewport.height;
+var bottom_el_62379 = goog.dom.getElement(["block-content-",cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag_id_62378)].join(''));
+var bottom_62380 = frontend.mobile.action_bar.goog$module$goog$object.get(bottom_el_62379.getBoundingClientRect(),"bottom");
+var vw_height_62381 = (function (){var or__5043__auto__ = window.visualViewport.height;
 if(cljs.core.truth_(or__5043__auto__)){
 return or__5043__auto__;
 } else {
 return document.documentElement.clientHeight;
 }
 })();
-var delta_61994 = ((vw_height_61993 - bottom_61992) - (170));
-if((delta_61994 < (0))){
-frontend.util.app_scroll_container_node().scrollBy(({"top": ((10) - delta_61994)}));
+var delta_62382 = ((vw_height_62381 - bottom_62380) - (170));
+if((delta_62382 < (0))){
+frontend.util.app_scroll_container_node().scrollBy(({"top": ((10) - delta_62382)}));
 } else {
 }
 
@@ -65,8 +65,8 @@ return frontend.handler.editor.cut_selection_blocks(true);
 })),frontend.mobile.action_bar.action_command("trash","Delete",(function (){
 return frontend.handler.editor.delete_block_aux_BANG_(block,true);
 })),frontend.mobile.action_bar.action_command("registered","Copy ref",(function (_event){
-return frontend.handler.editor.copy_block_ref_BANG_.cljs$core$IFn$_invoke$arity$2(uuid,(function (p1__61983_SHARP_){
-return ["((",cljs.core.str.cljs$core$IFn$_invoke$arity$1(p1__61983_SHARP_),"))"].join('');
+return frontend.handler.editor.copy_block_ref_BANG_.cljs$core$IFn$_invoke$arity$2(uuid,(function (p1__62369_SHARP_){
+return ["((",cljs.core.str.cljs$core$IFn$_invoke$arity$1(p1__62369_SHARP_),"))"].join('');
 }));
 })),frontend.mobile.action_bar.action_command("link","Copy url",(function (_event){
 var current_repo = frontend.state.get_current_repo();

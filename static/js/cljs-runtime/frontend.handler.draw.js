@@ -19,9 +19,9 @@ var repo_dir = frontend.config.get_repo_dir(repo);
 return promesa.core.catch$.cljs$core$IFn$_invoke$arity$2(promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28350__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.handler.draw.create_draws_directory_BANG_(repo),(function (___28349__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(frontend.fs.write_file_BANG_(repo,repo_dir,path,data,null),(function (___28349__auto____$1){
-return promesa.protocols._promise((function (){var G__49314 = repo;
-var G__49315 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword("file","path","file/path",-191335748),path,new cljs.core.Keyword("block","name","block/name",1619760316),(frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1 ? frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1(file) : frontend.util.page_name_sanity_lc.call(null,file)),new cljs.core.Keyword("block","file","block/file",183171933),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("file","path","file/path",-191335748),path], null),new cljs.core.Keyword("block","journal?","block/journal?",-970683127),false], null)], null);
-return (frontend.db.transact_BANG_.cljs$core$IFn$_invoke$arity$2 ? frontend.db.transact_BANG_.cljs$core$IFn$_invoke$arity$2(G__49314,G__49315) : frontend.db.transact_BANG_.call(null,G__49314,G__49315));
+return promesa.protocols._promise((function (){var G__49543 = repo;
+var G__49544 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword("file","path","file/path",-191335748),path,new cljs.core.Keyword("block","name","block/name",1619760316),(frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1 ? frontend.util.page_name_sanity_lc.cljs$core$IFn$_invoke$arity$1(file) : frontend.util.page_name_sanity_lc.call(null,file)),new cljs.core.Keyword("block","file","block/file",183171933),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("file","path","file/path",-191335748),path], null),new cljs.core.Keyword("block","journal?","block/journal?",-970683127),false], null)], null);
+return (frontend.db.transact_BANG_.cljs$core$IFn$_invoke$arity$2 ? frontend.db.transact_BANG_.cljs$core$IFn$_invoke$arity$2(G__49543,G__49544) : frontend.db.transact_BANG_.call(null,G__49543,G__49544));
 })());
 }));
 }));

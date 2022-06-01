@@ -69,13 +69,13 @@ return cljs.core.reset_BANG_(redo_stack,cljs.core.PersistentVector.EMPTY);
 });
 frontend.modules.editor.undo_redo.get_txs = (function frontend$modules$editor$undo_redo$get_txs(redo_QMARK_,txs){
 var txs__$1 = (cljs.core.truth_(redo_QMARK_)?txs:cljs.core.reverse(txs));
-return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__49612){
-var vec__49613 = p__49612;
-var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49613,(0),null);
-var attr = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49613,(1),null);
-var value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49613,(2),null);
-var tx = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49613,(3),null);
-var add_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49613,(4),null);
+return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__49855){
+var vec__49856 = p__49855;
+var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49856,(0),null);
+var attr = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49856,(1),null);
+var value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49856,(2),null);
+var tx = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49856,(3),null);
+var add_QMARK_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49856,(4),null);
 var op = (cljs.core.truth_((function (){var and__5041__auto__ = redo_QMARK_;
 if(cljs.core.truth_(and__5041__auto__)){
 return add_QMARK_;
@@ -104,13 +104,13 @@ var db_report = datascript.core.transact_BANG_.cljs$core$IFn$_invoke$arity$2(con
 return frontend.modules.outliner.pipeline.invoke_hooks(db_report);
 });
 frontend.modules.editor.undo_redo.undo = (function frontend$modules$editor$undo_redo$undo(){
-var vec__49616 = frontend.modules.editor.undo_redo.pop_undo();
-var e = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49616,(0),null);
-var prev_e = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49616,(1),null);
+var vec__49859 = frontend.modules.editor.undo_redo.pop_undo();
+var e = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49859,(0),null);
+var prev_e = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49859,(1),null);
 if(cljs.core.truth_(e)){
-var map__49619 = e;
-var map__49619__$1 = cljs.core.__destructure_map(map__49619);
-var txs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49619__$1,new cljs.core.Keyword(null,"txs","txs",2056038378));
+var map__49862 = e;
+var map__49862__$1 = cljs.core.__destructure_map(map__49862);
+var txs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49862__$1,new cljs.core.Keyword(null,"txs","txs",2056038378));
 var new_txs = frontend.modules.editor.undo_redo.get_txs(false,txs);
 var editor_cursor = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(e,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"editor-cursor","editor-cursor",-1794173800),new cljs.core.Keyword(null,"last-edit-block","last-edit-block",-940369316),new cljs.core.Keyword("block","uuid","block/uuid",-1991494552)], null)),cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(prev_e,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"editor-cursor","editor-cursor",-1794173800),new cljs.core.Keyword(null,"last-edit-block","last-edit-block",-940369316),new cljs.core.Keyword("block","uuid","block/uuid",-1991494552)], null))))?new cljs.core.Keyword(null,"editor-cursor","editor-cursor",-1794173800).cljs$core$IFn$_invoke$arity$1(prev_e):new cljs.core.Keyword(null,"editor-cursor","editor-cursor",-1794173800).cljs$core$IFn$_invoke$arity$1(e));
 frontend.modules.editor.undo_redo.push_redo(e);
@@ -125,10 +125,10 @@ return null;
 frontend.modules.editor.undo_redo.redo = (function frontend$modules$editor$undo_redo$redo(){
 var temp__5720__auto__ = frontend.modules.editor.undo_redo.pop_redo();
 if(cljs.core.truth_(temp__5720__auto__)){
-var map__49620 = temp__5720__auto__;
-var map__49620__$1 = cljs.core.__destructure_map(map__49620);
-var e = map__49620__$1;
-var txs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49620__$1,new cljs.core.Keyword(null,"txs","txs",2056038378));
+var map__49863 = temp__5720__auto__;
+var map__49863__$1 = cljs.core.__destructure_map(map__49863);
+var e = map__49863__$1;
+var txs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49863__$1,new cljs.core.Keyword(null,"txs","txs",2056038378));
 var new_txs = frontend.modules.editor.undo_redo.get_txs(true,txs);
 frontend.modules.editor.undo_redo.push_undo(e);
 
@@ -139,12 +139,12 @@ return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(e,new cljs.core.Keyword(nul
 return null;
 }
 });
-frontend.modules.editor.undo_redo.listen_outliner_operation = (function frontend$modules$editor$undo_redo$listen_outliner_operation(p__49621){
-var map__49622 = p__49621;
-var map__49622__$1 = cljs.core.__destructure_map(map__49622);
-var tx_report = map__49622__$1;
-var tx_data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49622__$1,new cljs.core.Keyword(null,"tx-data","tx-data",934159761));
-var tx_meta = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49622__$1,new cljs.core.Keyword(null,"tx-meta","tx-meta",1159283194));
+frontend.modules.editor.undo_redo.listen_outliner_operation = (function frontend$modules$editor$undo_redo$listen_outliner_operation(p__49864){
+var map__49865 = p__49864;
+var map__49865__$1 = cljs.core.__destructure_map(map__49865);
+var tx_report = map__49865__$1;
+var tx_data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49865__$1,new cljs.core.Keyword(null,"tx-data","tx-data",934159761));
+var tx_meta = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49865__$1,new cljs.core.Keyword(null,"tx-meta","tx-meta",1159283194));
 if(cljs.core.empty_QMARK_(tx_data)){
 return null;
 } else {

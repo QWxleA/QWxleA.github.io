@@ -11,15 +11,15 @@ return f;
 /**
  * Searches query's :where for rules and adds them to query if used
  */
-frontend.db.query_custom.add_rules_to_query = (function frontend$db$query_custom$add_rules_to_query(p__43183){
-var map__43184 = p__43183;
-var map__43184__$1 = cljs.core.__destructure_map(map__43184);
-var query_m = map__43184__$1;
-var query = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43184__$1,new cljs.core.Keyword(null,"query","query",-1288509510));
-var map__43185 = frontend.util.datalog.query_vec__GT_map(query);
-var map__43185__$1 = cljs.core.__destructure_map(map__43185);
-var where = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43185__$1,new cljs.core.Keyword(null,"where","where",-2044795965));
-var in$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43185__$1,new cljs.core.Keyword(null,"in","in",-1531184865));
+frontend.db.query_custom.add_rules_to_query = (function frontend$db$query_custom$add_rules_to_query(p__43561){
+var map__43562 = p__43561;
+var map__43562__$1 = cljs.core.__destructure_map(map__43562);
+var query_m = map__43562__$1;
+var query = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43562__$1,new cljs.core.Keyword(null,"query","query",-1288509510));
+var map__43563 = frontend.util.datalog.query_vec__GT_map(query);
+var map__43563__$1 = cljs.core.__destructure_map(map__43563);
+var where = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43563__$1,new cljs.core.Keyword(null,"where","where",-2044795965));
+var in$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43563__$1,new cljs.core.Keyword(null,"in","in",-1531184865));
 var rules_found = frontend.util.datalog.find_rules_in_where(where,cljs.core.set(cljs.core.keys(frontend.db.rules.query_dsl_rules)));
 if(cljs.core.seq(rules_found)){
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Symbol(null,"%","%",-950237169,null),cljs.core.last(in$))){
@@ -44,8 +44,8 @@ return query_m;
  *   query or a simple query
  */
 frontend.db.query_custom.custom_query = (function frontend$db$query_custom$custom_query(var_args){
-var G__43187 = arguments.length;
-switch (G__43187) {
+var G__43567 = arguments.length;
+switch (G__43567) {
 case 1:
 return frontend.db.query_custom.custom_query.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 

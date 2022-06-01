@@ -151,8 +151,8 @@ return null;
 (frontend.util.cursor.move_cursor_forward.cljs$lang$maxFixedArity = 2);
 
 frontend.util.cursor.move_cursor_backward = (function frontend$util$cursor$move_cursor_backward(var_args){
-var G__32970 = arguments.length;
-switch (G__32970) {
+var G__32976 = arguments.length;
+switch (G__32976) {
 case 1:
 return frontend.util.cursor.move_cursor_backward.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -173,9 +173,9 @@ return frontend.util.cursor.move_cursor_backward.cljs$core$IFn$_invoke$arity$2(i
 
 (frontend.util.cursor.move_cursor_backward.cljs$core$IFn$_invoke$arity$2 = (function (input,n){
 if(cljs.core.truth_(input)){
-var map__32975 = frontend.util.cursor.get_caret_pos.cljs$core$IFn$_invoke$arity$1(input);
-var map__32975__$1 = cljs.core.__destructure_map(map__32975);
-var pos = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__32975__$1,new cljs.core.Keyword(null,"pos","pos",-864607220));
+var map__32977 = frontend.util.cursor.get_caret_pos.cljs$core$IFn$_invoke$arity$1(input);
+var map__32977__$1 = cljs.core.__destructure_map(map__32977);
+var pos = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__32977__$1,new cljs.core.Keyword(null,"pos","pos",-864607220));
 var pos__$1 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(n,(1)))?frontend.util.safe_dec_current_pos_from_end(input.value,pos):(pos - n));
 var pos__$2 = (function (){var x__5128__auto__ = (0);
 var y__5129__auto__ = (function (){var or__5043__auto__ = pos__$1;
@@ -199,9 +199,9 @@ frontend.util.cursor.get_input_content_AMPERSAND_pos = (function frontend$util$c
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [frontend.util.cursor.goog$module$goog$object.get(input,"value"),frontend.util.cursor.pos(input)], null);
 });
 frontend.util.cursor.line_beginning_pos = (function frontend$util$cursor$line_beginning_pos(input){
-var vec__32979 = frontend.util.cursor.get_input_content_AMPERSAND_pos(input);
-var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32979,(0),null);
-var pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32979,(1),null);
+var vec__32982 = frontend.util.cursor.get_input_content_AMPERSAND_pos(input);
+var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32982,(0),null);
+var pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32982,(1),null);
 if((pos === (0))){
 return (0);
 } else {
@@ -252,8 +252,8 @@ var pos = cljs.core.count(frontend.util.cursor.goog$module$goog$object.get(input
 return frontend.util.cursor.move_cursor_to(input,pos);
 });
 frontend.util.cursor.move_cursor_to_thing = (function frontend$util$cursor$move_cursor_to_thing(var_args){
-var G__32998 = arguments.length;
-switch (G__32998) {
+var G__33002 = arguments.length;
+switch (G__33002) {
 case 2:
 return frontend.util.cursor.move_cursor_to_thing.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -273,9 +273,9 @@ return frontend.util.cursor.move_cursor_to_thing.cljs$core$IFn$_invoke$arity$3(i
 }));
 
 (frontend.util.cursor.move_cursor_to_thing.cljs$core$IFn$_invoke$arity$3 = (function (input,thing,from){
-var vec__32999 = frontend.util.cursor.get_input_content_AMPERSAND_pos(input);
-var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32999,(0),null);
-var _pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__32999,(1),null);
+var vec__33007 = frontend.util.cursor.get_input_content_AMPERSAND_pos(input);
+var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33007,(0),null);
+var _pos = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__33007,(1),null);
 var pos = clojure.string.index_of.cljs$core$IFn$_invoke$arity$3(content,thing,from);
 return frontend.util.cursor.move_cursor_to(input,pos);
 }));
@@ -287,12 +287,12 @@ var val = input.value;
 var current = frontend.util.get_selection_start(input);
 var current__$1 = (function (){var idx = current;
 while(true){
-if(cljs.core.truth_((function (){var G__33005 = frontend.util.nth_safe(val,idx);
-var fexpr__33004 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [" ",null,"\n",null], null), null);
-return (fexpr__33004.cljs$core$IFn$_invoke$arity$1 ? fexpr__33004.cljs$core$IFn$_invoke$arity$1(G__33005) : fexpr__33004.call(null,G__33005));
+if(cljs.core.truth_((function (){var G__33013 = frontend.util.nth_safe(val,idx);
+var fexpr__33012 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [" ",null,"\n",null], null), null);
+return (fexpr__33012.cljs$core$IFn$_invoke$arity$1 ? fexpr__33012.cljs$core$IFn$_invoke$arity$1(G__33013) : fexpr__33012.call(null,G__33013));
 })())){
-var G__33026 = (idx + (1));
-idx = G__33026;
+var G__33023 = (idx + (1));
+idx = G__33023;
 continue;
 } else {
 return idx;
@@ -321,12 +321,12 @@ return (0);
 })();
 var idx = (((prev === (0)))?(0):((function (){var idx = prev;
 while(true){
-if(cljs.core.truth_((function (){var G__33009 = frontend.util.nth_safe(val,idx);
-var fexpr__33008 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [" ",null,"\n",null], null), null);
-return (fexpr__33008.cljs$core$IFn$_invoke$arity$1 ? fexpr__33008.cljs$core$IFn$_invoke$arity$1(G__33009) : fexpr__33008.call(null,G__33009));
+if(cljs.core.truth_((function (){var G__33017 = frontend.util.nth_safe(val,idx);
+var fexpr__33016 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [" ",null,"\n",null], null), null);
+return (fexpr__33016.cljs$core$IFn$_invoke$arity$1 ? fexpr__33016.cljs$core$IFn$_invoke$arity$1(G__33017) : fexpr__33016.call(null,G__33017));
 })())){
-var G__33027 = (idx - (1));
-idx = G__33027;
+var G__33024 = (idx - (1));
+idx = G__33024;
 continue;
 } else {
 return idx;
@@ -356,8 +356,8 @@ frontend.util.cursor.next_cursor_pos_up_down = (function frontend$util$cursor$ne
 var elms = cljs.core.array_seq.cljs$core$IFn$_invoke$arity$1(goog.dom.getChildren(goog.dom.getElement("mock-text")));
 var chars = cljs.core.group_by(new cljs.core.Keyword(null,"top","top",-1856271961),cljs.core.map.cljs$core$IFn$_invoke$arity$2(frontend.util.cursor.mock_char_pos,elms));
 var tops = cljs.core.sort.cljs$core$IFn$_invoke$arity$1(cljs.core.keys(chars));
-var tops_p = cljs.core.partition_by.cljs$core$IFn$_invoke$arity$2((function (p1__33010_SHARP_){
-return (new cljs.core.Keyword(null,"top","top",-1856271961).cljs$core$IFn$_invoke$arity$1(cursor) === p1__33010_SHARP_);
+var tops_p = cljs.core.partition_by.cljs$core$IFn$_invoke$arity$2((function (p1__33018_SHARP_){
+return (new cljs.core.Keyword(null,"top","top",-1856271961).cljs$core$IFn$_invoke$arity$1(cursor) === p1__33018_SHARP_);
 }),tops);
 var line_next = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"up","up",-269712113),direction))?cljs.core.last(cljs.core.first(tops_p)):cljs.core.first(cljs.core.last(tops_p)));
 var lefts = cljs.core.partition_by.cljs$core$IFn$_invoke$arity$2((function (char_pos){

@@ -4,8 +4,8 @@ frontend.handler.repeated.repeated_QMARK_ = (function frontend$handler$repeated$
 return (!((new cljs.core.Keyword(null,"repetition","repetition",1938392115).cljs$core$IFn$_invoke$arity$1(timestamp) == null)));
 });
 frontend.handler.repeated.get_duration_f_and_text = (function frontend$handler$repeated$get_duration_f_and_text(duration){
-var G__50243 = duration;
-switch (G__50243) {
+var G__50316 = duration;
+switch (G__50316) {
 case "Hour":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs_time.core.hours,"h"], null);
 
@@ -32,8 +32,8 @@ return null;
 }
 });
 frontend.handler.repeated.get_repeater_symbol = (function frontend$handler$repeated$get_repeater_symbol(kind){
-var G__50247 = kind;
-switch (G__50247) {
+var G__50318 = kind;
+switch (G__50318) {
 case "Plus":
 return "+";
 
@@ -48,8 +48,8 @@ return "++";
 }
 });
 frontend.handler.repeated.timestamp__GT_text = (function frontend$handler$repeated$timestamp__GT_text(var_args){
-var G__50263 = arguments.length;
-switch (G__50263) {
+var G__50325 = arguments.length;
+switch (G__50325) {
 case 1:
 return frontend.handler.repeated.timestamp__GT_text.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -68,30 +68,30 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 return frontend.handler.repeated.timestamp__GT_text.cljs$core$IFn$_invoke$arity$2(timestamp,null);
 }));
 
-(frontend.handler.repeated.timestamp__GT_text.cljs$core$IFn$_invoke$arity$2 = (function (p__50268,start_time){
-var map__50269 = p__50268;
-var map__50269__$1 = cljs.core.__destructure_map(map__50269);
-var date = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50269__$1,new cljs.core.Keyword(null,"date","date",-1463434462));
-var repetition = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50269__$1,new cljs.core.Keyword(null,"repetition","repetition",1938392115));
-var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50269__$1,new cljs.core.Keyword(null,"time","time",1385887882));
-var map__50270 = date;
-var map__50270__$1 = cljs.core.__destructure_map(map__50270);
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50270__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var month = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50270__$1,new cljs.core.Keyword(null,"month","month",-1960248533));
-var day = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50270__$1,new cljs.core.Keyword(null,"day","day",-274800446));
-var map__50271 = time;
-var map__50271__$1 = cljs.core.__destructure_map(map__50271);
-var hour = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__50271__$1,new cljs.core.Keyword(null,"hour","hour",-555989214),(0));
-var min = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__50271__$1,new cljs.core.Keyword(null,"min","min",444991522),(0));
-var vec__50272 = (cljs.core.truth_(start_time)?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs_time.core.hour(start_time),cljs_time.core.minute(start_time)], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [hour,min], null));
-var hour__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50272,(0),null);
-var min__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50272,(1),null);
-var vec__50275 = repetition;
-var vec__50278 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50275,(0),null);
-var kind = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50278,(0),null);
-var vec__50281 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50275,(1),null);
-var duration = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50281,(0),null);
-var num = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50275,(2),null);
+(frontend.handler.repeated.timestamp__GT_text.cljs$core$IFn$_invoke$arity$2 = (function (p__50330,start_time){
+var map__50331 = p__50330;
+var map__50331__$1 = cljs.core.__destructure_map(map__50331);
+var date = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50331__$1,new cljs.core.Keyword(null,"date","date",-1463434462));
+var repetition = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50331__$1,new cljs.core.Keyword(null,"repetition","repetition",1938392115));
+var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50331__$1,new cljs.core.Keyword(null,"time","time",1385887882));
+var map__50336 = date;
+var map__50336__$1 = cljs.core.__destructure_map(map__50336);
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50336__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var month = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50336__$1,new cljs.core.Keyword(null,"month","month",-1960248533));
+var day = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50336__$1,new cljs.core.Keyword(null,"day","day",-274800446));
+var map__50340 = time;
+var map__50340__$1 = cljs.core.__destructure_map(map__50340);
+var hour = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__50340__$1,new cljs.core.Keyword(null,"hour","hour",-555989214),(0));
+var min = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__50340__$1,new cljs.core.Keyword(null,"min","min",444991522),(0));
+var vec__50341 = (cljs.core.truth_(start_time)?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs_time.core.hour(start_time),cljs_time.core.minute(start_time)], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [hour,min], null));
+var hour__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50341,(0),null);
+var min__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50341,(1),null);
+var vec__50344 = repetition;
+var vec__50347 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50344,(0),null);
+var kind = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50347,(0),null);
+var vec__50350 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50344,(1),null);
+var duration = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50350,(0),null);
+var num = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50344,(2),null);
 var start_time__$1 = (function (){var or__5043__auto__ = start_time;
 if(cljs.core.truth_(or__5043__auto__)){
 return or__5043__auto__;
@@ -99,9 +99,9 @@ return or__5043__auto__;
 return cljs_time.core.local_date_time.cljs$core$IFn$_invoke$arity$5(year,month,day,hour__$1,min__$1);
 }
 })();
-var vec__50284 = frontend.handler.repeated.get_duration_f_and_text(duration);
-var _duration_f = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50284,(0),null);
-var d = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50284,(1),null);
+var vec__50353 = frontend.handler.repeated.get_duration_f_and_text(duration);
+var _duration_f = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50353,(0),null);
+var d = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50353,(1),null);
 var kind__$1 = frontend.handler.repeated.get_repeater_symbol(kind);
 var repeater = (cljs.core.truth_((function (){var and__5041__auto__ = kind__$1;
 if(cljs.core.truth_(and__5041__auto__)){
@@ -128,8 +128,8 @@ while(true){
 if(cljs.core.truth_(cljs_time.core.after_QMARK_(result,now))){
 return result;
 } else {
-var G__50323 = cljs_time.core.plus.cljs$core$IFn$_invoke$arity$2(result,delta);
-result = G__50323;
+var G__50435 = cljs_time.core.plus.cljs$core$IFn$_invoke$arity$2(result,delta);
+result = G__50435;
 continue;
 }
 break;
@@ -153,37 +153,37 @@ return cljs_time.core.plus.cljs$core$IFn$_invoke$arity$2(result,cljs_time.core.d
 return result;
 }
 });
-frontend.handler.repeated.next_timestamp_text = (function frontend$handler$repeated$next_timestamp_text(p__50287){
-var map__50288 = p__50287;
-var map__50288__$1 = cljs.core.__destructure_map(map__50288);
-var timestamp = map__50288__$1;
-var date = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50288__$1,new cljs.core.Keyword(null,"date","date",-1463434462));
-var repetition = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50288__$1,new cljs.core.Keyword(null,"repetition","repetition",1938392115));
-var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50288__$1,new cljs.core.Keyword(null,"time","time",1385887882));
-var map__50289 = date;
-var map__50289__$1 = cljs.core.__destructure_map(map__50289);
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50289__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var month = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50289__$1,new cljs.core.Keyword(null,"month","month",-1960248533));
-var day = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50289__$1,new cljs.core.Keyword(null,"day","day",-274800446));
-var map__50290 = time;
-var map__50290__$1 = cljs.core.__destructure_map(map__50290);
-var hour = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__50290__$1,new cljs.core.Keyword(null,"hour","hour",-555989214),(0));
-var min = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__50290__$1,new cljs.core.Keyword(null,"min","min",444991522),(0));
-var vec__50291 = repetition;
-var vec__50294 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50291,(0),null);
-var kind = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50294,(0),null);
-var vec__50297 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50291,(1),null);
-var duration = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50297,(0),null);
-var num = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50291,(2),null);
+frontend.handler.repeated.next_timestamp_text = (function frontend$handler$repeated$next_timestamp_text(p__50361){
+var map__50365 = p__50361;
+var map__50365__$1 = cljs.core.__destructure_map(map__50365);
+var timestamp = map__50365__$1;
+var date = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50365__$1,new cljs.core.Keyword(null,"date","date",-1463434462));
+var repetition = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50365__$1,new cljs.core.Keyword(null,"repetition","repetition",1938392115));
+var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50365__$1,new cljs.core.Keyword(null,"time","time",1385887882));
+var map__50366 = date;
+var map__50366__$1 = cljs.core.__destructure_map(map__50366);
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50366__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var month = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50366__$1,new cljs.core.Keyword(null,"month","month",-1960248533));
+var day = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50366__$1,new cljs.core.Keyword(null,"day","day",-274800446));
+var map__50367 = time;
+var map__50367__$1 = cljs.core.__destructure_map(map__50367);
+var hour = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__50367__$1,new cljs.core.Keyword(null,"hour","hour",-555989214),(0));
+var min = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__50367__$1,new cljs.core.Keyword(null,"min","min",444991522),(0));
+var vec__50368 = repetition;
+var vec__50371 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50368,(0),null);
+var kind = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50371,(0),null);
+var vec__50374 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50368,(1),null);
+var duration = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50374,(0),null);
+var num = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50368,(2),null);
 var week_QMARK_ = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(duration,"Week")) || (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(duration,"w")));
-var vec__50300 = frontend.handler.repeated.get_duration_f_and_text(duration);
-var duration_f = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50300,(0),null);
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50300,(1),null);
+var vec__50377 = frontend.handler.repeated.get_duration_f_and_text(duration);
+var duration_f = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50377,(0),null);
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50377,(1),null);
 var delta = (duration_f.cljs$core$IFn$_invoke$arity$1 ? duration_f.cljs$core$IFn$_invoke$arity$1(num) : duration_f.call(null,num));
 var start_time = cljs_time.core.local_date_time.cljs$core$IFn$_invoke$arity$5(year,month,day,hour,min);
 var now = cljs_time.local.local_now();
-var start_time_SINGLEQUOTE_ = (function (){var G__50303 = kind;
-switch (G__50303) {
+var start_time_SINGLEQUOTE_ = (function (){var G__50391 = kind;
+switch (G__50391) {
 case "Dotted":
 return frontend.handler.repeated.repeat_until_future_timestamp(start_time,now,delta,week_QMARK_);
 
@@ -203,17 +203,17 @@ return cljs_time.core.plus.cljs$core$IFn$_invoke$arity$2(start_time,delta);
 })();
 return frontend.handler.repeated.timestamp__GT_text.cljs$core$IFn$_invoke$arity$2(timestamp,start_time_SINGLEQUOTE_);
 });
-frontend.handler.repeated.timestamp_map__GT_text = (function frontend$handler$repeated$timestamp_map__GT_text(p__50304){
-var map__50305 = p__50304;
-var map__50305__$1 = cljs.core.__destructure_map(map__50305);
-var date = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50305__$1,new cljs.core.Keyword(null,"date","date",-1463434462));
-var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50305__$1,new cljs.core.Keyword(null,"time","time",1385887882));
-var repeater = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50305__$1,new cljs.core.Keyword(null,"repeater","repeater",-1071171146));
-var map__50306 = repeater;
-var map__50306__$1 = cljs.core.__destructure_map(map__50306);
-var kind = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50306__$1,new cljs.core.Keyword(null,"kind","kind",-717265803));
-var duration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50306__$1,new cljs.core.Keyword(null,"duration","duration",1444101068));
-var num = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50306__$1,new cljs.core.Keyword(null,"num","num",1985240673));
+frontend.handler.repeated.timestamp_map__GT_text = (function frontend$handler$repeated$timestamp_map__GT_text(p__50396){
+var map__50397 = p__50396;
+var map__50397__$1 = cljs.core.__destructure_map(map__50397);
+var date = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50397__$1,new cljs.core.Keyword(null,"date","date",-1463434462));
+var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50397__$1,new cljs.core.Keyword(null,"time","time",1385887882));
+var repeater = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50397__$1,new cljs.core.Keyword(null,"repeater","repeater",-1071171146));
+var map__50398 = repeater;
+var map__50398__$1 = cljs.core.__destructure_map(map__50398);
+var kind = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50398__$1,new cljs.core.Keyword(null,"kind","kind",-717265803));
+var duration = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50398__$1,new cljs.core.Keyword(null,"duration","duration",1444101068));
+var num = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50398__$1,new cljs.core.Keyword(null,"num","num",1985240673));
 var repeater__$1 = (cljs.core.truth_((function (){var and__5041__auto__ = kind;
 if(cljs.core.truth_(and__5041__auto__)){
 var and__5041__auto____$1 = num;
@@ -229,27 +229,27 @@ return and__5041__auto__;
 var time_repeater = (((!(clojure.string.blank_QMARK_(time))))?[cljs.core.str.cljs$core$IFn$_invoke$arity$1(time),((clojure.string.blank_QMARK_(repeater__$1))?"":[" ",repeater__$1].join(''))].join(''):repeater__$1);
 return frontend.util.format.cljs$core$IFn$_invoke$arity$variadic("<%s%s>",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs_time.format.unparse(frontend.handler.repeated.custom_formatter,date),((clojure.string.blank_QMARK_(time_repeater))?"":[" ",time_repeater].join(''))], 0));
 });
-frontend.handler.repeated.timestamp__GT_map = (function frontend$handler$repeated$timestamp__GT_map(p__50307){
-var map__50308 = p__50307;
-var map__50308__$1 = cljs.core.__destructure_map(map__50308);
-var date = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50308__$1,new cljs.core.Keyword(null,"date","date",-1463434462));
-var repetition = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50308__$1,new cljs.core.Keyword(null,"repetition","repetition",1938392115));
-var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50308__$1,new cljs.core.Keyword(null,"time","time",1385887882));
-var map__50309 = date;
-var map__50309__$1 = cljs.core.__destructure_map(map__50309);
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50309__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var month = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50309__$1,new cljs.core.Keyword(null,"month","month",-1960248533));
-var day = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50309__$1,new cljs.core.Keyword(null,"day","day",-274800446));
-var map__50310 = time;
-var map__50310__$1 = cljs.core.__destructure_map(map__50310);
-var hour = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50310__$1,new cljs.core.Keyword(null,"hour","hour",-555989214));
-var min = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50310__$1,new cljs.core.Keyword(null,"min","min",444991522));
-var vec__50311 = repetition;
-var vec__50314 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50311,(0),null);
-var kind = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50314,(0),null);
-var vec__50317 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50311,(1),null);
-var duration = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50317,(0),null);
-var num = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50311,(2),null);
+frontend.handler.repeated.timestamp__GT_map = (function frontend$handler$repeated$timestamp__GT_map(p__50399){
+var map__50400 = p__50399;
+var map__50400__$1 = cljs.core.__destructure_map(map__50400);
+var date = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50400__$1,new cljs.core.Keyword(null,"date","date",-1463434462));
+var repetition = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50400__$1,new cljs.core.Keyword(null,"repetition","repetition",1938392115));
+var time = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50400__$1,new cljs.core.Keyword(null,"time","time",1385887882));
+var map__50401 = date;
+var map__50401__$1 = cljs.core.__destructure_map(map__50401);
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50401__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var month = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50401__$1,new cljs.core.Keyword(null,"month","month",-1960248533));
+var day = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50401__$1,new cljs.core.Keyword(null,"day","day",-274800446));
+var map__50402 = time;
+var map__50402__$1 = cljs.core.__destructure_map(map__50402);
+var hour = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50402__$1,new cljs.core.Keyword(null,"hour","hour",-555989214));
+var min = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__50402__$1,new cljs.core.Keyword(null,"min","min",444991522));
+var vec__50403 = repetition;
+var vec__50406 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50403,(0),null);
+var kind = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50406,(0),null);
+var vec__50409 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50403,(1),null);
+var duration = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50409,(0),null);
+var num = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__50403,(2),null);
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"date","date",-1463434462),cljs_time.core.local_date(year,month,day),new cljs.core.Keyword(null,"time","time",1385887882),(cljs.core.truth_((function (){var and__5041__auto__ = hour;
 if(cljs.core.truth_(and__5041__auto__)){
 return min;

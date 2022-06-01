@@ -15,20 +15,20 @@ return electron.listener.persist_dbs_BANG_();
 });
 electron.listener.listen_to_electron_BANG_ = (function electron$listener$listen_to_electron_BANG_(){
 window.apis.on("file-watcher",(function (data){
-var map__56148 = cljs_bean.core.__GT_clj(data);
-var map__56148__$1 = cljs.core.__destructure_map(map__56148);
-var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56148__$1,new cljs.core.Keyword(null,"type","type",1174270348));
-var payload = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56148__$1,new cljs.core.Keyword(null,"payload","payload",-383036092));
+var map__56814 = cljs_bean.core.__GT_clj(data);
+var map__56814__$1 = cljs.core.__destructure_map(map__56814);
+var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56814__$1,new cljs.core.Keyword(null,"type","type",1174270348));
+var payload = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56814__$1,new cljs.core.Keyword(null,"payload","payload",-383036092));
 frontend.fs.watcher_handler.handle_changed_BANG_(type,payload);
 
 return frontend.fs.sync.file_watch_handler(type,payload);
 }));
 
 window.apis.on("notification",(function (data){
-var map__56156 = cljs_bean.core.__GT_clj(data);
-var map__56156__$1 = cljs.core.__destructure_map(map__56156);
-var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56156__$1,new cljs.core.Keyword(null,"type","type",1174270348));
-var payload = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56156__$1,new cljs.core.Keyword(null,"payload","payload",-383036092));
+var map__56815 = cljs_bean.core.__GT_clj(data);
+var map__56815__$1 = cljs.core.__destructure_map(map__56815);
+var type = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56815__$1,new cljs.core.Keyword(null,"type","type",1174270348));
+var payload = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56815__$1,new cljs.core.Keyword(null,"payload","payload",-383036092));
 var type__$1 = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(type);
 var comp = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),cljs.core.str.cljs$core$IFn$_invoke$arity$1(payload)], null);
 return frontend.handler.notification.show_BANG_.cljs$core$IFn$_invoke$arity$3(comp,type__$1,false);
@@ -54,19 +54,19 @@ return null;
 }));
 
 window.apis.on("redirect",(function (data){
-var map__56175 = cljs_bean.core.__GT_clj(data);
-var map__56175__$1 = cljs.core.__destructure_map(map__56175);
-var payload = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56175__$1,new cljs.core.Keyword(null,"payload","payload",-383036092));
+var map__56836 = cljs_bean.core.__GT_clj(data);
+var map__56836__$1 = cljs.core.__destructure_map(map__56836);
+var payload = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56836__$1,new cljs.core.Keyword(null,"payload","payload",-383036092));
 var payload__$1 = cljs.core.update.cljs$core$IFn$_invoke$arity$3(payload,new cljs.core.Keyword(null,"to","to",192099007),cljs.core.keyword);
 return frontend.handler.route.redirect_BANG_(payload__$1);
 }));
 
 window.apis.on("redirectWhenExists",(function (data){
-var map__56182 = cljs_bean.core.__GT_clj(data);
-var map__56182__$1 = cljs.core.__destructure_map(map__56182);
-var page_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56182__$1,new cljs.core.Keyword(null,"page-name","page-name",974981762));
-var block_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56182__$1,new cljs.core.Keyword(null,"block-id","block-id",-70582834));
-var file = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56182__$1,new cljs.core.Keyword(null,"file","file",-1269645878));
+var map__56844 = cljs_bean.core.__GT_clj(data);
+var map__56844__$1 = cljs.core.__destructure_map(map__56844);
+var page_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56844__$1,new cljs.core.Keyword(null,"page-name","page-name",974981762));
+var block_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56844__$1,new cljs.core.Keyword(null,"block-id","block-id",-70582834));
+var file = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56844__$1,new cljs.core.Keyword(null,"file","file",-1269645878));
 if(cljs.core.truth_(page_name)){
 var db_page_name = frontend.db.model.get_redirect_page_name.cljs$core$IFn$_invoke$arity$1(page_name);
 return frontend.handler.editor.insert_first_page_block_if_not_exists_BANG_.cljs$core$IFn$_invoke$arity$1(db_page_name);
@@ -94,17 +94,17 @@ return null;
 }));
 
 window.apis.on("dbsync",(function (data){
-var map__56188 = cljs_bean.core.__GT_clj(data);
-var map__56188__$1 = cljs.core.__destructure_map(map__56188);
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56188__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
-var tx_data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56188__$1,new cljs.core.Keyword(null,"tx-data","tx-data",934159761));
-var tx_data__$1 = (function (){var G__56189 = new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(tx_data);
-return (frontend.db.string__GT_db.cljs$core$IFn$_invoke$arity$1 ? frontend.db.string__GT_db.cljs$core$IFn$_invoke$arity$1(G__56189) : frontend.db.string__GT_db.call(null,G__56189));
+var map__56863 = cljs_bean.core.__GT_clj(data);
+var map__56863__$1 = cljs.core.__destructure_map(map__56863);
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56863__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+var tx_data = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__56863__$1,new cljs.core.Keyword(null,"tx-data","tx-data",934159761));
+var tx_data__$1 = (function (){var G__56867 = new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(tx_data);
+return (frontend.db.string__GT_db.cljs$core$IFn$_invoke$arity$1 ? frontend.db.string__GT_db.cljs$core$IFn$_invoke$arity$1(G__56867) : frontend.db.string__GT_db.call(null,G__56867));
 })();
-var temp__5720__auto___56225 = (frontend.db.get_db.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_db.cljs$core$IFn$_invoke$arity$2(graph,false) : frontend.db.get_db.call(null,graph,false));
-if(cljs.core.truth_(temp__5720__auto___56225)){
-var conn_56230 = temp__5720__auto___56225;
-datascript.core.transact_BANG_.cljs$core$IFn$_invoke$arity$3(conn_56230,tx_data__$1,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dbsync?","dbsync?",931937939),true], null));
+var temp__5720__auto___56908 = (frontend.db.get_db.cljs$core$IFn$_invoke$arity$2 ? frontend.db.get_db.cljs$core$IFn$_invoke$arity$2(graph,false) : frontend.db.get_db.call(null,graph,false));
+if(cljs.core.truth_(temp__5720__auto___56908)){
+var conn_56909 = temp__5720__auto___56908;
+datascript.core.transact_BANG_.cljs$core$IFn$_invoke$arity$3(conn_56909,tx_data__$1,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dbsync?","dbsync?",931937939),true], null));
 } else {
 }
 

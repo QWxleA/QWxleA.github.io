@@ -12,8 +12,8 @@ return frontend.db.conn.get_short_repo_name(repo_path);
  * protocol?: if true, returns URL with protocol prefix
  */
 frontend.util.url.get_repo_id_url = (function frontend$util$url$get_repo_id_url(var_args){
-var G__58616 = arguments.length;
-switch (G__58616) {
+var G__58791 = arguments.length;
+switch (G__58791) {
 case 3:
 return frontend.util.url.get_repo_id_url.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -46,8 +46,8 @@ return [(cljs.core.truth_(protocol_QMARK_)?[frontend.util.url.LSP_SCHEME,"://"].
  * protocol?: if true, returns URL with protocol prefix
  */
 frontend.util.url.get_logseq_graph_url = (function frontend$util$url$get_logseq_graph_url(var_args){
-var G__58619 = arguments.length;
-switch (G__58619) {
+var G__58795 = arguments.length;
+switch (G__58795) {
 case 2:
 return frontend.util.url.get_logseq_graph_url.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -81,8 +81,8 @@ return frontend.util.url.get_repo_id_url.cljs$core$IFn$_invoke$arity$4(host,"gra
  * protocol?: if true, returns URL with protocol prefix
  */
 frontend.util.url.get_logseq_graph_uuid_url = (function frontend$util$url$get_logseq_graph_uuid_url(var_args){
-var G__58621 = arguments.length;
-switch (G__58621) {
+var G__58802 = arguments.length;
+switch (G__58802) {
 case 3:
 return frontend.util.url.get_logseq_graph_uuid_url.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -115,8 +115,8 @@ return [frontend.util.url.get_logseq_graph_url.cljs$core$IFn$_invoke$arity$3(hos
  * protocol?: if true, returns URL with protocol prefix
  */
 frontend.util.url.get_logseq_graph_page_url = (function frontend$util$url$get_logseq_graph_page_url(var_args){
-var G__58623 = arguments.length;
-switch (G__58623) {
+var G__58808 = arguments.length;
+switch (G__58808) {
 case 3:
 return frontend.util.url.get_logseq_graph_page_url.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 

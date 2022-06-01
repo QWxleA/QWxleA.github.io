@@ -33,18 +33,18 @@ var this__5340__auto____$1 = this;
 return this__5340__auto____$1.cljs$core$ILookup$_lookup$arity$3(null,k__5341__auto__,null);
 }));
 
-(frontend.search.node.Node.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__5342__auto__,k43340,else__5343__auto__){
+(frontend.search.node.Node.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__5342__auto__,k43753,else__5343__auto__){
 var self__ = this;
 var this__5342__auto____$1 = this;
-var G__43344 = k43340;
-var G__43344__$1 = (((G__43344 instanceof cljs.core.Keyword))?G__43344.fqn:null);
-switch (G__43344__$1) {
+var G__43759 = k43753;
+var G__43759__$1 = (((G__43759 instanceof cljs.core.Keyword))?G__43759.fqn:null);
+switch (G__43759__$1) {
 case "repo":
 return self__.repo;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k43340,else__5343__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k43753,else__5343__auto__);
 
 }
 }));
@@ -52,10 +52,10 @@ return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k43340,else__
 (frontend.search.node.Node.prototype.cljs$core$IKVReduce$_kv_reduce$arity$3 = (function (this__5360__auto__,f__5361__auto__,init__5362__auto__){
 var self__ = this;
 var this__5360__auto____$1 = this;
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__5363__auto__,p__43345){
-var vec__43346 = p__43345;
-var k__5364__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__43346,(0),null);
-var v__5365__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__43346,(1),null);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__5363__auto__,p__43764){
+var vec__43765 = p__43764;
+var k__5364__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__43765,(0),null);
+var v__5365__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__43765,(1),null);
 return (f__5361__auto__.cljs$core$IFn$_invoke$arity$3 ? f__5361__auto__.cljs$core$IFn$_invoke$arity$3(ret__5363__auto__,k__5364__auto__,v__5365__auto__) : f__5361__auto__.call(null,ret__5363__auto__,k__5364__auto__,v__5365__auto__));
 }),init__5362__auto__,this__5360__auto____$1);
 }));
@@ -69,10 +69,10 @@ return cljs.core.pr_sequential_writer(writer__5356__auto__,cljs.core.pr_writer,"
 return cljs.core.pr_sequential_writer(writer__5356__auto__,pr_pair__5358__auto__,"#frontend.search.node.Node{",", ","}",opts__5357__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"repo","repo",-1999060679),self__.repo],null))], null),self__.__extmap));
 }));
 
-(frontend.search.node.Node.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__43339){
+(frontend.search.node.Node.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__43752){
 var self__ = this;
-var G__43339__$1 = this;
-return (new cljs.core.RecordIter((0),G__43339__$1,1,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"repo","repo",-1999060679)], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
+var G__43752__$1 = this;
+return (new cljs.core.RecordIter((0),G__43752__$1,1,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"repo","repo",-1999060679)], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
 }));
 
 (frontend.search.node.Node.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__5338__auto__){
@@ -109,10 +109,10 @@ return h__5152__auto____$1;
 }
 }));
 
-(frontend.search.node.Node.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this43341,other43342){
+(frontend.search.node.Node.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this43754,other43755){
 var self__ = this;
-var this43341__$1 = this;
-return (((!((other43342 == null)))) && ((((this43341__$1.constructor === other43342.constructor)) && (((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this43341__$1.repo,other43342.repo)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this43341__$1.__extmap,other43342.__extmap)))))));
+var this43754__$1 = this;
+return (((!((other43755 == null)))) && ((((this43754__$1.constructor === other43755.constructor)) && (((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this43754__$1.repo,other43755.repo)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this43754__$1.__extmap,other43755.__extmap)))))));
 }));
 
 (frontend.search.node.Node.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__5350__auto__,k__5351__auto__){
@@ -125,31 +125,31 @@ return (new frontend.search.node.Node(self__.repo,self__.__meta,cljs.core.not_em
 }
 }));
 
-(frontend.search.node.Node.prototype.cljs$core$IAssociative$_contains_key_QMARK_$arity$2 = (function (this__5347__auto__,k43340){
+(frontend.search.node.Node.prototype.cljs$core$IAssociative$_contains_key_QMARK_$arity$2 = (function (this__5347__auto__,k43753){
 var self__ = this;
 var this__5347__auto____$1 = this;
-var G__43371 = k43340;
-var G__43371__$1 = (((G__43371 instanceof cljs.core.Keyword))?G__43371.fqn:null);
-switch (G__43371__$1) {
+var G__43773 = k43753;
+var G__43773__$1 = (((G__43773 instanceof cljs.core.Keyword))?G__43773.fqn:null);
+switch (G__43773__$1) {
 case "repo":
 return true;
 
 break;
 default:
-return cljs.core.contains_QMARK_(self__.__extmap,k43340);
+return cljs.core.contains_QMARK_(self__.__extmap,k43753);
 
 }
 }));
 
-(frontend.search.node.Node.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__5348__auto__,k__5349__auto__,G__43339){
+(frontend.search.node.Node.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__5348__auto__,k__5349__auto__,G__43752){
 var self__ = this;
 var this__5348__auto____$1 = this;
-var pred__43372 = cljs.core.keyword_identical_QMARK_;
-var expr__43373 = k__5349__auto__;
-if(cljs.core.truth_((pred__43372.cljs$core$IFn$_invoke$arity$2 ? pred__43372.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"repo","repo",-1999060679),expr__43373) : pred__43372.call(null,new cljs.core.Keyword(null,"repo","repo",-1999060679),expr__43373)))){
-return (new frontend.search.node.Node(G__43339,self__.__meta,self__.__extmap,null));
+var pred__43774 = cljs.core.keyword_identical_QMARK_;
+var expr__43775 = k__5349__auto__;
+if(cljs.core.truth_((pred__43774.cljs$core$IFn$_invoke$arity$2 ? pred__43774.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"repo","repo",-1999060679),expr__43775) : pred__43774.call(null,new cljs.core.Keyword(null,"repo","repo",-1999060679),expr__43775)))){
+return (new frontend.search.node.Node(G__43752,self__.__meta,self__.__extmap,null));
 } else {
-return (new frontend.search.node.Node(self__.repo,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__5349__auto__,G__43339),null));
+return (new frontend.search.node.Node(self__.repo,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__5349__auto__,G__43752),null));
 }
 }));
 
@@ -159,10 +159,10 @@ var this__5353__auto____$1 = this;
 return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.MapEntry(new cljs.core.Keyword(null,"repo","repo",-1999060679),self__.repo,null))], null),self__.__extmap));
 }));
 
-(frontend.search.node.Node.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__5339__auto__,G__43339){
+(frontend.search.node.Node.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__5339__auto__,G__43752){
 var self__ = this;
 var this__5339__auto____$1 = this;
-return (new frontend.search.node.Node(self__.repo,G__43339,self__.__extmap,self__.__hash));
+return (new frontend.search.node.Node(self__.repo,G__43752,self__.__extmap,self__.__hash));
 }));
 
 (frontend.search.node.Node.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__5345__auto__,entry__5346__auto__){
@@ -183,12 +183,12 @@ var _this__$1 = this;
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(null,(function (___28360__auto__){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(electron.ipc.ipc.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["search-blocks",self__.repo,q,opts], 0)),(function (result){
 return promesa.core.bind.cljs$core$IFn$_invoke$arity$2(cljs_bean.core.__GT_clj(result),(function (result__$1){
-return promesa.protocols._promise(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__43380){
-var map__43381 = p__43380;
-var map__43381__$1 = cljs.core.__destructure_map(map__43381);
-var content = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43381__$1,new cljs.core.Keyword(null,"content","content",15833224));
-var uuid = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43381__$1,new cljs.core.Keyword(null,"uuid","uuid",-2145095719));
-var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43381__$1,new cljs.core.Keyword(null,"page","page",849072397));
+return promesa.protocols._promise(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__43779){
+var map__43780 = p__43779;
+var map__43780__$1 = cljs.core.__destructure_map(map__43780);
+var content = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43780__$1,new cljs.core.Keyword(null,"content","content",15833224));
+var uuid = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43780__$1,new cljs.core.Keyword(null,"uuid","uuid",-2145095719));
+var page = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__43780__$1,new cljs.core.Keyword(null,"page","page",849072397));
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword("block","uuid","block/uuid",-1991494552),uuid,new cljs.core.Keyword("block","content","block/content",-161885195),content,new cljs.core.Keyword("block","page","block/page",822314108),page], null);
 }),result__$1));
 }));
@@ -251,15 +251,15 @@ return (new frontend.search.node.Node(repo,null,null,null));
 /**
  * Factory function for frontend.search.node/Node, taking a map of keywords to field values.
  */
-frontend.search.node.map__GT_Node = (function frontend$search$node$map__GT_Node(G__43343){
-var extmap__5382__auto__ = (function (){var G__43384 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(G__43343,new cljs.core.Keyword(null,"repo","repo",-1999060679));
-if(cljs.core.record_QMARK_(G__43343)){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__43384);
+frontend.search.node.map__GT_Node = (function frontend$search$node$map__GT_Node(G__43756){
+var extmap__5382__auto__ = (function (){var G__43782 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(G__43756,new cljs.core.Keyword(null,"repo","repo",-1999060679));
+if(cljs.core.record_QMARK_(G__43756)){
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__43782);
 } else {
-return G__43384;
+return G__43782;
 }
 })();
-return (new frontend.search.node.Node(new cljs.core.Keyword(null,"repo","repo",-1999060679).cljs$core$IFn$_invoke$arity$1(G__43343),null,cljs.core.not_empty(extmap__5382__auto__),null));
+return (new frontend.search.node.Node(new cljs.core.Keyword(null,"repo","repo",-1999060679).cljs$core$IFn$_invoke$arity$1(G__43756),null,cljs.core.not_empty(extmap__5382__auto__),null));
 });
 
 

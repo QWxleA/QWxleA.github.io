@@ -17,8 +17,8 @@ return cljs_time.core.plus.cljs$core$IFn$_invoke$arity$2(date,cljs_time.core.day
  * If date fails pred, subtract period until true, otherwise answer date
  */
 frontend.ui.date_picker.previous = (function frontend$ui$date_picker$previous(var_args){
-var G__54660 = arguments.length;
-switch (G__54660) {
+var G__55357 = arguments.length;
+switch (G__55357) {
 case 1:
 return frontend.ui.date_picker.previous.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -50,12 +50,12 @@ while(true){
 if(cljs.core.truth_((pred.cljs$core$IFn$_invoke$arity$1 ? pred.cljs$core$IFn$_invoke$arity$1(date) : pred.call(null,date)))){
 return date;
 } else {
-var G__54877 = pred;
-var G__54878 = cljs_time.core.minus.cljs$core$IFn$_invoke$arity$2(date,period);
-var G__54879 = period;
-pred = G__54877;
-date = G__54878;
-period = G__54879;
+var G__55645 = pred;
+var G__55646 = cljs_time.core.minus.cljs$core$IFn$_invoke$arity$2(date,period);
+var G__55647 = period;
+pred = G__55645;
+date = G__55646;
+period = G__55647;
 continue;
 }
 break;
@@ -89,8 +89,8 @@ var c = cljs.core.count(coll);
 return cljs.core.take.cljs$core$IFn$_invoke$arity$2(c,cljs.core.drop.cljs$core$IFn$_invoke$arity$2(cljs.core.mod(n,c),cljs.core.cycle(coll)));
 });
 frontend.ui.date_picker.is_day_pred = (function frontend$ui$date_picker$is_day_pred(d){
-return (function (p1__54686_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs_time.core.day_of_week(p1__54686_SHARP_),(d + (1)));
+return (function (p1__55396_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs_time.core.day_of_week(p1__55396_SHARP_),(d + (1)));
 });
 });
 frontend.ui.date_picker._STAR_internal_model = rum.core.cursor(frontend.state.state,new cljs.core.Keyword("date-picker","date","date-picker/date",-1622069581));
@@ -100,13 +100,13 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 /**
  * Answer 2 x rows showing month with nav buttons and days NOTE: not internationalized
  */
-frontend.ui.date_picker.table_thead = rum.core.lazy_build(rum.core.build_defc,(function (display_month,p__54719){
-var map__54724 = p__54719;
-var map__54724__$1 = cljs.core.__destructure_map(map__54724);
-var show_weeks_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54724__$1,new cljs.core.Keyword(null,"show-weeks?","show-weeks?",-1563135221));
-var minimum = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54724__$1,new cljs.core.Keyword(null,"minimum","minimum",-1621006059));
-var maximum = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54724__$1,new cljs.core.Keyword(null,"maximum","maximum",573880714));
-var start_of_week = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54724__$1,new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824));
+frontend.ui.date_picker.table_thead = rum.core.lazy_build(rum.core.build_defc,(function (display_month,p__55463){
+var map__55465 = p__55463;
+var map__55465__$1 = cljs.core.__destructure_map(map__55465);
+var show_weeks_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55465__$1,new cljs.core.Keyword(null,"show-weeks?","show-weeks?",-1563135221));
+var minimum = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55465__$1,new cljs.core.Keyword(null,"minimum","minimum",-1621006059));
+var maximum = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55465__$1,new cljs.core.Keyword(null,"maximum","maximum",573880714));
+var start_of_week = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55465__$1,new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824));
 var prev_date = frontend.ui.date_picker.dec_month(display_month);
 var minimum__$1 = frontend.util.deref_or_value(minimum);
 var maximum__$1 = frontend.util.deref_or_value(maximum);
@@ -114,7 +114,7 @@ var prev_enabled_QMARK_ = (cljs.core.truth_(minimum__$1)?cljs_time.core.after_QM
 var next_date = frontend.ui.date_picker.inc_month(display_month);
 var next_enabled_QMARK_ = (cljs.core.truth_(maximum__$1)?cljs_time.core.before_QMARK_(next_date,maximum__$1):true);
 var template_row = (cljs.core.truth_(show_weeks_QMARK_)?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566)], null)], null):new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646)], null));
-var attrs54715 = cljs.core.conj.cljs$core$IFn$_invoke$arity$variadic(template_row,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"class","class",-2030961996),["prev ",(cljs.core.truth_(prev_enabled_QMARK_)?"available selectable":"disabled")].join(''),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"padding","padding",1660304693),"0px"], null),new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
+var attrs55425 = cljs.core.conj.cljs$core$IFn$_invoke$arity$variadic(template_row,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"class","class",-2030961996),["prev ",(cljs.core.truth_(prev_enabled_QMARK_)?"available selectable":"disabled")].join(''),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"padding","padding",1660304693),"0px"], null),new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
 if(cljs.core.truth_(prev_enabled_QMARK_)){
 return cljs.core.reset_BANG_(frontend.ui.date_picker._STAR_internal_model,prev_date);
 } else {
@@ -127,25 +127,25 @@ return cljs.core.reset_BANG_(frontend.ui.date_picker._STAR_internal_model,next_d
 return null;
 }
 })], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.font-bold","span.font-bold",-460884588),">"], null)], null)], 0));
-return daiquiri.core.create_element("thead",((cljs.core.map_QMARK_(attrs54715))?daiquiri.interpreter.element_attributes(attrs54715):null),((cljs.core.map_QMARK_(attrs54715))?[daiquiri.interpreter.interpret(cljs.core.conj.cljs$core$IFn$_invoke$arity$2(template_row,(function (){var iter__5520__auto__ = (function frontend$ui$date_picker$iter__54792(s__54793){
+return daiquiri.core.create_element("thead",((cljs.core.map_QMARK_(attrs55425))?daiquiri.interpreter.element_attributes(attrs55425):null),((cljs.core.map_QMARK_(attrs55425))?[daiquiri.interpreter.interpret(cljs.core.conj.cljs$core$IFn$_invoke$arity$2(template_row,(function (){var iter__5520__auto__ = (function frontend$ui$date_picker$iter__55499(s__55500){
 return (new cljs.core.LazySeq(null,(function (){
-var s__54793__$1 = s__54793;
+var s__55500__$1 = s__55500;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__54793__$1);
+var temp__5720__auto__ = cljs.core.seq(s__55500__$1);
 if(temp__5720__auto__){
-var s__54793__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__54793__$2)){
-var c__5518__auto__ = cljs.core.chunk_first(s__54793__$2);
+var s__55500__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__55500__$2)){
+var c__5518__auto__ = cljs.core.chunk_first(s__55500__$2);
 var size__5519__auto__ = cljs.core.count(c__5518__auto__);
-var b__54795 = cljs.core.chunk_buffer(size__5519__auto__);
-if((function (){var i__54794 = (0);
+var b__55502 = cljs.core.chunk_buffer(size__5519__auto__);
+if((function (){var i__55501 = (0);
 while(true){
-if((i__54794 < size__5519__auto__)){
-var day = cljs.core._nth(c__5518__auto__,i__54794);
-cljs.core.chunk_append(b__54795,cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)));
+if((i__55501 < size__5519__auto__)){
+var day = cljs.core._nth(c__5518__auto__,i__55501);
+cljs.core.chunk_append(b__55502,cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)));
 
-var G__54906 = (i__54794 + (1));
-i__54794 = G__54906;
+var G__55659 = (i__55501 + (1));
+i__55501 = G__55659;
 continue;
 } else {
 return true;
@@ -153,13 +153,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__54795),frontend$ui$date_picker$iter__54792(cljs.core.chunk_rest(s__54793__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__55502),frontend$ui$date_picker$iter__55499(cljs.core.chunk_rest(s__55500__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__54795),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__55502),null);
 }
 } else {
-var day = cljs.core.first(s__54793__$2);
-return cljs.core.cons(cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)),frontend$ui$date_picker$iter__54792(cljs.core.rest(s__54793__$2)));
+var day = cljs.core.first(s__55500__$2);
+return cljs.core.cons(cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)),frontend$ui$date_picker$iter__55499(cljs.core.rest(s__55500__$2)));
 }
 } else {
 return null;
@@ -169,25 +169,25 @@ break;
 }),null,null));
 });
 return iter__5520__auto__(frontend.ui.date_picker.rotate(start_of_week,frontend.ui.date_picker.days_vector));
-})()))]:[daiquiri.interpreter.interpret(attrs54715),daiquiri.interpreter.interpret(cljs.core.conj.cljs$core$IFn$_invoke$arity$2(template_row,(function (){var iter__5520__auto__ = (function frontend$ui$date_picker$iter__54806(s__54807){
+})()))]:[daiquiri.interpreter.interpret(attrs55425),daiquiri.interpreter.interpret(cljs.core.conj.cljs$core$IFn$_invoke$arity$2(template_row,(function (){var iter__5520__auto__ = (function frontend$ui$date_picker$iter__55508(s__55509){
 return (new cljs.core.LazySeq(null,(function (){
-var s__54807__$1 = s__54807;
+var s__55509__$1 = s__55509;
 while(true){
-var temp__5720__auto__ = cljs.core.seq(s__54807__$1);
+var temp__5720__auto__ = cljs.core.seq(s__55509__$1);
 if(temp__5720__auto__){
-var s__54807__$2 = temp__5720__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__54807__$2)){
-var c__5518__auto__ = cljs.core.chunk_first(s__54807__$2);
+var s__55509__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__55509__$2)){
+var c__5518__auto__ = cljs.core.chunk_first(s__55509__$2);
 var size__5519__auto__ = cljs.core.count(c__5518__auto__);
-var b__54809 = cljs.core.chunk_buffer(size__5519__auto__);
-if((function (){var i__54808 = (0);
+var b__55511 = cljs.core.chunk_buffer(size__5519__auto__);
+if((function (){var i__55510 = (0);
 while(true){
-if((i__54808 < size__5519__auto__)){
-var day = cljs.core._nth(c__5518__auto__,i__54808);
-cljs.core.chunk_append(b__54809,cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)));
+if((i__55510 < size__5519__auto__)){
+var day = cljs.core._nth(c__5518__auto__,i__55510);
+cljs.core.chunk_append(b__55511,cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)));
 
-var G__54916 = (i__54808 + (1));
-i__54808 = G__54916;
+var G__55662 = (i__55510 + (1));
+i__55510 = G__55662;
 continue;
 } else {
 return true;
@@ -195,13 +195,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__54809),frontend$ui$date_picker$iter__54806(cljs.core.chunk_rest(s__54807__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__55511),frontend$ui$date_picker$iter__55508(cljs.core.chunk_rest(s__55509__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__54809),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__55511),null);
 }
 } else {
-var day = cljs.core.first(s__54807__$2);
-return cljs.core.cons(cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)),frontend$ui$date_picker$iter__54806(cljs.core.rest(s__54807__$2)));
+var day = cljs.core.first(s__55509__$2);
+return cljs.core.cons(cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)),frontend$ui$date_picker$iter__55508(cljs.core.rest(s__55509__$2)));
 }
 } else {
 return null;
@@ -213,12 +213,12 @@ break;
 return iter__5520__auto__(frontend.ui.date_picker.rotate(start_of_week,frontend.ui.date_picker.days_vector));
 })()))]));
 }),null,"frontend.ui.date-picker/table-thead");
-frontend.ui.date_picker.table_td = (function frontend$ui$date_picker$table_td(date,focus_month,selected,today,p__54816,disabled_QMARK_,on_change){
-var map__54817 = p__54816;
-var map__54817__$1 = cljs.core.__destructure_map(map__54817);
-var attributes = map__54817__$1;
-var minimum = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54817__$1,new cljs.core.Keyword(null,"minimum","minimum",-1621006059));
-var maximum = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54817__$1,new cljs.core.Keyword(null,"maximum","maximum",573880714));
+frontend.ui.date_picker.table_td = (function frontend$ui$date_picker$table_td(date,focus_month,selected,today,p__55522,disabled_QMARK_,on_change){
+var map__55531 = p__55522;
+var map__55531__$1 = cljs.core.__destructure_map(map__55531);
+var attributes = map__55531__$1;
+var minimum = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55531__$1,new cljs.core.Keyword(null,"minimum","minimum",-1621006059));
+var maximum = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55531__$1,new cljs.core.Keyword(null,"maximum","maximum",573880714));
 var minimum__$1 = frontend.util.deref_or_value(minimum);
 var maximum__$1 = frontend.util.deref_or_value(maximum);
 var enabled_min = (cljs.core.truth_(minimum__$1)?frontend.ui.date_picker._GT__EQ_date(date,minimum__$1):true);
@@ -230,8 +230,8 @@ return enabled_max;
 return and__5041__auto__;
 }
 })();
-var disabled_day_QMARK_ = (cljs.core.truth_(enabled_day)?cljs.core.not((function (){var fexpr__54819 = new cljs.core.Keyword(null,"selectable-fn","selectable-fn",-1997365738).cljs$core$IFn$_invoke$arity$1(attributes);
-return (fexpr__54819.cljs$core$IFn$_invoke$arity$1 ? fexpr__54819.cljs$core$IFn$_invoke$arity$1(date) : fexpr__54819.call(null,date));
+var disabled_day_QMARK_ = (cljs.core.truth_(enabled_day)?cljs.core.not((function (){var fexpr__55569 = new cljs.core.Keyword(null,"selectable-fn","selectable-fn",-1997365738).cljs$core$IFn$_invoke$arity$1(attributes);
+return (fexpr__55569.cljs$core$IFn$_invoke$arity$1 ? fexpr__55569.cljs$core$IFn$_invoke$arity$1(date) : fexpr__55569.call(null,date));
 })()):true);
 var classes = (cljs.core.truth_(disabled_QMARK_)?"off":((disabled_day_QMARK_)?"off":((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(focus_month,cljs_time.core.month(date)))?"available":"available off"
 )));
@@ -274,12 +274,12 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
  */
 frontend.ui.date_picker.table_tr = (function frontend$ui$date_picker$table_tr(date,focus_month,selected,attributes,disabled_QMARK_,on_change){
 var table_row = (cljs.core.truth_(new cljs.core.Keyword(null,"show-weeks?","show-weeks?",-1563135221).cljs$core$IFn$_invoke$arity$1(attributes))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),frontend.ui.date_picker.week_td(date)], null):new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646)], null));
-var row_dates = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__54824_SHARP_){
-return frontend.ui.date_picker.inc_date(date,p1__54824_SHARP_);
+var row_dates = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__55587_SHARP_){
+return frontend.ui.date_picker.inc_date(date,p1__55587_SHARP_);
 }),cljs.core.range.cljs$core$IFn$_invoke$arity$1((7)));
 var today = (cljs.core.truth_(new cljs.core.Keyword(null,"show-today?","show-today?",513056415).cljs$core$IFn$_invoke$arity$1(attributes))?frontend.util.now__GT_utc():null);
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(table_row,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__54825_SHARP_){
-return frontend.ui.date_picker.table_td(p1__54825_SHARP_,focus_month,selected,today,attributes,disabled_QMARK_,on_change);
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(table_row,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__55590_SHARP_){
+return frontend.ui.date_picker.table_td(p1__55590_SHARP_,focus_month,selected,today,attributes,disabled_QMARK_,on_change);
 }),row_dates));
 });
 /**
@@ -289,11 +289,11 @@ frontend.ui.date_picker.table_tbody = rum.core.lazy_build(rum.core.build_defc,(f
 var start_of_week = new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824).cljs$core$IFn$_invoke$arity$1(attributes);
 var current_start = frontend.ui.date_picker.previous.cljs$core$IFn$_invoke$arity$2(frontend.ui.date_picker.is_day_pred(start_of_week),display_month);
 var focus_month = cljs_time.core.month(display_month);
-var row_start_dates = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__54827_SHARP_){
-return frontend.ui.date_picker.inc_date(current_start,((7) * p1__54827_SHARP_));
+var row_start_dates = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__55607_SHARP_){
+return frontend.ui.date_picker.inc_date(current_start,((7) * p1__55607_SHARP_));
 }),cljs.core.range.cljs$core$IFn$_invoke$arity$1((6)));
-return daiquiri.interpreter.interpret(cljs.core.into.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300)], null),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__54828_SHARP_){
-return frontend.ui.date_picker.table_tr(p1__54828_SHARP_,focus_month,selected,attributes,disabled_QMARK_,on_change);
+return daiquiri.interpreter.interpret(cljs.core.into.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300)], null),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__55608_SHARP_){
+return frontend.ui.date_picker.table_tr(p1__55608_SHARP_,focus_month,selected,attributes,disabled_QMARK_,on_change);
 }),row_start_dates)));
 }),null,"frontend.ui.date-picker/table-tbody");
 /**
@@ -303,16 +303,16 @@ frontend.ui.date_picker.configure = (function frontend$ui$date_picker$configure(
 var selectable_fn = ((cljs.core.fn_QMARK_(new cljs.core.Keyword(null,"selectable-fn","selectable-fn",-1997365738).cljs$core$IFn$_invoke$arity$1(attributes)))?new cljs.core.Keyword(null,"selectable-fn","selectable-fn",-1997365738).cljs$core$IFn$_invoke$arity$1(attributes):cljs.core.constantly(true));
 return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([attributes,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"selectable-fn","selectable-fn",-1997365738),selectable_fn], null)], 0));
 });
-frontend.ui.date_picker.date_picker = rum.core.lazy_build(rum.core.build_defc,(function (_model,p__54834){
-var map__54835 = p__54834;
-var map__54835__$1 = cljs.core.__destructure_map(map__54835);
-var args = map__54835__$1;
-var on_change = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54835__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
-var disabled_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54835__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
-var start_of_week = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__54835__$1,new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824),frontend.state.get_start_of_week());
-var class$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54835__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
-var style = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54835__$1,new cljs.core.Keyword(null,"style","style",-496642736));
-var attr = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__54835__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
+frontend.ui.date_picker.date_picker = rum.core.lazy_build(rum.core.build_defc,(function (_model,p__55636){
+var map__55637 = p__55636;
+var map__55637__$1 = cljs.core.__destructure_map(map__55637);
+var args = map__55637__$1;
+var on_change = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55637__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
+var disabled_QMARK_ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55637__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
+var start_of_week = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__55637__$1,new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824),frontend.state.get_start_of_week());
+var class$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55637__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
+var style = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55637__$1,new cljs.core.Keyword(null,"style","style",-496642736));
+var attr = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__55637__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
 var internal_model = frontend.util.react(frontend.ui.date_picker._STAR_internal_model);
 var display_month = cljs_time.core.first_day_of_the_month.cljs$core$IFn$_invoke$arity$1((function (){var or__5043__auto__ = internal_model;
 if(cljs.core.truth_(or__5043__auto__)){
